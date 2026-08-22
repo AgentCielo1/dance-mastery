@@ -215,4 +215,55 @@ export const MOVES = {
       { t: 0.75, p: { y: 0.875, lKnee: 0.12, rKnee: 0.12, lElb: 1.4, rElb: 1.4 } },
     ],
   },
+
+  /* ---------------- ballet pack (procedural v1, $0 lane) ---------------- */
+  "barre.plie": {
+    bpm: 60, beats: 4,
+    keys: [
+      { t: 0.0, p: { y: 0.88, lHipA: 0.3, rHipA: 0.3, lKnee: 0.04, rKnee: 0.04, lShA: 0.95, rShA: 0.95, lShF: -0.1, rShF: -0.1, lElb: 0.3, rElb: 0.3, tPitch: -0.02 } },
+      { t: 0.5, p: { y: 0.8, lHipA: 0.38, rHipA: 0.38, lHipF: 0.28, rHipF: 0.28, lKnee: 0.62, rKnee: 0.62, lShA: 0.95, rShA: 0.95, lShF: -0.1, rShF: -0.1, lElb: 0.3, rElb: 0.3, tPitch: -0.02 } },
+    ],
+  },
+  "barre.tendu": {
+    bpm: 80, beats: 4,
+    keys: [
+      { t: 0.0, p: { y: 0.875, lHipA: 0.28, rHipA: 0.28, lKnee: 0.04, rKnee: 0.04, lShA: 0.95, rShA: 0.95, lElb: 0.3, rElb: 0.3 } },
+      { t: 0.25, p: { y: 0.87, x: -0.03, rHipF: 0.38, rHipA: 0.3, rKnee: 0.14, lKnee: 0.03, lShA: 0.95, rShA: 0.95, lElb: 0.3, rElb: 0.3 } },
+      { t: 0.5, p: { y: 0.87, x: -0.03, rHipF: 0.38, rHipA: 0.3, rKnee: 0.14, lKnee: 0.03, lShA: 0.95, rShA: 0.95, lElb: 0.3, rElb: 0.3 } },
+      { t: 0.75, p: { y: 0.875, lHipA: 0.28, rHipA: 0.28, lKnee: 0.04, rKnee: 0.04, lShA: 0.95, rShA: 0.95, lElb: 0.3, rElb: 0.3 } },
+    ],
+  },
+  "barre.releve": {
+    bpm: 60, beats: 4,
+    keys: [
+      { t: 0.0, p: { y: 0.88, lHipA: 0.26, rHipA: 0.26, lKnee: 0.04, rKnee: 0.04, lShA: 0.9, rShA: 0.9, lElb: 0.3, rElb: 0.3, tPitch: -0.02 } },
+      { t: 0.5, p: { y: 0.9, lHipA: 0.26, rHipA: 0.26, lHipF: -0.06, rHipF: -0.06, lKnee: 0.3, rKnee: 0.3, lShA: 0.9, rShA: 0.9, lElb: 0.3, rElb: 0.3, tPitch: -0.03 } },
+    ],
+  },
+  "align.port_de_bras": {
+    bpm: 60, beats: 8,
+    keys: [
+      { t: 0.0, p: { lShF: 0.12, rShF: 0.12, lShA: 0.22, rShA: 0.22, lElb: 0.55, rElb: 0.55, lKnee: 0.05, rKnee: 0.05, lHipA: 0.24, rHipA: 0.24 } },
+      { t: 0.22, p: { lShF: -0.6, rShF: -0.6, lShA: 0.18, rShA: 0.18, lElb: 1.05, rElb: 1.05, lHipA: 0.24, rHipA: 0.24 } },
+      { t: 0.45, p: { lShF: -2.5, rShF: -2.5, lShA: 0.3, rShA: 0.3, lElb: 0.6, rElb: 0.6, lHipA: 0.24, rHipA: 0.24, tPitch: -0.03 } },
+      { t: 0.7, p: { lShF: -0.15, rShF: -0.15, lShA: 1.15, rShA: 1.15, lElb: 0.28, rElb: 0.28, lHipA: 0.24, rHipA: 0.24 } },
+    ],
+    rootFn: (p, u) => { p.y = 0.875 + 0.004 * sin(u * TAU); },
+  },
+  "centre.retire": {
+    bpm: 60, beats: 4,
+    keys: [
+      { t: 0.0, p: { y: 0.87, lKnee: 0.03, rHipF: 0.62, rHipA: 0.55, rKnee: 2.15, lHipA: 0.22, lShF: -0.5, rShF: -0.5, lShA: 0.2, rShA: 0.2, lElb: 1.0, rElb: 1.0, tPitch: -0.02 } },
+      { t: 0.5, p: { y: 0.872, lKnee: 0.03, rHipF: 0.6, rHipA: 0.57, rKnee: 2.12, lHipA: 0.22, lShF: -0.52, rShF: -0.52, lShA: 0.2, rShA: 0.2, lElb: 1.0, rElb: 1.0, tPitch: -0.02 } },
+    ],
+  },
+  "allegro.saute": {
+    bpm: 100, beats: 2,
+    keys: [
+      { t: 0.0, p: { y: 0.8, lHipA: 0.3, rHipA: 0.3, lHipF: 0.3, rHipF: 0.3, lKnee: 0.6, rKnee: 0.6, lShA: 0.6, rShA: 0.6, lElb: 0.4, rElb: 0.4 } },
+      { t: 0.3, p: { y: 0.92, lHipA: 0.28, rHipA: 0.28, lHipF: 0.02, rHipF: 0.02, lKnee: 0.4, rKnee: 0.4, lShA: 0.7, rShA: 0.7, lElb: 0.35, rElb: 0.35 } },
+      { t: 0.5, p: { y: 0.96, lHipA: 0.28, rHipA: 0.28, lHipF: 0.04, rHipF: 0.04, lKnee: 0.45, rKnee: 0.45, lShA: 0.75, rShA: 0.75, lElb: 0.3, rElb: 0.3 } },
+      { t: 0.7, p: { y: 0.88, lHipA: 0.28, rHipA: 0.28, lHipF: 0.15, rHipF: 0.15, lKnee: 0.35, rKnee: 0.35, lShA: 0.65, rShA: 0.65 } },
+    ],
+  },
 };

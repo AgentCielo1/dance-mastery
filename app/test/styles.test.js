@@ -90,6 +90,19 @@ test("salsa pack: solo-first — partner nodes are flagged, late-phase, and fram
   assert.equal(info.theme, "Timing Season");
 });
 
+test("ballet pack: gate-heavy technique education with the pointe honesty node", () => {
+  const ba = STYLES.ballet;
+  assert.ok(ba.attributes.length >= 5, "ballet is readiness-gate heavy by design");
+  const honesty = ba.nodes.find((n) => n.id === "meta.pointe_honesty");
+  assert.ok(honesty, "pointe honesty node exists");
+  assert.ok(honesty.checkpoints.some((c) => /in-person/.test(c)), "states the in-person assessment requirement");
+  assert.ok(!ba.nodes.some((n) => /pointe/i.test(n.name) && n.type === "move"), "no pointe MOVE exists anywhere in the tree");
+  const gated = ba.nodes.filter((n) => (n.prereqs ?? []).some((p) => p.id.startsWith("attr.")));
+  assert.ok(gated.length >= 6, `attribute gates actually used (${gated.length})`);
+  const info = seasonInfo(newState(T), T, ba.seasons);
+  assert.equal(info.theme, "Alignment Season");
+});
+
 test("findNode resolves across packs and returns null for unknowns", () => {
   assert.equal(findNode("footwork.six_step").style, "breaking");
   assert.equal(findNode("party.wop").style, "hiphop");
