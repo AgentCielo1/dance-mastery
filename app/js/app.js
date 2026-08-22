@@ -118,7 +118,7 @@ function renderSession(doneToday) {
         const up = pending.stageUps.has(it.id);
         return `<div class="item">
           <div class="item-head"><span class="fam ${it.node.family}">${FAMILY_LABELS[it.node.family] ?? it.node.family}</span>
-            <strong><a class="mlink" href="learn.html?move=${it.id}">${it.node.name}</a></strong> <span class="stage">${stageName(ns.stage ?? 0)}</span>
+            <strong><a class="mlink" href="learn.html?move=${it.id}">${it.node.name}</a></strong>${it.node.partner ? ' <span class="warm">🤝 partner</span>' : ""} <span class="stage">${stageName(ns.stage ?? 0)}</span>
             ${it.due ? "" : '<span class="warm">keep-warm</span>'}</div>
           <div class="grades">${["Rough", "OK", "Clean"].map((g, q) =>
             `<button class="grade ${grade === q ? "sel" : ""}" data-review="${it.id}" data-q="${q}">${g}</button>`).join("")}
@@ -131,7 +131,7 @@ function renderSession(doneToday) {
         const checked = pending.learned.has(it.id) ? "checked" : "";
         return `<div class="item">
           <div class="item-head"><span class="fam ${it.node.family}">${FAMILY_LABELS[it.node.family] ?? it.node.family}</span>
-            <strong><a class="mlink" href="learn.html?move=${it.id}">${it.node.name}</a></strong>${it.node.anchor ? ` <span class="anchor">${it.node.anchor}</span>` : ""}</div>
+            <strong><a class="mlink" href="learn.html?move=${it.id}">${it.node.name}</a></strong>${it.node.partner ? ' <span class="warm">🤝 partner</span>' : ""}${it.node.anchor ? ` <span class="anchor">${it.node.anchor}</span>` : ""}</div>
           <label class="check"><input type="checkbox" data-learned="${it.id}" ${checked}> Got real reps in (marks it Learned)</label>
         </div>`;
       }).join("") + `</div>`;

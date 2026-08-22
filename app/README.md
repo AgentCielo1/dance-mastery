@@ -25,9 +25,12 @@ npm test          # = node --test test/  (22 tests, zero dependencies, Node 18+)
 ## Style packs (Doc 04 — proven style-agnostic)
 
 The engine is data-driven: `data/<style>-skill-tree.json` in, full app out.
-Current packs: **Breaking** (60 nodes) and **Hip Hop** (31 nodes — grooves,
-the provenance-credited party-move canon from Running Man to the Dougie,
-isolations, layering, freestyle frameworks, its own season arc). Switch
+Current packs: **Breaking** (60 nodes), **Hip Hop** (31 nodes — grooves, the
+provenance-credited party-move canon, isolations, layering, freestyle), and
+**Salsa** (30 nodes — On1-first, clave/conga ear training, shines-led solo
+track, Cuban motion, turns with spotting gates, and partner-flagged
+partnerwork whose connection prep trains solo; season arc ends at a real
+social). Switch
 styles in the Today header or `?style=hiphop` on any page; progress is
 stored per style. Adding a pack: drop the JSON, run
 `node scripts/sync-data.mjs && node scripts/gen-pose-refs.mjs`, commit —

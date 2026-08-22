@@ -74,6 +74,22 @@ test("per-style state is isolated; breaking keeps the legacy storage key", () =>
   assert.equal(loadState(T, storage, "hiphop").sessions.length, 0, "styles do not bleed into each other");
 });
 
+test("salsa pack: solo-first — partner nodes are flagged, late-phase, and frame prep is solo", () => {
+  const sa = STYLES.salsa;
+  const partnered = sa.nodes.filter((n) => n.partner);
+  assert.ok(partnered.length >= 4, `partnerwork present (${partnered.length})`);
+  for (const n of partnered) {
+    assert.ok(n.phase >= 3, `${n.id} is partner-flagged but early-phase (${n.phase})`);
+  }
+  const frame = sa.nodes.find((n) => n.id === "partner.frame");
+  assert.ok(frame && !frame.partner, "frame/connection prep is trainable solo");
+  const named = sa.nodes.filter((n) => n.family === "shines" && n.origin);
+  assert.ok(named.length >= 3, "named shines carry provenance");
+  assert.ok(sa.attributes.some((a) => a.id === "attr.timing.l1"), "clave ear gate exists");
+  const info = seasonInfo(newState(T), T, sa.seasons);
+  assert.equal(info.theme, "Timing Season");
+});
+
 test("findNode resolves across packs and returns null for unknowns", () => {
   assert.equal(findNode("footwork.six_step").style, "breaking");
   assert.equal(findNode("party.wop").style, "hiphop");

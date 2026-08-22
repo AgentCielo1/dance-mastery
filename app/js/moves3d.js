@@ -159,4 +159,60 @@ export const MOVES = {
     ],
     rootFn: (p, u, t) => { p.x = 0.06 * sin(t * TAU); },
   },
+
+  /* ---------------- salsa pack (procedural v1, $0 lane) ---------------- */
+  "basic.on1": {
+    bpm: 184, beats: 8,
+    keys: [
+      { t: 0.0, p: { z: 0.13, lHipF: 0.42, lKnee: 0.28, rHipF: -0.08, tPitch: 0.03, lShF: 0.35, rShF: -0.35, lElb: 0.8, rElb: 0.8 } },
+      { t: 0.125, p: { z: 0.03, lHipF: 0.22, rHipF: 0.05, lShF: 0.15, rShF: -0.15, lElb: 0.75, rElb: 0.75 } },
+      { t: 0.25, p: { z: 0.0, lHipF: 0.06, rHipF: 0.06, lKnee: 0.16, rKnee: 0.16, lShF: 0.05, rShF: 0.05, lElb: 0.7, rElb: 0.7 } },
+      { t: 0.375, p: { z: 0.0, y: 0.855, lKnee: 0.2, rKnee: 0.2, lElb: 0.7, rElb: 0.7 } },
+      { t: 0.5, p: { z: -0.13, rHipF: -0.4, rKnee: 0.26, lHipF: 0.1, tPitch: -0.02, rShF: 0.35, lShF: -0.35, lElb: 0.8, rElb: 0.8 } },
+      { t: 0.625, p: { z: -0.03, rHipF: -0.18, lHipF: 0.06, rShF: 0.15, lShF: -0.15, lElb: 0.75, rElb: 0.75 } },
+      { t: 0.75, p: { z: 0.0, lHipF: 0.06, rHipF: 0.06, lKnee: 0.16, rKnee: 0.16, lShF: 0.05, rShF: 0.05, lElb: 0.7, rElb: 0.7 } },
+      { t: 0.875, p: { z: 0.0, y: 0.855, lKnee: 0.2, rKnee: 0.2, lElb: 0.7, rElb: 0.7 } },
+    ],
+    rootFn: (p, u, t) => { p.roll = 0.05 * sin(u * TAU * 2); },
+  },
+  "basic.side": {
+    bpm: 184, beats: 8,
+    keys: [
+      { t: 0.0, p: { x: -0.13, lHipA: 0.4, lKnee: 0.25, roll: -0.06, lShA: 0.35, rShA: 0.1, lElb: 0.8, rElb: 0.8 } },
+      { t: 0.125, p: { x: -0.04, lHipA: 0.15, roll: -0.02 } },
+      { t: 0.25, p: { x: 0.0, lHipA: 0.06, rHipA: 0.06, lKnee: 0.16, rKnee: 0.16 } },
+      { t: 0.375, p: { x: 0.0, y: 0.855 } },
+      { t: 0.5, p: { x: 0.13, rHipA: 0.4, rKnee: 0.25, roll: 0.06, rShA: 0.35, lShA: 0.1, lElb: 0.8, rElb: 0.8 } },
+      { t: 0.625, p: { x: 0.04, rHipA: 0.15, roll: 0.02 } },
+      { t: 0.75, p: { x: 0.0, lHipA: 0.06, rHipA: 0.06, lKnee: 0.16, rKnee: 0.16 } },
+      { t: 0.875, p: { x: 0.0, y: 0.855 } },
+    ],
+  },
+  "style.cuban_motion": {
+    bpm: 120, beats: 2,
+    keys: [
+      { t: 0.0, p: { y: 0.855, lKnee: 0.38, rKnee: 0.08, roll: -0.09, x: -0.035, lShF: 0.1, rShF: 0.1, lElb: 0.6, rElb: 0.6 } },
+      { t: 0.5, p: { y: 0.855, rKnee: 0.38, lKnee: 0.08, roll: 0.09, x: 0.035, lShF: 0.1, rShF: 0.1, lElb: 0.6, rElb: 0.6 } },
+    ],
+    rootFn: (p, u) => { p.tRoll = -p.roll * 0.5; },
+  },
+  "shine.suzy_q": {
+    bpm: 180, beats: 4,
+    keys: [
+      { t: 0.0, p: { yaw: 0.4, lHipA: -0.35, rHipA: 0.2, lKnee: 0.3, rKnee: 0.3, lShF: 0.45, rShF: -0.45, lElb: 0.9, rElb: 0.9, tYaw: -0.15 } },
+      { t: 0.25, p: { yaw: 0.0, lHipA: 0.05, rHipA: 0.05, lKnee: 0.22, rKnee: 0.22, lShF: 0.0, rShF: 0.0 } },
+      { t: 0.5, p: { yaw: -0.4, rHipA: -0.35, lHipA: 0.2, lKnee: 0.3, rKnee: 0.3, rShF: 0.45, lShF: -0.45, lElb: 0.9, rElb: 0.9, tYaw: 0.15 } },
+      { t: 0.75, p: { yaw: 0.0, lHipA: 0.05, rHipA: 0.05, lKnee: 0.22, rKnee: 0.22, lShF: 0.0, rShF: 0.0 } },
+    ],
+    rootFn: (p, u, t) => { p.x = 0.12 * sin(t * TAU * 0.5); },
+  },
+  "turn.right": {
+    bpm: 180, beats: 8, spin: TAU,
+    keys: [
+      { t: 0.0, p: { y: 0.86, lHipF: 0.3, lKnee: 0.25, lShF: -0.35, rShF: -0.35, lShA: 0.15, rShA: 0.15, lElb: 1.5, rElb: 1.5, tPitch: 0.0 } },
+      { t: 0.25, p: { y: 0.875, lHipF: 0.1, rHipF: 0.1, lKnee: 0.12, rKnee: 0.12, lElb: 1.6, rElb: 1.6 } },
+      { t: 0.5, p: { y: 0.86, rHipF: 0.25, rKnee: 0.22, lElb: 1.5, rElb: 1.5 } },
+      { t: 0.75, p: { y: 0.875, lKnee: 0.12, rKnee: 0.12, lElb: 1.4, rElb: 1.4 } },
+    ],
+  },
 };

@@ -79,7 +79,7 @@ function buildList() {
     const rows = catalog.filter((n) => n.family === f).map((n) => {
       const anim = Boolean(MOVES[n.id]);
       return `<button class="mv ${anim ? "anim" : ""}" data-id="${n.id}">
-        <span>${n.name}</span><em>${anim ? "▶ v1" : "queued"}</em></button>`;
+        <span>${n.name}${n.partner ? " 🤝" : ""}</span><em>${anim ? "▶ v1" : "queued"}</em></button>`;
     }).join("");
     return `<div class="fam-group"><h3>${FAMILY_LABELS[f] ?? f}</h3>${rows}</div>`;
   }).join("");
