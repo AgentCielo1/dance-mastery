@@ -1,0 +1,12 @@
+# vendored ML runtime + pose model (fetch with: node app/scripts/fetch-models.mjs)
+app/vendor/
+
+# user-generated analysis output (samples are committed explicitly)
+app/reports/*.json
+!app/reports/sample-*.json
+
+# local capture sessions (raw video never belongs in git)
+captures/
+
+node_modules/
+.DS_Store

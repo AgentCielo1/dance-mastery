@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # Zero dependencies by design — no install step.
+      - name: Unit tests (engine, cleanup filters, pose scoring)
+        run: cd app && npm test
+
+      - name: Data integrity (skill tree parses, generated modules in sync)
+        run: |
+          node -e "JSON.parse(require('fs').readFileSync('data/breaking-skill-tree.json','utf8')); console.log('skill tree: valid JSON')"
+          (cd app && node scripts/sync-data.mjs && node scripts/gen-pose-refs.mjs)
+          git diff --exit-code -- data app/js/data || { echo '::error::generated data modules out of sync — run sync-data + gen-pose-refs and commit'; exit 1; }
