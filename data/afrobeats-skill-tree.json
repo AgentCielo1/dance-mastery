@@ -1,0 +1,142 @@
+{
+  "style": "afrobeats",
+  "version": "0.1.0",
+  "name": "Afrobeats",
+  "notes": "Afrobeats/Afrodance style pack (Doc 04 §3.5, Ghana & Nigeria). Pedagogy follows the proven named-move dictionary model (African Dance Dictionary / DWP Academy school): learn 3-5 named moves, combine them, freestyle. RESPECT ARCHITECTURE (Doc 02 §3) is enforced by tests: every named move carries its origin, creators are named where established (Incredible Zigi, Zlatan Ibile...), and history ships with the steps. Origins are stated conservatively — 'popularized by' where the record is clear, street-culture attribution where it is collective. This pack is a candidate for creator partnership upgrades (see docs/AFRICAN-PARTNERSHIPS.md): the goal is Ghanaian and Nigerian dancers capturing, correcting, and revenue-sharing this content under their own names.",
+  "teachers": [
+    { "name": "DWP Academy (Accra) — the flagship Afrodance school", "url": "https://dwpacademyglobal.com/" },
+    { "name": "African Dance Dictionary (named-move platform)", "url": "https://dance-dictionary.com/" }
+  ],
+  "seasons": [
+    { "theme": "Bounce Season", "finale": "Film one full song of afro bounce — knees soft, off-beats alive, never stiff." },
+    { "theme": "Named-Moves Season", "finale": "Film a 4-move medley with the names called out — and their creators, out loud. That's the culture." },
+    { "theme": "Legwork Season", "finale": "Film 32 counts of continuous zanku/legwork — grounded, sharp, breathing." },
+    { "theme": "Freestyle Season", "finale": "Film a 60-second freestyle to a track you've never heard — moves as vocabulary, not routine." },
+    { "theme": "Party Season", "finale": "Take it somewhere real: a party, a class, a jam. Afrodance lives in rooms full of people." }
+  ],
+  "attributes": [
+    { "id": "attr.stamina.l1", "name": "Bounce stamina L1", "test": "one full song of continuous afro bounce, conversational breathing" },
+    { "id": "attr.stamina.l2", "name": "Legwork stamina L2", "test": "two songs with legwork bursts every 8 — form never collapses" },
+    { "id": "attr.ankles.l1", "name": "Ankle spring L1", "test": "90s of light two-step bounce on the balls of the feet, pain-free" }
+  ],
+  "nodes": [
+    { "id": "music.counting", "type": "concept", "family": "musicality", "name": "Counting 8s over the afrobeats pulse (~100-110 BPM)", "phase": 0, "prereqs": [] },
+    {
+      "id": "music.offbeat", "type": "concept", "family": "musicality", "name": "The off-beat: where afrobeats actually lives", "phase": 1,
+      "prereqs": [{ "id": "music.counting", "kind": "hard" }],
+      "checkpoints": ["the kick holds the floor; the magic is in the 'and's", "log-drum and shaker layers — pick one and ride it"]
+    },
+    { "id": "music.layers", "type": "concept", "family": "musicality", "name": "Layer riding: percussion vs melody vs vocal", "phase": 2, "prereqs": [{ "id": "music.offbeat", "kind": "hard" }] },
+    {
+      "id": "culture.origins", "type": "concept", "family": "culture", "name": "Afrobeats ≠ Afrobeat: Lagos & Accra, the 2010s wave, the diaspora loop", "phase": 0,
+      "prereqs": [],
+      "checkpoints": ["Fela's Afrobeat (70s) is the ancestor; Afrobeats (2010s pop) is the wave you're dancing", "moves are born named — knowing who made them IS part of dancing them"]
+    },
+    {
+      "id": "culture.creators", "type": "concept", "family": "culture", "name": "The creators: why every move has a name and an author", "phase": 1,
+      "prereqs": [],
+      "checkpoints": ["Ghana's named-move school (Incredible Zigi, DWP Academy) turned viral moves into a living dictionary", "crediting creators out loud when you teach a move is the culture's own etiquette — practice it"]
+    },
+
+    {
+      "id": "groove.afro_bounce", "type": "move", "family": "groove", "name": "Afro bounce (the two-step foundation)", "phase": 0,
+      "prereqs": [{ "id": "music.counting", "kind": "hard" }],
+      "anchor": "days; depth forever",
+      "checkpoints": [
+        "knees soft, weight shifting side to side ON the kick",
+        "chest and shoulders ride a beat BEHIND the feet — relaxed power",
+        "heels light; the ground is a trampoline you never leave",
+        "smile — afro bounce is generous, never grim"
+      ],
+      "mistakes": ["bouncing tall and stiff like a metronome", "arms hanging dead"]
+    },
+    {
+      "id": "groove.shoulder_roll", "type": "move", "family": "groove", "name": "Shoulder rolls & chest pump over the bounce", "phase": 1,
+      "prereqs": [{ "id": "groove.afro_bounce", "kind": "hard" }],
+      "checkpoints": ["shoulders roll back-to-front in the pocket", "chest pump lands on the off-beat, small and juicy"]
+    },
+
+    {
+      "id": "named.azonto", "type": "move", "family": "named", "name": "Azonto", "phase": 1,
+      "origin": "Ghana — born in Accra's streets late 2000s, global by 2011-12; mime-play hands (driving, washing, calling) over a driving two-step",
+      "prereqs": [{ "id": "groove.afro_bounce", "kind": "hard" }],
+      "checkpoints": [
+        "knee lifts mark the beat while hands MIME everyday actions",
+        "one hand tells the story; the body keeps the engine running",
+        "wit is the point — azonto is a conversation, crack a joke with it"
+      ],
+      "mistakes": ["doing the hands without the two-step engine underneath"]
+    },
+    {
+      "id": "named.shaku", "type": "move", "family": "named", "name": "Shaku Shaku", "phase": 2,
+      "origin": "Nigeria — Lagos street culture (Agege), collective street-born; went national through the 2017-18 street-hop wave",
+      "prereqs": [{ "id": "groove.afro_bounce", "kind": "hard" }, { "id": "attr.ankles.l1", "kind": "hard" }],
+      "checkpoints": [
+        "forearms cross and swing loose in front while the feet shuffle wide",
+        "the lean is drunkenly controlled — loose above, precise below",
+        "feet gallop: step-cross-step riding the off-beat"
+      ],
+      "mistakes": ["tight arms — shaku's arms are cooked spaghetti with intent"]
+    },
+    {
+      "id": "named.zanku", "type": "move", "family": "named", "name": "Zanku (Legwork)", "phase": 2,
+      "origin": "Nigeria — popularized and named by Zlatan Ibile ('Zanku (Legwork)', 2018); the legwork vocabulary that defined an era",
+      "prereqs": [{ "id": "groove.afro_bounce", "kind": "hard" }, { "id": "attr.stamina.l1", "kind": "hard" }],
+      "anchor": "weeks to sharp",
+      "checkpoints": [
+        "one leg stomps IN as the other flicks free — sharp, grounded, alternating",
+        "the hand flick punctuates the stomp (the 'dust-off')",
+        "stays low and springy — legwork dies standing tall",
+        "bursts of 8, breathe, again — it's sprints, not a marathon"
+      ],
+      "mistakes": ["kicking forward instead of stomping into the floor", "arms forgetting their flick"]
+    },
+    {
+      "id": "named.gbese", "type": "move", "family": "named", "name": "Gbese", "phase": 2,
+      "origin": "Nigeria — Lagos zanku-era street vocabulary ('gbese' = raise the leg, Yoruba slang)",
+      "prereqs": [{ "id": "named.zanku", "kind": "helps" }, { "id": "groove.afro_bounce", "kind": "hard" }],
+      "checkpoints": ["knee raises high and crosses the body as the arms swing opposite", "lands back into the bounce like nothing happened"]
+    },
+    {
+      "id": "named.pilolo", "type": "move", "family": "named", "name": "Pilolo", "phase": 3,
+      "origin": "Ghana — created by Incredible Zigi (Michael Amofa), of the Accra school that turned Ghanaian moves into global vocabulary",
+      "prereqs": [{ "id": "named.azonto", "kind": "hard" }],
+      "checkpoints": ["the leg sweeps in as the arms pull the opposite way — a coiled cross-body snap", "credit where due: this move has an author; say his name when you teach it"]
+    },
+    {
+      "id": "named.network", "type": "move", "family": "named", "name": "Network", "phase": 3,
+      "origin": "Ghana — from the Accra named-move school of the late 2010s",
+      "prereqs": [{ "id": "named.azonto", "kind": "hard" }],
+      "checkpoints": ["arms angle overhead like catching a signal while the two-step travels", "the search IS the joke — commit to it"]
+    },
+    {
+      "id": "named.kupe", "type": "move", "family": "named", "name": "Kupe", "phase": 3,
+      "origin": "Ghana — the 2018 'Kupe Dance' wave (A-Star's record carried it worldwide)",
+      "prereqs": [{ "id": "groove.shoulder_roll", "kind": "hard" }],
+      "checkpoints": ["cool hand-over-hand rolls at chest height, weight rocking easy", "it's a flex, not a workout — half the effort, twice the face"]
+    },
+
+    {
+      "id": "combo.four_moves", "type": "combo", "family": "named", "name": "The medley: four named moves, one song, creators called", "phase": 2,
+      "prereqs": [{ "id": "named.azonto", "kind": "hard" }, { "id": "named.shaku", "kind": "hard" }],
+      "checkpoints": ["transition on the 1 of each 8; the bounce never stops between moves", "say each move's name (and creator, where known) as you hit it — that's the culture's own etiquette"]
+    },
+    {
+      "id": "free.vocab", "type": "concept", "family": "freestyle", "name": "Freestyle: moves as vocabulary, the song as the sentence", "phase": 3,
+      "prereqs": [{ "id": "combo.four_moves", "kind": "hard" }, { "id": "music.layers", "kind": "hard" }]
+    },
+    {
+      "id": "free.face_energy", "type": "concept", "family": "freestyle", "name": "Face, energy, generosity — the half of afrodance that isn't steps", "phase": 3,
+      "prereqs": [{ "id": "free.vocab", "kind": "helps" }]
+    },
+    {
+      "id": "meta.new_moves", "type": "concept", "family": "meta", "name": "Staying current: new moves drop monthly — how to learn one from its creator", "phase": 4,
+      "prereqs": [{ "id": "culture.creators", "kind": "hard" }, { "id": "free.vocab", "kind": "hard" }],
+      "checkpoints": ["find the creator's own tutorial first, not a re-teach", "learn it, credit it, then make it yours — in that order"]
+    },
+    {
+      "id": "meta.party", "type": "concept", "family": "meta", "name": "The scene bridge: afrodance lives at parties", "phase": 4,
+      "prereqs": [{ "id": "combo.four_moves", "kind": "hard" }]
+    }
+  ]
+}

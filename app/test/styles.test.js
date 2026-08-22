@@ -120,6 +120,30 @@ test("tango pack: embrace honesty gates the embrace itself; walk-first; códigos
   assert.equal(info.theme, "The Walk Season");
 });
 
+test("afrobeats pack: every named move carries its origin; creator etiquette is curriculum", () => {
+  const af = STYLES.afrobeats;
+  const named = af.nodes.filter((n) => n.family === "named" && n.type === "move");
+  assert.ok(named.length >= 6, `named-move canon present (${named.length})`);
+  for (const n of named) assert.ok(n.origin, `${n.id} missing origin credit`);
+  assert.ok(af.nodes.some((n) => n.id === "culture.creators"), "creator-crediting etiquette is a node");
+  assert.ok(af.teachers?.length >= 2, "African-based teachers linked");
+  const info = seasonInfo(newState(T), T, af.seasons);
+  assert.equal(info.theme, "Bounce Season");
+});
+
+test("west african pack: foundation-only by design — lineage honesty enforced", () => {
+  const wa = STYLES.westafrican;
+  const honesty = wa.nodes.find((n) => n.id === "meta.lineage_honesty");
+  assert.ok(honesty, "lineage honesty node exists");
+  assert.ok(honesty.checkpoints.some((c) => /lineage teachers|tradition-bearers/.test(c)));
+  const movement = wa.nodes.filter((n) => n.family === "movement");
+  assert.ok(movement.length <= 3, `movement stays preparatory (${movement.length}) — the repertoire waits for partners`);
+  assert.ok(wa.nodes.filter((n) => n.family === "rhythms").length >= 5, "rhythm literacy is the substance");
+  assert.ok(wa.nodes.some((n) => n.id === "rhythm.break"), "the break (drum call) is curriculum");
+  const info = seasonInfo(newState(T), T, wa.seasons);
+  assert.equal(info.theme, "The Drum Season");
+});
+
 test("findNode resolves across packs and returns null for unknowns", () => {
   assert.equal(findNode("footwork.six_step").style, "breaking");
   assert.equal(findNode("party.wop").style, "hiphop");

@@ -316,4 +316,69 @@ export const MOVES = {
     ],
     rootFn: (p, u, t) => { p.z = 0.06 * sin(t * TAU * 0.5); },
   },
+
+  /* ---------------- afrobeats pack (procedural v1, $0 lane) ---------------- */
+  "groove.afro_bounce": {
+    bpm: 104, beats: 2,
+    keys: [
+      { t: 0.0, p: { y: 0.845, x: -0.06, lKnee: 0.42, rKnee: 0.18, roll: -0.05, tYaw: 0.12, lShF: 0.3, rShF: -0.2, lElb: 0.9, rElb: 0.9, tPitch: 0.06 } },
+      { t: 0.5, p: { y: 0.845, x: 0.06, rKnee: 0.42, lKnee: 0.18, roll: 0.05, tYaw: -0.12, rShF: 0.3, lShF: -0.2, lElb: 0.9, rElb: 0.9, tPitch: 0.06 } },
+    ],
+    rootFn: (p, u) => { p.y += 0.012 * sin(u * TAU * 2); },
+  },
+  "named.azonto": {
+    bpm: 105, beats: 2,
+    keys: [
+      { t: 0.0, p: { y: 0.84, lHipF: 0.75, lKnee: 1.0, rKnee: 0.2, rShF: -1.05, rShA: 0.25, rElb: 1.35, lShF: 0.35, lElb: 1.0, tPitch: 0.08, tYaw: 0.15 } },
+      { t: 0.25, p: { y: 0.86, lHipF: 0.1, lKnee: 0.25, rKnee: 0.2, rShF: -0.95, rShA: 0.45, rElb: 1.2, lShF: 0.0, lElb: 0.9 } },
+      { t: 0.5, p: { y: 0.84, rHipF: 0.75, rKnee: 1.0, lKnee: 0.2, rShF: -1.15, rShA: 0.15, rElb: 1.45, lShF: 0.35, lElb: 1.0, tPitch: 0.08, tYaw: -0.15 } },
+      { t: 0.75, p: { y: 0.86, rHipF: 0.1, rKnee: 0.25, lKnee: 0.2, rShF: -0.95, rShA: 0.45, rElb: 1.2, lShF: 0.0, lElb: 0.9 } },
+    ],
+  },
+  "named.shaku": {
+    bpm: 106, beats: 2,
+    keys: [
+      { t: 0.0, p: { y: 0.84, lHipA: 0.45, lKnee: 0.35, rKnee: 0.3, roll: -0.12, tPitch: 0.14, lShF: -0.65, rShF: -0.75, lShA: 0.06, rShA: 0.06, lElb: 1.45, rElb: 1.55 } },
+      { t: 0.25, p: { y: 0.85, lHipA: 0.1, rHipA: 0.1, lKnee: 0.3, rKnee: 0.3, roll: 0.0, lShF: -0.75, rShF: -0.6, lElb: 1.55, rElb: 1.4 } },
+      { t: 0.5, p: { y: 0.84, rHipA: 0.45, rKnee: 0.35, lKnee: 0.3, roll: 0.12, tPitch: 0.14, lShF: -0.75, rShF: -0.65, lShA: 0.06, rShA: 0.06, lElb: 1.55, rElb: 1.45 } },
+      { t: 0.75, p: { y: 0.85, lHipA: 0.1, rHipA: 0.1, lKnee: 0.3, rKnee: 0.3, roll: 0.0, lShF: -0.6, rShF: -0.75, lElb: 1.4, rElb: 1.55 } },
+    ],
+  },
+  "named.zanku": {
+    bpm: 104, beats: 2,
+    keys: [
+      { t: 0.0, p: { y: 0.8, lHipF: 0.32, lKnee: 0.6, rHipF: -0.5, rKnee: 1.45, tPitch: 0.16, rShF: -0.9, rElb: 1.1, lShF: 0.4, lElb: 0.8 } },
+      { t: 0.25, p: { y: 0.82, lKnee: 0.45, rHipF: -0.1, rKnee: 0.6, rShF: 0.15, rElb: 0.9, lShF: 0.1 } },
+      { t: 0.5, p: { y: 0.8, rHipF: 0.32, rKnee: 0.6, lHipF: -0.5, lKnee: 1.45, tPitch: 0.16, lShF: -0.9, lElb: 1.1, rShF: 0.4, rElb: 0.8 } },
+      { t: 0.75, p: { y: 0.82, rKnee: 0.45, lHipF: -0.1, lKnee: 0.6, lShF: 0.15, lElb: 0.9, rShF: 0.1 } },
+    ],
+  },
+  "named.kupe": {
+    bpm: 100, beats: 4,
+    keys: [
+      { t: 0.0, p: { y: 0.855, x: -0.04, lKnee: 0.28, rKnee: 0.15, lShF: -0.8, lElb: 1.65, rShF: -0.65, rElb: 1.05, tYaw: 0.1, roll: -0.04 } },
+      { t: 0.25, p: { y: 0.86, x: 0.0, lShF: -0.65, lElb: 1.05, rShF: -0.8, rElb: 1.65 } },
+      { t: 0.5, p: { y: 0.855, x: 0.04, rKnee: 0.28, lKnee: 0.15, lShF: -0.8, lElb: 1.65, rShF: -0.65, rElb: 1.05, tYaw: -0.1, roll: 0.04 } },
+      { t: 0.75, p: { y: 0.86, x: 0.0, lShF: -0.65, lElb: 1.05, rShF: -0.8, rElb: 1.65 } },
+    ],
+  },
+
+  /* ------------- west african foundation (procedural v1, $0 lane) ------------- */
+  "move.grounded_posture": {
+    bpm: 90, beats: 4,
+    keys: [
+      { t: 0.0, p: { y: 0.78, tPitch: 0.34, lHipF: 0.5, rHipF: 0.5, lKnee: 0.8, rKnee: 0.8, lShA: 0.85, rShA: 0.85, lShF: -0.25, rShF: -0.25, lElb: 0.35, rElb: 0.35 } },
+      { t: 0.5, p: { y: 0.76, tPitch: 0.38, lHipF: 0.55, rHipF: 0.55, lKnee: 0.9, rKnee: 0.9, lShA: 0.6, rShA: 0.6, lShF: 0.15, rShF: 0.15, lElb: 0.45, rElb: 0.45 } },
+    ],
+    rootFn: (p, u, t) => { p.tYaw = 0.1 * sin(t * TAU * 0.5); },
+  },
+  "move.echauffement": {
+    bpm: 120, beats: 2,
+    keys: [
+      { t: 0.0, p: { y: 0.82, tPitch: 0.22, lHipF: 0.8, lKnee: 1.2, rHipF: -0.15, rKnee: 0.35, rShF: -0.8, rElb: 1.3, lShF: 0.6, lElb: 1.3 } },
+      { t: 0.25, p: { y: 0.8, tPitch: 0.24, lHipF: 0.2, lKnee: 0.6, rHipF: 0.1, rKnee: 0.5 } },
+      { t: 0.5, p: { y: 0.82, tPitch: 0.22, rHipF: 0.8, rKnee: 1.2, lHipF: -0.15, lKnee: 0.35, lShF: -0.8, lElb: 1.3, rShF: 0.6, rElb: 1.3 } },
+      { t: 0.75, p: { y: 0.8, tPitch: 0.24, rHipF: 0.2, rKnee: 0.6, lHipF: 0.1, lKnee: 0.5 } },
+    ],
+  },
 };
