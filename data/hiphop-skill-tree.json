@@ -4,28 +4,120 @@
   "name": "Hip Hop",
   "notes": "Hip Hop style pack (Doc 04 §3.1). Built on the STEEZY-validated ordering: grooves and rhythm BEFORE any vocabulary. Party moves carry provenance (origin) per the Doc 02 respect architecture — social dances are free vocabulary, but their history is first-class curriculum. Progression frame: grooves -> foundation vocabulary (era by era) -> layering & texture -> freestyle frameworks -> cypher/choreography readiness.",
   "seasons": [
-    { "theme": "Groove Season", "finale": "Film one full song of nonstop bounce + rock — never off beat." },
-    { "theme": "Party Classics Season", "finale": "Film a 90s party-move medley: five moves, on beat, with names called out." },
-    { "theme": "Layering Season", "finale": "Film one groove carried through three layers: feet, chest, arms." },
-    { "theme": "Freestyle Season", "finale": "Film a 60-second freestyle to a track you've never heard." },
-    { "theme": "Cypher Season", "finale": "Take a round into a cypher, class, or party — witnessed." }
+    {
+      "theme": "Groove Season",
+      "finale": "Film one full song of nonstop bounce + rock — never off beat."
+    },
+    {
+      "theme": "Party Classics Season",
+      "finale": "Film a 90s party-move medley: five moves, on beat, with names called out."
+    },
+    {
+      "theme": "Layering Season",
+      "finale": "Film one groove carried through three layers: feet, chest, arms."
+    },
+    {
+      "theme": "Freestyle Season",
+      "finale": "Film a 60-second freestyle to a track you've never heard."
+    },
+    {
+      "theme": "Cypher Season",
+      "finale": "Take a round into a cypher, class, or party — witnessed."
+    }
   ],
   "attributes": [
-    { "id": "attr.stamina.l1", "name": "Groove stamina L1", "test": "bounce nonstop through one full song, conversational breathing" },
-    { "id": "attr.stamina.l2", "name": "Groove stamina L2", "test": "three songs nonstop, groove never collapses" },
-    { "id": "attr.ankles.l1", "name": "Ankle/calf spring L1", "test": "60s continuous light bounce on the balls of the feet, pain-free" }
+    {
+      "id": "attr.stamina.l1",
+      "name": "Groove stamina L1",
+      "test": "bounce nonstop through one full song, conversational breathing"
+    },
+    {
+      "id": "attr.stamina.l2",
+      "name": "Groove stamina L2",
+      "test": "three songs nonstop, groove never collapses"
+    },
+    {
+      "id": "attr.ankles.l1",
+      "name": "Ankle/calf spring L1",
+      "test": "60s continuous light bounce on the balls of the feet, pain-free"
+    }
   ],
   "nodes": [
-    { "id": "music.counting", "type": "concept", "family": "musicality", "name": "Counting 8s / find the 1", "phase": 0, "prereqs": [] },
-    { "id": "music.layers", "type": "concept", "family": "musicality", "name": "Kick/snare isolation", "phase": 0, "prereqs": [{ "id": "music.counting", "kind": "hard" }] },
-    { "id": "music.pocket", "type": "concept", "family": "musicality", "name": "Riding the pocket (boom-bap vs trap vs funk)", "phase": 2, "prereqs": [{ "id": "music.layers", "kind": "hard" }] },
-    { "id": "music.hits", "type": "concept", "family": "musicality", "name": "Hitting vs flowing — accents and texture", "phase": 3, "prereqs": [{ "id": "music.pocket", "kind": "hard" }] },
-    { "id": "culture.origins", "type": "concept", "family": "culture", "name": "Hip hop's four elements, the party, the cypher", "phase": 0, "prereqs": [] },
-    { "id": "culture.social_dances", "type": "concept", "family": "culture", "name": "Party dances as living history — why names and origins matter", "phase": 1, "prereqs": [] },
-
     {
-      "id": "groove.bounce", "type": "move", "family": "groove", "name": "Bounce (down groove)", "phase": 0,
-      "prereqs": [{ "id": "music.counting", "kind": "hard" }],
+      "id": "music.counting",
+      "type": "concept",
+      "family": "musicality",
+      "name": "Counting 8s / find the 1",
+      "phase": 0,
+      "prereqs": []
+    },
+    {
+      "id": "music.layers",
+      "type": "concept",
+      "family": "musicality",
+      "name": "Kick/snare isolation",
+      "phase": 0,
+      "prereqs": [
+        {
+          "id": "music.counting",
+          "kind": "hard"
+        }
+      ]
+    },
+    {
+      "id": "music.pocket",
+      "type": "concept",
+      "family": "musicality",
+      "name": "Riding the pocket (boom-bap vs trap vs funk)",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "music.layers",
+          "kind": "hard"
+        }
+      ]
+    },
+    {
+      "id": "music.hits",
+      "type": "concept",
+      "family": "musicality",
+      "name": "Hitting vs flowing — accents and texture",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "music.pocket",
+          "kind": "hard"
+        }
+      ]
+    },
+    {
+      "id": "culture.origins",
+      "type": "concept",
+      "family": "culture",
+      "name": "Hip hop's four elements, the party, the cypher",
+      "phase": 0,
+      "prereqs": []
+    },
+    {
+      "id": "culture.social_dances",
+      "type": "concept",
+      "family": "culture",
+      "name": "Party dances as living history — why names and origins matter",
+      "phase": 1,
+      "prereqs": []
+    },
+    {
+      "id": "groove.bounce",
+      "type": "move",
+      "family": "groove",
+      "name": "Bounce (down groove)",
+      "phase": 0,
+      "prereqs": [
+        {
+          "id": "music.counting",
+          "kind": "hard"
+        }
+      ],
       "anchor": "days; depth is forever",
       "checkpoints": [
         "knees give ON the beat — the floor pulls you down",
@@ -33,29 +125,69 @@
         "heels stay light; the spring lives in the ankles",
         "shoulders loose — bounce is a whole-body yes, not a head nod"
       ],
-      "mistakes": ["bouncing UP on the beat (that's the rock — different groove)", "locking knees between beats"]
+      "mistakes": [
+        "bouncing UP on the beat (that's the rock — different groove)",
+        "locking knees between beats"
+      ]
     },
     {
-      "id": "groove.rock", "type": "move", "family": "groove", "name": "Rock (up groove)", "phase": 0,
-      "prereqs": [{ "id": "music.counting", "kind": "hard" }],
+      "id": "groove.rock",
+      "type": "move",
+      "family": "groove",
+      "name": "Rock (up groove)",
+      "phase": 0,
+      "prereqs": [
+        {
+          "id": "music.counting",
+          "kind": "hard"
+        }
+      ],
       "checkpoints": [
         "chest lifts ON the beat — the ceiling pulls you up",
         "the return down is the 'and' count",
         "switchable: 8 counts bounce, 8 counts rock, clean swap"
       ],
-      "mistakes": ["rocking from the lower back instead of the chest"]
+      "mistakes": [
+        "rocking from the lower back instead of the chest"
+      ]
     },
     {
-      "id": "groove.side", "type": "move", "family": "groove", "name": "Side-to-side groove + weight shifts", "phase": 1,
-      "prereqs": [{ "id": "groove.bounce", "kind": "hard" }],
-      "checkpoints": ["weight fully arrives on each side", "the bounce never stops while traveling"],
-      "mistakes": ["stepping without transferring weight"]
+      "id": "groove.side",
+      "type": "move",
+      "family": "groove",
+      "name": "Side-to-side groove + weight shifts",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "groove.bounce",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "weight fully arrives on each side",
+        "the bounce never stops while traveling"
+      ],
+      "mistakes": [
+        "stepping without transferring weight"
+      ]
     },
-
     {
-      "id": "party.running_man", "type": "move", "family": "party", "name": "Running Man", "phase": 1,
+      "id": "party.running_man",
+      "type": "move",
+      "family": "party",
+      "name": "Running Man",
+      "phase": 1,
       "origin": "late-1980s club scene; popularized by MC Hammer, Bobby Brown and Janet Jackson's stages (early 90s)",
-      "prereqs": [{ "id": "groove.bounce", "kind": "hard" }, { "id": "attr.ankles.l1", "kind": "hard" }],
+      "prereqs": [
+        {
+          "id": "groove.bounce",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.ankles.l1",
+          "kind": "hard"
+        }
+      ],
       "anchor": "1-2 weeks to clean",
       "checkpoints": [
         "step lands ON the beat as the other foot slides back",
@@ -63,146 +195,455 @@
         "arms pump opposite the legs, elbows at 90",
         "stays in place: the slide cancels the step"
       ],
-      "mistakes": ["hopping instead of sliding (the #1 tell)", "drifting backward across the floor"]
+      "mistakes": [
+        "hopping instead of sliding (the #1 tell)",
+        "drifting backward across the floor"
+      ]
     },
     {
-      "id": "party.roger_rabbit", "type": "move", "family": "party", "name": "Roger Rabbit", "phase": 2,
+      "id": "party.roger_rabbit",
+      "type": "move",
+      "family": "party",
+      "name": "Roger Rabbit",
+      "phase": 2,
       "origin": "late-1980s, named for the 1988 film; the running man's backward-skipping cousin",
-      "prereqs": [{ "id": "party.running_man", "kind": "hard" }],
+      "prereqs": [
+        {
+          "id": "party.running_man",
+          "kind": "hard"
+        }
+      ],
       "checkpoints": [
         "back leg swings through like a lazy backward skip",
         "the hop is small; the swing is big",
         "arms scoop opposite, loose wrists"
       ],
-      "mistakes": ["turning it into a stiff backward march"]
+      "mistakes": [
+        "turning it into a stiff backward march"
+      ]
     },
     {
-      "id": "party.cabbage_patch", "type": "move", "family": "party", "name": "Cabbage Patch", "phase": 1,
+      "id": "party.cabbage_patch",
+      "type": "move",
+      "family": "party",
+      "name": "Cabbage Patch",
+      "phase": 1,
       "origin": "1987, named by Gucci Crew II's 'The Cabbage Patch'",
-      "prereqs": [{ "id": "groove.bounce", "kind": "hard" }],
+      "prereqs": [
+        {
+          "id": "groove.bounce",
+          "kind": "hard"
+        }
+      ],
       "checkpoints": [
         "fists stir a big horizontal pot in front of you",
         "shoulders and hips chase the circle — the arms just lead it",
         "weight shifts follow the stir, on beat"
       ],
-      "mistakes": ["arms circling alone while the body stands still"]
+      "mistakes": [
+        "arms circling alone while the body stands still"
+      ]
     },
     {
-      "id": "party.wop", "type": "move", "family": "party", "name": "The Wop", "phase": 1,
+      "id": "party.wop",
+      "type": "move",
+      "family": "party",
+      "name": "The Wop",
+      "phase": 1,
       "origin": "mid-1980s; immortalized by Le Juan Love's 'The Wop' (1989)",
-      "prereqs": [{ "id": "groove.rock", "kind": "hard" }],
-      "checkpoints": ["rock the shoulders back on beat with a small arm swing", "head rides the rock, chin loose"],
-      "mistakes": ["all neck, no chest"]
+      "prereqs": [
+        {
+          "id": "groove.rock",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "rock the shoulders back on beat with a small arm swing",
+        "head rides the rock, chin loose"
+      ],
+      "mistakes": [
+        "all neck, no chest"
+      ]
     },
     {
-      "id": "party.prep", "type": "move", "family": "party", "name": "The Prep", "phase": 1,
+      "id": "party.prep",
+      "type": "move",
+      "family": "party",
+      "name": "The Prep",
+      "phase": 1,
       "origin": "1980s East Coast party staple",
-      "prereqs": [{ "id": "groove.rock", "kind": "hard" }],
-      "checkpoints": ["one arm swings across the chest as the shoulders rock", "step-touch underneath keeps time"],
-      "mistakes": ["forgetting the feet — the prep is a full-body rock"]
+      "prereqs": [
+        {
+          "id": "groove.rock",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "one arm swings across the chest as the shoulders rock",
+        "step-touch underneath keeps time"
+      ],
+      "mistakes": [
+        "forgetting the feet — the prep is a full-body rock"
+      ]
     },
     {
-      "id": "party.smurf", "type": "move", "family": "party", "name": "The Smurf", "phase": 2,
+      "id": "party.smurf",
+      "type": "move",
+      "family": "party",
+      "name": "The Smurf",
+      "phase": 2,
       "origin": "early 1980s, from the Smurf craze era ('Smurfin'')",
-      "prereqs": [{ "id": "groove.bounce", "kind": "hard" }],
-      "checkpoints": ["hands roll forward alternately like paddling", "deep bounce underneath, knees soft"],
-      "mistakes": ["rolling hands off-beat from the bounce"]
+      "prereqs": [
+        {
+          "id": "groove.bounce",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "hands roll forward alternately like paddling",
+        "deep bounce underneath, knees soft"
+      ],
+      "mistakes": [
+        "rolling hands off-beat from the bounce"
+      ]
     },
     {
-      "id": "party.reject", "type": "move", "family": "party", "name": "The Reject", "phase": 2,
+      "id": "party.reject",
+      "type": "move",
+      "family": "party",
+      "name": "The Reject",
+      "phase": 2,
       "origin": "2000s, from Chicago footwork/juke culture into the mainstream via 'Crank Dat' era",
-      "prereqs": [{ "id": "party.running_man", "kind": "helps" }],
-      "checkpoints": ["kick-back skips alternate, like running man in reverse", "arms pump down with each skip"],
-      "mistakes": ["kicking forward instead of skipping back"]
+      "prereqs": [
+        {
+          "id": "party.running_man",
+          "kind": "helps"
+        }
+      ],
+      "checkpoints": [
+        "kick-back skips alternate, like running man in reverse",
+        "arms pump down with each skip"
+      ],
+      "mistakes": [
+        "kicking forward instead of skipping back"
+      ]
     },
     {
-      "id": "party.steve_martin", "type": "move", "family": "party", "name": "The Steve Martin", "phase": 2,
+      "id": "party.steve_martin",
+      "type": "move",
+      "family": "party",
+      "name": "The Steve Martin",
+      "phase": 2,
       "origin": "1980s, named after the comedian's 'wild and crazy' stage strut",
-      "prereqs": [{ "id": "groove.side", "kind": "hard" }],
-      "checkpoints": ["lean back and swing the leg across on the '1'", "arms swing wide and easy"],
-      "mistakes": ["rushing it — the Steve Martin lives behind the beat"]
+      "prereqs": [
+        {
+          "id": "groove.side",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "lean back and swing the leg across on the '1'",
+        "arms swing wide and easy"
+      ],
+      "mistakes": [
+        "rushing it — the Steve Martin lives behind the beat"
+      ]
     },
     {
-      "id": "party.humpty", "type": "move", "family": "party", "name": "The Humpty Dance", "phase": 2,
+      "id": "party.humpty",
+      "type": "move",
+      "family": "party",
+      "name": "The Humpty Dance",
+      "phase": 2,
       "origin": "1990, Digital Underground's 'The Humpty Dance'",
-      "prereqs": [{ "id": "groove.side", "kind": "hard" }],
-      "checkpoints": ["hips swing side to side with a lean", "opposite arm crosses over on the swing"],
-      "mistakes": ["squaring the hips — the lean IS the move"]
+      "prereqs": [
+        {
+          "id": "groove.side",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "hips swing side to side with a lean",
+        "opposite arm crosses over on the swing"
+      ],
+      "mistakes": [
+        "squaring the hips — the lean IS the move"
+      ]
     },
     {
-      "id": "party.biz", "type": "move", "family": "party", "name": "The Biz Markie", "phase": 2,
+      "id": "party.biz",
+      "type": "move",
+      "family": "party",
+      "name": "The Biz Markie",
+      "phase": 2,
       "origin": "late 1980s, named for Biz Markie's signature stage bounce",
-      "prereqs": [{ "id": "groove.bounce", "kind": "hard" }],
-      "checkpoints": ["lean side to side, palm pushing down on each lean", "bounce stays under the lean"],
-      "mistakes": ["stiff palm — it should ride like a basketball dribble"]
+      "prereqs": [
+        {
+          "id": "groove.bounce",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "lean side to side, palm pushing down on each lean",
+        "bounce stays under the lean"
+      ],
+      "mistakes": [
+        "stiff palm — it should ride like a basketball dribble"
+      ]
     },
     {
-      "id": "party.bart", "type": "move", "family": "party", "name": "The Bart Simpson", "phase": 3,
+      "id": "party.bart",
+      "type": "move",
+      "family": "party",
+      "name": "The Bart Simpson",
+      "phase": 3,
       "origin": "early 1990s, from the Simpsons craze ('Do the Bartman')",
-      "prereqs": [{ "id": "party.humpty", "kind": "helps" }],
-      "checkpoints": ["heel-toe swivels travel sideways", "arms wave loose in opposition"],
-      "mistakes": ["losing the bounce during the swivel"]
+      "prereqs": [
+        {
+          "id": "party.humpty",
+          "kind": "helps"
+        }
+      ],
+      "checkpoints": [
+        "heel-toe swivels travel sideways",
+        "arms wave loose in opposition"
+      ],
+      "mistakes": [
+        "losing the bounce during the swivel"
+      ]
     },
     {
-      "id": "party.dougie", "type": "move", "family": "party", "name": "The Dougie", "phase": 3,
+      "id": "party.dougie",
+      "type": "move",
+      "family": "party",
+      "name": "The Dougie",
+      "phase": 3,
       "origin": "Dallas, TX — Lil' Wil's 'My Dougie' (2007), national via Cali Swag District (2010); named after Doug E. Fresh",
-      "prereqs": [{ "id": "groove.side", "kind": "hard" }, { "id": "iso.shoulders", "kind": "helps" }],
-      "checkpoints": ["weight rolls through the hips side to side", "hand grazes past the head, cool not literal", "shoulders lead, everything late and greasy"],
-      "mistakes": ["doing it fast — the dougie is behind the beat or it's nothing"]
-    },
-
-    {
-      "id": "iso.shoulders", "type": "move", "family": "isolation", "name": "Shoulder isolations", "phase": 1,
-      "prereqs": [{ "id": "groove.bounce", "kind": "hard" }],
-      "checkpoints": ["one shoulder moves, NOTHING else does — check in a mirror", "up/down, forward/back, then circles", "then layer it ON the bounce without losing either"],
-      "mistakes": ["the head tilting along (the classic leak)"]
-    },
-    {
-      "id": "iso.chest", "type": "move", "family": "isolation", "name": "Chest pops & isolations", "phase": 2,
-      "prereqs": [{ "id": "iso.shoulders", "kind": "hard" }],
-      "checkpoints": ["chest slides forward/back over still hips", "pop = contract and release, not a lean"],
-      "mistakes": ["popping from the lower back"]
-    },
-    {
-      "id": "iso.head_hips", "type": "move", "family": "isolation", "name": "Head & hip isolations", "phase": 2,
-      "prereqs": [{ "id": "iso.shoulders", "kind": "hard" }],
-      "checkpoints": ["head slides side to side on level shoulders", "hips draw a box while the chest floats still"],
-      "mistakes": ["chin jutting instead of the head sliding"]
-    },
-
-    {
-      "id": "layer.feet_chest", "type": "combo", "family": "layering", "name": "Layer I: groove + chest", "phase": 2,
-      "prereqs": [{ "id": "groove.bounce", "kind": "hard" }, { "id": "iso.chest", "kind": "hard" }],
-      "checkpoints": ["bounce holds the beat while the chest plays the melody", "drop one layer at will, bring it back on the 1"]
+      "prereqs": [
+        {
+          "id": "groove.side",
+          "kind": "hard"
+        },
+        {
+          "id": "iso.shoulders",
+          "kind": "helps"
+        }
+      ],
+      "checkpoints": [
+        "weight rolls through the hips side to side",
+        "hand grazes past the head, cool not literal",
+        "shoulders lead, everything late and greasy"
+      ],
+      "mistakes": [
+        "doing it fast — the dougie is behind the beat or it's nothing"
+      ]
     },
     {
-      "id": "layer.three", "type": "combo", "family": "layering", "name": "Layer II: feet + chest + arms", "phase": 3,
-      "prereqs": [{ "id": "layer.feet_chest", "kind": "hard" }, { "id": "attr.stamina.l1", "kind": "hard" }],
-      "checkpoints": ["three body parts on three musical layers (kick / snare / melody)", "texture changes with the song's sections"]
+      "id": "iso.shoulders",
+      "type": "move",
+      "family": "isolation",
+      "name": "Shoulder isolations",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "groove.bounce",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "one shoulder moves, NOTHING else does — check in a mirror",
+        "up/down, forward/back, then circles",
+        "then layer it ON the bounce without losing either"
+      ],
+      "mistakes": [
+        "the head tilting along (the classic leak)"
+      ]
     },
     {
-      "id": "combo.party_medley", "type": "combo", "family": "layering", "name": "Party medley: five moves, one song", "phase": 2,
-      "prereqs": [{ "id": "party.running_man", "kind": "hard" }, { "id": "party.cabbage_patch", "kind": "hard" }, { "id": "party.wop", "kind": "hard" }],
-      "checkpoints": ["transitions land on the 1 of each 8", "the groove never stops between moves"]
+      "id": "iso.chest",
+      "type": "move",
+      "family": "isolation",
+      "name": "Chest pops & isolations",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "iso.shoulders",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "chest slides forward/back over still hips",
+        "pop = contract and release, not a lean"
+      ],
+      "mistakes": [
+        "popping from the lower back"
+      ]
     },
-
     {
-      "id": "free.frameworks", "type": "concept", "family": "freestyle", "name": "Freestyle frameworks (one-move exploration, question-answer)", "phase": 3,
-      "prereqs": [{ "id": "combo.party_medley", "kind": "hard" }],
-      "checkpoints": ["pick ONE move, mine it for 32 counts: size, speed, level, direction", "answer your own 8 with a contrasting 8"]
+      "id": "iso.head_hips",
+      "type": "move",
+      "family": "isolation",
+      "name": "Head & hip isolations",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "iso.shoulders",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "head slides side to side on level shoulders",
+        "hips draw a box while the chest floats still"
+      ],
+      "mistakes": [
+        "chin jutting instead of the head sliding"
+      ]
     },
     {
-      "id": "free.texture", "type": "concept", "family": "freestyle", "name": "Texture: smooth vs hit, big vs small", "phase": 3,
-      "prereqs": [{ "id": "music.hits", "kind": "hard" }, { "id": "layer.three", "kind": "helps" }]
+      "id": "layer.feet_chest",
+      "type": "combo",
+      "family": "layering",
+      "name": "Layer I: groove + chest",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "groove.bounce",
+          "kind": "hard"
+        },
+        {
+          "id": "iso.chest",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "bounce holds the beat while the chest plays the melody",
+        "drop one layer at will, bring it back on the 1"
+      ]
     },
     {
-      "id": "free.cypher", "type": "concept", "family": "freestyle", "name": "Cypher craft: enter, build, exit", "phase": 4,
-      "prereqs": [{ "id": "free.frameworks", "kind": "hard" }, { "id": "attr.stamina.l2", "kind": "hard" }],
-      "checkpoints": ["enter on a phrase change", "one idea developed beats ten ideas listed", "exit on a hit, give the floor with respect"]
+      "id": "layer.three",
+      "type": "combo",
+      "family": "layering",
+      "name": "Layer II: feet + chest + arms",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "layer.feet_chest",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.stamina.l1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "three body parts on three musical layers (kick / snare / melody)",
+        "texture changes with the song's sections"
+      ]
     },
     {
-      "id": "free.choreo", "type": "concept", "family": "freestyle", "name": "Learning & retaining choreography", "phase": 4,
-      "prereqs": [{ "id": "layer.three", "kind": "hard" }]
+      "id": "combo.party_medley",
+      "type": "combo",
+      "family": "layering",
+      "name": "Party medley: five moves, one song",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "party.running_man",
+          "kind": "hard"
+        },
+        {
+          "id": "party.cabbage_patch",
+          "kind": "hard"
+        },
+        {
+          "id": "party.wop",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "transitions land on the 1 of each 8",
+        "the groove never stops between moves"
+      ]
+    },
+    {
+      "id": "free.frameworks",
+      "type": "concept",
+      "family": "freestyle",
+      "name": "Freestyle frameworks (one-move exploration, question-answer)",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "combo.party_medley",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "pick ONE move, mine it for 32 counts: size, speed, level, direction",
+        "answer your own 8 with a contrasting 8"
+      ]
+    },
+    {
+      "id": "free.texture",
+      "type": "concept",
+      "family": "freestyle",
+      "name": "Texture: smooth vs hit, big vs small",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "music.hits",
+          "kind": "hard"
+        },
+        {
+          "id": "layer.three",
+          "kind": "helps"
+        }
+      ]
+    },
+    {
+      "id": "free.cypher",
+      "type": "concept",
+      "family": "freestyle",
+      "name": "Cypher craft: enter, build, exit",
+      "phase": 4,
+      "prereqs": [
+        {
+          "id": "free.frameworks",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.stamina.l2",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "enter on a phrase change",
+        "one idea developed beats ten ideas listed",
+        "exit on a hit, give the floor with respect"
+      ]
+    },
+    {
+      "id": "free.choreo",
+      "type": "concept",
+      "family": "freestyle",
+      "name": "Learning & retaining choreography",
+      "phase": 4,
+      "prereqs": [
+        {
+          "id": "layer.three",
+          "kind": "hard"
+        }
+      ]
+    }
+  ],
+  "teachers": [
+    {
+      "name": "STEEZY — Hip Hop programs",
+      "url": "https://www.steezy.co/"
+    },
+    {
+      "name": "Learntodance.com — Hip Hop",
+      "url": "https://www.learntodance.com/"
     }
   ]
 }

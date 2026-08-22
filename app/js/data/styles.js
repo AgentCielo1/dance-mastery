@@ -3,7 +3,8 @@ import ballet from "./ballet.js";
 import breaking from "./breaking.js";
 import hiphop from "./hiphop.js";
 import salsa from "./salsa.js";
-export const STYLES = { ballet, breaking, hiphop, salsa };
+import tango from "./tango.js";
+export const STYLES = { ballet, breaking, hiphop, salsa, tango };
 export const DEFAULT_STYLE = "breaking";
 export function styleName(id) { return STYLES[id]?.name ?? id.charAt(0).toUpperCase() + id.slice(1); }
 // Find a node (and its style) by node id across every pack.

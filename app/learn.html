@@ -46,6 +46,10 @@
   aside li.warn { color: var(--muted); cursor: default; }
   aside li.hl { color: var(--accent); }
   .prereqs { color: var(--muted); font-size: .8rem; }
+  .reallink { display: block; color: var(--accent2); text-decoration: none; font-size: .85rem;
+    border: 1px solid var(--line); border-radius: 8px; padding: 7px 10px; margin: 6px 0; }
+  .reallink:hover { border-color: var(--accent2); }
+  .reallink.primary { color: var(--accent); border-color: #5c4413; }
   @media (max-width: 700px) { main { flex-direction: column; } aside { width: 100%; border-left: none; border-top: 1px solid var(--line); } }
 </style>
 </head>

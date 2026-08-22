@@ -1116,5 +1116,23 @@ export default {
         }
       ]
     }
+  ],
+  "teachers": [
+    {
+      "name": "VincaniTV (YouTube)",
+      "url": "https://www.youtube.com/user/VincaniTV"
+    },
+    {
+      "name": "B-Boy & B-Girl Dojo",
+      "url": "https://bboydojo.com/breaking-training/how-to-breakdance/"
+    },
+    {
+      "name": "STEEZY — Breaking",
+      "url": "https://www.steezy.co/breaking"
+    },
+    {
+      "name": "Red Bull BC One guides",
+      "url": "https://www.redbull.com/us-en/your-go-to-guide-for-b-boying-basics"
+    }
   ]
 };

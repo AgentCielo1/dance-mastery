@@ -103,6 +103,23 @@ test("ballet pack: gate-heavy technique education with the pointe honesty node",
   assert.equal(info.theme, "Alignment Season");
 });
 
+test("tango pack: embrace honesty gates the embrace itself; walk-first; códigos present", () => {
+  const ta = STYLES.tango;
+  const honesty = ta.nodes.find((n) => n.id === "meta.embrace_honesty");
+  assert.ok(honesty, "embrace honesty node exists");
+  assert.ok(honesty.checkpoints.some((c) => /cannot be taught by showing/.test(c)));
+  const embrace = ta.nodes.find((n) => n.id === "partner.embrace");
+  assert.ok(embrace.partner, "the embrace is partner-flagged");
+  assert.ok(embrace.prereqs.some((p) => p.id === "meta.embrace_honesty" && p.kind === "hard"),
+    "you must read the honest limit before the embrace unlocks");
+  const walk = ta.nodes.find((n) => n.id === "walk.caminada");
+  assert.equal(walk.phase, 0, "the walk is the first movement of the whole pack");
+  assert.ok(ta.nodes.some((n) => n.id === "culture.codigos"), "milonga códigos are curriculum");
+  assert.ok(ta.nodes.some((n) => n.id === "meta.practica"), "the práctica is a node, not a suggestion");
+  const info = seasonInfo(newState(T), T, ta.seasons);
+  assert.equal(info.theme, "The Walk Season");
+});
+
 test("findNode resolves across packs and returns null for unknowns", () => {
   assert.equal(findNode("footwork.six_step").style, "breaking");
   assert.equal(findNode("party.wop").style, "hiphop");

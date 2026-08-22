@@ -636,5 +636,15 @@ export default {
         }
       ]
     }
+  ],
+  "teachers": [
+    {
+      "name": "STEEZY — Hip Hop programs",
+      "url": "https://www.steezy.co/"
+    },
+    {
+      "name": "Learntodance.com — Hip Hop",
+      "url": "https://www.learntodance.com/"
+    }
   ]
 };

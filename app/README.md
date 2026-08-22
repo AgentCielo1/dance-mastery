@@ -27,12 +27,16 @@ npm test          # = node --test test/  (22 tests, zero dependencies, Node 18+)
 The engine is data-driven: `data/<style>-skill-tree.json` in, full app out.
 Current packs: **Breaking** (60 nodes), **Hip Hop** (31 nodes — grooves, the
 provenance-credited party-move canon, isolations, layering, freestyle), **Salsa** (30 nodes — On1-first, clave/conga ear training, shines-led solo
-track, partner-flagged partnerwork; season arc ends at a real social), and
-**Ballet** (30 nodes — technique education, not ballet-as-fitness: alignment
+track, partner-flagged partnerwork; season arc ends at a real social), **Ballet** (30 nodes — technique education, not ballet-as-fitness: alignment
 and barre canon with turnout-from-the-hip and relevé gates, retiré balance,
 pirouette prep, petit allegro; the pointe-honesty node states the in-person
 assessment requirement in the curriculum itself; season arc ends at a live
-class). Switch
+class), and **Tango** (27 nodes — the walk first, disassociation and solo
+ochos, orchestra musicality, milonga códigos; the embrace-honesty node
+hard-gates the embrace itself, and the práctica is a curriculum node).
+Every lesson now carries a "Watch the real thing" panel: a targeted YouTube
+search plus the style's trusted-teacher links from the research — links
+only, never rehosted video (Doc 08 §6). Switch
 styles in the Today header or `?style=hiphop` on any page; progress is
 stored per style. Adding a pack: drop the JSON, run
 `node scripts/sync-data.mjs && node scripts/gen-pose-refs.mjs`, commit —

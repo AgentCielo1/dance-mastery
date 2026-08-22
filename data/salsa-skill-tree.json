@@ -4,38 +4,141 @@
   "name": "Salsa",
   "notes": "Salsa style pack (Doc 04 §3.2). Solo-first by design: timing + shines + styling carry a solo learner to social-ready; partnerwork nodes are flagged partner:true and their connection prep is trained solo. Pedagogy per Doc 02: start On1 (consensus), meet On2 later (Eddie Torres lineage — he built the first mambo syllabus in 1972 and named 500+ steps; named shines carry provenance in that spirit). Musicality core is ear training against clave and conga, not counting alone. The scene bridge is the studio social — the beginner-safe on-ramp the retention research identified.",
   "seasons": [
-    { "theme": "Timing Season", "finale": "Film yourself clapping clave and stepping the basic through one full song — never off the 1." },
-    { "theme": "Shines Season", "finale": "Film a 4-shine sequence: basic, Suzy Q, Coca-Cola, flare kick — transitions on the 1." },
-    { "theme": "Turns Season", "finale": "Film 8 clean right turns in a row, spotted, landing on the 1." },
-    { "theme": "Partner-Prep Season", "finale": "Film your frame + cross-body footwork solo, then take ONE beginner class or lesson with a real partner." },
-    { "theme": "Social Season", "finale": "Go to a salsa social. Dance three songs. That's the whole finale." }
+    {
+      "theme": "Timing Season",
+      "finale": "Film yourself clapping clave and stepping the basic through one full song — never off the 1."
+    },
+    {
+      "theme": "Shines Season",
+      "finale": "Film a 4-shine sequence: basic, Suzy Q, Coca-Cola, flare kick — transitions on the 1."
+    },
+    {
+      "theme": "Turns Season",
+      "finale": "Film 8 clean right turns in a row, spotted, landing on the 1."
+    },
+    {
+      "theme": "Partner-Prep Season",
+      "finale": "Film your frame + cross-body footwork solo, then take ONE beginner class or lesson with a real partner."
+    },
+    {
+      "theme": "Social Season",
+      "finale": "Go to a salsa social. Dance three songs. That's the whole finale."
+    }
   ],
   "attributes": [
-    { "id": "attr.timing.l1", "name": "Clave ear L1", "test": "clap 2-3 clave through a full salsa song without losing it" },
-    { "id": "attr.timing.l2", "name": "Conga ear L2", "test": "find the conga slap on 2 and count 8s through a song you've never heard" },
-    { "id": "attr.spotting.l1", "name": "Spotting L1", "test": "10 consecutive spot turns, eyes snapping to one point, no stumble" },
-    { "id": "attr.posture.l1", "name": "Frame posture L1", "test": "60s tall frame hold: ribs stacked, shoulders down, arms toned not stiff" }
+    {
+      "id": "attr.timing.l1",
+      "name": "Clave ear L1",
+      "test": "clap 2-3 clave through a full salsa song without losing it"
+    },
+    {
+      "id": "attr.timing.l2",
+      "name": "Conga ear L2",
+      "test": "find the conga slap on 2 and count 8s through a song you've never heard"
+    },
+    {
+      "id": "attr.spotting.l1",
+      "name": "Spotting L1",
+      "test": "10 consecutive spot turns, eyes snapping to one point, no stumble"
+    },
+    {
+      "id": "attr.posture.l1",
+      "name": "Frame posture L1",
+      "test": "60s tall frame hold: ribs stacked, shoulders down, arms toned not stiff"
+    }
   ],
   "nodes": [
-    { "id": "music.counting", "type": "concept", "family": "musicality", "name": "Counting 8s — two bars, one basic", "phase": 0, "prereqs": [] },
     {
-      "id": "music.clave", "type": "concept", "family": "musicality", "name": "Clave: the key (2-3 and 3-2)", "phase": 0,
-      "prereqs": [{ "id": "music.counting", "kind": "hard" }],
-      "checkpoints": ["clap the five clave hits over a track until it feels inevitable", "hear which side is the 2 and which is the 3"]
+      "id": "music.counting",
+      "type": "concept",
+      "family": "musicality",
+      "name": "Counting 8s — two bars, one basic",
+      "phase": 0,
+      "prereqs": []
     },
     {
-      "id": "music.conga", "type": "concept", "family": "musicality", "name": "Conga tumbao — the slap lives on 2", "phase": 1,
-      "prereqs": [{ "id": "music.clave", "kind": "hard" }],
-      "checkpoints": ["find the open tones on 4-and-8", "the slap on 2 is your future On2 anchor"]
+      "id": "music.clave",
+      "type": "concept",
+      "family": "musicality",
+      "name": "Clave: the key (2-3 and 3-2)",
+      "phase": 0,
+      "prereqs": [
+        {
+          "id": "music.counting",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "clap the five clave hits over a track until it feels inevitable",
+        "hear which side is the 2 and which is the 3"
+      ]
     },
-    { "id": "music.breaks", "type": "concept", "family": "musicality", "name": "Song shape: montuno, mambo section, breaks", "phase": 3, "prereqs": [{ "id": "music.conga", "kind": "hard" }] },
-    { "id": "culture.origins", "type": "concept", "family": "culture", "name": "Cuban son → NY mambo → salsa; the Palladium and the barrio", "phase": 0, "prereqs": [] },
-    { "id": "culture.torres", "type": "concept", "family": "culture", "name": "Eddie Torres and the named-step tradition; On1 vs On2", "phase": 2, "prereqs": [] },
-    { "id": "culture.social", "type": "concept", "family": "culture", "name": "Social etiquette: asking, thanking, floorcraft, the three-song rule of thumb", "phase": 3, "prereqs": [] },
-
     {
-      "id": "basic.on1", "type": "move", "family": "basic", "name": "On1 basic (forward-back mambo step)", "phase": 0,
-      "prereqs": [{ "id": "music.counting", "kind": "hard" }],
+      "id": "music.conga",
+      "type": "concept",
+      "family": "musicality",
+      "name": "Conga tumbao — the slap lives on 2",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "music.clave",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "find the open tones on 4-and-8",
+        "the slap on 2 is your future On2 anchor"
+      ]
+    },
+    {
+      "id": "music.breaks",
+      "type": "concept",
+      "family": "musicality",
+      "name": "Song shape: montuno, mambo section, breaks",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "music.conga",
+          "kind": "hard"
+        }
+      ]
+    },
+    {
+      "id": "culture.origins",
+      "type": "concept",
+      "family": "culture",
+      "name": "Cuban son → NY mambo → salsa; the Palladium and the barrio",
+      "phase": 0,
+      "prereqs": []
+    },
+    {
+      "id": "culture.torres",
+      "type": "concept",
+      "family": "culture",
+      "name": "Eddie Torres and the named-step tradition; On1 vs On2",
+      "phase": 2,
+      "prereqs": []
+    },
+    {
+      "id": "culture.social",
+      "type": "concept",
+      "family": "culture",
+      "name": "Social etiquette: asking, thanking, floorcraft, the three-song rule of thumb",
+      "phase": 3,
+      "prereqs": []
+    },
+    {
+      "id": "basic.on1",
+      "type": "move",
+      "family": "basic",
+      "name": "On1 basic (forward-back mambo step)",
+      "phase": 0,
+      "prereqs": [
+        {
+          "id": "music.counting",
+          "kind": "hard"
+        }
+      ],
       "anchor": "steps in days; ON the music in 2-4 weeks",
       "checkpoints": [
         "break forward on 1 with the LEFT, replace on 2, together on 3 — pause on 4",
@@ -43,21 +146,57 @@
         "steps are small and under you — a salsa basic fits on a floor tile",
         "weight fully changes on every step; the pause is a held weight, not a freeze"
       ],
-      "mistakes": ["stepping on 4 and 8 (the pause IS the style)", "long lunging breaks"]
+      "mistakes": [
+        "stepping on 4 and 8 (the pause IS the style)",
+        "long lunging breaks"
+      ]
     },
     {
-      "id": "basic.side", "type": "move", "family": "basic", "name": "Side basic (lateral)", "phase": 1,
-      "prereqs": [{ "id": "basic.on1", "kind": "hard" }],
-      "checkpoints": ["same 123-567 timing, traveling side to side", "hips arrive AFTER the foot (Cuban motion seed)"]
+      "id": "basic.side",
+      "type": "move",
+      "family": "basic",
+      "name": "Side basic (lateral)",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "basic.on1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "same 123-567 timing, traveling side to side",
+        "hips arrive AFTER the foot (Cuban motion seed)"
+      ]
     },
     {
-      "id": "basic.back", "type": "move", "family": "basic", "name": "Back basic & cumbia step", "phase": 1,
-      "prereqs": [{ "id": "basic.on1", "kind": "hard" }],
-      "checkpoints": ["both breaks go behind — the polite crowded-floor basic", "chest stays forward while feet rock back"]
+      "id": "basic.back",
+      "type": "move",
+      "family": "basic",
+      "name": "Back basic & cumbia step",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "basic.on1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "both breaks go behind — the polite crowded-floor basic",
+        "chest stays forward while feet rock back"
+      ]
     },
     {
-      "id": "style.cuban_motion", "type": "move", "family": "styling", "name": "Cuban motion (hip action from the floor)", "phase": 1,
-      "prereqs": [{ "id": "basic.on1", "kind": "hard" }],
+      "id": "style.cuban_motion",
+      "type": "move",
+      "family": "styling",
+      "name": "Cuban motion (hip action from the floor)",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "basic.on1",
+          "kind": "hard"
+        }
+      ],
       "anchor": "starts in weeks; matures forever",
       "checkpoints": [
         "bend-straighten the knees — the hips are a RESULT, never pushed",
@@ -65,110 +204,390 @@
         "shoulders stay quiet and level while the hips speak",
         "drill it standing still: weight changes only, no steps"
       ],
-      "mistakes": ["wagging the hips directly (reads instantly as fake)", "bouncing instead of rolling"]
+      "mistakes": [
+        "wagging the hips directly (reads instantly as fake)",
+        "bouncing instead of rolling"
+      ]
     },
     {
-      "id": "style.arms", "type": "move", "family": "styling", "name": "Arm styling & body flow", "phase": 2,
-      "prereqs": [{ "id": "style.cuban_motion", "kind": "hard" }],
-      "checkpoints": ["arms move from the back, not the wrists", "one arm frames while the other travels"]
+      "id": "style.arms",
+      "type": "move",
+      "family": "styling",
+      "name": "Arm styling & body flow",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "style.cuban_motion",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "arms move from the back, not the wrists",
+        "one arm frames while the other travels"
+      ]
     },
-
     {
-      "id": "shine.suzy_q", "type": "move", "family": "shines", "name": "Suzy Q", "phase": 1,
+      "id": "shine.suzy_q",
+      "type": "move",
+      "family": "shines",
+      "name": "Suzy Q",
+      "phase": 1,
       "origin": "swing-era step (the Big Apple, 1930s Harlem) adopted into mambo shines — one of the oldest names on the floor",
-      "prereqs": [{ "id": "basic.on1", "kind": "hard" }],
+      "prereqs": [
+        {
+          "id": "basic.on1",
+          "kind": "hard"
+        }
+      ],
       "checkpoints": [
         "cross-swivel: heel and toe trade as the feet cross and uncross",
         "knees stay soft and together-ish; the twist is in the lower half",
         "arms swing opposite in easy opposition",
         "travels sideways a tile at a time, on timing"
       ],
-      "mistakes": ["stiff ankles — the swivel dies", "watching your feet"]
+      "mistakes": [
+        "stiff ankles — the swivel dies",
+        "watching your feet"
+      ]
     },
     {
-      "id": "shine.coca_cola", "type": "move", "family": "shines", "name": "Coca-Cola", "phase": 2,
+      "id": "shine.coca_cola",
+      "type": "move",
+      "family": "shines",
+      "name": "Coca-Cola",
+      "phase": 2,
       "origin": "classic NY mambo shine from the Palladium-era vocabulary",
-      "prereqs": [{ "id": "shine.suzy_q", "kind": "hard" }],
-      "checkpoints": ["cross behind and unwind — the body spirals down and up", "land the unwind ready on the 1"]
+      "prereqs": [
+        {
+          "id": "shine.suzy_q",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "cross behind and unwind — the body spirals down and up",
+        "land the unwind ready on the 1"
+      ]
     },
     {
-      "id": "shine.flare_kick", "type": "move", "family": "shines", "name": "Flare kick & hook", "phase": 2,
+      "id": "shine.flare_kick",
+      "type": "move",
+      "family": "shines",
+      "name": "Flare kick & hook",
+      "phase": 2,
       "origin": "mambo shine staple; low flick, not a chorus-line kick",
-      "prereqs": [{ "id": "basic.side", "kind": "hard" }],
-      "checkpoints": ["the kick is a flick from the knee on the break", "hook lands you back into the basic without a hiccup"]
+      "prereqs": [
+        {
+          "id": "basic.side",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the kick is a flick from the knee on the break",
+        "hook lands you back into the basic without a hiccup"
+      ]
     },
     {
-      "id": "shine.stomp_pause", "type": "move", "family": "shines", "name": "Stomps & syncopation (and-counts)", "phase": 2,
-      "prereqs": [{ "id": "attr.timing.l1", "kind": "hard" }, { "id": "basic.on1", "kind": "hard" }],
-      "checkpoints": ["play the and-counts the basic normally skips", "come home to the 1 like nothing happened"]
+      "id": "shine.stomp_pause",
+      "type": "move",
+      "family": "shines",
+      "name": "Stomps & syncopation (and-counts)",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "attr.timing.l1",
+          "kind": "hard"
+        },
+        {
+          "id": "basic.on1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "play the and-counts the basic normally skips",
+        "come home to the 1 like nothing happened"
+      ]
     },
     {
-      "id": "shine.pachanga", "type": "move", "family": "shines", "name": "Pachanga taps (intro)", "phase": 3,
+      "id": "shine.pachanga",
+      "type": "move",
+      "family": "shines",
+      "name": "Pachanga taps (intro)",
+      "phase": 3,
       "origin": "from the pachanga craze (early 1960s NY, Charanga bands) — the bouncy heel-tap flavor",
-      "prereqs": [{ "id": "shine.suzy_q", "kind": "hard" }, { "id": "style.cuban_motion", "kind": "hard" }],
-      "checkpoints": ["heel taps ride a down-bounce", "it should look effortless and slightly mischievous"]
+      "prereqs": [
+        {
+          "id": "shine.suzy_q",
+          "kind": "hard"
+        },
+        {
+          "id": "style.cuban_motion",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "heel taps ride a down-bounce",
+        "it should look effortless and slightly mischievous"
+      ]
     },
     {
-      "id": "combo.shine_seq", "type": "combo", "family": "shines", "name": "Shine sequence: 4 shines, one song", "phase": 2,
-      "prereqs": [{ "id": "shine.suzy_q", "kind": "hard" }, { "id": "shine.flare_kick", "kind": "hard" }],
-      "checkpoints": ["every transition lands on the 1 of an 8", "basic between shines — home base is always there"]
+      "id": "combo.shine_seq",
+      "type": "combo",
+      "family": "shines",
+      "name": "Shine sequence: 4 shines, one song",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "shine.suzy_q",
+          "kind": "hard"
+        },
+        {
+          "id": "shine.flare_kick",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "every transition lands on the 1 of an 8",
+        "basic between shines — home base is always there"
+      ]
     },
-
     {
-      "id": "turn.spot", "type": "move", "family": "turns", "name": "Spot turn & spotting drill", "phase": 1,
-      "prereqs": [{ "id": "basic.on1", "kind": "hard" }, { "id": "attr.spotting.l1", "kind": "helps" }],
-      "checkpoints": ["pick a spot; head leaves last, arrives first", "turn on the ball of ONE foot, other foot closes", "finish facing your spot, on time"]
+      "id": "turn.spot",
+      "type": "move",
+      "family": "turns",
+      "name": "Spot turn & spotting drill",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "basic.on1",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.spotting.l1",
+          "kind": "helps"
+        }
+      ],
+      "checkpoints": [
+        "pick a spot; head leaves last, arrives first",
+        "turn on the ball of ONE foot, other foot closes",
+        "finish facing your spot, on time"
+      ]
     },
     {
-      "id": "turn.right", "type": "move", "family": "turns", "name": "Right turn in the basic (1-2-3)", "phase": 2,
-      "prereqs": [{ "id": "turn.spot", "kind": "hard" }],
+      "id": "turn.right",
+      "type": "move",
+      "family": "turns",
+      "name": "Right turn in the basic (1-2-3)",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "turn.spot",
+          "kind": "hard"
+        }
+      ],
       "anchor": "2-6 weeks to clean-on-time",
-      "checkpoints": ["prep small on 7-8, turn over 1-2-3, together, resume", "stay on your own tile — a turn travels nowhere", "arms collect in, never fly out"]
-    },
-    { "id": "turn.left", "type": "move", "family": "turns", "name": "Left turn", "phase": 2, "prereqs": [{ "id": "turn.right", "kind": "hard" }] },
-    {
-      "id": "turn.double", "type": "move", "family": "turns", "name": "Double turn", "phase": 3,
-      "prereqs": [{ "id": "turn.right", "kind": "hard" }, { "id": "attr.spotting.l1", "kind": "hard" }],
-      "checkpoints": ["same tempo, twice the rotation — speed comes from the spot and the core, not the arms"]
-    },
-
-    {
-      "id": "partner.frame", "type": "move", "family": "partnerwork", "name": "Frame & connection (solo prep)", "phase": 2,
-      "prereqs": [{ "id": "attr.posture.l1", "kind": "hard" }, { "id": "basic.on1", "kind": "hard" }],
-      "checkpoints": ["tone without grip: arms like springs, not clamps", "connection comes from the back and center, hands just report it", "drill on a doorframe/resistance band: give and receive pressure without collapsing"]
+      "checkpoints": [
+        "prep small on 7-8, turn over 1-2-3, together, resume",
+        "stay on your own tile — a turn travels nowhere",
+        "arms collect in, never fly out"
+      ]
     },
     {
-      "id": "partner.cbl", "type": "move", "family": "partnerwork", "name": "Cross-body lead (footwork both roles)", "phase": 3, "partner": true,
-      "prereqs": [{ "id": "partner.frame", "kind": "hard" }, { "id": "basic.side", "kind": "hard" }],
-      "checkpoints": ["leader opens the lane on 2-3, follower travels 5-6-7", "walk BOTH roles solo until the geometry is automatic", "the lane is straight; nobody orbits"]
+      "id": "turn.left",
+      "type": "move",
+      "family": "turns",
+      "name": "Left turn",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "turn.right",
+          "kind": "hard"
+        }
+      ]
     },
     {
-      "id": "partner.rt_follow", "type": "move", "family": "partnerwork", "name": "Led right turn (both roles)", "phase": 3, "partner": true,
-      "prereqs": [{ "id": "partner.cbl", "kind": "hard" }, { "id": "turn.right", "kind": "hard" }],
-      "checkpoints": ["the lead is a window, not a shove — hand offers, never pulls", "follower owns her own balance through the turn"]
+      "id": "turn.double",
+      "type": "move",
+      "family": "turns",
+      "name": "Double turn",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "turn.right",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.spotting.l1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "same tempo, twice the rotation — speed comes from the spot and the core, not the arms"
+      ]
     },
     {
-      "id": "partner.cbl_inside", "type": "move", "family": "partnerwork", "name": "Cross-body with inside turn", "phase": 4, "partner": true,
-      "prereqs": [{ "id": "partner.rt_follow", "kind": "hard" }]
+      "id": "partner.frame",
+      "type": "move",
+      "family": "partnerwork",
+      "name": "Frame & connection (solo prep)",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "attr.posture.l1",
+          "kind": "hard"
+        },
+        {
+          "id": "basic.on1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "tone without grip: arms like springs, not clamps",
+        "connection comes from the back and center, hands just report it",
+        "drill on a doorframe/resistance band: give and receive pressure without collapsing"
+      ]
     },
     {
-      "id": "partner.copa", "type": "move", "family": "partnerwork", "name": "Copa (intro)", "phase": 4, "partner": true,
+      "id": "partner.cbl",
+      "type": "move",
+      "family": "partnerwork",
+      "name": "Cross-body lead (footwork both roles)",
+      "phase": 3,
+      "partner": true,
+      "prereqs": [
+        {
+          "id": "partner.frame",
+          "kind": "hard"
+        },
+        {
+          "id": "basic.side",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "leader opens the lane on 2-3, follower travels 5-6-7",
+        "walk BOTH roles solo until the geometry is automatic",
+        "the lane is straight; nobody orbits"
+      ]
+    },
+    {
+      "id": "partner.rt_follow",
+      "type": "move",
+      "family": "partnerwork",
+      "name": "Led right turn (both roles)",
+      "phase": 3,
+      "partner": true,
+      "prereqs": [
+        {
+          "id": "partner.cbl",
+          "kind": "hard"
+        },
+        {
+          "id": "turn.right",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the lead is a window, not a shove — hand offers, never pulls",
+        "follower owns her own balance through the turn"
+      ]
+    },
+    {
+      "id": "partner.cbl_inside",
+      "type": "move",
+      "family": "partnerwork",
+      "name": "Cross-body with inside turn",
+      "phase": 4,
+      "partner": true,
+      "prereqs": [
+        {
+          "id": "partner.rt_follow",
+          "kind": "hard"
+        }
+      ]
+    },
+    {
+      "id": "partner.copa",
+      "type": "move",
+      "family": "partnerwork",
+      "name": "Copa (intro)",
+      "phase": 4,
+      "partner": true,
       "origin": "NY On2 vocabulary staple from the Eddie Torres lineage",
-      "prereqs": [{ "id": "partner.cbl_inside", "kind": "hard" }]
-    },
-
-    {
-      "id": "meta.on2", "type": "concept", "family": "meta", "name": "On2 conversion (break on 2, Eddie Torres timing)", "phase": 4,
-      "prereqs": [{ "id": "attr.timing.l2", "kind": "hard" }, { "id": "basic.on1", "kind": "hard" }, { "id": "culture.torres", "kind": "helps" }],
-      "checkpoints": ["same steps, new soul: break with the conga slap", "dance one song On1, the next On2, until both feel like home"]
-    },
-    {
-      "id": "meta.floorcraft", "type": "concept", "family": "meta", "name": "Social-floor craft: dancing small, protecting your partner", "phase": 4,
-      "prereqs": [{ "id": "culture.social", "kind": "hard" }, { "id": "combo.shine_seq", "kind": "hard" }]
+      "prereqs": [
+        {
+          "id": "partner.cbl_inside",
+          "kind": "hard"
+        }
+      ]
     },
     {
-      "id": "meta.musical_dancing", "type": "concept", "family": "meta", "name": "Dancing the song: hits, breaks, and letting the band lead", "phase": 4,
-      "prereqs": [{ "id": "music.breaks", "kind": "hard" }]
+      "id": "meta.on2",
+      "type": "concept",
+      "family": "meta",
+      "name": "On2 conversion (break on 2, Eddie Torres timing)",
+      "phase": 4,
+      "prereqs": [
+        {
+          "id": "attr.timing.l2",
+          "kind": "hard"
+        },
+        {
+          "id": "basic.on1",
+          "kind": "hard"
+        },
+        {
+          "id": "culture.torres",
+          "kind": "helps"
+        }
+      ],
+      "checkpoints": [
+        "same steps, new soul: break with the conga slap",
+        "dance one song On1, the next On2, until both feel like home"
+      ]
+    },
+    {
+      "id": "meta.floorcraft",
+      "type": "concept",
+      "family": "meta",
+      "name": "Social-floor craft: dancing small, protecting your partner",
+      "phase": 4,
+      "prereqs": [
+        {
+          "id": "culture.social",
+          "kind": "hard"
+        },
+        {
+          "id": "combo.shine_seq",
+          "kind": "hard"
+        }
+      ]
+    },
+    {
+      "id": "meta.musical_dancing",
+      "type": "concept",
+      "family": "meta",
+      "name": "Dancing the song: hits, breaks, and letting the band lead",
+      "phase": 4,
+      "prereqs": [
+        {
+          "id": "music.breaks",
+          "kind": "hard"
+        }
+      ]
+    }
+  ],
+  "teachers": [
+    {
+      "name": "Addicted2Salsa (free lessons)",
+      "url": "https://www.addicted2salsa.com/"
+    },
+    {
+      "name": "The Dance Dojo",
+      "url": "https://thedancedojo.com/"
+    },
+    {
+      "name": "NYC Mambo — Eddie Torres Jr.",
+      "url": "https://www.eddietorresny.com/"
     }
   ]
 }

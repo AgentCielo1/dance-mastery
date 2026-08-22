@@ -549,5 +549,15 @@ export default {
         "adult beginner classes exist everywhere and everyone in them started scared too"
       ]
     }
+  ],
+  "teachers": [
+    {
+      "name": "Broche Ballet (adult technique)",
+      "url": "https://brocheballet.com/"
+    },
+    {
+      "name": "Lazy Dancer Tips",
+      "url": "https://www.lazydancertips.com/"
+    }
   ]
 };

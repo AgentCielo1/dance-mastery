@@ -4,7 +4,7 @@
 //   STUDY — free orbit, slow-mo default, checkpoints panel
 //   DRILL — tempo ladder (50/75/100%), count metronome, A/B loop
 
-import { findNode } from "./data/styles.js";
+import { findNode, STYLES } from "./data/styles.js";
 import capture85 from "./data/capture85.js";
 import { Viewer, decodeClip } from "./viewer3d.js";
 import { MOVES } from "./moves3d.js";
@@ -24,7 +24,9 @@ const $ = (s) => document.querySelector(s);
 const params = new URLSearchParams(location.search);
 const moveId = params.get("move") || "footwork.six_step";
 
-const node = findNode(moveId)?.node ?? null;
+const hit = findNode(moveId);
+const node = hit?.node ?? null;
+const pack = hit?.tree ?? (moveId.startsWith("capture.") ? STYLES.breaking : null);
 const move = MOVES[moveId];
 const cap = CAPTURES[moveId];
 const title = cap ? cap.name : (node?.name ?? moveId);
@@ -111,7 +113,21 @@ $("#checkpoints").innerHTML =
     `<li data-cp="${i}">${c}</li>`).join("") + `</ol>` : "") +
   (mistakes.length ? `<h3 class="warn-h">Watch out for</h3><ul>` + mistakes.map((m) =>
     `<li class="warn">${m}</li>`).join("") + `</ul>` : "") +
-  (node?.prereqs?.length ? `<h3>Built on</h3><p class="prereqs">${node.prereqs.map((p) => p.id).join(" · ")}</p>` : "");
+  (node?.prereqs?.length ? `<h3>Built on</h3><p class="prereqs">${node.prereqs.map((p) => p.id).join(" · ")}</p>` : "") +
+  realThing();
+
+// "Watch the real thing" — real humans dancing this, one tap away.
+// Links only: linking is legal and keeps teachers credited on their own
+// platforms (Doc 08 §6); we never rehost anyone's video.
+function realThing() {
+  const q = encodeURIComponent(`${pack?.name ?? ""} ${title} tutorial`.trim());
+  const teachers = (pack?.teachers ?? []).map((t) =>
+    `<a class="reallink" href="${t.url}" target="_blank" rel="noopener">${t.name} ↗</a>`).join("");
+  return `<h3>Watch the real thing</h3>
+    <p class="prereqs">The animation teaches shape and count — real dancers teach soul. Watch, then come back and drill.</p>
+    <a class="reallink primary" href="https://www.youtube.com/results?search_query=${q}" target="_blank" rel="noopener">▶ Find "${title}" tutorials on YouTube ↗</a>
+    ${teachers}`;
+}
 document.querySelectorAll("[data-cp]").forEach((li) => li.addEventListener("click", () => {
   document.querySelectorAll("[data-cp]").forEach((x) => x.classList.remove("hl"));
   li.classList.add("hl");

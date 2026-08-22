@@ -576,5 +576,19 @@ export default {
         }
       ]
     }
+  ],
+  "teachers": [
+    {
+      "name": "Addicted2Salsa (free lessons)",
+      "url": "https://www.addicted2salsa.com/"
+    },
+    {
+      "name": "The Dance Dojo",
+      "url": "https://thedancedojo.com/"
+    },
+    {
+      "name": "NYC Mambo — Eddie Torres Jr.",
+      "url": "https://www.eddietorresny.com/"
+    }
   ]
 };

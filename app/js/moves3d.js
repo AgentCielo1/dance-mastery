@@ -266,4 +266,54 @@ export const MOVES = {
       { t: 0.7, p: { y: 0.88, lHipA: 0.28, rHipA: 0.28, lHipF: 0.15, rHipF: 0.15, lKnee: 0.35, rKnee: 0.35, lShA: 0.65, rShA: 0.65 } },
     ],
   },
+
+  /* ---------------- tango pack (procedural v1, $0 lane) ---------------- */
+  "walk.caminada": {
+    bpm: 62, beats: 4,
+    keys: [
+      { t: 0.0, p: { y: 0.865, rHipF: 0.52, rKnee: 0.04, lHipF: -0.1, lKnee: 0.08, tPitch: -0.05, lShF: -0.35, rShF: -0.35, lShA: 0.22, rShA: 0.22, lElb: 0.95, rElb: 0.95 } },
+      { t: 0.25, p: { y: 0.87, rHipF: 0.06, lHipF: 0.06, rKnee: 0.1, lKnee: 0.1, tPitch: -0.05, lShF: -0.35, rShF: -0.35, lShA: 0.22, rShA: 0.22, lElb: 0.95, rElb: 0.95 } },
+      { t: 0.5, p: { y: 0.865, lHipF: 0.52, lKnee: 0.04, rHipF: -0.1, rKnee: 0.08, tPitch: -0.05, lShF: -0.35, rShF: -0.35, lShA: 0.22, rShA: 0.22, lElb: 0.95, rElb: 0.95 } },
+      { t: 0.75, p: { y: 0.87, rHipF: 0.06, lHipF: 0.06, rKnee: 0.1, lKnee: 0.1, tPitch: -0.05, lShF: -0.35, rShF: -0.35, lShA: 0.22, rShA: 0.22, lElb: 0.95, rElb: 0.95 } },
+    ],
+    rootFn: (p, u, t) => { p.z = 0.07 * sin(t * TAU * 0.5); },
+  },
+  "pivot.disassociation": {
+    bpm: 60, beats: 4,
+    keys: [
+      { t: 0.0, p: { yaw: 0.55, tYaw: -0.55, lKnee: 0.2, rKnee: 0.2, lShA: 0.55, rShA: 0.55, lElb: 0.5, rElb: 0.5, tPitch: -0.04 } },
+      { t: 0.25, p: { yaw: 0.0, tYaw: 0.0, lKnee: 0.15, rKnee: 0.15, lShA: 0.55, rShA: 0.55, lElb: 0.5, rElb: 0.5 } },
+      { t: 0.5, p: { yaw: -0.55, tYaw: 0.55, lKnee: 0.2, rKnee: 0.2, lShA: 0.55, rShA: 0.55, lElb: 0.5, rElb: 0.5, tPitch: -0.04 } },
+      { t: 0.75, p: { yaw: 0.0, tYaw: 0.0, lKnee: 0.15, rKnee: 0.15, lShA: 0.55, rShA: 0.55, lElb: 0.5, rElb: 0.5 } },
+    ],
+  },
+  "pivot.ocho_forward": {
+    bpm: 63, beats: 4,
+    keys: [
+      { t: 0.0, p: { yaw: -0.55, tYaw: 0.42, lHipF: 0.42, lHipA: -0.32, lKnee: 0.06, rKnee: 0.12, tPitch: -0.05, lShF: -0.35, rShF: -0.35, lShA: 0.22, rShA: 0.22, lElb: 0.95, rElb: 0.95 } },
+      { t: 0.25, p: { yaw: 0.0, tYaw: 0.0, lHipF: 0.05, rHipF: 0.05, lKnee: 0.12, rKnee: 0.12, lShF: -0.35, rShF: -0.35, lShA: 0.22, rShA: 0.22, lElb: 0.95, rElb: 0.95 } },
+      { t: 0.5, p: { yaw: 0.55, tYaw: -0.42, rHipF: 0.42, rHipA: -0.32, rKnee: 0.06, lKnee: 0.12, tPitch: -0.05, lShF: -0.35, rShF: -0.35, lShA: 0.22, rShA: 0.22, lElb: 0.95, rElb: 0.95 } },
+      { t: 0.75, p: { yaw: 0.0, tYaw: 0.0, lHipF: 0.05, rHipF: 0.05, lKnee: 0.12, rKnee: 0.12, lShF: -0.35, rShF: -0.35, lShA: 0.22, rShA: 0.22, lElb: 0.95, rElb: 0.95 } },
+    ],
+    rootFn: (p, u, t) => { p.x = 0.08 * sin(t * TAU); },
+  },
+  "adorno.lapiz": {
+    bpm: 60, beats: 4,
+    keys: [
+      { t: 0.0, p: { rHipF: 0.3, rHipA: 0.02, rKnee: 0.16, lKnee: 0.05, tPitch: -0.05, lShF: -0.35, rShF: -0.35, lShA: 0.22, rShA: 0.22, lElb: 0.95, rElb: 0.95 } },
+      { t: 0.25, p: { rHipF: 0.16, rHipA: 0.34, rKnee: 0.14, lKnee: 0.05, lShF: -0.35, rShF: -0.35, lShA: 0.22, rShA: 0.22, lElb: 0.95, rElb: 0.95 } },
+      { t: 0.5, p: { rHipF: -0.04, rHipA: 0.02, rKnee: 0.18, lKnee: 0.05, lShF: -0.35, rShF: -0.35, lShA: 0.22, rShA: 0.22, lElb: 0.95, rElb: 0.95 } },
+      { t: 0.75, p: { rHipF: 0.16, rHipA: -0.18, rKnee: 0.14, lKnee: 0.05, lShF: -0.35, rShF: -0.35, lShA: 0.22, rShA: 0.22, lElb: 0.95, rElb: 0.95 } },
+    ],
+  },
+  "partner.frame_prep": {
+    bpm: 62, beats: 4,
+    keys: [
+      { t: 0.0, p: { y: 0.865, rHipF: 0.5, rKnee: 0.05, lHipF: -0.08, tPitch: -0.06, lShA: 1.05, lShF: -0.4, lElb: 0.85, rShF: -0.75, rShA: 0.35, rElb: 1.55 } },
+      { t: 0.25, p: { y: 0.87, rHipF: 0.06, lHipF: 0.06, rKnee: 0.1, lKnee: 0.1, tPitch: -0.06, lShA: 1.05, lShF: -0.4, lElb: 0.85, rShF: -0.75, rShA: 0.35, rElb: 1.55 } },
+      { t: 0.5, p: { y: 0.865, lHipF: 0.5, lKnee: 0.05, rHipF: -0.08, tPitch: -0.06, lShA: 1.05, lShF: -0.4, lElb: 0.85, rShF: -0.75, rShA: 0.35, rElb: 1.55 } },
+      { t: 0.75, p: { y: 0.87, rHipF: 0.06, lHipF: 0.06, rKnee: 0.1, lKnee: 0.1, tPitch: -0.06, lShA: 1.05, lShF: -0.4, lElb: 0.85, rShF: -0.75, rShA: 0.35, rElb: 1.55 } },
+    ],
+    rootFn: (p, u, t) => { p.z = 0.06 * sin(t * TAU * 0.5); },
+  },
 };
