@@ -62,6 +62,27 @@ Three-camera geometry (fits any living room):
 - Camera B low and side-on is what makes footwork/freezes reconstructable.
 - [ ] After aiming: **lock positions and never bump them.** A nudged camera = recalibrate.
 
+### If you have a 360 camera (e.g. GoPro Max)
+
+A 360 camera is a great addition — used correctly:
+
+- **Best role: the never-out-of-frame camera.** Center-of-room on a small
+  tripod, it sees every rep from every side. Perfect for Tier-3 self-review
+  and as the session archive: you can never dance out of frame again.
+- **As one rig camera (yes):** mount it in a corner and export a *reframed
+  flat view* (GoPro Player → Reframe, or the app's flat export) aimed at the
+  capture zone — that's a legitimate Camera C. Always feed the pipeline the
+  REFRAMED rectilinear export, never the raw 360/fisheye file: pose models
+  degrade badly on warped projections.
+- **Not a rig replacement (physics, not software):** 3D reconstruction
+  needs cameras in *different places* — triangulation comes from baseline
+  separation. Every virtual view reframed from one 360 camera shares the
+  same optical center, so ten reframes still count as ONE camera. Keep the
+  phones for the other angles.
+- Settings: highest resolution available (reframed exports eat pixels),
+  60fps mode when offered, same clap-sync and calibration-board sweep as
+  every other camera.
+
 ### Calibrate (10 min)
 1. Start recording on **all** phones.
 2. Stand at center, count "3-2-1" aloud, and do **one big clap above your head**, visible
