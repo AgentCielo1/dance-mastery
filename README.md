@@ -1,4 +1,7 @@
-# Dance Mastery — Design Package
+# Dance Mastery
+
+**A universal dance program for everyone — giving respect where it's due, helping
+everyone come together in the art of dance.**
 
 The complete design for a new-age dance learning system: a training program, motivation
 engine, and animated-instruction platform that takes a busy adult from "two weeks of

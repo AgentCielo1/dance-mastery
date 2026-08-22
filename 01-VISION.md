@@ -3,6 +3,26 @@
 > "Living one's passions, despite the current hardships of life. Learning to become truly
 > disciplined to follow the soul's desires and grow — not only spiritually, but physically as well."
 
+## The Mission
+
+**A universal dance program that can be used by everyone, giving respect where it's due —
+helping everyone come together in the art of dance.**
+
+Three commitments, in the founder's own words, that outrank every feature:
+
+1. **Universal — usable by everyone.** Every dance on Earth belongs here: the ones we can
+   name and the hundreds we can't yet. Every body belongs here too — all ages, all
+   starting points, adaptive and integrated dance included. The engine is built so any
+   dance becomes a pack and any person finds a door in.
+2. **Respect where it's due.** Every move carries its origin. Creators are named, lineages
+   are honored, culture-bearers author their own traditions and share in what they build
+   (docs/AFRICAN-PARTNERSHIPS.md is the working model). Where honesty demands a limit —
+   an embrace, a pointe shoe, a lineage dance — the curriculum says so out loud.
+3. **Coming together.** Dance is how strangers become a circle. Every pack points at its
+   real-world room — the cypher, the social, the milonga, the class with drummers, the
+   party — because the software's job is to walk people to the door where the culture
+   actually lives, never to replace it.
+
 ## What we are building
 
 A single system — part training program, part app, part daily companion — that takes one
@@ -72,7 +92,7 @@ Every feature, lesson, and mechanic must obey these. When in doubt, return here.
     community checkpoints — because every study and every dance culture says the social
     loop is what keeps people dancing for decades.
 
-## Who this is for (v1: a single user — you)
+## Who this is for (v1 proving ground: a single user — the founder; the destination: everyone)
 
 - Self-taught history: has learned moves from YouTube before, understands follow-along
   learning, knows the pain of unstructured progress.
