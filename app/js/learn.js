@@ -4,7 +4,7 @@
 //   STUDY — free orbit, slow-mo default, checkpoints panel
 //   DRILL — tempo ladder (50/75/100%), count metronome, A/B loop
 
-import tree from "./data/breaking.js";
+import { findNode } from "./data/styles.js";
 import capture85 from "./data/capture85.js";
 import { Viewer, decodeClip } from "./viewer3d.js";
 import { MOVES } from "./moves3d.js";
@@ -24,7 +24,7 @@ const $ = (s) => document.querySelector(s);
 const params = new URLSearchParams(location.search);
 const moveId = params.get("move") || "footwork.six_step";
 
-const node = tree.nodes.find((n) => n.id === moveId);
+const node = findNode(moveId)?.node ?? null;
 const move = MOVES[moveId];
 const cap = CAPTURES[moveId];
 const title = cap ? cap.name : (node?.name ?? moveId);

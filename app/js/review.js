@@ -2,7 +2,6 @@
 // renders the verdict, the deviation timeline, and a synced replay of your
 // skeleton next to the reference.
 
-import tree from "./data/breaking.js";
 import capture85 from "./data/capture85.js";
 import { Viewer, decodeClip } from "./viewer3d.js";
 import { MOVES } from "./moves3d.js";

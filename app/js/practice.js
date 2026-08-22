@@ -3,7 +3,7 @@
 // visibility gate first, and when the camera can't see you, the app says so
 // instead of scoring.
 
-import tree from "./data/breaking.js";
+import { findNode } from "./data/styles.js";
 import capture85 from "./data/capture85.js";
 import poseRefs, { CHANNELS } from "./data/pose-refs.js";
 import {
@@ -32,7 +32,7 @@ const GATE_COPY = {
 const CAPTURE_NAMES = {};
 for (const c of capture85.clips) CAPTURE_NAMES[c.id] = c.name;
 function moveName(id) {
-  return CAPTURE_NAMES[id] ?? tree.nodes.find((n) => n.id === id)?.name ?? id;
+  return CAPTURE_NAMES[id] ?? findNode(id)?.node?.name ?? id;
 }
 
 /* ---------------- move selection ---------------- */
@@ -238,7 +238,7 @@ function startReviewReference() {
 }
 
 function buildCheckpoints() {
-  const node = tree.nodes.find((n) => n.id === moveId);
+  const node = findNode(moveId)?.node ?? null;
   const cps = node?.checkpoints ?? [];
   $("#review-cps").innerHTML = cps.length
     ? `<h4>Walk the checkpoints</h4>` + cps.map((c, i) => `<label class="cp"><input type="checkbox"> ${i + 1}. ${c}</label>`).join("")

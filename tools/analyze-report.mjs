@@ -15,7 +15,7 @@ const {
   dtw, dtwScore, channelDeviation, worstSegments, detectTempo, stillness,
 } = await import(pathToFileURL(join(appJs, "engine", "pose.js")));
 const { default: poseRefs } = await import(pathToFileURL(join(appJs, "data", "pose-refs.js")));
-const { default: tree } = await import(pathToFileURL(join(appJs, "data", "breaking.js")));
+const { findNode } = await import(pathToFileURL(join(appJs, "data", "styles.js")));
 const { default: capture85 } = await import(pathToFileURL(join(appJs, "data", "capture85.js")));
 
 const [inPath, moveId, outPath] = process.argv.slice(2);
@@ -56,7 +56,7 @@ for (const lm of data.frames) {
 }
 
 const moveName = capture85.clips.find((c) => c.id === moveId)?.name
-  ?? tree.nodes.find((n) => n.id === moveId)?.name ?? moveId;
+  ?? findNode(moveId)?.node?.name ?? moveId;
 
 let report;
 if (gate.clean < fps) {

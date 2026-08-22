@@ -22,6 +22,18 @@ cd dance-mastery/app
 npm test          # = node --test test/  (22 tests, zero dependencies, Node 18+)
 ```
 
+## Style packs (Doc 04 — proven style-agnostic)
+
+The engine is data-driven: `data/<style>-skill-tree.json` in, full app out.
+Current packs: **Breaking** (60 nodes) and **Hip Hop** (31 nodes — grooves,
+the provenance-credited party-move canon from Running Man to the Dougie,
+isolations, layering, freestyle frameworks, its own season arc). Switch
+styles in the Today header or `?style=hiphop` on any page; progress is
+stored per style. Adding a pack: drop the JSON, run
+`node scripts/sync-data.mjs && node scripts/gen-pose-refs.mjs`, commit —
+zero engine changes (48-test suite runs every pack through integrity and
+session-generation checks).
+
 ## What's implemented (mapped to the design docs)
 
 | Feature | Doc |

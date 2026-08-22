@@ -1,28 +1,44 @@
 // The "what do I do today" screen — Phase B0 UI over the engine.
 
-import tree from "./data/breaking.js";
+import { STYLES, DEFAULT_STYLE, styleName } from "./data/styles.js";
+import { FAMILY_LABELS } from "./labels.js";
 import { todayKey, addDays } from "./engine/dates.js";
-import { indexTree, STAGES, STAGE, familyProgress, workingPhase } from "./engine/graph.js";
+import { STAGES, STAGE, familyProgress, workingPhase } from "./engine/graph.js";
 import { QUALITY, stageUpSuggested } from "./engine/srs.js";
 import { rollingWeek, firewall, freezesLeft, applyFreeze, repairYesterday } from "./engine/streak.js";
 import { generateSession, completeSession, allowedSizes, SIZES } from "./engine/session.js";
 import { loadState, saveState, newState, exportState, importState } from "./engine/store.js";
 
 const $ = (sel) => document.querySelector(sel);
-const idx = indexTree(tree);
 const storage = window.localStorage;
 
+// Active style pack (Doc 04): per-style progress, one dancer identity.
+function savedStyle() {
+  try { return storage.getItem("dance-mastery-style"); } catch { return null; }
+}
+let style = new URLSearchParams(location.search).get("style") || savedStyle() || DEFAULT_STYLE;
+if (!STYLES[style]) style = DEFAULT_STYLE;
+let tree = STYLES[style];
+
 let today = todayKey();
-let state = loadState(today, storage);
+let state = loadState(today, storage, style);
 let chosenSize = null;
 let session = null;
 // pending user input for this session
 let pending = { reviews: new Map(), learned: new Set(), attrs: new Set(), stageUps: new Set(), blocks: new Set() };
 
-const FAMILY_LABELS = {
-  toprock: "Toprock", getdown: "Get-downs", footwork: "Footwork", freeze: "Freezes",
-  power: "Power", trick: "Tricks", musicality: "Musicality", culture: "Culture", meta: "Battle craft",
-};
+const styleSel = $("#style");
+styleSel.innerHTML = Object.keys(STYLES).map((s) =>
+  `<option value="${s}" ${s === style ? "selected" : ""}>${styleName(s)}</option>`).join("");
+styleSel.addEventListener("change", () => {
+  style = styleSel.value;
+  tree = STYLES[style];
+  try { storage.setItem("dance-mastery-style", style); } catch { /* no storage */ }
+  state = loadState(today, storage, style);
+  chosenSize = null;
+  resetPending();
+  render();
+});
 
 const FIREWALL_COPY = {
   fresh: { cls: "ok", title: "Day one.", body: "The only goal this week: five sessions. The worst-day version counts fully." },
@@ -154,7 +170,7 @@ function renderSession(doneToday) {
 function renderProgress() {
   const fams = familyProgress(tree, state).filter((f) => f.total > 0);
   const phase = workingPhase(tree, state);
-  $("#progress").innerHTML = `<h2>The tree · Phase ${phase}</h2>` + fams.map((f) => {
+  $("#progress").innerHTML = `<h2>${styleName(style)} tree · Phase ${phase}</h2>` + fams.map((f) => {
     const pct = Math.round((f.touched / f.total) * 100);
     const pctClean = Math.round((f.clean / f.total) * 100);
     return `<div class="prog"><span class="prog-label">${FAMILY_LABELS[f.family] ?? f.family}</span>
@@ -173,7 +189,7 @@ $("#complete").addEventListener("click", () => {
   };
   state = completeSession(tree, state, session, results, today);
   if (wasMvsRequired) state = repairYesterday(state, today); // showing up repairs yesterday
-  saveState(state, storage);
+  saveState(state, storage, style);
   resetPending();
   render();
 });
@@ -188,7 +204,7 @@ $("#export").addEventListener("click", async () => {
 $("#import").addEventListener("click", () => {
   const raw = window.prompt("Paste a previously exported state:");
   if (!raw) return;
-  try { state = importState(raw); saveState(state, storage); resetPending(); render(); }
+  try { state = importState(raw); saveState(state, storage, style); resetPending(); render(); }
   catch (e) { alert(`Import failed: ${e.message}`); }
 });
 
@@ -197,7 +213,7 @@ $("#freeze").addEventListener("click", () => {
   const before = state;
   state = applyFreeze(state, y, today);
   if (state === before) { alert("Nothing to freeze (yesterday is covered, or no freezes left this month)."); return; }
-  saveState(state, storage);
+  saveState(state, storage, style);
   render();
 });
 
@@ -217,7 +233,7 @@ $("#crew-link").addEventListener("click", (e) => {
 $("#reset").addEventListener("click", () => {
   if (!confirm("Reset ALL training data? Export first if you want a backup.")) return;
   state = newState(todayKey());
-  saveState(state, storage);
+  saveState(state, storage, style);
   resetPending();
   render();
 });

@@ -35,7 +35,7 @@ export function allowedSizes(state, today) {
 export function generateSession(tree, state, size, today) {
   const idx = indexTree(tree);
   const cfg = SIZES[size];
-  const season = seasonInfo(state, today);
+  const season = seasonInfo(state, today, tree.seasons);
   const blocks = [];
 
   blocks.push({

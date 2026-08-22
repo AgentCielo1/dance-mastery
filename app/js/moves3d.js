@@ -102,4 +102,61 @@ export const MOVES = {
     ],
     rootFn: (p, u, t) => { p.x += 0.09 * cos(t * TAU); p.z += 0.09 * sin(t * TAU); },
   },
+
+  /* ---------------- hip hop pack (procedural v1, $0 lane) ---------------- */
+  "groove.bounce": {
+    bpm: 96, beats: 2,
+    keys: [
+      { t: 0.0, p: { y: 0.83, lHipF: 0.28, rHipF: 0.28, lKnee: 0.5, rKnee: 0.5, tPitch: 0.07, lShF: 0.2, rShF: 0.2, lElb: 0.5, rElb: 0.5 } },
+      { t: 0.5, p: { y: 0.88, lHipF: 0.08, rHipF: 0.08, lKnee: 0.14, rKnee: 0.14, tPitch: 0.02, lShF: 0.05, rShF: 0.05, lElb: 0.3, rElb: 0.3 } },
+    ],
+    rootFn: (p, u, t) => { p.tYaw = 0.08 * sin(t * TAU); },
+  },
+  "party.running_man": {
+    bpm: 104, beats: 2,
+    keys: [
+      { t: 0.0, p: { y: 0.82, lHipF: 1.0, lKnee: 1.35, rHipF: -0.18, rKnee: 0.1, tPitch: 0.1, rShF: -0.9, rElb: 1.1, lShF: 0.7, lElb: 1.1 } },
+      { t: 0.25, p: { y: 0.79, lHipF: 0.45, lKnee: 0.7, rHipF: -0.05, rKnee: 0.35, tPitch: 0.12, rShF: -0.1, lShF: -0.1, rElb: 1.1, lElb: 1.1 } },
+      { t: 0.5, p: { y: 0.82, rHipF: 1.0, rKnee: 1.35, lHipF: -0.18, lKnee: 0.1, tPitch: 0.1, lShF: -0.9, lElb: 1.1, rShF: 0.7, rElb: 1.1 } },
+      { t: 0.75, p: { y: 0.79, rHipF: 0.45, rKnee: 0.7, lHipF: -0.05, lKnee: 0.35, tPitch: 0.12, lShF: -0.1, rShF: -0.1, lElb: 1.1, rElb: 1.1 } },
+    ],
+  },
+  "party.roger_rabbit": {
+    bpm: 102, beats: 2,
+    keys: [
+      { t: 0.0, p: { y: 0.84, lHipF: -0.55, lKnee: 1.7, rHipF: 0.12, rKnee: 0.25, tPitch: -0.04, lShF: -0.5, rShF: 0.5, lElb: 0.9, rElb: 0.9 } },
+      { t: 0.25, p: { y: 0.87, lHipF: 0.3, lKnee: 0.6, rHipF: 0.05, rKnee: 0.2, lShF: 0.2, rShF: -0.2, lElb: 0.8, rElb: 0.8 } },
+      { t: 0.5, p: { y: 0.84, rHipF: -0.55, rKnee: 1.7, lHipF: 0.12, lKnee: 0.25, tPitch: -0.04, rShF: -0.5, lShF: 0.5, lElb: 0.9, rElb: 0.9 } },
+      { t: 0.75, p: { y: 0.87, rHipF: 0.3, rKnee: 0.6, lHipF: 0.05, lKnee: 0.2, rShF: 0.2, lShF: -0.2, lElb: 0.8, rElb: 0.8 } },
+    ],
+  },
+  "party.cabbage_patch": {
+    bpm: 100, beats: 4,
+    keys: [
+      { t: 0.0, p: { y: 0.85, lShF: -0.9, rShF: -0.9, lShA: 0.15, rShA: 0.15, lElb: 1.1, rElb: 1.1, tYaw: 0.3, lKnee: 0.3, rKnee: 0.3 } },
+      { t: 0.25, p: { y: 0.83, lShF: -0.5, rShF: -0.5, lShA: 0.7, rShA: 0.05, lElb: 1.2, rElb: 1.2, tYaw: 0.0, lKnee: 0.4, rKnee: 0.4 } },
+      { t: 0.5, p: { y: 0.85, lShF: -0.1, rShF: -0.1, lShA: 0.15, rShA: 0.15, lElb: 1.3, rElb: 1.3, tYaw: -0.3, lKnee: 0.3, rKnee: 0.3 } },
+      { t: 0.75, p: { y: 0.83, lShF: -0.5, rShF: -0.5, lShA: 0.05, rShA: 0.7, lElb: 1.2, rElb: 1.2, tYaw: 0.0, lKnee: 0.4, rKnee: 0.4 } },
+    ],
+    rootFn: (p, u, t) => { p.x = 0.05 * cos(t * TAU); },
+  },
+  "party.prep": {
+    bpm: 100, beats: 4,
+    keys: [
+      { t: 0.0, p: { y: 0.85, tRoll: 0.12, tPitch: -0.03, rShF: -0.6, rShA: 0.5, rElb: 1.3, lShF: 0.15, lShA: 0.3, lElb: 0.6, lHipA: 0.35, lKnee: 0.3, rKnee: 0.25 } },
+      { t: 0.25, p: { y: 0.87, tRoll: 0.0, rShF: 0.1, rShA: 0.2, rElb: 0.8, lShF: 0.1, lKnee: 0.15, rKnee: 0.15 } },
+      { t: 0.5, p: { y: 0.85, tRoll: -0.12, tPitch: -0.03, rShF: 0.5, rShA: 0.15, rElb: 1.3, lShF: -0.6, lShA: 0.5, lElb: 1.3, rHipA: 0.35, lKnee: 0.25, rKnee: 0.3 } },
+      { t: 0.75, p: { y: 0.87, tRoll: 0.0, lShF: 0.1, lShA: 0.2, lElb: 0.8, rShF: 0.1, lKnee: 0.15, rKnee: 0.15 } },
+    ],
+  },
+  "party.dougie": {
+    bpm: 92, beats: 4,
+    keys: [
+      { t: 0.0, p: { y: 0.85, roll: 0.1, tYaw: 0.35, tRoll: 0.08, lShF: -1.5, lShA: 0.4, lElb: 2.1, rShF: 0.15, rElb: 0.7, lKnee: 0.35, rKnee: 0.2 } },
+      { t: 0.25, p: { y: 0.87, roll: 0.0, tYaw: 0.0, lShF: -0.6, lElb: 1.4, rShF: 0.1, lKnee: 0.2, rKnee: 0.2 } },
+      { t: 0.5, p: { y: 0.85, roll: -0.1, tYaw: -0.35, tRoll: -0.08, rShF: -1.5, rShA: 0.4, rElb: 2.1, lShF: 0.15, lElb: 0.7, rKnee: 0.35, lKnee: 0.2 } },
+      { t: 0.75, p: { y: 0.87, roll: 0.0, tYaw: 0.0, rShF: -0.6, rElb: 1.4, lShF: 0.1, lKnee: 0.2, rKnee: 0.2 } },
+    ],
+    rootFn: (p, u, t) => { p.x = 0.06 * sin(t * TAU); },
+  },
 };

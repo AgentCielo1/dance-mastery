@@ -2,7 +2,13 @@
 // plain objects in tests). Every read/write is guarded (Doc 06: storage can
 // throw in previews/private windows).
 
-const KEY = "dance-mastery-state-v1";
+// Per-style state. The bare key is breaking's (back-compat with existing
+// users); other styles get a suffixed key.
+function keyFor(style) {
+  return !style || style === "breaking"
+    ? "dance-mastery-state-v1"
+    : `dance-mastery-state-v1:${style}`;
+}
 
 export function newState(today) {
   return {
@@ -15,9 +21,9 @@ export function newState(today) {
   };
 }
 
-export function loadState(today, storage) {
+export function loadState(today, storage, style) {
   try {
-    const raw = storage?.getItem?.(KEY);
+    const raw = storage?.getItem?.(keyFor(style));
     if (raw) {
       const s = JSON.parse(raw);
       if (s && s.version === 1) return s;
@@ -26,9 +32,9 @@ export function loadState(today, storage) {
   return newState(today);
 }
 
-export function saveState(state, storage) {
+export function saveState(state, storage, style) {
   try {
-    storage?.setItem?.(KEY, JSON.stringify(state));
+    storage?.setItem?.(keyFor(style), JSON.stringify(state));
     return true;
   } catch {
     return false;

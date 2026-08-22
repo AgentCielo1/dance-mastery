@@ -14,14 +14,17 @@ export const SEASON_THEMES = [
   { theme: "Battle Season", finale: "Take a full round into a cypher, class, or session — or battle a crewmate on camera." },
 ];
 
-export function seasonInfo(state, today) {
+// `themes` (optional) lets a style pack supply its own season arc
+// (tree.seasons in the skill-tree JSON); defaults to the breaking arc.
+export function seasonInfo(state, today, themes) {
+  const arc = themes?.length ? themes : SEASON_THEMES;
   const start = state.startDate;
   const day = Math.max(0, diffDays(start, today));
   const number = Math.floor(day / (SEASON_WEEKS * 7)) + 1;
   const dayInSeason = day % (SEASON_WEEKS * 7);
   const week = Math.floor(dayInSeason / 7) + 1; // 1..7
   const offSeason = week === SEASON_WEEKS;
-  const t = SEASON_THEMES[(number - 1) % SEASON_THEMES.length];
+  const t = arc[(number - 1) % arc.length];
   // Finale = last day of week 6 of the current season.
   const finaleDate = addDays(start, (number - 1) * SEASON_WEEKS * 7 + 6 * 7 - 1);
   return {
