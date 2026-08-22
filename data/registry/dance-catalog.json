@@ -1,0 +1,1944 @@
+{
+ "version": "0.1.0",
+ "mission": "A universal dance program that can be used by everyone, giving respect where it's due — helping everyone come together in the art of dance.",
+ "notes": "Compiled from three parallel deep-research sweeps (street/club/electronic; partner/social/Latin; traditional/classical/folk) plus adaptive dance. Attributions are conservative: individual credits only where widely documented, 'street-born'/'collective' otherwise. Entries flagged sacred:true are ceremonial or lineage forms — the catalog names them with respect and points toward their communities; learning them means learning FROM those communities.",
+ "styles": [
+  {
+   "name": "Breaking",
+   "family": "street",
+   "region": "The Bronx, NYC",
+   "origin": "Early-1970s Bronx block parties (Kool Herc's breakbeats); codified by crews like Rock Steady",
+   "essence": "Toprock, footwork, power moves and freezes danced to the break — built for battle",
+   "scene": "Cyphers, BC One, jams; Olympic since 2024",
+   "pack": "breaking"
+  },
+  {
+   "name": "Brooklyn Uprock",
+   "family": "street",
+   "region": "Brooklyn, NYC",
+   "origin": "Late-1960s-70s Bushwick (Rubberband Man, Apache lineage) — predates breaking",
+   "essence": "Stand-up battle dance of jerks, burns and mimed combat in Apache lines",
+   "scene": "Rock-dance events, breaking jams"
+  },
+  {
+   "name": "Hip-Hop Freestyle / Party Dance",
+   "family": "street",
+   "region": "New York City",
+   "origin": "1980s-90s NYC clubs; canon carried by Buddha Stretch, Elite Force, MOP TOP",
+   "essence": "Groove-first freestyle on bounce/rock plus the named party-dance canon",
+   "scene": "Clubs, cyphers, all-styles battles",
+   "pack": "hiphop"
+  },
+  {
+   "name": "Popping",
+   "family": "street",
+   "region": "Fresno, California",
+   "origin": "Late-1970s, credited to Boogaloo Sam and the Electric Boogaloos on Bay Area funk roots",
+   "essence": "Rhythmic muscle hits framed by funk grooves and illusion vocabulary",
+   "scene": "Funk-styles battles (Juste Debout), cyphers"
+  },
+  {
+   "name": "Boogaloo (Oakland)",
+   "family": "street",
+   "region": "Oakland, California",
+   "origin": "Mid-1960s Oakland Black neighborhoods (Black Resurgents, Black Messengers) — predates Fresno's style",
+   "essence": "Rolling rubbery hip/knee/head angles — loose storytelling funk",
+   "scene": "Bay Area heritage events, funk-styles battles"
+  },
+  {
+   "name": "Tutting",
+   "family": "street",
+   "region": "California",
+   "origin": "1980s popping scene (King Tut imagery); finger-tutting hyper-developed in the 2000s",
+   "essence": "Geometric right-angle shapes with arms, wrists and fingers — living hieroglyphics",
+   "scene": "Popping battles, concept videos"
+  },
+  {
+   "name": "Animation",
+   "family": "street",
+   "region": "California",
+   "origin": "1980s-90s popping offshoot inspired by stop-motion film",
+   "essence": "Frame-by-frame body illusion — dime-stops, vibrations, glides",
+   "scene": "Battles, viral video culture"
+  },
+  {
+   "name": "Robot (Botting)",
+   "family": "street",
+   "region": "LA/Bay Area",
+   "origin": "Late-1960s; Charles 'Robot' Washington popularized it socially; mime roots in parallel",
+   "essence": "Mechanical isolations and dime-stops imitating an automaton",
+   "scene": "Funk battles, street performance, Soul Train legacy"
+  },
+  {
+   "name": "Strutting",
+   "family": "street",
+   "region": "San Francisco (Fillmore)",
+   "origin": "1970s-80s SF Black neighborhoods (Medea Sirkas lineage)",
+   "essence": "Sharp synchronized angles and group wave illusions — built for unison routines",
+   "scene": "Bay Area showcases, funk history events"
+  },
+  {
+   "name": "Locking",
+   "family": "street",
+   "region": "Los Angeles",
+   "origin": "1970 — created by Don 'Campbellock' Campbell, codified with The Lockers",
+   "essence": "Sudden locks, points, wrist twirls and splits — showmanship and humor",
+   "scene": "Soul Train legacy, locking jams, battles"
+  },
+  {
+   "name": "Krump",
+   "family": "street",
+   "region": "South Central LA",
+   "origin": "Early-2000s — Tight Eyez and Big Mijo out of Tommy the Clown's scene (Rize, 2005)",
+   "essence": "Raw cathartic power: chest pops, arm swings, stomps — aggression into release",
+   "scene": "Krump sessions, EBS battles, community events"
+  },
+  {
+   "name": "Clowning",
+   "family": "street",
+   "region": "Compton/South LA",
+   "origin": "1992 — created by Tommy the Clown for party entertainment in post-riot LA",
+   "essence": "Face-painted high-energy party dance and battle games — krump's parent",
+   "scene": "Parties, Battle Zone, LA community programs"
+  },
+  {
+   "name": "Turfing",
+   "family": "street",
+   "region": "Oakland, California",
+   "origin": "Rooted in 1960s Oakland boogaloo; organized from 2002, named ~2006 by Jeriel Bey",
+   "essence": "Storytelling glides, bone-bending arm contortions, sidewalk ballet",
+   "scene": "Oakland streets, Turf Feinz videos, hyphy stages"
+  },
+  {
+   "name": "Hyphy / Going Dumb",
+   "family": "street",
+   "region": "SF Bay Area",
+   "origin": "Mid-2000s hyphy movement (E-40, Mac Dre) car-culture ethos",
+   "essence": "Deliberately unrestrained shaking and thizz-faced looseness over technique",
+   "scene": "Sideshows, house parties, rap shows"
+  },
+  {
+   "name": "Jerkin'",
+   "family": "street",
+   "region": "LA/Inland Empire",
+   "origin": "2008-09 LA youth crews; blown up by 'You're a Jerk'",
+   "essence": "The reject, pin drops, dips and skinny-jean swagger",
+   "scene": "School battles, crew videos, 2020s revival"
+  },
+  {
+   "name": "Crip Walk / C-Walk",
+   "family": "street",
+   "region": "Compton, LA",
+   "origin": "1970s Compton (gang-coded origins), later de-gang-ified and mainstreamed",
+   "essence": "Fast shuffling heel-toe pivots spelling letters close to the ground",
+   "scene": "West Coast rap culture, pop-culture moments"
+  },
+  {
+   "name": "Memphis Jookin",
+   "family": "street",
+   "region": "Memphis, Tennessee",
+   "origin": "1980s gangsta-walk culture from skating rinks and clubs; globalized by Lil Buck",
+   "essence": "Gliding toe-tip balances and ankle-breaking footwork — urban ballet in sneakers",
+   "scene": "Rinks, parking-lot ciphers, concert stages"
+  },
+  {
+   "name": "Detroit Jit",
+   "family": "street",
+   "region": "Detroit, Michigan",
+   "origin": "1970s, started by the McGhee brothers ('The Jitterbugs'); matured with ghettotech",
+   "essence": "Machine-gun footwork, kicks and drops at 150-160 BPM",
+   "scene": "Ghettotech nights, Jit Masters battles"
+  },
+  {
+   "name": "Litefeet",
+   "family": "street",
+   "region": "Harlem/Bronx, NYC",
+   "origin": "Early-2000s Harlem, pioneered by Chrybaby Cozie and the Lite Feet Nation community",
+   "essence": "Weightless rapid steps, hat and shoe tricks — 'It's Showtime' energy",
+   "scene": "NYC subway showtime, Harlem courts, battles"
+  },
+  {
+   "name": "Flexing (Bone Breaking)",
+   "family": "street",
+   "region": "Brooklyn (East NY)",
+   "origin": "Late-1990s from Jamaican bruk-up via Flex N Brooklyn; Regg Roc's pausing",
+   "essence": "Shoulder-dislocating contortion, gliding, pausing — rubber-limbed storytelling",
+   "scene": "BattleFest, FDM parties, theatre crossovers"
+  },
+  {
+   "name": "House Dance",
+   "family": "club",
+   "region": "Chicago + New York",
+   "origin": "1980s — music from Chicago's Warehouse, dance codified in NYC clubs (Ejoe Wilson, Brian Green, Marjory Smarth)",
+   "essence": "Grounded jacking torso over fast intricate footwork and lofting floorwork — spiritual let-go",
+   "scene": "House clubs, cyphers, Juste Debout, HDI"
+  },
+  {
+   "name": "The Hustle (club)",
+   "family": "club",
+   "region": "The Bronx/NYC",
+   "origin": "Early-70s Bronx Puerto Rican and Black youth parties; exploded with disco 1975-77",
+   "essence": "Smooth turn-heavy partner glide over four-on-the-floor",
+   "scene": "Hustle socials, NYC revival scene"
+  },
+  {
+   "name": "Waacking / Punking",
+   "family": "club",
+   "region": "Los Angeles",
+   "origin": "Early-1970s LA Black and Latino gay clubs; spread via Tyrone Proctor and Soul Train",
+   "essence": "Whipping rotational arm strikes, poses and Old-Hollywood glamour — defiance as style",
+   "scene": "Waacking battles, queer nightlife worldwide"
+  },
+  {
+   "name": "Chicago Footwork / Juke",
+   "family": "club",
+   "region": "Chicago (West/South Side)",
+   "origin": "Late-80s-90s from ghetto house party culture; music at 155-165 BPM (RP Boo, DJ Rashad)",
+   "essence": "Blurringly fast battle footwork — ghosts, erks, skates — dueling at 160",
+   "scene": "Battlegroundz circles, Teklife events, global battles"
+  },
+  {
+   "name": "Baltimore Club Dance",
+   "family": "club",
+   "region": "Baltimore, Maryland",
+   "origin": "1990s-2000s Baltimore club scene, moves incubated at the Paradox",
+   "essence": "Frantic 130-BPM footwork — crazy legs, spongebob — with shoulder hits",
+   "scene": "Baltimore clubs and rec centers, TikTok revivals"
+  },
+  {
+   "name": "Jersey Club Dance",
+   "family": "club",
+   "region": "Newark, New Jersey",
+   "origin": "2000s-2010s Newark atop DJ Tameil's Jersey club sound",
+   "essence": "Sharp heel-toe patterns, running-man variants and mirrored combos on bed-squeak bounce",
+   "scene": "Newark parties, TikTok's 2020s global wave"
+  },
+  {
+   "name": "Atlanta Snap",
+   "family": "club",
+   "region": "Atlanta, Georgia",
+   "origin": "Mid-2000s snap music wave (D4L, Dem Franchize Boyz)",
+   "essence": "Laid-back rock with the finger snap on the beat — swagger-first minimalism",
+   "scene": "Atlanta clubs and cookouts; a documented era"
+  },
+  {
+   "name": "Voguing — Old Way",
+   "family": "ballroom_scene",
+   "region": "Harlem, NYC",
+   "origin": "1960s-80s Black and Latino LGBTQ ballroom culture; houses from the early 1970s (LaBeija); icon Willi Ninja",
+   "essence": "Precision lines, symmetry and fashion-pose framing — pre-1990 formations and grace",
+   "scene": "Balls, kiki functions, Paris Is Burning archive"
+  },
+  {
+   "name": "Voguing — New Way",
+   "family": "ballroom_scene",
+   "region": "New York City",
+   "origin": "Post-1990 evolution within the NY houses",
+   "essence": "Flexibility and illusion — arm control, clicks, contortion, tutting-like geometry",
+   "scene": "Ball categories worldwide"
+  },
+  {
+   "name": "Vogue Fem",
+   "family": "ballroom_scene",
+   "region": "New York City",
+   "origin": "~1995 onward, ballroom's exaggerated-femininity register",
+   "essence": "The five elements: hands, catwalk, duckwalk, floor, spins and dips",
+   "scene": "Balls and kiki scene; Pose/Legendary visibility"
+  },
+  {
+   "name": "Ballroom Scene Culture",
+   "family": "ballroom_scene",
+   "region": "Harlem → global",
+   "origin": "House/ball system built by Black and Latino LGBTQ communities from the 1970s — houses as chosen families",
+   "essence": "Walking categories (vogue, runway, realness, face) judged for tens — performance as kinship",
+   "scene": "Major balls and kiki balls: NYC, Paris, São Paulo, Lagos"
+  },
+  {
+   "name": "Dancehall",
+   "family": "dancehall_caribbean",
+   "region": "Kingston, Jamaica",
+   "origin": "Late-1970s-80s Kingston sessions; movement defined by named dancers — above all Bogle (Black Roses Crew)",
+   "essence": "A living catalog of named steps tied to riddims — Willie Bounce, Nuh Linga, Dutty Wine",
+   "scene": "Street dances, sound systems, global camps and battles"
+  },
+  {
+   "name": "Bruk Up",
+   "family": "dancehall_caribbean",
+   "region": "Jamaica → Brooklyn",
+   "origin": "~1990, credited to dancer George Adams; seeded Brooklyn flexing",
+   "essence": "Broken, waving, seemingly dislocated lines with gliding — eerie elegance",
+   "scene": "Dancehall sessions, Brooklyn reggae parties"
+  },
+  {
+   "name": "Wining / Soca Carnival Dance",
+   "family": "dancehall_caribbean",
+   "region": "Trinidad & Tobago",
+   "origin": "Afro-Caribbean carnival roots; modern wining culture with soca from the 1970s",
+   "essence": "Isolated circular hip rotation in every tempo — fete groove to jouvert abandon",
+   "scene": "Trinidad Carnival, fetes, Notting Hill, Labor Day"
+  },
+  {
+   "name": "Reggaeton / Perreo",
+   "family": "dancehall_caribbean",
+   "region": "San Juan, Puerto Rico",
+   "origin": "1990s PR underground atop the dembow riddim",
+   "essence": "Bounce-driven perreo grind and solo hip work locked to boom-ch-boom-chick",
+   "scene": "Marquesina parties, Latin clubs, festivals"
+  },
+  {
+   "name": "Dominican Dembow Dance",
+   "family": "dancehall_caribbean",
+   "region": "Santo Domingo",
+   "origin": "2010s dembow scene and teteo street-party culture",
+   "essence": "Hyper-fast hip and footwork bursts at 115-130 BPM — TikTok-fueled named steps",
+   "scene": "Teteos, Dominican clubs, NYC diaspora"
+  },
+  {
+   "name": "Pantsula",
+   "family": "afro_club",
+   "region": "Johannesburg townships",
+   "origin": "1950s-60s apartheid-era youth culture, matured through the 1980s; crews like Via Katlehong",
+   "essence": "Quick flat-footed syncopated footwork danced low to kwaito — swagger and resistance",
+   "scene": "Township streets, competitions, theatre tours"
+  },
+  {
+   "name": "Azonto",
+   "family": "afro_club",
+   "region": "Accra, Ghana",
+   "origin": "~2010-11 Accra coastal neighborhoods from apaa/kpanlogo mime roots; globalized by Fuse ODG",
+   "essence": "Witty hand-mime (ironing, driving, praying) over a two-step hip bounce",
+   "scene": "Ghanaian parties, diaspora dancefloors",
+   "pack": "afrobeats"
+  },
+  {
+   "name": "Coupé-Décalé",
+   "family": "afro_club",
+   "region": "Abidjan (born in Paris)",
+   "origin": "2002-03, created by Ivorian 'Jet Set' expats in Paris — Douk Saga's Sagacité",
+   "essence": "Flamboyant cut-and-shift arm work wrapped in boucantier designer-flash",
+   "scene": "Abidjan maquis, Paris African nightlife"
+  },
+  {
+   "name": "Kuduro",
+   "family": "afro_club",
+   "region": "Luanda, Angola",
+   "origin": "Late-80s-90s Luanda musseques; pioneered by Tony Amado",
+   "essence": "Hard stiff percussive isolations and acrobatic drops at frenetic batida tempo",
+   "scene": "Luanda street parties, Lisbon diaspora clubs"
+  },
+  {
+   "name": "Ndombolo",
+   "family": "afro_club",
+   "region": "Kinshasa, DR Congo",
+   "origin": "1990s Kinshasa out of the soukous/rumba lineage (Wenge Musica era)",
+   "essence": "Rolling hip-and-waist isolations with bent-knee bounce, led by atalaku calls",
+   "scene": "Congolese concerts and clubs, Francophone diaspora"
+  },
+  {
+   "name": "Mapouka",
+   "family": "afro_club",
+   "region": "Coastal Côte d'Ivoire",
+   "origin": "Traditional Aizi/Alladian women's dance secularized into the 1990s club wave",
+   "essence": "Isolated rapid gluteal articulation over a still upper body",
+   "scene": "Ivorian ceremonies and the 90s video circuit"
+  },
+  {
+   "name": "Galala",
+   "family": "afro_club",
+   "region": "Ajegunle, Lagos",
+   "origin": "1990s Ajegunle street culture alongside Nigerian ragga (Daddy Showkey)",
+   "essence": "High-knee stomping bounce with swinging arms — rugged celebration",
+   "scene": "Ajegunle street parties, reggae shows"
+  },
+  {
+   "name": "Shaku Shaku",
+   "family": "afro_club",
+   "region": "Lagos, Nigeria",
+   "origin": "~2016-17 Lagos street culture; mainstreamed by Olamide's 'Wo!'",
+   "essence": "Crossed-wrist arms with staggering leg crossings — controlled drunken-step cool",
+   "scene": "Lagos carnivals, Afrobeats videos worldwide",
+   "pack": "afrobeats"
+  },
+  {
+   "name": "Zanku / Legwork",
+   "family": "afro_club",
+   "region": "Lagos, Nigeria",
+   "origin": "2018-19, popularized and named by Zlatan Ibile on existing legwork culture",
+   "essence": "Stamping leg flicks and pauses with the gbese lift and dust-off",
+   "scene": "Nigerian clubs, weddings, TikTok",
+   "pack": "afrobeats"
+  },
+  {
+   "name": "Gwara Gwara",
+   "family": "afro_club",
+   "region": "Durban, South Africa",
+   "origin": "~2016, created by DJ Bongz; global via Rihanna's 2018 Grammys moment",
+   "essence": "One leg lifts and stirs while the same-side arm wheels over it — lurching infectious groove",
+   "scene": "SA house/amapiano parties, global pop"
+  },
+  {
+   "name": "Bhenga (Gqom Dance)",
+   "family": "afro_club",
+   "region": "Durban, South Africa",
+   "origin": "Early-2010s township youth alongside gqom's raw broken-beat sound",
+   "essence": "Wobbly loose-legged stomps riding dark rolling drums — 3 a.m. stamina dancing",
+   "scene": "Durban taxis and parties, gqom nights"
+  },
+  {
+   "name": "Amapiano Dance Culture",
+   "family": "afro_club",
+   "region": "Gauteng, South Africa",
+   "origin": "Late-2010s with amapiano's rise — street/TikTok-born named moves",
+   "essence": "Cool low-effort groove — sliding footwork that log-drums the body",
+   "scene": "Groove culture, TikTok challenges, global nights"
+  },
+  {
+   "name": "Xibelani / Shangaan Electro",
+   "family": "afro_club",
+   "region": "Limpopo, South Africa",
+   "origin": "Traditional Tsonga women's skirt dance turbo-charged from ~2005 by Nozinja's 180+ BPM sound",
+   "essence": "Furious hip-shaking blurring the layered skirt — 'no speed, no dance'",
+   "scene": "Limpopo weddings, electro dance-offs, festivals"
+  },
+  {
+   "name": "Singeli Dance",
+   "family": "afro_club",
+   "region": "Dar es Salaam, Tanzania",
+   "origin": "2000s-2010s street-party culture around 180-300 BPM singeli",
+   "essence": "Ultra-fast waist work and sprint-tempo footwork over relentless BPM",
+   "scene": "Vigodoro all-nighters, Nyege Nyege circuit"
+  },
+  {
+   "name": "Kwassa Kwassa",
+   "family": "afro_club",
+   "region": "Kinshasa, DR Congo",
+   "origin": "Late-1980s soukous era; popularization credited to dancer Jeanora (partly folkloric)",
+   "essence": "Hips swing side-to-side while hands trace the motion — the groove that swept Africa",
+   "scene": "Soukous concerts of the 80s-90s; legacy style"
+  },
+  {
+   "name": "Melbourne Shuffle",
+   "family": "electronic",
+   "region": "Melbourne, Australia",
+   "origin": "Late-1980s underground acid-house scene; named publicly in the 90s",
+   "essence": "Fast heel-toe running-man variants and kicks gliding to house/hardstyle",
+   "scene": "Raves, hard dance festivals, shuffle communities"
+  },
+  {
+   "name": "Cutting Shapes",
+   "family": "electronic",
+   "region": "United Kingdom",
+   "origin": "UK rave-era footwork lineage; name crystallized in the 2010s deep-house wave",
+   "essence": "Slick swiveling heel-toe shapes carved with playful nonchalance",
+   "scene": "UK house nights, festivals, TikTok shuffle culture"
+  },
+  {
+   "name": "Jumpstyle",
+   "family": "electronic",
+   "region": "Belgium/Netherlands",
+   "origin": "Late-1990s jump scene, exploding online 2006-07",
+   "essence": "Precise stationary jump-kick sequences, solo or mirrored duo",
+   "scene": "Hard dance events, championships in the Low Countries"
+  },
+  {
+   "name": "Hakken",
+   "family": "electronic",
+   "region": "Rotterdam, Netherlands",
+   "origin": "Early-1990s gabber/hardcore scene ('hakken' = to hack)",
+   "essence": "Tiny blisteringly fast heel-toe steps at 160-200 BPM, torso still",
+   "scene": "Hardcore raves, Thunderdome legacy"
+  },
+  {
+   "name": "Hardstyle Dancing",
+   "family": "electronic",
+   "region": "Netherlands/Belgium/Germany",
+   "origin": "2000s merger of jumpstyle and shuffle vocabularies with hardstyle",
+   "essence": "Bigger kicks, stomps, spins and reverse-bounce at 150 BPM",
+   "scene": "Defqon.1, Qlimax, online battle communities"
+  },
+  {
+   "name": "Electro Dance / Tecktonik",
+   "family": "electronic",
+   "region": "Paris, France",
+   "origin": "2002+ at Metropolis club's Tecktonik nights, peaking 2007; Vertifight battles",
+   "essence": "Frenetic fluid arm weaves around the head — vogue/hip-hop hybrid at electro tempo",
+   "scene": "Paris gatherings, Vertifight, the YouTube wave"
+  },
+  {
+   "name": "Industrial Dance",
+   "family": "electronic",
+   "region": "Europe/North America",
+   "origin": "1980s EBM club floors restyled by 2000s cybergoth video culture",
+   "essence": "Aggressive stomps and arm flails locked to harsh electro-industrial",
+   "scene": "Goth/industrial nights, Amphi and WGT festivals"
+  },
+  {
+   "name": "Liquid & Digits",
+   "family": "electronic",
+   "region": "USA rave scene",
+   "origin": "Early-1990s rave culture with popping/waving roots",
+   "essence": "Continuous water-like arm flow and intricate finger-path illusions",
+   "scene": "Rave chill rooms, flow-arts communities"
+  },
+  {
+   "name": "Gloving",
+   "family": "electronic",
+   "region": "Southern California",
+   "origin": "Late-2000s EDM festival culture with LED-tipped gloves",
+   "essence": "Micro light shows — finger rolls, whips and tracers inches from the viewer",
+   "scene": "EDM festivals, International Gloving Championship"
+  },
+  {
+   "name": "Para Para",
+   "family": "electronic",
+   "region": "Tokyo, Japan",
+   "origin": "1980s Tokyo disco culture, boomed with 1990s Eurobeat",
+   "essence": "Synchronized pre-set arm routines — one shared choreography per song",
+   "scene": "Japanese clubs, Eurobeat fandom, revival meets"
+  },
+  {
+   "name": "Free Step",
+   "family": "electronic",
+   "region": "São Paulo, Brazil",
+   "origin": "~2008-10 Brazilian internet/street youth blending shuffle, jumpstyle and breaking",
+   "essence": "Sliding twisting footwork with sharp direction changes and freezes",
+   "scene": "Brazilian street meets, YouTube crews"
+  },
+  {
+   "name": "Commercial / Industry Choreography",
+   "family": "commercial",
+   "region": "Los Angeles",
+   "origin": "Grew from the 80s-90s MTV era (Jackson lineage; Fatima Robinson, later Parris Goebel)",
+   "essence": "Camera-ready fusion of street styles into set choreography — clean and sold",
+   "scene": "LA studios, videos, tours, award shows"
+  },
+  {
+   "name": "Urban Dance Team Scene",
+   "family": "commercial",
+   "region": "California → global",
+   "origin": "1990s-2000s collegiate/community teams (Kaba Modern, Jabbawockeez lineage)",
+   "essence": "Concept-heavy crew sets — musicality-driven group choreography",
+   "scene": "VIBE, World of Dance, HHI, the class-video economy"
+  },
+  {
+   "name": "K-pop Dance Culture",
+   "family": "commercial",
+   "region": "Seoul, South Korea",
+   "origin": "Sparked by Seo Taiji (1992), industrialized by idol agencies",
+   "essence": "Point choreography, knife-sharp sync and formations engineered for replication",
+   "scene": "Idol stages, cover crews, random play dance"
+  },
+  {
+   "name": "Heels Dance",
+   "family": "commercial",
+   "region": "LA/Paris/global",
+   "origin": "2010s studio genre popularized by Yanis Marshall and LA heels classes",
+   "essence": "Commercial choreography in stilettos — leg lines and femme power for any gender",
+   "scene": "Studio classes, viral videos, pop stages"
+  },
+  {
+   "name": "TikTok / Viral Dance Culture",
+   "family": "commercial",
+   "region": "Global",
+   "origin": "2010s-20s short-video platforms; creator-credited micro-routines (the Renegade, Jalaiah Harmon 2019)",
+   "essence": "15-30-second named routines built for mass replication — the era's on-ramp to dance",
+   "scene": "Feeds, hallways, stadium jumbotrons"
+  },
+  {
+   "name": "Waltz (Slow/English)",
+   "family": "ballroom_standard",
+   "region": "Austria/Germany → England",
+   "origin": "1810s Ländler-derived rotating couple dance; standardized by 1920s English ballrooms",
+   "essence": "Closed-hold traveling 3/4 with rise-and-fall, swing and sway",
+   "scene": "DanceSport, studios, wedding floors"
+  },
+  {
+   "name": "Viennese Waltz",
+   "family": "ballroom_standard",
+   "region": "Vienna, Austria",
+   "origin": "Late-1700s from Ländler; the Congress-of-Vienna-era original",
+   "essence": "Fast continuous rotation in 3/4 — natural/reverse turns, fleckerls",
+   "scene": "DanceSport, Viennese ball season"
+  },
+  {
+   "name": "Foxtrot",
+   "family": "ballroom_standard",
+   "region": "USA (New York)",
+   "origin": "c.1914, credited to Harry Fox; shaped by African-American ragtime dance, refined by the Castles",
+   "essence": "Linear slow-quick-quick gliding 4/4 — the hardest Standard dance to do well",
+   "scene": "DanceSport, ballroom socials"
+  },
+  {
+   "name": "Quickstep",
+   "family": "ballroom_standard",
+   "region": "England (US roots)",
+   "origin": "1920s London fusion of fast foxtrot with Charleston and shag",
+   "essence": "Brisk 4/4 of runs, hops and lockstep chassés — airborne elegance",
+   "scene": "DanceSport, ballroom formals"
+  },
+  {
+   "name": "Ballroom Tango (International)",
+   "family": "ballroom_standard",
+   "region": "England, from Argentine roots",
+   "origin": "Argentine tango re-engineered in 1920s Europe into a staccato Standard dance",
+   "essence": "Compressed hold, no rise-and-fall, sharp head snaps and stalking walks",
+   "scene": "DanceSport — distinct from milonga culture"
+  },
+  {
+   "name": "American Smooth",
+   "family": "ballroom_standard",
+   "region": "USA",
+   "origin": "20th-c. Murray/Astaire studio tradition diverging from International style",
+   "essence": "The Standard four with open holds — solo turns and Astaire-style theatricality",
+   "scene": "American DanceSport, US showcases"
+  },
+  {
+   "name": "Peabody",
+   "family": "ballroom_standard",
+   "region": "USA (New York)",
+   "origin": "1910s fast one-step variant, named by tradition for a NYC policeman",
+   "essence": "Very fast ragtime one-step in right-outside offset",
+   "scene": "Vintage ragtime events, rare"
+  },
+  {
+   "name": "Cha-Cha-Cha",
+   "family": "ballroom_latin",
+   "region": "Cuba → England",
+   "origin": "Early-1950s Havana, from Enrique Jorrín's danzón-mambo innovations",
+   "essence": "Cheeky syncopated 4/4 breaking on 2 with 'cha-cha-cha' triple",
+   "scene": "DanceSport and every Latin floor"
+  },
+  {
+   "name": "Samba (International)",
+   "family": "ballroom_latin",
+   "region": "Brazil → Europe",
+   "origin": "Ballroomized 1920s-50s from maxixe and carnival samba",
+   "essence": "Traveling 2/4 with samba bounce, voltas, botafogos",
+   "scene": "DanceSport competitions"
+  },
+  {
+   "name": "Rumba (International)",
+   "family": "ballroom_latin",
+   "region": "Cuba → Europe",
+   "origin": "From Cuban son/bolero; Cuban-style codified from the 1950s",
+   "essence": "Slow 4/4 dance of love — hip action from delayed weight transfer",
+   "scene": "DanceSport, studios"
+  },
+  {
+   "name": "Paso Doble",
+   "family": "ballroom_latin",
+   "region": "Spain/France",
+   "origin": "1920s-30s French-codified bullfight drama to pasodoble marches",
+   "essence": "Lead as torero, follow as cape — appels, chassé capes, shaped lines",
+   "scene": "DanceSport almost exclusively"
+  },
+  {
+   "name": "Jive",
+   "family": "ballroom_latin",
+   "region": "USA → England",
+   "origin": "1940s-50s European codification of GI jitterbug",
+   "essence": "Fast bouncy triple-step chassés with kicks and flicks",
+   "scene": "DanceSport; social kin live in rock'n'roll"
+  },
+  {
+   "name": "Bolero (American Rhythm)",
+   "family": "ballroom_latin",
+   "region": "Cuba → USA",
+   "origin": "From 1880s Santiago bolero song tradition, Americanized mid-century",
+   "essence": "Slowest Rhythm dance — rumba hips with waltz-like rise and sweep",
+   "scene": "American Rhythm circuit"
+  },
+  {
+   "name": "Mambo (American Rhythm)",
+   "family": "ballroom_latin",
+   "region": "Cuba/USA",
+   "origin": "Competition codification of the 1950s mambo craze",
+   "essence": "Sharp percussive on-2 Latin with holds on 1",
+   "scene": "NDCA circuit; lineage lives as On2 salsa"
+  },
+  {
+   "name": "Lindy Hop",
+   "family": "swing",
+   "region": "USA (Harlem)",
+   "origin": "Late-1920s Savoy Ballroom — African-American fusion of Charleston and breakaway; Frankie Manning, Norma Miller",
+   "essence": "The mother swing dance: elastic 8-count swingout, improvisation, aerials",
+   "scene": "Global revival — exchanges, Herräng, ILHC"
+  },
+  {
+   "name": "Charleston",
+   "family": "swing",
+   "region": "USA (Black South → Harlem)",
+   "origin": "1920s, popularized by James P. Johnson's tune in Runnin' Wild",
+   "essence": "Kicking twist-footed 8-count; swing-Charleston merges into fast Lindy",
+   "scene": "Lindy socials, solo jazz classes"
+  },
+  {
+   "name": "Balboa",
+   "family": "swing",
+   "region": "USA (Southern California)",
+   "origin": "Late-1920s crowded Balboa Pavilion floors of Newport Beach",
+   "essence": "Chest-to-chest shuffle for very fast tempos — tiny footwork conversation",
+   "scene": "All Balboa Weekend, swing exchanges"
+  },
+  {
+   "name": "Collegiate Shag",
+   "family": "swing",
+   "region": "USA",
+   "origin": "1920s-30s from Southern one-step lineages, popularized by swing-era college youth",
+   "essence": "Bouncy slow-slow-quick-quick hops in close position — pogo joy",
+   "scene": "Swing socials, shag events"
+  },
+  {
+   "name": "St. Louis Shag",
+   "family": "swing",
+   "region": "USA (St. Louis)",
+   "origin": "Mid-1930s up-tempo offshoot of swing-Charleston",
+   "essence": "Stationary side-by-side triples and kicks to stomping boogie",
+   "scene": "Niche revival, St. Louis home scene"
+  },
+  {
+   "name": "Carolina Shag",
+   "family": "swing",
+   "region": "USA (Myrtle Beach)",
+   "origin": "1940s beach-pavilion swing to 'race records' → beach music; state dance of the Carolinas",
+   "essence": "Smooth 6-count slot swing — 'the dance is in the feet'",
+   "scene": "SOS migrations, Carolina shag clubs"
+  },
+  {
+   "name": "East Coast Swing",
+   "family": "swing",
+   "region": "USA",
+   "origin": "1940s studio codification of Lindy/jitterbug into 6-count form",
+   "essence": "Circular triple-triple-rock-step to swing and early rock'n'roll",
+   "scene": "Studios, socials, rockabilly nights"
+  },
+  {
+   "name": "West Coast Swing",
+   "family": "swing",
+   "region": "USA (California)",
+   "origin": "1940s-50s LA evolution of Lindy (Dean Collins lineage), fused with R&B and pop",
+   "essence": "Slotted elastic swing — anchors, sugar pushes, whips; evolves with current music",
+   "scene": "WSDC circuit, US Open, late-night socials"
+  },
+  {
+   "name": "Boogie Woogie",
+   "family": "swing",
+   "region": "Europe (US roots)",
+   "origin": "Post-war European jitterbug lineage, WRRC-codified from the 1980s",
+   "essence": "Fast driving swing footwork to boogie piano — social and musical",
+   "scene": "European competitions and clubs"
+  },
+  {
+   "name": "Acrobatic Rock'n'Roll",
+   "family": "swing",
+   "region": "France/Germany/Switzerland",
+   "origin": "1970s+ competitive formalization of jive lineage into sport",
+   "essence": "Choreographed kick-ball-change plus high acrobatic throws",
+   "scene": "WRRC federation circuits"
+  },
+  {
+   "name": "Jitterbug",
+   "family": "swing",
+   "region": "USA",
+   "origin": "1930s-40s umbrella name (Cab Calloway era) for mainstream swing dancing",
+   "essence": "The era's word for energetic swing — ancestor of ECS",
+   "scene": "Historical; retro scenes"
+  },
+  {
+   "name": "DC Hand Dancing",
+   "family": "swing",
+   "region": "USA (Washington DC)",
+   "origin": "Mid-1950s African-American swing evolution, smoothed to R&B; DC's official dance",
+   "essence": "Gliding 6-beat swing with continuous hand connection and intricate turns",
+   "scene": "DC hand-dance clubs and socials"
+  },
+  {
+   "name": "Chicago Steppin'",
+   "family": "swing",
+   "region": "USA (Chicago)",
+   "origin": "From 1950s-60s Chicago bop into steppin' by the 1970s",
+   "essence": "Smooth cool 8-count walking partner dance to stepper's R&B — elegance over flash",
+   "scene": "Steppers' sets, Black social-dance circuits"
+  },
+  {
+   "name": "Blues Dancing",
+   "family": "swing",
+   "region": "USA (juke joints)",
+   "origin": "African-American idiom dances to blues (slow drag from the 1900s); 2000s revival",
+   "essence": "Grounded pulse, lag and stretch, close conversation at slow tempos",
+   "scene": "Blues fusion socials, late-night rooms"
+  },
+  {
+   "name": "Modern Jive (Ceroc)",
+   "family": "swing",
+   "region": "UK/France",
+   "origin": "1980s London simplification of French jive, franchised as Ceroc",
+   "essence": "Beginner-friendly lead-follow turns stripped of footwork rules",
+   "scene": "Ceroc nights UK/Australia/NZ"
+  },
+  {
+   "name": "Salsa — LA Style (On1)",
+   "family": "latin_social",
+   "region": "USA (Los Angeles)",
+   "origin": "1990s LA, Vazquez brothers' linear show-influenced styling",
+   "essence": "Slot salsa breaking on 1 — flashy cross-body leads, spins, shines",
+   "scene": "Global congresses and socials"
+  },
+  {
+   "name": "Salsa — New York Style (On2)",
+   "family": "latin_social",
+   "region": "USA (NYC)",
+   "origin": "From Palladium mambo; Eddie Torres codified On2 timing from the 1980s",
+   "essence": "Slotted salsa breaking on 2, tied to the conga tumbao",
+   "scene": "NYC socials, worldwide On2 scene"
+  },
+  {
+   "name": "Casino (Cuban Salsa)",
+   "family": "latin_social",
+   "region": "Cuba",
+   "origin": "1950s Havana casinos deportivos, from son/cha-cha roots",
+   "essence": "Circular partner orbits — vueltas, dile que no, Afro-Cuban flavor",
+   "scene": "Casas de la música, Cuban-salsa scenes"
+  },
+  {
+   "name": "Rueda de Casino",
+   "family": "latin_social",
+   "region": "Cuba",
+   "origin": "1950s-60s Havana group form of casino with a caller",
+   "essence": "Couples in a wheel executing called figures with partner exchanges",
+   "scene": "Cuban salsa communities worldwide"
+  },
+  {
+   "name": "Salsa Caleña",
+   "family": "latin_social",
+   "region": "Colombia (Cali)",
+   "origin": "Mid-century Cali adoption of Cuban/PR music via pachanga and boogaloo",
+   "essence": "Lightning skip-kick footwork, minimal turns — Cali's own salsa",
+   "scene": "Viejotecas, Feria de Cali, cabaret stages"
+  },
+  {
+   "name": "Palladium Mambo",
+   "family": "latin_social",
+   "region": "Cuba → NYC",
+   "origin": "Pérez Prado-era 1940s-50s craze at NYC's Palladium (Machito, Puente, Rodríguez)",
+   "essence": "On-2 Afro-Cuban breaks against the clave — parent of NY salsa",
+   "scene": "Historical golden age; On2 revival nights"
+  },
+  {
+   "name": "Cha-Cha (social)",
+   "family": "latin_social",
+   "region": "Cuba → pan-Latin",
+   "origin": "1953 Havana, Jorrín's charanga rhythm danced socially",
+   "essence": "Relaxed street triple-step — earthier than the DanceSport version",
+   "scene": "Latin clubs, salsa social cha-cha sets"
+  },
+  {
+   "name": "Pachanga",
+   "family": "latin_social",
+   "region": "Cuba/NYC",
+   "origin": "c.1959 Eduardo Davidson rhythm adopted by NYC charanga scene",
+   "essence": "Springy hoofing with a signature drag-hop inside salsa",
+   "scene": "On2 shines, mambo revival"
+  },
+  {
+   "name": "Cumbia (social)",
+   "family": "latin_social",
+   "region": "Colombia → pan-Latin",
+   "origin": "Colonial-era tri-ethnic coastal courtship, re-rooted across 20th-c. Latin America",
+   "essence": "Relaxed back-breaking basic and simple turns — Latin America's everywhere-dance",
+   "scene": "Family parties and clubs continent-wide"
+  },
+  {
+   "name": "Bachata (Dominican)",
+   "family": "latin_social",
+   "region": "Dominican Republic",
+   "origin": "1960s+ DR barrios from bolero campesino; UNESCO-listed 2019",
+   "essence": "Close footwork-rich 8-count with the tap-hip on 4 and 8",
+   "scene": "Colmados, clubs, worldwide socials"
+  },
+  {
+   "name": "Bachata Sensual",
+   "family": "latin_social",
+   "region": "Spain (Cádiz)",
+   "origin": "c.2005+, Korke & Judith's wave/isolation vocabulary on remixes",
+   "essence": "Body-wave-led dips and rolls in close connection",
+   "scene": "Global bachata congresses"
+  },
+  {
+   "name": "Merengue",
+   "family": "latin_social",
+   "region": "Dominican Republic",
+   "origin": "Mid-1800s Cibao perico ripiao roots; UNESCO-listed 2016",
+   "essence": "Marching two-step with continuous hips and pretzel turns",
+   "scene": "Every Latin party, DR carnival"
+  },
+  {
+   "name": "Quebradita",
+   "family": "latin_social",
+   "region": "Mexico/US Southwest",
+   "origin": "Early-1990s banda boom in Mexico and Mexican-American LA",
+   "essence": "Acrobatic dips and flips ('little break') to fast banda",
+   "scene": "Bailes with banda, Southwest scenes"
+  },
+  {
+   "name": "Argentine Tango",
+   "family": "latin_social",
+   "region": "Argentina/Uruguay",
+   "origin": "1880s-1900s Río de la Plata port melting pot — habanera, candombe, milonga campera",
+   "essence": "Improvised walking embrace navigating the ronda — connection over pattern",
+   "scene": "Milongas worldwide; UNESCO 2009",
+   "pack": "tango"
+  },
+  {
+   "name": "Tango Vals",
+   "family": "latin_social",
+   "region": "Argentina/Uruguay",
+   "origin": "19th-c. European waltz criollized in the Río de la Plata",
+   "essence": "Tango technique flowing in 3/4 — continuous giddy turning",
+   "scene": "A standard tanda at every milonga"
+  },
+  {
+   "name": "Milonga (dance)",
+   "family": "latin_social",
+   "region": "Argentina/Uruguay",
+   "origin": "1870s+ from milonga campera and candombe — tango's faster elder sibling",
+   "essence": "Quick cheeky 2/4 with traspié double-time play — humor over drama",
+   "scene": "Milonga tandas everywhere"
+  },
+  {
+   "name": "Tango Nuevo",
+   "family": "latin_social",
+   "region": "Argentina",
+   "origin": "1990s-2000s structural analysis by Naveira, Salas, Frúmboli",
+   "essence": "Open elastic embrace exploring colgadas, volcadas, off-axis moves",
+   "scene": "Nuevo milongas, alternative tango nights"
+  },
+  {
+   "name": "Maxixe",
+   "family": "brazilian",
+   "region": "Brazil (Rio)",
+   "origin": "1870s-80s Rio fusion of lundu, polka and habanera — the 'Brazilian tango'",
+   "essence": "Close sinuous 2/4 with intertwined bent-knee glides",
+   "scene": "Historical; revived in gafieira pedagogy"
+  },
+  {
+   "name": "Samba de Gafieira",
+   "family": "brazilian",
+   "region": "Brazil (Rio)",
+   "origin": "1940s Rio dance halls, from maxixe and salon samba",
+   "essence": "Malandro-styled partner samba — pendulum basic, leg hooks, playful trickery",
+   "scene": "Rio gafieiras, dança de salão academies"
+  },
+  {
+   "name": "Forró",
+   "family": "brazilian",
+   "region": "Brazil (Nordeste)",
+   "origin": "Northeastern baião/xote tradition nationalized by Luiz Gonzaga from the 1940s",
+   "essence": "Thigh-to-thigh close two-step with turns — pé-de-serra to acrobatic urban styles",
+   "scene": "Forrós across Brazil, European festival circuit"
+  },
+  {
+   "name": "Lambada",
+   "family": "brazilian",
+   "region": "Brazil (Pará → Bahia)",
+   "origin": "1980s from carimbó and merengue influences; 1989 global craze via Kaoma",
+   "essence": "Fast sweeping hips, whipped turns, deep back bends",
+   "scene": "Nostalgic; technique lives in Brazilian zouk"
+  },
+  {
+   "name": "Brazilian Zouk",
+   "family": "brazilian",
+   "region": "Brazil (Rio/SP)",
+   "origin": "Early-1990s lambada dancers adapting to slower Caribbean zouk music",
+   "essence": "Flowing waves, follower head movement, tilted turns and counterbalance",
+   "scene": "Global zouk congresses and jack-and-jills"
+  },
+  {
+   "name": "Soltinho",
+   "family": "brazilian",
+   "region": "Brazil",
+   "origin": "Mid-century Brazilian adaptation of American swing within dança de salão",
+   "essence": "Light bouncy Brazilian swing with quick hand changes",
+   "scene": "Brazilian ballroom academies"
+  },
+  {
+   "name": "Vanerão",
+   "family": "brazilian",
+   "region": "Brazil (Rio Grande do Sul)",
+   "origin": "Gaúcho ballroom tradition derived from the habanera",
+   "essence": "Driving closed-hold two-step with strong pelvic rhythm",
+   "scene": "Southern-Brazilian CTG halls"
+  },
+  {
+   "name": "Semba",
+   "family": "afro_partner",
+   "region": "Angola",
+   "origin": "Mid-century Luanda, from the older massemba tradition — kizomba's parent",
+   "essence": "Upbeat playful close-hold with quick footwork, tricks and the umbigada touch",
+   "scene": "Angolan festas; taught alongside kizomba"
+  },
+  {
+   "name": "Kizomba",
+   "family": "afro_partner",
+   "region": "Angola",
+   "origin": "Late-1970s-80s Luanda — semba slowed onto zouk-influenced music (Kassav' catalyst)",
+   "essence": "Grounded close-embrace walking — subtle weight shifts, saidas, ginga",
+   "scene": "Kizomba socials worldwide, Lisbon/Paris hubs"
+  },
+  {
+   "name": "Urban Kiz",
+   "family": "afro_partner",
+   "region": "France (Paris diaspora)",
+   "origin": "c.2010s Paris evolution of kizomba to remixes, named c.2015",
+   "essence": "Linear staccato interpretation — pivots, blocks, syncopated pauses",
+   "scene": "European urban-kiz festivals"
+  },
+  {
+   "name": "Tarraxinha",
+   "family": "afro_partner",
+   "region": "Angola → Lisbon",
+   "origin": "2000s offshoot of kizomba culture — slow bass-heavy electronic rhythm",
+   "essence": "Nearly stationary micro-movement and isolations in tight embrace",
+   "scene": "Late-night rooms of kiz festivals"
+  },
+  {
+   "name": "Konpa",
+   "family": "afro_partner",
+   "region": "Haiti",
+   "origin": "1955+, Nemours Jean-Baptiste's compas direct evolving Haitian méringue",
+   "essence": "Simple ti-pas two-step over a steady pulse — the pocket over figures",
+   "scene": "Haitian fêt culture: Haiti, Miami, Montreal, Paris"
+  },
+  {
+   "name": "Zouk (Antillean)",
+   "family": "afro_partner",
+   "region": "Martinique/Guadeloupe",
+   "origin": "1980s — Kassav' created zouk from gwo ka, bèlè and konpa roots",
+   "essence": "Simple swaying hip-to-hip kolé sereye groove to zouk love",
+   "scene": "Antillean parties in the Caribbean and France"
+  },
+  {
+   "name": "Coladeira/Passada",
+   "family": "afro_partner",
+   "region": "Cabo Verde",
+   "origin": "Mid-century coladeira music (morna sped up); passada is its social dancing",
+   "essence": "Relaxed close-hold two-step with Creole swing — kizomba's co-parent culture",
+   "scene": "Cape Verdean communities: Praia, Lisbon, Boston"
+  },
+  {
+   "name": "Son Cubano",
+   "family": "caribbean_social",
+   "region": "Cuba (Oriente)",
+   "origin": "Late-1800s eastern Cuba — Bantu percussion and Spanish tres; salsa's ancestor",
+   "essence": "Elegant contratiempo partner dance with courtly poise",
+   "scene": "Casas de la trova, traditionalist scenes"
+  },
+  {
+   "name": "Danzón",
+   "family": "caribbean_social",
+   "region": "Cuba (Matanzas)",
+   "origin": "1879, Miguel Faílde; descended from contradanza/habanera",
+   "essence": "Stately walking dance with fanning paseo pauses — parent of mambo and cha-cha",
+   "scene": "Danzón plazas (Veracruz, Mexico City), heritage events"
+  },
+  {
+   "name": "Bolero (Cuban social)",
+   "family": "caribbean_social",
+   "region": "Cuba (Santiago)",
+   "origin": "c.1880s trova tradition (Pepe Sánchez); UNESCO 2023",
+   "essence": "The pan-Latin romantic slow dance with subtle motion",
+   "scene": "Family parties, trova nights"
+  },
+  {
+   "name": "Bomba",
+   "family": "caribbean_social",
+   "region": "Puerto Rico",
+   "origin": "16th-17th c. onward, created by enslaved and free Black communities (Cepeda lineages)",
+   "essence": "Dancer-drummer dialogue — the primo answers the dancer's piquetes in the soberao",
+   "scene": "Bombazos in PR and diaspora",
+   "sacred": true
+  },
+  {
+   "name": "Plena",
+   "family": "caribbean_social",
+   "region": "Puerto Rico (Ponce)",
+   "origin": "Early-1900s working-class barrios — the 'sung newspaper'",
+   "essence": "Pandereta-driven street music danced in loose grooving couples and lines",
+   "scene": "Parrandas, protests, festivals"
+  },
+  {
+   "name": "Danza Puertorriqueña",
+   "family": "caribbean_social",
+   "region": "Puerto Rico (Ponce)",
+   "origin": "Mid-1800s elite salon adaptation of contradanza (Morel Campos)",
+   "essence": "Refined paseo-then-waltz ballroom couple dance",
+   "scene": "Heritage balls, ceremonial today"
+  },
+  {
+   "name": "Dominican Son",
+   "family": "caribbean_social",
+   "region": "Dominican Republic",
+   "origin": "Cuban son rooted in DR barrios through the 20th c., with distinctive slow styling",
+   "essence": "Ultra-smooth gliding son with dramatic pauses and floreo",
+   "scene": "Santo Domingo son clubs, festival nights"
+  },
+  {
+   "name": "Texas Two-Step",
+   "family": "country_western",
+   "region": "USA (Texas)",
+   "origin": "20th-c. honky-tonk evolution of foxtrot/one-step to country music",
+   "essence": "Traveling quick-quick-slow-slow counterclockwise around the floor",
+   "scene": "Honky-tonks and country halls"
+  },
+  {
+   "name": "Country Waltz",
+   "family": "country_western",
+   "region": "USA",
+   "origin": "European waltz folk-processed through ranch dances",
+   "essence": "Smooth progressive waltz with long country strides",
+   "scene": "Dance halls, UCWDC circuit"
+  },
+  {
+   "name": "Country Swing",
+   "family": "country_western",
+   "region": "USA",
+   "origin": "Jitterbug absorbed into honky-tonk culture mid-century",
+   "essence": "Loose 6-count swing with dips, wraps and flash to country radio",
+   "scene": "College-town country bars"
+  },
+  {
+   "name": "Line Dancing",
+   "family": "country_western",
+   "region": "USA",
+   "origin": "Disco-era line formats fused with country in the 1980s-90s booms",
+   "essence": "Choreographed solo sequences danced in lines — no partner needed",
+   "scene": "Country bars worldwide, line clubs"
+  },
+  {
+   "name": "Square Dancing",
+   "family": "country_western",
+   "region": "USA (British/French roots)",
+   "origin": "English country dance and quadrilles folk-processed; caller-driven form post-WWII",
+   "essence": "Four couples execute called figures — do-si-do, allemande",
+   "scene": "Square dance clubs, barn dances"
+  },
+  {
+   "name": "Contra Dance",
+   "family": "country_western",
+   "region": "USA (New England)",
+   "origin": "17th-18th-c. English/French line dances kept alive, revived in the 1970s",
+   "essence": "Long facing lines progress through called figures with a swing each encounter",
+   "scene": "Contra nights across North America"
+  },
+  {
+   "name": "Cajun & Zydeco",
+   "family": "country_western",
+   "region": "USA (Louisiana)",
+   "origin": "Cajun (Acadian) and Creole zydeco (Clifton Chenier era) dance-hall traditions",
+   "essence": "Cajun two-step/waltz and the syncopated close-hold zydeco shuffle",
+   "scene": "Fais do-dos, Lafayette halls, festivals"
+  },
+  {
+   "name": "Hustle (NY 3-count)",
+   "family": "disco_hustle",
+   "region": "USA (NYC Latino communities)",
+   "origin": "c.1972-75 Bronx/Brooklyn Puerto Rican youth; exploded with disco and 1977's Fever",
+   "essence": "Fast rotational slot with the '&1-2-3' count — wheel-like partner spins",
+   "scene": "Hustle socials, WCS-crossover events"
+  },
+  {
+   "name": "Discofox",
+   "family": "disco_hustle",
+   "region": "Germany/Switzerland/Austria",
+   "origin": "Mid-1970s European merger of two-step with hustle partnering",
+   "essence": "3-and-4-count basic with wraps and spins to schlager and dance-pop",
+   "scene": "German-speaking Europe's default partner dance"
+  },
+  {
+   "name": "Polka (social)",
+   "family": "folk_partner",
+   "region": "Bohemia (Czech lands)",
+   "origin": "c.1830s Bohemian round dance; 1840s worldwide craze; emigrated to the Americas",
+   "essence": "Bouncy hop-step-close-step rotating in fast 2/4",
+   "scene": "Oktoberfests, Polish-American halls, norteño bailes"
+  },
+  {
+   "name": "Schottische",
+   "family": "folk_partner",
+   "region": "Bohemia/Germany",
+   "origin": "19th-c. European round dance spread through world folk traditions",
+   "essence": "Step-step-step-hop with pivoting couple turns",
+   "scene": "Folk nights, balfolk, country halls"
+  },
+  {
+   "name": "Mazurka (balfolk)",
+   "family": "folk_partner",
+   "region": "Poland → Europe",
+   "origin": "Mazovian folk lineage, ballroom-fashionable in the 1800s, revived in balfolk",
+   "essence": "3/4 with off-beat accent; modern balfolk dances it slow and close",
+   "scene": "Balfolk festivals: France, Italy, Germany"
+  },
+  {
+   "name": "Hambo & Polska",
+   "family": "folk_partner",
+   "region": "Sweden/Scandinavia",
+   "origin": "Polska family from the 1600s; hambo standardized c.1900",
+   "essence": "Continuously rotating couples in 3/4 with pivot technique and knee spring",
+   "scene": "Spelmansstämma gatherings, Nordic fiddle camps"
+  },
+  {
+   "name": "Zwiefacher",
+   "family": "folk_partner",
+   "region": "Bavaria",
+   "origin": "Bavarian tradition documented for centuries; UNESCO-listed German heritage",
+   "essence": "Couple rotation alternating waltz and dreher bars in tune-specific sequences",
+   "scene": "Bavarian folk dances, balfolk"
+  },
+  {
+   "name": "Irish Set Dancing",
+   "family": "folk_partner",
+   "region": "Ireland",
+   "origin": "19th-c. Irish adaptation of French quadrilles danced in sets",
+   "essence": "Four couples batter through figures to jigs, reels and polkas",
+   "scene": "Set dancing clubs, céilís, Willie Clancy week"
+  },
+  {
+   "name": "Norteño/Conjunto",
+   "family": "folk_partner",
+   "region": "Northern Mexico/Texas",
+   "origin": "19th-c. German-Czech polka adopted into conjunto culture",
+   "essence": "Tight closed-hold polka with cheek-to-cheek styling and huapango variants",
+   "scene": "Bailes and quinceañeras across the border region"
+  },
+  {
+   "name": "Bharatanatyam",
+   "family": "south_asian",
+   "region": "Tamil Nadu, India",
+   "origin": "Rooted in the Natya Shastra and Tamil temple sadir; stage-reconstructed 1930s (Rukmini Devi)",
+   "essence": "Geometric araimandi precision, adavu footwork, mudras and abhinaya storytelling",
+   "scene": "Arangetram debuts, global academies"
+  },
+  {
+   "name": "Kathak",
+   "family": "south_asian",
+   "region": "North India",
+   "origin": "Temple storytellers transformed in Mughal courts into a Hindu-Persian hybrid (gharanas: Lucknow, Jaipur)",
+   "essence": "Whirling chakkars, lightning footwork with ankle bells, rhythmic dialogue with tabla",
+   "scene": "Concert stages, gharana schools"
+  },
+  {
+   "name": "Odissi",
+   "family": "south_asian",
+   "region": "Odisha, India",
+   "origin": "Mahari temple dance at Jagannath Puri; reconstructed 1950s from sculpture",
+   "essence": "Sculptural tribhangi three-bend posture, fluid torso, Gita Govinda lyricism",
+   "scene": "Stages and festivals (Konark)"
+  },
+  {
+   "name": "Kuchipudi",
+   "family": "south_asian",
+   "region": "Andhra Pradesh, India",
+   "origin": "Village dance-drama of Kuchipudi village, systematized by Siddhendra Yogi (~1600s)",
+   "essence": "Fast buoyant rounded movement; the tarangam danced on a brass plate rim",
+   "scene": "Dance-drama troupes, classical festivals"
+  },
+  {
+   "name": "Kathakali",
+   "family": "south_asian",
+   "region": "Kerala, India",
+   "origin": "1600s dance-drama from kutiyattam, kalaripayattu and temple ritual",
+   "essence": "Painted-face character types, towering costumes, eye-language, all-night epics",
+   "scene": "Temple festival grounds, Kerala Kalamandalam"
+  },
+  {
+   "name": "Mohiniyattam",
+   "family": "south_asian",
+   "region": "Kerala, India",
+   "origin": "Courtly-temple solo female form, revived at Kalamandalam in the 1930s",
+   "essence": "Swaying coconut-palm softness in white-and-gold kasavu — the lasya register",
+   "scene": "Concert stages, Kerala academies"
+  },
+  {
+   "name": "Manipuri (Ras Lila)",
+   "family": "south_asian",
+   "region": "Manipur, India",
+   "origin": "Codified 1700s under King Bhagyachandra atop indigenous Lai Haraoba ritual",
+   "essence": "Rounded gliding knee-soft movement, veiled Radha-Krishna ras",
+   "scene": "Temple courtyard ras, stages",
+   "sacred": true
+  },
+  {
+   "name": "Sattriya",
+   "family": "south_asian",
+   "region": "Assam, India",
+   "origin": "Created 1400s-1500s by saint Sankardeva in Vaishnavite monasteries; India's 8th classical form (2000)",
+   "essence": "Monastic devotional dance-drama with khol drum, distinct masculine/feminine styles",
+   "scene": "Sattra monasteries and secular stages",
+   "sacred": true
+  },
+  {
+   "name": "Bhangra",
+   "family": "south_asian",
+   "region": "Punjab (India/Pakistan)",
+   "origin": "Vaisakhi harvest dance of Punjabi farmers; competitive form post-1947, UK diaspora remix from the 1980s",
+   "essence": "Explosive shoulder bounces, hops and kicks to the dhol's chaal",
+   "scene": "Vaisakhi, weddings, university competition circuits"
+  },
+  {
+   "name": "Garba & Dandiya Raas",
+   "family": "south_asian",
+   "region": "Gujarat, India",
+   "origin": "Centuries-old devotional circle dance for the goddess; raas adds Krishna-linked stick play",
+   "essence": "Concentric turning circles around a central lamp; paired dandiya stick patterns",
+   "scene": "Navratri nights, diaspora arenas"
+  },
+  {
+   "name": "Lavani",
+   "family": "south_asian",
+   "region": "Maharashtra, India",
+   "origin": "1700s-1800s tamasha theatre entertainment to the dholki drum",
+   "essence": "Powerful sensual quick-tempo solo storytelling in nine-yard sari — now reclaimed",
+   "scene": "Tamasha theatre, festival stages, Marathi film"
+  },
+  {
+   "name": "Ghoomar",
+   "family": "south_asian",
+   "region": "Rajasthan, India",
+   "origin": "Traditional dance of Bhil and Rajput women for weddings and Teej",
+   "essence": "Sweeping veiled turns in full ghaghara skirts",
+   "scene": "Weddings, women's festival gatherings"
+  },
+  {
+   "name": "Bollywood",
+   "family": "south_asian",
+   "region": "Pan-India/diaspora",
+   "origin": "Hindi film choreography from the 1950s — a deliberate hybrid of kathak, folk, jazz and hip-hop",
+   "essence": "Eclectic expressive spectacle; the main global vector for Indian dance vocabulary",
+   "scene": "Film, wedding sangeets, studios worldwide"
+  },
+  {
+   "name": "Kandyan Dance",
+   "family": "south_asian",
+   "region": "Sri Lanka",
+   "origin": "Rooted in the Kohomba Kankariya healing ritual of the Kandyan kingdom",
+   "essence": "Leaping spinning male virtuosity in the silver ves costume, geta bera drums",
+   "scene": "Kandy Esala Perahera, temple rituals",
+   "sacred": true
+  },
+  {
+   "name": "Raqs Sharqi (Belly Dance)",
+   "family": "mena",
+   "region": "Egypt/pan-Arab",
+   "origin": "Solo social dance theatricalized in 1920s-40s Cairo nightclubs and cinema (Badia Masabni era)",
+   "essence": "Torso articulation — hip drops, shimmies, undulations in conversation with taqsim",
+   "scene": "Cairo cabarets, weddings, global studios"
+  },
+  {
+   "name": "Baladi",
+   "family": "mena",
+   "region": "Egypt",
+   "origin": "Home-grown urban Egyptian social style beneath staged raqs sharqi",
+   "essence": "Earthy grounded heavy-hipped inward focus to accordion awadi",
+   "scene": "Homes, weddings, street celebrations"
+  },
+  {
+   "name": "Saidi",
+   "family": "mena",
+   "region": "Upper Egypt",
+   "origin": "Folkloric style tied to tahtib stick-fighting of the Sa'id",
+   "essence": "Strong bouncy cane (assaya) work over the saidi rhythm",
+   "scene": "Village celebrations, folkloric troupes"
+  },
+  {
+   "name": "Dabke",
+   "family": "mena",
+   "region": "Levant",
+   "origin": "Village line dance of communal roots; staged versions from mid-1900s",
+   "essence": "Shoulder-to-shoulder line led by a handkerchief-twirling lawweeh — synced stomps",
+   "scene": "Weddings, national celebrations, diaspora parties"
+  },
+  {
+   "name": "Persian Classical Dance",
+   "family": "mena",
+   "region": "Iran/diaspora",
+   "origin": "Qajar-era courtly solo improvisation; publicly suppressed post-1979, sustained in diaspora",
+   "essence": "Filigree hands and wrists, expressive face, delicate turns — improvised within an idiom",
+   "scene": "Norouz gatherings, diaspora stages"
+  },
+  {
+   "name": "Chaabi/Shikhat",
+   "family": "mena",
+   "region": "Morocco",
+   "origin": "Celebration dance carried by shikhat, professional women of the aita tradition",
+   "essence": "Loose-hipped belt-accented hip work with sung improvisation",
+   "scene": "Weddings and family celebrations"
+  },
+  {
+   "name": "Sufi Whirling (Sema) & Tanoura",
+   "family": "mena",
+   "region": "Turkey/Egypt",
+   "origin": "Mevlevi sema founded on Rumi's practice (1200s Konya); Egyptian tanoura is its folkloric-theatrical cousin",
+   "essence": "Continuous rotation as spiritual dissolution — or spinning-skirt spectacle",
+   "scene": "Mevlevi lodges (a religious rite); Cairo heritage theatres",
+   "sacred": true
+  },
+  {
+   "name": "Chinese Classical Dance",
+   "family": "east_asian",
+   "region": "China/diaspora",
+   "origin": "1950s academy synthesis reconstructing court, Dunhuang and opera movement",
+   "essence": "Circular yuan pathways, water-sleeve technique, shen yun bearing",
+   "scene": "Conservatories, state ensembles"
+  },
+  {
+   "name": "Chinese Ethnic & Folk Dances",
+   "family": "east_asian",
+   "region": "China (56 nationalities)",
+   "origin": "Regional traditions — yangge, dragon and lion dance, Dai peacock, Mongolian and Uyghur forms",
+   "essence": "Enormous variety; lion and dragon processions the most travelled",
+   "scene": "New Year processions, regional festivals"
+  },
+  {
+   "name": "Peking Opera Movement",
+   "family": "east_asian",
+   "region": "China",
+   "origin": "Formed ~1790 (Anhui troupes), matured through the 1800s from kunqu and martial arts",
+   "essence": "Codified role-type gaits, sleeve and feather work, acrobatic combat",
+   "scene": "Opera houses, academies"
+  },
+  {
+   "name": "Nihon Buyo",
+   "family": "east_asian",
+   "region": "Japan",
+   "origin": "Classical concert dance distilled from kabuki (1600s+), organized in iemoto family schools",
+   "essence": "Suriashi gliding, the fan as universal prop, restrained suggestion",
+   "scene": "Tatami studios, recital halls"
+  },
+  {
+   "name": "Bon Odori",
+   "family": "east_asian",
+   "region": "Japan",
+   "origin": "Buddhist Obon festival dance welcoming ancestral spirits (medieval nenbutsu-odori roots)",
+   "essence": "Simple repeating circle choreography around the yagura tower; Awa Odori its famous cousin",
+   "scene": "Summer Obon festivals everywhere, open to all"
+  },
+  {
+   "name": "Buchaechum (Fan Dance)",
+   "family": "east_asian",
+   "region": "Korea",
+   "origin": "Created 1954 by Kim Baek-bong from shamanic and court aesthetics",
+   "essence": "Peony fans forming flowers, waves and butterflies in flowing hanbok",
+   "scene": "National companies, festivals"
+  },
+  {
+   "name": "Talchum (Mask Dance)",
+   "family": "east_asian",
+   "region": "Korea",
+   "origin": "Joseon-era village mask theatre satirizing nobles and monks; UNESCO 2022",
+   "essence": "Earthy squats and swinging arms behind carved masks, audience banter",
+   "scene": "Village festival grounds, folk villages"
+  },
+  {
+   "name": "Legong",
+   "family": "east_asian",
+   "region": "Bali, Indonesia",
+   "origin": "Refined 1800s palace dance, classically danced by young girls",
+   "essence": "Hyper-articulate fingers, darting seledet eyes, gamelan-synced precision",
+   "scene": "Palace courtyards, temple festivals"
+  },
+  {
+   "name": "Kecak",
+   "family": "east_asian",
+   "region": "Bali, Indonesia",
+   "origin": "1930s creation from the sanghyang trance chorus (Wayan Limbak with Walter Spies)",
+   "essence": "Massed male choir chanting interlocking 'cak' around fire — no orchestra",
+   "scene": "Sunset amphitheatres, village ensembles"
+  },
+  {
+   "name": "Javanese Court Dance",
+   "family": "east_asian",
+   "region": "Central Java, Indonesia",
+   "origin": "Kraton palace traditions of Yogyakarta and Surakarta (1600s+)",
+   "essence": "Extreme meditative slowness; bedhaya as royal regalia",
+   "scene": "Palace ceremonies, academy stages",
+   "sacred": true
+  },
+  {
+   "name": "Khon",
+   "family": "east_asian",
+   "region": "Thailand",
+   "origin": "Masked dance-drama of the Ayutthaya/Bangkok courts performing the Ramakien; UNESCO 2018",
+   "essence": "Codified demon/monkey/hero vocabularies in gilded masks",
+   "scene": "Royal ceremonies, national theatre"
+  },
+  {
+   "name": "Tinikling",
+   "family": "east_asian",
+   "region": "Philippines (Visayas)",
+   "origin": "Colonial-era folk dance imitating the tikling bird stepping between bamboo traps",
+   "essence": "Rapid steps woven between clapping bamboo poles at accelerating tempo",
+   "scene": "School programs, fiestas, folkloric troupes"
+  },
+  {
+   "name": "Cariñosa",
+   "family": "east_asian",
+   "region": "Philippines",
+   "origin": "Spanish-colonial courtship dance in Maria Clara dress",
+   "essence": "Coy fan-and-handkerchief flirtation in gentle waltz meter",
+   "scene": "Fiestas, schools, folkloric repertory"
+  },
+  {
+   "name": "Vietnamese Traditional Dance",
+   "family": "east_asian",
+   "region": "Vietnam",
+   "origin": "Nguyễn-dynasty court lineage plus folk forms — conical-hat, fan, lantern, lion-unicorn",
+   "essence": "Grace built on prop imagery honoring agrarian and Buddhist roots",
+   "scene": "Hue festivals, Tet celebrations"
+  },
+  {
+   "name": "Flamenco",
+   "family": "european_folk",
+   "region": "Andalusia, Spain",
+   "origin": "Crystallized 1700s-1800s among Gitano communities absorbing Andalusian, Moorish and Sephardic strands; UNESCO 2010",
+   "essence": "Cante, toque, baile: percussive zapateado, curling braceo, dozens of palos each with its own compás",
+   "scene": "Tablaos, peñas, Jerez festivals, global academies"
+  },
+  {
+   "name": "Sevillanas",
+   "family": "european_folk",
+   "region": "Seville, Spain",
+   "origin": "Folk couple dance from Castilian seguidillas, flamenco-inflected",
+   "essence": "Four fixed coplas with turned figures — everyone's social dance",
+   "scene": "Feria de Abril, Rocío pilgrimage"
+  },
+  {
+   "name": "Jota",
+   "family": "european_folk",
+   "region": "Aragon & across Spain",
+   "origin": "1700s (or earlier) rapid 3/4 couple dance with castanets",
+   "essence": "High-energy bounding leaps, castanets, sung coplas",
+   "scene": "Regional festivals, Zaragoza competitions"
+  },
+  {
+   "name": "Irish Step Dance",
+   "family": "european_folk",
+   "region": "Ireland/diaspora",
+   "origin": "Shaped by 1700s traveling dance masters; Gaelic League codification; globalized by Riverdance (1994)",
+   "essence": "Rigid torso over blur-fast percussive (hard shoe) or airy (soft shoe) legs",
+   "scene": "Feiseanna, world championships, touring shows"
+  },
+  {
+   "name": "Irish Céilí Dance",
+   "family": "european_folk",
+   "region": "Ireland",
+   "origin": "Social group dances codified by the Gaelic League from 1897",
+   "essence": "Figure dances for sets — sixteen-hand reels, walls of four",
+   "scene": "Céilí socials, GAA halls"
+  },
+  {
+   "name": "Scottish Highland Dance",
+   "family": "european_folk",
+   "region": "Scotland",
+   "origin": "Solo dances with military-gathering roots, standardized under SOBHD",
+   "essence": "Vertical elevation and turned-out precision over crossed swords, to pipes",
+   "scene": "Highland games worldwide"
+  },
+  {
+   "name": "English Morris",
+   "family": "european_folk",
+   "region": "England",
+   "origin": "Documented from the 1400s; village festive team dance revived in the early 1900s",
+   "essence": "Bell pads, hankies or sticks, leaping figures in sets of six",
+   "scene": "Village greens, May Day dawn, folk festivals"
+  },
+  {
+   "name": "Clogging (Lancashire/Appalachian)",
+   "family": "european_folk",
+   "region": "N. England → Appalachia",
+   "origin": "1800s mill-town step dance, hybridized in Appalachia with Irish, African-American and Cherokee steps",
+   "essence": "Percussive footwork as music-making, loose-legged over string bands",
+   "scene": "Competitions, folk clubs, Appalachian festivals"
+  },
+  {
+   "name": "Csárdás",
+   "family": "european_folk",
+   "region": "Hungary",
+   "origin": "1800s national couple dance from verbunkos recruiting music",
+   "essence": "Slow lassú building to wild friss — spins and boot-slaps",
+   "scene": "Táncház revival, weddings, ensembles"
+  },
+  {
+   "name": "Hopak",
+   "family": "european_folk",
+   "region": "Ukraine",
+   "origin": "Zaporozhian Cossack improvised male dance, theatricalized by Virsky in the 1900s",
+   "essence": "Squat kicks, split leaps, spinning virtuosity — a national symbol",
+   "scene": "State ensembles, diaspora troupes"
+  },
+  {
+   "name": "Barynya (Russian Folk)",
+   "family": "european_folk",
+   "region": "Russia",
+   "origin": "Village fast dance with chastushka verses; stage troupes folk-styled it",
+   "essence": "Alternating stomping, prisyadka squat work and whirling circles",
+   "scene": "Stage ensembles, community celebrations"
+  },
+  {
+   "name": "Sirtaki",
+   "family": "european_folk",
+   "region": "Greece",
+   "origin": "Invented 1964 for Zorba the Greek from slow/fast hasapiko elements — modern, not ancient",
+   "essence": "Shoulder-held line accelerating from slow to fast hasaposerviko",
+   "scene": "Tavernas and celebrations; real roots in hasapiko"
+  },
+  {
+   "name": "Kalamatianos",
+   "family": "european_folk",
+   "region": "Greece",
+   "origin": "Ancient-rooted 7/8 circle dance named for Kalamata — the default panhellenic dance",
+   "essence": "Open circle, handkerchief-led leader improvising over a 12-step line",
+   "scene": "Weddings, baptisms, national holidays"
+  },
+  {
+   "name": "Horah",
+   "family": "european_folk",
+   "region": "Balkans/Jewish-Israeli",
+   "origin": "Balkan-Romanian circle dance adopted by 1920s-30s Zionist pioneers as communal expression",
+   "essence": "Joined circle grapevine accelerating to klezmer/Israeli tunes; chairs aloft at weddings",
+   "scene": "Jewish weddings, Israeli folk sessions"
+  },
+  {
+   "name": "Tarantella/Pizzica",
+   "family": "european_folk",
+   "region": "Southern Italy",
+   "origin": "Linked to tarantism's ritual music-cure (documented 1600s); pizzica revived since the 1990s",
+   "essence": "Rapid 6/8 spinning, tambourine-driven courtship or trance-release",
+   "scene": "Village feasts, Notte della Taranta"
+  },
+  {
+   "name": "Schuhplattler",
+   "family": "european_folk",
+   "region": "Bavaria/Tyrol",
+   "origin": "Alpine courtship dance with medieval-era claims, codified by 1800s costume societies",
+   "essence": "Thunderous shoe-thigh-knee slapping over Ländler meter",
+   "scene": "Trachtenverein meets, alpine festivals"
+  },
+  {
+   "name": "Adumu",
+   "family": "african_traditional",
+   "region": "Maasai (Kenya/Tanzania)",
+   "origin": "Warrior jumping dance within the Eunoto coming-of-age cycle",
+   "essence": "Vertical leaps from standing in a chanting circle — height as prowess",
+   "scene": "Age-set ceremonies; tourist showings are a separate register",
+   "sacred": true
+  },
+  {
+   "name": "Eskista",
+   "family": "african_traditional",
+   "region": "Ethiopia",
+   "origin": "Ancient highland shoulder-dance tradition",
+   "essence": "Rippling shoulder, chest and neck isolations over a still lower body",
+   "scene": "Weddings, azmari houses, Ethio-pop"
+  },
+  {
+   "name": "Agbadza",
+   "family": "african_traditional",
+   "region": "Ewe (Ghana/Togo/Benin)",
+   "origin": "Descended from the Atrikpui war dance into social/funerary form",
+   "essence": "Bird-like contraction-release of torso to polyrhythmic drums and bell",
+   "scene": "Funerals, Hogbetsotso festival, university ensembles"
+  },
+  {
+   "name": "Kpanlogo",
+   "family": "african_traditional",
+   "region": "Ga (Accra, Ghana)",
+   "origin": "Created early 1960s by urban Ga youth (Otoo Lincoln lineage credited)",
+   "essence": "Low flirtatious playful moves to conga-like kpanlogo drums",
+   "scene": "Beach parties, festivals, drum-dance classes"
+  },
+  {
+   "name": "Zaouli",
+   "family": "african_traditional",
+   "region": "Guro (Côte d'Ivoire)",
+   "origin": "Created in the 1950s honoring feminine beauty; UNESCO 2017",
+   "essence": "Impossibly fast stuttering leg polyrhythms beneath a serene mask",
+   "scene": "Village celebrations and competitions",
+   "sacred": true
+  },
+  {
+   "name": "Indlamu",
+   "family": "african_traditional",
+   "region": "Zulu (South Africa)",
+   "origin": "Regimental war-dance heritage of the Zulu kingdom",
+   "essence": "Slow high leg-lift crashing into ground-shaking stomps, in unison with shields",
+   "scene": "Weddings, royal and heritage ceremonies"
+  },
+  {
+   "name": "Moribayassa",
+   "family": "african_traditional",
+   "region": "Malinké (Guinea)",
+   "origin": "Vow-fulfillment dance — danced once in a lifetime after surviving hardship",
+   "essence": "Solo woman in ragged clothes circles the village with djembe ensemble — the joy of release",
+   "scene": "Village processions; the rhythm is taught, the rite is not",
+   "sacred": true
+  },
+  {
+   "name": "Sabar",
+   "family": "african_traditional",
+   "region": "Wolof (Senegal)",
+   "origin": "Centuries-old drum-dance complex carried by géwël griot families",
+   "essence": "Explosive knee-lifts and flying arms answering the sabar drum's spoken bàkks",
+   "scene": "Street soirées, Dakar schools; feeds mbalax"
+  },
+  {
+   "name": "Gumboot (Isicathulo)",
+   "family": "african_traditional",
+   "region": "South Africa",
+   "origin": "Born in Witwatersrand gold mines — prohibited talk turned into slapped-boot code",
+   "essence": "Percussive boot-slapping and chants in unison lines; protest inside entertainment",
+   "scene": "Mining-heritage events, schools, theatre"
+  },
+  {
+   "name": "Tap Dance",
+   "family": "concert",
+   "region": "USA",
+   "origin": "1800s African-American fusion of West African rhythm, juba and Irish clog; Robinson, Bubbles, Nicholas Brothers, Glover",
+   "essence": "The dancer as drummer — metal-soled jazz music-making",
+   "scene": "Broadway, jazz clubs, tap festivals"
+  },
+  {
+   "name": "Jazz Dance",
+   "family": "concert",
+   "region": "USA",
+   "origin": "Rooted in African-American vernacular, theatricalized by Cole, Dunham, Mattox, Fosse, Luigi",
+   "essence": "Syncopation, isolations, low center, performative attack",
+   "scene": "Broadway, videos, competition circuit"
+  },
+  {
+   "name": "Modern Dance",
+   "family": "concert",
+   "region": "USA/Germany",
+   "origin": "Early-1900s revolt against ballet — Graham's contraction/release, Horton's laterals, Limón's fall/recovery, German Ausdruckstanz",
+   "essence": "Weight, breath, floorwork and psychological drama in named techniques",
+   "scene": "Graham/Ailey companies, conservatories"
+  },
+  {
+   "name": "Contemporary Dance",
+   "family": "concert",
+   "region": "Global",
+   "origin": "Post-1960s open field after Cunningham and Judson — release, floorwork, improvisation",
+   "essence": "Eclectic and idea-driven; choreographer-defined",
+   "scene": "Festivals, project companies, tanztheater"
+  },
+  {
+   "name": "Musical Theatre Dance",
+   "family": "concert",
+   "region": "US/UK",
+   "origin": "Vaudeville to integrated storytelling — de Mille's Oklahoma!, Robbins, Fosse, Bennett",
+   "essence": "Character-first hybrid of jazz, ballet and tap — the triple-threat standard",
+   "scene": "Broadway/West End, tours, studios"
+  },
+  {
+   "name": "Ballet Folklórico / Jarabe Tapatío",
+   "family": "latin_folk",
+   "region": "Mexico",
+   "origin": "Jarabe crowned national dance after 1924; folklórico staging consolidated by Amalia Hernández (1952)",
+   "essence": "Charro-china poblana courtship, zapateado heelwork, swirling regional suites",
+   "scene": "Folklórico companies, fiestas patrias, US circuits"
+  },
+  {
+   "name": "Marinera",
+   "family": "latin_folk",
+   "region": "Peru",
+   "origin": "Descended from colonial zamacueca, renamed 1879; Trujillo contest since 1960",
+   "essence": "Elegant handkerchief courtship — barefoot regal her, sombrero him",
+   "scene": "Trujillo festival, weddings, academies"
+  },
+  {
+   "name": "Cueca",
+   "family": "latin_folk",
+   "region": "Chile",
+   "origin": "Zamacueca family; national dance since 1979; cueca sola danced as protest by women of the disappeared",
+   "essence": "Handkerchief-circling rooster-and-hen courtship in 6/8-3/4",
+   "scene": "Fiestas Patrias, fondas, folk clubs"
+  },
+  {
+   "name": "Cumbia Folclórica",
+   "family": "latin_folk",
+   "region": "Caribbean coast, Colombia",
+   "origin": "Colonial-era tri-ethnic courtship danced around candles at night",
+   "essence": "She glides with candles, he circles — shuffling steps carrying deep memory",
+   "scene": "Barranquilla Carnival, folkloric troupes"
+  },
+  {
+   "name": "Chacarera",
+   "family": "latin_folk",
+   "region": "Santiago del Estero, Argentina",
+   "origin": "Rural criollo dance of the northwest, zamba/gato family",
+   "essence": "Sprightly 6/8 — zapateo for him, zarandeo skirt-flourish for her, non-touching figures",
+   "scene": "Peñas folklóricas, Cosquín festival"
+  },
+  {
+   "name": "Zamba",
+   "family": "latin_folk",
+   "region": "Argentina (NW)",
+   "origin": "Slow scarf-courtship descendant of the zamacueca",
+   "essence": "Handkerchiefs circling in unhurried 6/8 — Argentina's most poetic folk dance",
+   "scene": "Peñas, festivals, academies"
+  },
+  {
+   "name": "Malambo",
+   "family": "latin_folk",
+   "region": "Argentine pampas",
+   "origin": "Gaucho solo competitive foot-percussion documented from the 1700s",
+   "essence": "Boots, boleadoras and drum — escalating zapateo duels of stamina",
+   "scene": "Festival de Malambo (Laborde), folk spectacles"
+  },
+  {
+   "name": "Capoeira",
+   "family": "latin_folk",
+   "region": "Brazil (Bahia)",
+   "origin": "Afro-Brazilian art forged by enslaved Africans, criminalized until the 1930s; Bimba and Pastinha lineages; UNESCO 2014",
+   "essence": "Dance-disguised martial play in the roda — ginga, kicks, cartwheels, berimbau song",
+   "scene": "Academies worldwide, street rodas, batizados"
+  },
+  {
+   "name": "Frevo",
+   "family": "latin_folk",
+   "region": "Recife/Olinda, Brazil",
+   "origin": "Born ~1900s from marching bands plus capoeira footwork; UNESCO 2012",
+   "essence": "Frenetic squat-kick-spring passo with the tiny colorful umbrella",
+   "scene": "Pernambuco Carnival, frevo schools"
+  },
+  {
+   "name": "Samba no Pé",
+   "family": "latin_folk",
+   "region": "Rio de Janeiro, Brazil",
+   "origin": "Solo samba of the escolas, from Afro-Bahian samba de roda urbanized in early-1900s Rio",
+   "essence": "Rapid-fire 2/4 with bounced knees and free hips — passistas lead the parade",
+   "scene": "Carnival sambadromo, samba school quadras"
+  },
+  {
+   "name": "Hula (Kahiko & 'Auana)",
+   "family": "oceanian",
+   "region": "Hawai'i",
+   "origin": "Pre-contact sacred practice tied to chant and genealogy; suppressed, revived under Kalākaua and the 1970s Renaissance",
+   "essence": "Every gesture encodes text — hands narrate, hips keep time; kahiko to ipu/pahu, 'auana lyrical",
+   "scene": "Hālau under a kumu hula, Merrie Monarch Festival",
+   "sacred": true
+  },
+  {
+   "name": "'Ōte'a (Tahitian 'Ori)",
+   "family": "oceanian",
+   "region": "Tahiti",
+   "origin": "Traditional drum dance suppressed in the missionary era, rebuilt via Heiva festival and 1956 revival",
+   "essence": "Machine-gun hip oscillation to tō'ere log drums; aparima its gestural sibling",
+   "scene": "Heiva i Tahiti, 'ori tahiti schools worldwide"
+  },
+  {
+   "name": "Haka",
+   "family": "oceanian",
+   "region": "Aotearoa New Zealand (Māori)",
+   "origin": "Ancestral posture dance of iwi — challenge, welcome, mourning; Ka Mate composed by Te Rauparaha (~1820s)",
+   "essence": "Full-body chant: stamping, wiriwiri hands, pūkana eyes — mana embodied",
+   "scene": "Pōwhiri, tangihanga, Te Matatini, All Blacks",
+   "sacred": true
+  },
+  {
+   "name": "Poi",
+   "family": "oceanian",
+   "region": "Aotearoa New Zealand (Māori)",
+   "origin": "Women's discipline within kapa haka",
+   "essence": "Balls on cords swung in singing geometric rhythms with waiata",
+   "scene": "Kapa haka festivals, marae; LED poi is a derived hobby",
+   "sacred": true
+  },
+  {
+   "name": "Fancy Dance",
+   "family": "north_american",
+   "region": "Plains, US/Canada",
+   "origin": "Men's fancy ~1920s-30s (Southern Plains, partly answering ceremonial-dance bans); women's fancy shawl mid-century",
+   "essence": "The fastest powwow styles — double bustles and spins; butterfly shawl work",
+   "scene": "Competition powwows; regalia belongs to Native dancers",
+   "sacred": true
+  },
+  {
+   "name": "Jingle Dress Dance",
+   "family": "north_american",
+   "region": "Anishinaabe (Great Lakes)",
+   "origin": "Healing dance from a ~1920s vision tied to the influenza era",
+   "essence": "Hundreds of rolled cones sounding with close-to-earth footwork — prayers carried",
+   "scene": "Powwows and healing ceremonies",
+   "sacred": true
+  },
+  {
+   "name": "Grass Dance",
+   "family": "north_american",
+   "region": "Northern Plains",
+   "origin": "Among the oldest men's powwow styles (Omaha/Lakota lineages)",
+   "essence": "Swaying grass-like fringe, balance-testing figure-eight body work",
+   "scene": "Powwows — often opens the arena",
+   "sacred": true
+  },
+  {
+   "name": "Salsa",
+   "family": "latin_social",
+   "region": "Cuba/Puerto Rico → NYC",
+   "origin": "Cuban son lineage through the Palladium mambo era into 1970s NYC's Fania-era 'salsa'",
+   "essence": "The umbrella social dance of the clave — On1/On2/casino styles worldwide",
+   "scene": "Socials and congresses on every continent",
+   "pack": "salsa"
+  },
+  {
+   "name": "Ballet",
+   "family": "concert",
+   "region": "France/Italy/Russia",
+   "origin": "Renaissance courts through the French academy (1661) to Russian classicism — the codified base of Western concert dance",
+   "essence": "Turnout, line, pointe work and a 400-year vocabulary from barre to grand allegro",
+   "scene": "Companies, conservatories, adult studios worldwide",
+   "pack": "ballet"
+  },
+  {
+   "name": "Afrobeats / Afrodance",
+   "family": "afro_club",
+   "region": "Ghana/Nigeria",
+   "origin": "2010s West African pop wave; named-move dictionary culture from Accra and Lagos",
+   "essence": "Named viral moves on an afro bounce — Azonto to Zanku, each with an author",
+   "scene": "Parties, clubs, TikTok, DWP-style academies",
+   "pack": "afrobeats"
+  },
+  {
+   "name": "West African (Guinean/Malian)",
+   "family": "african_traditional",
+   "region": "Guinea/Mali",
+   "origin": "Djembe-and-dunun dance tradition of the Malinké and neighbors, staged worldwide via Les Ballets Africains lineage",
+   "essence": "One rhythm, one dance — grounded, earth-facing movement answering the drum's break",
+   "scene": "Live-drum classes, village ceremonies, global workshops",
+   "pack": "westafrican"
+  },
+  {
+   "name": "Para Dance Sport (Wheelchair DanceSport)",
+   "family": "adaptive",
+   "region": "Global (IPC governed)",
+   "origin": "Organized from the 1970s (Sweden pioneering), World Para Dance Sport under the IPC",
+   "essence": "Ballroom and Latin adapted for wheelchair dancers — combi (standing+wheelchair) and duo formats",
+   "scene": "IPC competitions, inclusive ballroom studios"
+  },
+  {
+   "name": "Physically Integrated Dance",
+   "family": "adaptive",
+   "region": "USA/UK → global",
+   "origin": "1980s-90s pioneers — AXIS Dance Company (Oakland, 1987), Candoco (London, 1991)",
+   "essence": "Professional contemporary dance made by disabled and non-disabled artists together — access as aesthetics",
+   "scene": "Integrated companies, festivals, inclusive training programs"
+  },
+  {
+   "name": "Chair & Seated Dance Practice",
+   "family": "adaptive",
+   "region": "Global",
+   "origin": "Studio and community adaptation lineage — seated technique classes across genres",
+   "essence": "Full musical and expressive practice of grooves, ports de bras and rhythm from seated positions",
+   "scene": "Inclusive studios, senior and rehab programs, online classes"
+  }
+ ]
+}

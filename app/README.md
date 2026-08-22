@@ -128,6 +128,16 @@ review.html + js/review.js  (Phase B2 · Tier 2)
              reports/sample-*.json (try review.html?src=reports/sample-uprock-vs-six.report.json).
 ```
 
+catalog.html + js/catalog.js + data/registry/dance-catalog.json
+             THE GLOBAL DANCE CATALOG — 239 verified dance styles across 27
+             families, compiled from three parallel deep-research sweeps
+             (street/club/electronic; partner/social/Latin; traditional/
+             classical/folk) plus adaptive & integrated dance. Every entry:
+             family, region, origin (conservatively attributed), essence,
+             and the real-world scene where it lives; ceremonial/lineage
+             forms flagged 'community-held'; ✦ badges link the 7 full packs.
+             Searchable; every entry links to real dancers.
+
 Tier-2 pipeline (../tools/): `analyze.sh <video> <moveId>` runs
 `analyze-clip.py` (MediaPipe heavy model, model_complexity=2, offline — no
 real-time constraint) then `analyze-report.mjs`, which scores with the SAME
