@@ -409,6 +409,9 @@ const TAGLINES = {
   bachata: "Dominican basic, hips, footwork",
   kizomba: "the Angolan ginga, solo-first",
   lindy: "swing pulse, Charleston, solo jazz",
+  samba: "carnival feet — truly solo",
+  forro: "the friendliest two-step alive",
+  bzouk: "waves and flow, neck kept safe",
 };
 
 function needsOnboarding() {

@@ -273,6 +273,50 @@ test("lindy pack: Savoy lineage credited; solo jazz carries its names; swingout 
   assert.equal(info.theme, "Pulse Season");
 });
 
+test("samba pack: Afro-Brazilian roots credited; escolas are curriculum; genuinely solo", () => {
+  const sb = STYLES.samba;
+  const roots = sb.nodes.find((n) => n.id === "sbculture.roots");
+  assert.ok(roots.checkpoints.some((c) => /Afro-Brazilian/.test(c) && /Angolan/.test(c)), "roots told straight");
+  assert.ok(roots.checkpoints.some((c) => /Tia Ciata/.test(c)), "Tia Ciata's house credited");
+  assert.ok(sb.nodes.some((n) => n.id === "sbculture.escolas"), "the escolas are curriculum");
+  assert.equal(sb.nodes.filter((n) => n.partner).length, 0, "samba no pé needs no partner — zero partner nodes");
+  const basic = sb.nodes.find((n) => n.id === "sbfoot.basic");
+  assert.ok(basic.prereqs.some((p) => p.id === "sbfoot.bounce"), "spring before the basic — calves protected");
+  const info = seasonInfo(newState(T), T, sb.seasons);
+  assert.equal(info.theme, "Surdo Season");
+});
+
+test("forró pack: Gonzaga and the Northeast credited; three rhythms; partner late and friendly", () => {
+  const fo = STYLES.forro;
+  const gonzaga = fo.nodes.find((n) => n.id === "fculture.gonzaga");
+  assert.ok(gonzaga.checkpoints.some((c) => /Luiz Gonzaga/.test(c) && /Baião/.test(c)));
+  assert.ok(fo.nodes.some((n) => n.id === "fmusic.three"), "baião/xote/arrasta-pé are curriculum");
+  const branches = fo.nodes.find((n) => n.id === "fculture.branches");
+  assert.ok(branches.checkpoints.some((c) => /pé-de-serra/.test(c) && /root/.test(c)), "the root named");
+  for (const n of fo.nodes.filter((x) => x.partner)) {
+    assert.ok(n.phase >= 3, `${n.id} partner-flagged but early-phase`);
+  }
+  const info = seasonInfo(newState(T), T, fo.seasons);
+  assert.equal(info.theme, "Baião Season");
+});
+
+test("brazilian zouk pack: lambada lineage told; NO head-movement move exists — the neck rule holds", () => {
+  const bz = STYLES.bzouk;
+  const lambada = bz.nodes.find((n) => n.id === "zculture.lambada");
+  assert.ok(lambada.checkpoints.some((c) => /lambada/i.test(c) || /Porto Seguro/.test(c)), "lambada root credited");
+  assert.ok(lambada.checkpoints.some((c) => /unrelated to kizomba/.test(c)), "the name confusion untangled");
+  const honesty = bz.nodes.find((n) => n.id === "meta.neck_honesty");
+  assert.ok(honesty.checkpoints.some((c) => /NEVER self-taught from video/.test(c)));
+  assert.ok(!bz.nodes.some((n) => n.type === "move" && /head|cambr/i.test(n.name)),
+    "no head-movement MOVE exists anywhere in the tree — like ballet's no-pointe rule");
+  const wave = bz.nodes.find((n) => n.id === "zmove.wave");
+  assert.ok(wave.prereqs.some((p) => p.id === "meta.neck_honesty" && p.kind === "hard"),
+    "even shoulder-stopped waves require reading the safety limit");
+  assert.ok(wave.checkpoints.some((c) => /STOPS AT THE SHOULDERS/.test(c)));
+  const info = seasonInfo(newState(T), T, bz.seasons);
+  assert.equal(info.theme, "Lambada Roots Season");
+});
+
 test("new-pack animations exist in tree + move library with teaching checkpoints", () => {
   for (const id of ["pop.fresno", "wave.arm", "lock.lock", "point.point", "jack.basic", "hfoot.pdbr"]) {
     assert.ok(MOVES[id], `${id} animated`);

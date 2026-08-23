@@ -120,6 +120,37 @@ export const PATTERNS = {
     ],
     note: "The ride pattern, swung: ding, ding-ga-ding. Pulse on every beat — long-SHORT, never even.",
   },
+  samba: {
+    name: "Samba batucada (surdo + tamborim)",
+    beats: 4, defaultBpm: 104,
+    hits: [
+      { t: 1, type: "accent" }, { t: 3, type: "accent" },
+      { t: 0, type: "kick" }, { t: 2, type: "kick" },
+      { t: 0, type: "hat" }, { t: 0.5, type: "hat" }, { t: 0.75, type: "hat" },
+      { t: 1.5, type: "hat" }, { t: 2.25, type: "hat" }, { t: 2.5, type: "hat" }, { t: 3.5, type: "hat" },
+    ],
+    note: "Two bars of 2/4: the surdo lands HEAVY on the second beat of each bar. Triple-time feet ride the top.",
+  },
+  baiao: {
+    name: "Baião (forró zabumba)",
+    beats: 2, defaultBpm: 100,
+    hits: [
+      { t: 0, type: "kick" }, { t: 1.5, type: "kick" },
+      { t: 0.75, type: "snare" },
+      { t: 0, type: "hat" }, { t: 0.5, type: "hat" }, { t: 1, type: "hat" }, { t: 1.5, type: "hat" },
+    ],
+    note: "Zabumba low-boom, dry slap, boom — the triangle keeps eighths on top. Two-step home.",
+  },
+  bzouk: {
+    name: "Zouk (boom-chik-chik)",
+    beats: 2, defaultBpm: 76,
+    hits: [
+      { t: 0, type: "kick" },
+      { t: 0.75, type: "snare" }, { t: 1.25, type: "snare" },
+      { t: 0.5, type: "hat" }, { t: 1, type: "hat" }, { t: 1.5, type: "hat" },
+    ],
+    note: "Boom… chik-chik. The slow step stretches through the boom; the quicks answer the chiks.",
+  },
   ha: {
     name: "The Ha (ballroom)",
     beats: 4, defaultBpm: 126,
@@ -159,6 +190,9 @@ export const STYLE_PATTERNS = {
   bachata: "bachata",
   kizomba: "kizomba",
   lindy: "swing",
+  samba: "samba",
+  forro: "baiao",
+  bzouk: "bzouk",
 };
 
 export const SOUND_TYPES = ["kick", "snare", "hat", "clave", "accent"];

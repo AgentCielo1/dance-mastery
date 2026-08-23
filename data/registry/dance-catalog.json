@@ -943,7 +943,8 @@
    "region": "Brazil (Nordeste)",
    "origin": "Northeastern baião/xote tradition nationalized by Luiz Gonzaga from the 1940s",
    "essence": "Thigh-to-thigh close two-step with turns — pé-de-serra to acrobatic urban styles",
-   "scene": "Forrós across Brazil, European festival circuit"
+   "scene": "Forrós across Brazil, European festival circuit",
+   "pack": "forro"
   },
   {
    "name": "Lambada",
@@ -959,7 +960,8 @@
    "region": "Brazil (Rio/SP)",
    "origin": "Early-1990s lambada dancers adapting to slower Caribbean zouk music",
    "essence": "Flowing waves, follower head movement, tilted turns and counterbalance",
-   "scene": "Global zouk congresses and jack-and-jills"
+   "scene": "Global zouk congresses and jack-and-jills",
+   "pack": "bzouk"
   },
   {
    "name": "Soltinho",
@@ -1825,7 +1827,8 @@
    "region": "Rio de Janeiro, Brazil",
    "origin": "Solo samba of the escolas, from Afro-Bahian samba de roda urbanized in early-1900s Rio",
    "essence": "Rapid-fire 2/4 with bounced knees and free hips — passistas lead the parade",
-   "scene": "Carnival sambadromo, samba school quadras"
+   "scene": "Carnival sambadromo, samba school quadras",
+   "pack": "samba"
   },
   {
    "name": "Hula (Kahiko & 'Auana)",

@@ -555,6 +555,43 @@ export const MOVES = {
     rootFn: (p, u) => { p.y -= 0.012 * Math.abs(sin(u * TAU * 2)); },
   },
 
+  /* ------------- brazilian wave: solo cores (procedural v1) ------------- */
+  "sbfoot.basic": {
+    bpm: 104, beats: 2,
+    keys: [
+      // triple-time feet on the balls, tiny and under you — spring alive
+      { t: 0.0, p: { y: 0.865, lKnee: 0.3, rKnee: 0.15, lHipF: 0.12, roll: -0.03, tRoll: 0.08, lShF: -0.25, rShF: 0.25, lElb: 0.5, rElb: 0.5 } },
+      { t: 0.17, p: { y: 0.87, rKnee: 0.3, lKnee: 0.15, rHipF: 0.12, lHipF: 0.0 } },
+      { t: 0.33, p: { y: 0.865, lKnee: 0.28, rKnee: 0.15, lHipF: 0.1, rHipF: 0.0 } },
+      { t: 0.5, p: { y: 0.865, rKnee: 0.3, lKnee: 0.15, rHipF: 0.12, lHipF: 0.0, roll: 0.03, tRoll: -0.08, rShF: -0.25, lShF: 0.25 } },
+      { t: 0.67, p: { y: 0.87, lKnee: 0.3, rKnee: 0.15, lHipF: 0.12, rHipF: 0.0 } },
+      { t: 0.83, p: { y: 0.865, rKnee: 0.28, lKnee: 0.15, rHipF: 0.1, lHipF: 0.0 } },
+    ],
+    rootFn: (p, u) => { p.y += 0.012 * sin(u * TAU * 6); },
+  },
+  "ffoot.basic": {
+    bpm: 100, beats: 4,
+    keys: [
+      // dois pra lá, dois pra cá — two steps left, two steps right, grounded
+      { t: 0.0, p: { y: 0.855, lHipA: 0.28, lKnee: 0.3, rKnee: 0.18, roll: -0.05, tRoll: 0.07, lShF: 0.15, rShF: -0.15, lElb: 0.55, rElb: 0.55 } },
+      { t: 0.25, p: { y: 0.86, lHipA: 0.12, rKnee: 0.28, lKnee: 0.2, roll: -0.02 } },
+      { t: 0.5, p: { y: 0.855, rHipA: 0.28, rKnee: 0.3, lKnee: 0.18, roll: 0.05, tRoll: -0.07, rShF: 0.15, lShF: -0.15, lHipA: 0.0 } },
+      { t: 0.75, p: { y: 0.86, rHipA: 0.12, lKnee: 0.28, rKnee: 0.2, roll: 0.02 } },
+    ],
+  },
+  "zmove.lateral": {
+    bpm: 76, beats: 2,
+    keys: [
+      // slow-quick-quick: the slow stretches, the quicks answer — level glide
+      { t: 0.0, p: { y: 0.86, lHipA: 0.4, lKnee: 0.22, rKnee: 0.28, roll: -0.05, tRoll: 0.1, lShF: 0.2, rShF: -0.2, lElb: 0.5, rElb: 0.5 } },
+      { t: 0.38, p: { y: 0.86, lHipA: 0.15, rKnee: 0.25, lKnee: 0.22, tRoll: 0.02 } },
+      { t: 0.5, p: { y: 0.86, rHipA: 0.4, rKnee: 0.22, lKnee: 0.28, roll: 0.05, tRoll: -0.1, rShF: 0.2, lShF: -0.2, lHipA: 0.0 } },
+      { t: 0.88, p: { y: 0.86, rHipA: 0.15, lKnee: 0.25, rKnee: 0.22, tRoll: -0.02 } },
+    ],
+    // chest-led wave riding the slow count — the neck stays a passenger
+    rootFn: (p, u) => { p.tPitch = 0.06 + 0.07 * sin(u * TAU); },
+  },
+
   /* ------------- waacking / dancehall / vogue prep (procedural v1) ------------- */
   "whack.basic": {
     bpm: 118, beats: 4,

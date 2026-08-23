@@ -25,6 +25,8 @@ export const FAMILY_LABELS = {
   arms: "Whacks", posing: "Posing & lines",
   // lindy hop
   jazz: "Solo jazz",
+  // brazilian wave
+  samba: "The samba",
   // shared
   musicality: "Musicality", culture: "Culture",
 };

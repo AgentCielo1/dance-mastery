@@ -77,6 +77,18 @@ const STYLE_EXTRAS = {
     "Pulse bounce 60s building to tempo — the engine idles first",
     "Ankle springs x15 — triples are an ankle tax",
   ],
+  samba: [
+    "Calf raises x20 slow + 60s light ball-of-foot bounce — samba punishes cold calves first",
+    "Loose hip swings x10 each side, knees soft",
+  ],
+  forro: [
+    "Side-to-side weight transfers 60s, settling fully each side",
+    "Easy knee circles x8 — the two-step rides soft knees",
+  ],
+  bzouk: [
+    "Cat-cow x8 and slow standing side-bends x6 each way — wake the spine gently, never the neck",
+    "Single-leg balance 15s each side — the lateral lives on your axis",
+  ],
 };
 
 export function warmupFor(style) {
