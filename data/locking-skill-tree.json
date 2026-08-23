@@ -1,0 +1,396 @@
+{
+  "style": "locking",
+  "version": "0.1.0",
+  "name": "Locking",
+  "notes": "Locking style pack (Doc 04 template). The dance Don Campbell created by accident in 1970 Los Angeles — a freeze mid-Funky-Chicken that the crowd laughed at, a point back at the crowd, and a vocabulary was born ('Campbellocking'). Codified with The Lockers (1973): Toni Basil, Fred 'Rerun' Berry, Jimmy 'Scoo B Doo' Foster, Greg 'Campbellock Jr.' Pope and crew, broadcast to the world on Soul Train. Design truths: locking rides UP on the beat where hip hop bounces down; showmanship, character and HUMOR are core technique, not garnish — the pack grades your face as much as your lock. Named moves keep their creators' names. No knee drops or splits in v1 — they wait for readiness gates and in-person coaching.",
+  "seasons": [
+    {
+      "theme": "Groove & Lock Season",
+      "finale": "Film 8 counts: loose funk groove slammed into clean locks — fast, FROZEN, released on beat."
+    },
+    {
+      "theme": "Point Season",
+      "finale": "Film a point-and-twirl combination on beat — eyes following every point, attitude on."
+    },
+    {
+      "theme": "Scoo B Doo Season",
+      "finale": "Film Scoo B Doos chained with Stop 'n Go — kicks lifted, paddles clean, locks dead-stopped."
+    },
+    {
+      "theme": "Character Season",
+      "finale": "Film Which-a-Ways and Funky Guitar WITH your face in it — play, mug, perform. Stone faces fail this one."
+    },
+    {
+      "theme": "Showtime Season",
+      "finale": "Perform for actual humans: a party line, a cypher round, or a filmed show with a costume touch — stripes, hat, anything that says The Lockers walked here."
+    }
+  ],
+  "attributes": [
+    {
+      "id": "attr.wrist.l1",
+      "name": "Wrist twirl control L1",
+      "test": "20 clean wrist twirls each hand, elbows held high and quiet, no shoulder creep"
+    },
+    {
+      "id": "attr.stamina.l1",
+      "name": "Full-out stamina L1",
+      "test": "one full funk song of high-energy grooving — locking has no half-power setting"
+    },
+    {
+      "id": "attr.shoulders.l1",
+      "name": "Shoulder freedom L1",
+      "test": "20 big loose backward arm swings each side, shoulders never hiking to the ears"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "lockmusic.funk",
+      "type": "concept",
+      "family": "musicality",
+      "name": "Funk and the ONE",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "locking is funk's dance: James Brown, Sly Stone, early 70s grooves",
+        "find the ONE — locks and points land on the accents",
+        "locking rides UP on the beat: chest lifts where hip hop drops"
+      ]
+    },
+    {
+      "id": "lockmusic.pauses",
+      "type": "concept",
+      "family": "musicality",
+      "name": "Dancing the stops — silence is a beat",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "lockmusic.funk",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "a lock held through a horn stab reads louder than any move",
+        "speed means nothing without the freeze that frames it"
+      ]
+    },
+    {
+      "id": "lockculture.campbell",
+      "type": "concept",
+      "family": "culture",
+      "name": "Don Campbell and the accidental lock (1970, Los Angeles)",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "Don Campbell froze mid-Funky-Chicken because he forgot the next step — the crowd laughed, and he kept the freeze: the Lock",
+        "he pointed back at the people laughing — the Point became vocabulary",
+        "the dance carried his name first: Campbellocking",
+        "lesson under the lore: your 'mistake' can be your signature if you own it"
+      ]
+    },
+    {
+      "id": "lockculture.lockers",
+      "type": "concept",
+      "family": "culture",
+      "name": "The Lockers and Soul Train",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "lockculture.campbell",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "The Lockers (1973): Don Campbell, Toni Basil, Fred 'Rerun' Berry, Jimmy 'Scoo B Doo' Foster, Greg 'Campbellock Jr.' Pope and crew",
+        "Soul Train carried locking into every living room in America",
+        "they dressed the part — stripes, knickers, big hats, big socks: costume is part of the tradition"
+      ]
+    },
+    {
+      "id": "lockculture.character",
+      "type": "concept",
+      "family": "culture",
+      "name": "Showmanship: humor is technique",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "lockculture.lockers",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "locking is generous — it plays TO the audience, mugs, jokes, gives",
+        "a technically perfect round with a dead face is an unfinished round",
+        "watch Lockers-era footage: count how often they smile"
+      ]
+    },
+    {
+      "id": "lock.groove",
+      "type": "move",
+      "family": "lock",
+      "name": "The up groove",
+      "phase": 0,
+      "prereqs": [
+        {
+          "id": "lockmusic.funk",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.shoulders.l1",
+          "kind": "hard"
+        }
+      ],
+      "anchor": "the engine every lock interrupts",
+      "checkpoints": [
+        "chest lifts ON the beat — the groove goes up",
+        "arms swing big and loose; locking hates small",
+        "knees soft, energy forward, ready to explode"
+      ],
+      "mistakes": [
+        "bouncing down like a hip hop groove",
+        "tiny polite arm swings"
+      ]
+    },
+    {
+      "id": "lock.lock",
+      "type": "move",
+      "family": "lock",
+      "name": "The Lock",
+      "phase": 1,
+      "origin": "Don Campbell, 1970 — the accidental freeze that named the dance",
+      "prereqs": [
+        {
+          "id": "lock.groove",
+          "kind": "hard"
+        },
+        {
+          "id": "lockculture.campbell",
+          "kind": "hard"
+        }
+      ],
+      "anchor": "learnable today; the SNAP takes months",
+      "checkpoints": [
+        "from full-speed motion, slam to a dead stop in a slight crouch — forearms up, body braced",
+        "the lock is a pose with muscle behind it, held for a beat",
+        "contrast is everything: the faster the before, the harder the lock reads",
+        "release back into groove like nothing happened"
+      ],
+      "mistakes": [
+        "a soft stop with no snap",
+        "locking so long the groove dies",
+        "collapsing the chest in the crouch"
+      ]
+    },
+    {
+      "id": "point.point",
+      "type": "move",
+      "family": "points",
+      "name": "The Point",
+      "phase": 1,
+      "origin": "Don Campbell — he pointed at the crowd laughing at him, and it became vocabulary",
+      "prereqs": [
+        {
+          "id": "lock.lock",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "full arm extension at shoulder height, index finger loaded with intent",
+        "eyes go WHERE the point goes — you and the audience look together",
+        "hold it a beat; a point is a sentence, not a twitch"
+      ],
+      "mistakes": [
+        "pointing with a limp arm",
+        "eyes elsewhere — an unwatched point says nothing"
+      ]
+    },
+    {
+      "id": "point.wrist_twirl",
+      "type": "move",
+      "family": "points",
+      "name": "Wrist twirls",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "attr.wrist.l1",
+          "kind": "hard"
+        },
+        {
+          "id": "lock.groove",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "elbows high, forearms roll — the twirl is round and lazy-looking but exact",
+        "twirl INTO locks and points; it's the connective tissue",
+        "both hands equal — the weak hand gets double reps"
+      ],
+      "mistakes": [
+        "elbows dropping to the ribs",
+        "shoulders doing the twirling"
+      ]
+    },
+    {
+      "id": "point.pacing",
+      "type": "move",
+      "family": "points",
+      "name": "Pacing",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "point.point",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "palm punches forward in rhythm — half-beat jabs that set up the big accent",
+        "pacing is a drumroll; the lock or point is the cymbal"
+      ]
+    },
+    {
+      "id": "lflow.scoobydoo",
+      "type": "move",
+      "family": "flow",
+      "name": "Scoo B Doo",
+      "phase": 2,
+      "origin": "created by Jimmy 'Scoo B Doo' Foster of The Lockers — say his name when you do it",
+      "prereqs": [
+        {
+          "id": "lock.lock",
+          "kind": "hard"
+        },
+        {
+          "id": "lockculture.lockers",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "kick-step with a lean-back, arms paddling in time",
+        "the kick lifts light and sharp; the lean has swagger, not fall",
+        "finish locked — every Scoo B Doo lands somewhere"
+      ],
+      "mistakes": [
+        "kicking heavy like a march",
+        "forgetting whose move it is"
+      ]
+    },
+    {
+      "id": "lflow.stopngo",
+      "type": "move",
+      "family": "flow",
+      "name": "Stop 'n Go",
+      "phase": 2,
+      "origin": "Lockers-era vocabulary — the step that walks in and rewinds out",
+      "prereqs": [
+        {
+          "id": "lock.lock",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "step in, lock — then reverse out the exact door you entered",
+        "the rewind sells it: same path, same timing, backwards",
+        "lock dead-still between directions"
+      ],
+      "mistakes": [
+        "exiting a different way than you entered",
+        "no true stop between the stop and the go"
+      ]
+    },
+    {
+      "id": "lflow.whichaway",
+      "type": "move",
+      "family": "flow",
+      "name": "Which-a-Way",
+      "phase": 3,
+      "origin": "Lockers-era vocabulary",
+      "prereqs": [
+        {
+          "id": "lflow.stopngo",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "leg swings side to side while the body asks 'which way?' — indecision as choreography",
+        "locks punctuate each fake-out",
+        "play it to someone; the joke needs a receiver"
+      ]
+    },
+    {
+      "id": "lflow.funky_guitar",
+      "type": "move",
+      "family": "flow",
+      "name": "Funky Guitar",
+      "phase": 3,
+      "origin": "Lockers-era vocabulary",
+      "prereqs": [
+        {
+          "id": "point.wrist_twirl",
+          "kind": "hard"
+        },
+        {
+          "id": "lockculture.character",
+          "kind": "helps"
+        }
+      ],
+      "checkpoints": [
+        "lean back and strum an invisible guitar in rhythm",
+        "it's a bit — commit to the bit",
+        "twirl out of it into a point for the button"
+      ]
+    },
+    {
+      "id": "meta.lock_routine",
+      "type": "combo",
+      "family": "meta",
+      "name": "The 8×8 routine — filmed with character",
+      "phase": 4,
+      "prereqs": [
+        {
+          "id": "lflow.scoobydoo",
+          "kind": "hard"
+        },
+        {
+          "id": "lflow.whichaway",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.stamina.l1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "eight 8-counts chaining groove, locks, points, twirls, Scoo B Doo, Stop 'n Go",
+        "every accent in the music gets acknowledged",
+        "your face performs the whole 64 counts"
+      ]
+    },
+    {
+      "id": "meta.lock_showtime",
+      "type": "combo",
+      "family": "meta",
+      "name": "Showtime — perform for humans",
+      "phase": 4,
+      "prereqs": [
+        {
+          "id": "meta.lock_routine",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "a party line, a cypher round, or a show for friends — witnessed, not just filmed",
+        "one costume touch in honor of The Lockers",
+        "make one person laugh mid-round; that's the tradition working"
+      ]
+    }
+  ],
+  "teachers": [
+    {
+      "name": "The Lockers — the source crew (history)",
+      "url": "https://en.wikipedia.org/wiki/The_Lockers"
+    },
+    {
+      "name": "STEEZY — Locking program",
+      "url": "https://www.steezy.co/"
+    }
+  ]
+}

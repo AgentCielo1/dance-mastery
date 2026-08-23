@@ -381,4 +381,142 @@ export const MOVES = {
       { t: 0.75, p: { y: 0.8, tPitch: 0.24, rHipF: 0.2, rKnee: 0.6, lHipF: 0.1, lKnee: 0.5 } },
     ],
   },
+
+  /* ------------- popping (procedural v1, $0 lane) ------------- */
+  "pop.fresno": {
+    bpm: 104, beats: 4,
+    keys: [
+      // hit lands as the weight arrives left — plateau sells the contraction
+      { t: 0.0, p: { y: 0.86, roll: -0.05, lKnee: 0.12, rKnee: 0.32, rHipA: 0.28, lShA: 1.35, lElb: 0.05, rShA: 0.35, rElb: 1.15, tRoll: -0.05 } },
+      { t: 0.18, p: { y: 0.865, roll: -0.05, lShA: 1.3, lElb: 0.15, rElb: 1.05 } },
+      { t: 0.32, p: { y: 0.87, roll: 0.0, lShA: 0.7, rShA: 0.7, lElb: 0.7, rElb: 0.7, lKnee: 0.22, rKnee: 0.22 } },
+      { t: 0.5, p: { y: 0.86, roll: 0.05, rKnee: 0.12, lKnee: 0.32, lHipA: 0.28, rShA: 1.35, rElb: 0.05, lShA: 0.35, lElb: 1.15, tRoll: 0.05 } },
+      { t: 0.68, p: { y: 0.865, roll: 0.05, rShA: 1.3, rElb: 0.15, lElb: 1.05 } },
+      { t: 0.82, p: { y: 0.87, roll: 0.0, lShA: 0.7, rShA: 0.7, lElb: 0.7, rElb: 0.7, lKnee: 0.22, rKnee: 0.22 } },
+    ],
+  },
+  "wave.arm": {
+    bpm: 88, beats: 4,
+    keys: [
+      // a point of energy travels L fingertips → chest → R fingertips and back
+      { t: 0.0, p: { y: 0.87, lShA: 1.45, rShA: 1.45, lElb: 1.15, rElb: 0.05, tRoll: 0.0 } },
+      { t: 0.25, p: { y: 0.87, lShA: 1.35, rShA: 1.45, lElb: 0.05, rElb: 0.05, tRoll: 0.12 } },
+      { t: 0.5, p: { y: 0.87, lShA: 1.45, rShA: 1.45, lElb: 0.05, rElb: 1.15, tRoll: 0.0 } },
+      { t: 0.75, p: { y: 0.87, lShA: 1.45, rShA: 1.35, lElb: 0.05, rElb: 0.05, tRoll: -0.12 } },
+    ],
+    rootFn: (p, u) => { p.tPitch = 0.03 * sin(u * TAU * 2); },
+  },
+  "robot.dimestop": {
+    bpm: 100, beats: 4,
+    keys: [
+      // move smooth, stop DEAD — long plateaus are the dime stops
+      { t: 0.0, p: { y: 0.87, rShF: 0.95, rElb: 1.3, lShF: 0.1, lElb: 0.35, tYaw: 0.3 } },
+      { t: 0.2, p: { y: 0.87, rShF: 0.95, rElb: 1.3, lShF: 0.1, lElb: 0.35, tYaw: 0.3 } },
+      { t: 0.28, p: { y: 0.87, rShF: 0.1, rElb: 0.35, lShF: 0.95, lElb: 1.3, tYaw: -0.3 } },
+      { t: 0.48, p: { y: 0.87, rShF: 0.1, rElb: 0.35, lShF: 0.95, lElb: 1.3, tYaw: -0.3 } },
+      { t: 0.56, p: { y: 0.85, rShF: 0.6, rElb: 1.6, lShF: 0.6, lElb: 1.6, tYaw: 0.0, tPitch: 0.12 } },
+      { t: 0.78, p: { y: 0.85, rShF: 0.6, rElb: 1.6, lShF: 0.6, lElb: 1.6, tYaw: 0.0, tPitch: 0.12 } },
+      { t: 0.86, p: { y: 0.87, rShF: 0.95, rElb: 1.3, lShF: 0.1, lElb: 0.35, tYaw: 0.3, tPitch: 0.0 } },
+    ],
+  },
+  "boog.roll": {
+    bpm: 96, beats: 4,
+    keys: [
+      { t: 0.0, p: { y: 0.845, lKnee: 0.4, rKnee: 0.4, lHipF: 0.15, rHipF: 0.15, lShF: 0.3, rShF: 0.3, lShA: 0.4, rShA: 0.4, lElb: 0.7, rElb: 0.7 } },
+      { t: 0.5, p: { y: 0.835, lKnee: 0.5, rKnee: 0.5, lHipF: 0.2, rHipF: 0.2, lElb: 0.85, rElb: 0.85 } },
+    ],
+    // hips and chest draw circles, not corners
+    rootFn: (p, u, t) => { p.tRoll = 0.16 * sin(t * TAU); p.tPitch = 0.1 + 0.09 * cos(t * TAU); p.tYaw = 0.08 * sin(t * TAU); },
+  },
+
+  /* ------------- locking (procedural v1, $0 lane) ------------- */
+  "lock.lock": {
+    bpm: 100, beats: 4,
+    keys: [
+      // fast loose groove…
+      { t: 0.0, p: { y: 0.875, lShF: 0.7, rShF: -0.7, lElb: 0.4, rElb: 0.4, tYaw: 0.12 } },
+      { t: 0.14, p: { y: 0.885, lShF: -0.7, rShF: 0.7, tYaw: -0.12 } },
+      // …SLAMMED into the lock: crouch, forearms up, dead still for two beats
+      { t: 0.28, p: { y: 0.8, lHipF: 0.45, rHipF: 0.45, lKnee: 0.55, rKnee: 0.55, lShF: 0.35, rShF: 0.35, lElb: 1.95, rElb: 1.95, tPitch: 0.1, tYaw: 0.0 } },
+      { t: 0.72, p: { y: 0.8, lHipF: 0.45, rHipF: 0.45, lKnee: 0.55, rKnee: 0.55, lShF: 0.35, rShF: 0.35, lElb: 1.95, rElb: 1.95, tPitch: 0.1 } },
+      { t: 0.86, p: { y: 0.88, lHipF: 0.05, rHipF: 0.05, lKnee: 0.1, rKnee: 0.1, lShF: 0.5, rShF: -0.5, lElb: 0.4, rElb: 0.4, tPitch: 0.0 } },
+    ],
+  },
+  "point.point": {
+    bpm: 100, beats: 4,
+    keys: [
+      { t: 0.0, p: { y: 0.87, lElb: 0.6, rElb: 0.6, lShF: 0.2, rShF: 0.2 } },
+      // full-arm point, held with attitude — eyes go where the point goes
+      { t: 0.12, p: { y: 0.875, rShF: 1.5, rShA: 0.25, rElb: 0.05, tYaw: -0.18, lElb: 1.2, lShF: 0.1 } },
+      { t: 0.42, p: { y: 0.875, rShF: 1.5, rShA: 0.25, rElb: 0.05, tYaw: -0.18, lElb: 1.2 } },
+      { t: 0.5, p: { y: 0.87, lElb: 0.6, rElb: 0.6, lShF: 0.2, rShF: 0.2, tYaw: 0.0, rShA: 0.0 } },
+      { t: 0.62, p: { y: 0.875, lShF: 1.5, lShA: 0.25, lElb: 0.05, tYaw: 0.18, rElb: 1.2, rShF: 0.1 } },
+      { t: 0.92, p: { y: 0.875, lShF: 1.5, lShA: 0.25, lElb: 0.05, tYaw: 0.18, rElb: 1.2 } },
+    ],
+  },
+  "point.wrist_twirl": {
+    bpm: 104, beats: 2,
+    keys: [
+      { t: 0.0, p: { y: 0.87, lShA: 1.15, rShA: 1.15, lShF: 0.25, rShF: 0.25, lElb: 1.25, rElb: 1.25, lKnee: 0.15, rKnee: 0.15 } },
+      { t: 0.5, p: { y: 0.88, lShA: 1.2, rShA: 1.2, lElb: 1.35, rElb: 1.35, lKnee: 0.05, rKnee: 0.05 } },
+    ],
+    // elbows high and quiet; the forearms roll
+    rootFn: (p, u, t) => { p.lElb += 0.28 * sin(t * TAU * 4); p.rElb += 0.28 * cos(t * TAU * 4); p.y += 0.012 * sin(u * TAU * 2); },
+  },
+  "lflow.scoobydoo": {
+    bpm: 104, beats: 4,
+    keys: [
+      // kick-step with a lean-back, arms paddling
+      { t: 0.0, p: { y: 0.85, lHipF: 1.05, lKnee: 0.55, tPitch: -0.14, rShF: 0.85, rElb: 0.5, lShF: -0.45, lElb: 0.6 } },
+      { t: 0.25, p: { y: 0.875, lHipF: 0.1, lKnee: 0.15, tPitch: 0.0, rShF: 0.2, lShF: 0.2 } },
+      { t: 0.5, p: { y: 0.85, rHipF: 1.05, rKnee: 0.55, tPitch: -0.14, lShF: 0.85, lElb: 0.5, rShF: -0.45, rElb: 0.6 } },
+      { t: 0.75, p: { y: 0.875, rHipF: 0.1, rKnee: 0.15, tPitch: 0.0, rShF: 0.2, lShF: 0.2 } },
+    ],
+  },
+
+  /* ------------- house (procedural v1, $0 lane) ------------- */
+  "jack.basic": {
+    bpm: 122, beats: 2,
+    keys: [
+      { t: 0.0, p: { y: 0.85, lKnee: 0.35, rKnee: 0.35, lHipF: 0.12, rHipF: 0.12, lShF: 0.25, rShF: 0.25, lElb: 0.55, rElb: 0.55 } },
+      { t: 0.5, p: { y: 0.84, lKnee: 0.45, rKnee: 0.45, lHipF: 0.16, rHipF: 0.16, lElb: 0.65, rElb: 0.65 } },
+    ],
+    // the wave starts in the hips and rolls up, once per beat
+    rootFn: (p, u) => { p.tPitch = 0.09 + 0.13 * sin(u * TAU * 2); p.y += 0.02 * sin(u * TAU * 2 + 1.2); },
+  },
+  "hfoot.pdbr": {
+    bpm: 122, beats: 2,
+    keys: [
+      // behind–side–front on the balls of the feet, then mirrored
+      { t: 0.0, p: { y: 0.855, lHipA: -0.32, lHipF: -0.18, lKnee: 0.45, rKnee: 0.2, lShF: 0.3, rShF: -0.3 } },
+      { t: 0.17, p: { y: 0.86, rHipA: 0.3, rKnee: 0.35, lHipA: 0.0, lHipF: 0.0, lKnee: 0.2 } },
+      { t: 0.33, p: { y: 0.855, lHipF: 0.38, lKnee: 0.3, rHipA: 0.0, rKnee: 0.18 } },
+      { t: 0.5, p: { y: 0.855, rHipA: -0.32, rHipF: -0.18, rKnee: 0.45, lKnee: 0.2, rShF: 0.3, lShF: -0.3, lHipF: 0.0 } },
+      { t: 0.67, p: { y: 0.86, lHipA: 0.3, lKnee: 0.35, rHipA: 0.0, rHipF: 0.0, rKnee: 0.2 } },
+      { t: 0.83, p: { y: 0.855, rHipF: 0.38, rKnee: 0.3, lHipA: 0.0, lKnee: 0.18 } },
+    ],
+    rootFn: (p, u) => { p.tPitch = 0.08 + 0.07 * sin(u * TAU * 2); },
+  },
+  "hfoot.heeltoe": {
+    bpm: 122, beats: 2,
+    keys: [
+      // heel forward on one side answers toe back on the other
+      { t: 0.0, p: { y: 0.855, lHipF: 0.5, lKnee: 0.05, rHipF: -0.22, rKnee: 0.55, tYaw: 0.16, lShF: -0.4, rShF: 0.4, lElb: 0.5, rElb: 0.5 } },
+      { t: 0.25, p: { y: 0.865, lHipF: 0.1, lKnee: 0.25, rHipF: 0.1, rKnee: 0.25, tYaw: 0.0 } },
+      { t: 0.5, p: { y: 0.855, rHipF: 0.5, rKnee: 0.05, lHipF: -0.22, lKnee: 0.55, tYaw: -0.16, rShF: -0.4, lShF: 0.4 } },
+      { t: 0.75, p: { y: 0.865, lHipF: 0.1, lKnee: 0.25, rHipF: 0.1, rKnee: 0.25, tYaw: 0.0 } },
+    ],
+    rootFn: (p, u) => { p.tPitch = 0.07 + 0.05 * sin(u * TAU * 2); },
+  },
+  "hfoot.skate": {
+    bpm: 118, beats: 4,
+    keys: [
+      // push off one foot, glide long and level onto the other
+      { t: 0.0, p: { y: 0.85, roll: -0.07, lHipA: 0.5, lHipF: -0.15, lKnee: 0.12, rKnee: 0.35, rShF: 0.55, lShF: -0.55, lElb: 0.35, rElb: 0.35 } },
+      { t: 0.4, p: { y: 0.85, roll: -0.05, lHipA: 0.42, lKnee: 0.15, rKnee: 0.32 } },
+      { t: 0.5, p: { y: 0.85, roll: 0.07, rHipA: 0.5, rHipF: -0.15, rKnee: 0.12, lKnee: 0.35, lHipA: 0.0, lHipF: 0.0, lShF: 0.55, rShF: -0.55 } },
+      { t: 0.9, p: { y: 0.85, roll: 0.05, rHipA: 0.42, rKnee: 0.15, lKnee: 0.32 } },
+    ],
+    rootFn: (p, u) => { p.y += 0.008 * sin(u * TAU * 2); },
+  },
 };

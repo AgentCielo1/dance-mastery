@@ -1,0 +1,490 @@
+{
+  "style": "popping",
+  "version": "0.1.0",
+  "name": "Popping",
+  "notes": "Popping style pack (Doc 04 template). Funk styles, Fresno lineage: created in the late 1970s by Boogaloo Sam of the Electric Boogaloos, on Bay Area funk roots. Respect architecture: popping is POPPING — not 'breakdance'; the funk styles stand on their own and the pack says so in curriculum. The hit (pop) is the atom: contract-and-RELAX on the beat, taught before any illusion vocabulary. Related styles carried inside the funk-styles umbrella keep their own lineage credits (the robot predates popping; waving, tutting and gliding each have their own history). No knee drops or splits in v1 — those wait for readiness gates and in-person coaching.",
+  "seasons": [
+    {
+      "theme": "The Hit Season",
+      "finale": "Film 8 counts of clean hits to a funk track — contract, release, ON the beat, face relaxed."
+    },
+    {
+      "theme": "Fresno Season",
+      "finale": "Film the Fresno in all four directions, hits landing exactly as the weight arrives."
+    },
+    {
+      "theme": "Wave & Tut Season",
+      "finale": "Film an arm wave crossing the chest into a body wave, then an 8-count of right-angle tuts."
+    },
+    {
+      "theme": "Robot Season",
+      "finale": "Film 8 counts alternating smooth motion and dead-stop dime stops — no bounce in the stops."
+    },
+    {
+      "theme": "Funk Freestyle Season",
+      "finale": "Film a 60-second popping freestyle to a funk track you've never heard. Hits on beat throughout."
+    }
+  ],
+  "attributes": [
+    {
+      "id": "attr.control.l1",
+      "name": "Isolation control L1",
+      "test": "60s of alternating forearm hits — clean contraction, FULL relax between, shoulders and face quiet"
+    },
+    {
+      "id": "attr.control.l2",
+      "name": "Isolation control L2",
+      "test": "60s layering forearm + chest + leg hits together on the beat, releasing completely between hits"
+    },
+    {
+      "id": "attr.stamina.l1",
+      "name": "Hit stamina L1",
+      "test": "hit every beat through one full funk track without the hits shrinking"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "popmusic.funk",
+      "type": "concept",
+      "family": "musicality",
+      "name": "Funk time — the beat you hit",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "popping lives on funk: Parliament, Zapp, Cameo, boogie and G-funk",
+        "the hit lands ON the beat — the music pops you",
+        "count 8s and find the ONE before you pop a single muscle"
+      ]
+    },
+    {
+      "id": "popmusic.texture",
+      "type": "concept",
+      "family": "musicality",
+      "name": "Texture: hitting, dime stops, and holding back",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "popmusic.funk",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "not every beat needs a hit — space makes the hits land harder",
+        "a dime stop is silence; a hit is a drum — mix them like a drummer would"
+      ]
+    },
+    {
+      "id": "popculture.origins",
+      "type": "concept",
+      "family": "culture",
+      "name": "Fresno, Boogaloo Sam, and the Electric Boogaloos",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "popping was created in Fresno, California in the late 1970s by Boogaloo Sam, who founded the Electric Boogaloos",
+        "popping is popping — it is NOT 'breakdance'; the funk styles are their own tradition, born to funk, not breakbeats",
+        "saying the style's real name and lineage is part of dancing it"
+      ]
+    },
+    {
+      "id": "popculture.funkstyles",
+      "type": "concept",
+      "family": "culture",
+      "name": "The funk-styles family — each with its own lineage",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "popculture.origins",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the robot PREDATES popping — Charles 'Robot' Washington's LA scene made robotics a dance before Fresno popped",
+        "waving, tutting, animation, strobing and gliding are related styles, not 'popping moves' — poppers carry them with credit",
+        "boogaloo is Sam's rolling, loose style — it named the crew"
+      ]
+    },
+    {
+      "id": "popculture.battles",
+      "type": "concept",
+      "family": "culture",
+      "name": "Jams, judges, and the OG circle",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "popculture.funkstyles",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "funk-styles battles (Juste Debout and the jams) are judged by lineage holders — fundamentals and funk first",
+        "watch full battles: how much of a round is just clean hits on time",
+        "enter the circle to share, not only to win"
+      ]
+    },
+    {
+      "id": "pop.hit",
+      "type": "move",
+      "family": "hit",
+      "name": "The hit (the pop)",
+      "phase": 0,
+      "anchor": "the atom of popping — everything else is decoration",
+      "prereqs": [
+        {
+          "id": "popmusic.funk",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.control.l1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "contract forearms, chest and legs together for a split second — then RELEASE completely",
+        "the relax is half the move; tension that lingers kills the pop",
+        "hit ON the beat, not near it",
+        "face stays cool — the body pops, the dancer doesn't strain"
+      ],
+      "mistakes": [
+        "holding tension after the hit",
+        "shoulders riding up with every pop",
+        "hitting with the arms only — no chest, no legs"
+      ]
+    },
+    {
+      "id": "pop.legs",
+      "type": "move",
+      "family": "hit",
+      "name": "Leg pops & knee hits",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "pop.hit",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "quads fire, knees snap back a few degrees — never hyperextend hard",
+        "leg hits carry the beat when the arms are busy",
+        "weight stays balanced so the hit doesn't buckle you"
+      ],
+      "mistakes": [
+        "slamming the knees straight to the point of pain"
+      ]
+    },
+    {
+      "id": "pop.fresno",
+      "type": "move",
+      "family": "hit",
+      "name": "The Fresno",
+      "phase": 1,
+      "origin": "Boogaloo Sam, Electric Boogaloos — the first drill every popper learns, named for the city",
+      "prereqs": [
+        {
+          "id": "pop.hit",
+          "kind": "hard"
+        },
+        {
+          "id": "popculture.origins",
+          "kind": "hard"
+        }
+      ],
+      "anchor": "days to learn, years to make heavy",
+      "checkpoints": [
+        "weight shifts side to side; the hit lands exactly as the weight arrives",
+        "the pointing arm extends WITH the hit, not after it",
+        "rotate through the four directions without losing the beat",
+        "hits stay the same size on the tired side"
+      ],
+      "mistakes": [
+        "stepping between hits instead of shifting weight",
+        "the arm arriving late — hit and arm are one event"
+      ]
+    },
+    {
+      "id": "pop.chest",
+      "type": "move",
+      "family": "hit",
+      "name": "Chest pops",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "pop.fresno",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.control.l2",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "chest lifts and releases as its own instrument — hips stay quiet",
+        "layer chest over the Fresno without either shrinking",
+        "inhale is not the pop — muscle is"
+      ],
+      "mistakes": [
+        "popping the chest by gasping air",
+        "the whole torso lurching instead of the chest isolating"
+      ]
+    },
+    {
+      "id": "boog.roll",
+      "type": "move",
+      "family": "boogaloo",
+      "name": "Boogaloo rolls",
+      "phase": 2,
+      "origin": "Boogaloo Sam — the rolling, loose style that named the Electric Boogaloos",
+      "prereqs": [
+        {
+          "id": "pop.fresno",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "hips and chest draw circles, not corners — boogaloo is round where popping is sharp",
+        "roll THROUGH a hit: circle, pop, keep the circle alive",
+        "knees ride the groove the whole time"
+      ],
+      "mistakes": [
+        "stiff squares where circles should be",
+        "stopping the roll to pop instead of popping inside the roll"
+      ]
+    },
+    {
+      "id": "boog.walkout",
+      "type": "move",
+      "family": "boogaloo",
+      "name": "Boogaloo walkouts",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "boog.roll",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "travel by rolling the hips over each step — the walk is part of the dance",
+        "arrive somewhere: a walkout ends in a hit or a pose",
+        "old-man style: loose knees, heavy groove, zero rush"
+      ]
+    },
+    {
+      "id": "wave.arm",
+      "type": "move",
+      "family": "waving",
+      "name": "Arm wave",
+      "phase": 1,
+      "origin": "waving grew inside the funk styles — its own thread of the Bay Area and LA scenes",
+      "prereqs": [
+        {
+          "id": "pop.hit",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "a point of energy travels: fingertips → knuckles → wrist → elbow → shoulder → across the chest → out the other arm",
+        "only the joint the wave is AT moves — everything ahead and behind stays still",
+        "slow is the teacher; speed is a costume you add later"
+      ],
+      "mistakes": [
+        "flapping the whole arm like a ribbon",
+        "skipping the shoulder — the wave dies at the elbow"
+      ]
+    },
+    {
+      "id": "wave.body",
+      "type": "move",
+      "family": "waving",
+      "name": "Body wave",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "wave.arm",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "head → chest → hips → knees, one station at a time",
+        "send it down AND back up",
+        "the wave has a size — pick it and keep it consistent"
+      ],
+      "mistakes": [
+        "bowing instead of waving — the wave is segments, not a fold"
+      ]
+    },
+    {
+      "id": "tut.frames",
+      "type": "move",
+      "family": "tutting",
+      "name": "Tutting frames",
+      "phase": 2,
+      "origin": "inspired by Egyptian iconography — 'King Tut' style raised within the funk-styles scene",
+      "prereqs": [
+        {
+          "id": "pop.hit",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "every angle is 90° — wrists, elbows, fingers; the geometry IS the move",
+        "click between frames: move, land, hold; no drifting",
+        "frame the face — tutting is a picture the audience reads"
+      ],
+      "mistakes": [
+        "soft 70°-ish angles",
+        "floating between positions instead of clicking"
+      ]
+    },
+    {
+      "id": "tut.boxes",
+      "type": "move",
+      "family": "tutting",
+      "name": "Boxes & switches",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "tut.frames",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "build a box with both hands, then rotate it plane by plane",
+        "switch leading hands without the box collapsing",
+        "keep it on beat — tuts are rhythm, not just shapes"
+      ]
+    },
+    {
+      "id": "robot.dimestop",
+      "type": "move",
+      "family": "robot",
+      "name": "Dime stops",
+      "phase": 2,
+      "origin": "from the robot tradition — Charles 'Robot' Washington's LA scene, made famous on Soul Train, predating popping itself",
+      "prereqs": [
+        {
+          "id": "pop.hit",
+          "kind": "hard"
+        },
+        {
+          "id": "popculture.funkstyles",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "move smooth, then stop DEAD — on a dime, zero bounce-back",
+        "the stop is total: eyes, fingers, breath held for the beat",
+        "contrast is the illusion — the smoother the motion, the harder the stop reads"
+      ],
+      "mistakes": [
+        "a wobble after the stop (that's a hit, not a dime stop)",
+        "slowing down before stopping — it must be a surprise"
+      ]
+    },
+    {
+      "id": "robot.botting",
+      "type": "move",
+      "family": "robot",
+      "name": "Botting (robot illusion)",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "robot.dimestop",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "one joint moves at a time; every move ends in a dime stop",
+        "head ticks and eye-line sells the machine",
+        "constant speed within each move — robots don't ease in and out"
+      ],
+      "mistakes": [
+        "two joints drifting at once — the illusion dies"
+      ]
+    },
+    {
+      "id": "glide.side",
+      "type": "move",
+      "family": "glides",
+      "name": "Side glide",
+      "phase": 3,
+      "origin": "the gliding/floating tradition — street dancers like Jeffrey Daniel danced the backslide on TV before 1983 made it world-famous as the 'moonwalk'",
+      "prereqs": [
+        {
+          "id": "robot.dimestop",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "heel-and-toe trade: the flat foot is the weightless one — that's the whole illusion",
+        "the body stays level; no bobbing gives it away",
+        "smooth as ice, slow as you need"
+      ],
+      "mistakes": [
+        "putting weight on the sliding foot",
+        "looking down at the feet"
+      ]
+    },
+    {
+      "id": "meta.pop_freestyle",
+      "type": "combo",
+      "family": "meta",
+      "name": "Funk freestyle — 60 seconds, filmed",
+      "phase": 4,
+      "prereqs": [
+        {
+          "id": "boog.roll",
+          "kind": "hard"
+        },
+        {
+          "id": "wave.body",
+          "kind": "helps"
+        },
+        {
+          "id": "robot.dimestop",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.stamina.l1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "hits on beat the whole minute — that's the floor, not the ceiling",
+        "at least one wave, one dime stop, one boogaloo moment",
+        "watch it back: where did the funk live?"
+      ]
+    },
+    {
+      "id": "meta.pop_circle",
+      "type": "combo",
+      "family": "meta",
+      "name": "Take it to a circle",
+      "phase": 4,
+      "prereqs": [
+        {
+          "id": "meta.pop_freestyle",
+          "kind": "hard"
+        },
+        {
+          "id": "popculture.battles",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "one round shared with humans — a jam, a class cypher, a party",
+        "name the style right when someone asks: popping, funk styles, Fresno",
+        "watch one OG round afterward and steal a lesson"
+      ]
+    }
+  ],
+  "teachers": [
+    {
+      "name": "Electric Boogaloos — the source lineage (history)",
+      "url": "https://en.wikipedia.org/wiki/Electric_Boogaloos"
+    },
+    {
+      "name": "STEEZY — Popping program",
+      "url": "https://www.steezy.co/"
+    }
+  ]
+}

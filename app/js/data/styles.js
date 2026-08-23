@@ -3,10 +3,13 @@ import afrobeats from "./afrobeats.js";
 import ballet from "./ballet.js";
 import breaking from "./breaking.js";
 import hiphop from "./hiphop.js";
+import house from "./house.js";
+import locking from "./locking.js";
+import popping from "./popping.js";
 import salsa from "./salsa.js";
 import tango from "./tango.js";
 import westafrican from "./westafrican.js";
-export const STYLES = { afrobeats, ballet, breaking, hiphop, salsa, tango, westafrican };
+export const STYLES = { afrobeats, ballet, breaking, hiphop, house, locking, popping, salsa, tango, westafrican };
 export const DEFAULT_STYLE = "breaking";
 export function styleName(id) { return STYLES[id]?.name ?? id.charAt(0).toUpperCase() + id.slice(1); }
 // Find a node (and its style) by node id across every pack.

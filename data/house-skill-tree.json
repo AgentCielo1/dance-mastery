@@ -1,0 +1,372 @@
+{
+  "style": "house",
+  "version": "0.1.0",
+  "name": "House",
+  "notes": "House dance style pack (Doc 04 template). The music was born at Chicago's Warehouse (Frankie Knuckles); the dance grew from Chicago jacking and was codified on New York club floors — Paradise Garage and Loft lineage — by dancers like Ejoe Wilson, Brian Green, Marjory Smarth and Caleaf Sellers. Design truths: the JACK comes first (the torso groove is house's heartbeat — footwork without the jack is jogging); house borrows openly and credits its sources (pas de bourrée from ballet, steps from tap, jazz, capoeira, African and Latin social dance); and house is COMMUNAL — the final node is dancing with people, because house without a room of humans is homework. Lofting stays introductory in v1: real floorwork depth waits for in-person spaces.",
+  "seasons": [
+    {
+      "theme": "Jack Season",
+      "finale": "Film 60 seconds of nonstop jacking at 120+ BPM — the wave rolling, knees alive, never off the beat."
+    },
+    {
+      "theme": "Pas de Bourrée Season",
+      "finale": "Film pas de bourrée both directions with the jack still breathing on top — feet fast, torso loose."
+    },
+    {
+      "theme": "Travel Season",
+      "finale": "Film heel-toe and skate carrying you across the whole room and back, on beat."
+    },
+    {
+      "theme": "Flow Season",
+      "finale": "Film a shuffle-and-train chain into your first smooth floor entry and back up — no hands slamming."
+    },
+    {
+      "theme": "Club Season",
+      "finale": "Dance house WITH people — a club, a session, a class. House alone is practice; house together is the dance."
+    }
+  ],
+  "attributes": [
+    {
+      "id": "attr.spring.l1",
+      "name": "Calf spring L1",
+      "test": "90s of continuous light bounce on the balls of the feet at 120 BPM, heels kissing the floor, pain-free"
+    },
+    {
+      "id": "attr.stamina.l2",
+      "name": "Club stamina L2",
+      "test": "three house tracks nonstop — jacking with light footwork, breathing conversational by the end"
+    },
+    {
+      "id": "attr.balance.l1",
+      "name": "Single-leg balance L1",
+      "test": "8s on one leg with a soft knee, both sides, eyes forward"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "housemusic.four",
+      "type": "concept",
+      "family": "musicality",
+      "name": "Four on the floor — riding 120+",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "house sits around 118–126 BPM: kick on every beat, hats pushing between",
+        "find the kick, then live in the hi-hat — house dancers ride the subdivisions",
+        "faster music, LOOSER body: tension is what can't keep up"
+      ]
+    },
+    {
+      "id": "housemusic.letgo",
+      "type": "concept",
+      "family": "musicality",
+      "name": "The let-go: jack your body",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "housemusic.four",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "house's center is release, not display — 'jack your body' is an instruction to surrender to the track",
+        "close your eyes for one song a week; the mirror is not the audience",
+        "sweat is the certificate"
+      ]
+    },
+    {
+      "id": "houseculture.roots",
+      "type": "concept",
+      "family": "culture",
+      "name": "The Warehouse, the Garage, the Loft",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "the music was born at Chicago's Warehouse with Frankie Knuckles — sanctuary music from Black and gay club communities",
+        "Chicago jacked; New York's floors (Paradise Garage, Loft lineage) grew the dance vocabulary",
+        "knowing whose floors these were is part of standing on them"
+      ]
+    },
+    {
+      "id": "houseculture.nyc",
+      "type": "concept",
+      "family": "culture",
+      "name": "The NYC codifiers",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "houseculture.roots",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "dancers like Ejoe Wilson, Brian Green, Marjory Smarth and Caleaf Sellers shaped club moments into a teachable dance",
+        "house borrows openly — tap, jazz, ballet, capoeira, African and Latin social steps — and good house dancers say where things came from",
+        "watch full rounds from the codifiers before inventing your own"
+      ]
+    },
+    {
+      "id": "houseculture.floor",
+      "type": "concept",
+      "family": "culture",
+      "name": "Circle etiquette — give the floor",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "houseculture.nyc",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the circle at a house party is shared breath: take your round, then GIVE the floor",
+        "feel over flash — the room rewards honesty",
+        "cheer for strangers; that's the whole culture in one habit"
+      ]
+    },
+    {
+      "id": "jack.basic",
+      "type": "move",
+      "family": "jack",
+      "name": "The jack",
+      "phase": 0,
+      "origin": "Chicago club floors, early 1980s — the jack IS house dancing's heartbeat",
+      "prereqs": [
+        {
+          "id": "housemusic.four",
+          "kind": "hard"
+        }
+      ],
+      "anchor": "one week to find, a lifetime to deepen",
+      "checkpoints": [
+        "a wave starts in the hips and rolls up through the chest, once per beat",
+        "knees ride soft and never lock — the jack lives on bent legs",
+        "pick your accent (down or up) and commit to it for the whole track",
+        "the music drives it; if you're counting, listen harder"
+      ],
+      "mistakes": [
+        "a stiff torso with waving arms glued on",
+        "jacking at your own tempo instead of the track's"
+      ]
+    },
+    {
+      "id": "jack.deep",
+      "type": "move",
+      "family": "jack",
+      "name": "Deep jack & level changes",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "jack.basic",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.stamina.l2",
+          "kind": "helps"
+        }
+      ],
+      "checkpoints": [
+        "same wave, bigger amplitude — sink toward the floor and ride back up over 4 or 8 counts",
+        "the beat never drops out while the level changes",
+        "low is where house lives when the track gets serious"
+      ]
+    },
+    {
+      "id": "hfoot.pdbr",
+      "type": "move",
+      "family": "footwork",
+      "name": "Pas de bourrée",
+      "phase": 1,
+      "origin": "lifted from ballet into house footwork — house borrows from everywhere and says so",
+      "prereqs": [
+        {
+          "id": "jack.basic",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.spring.l1",
+          "kind": "hard"
+        }
+      ],
+      "anchor": "house's most-used step",
+      "checkpoints": [
+        "behind–side–front, three steps on the balls of the feet",
+        "the jack keeps breathing on top — feet fast, torso loose",
+        "flip direction without a stutter",
+        "small steps; the move travels barely and grooves massively"
+      ],
+      "mistakes": [
+        "flat-footed stomping",
+        "the torso freezing while the feet work"
+      ]
+    },
+    {
+      "id": "hfoot.heeltoe",
+      "type": "move",
+      "family": "footwork",
+      "name": "Heel-toe",
+      "phase": 2,
+      "origin": "NYC club floors",
+      "prereqs": [
+        {
+          "id": "hfoot.pdbr",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "one foot lands heel, the other answers toe — the trade is the rhythm",
+        "it travels: let it carry you sideways across the floor",
+        "loose ankles or it turns into marching"
+      ],
+      "mistakes": [
+        "muscling it from the hips instead of trading weight"
+      ]
+    },
+    {
+      "id": "hfoot.skate",
+      "type": "move",
+      "family": "footwork",
+      "name": "Skating",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "hfoot.pdbr",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.balance.l1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "push off one foot and glide onto the other like ice",
+        "the glide is long and level — no bobbing",
+        "arms swim naturally; skating should look like rest"
+      ],
+      "mistakes": [
+        "short choppy steps that never glide"
+      ]
+    },
+    {
+      "id": "hfoot.shuffle",
+      "type": "move",
+      "family": "footwork",
+      "name": "The shuffle (hurdle)",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "hfoot.heeltoe",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "a skipping hurdle over the beat — knee lifts, foot circles through",
+        "stay on the hats; the shuffle is a subdivision game",
+        "both lead legs, equally"
+      ]
+    },
+    {
+      "id": "hfoot.train",
+      "type": "move",
+      "family": "footwork",
+      "name": "The train",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "hfoot.shuffle",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "chugging travel step — feet alternate stomps that push you forward on the beat",
+        "torso stays jacking; the train has a passenger",
+        "drive it in a circle around the room without losing tempo"
+      ]
+    },
+    {
+      "id": "loft.intro",
+      "type": "move",
+      "family": "lofting",
+      "name": "Lofting — first floor entries",
+      "phase": 3,
+      "origin": "named for New York's Loft parties — the airborne-to-floor flow of house",
+      "prereqs": [
+        {
+          "id": "jack.deep",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.balance.l1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "sink through a deep jack, one hand guides you to the floor — never slam a palm",
+        "one smooth shape on the ground (a sweep or a roll), then ride the music back to standing",
+        "the beat survives the whole trip down and up",
+        "real lofting depth is an in-person study — this node is the doorway, not the room"
+      ],
+      "mistakes": [
+        "dropping instead of melting",
+        "stopping the groove to 'do the floor part'"
+      ]
+    },
+    {
+      "id": "meta.house_track",
+      "type": "combo",
+      "family": "meta",
+      "name": "One full track — filmed",
+      "phase": 4,
+      "prereqs": [
+        {
+          "id": "hfoot.heeltoe",
+          "kind": "hard"
+        },
+        {
+          "id": "hfoot.skate",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.stamina.l2",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "one house track, nonstop: jack alive throughout, at least three footwork patterns visiting",
+        "no mirror-checking — dance it like the room is dark",
+        "watch it back once for joy before you watch it for corrections"
+      ]
+    },
+    {
+      "id": "meta.house_club",
+      "type": "combo",
+      "family": "meta",
+      "name": "Dance house with people",
+      "phase": 4,
+      "prereqs": [
+        {
+          "id": "meta.house_track",
+          "kind": "hard"
+        },
+        {
+          "id": "houseculture.floor",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "a club night, an open session, or a class — house is communal or it isn't house",
+        "give the floor at least once; cheer for a stranger at least once",
+        "notice what the room taught you that the mirror couldn't"
+      ]
+    }
+  ],
+  "teachers": [
+    {
+      "name": "House dance — roots & codifiers (history)",
+      "url": "https://en.wikipedia.org/wiki/House_dance"
+    },
+    {
+      "name": "STEEZY — House program",
+      "url": "https://www.steezy.co/"
+    }
+  ]
+}

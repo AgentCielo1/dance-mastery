@@ -35,7 +35,8 @@
    "region": "Fresno, California",
    "origin": "Late-1970s, credited to Boogaloo Sam and the Electric Boogaloos on Bay Area funk roots",
    "essence": "Rhythmic muscle hits framed by funk grooves and illusion vocabulary",
-   "scene": "Funk-styles battles (Juste Debout), cyphers"
+   "scene": "Funk-styles battles (Juste Debout), cyphers",
+   "pack": "popping"
   },
   {
    "name": "Boogaloo (Oakland)",
@@ -83,7 +84,8 @@
    "region": "Los Angeles",
    "origin": "1970 — created by Don 'Campbellock' Campbell, codified with The Lockers",
    "essence": "Sudden locks, points, wrist twirls and splits — showmanship and humor",
-   "scene": "Soul Train legacy, locking jams, battles"
+   "scene": "Soul Train legacy, locking jams, battles",
+   "pack": "locking"
   },
   {
    "name": "Krump",
@@ -171,7 +173,8 @@
    "region": "Chicago + New York",
    "origin": "1980s — music from Chicago's Warehouse, dance codified in NYC clubs (Ejoe Wilson, Brian Green, Marjory Smarth)",
    "essence": "Grounded jacking torso over fast intricate footwork and lofting floorwork — spiritual let-go",
-   "scene": "House clubs, cyphers, Juste Debout, HDI"
+   "scene": "House clubs, cyphers, Juste Debout, HDI",
+   "pack": "house"
   },
   {
    "name": "The Hustle (club)",

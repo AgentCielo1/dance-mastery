@@ -14,6 +14,13 @@ export const FAMILY_LABELS = {
   walk: "The walk", pivots: "Pivots & ochos", adornos: "Adornos",
   // afrobeats / west african
   named: "Named moves", rhythms: "Rhythm literacy", movement: "Movement prep",
+  // popping
+  hit: "Hits", boogaloo: "Boogaloo", robot: "Robot & stops",
+  waving: "Waves", tutting: "Tutting", glides: "Glides & floats",
+  // locking
+  lock: "The lock", points: "Points & twirls", flow: "Lock flow",
+  // house
+  jack: "The jack", lofting: "Lofting",
   // shared
   musicality: "Musicality", culture: "Culture",
 };

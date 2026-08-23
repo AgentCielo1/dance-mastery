@@ -144,6 +144,53 @@ test("west african pack: foundation-only by design — lineage honesty enforced"
   assert.equal(info.theme, "The Drum Season");
 });
 
+test("popping pack: Fresno lineage credited; 'not breakdance' is curriculum; the hit comes first", () => {
+  const po = STYLES.popping;
+  const origins = po.nodes.find((n) => n.id === "popculture.origins");
+  assert.ok(origins.checkpoints.some((c) => /Boogaloo Sam/.test(c)), "Boogaloo Sam credited");
+  assert.ok(origins.checkpoints.some((c) => /NOT 'breakdance'/.test(c)), "popping is popping — stated in the tree");
+  const fresno = po.nodes.find((n) => n.id === "pop.fresno");
+  assert.match(fresno.origin, /Boogaloo Sam/);
+  const robot = po.nodes.find((n) => n.id === "robot.dimestop");
+  assert.match(robot.origin, /predating popping/, "the robot's older lineage is honest");
+  const hit = po.nodes.find((n) => n.id === "pop.hit");
+  assert.equal(hit.phase, 0, "the hit is the atom — before any illusion vocabulary");
+  const info = seasonInfo(newState(T), T, po.seasons);
+  assert.equal(info.theme, "The Hit Season");
+});
+
+test("locking pack: Don Campbell credited on the lock and point; named moves keep their creators", () => {
+  const lo = STYLES.locking;
+  assert.match(lo.nodes.find((n) => n.id === "lock.lock").origin, /Don Campbell/);
+  assert.match(lo.nodes.find((n) => n.id === "point.point").origin, /Don Campbell/);
+  assert.match(lo.nodes.find((n) => n.id === "lflow.scoobydoo").origin, /Jimmy 'Scoo B Doo' Foster/);
+  assert.ok(lo.nodes.some((n) => n.id === "lockculture.lockers"), "The Lockers are curriculum");
+  assert.ok(lo.nodes.some((n) => n.id === "lockculture.character"), "humor-as-technique is a node");
+  const info = seasonInfo(newState(T), T, lo.seasons);
+  assert.equal(info.theme, "Groove & Lock Season");
+});
+
+test("house pack: the jack comes first; club roots credited; borrowed steps say where they came from", () => {
+  const ho = STYLES.house;
+  const jack = ho.nodes.find((n) => n.id === "jack.basic");
+  assert.equal(jack.phase, 0, "the jack is house's heartbeat — footwork waits");
+  const roots = ho.nodes.find((n) => n.id === "houseculture.roots");
+  assert.ok(roots.checkpoints.some((c) => /Frankie Knuckles/.test(c)), "Warehouse lineage credited");
+  assert.match(ho.nodes.find((n) => n.id === "hfoot.pdbr").origin, /ballet/, "pas de bourrée credits its source");
+  assert.ok(ho.nodes.some((n) => n.id === "meta.house_club"), "dancing WITH people is the final node");
+  const info = seasonInfo(newState(T), T, ho.seasons);
+  assert.equal(info.theme, "Jack Season");
+});
+
+test("new-pack animations exist in tree + move library with teaching checkpoints", () => {
+  for (const id of ["pop.fresno", "wave.arm", "lock.lock", "point.point", "jack.basic", "hfoot.pdbr"]) {
+    assert.ok(MOVES[id], `${id} animated`);
+    const hit = findNode(id);
+    assert.ok(hit, `${id} in a tree`);
+    assert.ok(hit.node.checkpoints?.length, `${id} has teaching checkpoints`);
+  }
+});
+
 test("findNode resolves across packs and returns null for unknowns", () => {
   assert.equal(findNode("footwork.six_step").style, "breaking");
   assert.equal(findNode("party.wop").style, "hiphop");
