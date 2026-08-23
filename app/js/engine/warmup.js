@@ -89,6 +89,18 @@ const STYLE_EXTRAS = {
     "Cat-cow x8 and slow standing side-bends x6 each way — wake the spine gently, never the neck",
     "Single-leg balance 15s each side — the lateral lives on your axis",
   ],
+  twostep: [
+    "60s of smooth walking, heel rolling to toe — the two-step IS a walk",
+    "Easy hip circles x8 each way; the glide rides loose hips",
+  ],
+  linedance: [
+    "Grapevines at half speed, 4 each way — wake the crossing step",
+    "Ball-of-foot pivots x8 each direction, gentle — the walls turn on these",
+  ],
+  wcs: [
+    "Slow rolling walks 60s, level head — smoothness starts here",
+    "Sit-back holds x6 (3s each) — load the anchor before you dance it",
+  ],
 };
 
 export function warmupFor(style) {

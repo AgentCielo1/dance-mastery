@@ -1,0 +1,335 @@
+{
+  "style": "linedance",
+  "version": "0.1.0",
+  "name": "Line Dancing",
+  "notes": "Line Dancing style pack (Doc 04 template). Genuinely solo — like samba no pé, zero partner nodes: the whole point of a line dance is that everyone dances it alone, together. TWO THREADS, both credited as curriculum, because line dancing's story is usually told half-missing: (1) the honky-tonk/country thread that boomed in the 80s-90s (Tush Push, created by Jim Ferrazzano in 1980; the post-'Achy Breaky Heart' explosion of 1992), and (2) the Black American soul line dancing thread — the Electric Slide (choreographed by Ric Silver in 1976 to Marcia Griffiths' 'Electric Boogie'), the Cupid Shuffle (Cupid — Bryson Bernard, 2007, the dance IS the song's instructions), the Wobble — a living tradition at cookouts, weddings and soul line socials that predates and parallels the country boom. Choreographer credits are the norm in this culture (step sheets carry authors' names) — this pack keeps that norm. Vocabulary first (grapevine, shuffle, pivot, kick-ball-change), then whole dances by name and author.",
+  "seasons": [
+    {
+      "theme": "Vocabulary Season",
+      "finale": "Film the four building blocks back to back: grapevine, shuffle step, pivot turn, kick-ball-change — clean both directions."
+    },
+    {
+      "theme": "Electric Season",
+      "finale": "Film the Electric Slide, full sequence, all four walls — and say Ric Silver's name on camera."
+    },
+    {
+      "theme": "Honky-Tonk Season",
+      "finale": "Film the Tush Push through all four walls — Jim Ferrazzano's step sheet, your boots."
+    },
+    {
+      "theme": "Cookout Season",
+      "finale": "Film the Cupid Shuffle and one more soul line dance — the wall turns, the groove stays."
+    },
+    {
+      "theme": "Floor Season",
+      "finale": "Dance in an actual line: a country bar, a wedding, a cookout, a soul line social — anywhere the floor moves as one."
+    }
+  ],
+  "attributes": [
+    {
+      "id": "attr.timing.l1",
+      "name": "Count ear L1",
+      "test": "count 8s out loud through one full track, restarting cleanly at every phrase — line dances live on the phrase"
+    },
+    {
+      "id": "attr.balance.l1",
+      "name": "Pivot balance L1",
+      "test": "10 half-pivot turns each direction on the balls of the feet, no stumble on the landing"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "ldmusic.walls",
+      "type": "concept",
+      "family": "musicality",
+      "name": "Counts, phrases, and walls",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "a line dance is a fixed sequence (16, 32, 64 counts) that repeats facing a new wall each time",
+        "count the phrase, not just the beat — the sequence restarts with the music's sentence",
+        "4-wall, 2-wall, 1-wall: know which dance you're in before the first wall turns"
+      ]
+    },
+    {
+      "id": "ldmusic.range",
+      "type": "concept",
+      "family": "musicality",
+      "name": "One format, every genre",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "ldmusic.walls",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "line dances run to country shuffle, disco, funk, soul, and pop — the format doesn't care about genre",
+        "same grapevine, different groove: let each track change HOW you step, not WHAT you step",
+        "the DJ's job at a line night is to move the room between worlds — go with them"
+      ]
+    },
+    {
+      "id": "ldculture.threads",
+      "type": "concept",
+      "family": "culture",
+      "name": "Two threads: honky-tonk and soul line dancing",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "line dancing's story has two great threads, and both deserve their names",
+        "the country/honky-tonk thread boomed after 'Achy Breaky Heart' (1992) turned line dances into a phenomenon",
+        "the Black American soul line dancing thread — Electric Slide, Cupid Shuffle, the Wobble — lives at cookouts, weddings and soul line socials, and it predates and parallels the country boom",
+        "telling only half this story is the common mistake; this pack doesn't make it"
+      ]
+    },
+    {
+      "id": "ldculture.stepsheets",
+      "type": "concept",
+      "family": "culture",
+      "name": "Step sheets — a culture that credits its choreographers",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "ldculture.threads",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "line dance culture writes its dances down as step sheets, and step sheets carry the choreographer's NAME — crediting is the norm here, not the exception",
+        "when you learn a dance, learn its author; when you teach it, pass the name along",
+        "thousands of credited dances exist — this pack teaches a canon, the culture holds the library"
+      ]
+    },
+    {
+      "id": "ldstep.grapevine",
+      "type": "move",
+      "family": "basic",
+      "name": "Grapevine",
+      "phase": 0,
+      "anchor": "the most-used step in all of line dancing",
+      "prereqs": [
+        {
+          "id": "ldmusic.walls",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "side, behind, side, touch (or scuff, or hitch — the fourth count is the flavor slot)",
+        "travel flat and smooth; the crossing foot goes BEHIND",
+        "both directions until neither needs thought"
+      ],
+      "mistakes": [
+        "crossing in front (that's a different step)",
+        "drifting forward instead of pure sideways"
+      ]
+    },
+    {
+      "id": "ldstep.shuffle",
+      "type": "move",
+      "family": "basic",
+      "name": "Shuffle step (triple)",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "ldstep.grapevine",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "step-together-step in two counts — the line dancer's triple",
+        "low and smooth: boots skim",
+        "forward, back, and sideways — all three flavors"
+      ]
+    },
+    {
+      "id": "ldstep.pivot",
+      "type": "move",
+      "family": "basic",
+      "name": "Pivot turns (quarter & half)",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "ldstep.grapevine",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.balance.l1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "step forward, pivot on both balls of the feet to face the new wall",
+        "weight ends clearly on one foot — the next count needs to know",
+        "this is how walls turn; own it and no dance can lose you"
+      ]
+    },
+    {
+      "id": "ldstep.kbc",
+      "type": "move",
+      "family": "basic",
+      "name": "Kick-ball-change",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "ldstep.shuffle",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "kick, land on the ball, change weight — one crisp '&' count of syncopation",
+        "small kick, quick feet; it's a rhythm accent, not a punt",
+        "the step that makes line dances feel funky instead of marched"
+      ]
+    },
+    {
+      "id": "lddance.electric",
+      "type": "move",
+      "family": "named",
+      "name": "The Electric Slide",
+      "phase": 2,
+      "origin": "choreographed by Ric Silver in 1976 to Marcia Griffiths' 'Electric Boogie' — soul line dancing's worldwide anthem",
+      "prereqs": [
+        {
+          "id": "ldstep.grapevine",
+          "kind": "hard"
+        },
+        {
+          "id": "ldculture.threads",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "grapevine right, grapevine left, walks back, rock and lean, quarter turn — 18 counts, four walls",
+        "the lean is the soul of it: settle in, don't rush off",
+        "danced at more weddings and cookouts than any dance alive — learn it once, belong everywhere"
+      ],
+      "mistakes": [
+        "turning the wrong way on the wall change (everyone does, once, publicly)"
+      ]
+    },
+    {
+      "id": "lddance.tushpush",
+      "type": "move",
+      "family": "named",
+      "name": "Tush Push",
+      "phase": 3,
+      "origin": "created by Jim Ferrazzano (1980) — the honky-tonk thread's most-danced step sheet",
+      "prereqs": [
+        {
+          "id": "ldstep.kbc",
+          "kind": "hard"
+        },
+        {
+          "id": "ldstep.pivot",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "heel touches, the hip bumps, shuffles forward, the half-pivot — the full sheet, wall by wall",
+        "the hip section swings easy — it's called the Tush Push for a reason",
+        "at country bars this one starts without announcement; the floor just knows"
+      ]
+    },
+    {
+      "id": "lddance.cupid",
+      "type": "move",
+      "family": "named",
+      "name": "Cupid Shuffle",
+      "phase": 3,
+      "origin": "Cupid (Bryson Bernard), 2007 — the song IS the step sheet: 'to the right, to the right…'",
+      "prereqs": [
+        {
+          "id": "ldstep.kbc",
+          "kind": "hard"
+        },
+        {
+          "id": "ldculture.stepsheets",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "four rights, four lefts, four kicks, walk-it-by-yourself quarter turn",
+        "the walk section is YOUR four counts — groove them, don't waste them",
+        "soul line dancing's modern classic; the artist told you the steps himself"
+      ]
+    },
+    {
+      "id": "lddance.cottoneye",
+      "type": "move",
+      "family": "named",
+      "name": "Cotton-Eyed Joe",
+      "phase": 3,
+      "origin": "traditional — the tune goes back through American folk history long before any single choreographer; the kick-and-stomp line version is folk process at work",
+      "prereqs": [
+        {
+          "id": "ldstep.shuffle",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "cross-kicks and back-shuffles in eights — simple, loud, communal",
+        "stomp like you mean it; this one is allowed to be rowdy",
+        "a dance with no author is a dance with ten thousand — that's folk tradition, name it as such"
+      ]
+    },
+    {
+      "id": "meta.ld_fourwalls",
+      "type": "combo",
+      "family": "meta",
+      "name": "Four dances, four walls — filmed, credited",
+      "phase": 4,
+      "prereqs": [
+        {
+          "id": "lddance.electric",
+          "kind": "hard"
+        },
+        {
+          "id": "lddance.tushpush",
+          "kind": "hard"
+        },
+        {
+          "id": "lddance.cupid",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.timing.l1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "film all four named dances, each through at least four walls",
+        "announce each dance's name AND its choreographer before you start it — the step-sheet norm, honored",
+        "no stopping when you go wrong: find the wall, rejoin the count, keep dancing — that's the real skill"
+      ]
+    },
+    {
+      "id": "meta.ld_floor",
+      "type": "combo",
+      "family": "meta",
+      "name": "Dance in a real line",
+      "phase": 4,
+      "prereqs": [
+        {
+          "id": "meta.ld_fourwalls",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "a country bar's line night, a wedding, a cookout, a soul line social — anywhere the floor moves as one",
+        "join a dance you don't know and survive it by watching feet — the line teaches",
+        "notice the feeling this format exists for: alone, together"
+      ]
+    }
+  ],
+  "teachers": [
+    {
+      "name": "Line dance — both threads' history",
+      "url": "https://en.wikipedia.org/wiki/Line_dance"
+    },
+    {
+      "name": "Electric Slide — Ric Silver's dance",
+      "url": "https://en.wikipedia.org/wiki/Electric_(dance)"
+    }
+  ]
+}

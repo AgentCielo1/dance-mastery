@@ -151,6 +151,25 @@ export const PATTERNS = {
     ],
     note: "Boom… chik-chik. The slow step stretches through the boom; the quicks answer the chiks.",
   },
+  train: {
+    name: "Train beat (country shuffle)",
+    beats: 2, defaultBpm: 180,
+    hits: [
+      { t: 0, type: "kick" }, { t: 1, type: "snare" },
+      { t: 0.5, type: "hat" }, { t: 1.5, type: "hat" },
+    ],
+    note: "The honky-tonk train rolls steady — quick-quick-slow-slow rides on top.",
+  },
+  westcoast: {
+    name: "Half-time groove (west coast swing)",
+    beats: 4, defaultBpm: 92,
+    hits: [
+      { t: 0, type: "kick" }, { t: 2.5, type: "kick" },
+      { t: 1, type: "snare" }, { t: 3, type: "snare" },
+      { t: 0.5, type: "hat" }, { t: 1.5, type: "hat" }, { t: 2, type: "hat" }, { t: 3.5, type: "hat" },
+    ],
+    note: "Slow pocket, heavy backbeat — walk-walk triple-triple, and settle the anchor on the 2-and-4.",
+  },
   ha: {
     name: "The Ha (ballroom)",
     beats: 4, defaultBpm: 126,
@@ -193,6 +212,9 @@ export const STYLE_PATTERNS = {
   samba: "samba",
   forro: "baiao",
   bzouk: "bzouk",
+  twostep: "train",
+  linedance: "fourfloor",
+  wcs: "westcoast",
 };
 
 export const SOUND_TYPES = ["kick", "snare", "hat", "clave", "accent"];

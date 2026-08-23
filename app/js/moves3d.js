@@ -555,6 +555,42 @@ export const MOVES = {
     rootFn: (p, u) => { p.y -= 0.012 * Math.abs(sin(u * TAU * 2)); },
   },
 
+  /* ------------- country & western wave: solo cores (procedural v1) ------------- */
+  "tsfoot.basic": {
+    bpm: 180, beats: 6,
+    keys: [
+      // quick-quick-slow-slow — all walking forward, level as a truck on cruise
+      { t: 0.0, p: { y: 0.87, lHipF: 0.35, lKnee: 0.12, rHipF: -0.1, lShF: -0.15, rShF: 0.15, lElb: 0.35, rElb: 0.35 } },
+      { t: 0.167, p: { y: 0.87, rHipF: 0.35, rKnee: 0.12, lHipF: -0.1, rShF: -0.15, lShF: 0.15 } },
+      { t: 0.333, p: { y: 0.87, lHipF: 0.45, lKnee: 0.1, rHipF: -0.15, lShF: -0.2, rShF: 0.2 } },
+      { t: 0.583, p: { y: 0.87, lHipF: 0.1, rHipF: 0.1, lKnee: 0.15, rKnee: 0.15 } },
+      { t: 0.667, p: { y: 0.87, rHipF: 0.45, rKnee: 0.1, lHipF: -0.15, rShF: -0.2, lShF: 0.2 } },
+      { t: 0.917, p: { y: 0.87, lHipF: 0.1, rHipF: 0.1, lKnee: 0.15, rKnee: 0.15 } },
+    ],
+  },
+  "ldstep.grapevine": {
+    bpm: 120, beats: 4,
+    keys: [
+      // side, behind, side, touch — flat travel, crossing foot goes BEHIND
+      { t: 0.0, p: { y: 0.865, lHipA: 0.35, lKnee: 0.2, rKnee: 0.15, lShF: 0.2, rShF: -0.2, lElb: 0.45, rElb: 0.45 } },
+      { t: 0.25, p: { y: 0.86, rHipA: -0.3, rHipF: -0.2, rKnee: 0.4, lKnee: 0.15, tYaw: 0.12 } },
+      { t: 0.5, p: { y: 0.865, lHipA: 0.35, lKnee: 0.2, rKnee: 0.15, rHipA: 0.0, rHipF: 0.0, tYaw: 0.0 } },
+      { t: 0.75, p: { y: 0.87, rHipA: 0.2, rHipF: 0.15, rKnee: 0.25, lKnee: 0.1, tRoll: 0.08 } },
+    ],
+  },
+  "wcfoot.anchor": {
+    bpm: 92, beats: 4,
+    keys: [
+      // two rolling walks, then the anchor triple — settled BACK, never creeping
+      { t: 0.0, p: { y: 0.865, lHipF: 0.4, lKnee: 0.12, rHipF: -0.1, lShF: -0.15, rShF: 0.15, lElb: 0.4, rElb: 0.4 } },
+      { t: 0.25, p: { y: 0.865, rHipF: 0.4, rKnee: 0.12, lHipF: -0.1, rShF: -0.15, lShF: 0.15 } },
+      { t: 0.5, p: { y: 0.855, lHipF: -0.25, lKnee: 0.35, rHipF: 0.15, rKnee: 0.2, tPitch: -0.06, lShF: 0.2, rShF: 0.2 } },
+      { t: 0.65, p: { y: 0.85, lHipF: -0.28, lKnee: 0.4, rKnee: 0.25, tPitch: -0.08 } },
+      { t: 0.8, p: { y: 0.855, lHipF: -0.25, lKnee: 0.35, rKnee: 0.2, tPitch: -0.06 } },
+    ],
+    rootFn: (p, u) => { p.y += 0.004 * sin(u * TAU * 2); },
+  },
+
   /* ------------- brazilian wave: solo cores (procedural v1) ------------- */
   "sbfoot.basic": {
     bpm: 104, beats: 2,

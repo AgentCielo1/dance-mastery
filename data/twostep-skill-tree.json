@@ -1,0 +1,271 @@
+{
+  "style": "twostep",
+  "version": "0.1.0",
+  "name": "Texas Two-Step",
+  "notes": "Texas Two-Step style pack (Doc 04 template, solo-first). The dance of the honky-tonk and the Texas dance hall: a progressive quick-quick-slow-slow that circles the floor counterclockwise all night. Lineage told honestly: the two-step evolved in the 20th century from the foxtrot/one-step family, danced in halls built by German and Czech immigrant communities in Texas (Gruene Hall, the state's oldest, still runs) — and country music itself carries Black American roots (the banjo came from West Africa; the genre's debt is real and increasingly acknowledged). Design truths: it's a WALKING dance — full weight transfers at a stroll, smooth as glass (no bounce; boots slide); floorcraft (line of dance, counterclockwise, passing lanes) is curriculum exactly like tango's códigos; partner work is flagged 🤝 and late — the frame is prepped solo, the dance hall teaches the rest, and dance halls famously welcome beginners.",
+  "seasons": [
+    {
+      "theme": "Train Beat Season",
+      "finale": "Film yourself walking the quick-quick-slow-slow to a country shuffle for one full song — never off the train."
+    },
+    {
+      "theme": "Glide Season",
+      "finale": "Film the basic traveling in a big counterclockwise circle — level head, no bounce, boots sliding."
+    },
+    {
+      "theme": "Floorcraft Season",
+      "finale": "Film yourself narrating the line of dance out loud while traveling it — inside lane, outside lane, who passes whom."
+    },
+    {
+      "theme": "Frame Season",
+      "finale": "Frame prep done — closed-position posture solid at a walk. Find the dance hall or country night near you."
+    },
+    {
+      "theme": "Dance Hall Season",
+      "finale": "Go to a country dance night. Two-step with somebody — dance halls have welcomed first-timers for a hundred years."
+    }
+  ],
+  "attributes": [
+    {
+      "id": "attr.walk.l1",
+      "name": "Smooth walk L1",
+      "test": "20 walking steps with a book-steady head — full transfers, zero bounce, heel-to-toe rolling quiet"
+    },
+    {
+      "id": "attr.timing.l1",
+      "name": "Shuffle ear L1",
+      "test": "clap the backbeat through one full country shuffle track without drifting"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "tsmusic.train",
+      "type": "concept",
+      "family": "musicality",
+      "name": "The train beat and the shuffle",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "country two-step music runs on the train beat and shuffle — steady, rolling, 160-200 BPM",
+        "the backbeat (snare on 2 and 4) is your metronome; the bass walks under it",
+        "quick-quick-slow-slow spreads over six counts — feel it as a phrase, not arithmetic"
+      ]
+    },
+    {
+      "id": "tsmusic.tempo",
+      "type": "concept",
+      "family": "musicality",
+      "name": "Reading the floor's tempo",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "tsmusic.train",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "fast shuffle → shorten the quicks; ballad → stretch the slows; the step never changes shape, only size",
+        "a waltz comes on every few songs in a dance hall — recognize 3/4 and sit it out (or learn it later)",
+        "the band sets the pace; the floor agrees on it together"
+      ]
+    },
+    {
+      "id": "tsculture.halls",
+      "type": "concept",
+      "family": "culture",
+      "name": "The Texas dance hall",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "the two-step grew in the 20th century out of the foxtrot/one-step family, in halls raised by German and Czech immigrant communities across Texas — Gruene Hall, the oldest, still runs every week",
+        "country music's own roots include Black American music — the banjo came from West Africa; the debt is real and worth knowing",
+        "dance halls are multi-generational floors: grandparents and first-timers share the same counterclockwise river"
+      ]
+    },
+    {
+      "id": "tsculture.floorcraft",
+      "type": "concept",
+      "family": "culture",
+      "name": "Line of dance — the counterclockwise river",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "tsculture.halls",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the floor travels counterclockwise, always — you enter it like merging onto a highway",
+        "faster dancers take the outside lane; slower couples keep the inside; nobody parks in traffic",
+        "these rules are the two-step's códigos: floorcraft IS the dance's manners"
+      ]
+    },
+    {
+      "id": "tsfoot.basic",
+      "type": "move",
+      "family": "basic",
+      "name": "The basic: quick-quick-slow-slow",
+      "phase": 0,
+      "anchor": "learnable in one evening — dance halls count on it",
+      "prereqs": [
+        {
+          "id": "tsmusic.train",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.timing.l1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "two quick steps, two slow steps — all traveling forward, all full weight transfers",
+        "it's a walk, not a march: heel rolls to toe, knees easy",
+        "keep the phrase breathing: quicks compact, slows long",
+        "practice both roles' footwork — forward (lead) and backward (follow); good dancers own both"
+      ],
+      "mistakes": [
+        "bouncing — the two-step glides; boots slide, they don't hop",
+        "quicks and slows the same length (that's just walking)"
+      ]
+    },
+    {
+      "id": "tsfoot.glide",
+      "type": "move",
+      "family": "basic",
+      "name": "The glide — smooth and level",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "tsfoot.basic",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.walk.l1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "head level as a truck on cruise — no vertical motion at all",
+        "steps skim the floor; in boots, the slide is free",
+        "travel a full circle around your space without the glide breaking"
+      ],
+      "mistakes": [
+        "rising on the quicks",
+        "reaching with the feet instead of moving the body"
+      ]
+    },
+    {
+      "id": "tsfoot.turns_prep",
+      "type": "move",
+      "family": "basic",
+      "name": "Turning basics (solo prep)",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "tsfoot.glide",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the basic curving left and right without losing QQSS",
+        "solo underarm-turn footwork: turn over the slows, keep walking",
+        "corners of the hall are where turns live — practice arcing, not spinning"
+      ]
+    },
+    {
+      "id": "tspartner.frame",
+      "type": "move",
+      "family": "partnerwork",
+      "name": "Closed-position frame prep (solo)",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "tsfoot.glide",
+          "kind": "hard"
+        },
+        {
+          "id": "tsculture.floorcraft",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "tall easy posture, offset stance rehearsed solo — two-step travels in a slight offset so four boots share the lane",
+        "arms carry themselves: practice the basic with hands held at frame height, shoulders down",
+        "the frame's whole message: 'I can steer us through traffic without squeezing'"
+      ]
+    },
+    {
+      "id": "tspartner.closed",
+      "type": "move",
+      "family": "partnerwork",
+      "name": "Closed position (with a partner)",
+      "phase": 4,
+      "partner": true,
+      "prereqs": [
+        {
+          "id": "tspartner.frame",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "learned on the dance hall floor — where beginners have always learned it",
+        "the lead steers with the frame and the line of dance; the follow owns their own balance",
+        "your solo QQSS is why your first partner will smile instead of wince"
+      ]
+    },
+    {
+      "id": "meta.ts_circuit",
+      "type": "combo",
+      "family": "meta",
+      "name": "The full circuit — filmed",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "tsfoot.turns_prep",
+          "kind": "hard"
+        },
+        {
+          "id": "tsmusic.tempo",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "one full song traveling a counterclockwise circuit of your space: basic, glide, a curve at each corner",
+        "narrate the lanes once as you go — floorcraft spoken is floorcraft learned",
+        "level head from first bar to last"
+      ]
+    },
+    {
+      "id": "meta.ts_hall",
+      "type": "combo",
+      "family": "meta",
+      "name": "The dance hall night",
+      "phase": 4,
+      "prereqs": [
+        {
+          "id": "meta.ts_circuit",
+          "kind": "hard"
+        },
+        {
+          "id": "tspartner.closed",
+          "kind": "helps"
+        }
+      ],
+      "checkpoints": [
+        "find the country night or dance hall nearest you and go",
+        "two-step with somebody — or walk the river solo along the edge for a song first; both count",
+        "watch the old-timers: the smoothest dancer in the hall is doing the least"
+      ]
+    }
+  ],
+  "teachers": [
+    {
+      "name": "Country–western two-step — history",
+      "url": "https://en.wikipedia.org/wiki/Country/western_two-step"
+    },
+    {
+      "name": "Texas dance halls — the venues",
+      "url": "https://en.wikipedia.org/wiki/Gruene_Hall"
+    }
+  ]
+}

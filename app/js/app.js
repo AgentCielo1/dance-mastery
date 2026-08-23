@@ -412,6 +412,9 @@ const TAGLINES = {
   samba: "carnival feet — truly solo",
   forro: "the friendliest two-step alive",
   bzouk: "waves and flow, neck kept safe",
+  twostep: "honky-tonk glide, QQSS",
+  linedance: "alone together — truly solo",
+  wcs: "the slot, the anchor, slow groove",
 };
 
 function needsOnboarding() {

@@ -726,7 +726,8 @@ export default {
    "region": "USA (California)",
    "origin": "1940s-50s LA evolution of Lindy (Dean Collins lineage), fused with R&B and pop",
    "essence": "Slotted elastic swing — anchors, sugar pushes, whips; evolves with current music",
-   "scene": "WSDC circuit, US Open, late-night socials"
+   "scene": "WSDC circuit, US Open, late-night socials",
+   "pack": "wcs"
   },
   {
    "name": "Boogie Woogie",
@@ -1100,7 +1101,8 @@ export default {
    "region": "USA (Texas)",
    "origin": "20th-c. honky-tonk evolution of foxtrot/one-step to country music",
    "essence": "Traveling quick-quick-slow-slow counterclockwise around the floor",
-   "scene": "Honky-tonks and country halls"
+   "scene": "Honky-tonks and country halls",
+   "pack": "twostep"
   },
   {
    "name": "Country Waltz",
@@ -1124,7 +1126,8 @@ export default {
    "region": "USA",
    "origin": "Disco-era line formats fused with country in the 1980s-90s booms",
    "essence": "Choreographed solo sequences danced in lines — no partner needed",
-   "scene": "Country bars worldwide, line clubs"
+   "scene": "Country bars worldwide, line clubs",
+   "pack": "linedance"
   },
   {
    "name": "Square Dancing",

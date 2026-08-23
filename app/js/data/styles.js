@@ -10,15 +10,18 @@ import hiphop from "./hiphop.js";
 import house from "./house.js";
 import kizomba from "./kizomba.js";
 import lindy from "./lindy.js";
+import linedance from "./linedance.js";
 import locking from "./locking.js";
 import popping from "./popping.js";
 import salsa from "./salsa.js";
 import samba from "./samba.js";
 import tango from "./tango.js";
+import twostep from "./twostep.js";
 import vogue from "./vogue.js";
 import waacking from "./waacking.js";
+import wcs from "./wcs.js";
 import westafrican from "./westafrican.js";
-export const STYLES = { afrobeats, bachata, ballet, breaking, bzouk, dancehall, forro, hiphop, house, kizomba, lindy, locking, popping, salsa, samba, tango, vogue, waacking, westafrican };
+export const STYLES = { afrobeats, bachata, ballet, breaking, bzouk, dancehall, forro, hiphop, house, kizomba, lindy, linedance, locking, popping, salsa, samba, tango, twostep, vogue, waacking, wcs, westafrican };
 export const DEFAULT_STYLE = "breaking";
 export function styleName(id) { return STYLES[id]?.name ?? id.charAt(0).toUpperCase() + id.slice(1); }
 // Find a node (and its style) by node id across every pack.

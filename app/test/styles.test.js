@@ -317,6 +317,45 @@ test("brazilian zouk pack: lambada lineage told; NO head-movement move exists �
   assert.equal(info.theme, "Lambada Roots Season");
 });
 
+test("two-step pack: dance-hall lineage honest; floorcraft is curriculum; partner late", () => {
+  const ts = STYLES.twostep;
+  const halls = ts.nodes.find((n) => n.id === "tsculture.halls");
+  assert.ok(halls.checkpoints.some((c) => /German and Czech/.test(c)), "immigrant dance-hall roots named");
+  assert.ok(halls.checkpoints.some((c) => /Black American/.test(c) && /banjo/.test(c)), "country music's own debt acknowledged");
+  assert.ok(ts.nodes.some((n) => n.id === "tsculture.floorcraft"), "line of dance is curriculum — the two-step's códigos");
+  for (const n of ts.nodes.filter((x) => x.partner)) assert.ok(n.phase >= 3, `${n.id} partner-flagged but early`);
+  const info = seasonInfo(newState(T), T, ts.seasons);
+  assert.equal(info.theme, "Train Beat Season");
+});
+
+test("line dance pack: BOTH threads credited; choreographers named; genuinely solo", () => {
+  const ld = STYLES.linedance;
+  const threads = ld.nodes.find((n) => n.id === "ldculture.threads");
+  assert.ok(threads.checkpoints.some((c) => /soul line dancing/.test(c) && /Black American/.test(c)),
+    "the soul line dancing thread is told, not erased");
+  assert.match(ld.nodes.find((n) => n.id === "lddance.electric").origin, /Ric Silver/);
+  assert.match(ld.nodes.find((n) => n.id === "lddance.tushpush").origin, /Jim Ferrazzano/);
+  assert.match(ld.nodes.find((n) => n.id === "lddance.cupid").origin, /Bryson Bernard/);
+  assert.match(ld.nodes.find((n) => n.id === "lddance.cottoneye").origin, /traditional/, "no-author dances say so honestly");
+  assert.ok(ld.nodes.some((n) => n.id === "ldculture.stepsheets"), "step-sheet crediting norm is curriculum");
+  assert.equal(ld.nodes.filter((n) => n.partner).length, 0, "line dancing is alone-together — zero partner nodes");
+  const info = seasonInfo(newState(T), T, ld.seasons);
+  assert.equal(info.theme, "Vocabulary Season");
+});
+
+test("wcs pack: Lindy descent credited back to Harlem; the anchor is gated core work; partner late", () => {
+  const wc = STYLES.wcs;
+  const lineage = wc.nodes.find((n) => n.id === "wcculture.lineage");
+  assert.ok(lineage.checkpoints.some((c) => /Lindy Hop/.test(c) && /Black American/.test(c)), "the Harlem root credited");
+  assert.ok(lineage.checkpoints.some((c) => /Dean Collins/.test(c)), "the LA bridge named");
+  assert.ok(lineage.checkpoints.some((c) => /Lindy pack/.test(c)), "cross-linked to this app's own Lindy tree");
+  const anchor = wc.nodes.find((n) => n.id === "wcfoot.anchor");
+  assert.ok(anchor.prereqs.some((p) => p.id === "attr.core.l1"), "the anchor sits on real core readiness");
+  for (const n of wc.nodes.filter((x) => x.partner)) assert.ok(n.phase >= 3, `${n.id} partner-flagged but early`);
+  const info = seasonInfo(newState(T), T, wc.seasons);
+  assert.equal(info.theme, "Lineage Season");
+});
+
 test("new-pack animations exist in tree + move library with teaching checkpoints", () => {
   for (const id of ["pop.fresno", "wave.arm", "lock.lock", "point.point", "jack.basic", "hfoot.pdbr"]) {
     assert.ok(MOVES[id], `${id} animated`);
