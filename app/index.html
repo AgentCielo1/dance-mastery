@@ -86,6 +86,28 @@
   footer button { background: var(--panel); color: var(--muted); border: 1px solid var(--line); border-radius: 8px; padding: 6px 14px; cursor: pointer; font-size: .85rem; }
   footer button:hover { color: var(--text); }
   #reset { margin-left: auto; color: #a05050; }
+  /* Sync modal — progress travels between devices with zero backend */
+  .modal-wrap { position: fixed; inset: 0; background: rgba(6,8,12,.7); display: none; align-items: flex-end; justify-content: center; z-index: 60; }
+  .modal-wrap.open { display: flex; }
+  .modal { background: var(--panel); border: 1px solid var(--line); border-radius: 18px 18px 0 0; padding: 18px 16px 26px; width: 100%; max-width: 720px; max-height: 85vh; overflow-y: auto; }
+  .modal h2 { font-size: 1.05rem; color: var(--accent2); margin-bottom: 4px; }
+  .modal p { color: var(--muted); font-size: .85rem; margin-bottom: 12px; }
+  .modal .row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
+  .modal .row button { flex: 1; background: var(--panel2); color: var(--text); border: 1px solid var(--line); border-radius: 10px; padding: 12px; cursor: pointer; font-size: .9rem; }
+  .modal textarea { width: 100%; min-height: 70px; background: var(--panel2); color: var(--text); border: 1px solid var(--line); border-radius: 10px; padding: 10px; font: .8rem/1.4 ui-monospace, monospace; }
+  #sync-status { font-size: .85rem; margin-top: 8px; min-height: 1.2em; }
+  #sync-status.ok { color: var(--ok); }
+  #sync-status.err { color: var(--alert); }
+  #sync-close { width: 100%; margin-top: 12px; background: none; border: 1px solid var(--line); border-radius: 10px; color: var(--muted); padding: 12px; cursor: pointer; }
+  /* Touch polish: real fingers, not cursors */
+  @media (pointer: coarse) {
+    .grade, .levelup { padding: 10px 18px; min-height: 44px; }
+    .check { min-height: 44px; }
+    .check input, label.check input { width: 22px; height: 22px; }
+    footer button { padding: 12px 16px; min-height: 44px; }
+    nav a { padding: 6px 0; }
+    #style { min-height: 40px; }
+  }
 </style>
 </head>
 <body>
@@ -117,11 +139,29 @@
   <section id="progress"></section>
 
   <footer>
-    <button id="export">Export</button>
-    <button id="import">Import</button>
+    <button id="sync">Sync devices</button>
     <button id="freeze">Freeze yesterday</button>
     <button id="reset">Reset</button>
   </footer>
+
+  <div class="modal-wrap" id="sync-modal">
+    <div class="modal">
+      <h2>Sync your progress</h2>
+      <p>Your training data lives on <b>this device only</b> — never on a server. Move it between phone and computer with a file or a paste. Every style's progress travels together.</p>
+      <div class="row">
+        <button id="sync-download">⬇ Save backup file</button>
+        <button id="sync-copy">📋 Copy as text</button>
+      </div>
+      <div class="row">
+        <button id="sync-file">⬆ Import a backup file</button>
+        <input type="file" id="sync-file-input" accept="application/json,.json" hidden>
+      </div>
+      <textarea id="sync-paste" placeholder="…or paste copied sync text here"></textarea>
+      <div class="row" style="margin-top:8px"><button id="sync-import-paste">Import pasted text</button></div>
+      <div id="sync-status"></div>
+      <button id="sync-close">Close</button>
+    </div>
+  </div>
 
   <script type="module" src="js/app.js"></script>
   <script>

@@ -57,6 +57,20 @@
   label.inline { color: var(--muted); font-size: .8rem; display: flex; gap: 8px; align-items: center; margin-top: 8px; }
   input[type=range] { accent-color: var(--accent); }
   @media (max-width: 760px) { main { flex-direction: column; } aside { border-left: none; border-top: 1px solid var(--line); } }
+  /* Phone propped sideways: keep the stage big, slim the panel */
+  @media (max-height: 480px) and (orientation: landscape) {
+    main { flex-direction: row; }
+    aside { border-top: none; border-left: 1px solid var(--line); min-width: 210px; flex: .8; padding: 10px; }
+    #bpm, #hold { font-size: 2.6rem; }
+    .score { font-size: 2.4rem; }
+    header { padding: 6px 12px 2px; }
+    #pmodes { padding: 4px 12px; }
+  }
+  @media (pointer: coarse) {
+    #pmodes button { padding: 10px 18px; min-height: 44px; }
+    button.big { min-height: 48px; }
+    #src-note button { padding: 8px 14px; min-height: 40px; }
+  }
 </style>
 </head>
 <body>

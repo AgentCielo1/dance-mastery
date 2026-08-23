@@ -52,3 +52,48 @@ export function importState(json) {
   }
   return s;
 }
+
+// ---- All-device sync (Doc 06: progress is the dancer's, not a server's) ----
+// One bundle carries every style's state plus preferences, so a phone and a
+// computer can trade complete snapshots with zero backend.
+
+const PREF_KEYS = ["dance-mastery-style", "dance-mastery-crew-url", "dance-mastery-onboarded"];
+
+export function exportBundle(storage, styles, today) {
+  const bundle = { kind: "dance-mastery-sync", version: 1, exported: today, states: {}, prefs: {} };
+  for (const style of styles) {
+    try {
+      const raw = storage?.getItem?.(keyFor(style));
+      if (raw) bundle.states[style] = JSON.parse(raw);
+    } catch { /* skip unreadable */ }
+  }
+  for (const k of PREF_KEYS) {
+    try {
+      const v = storage?.getItem?.(k);
+      if (v != null) bundle.prefs[k] = v;
+    } catch { /* skip */ }
+  }
+  return JSON.stringify(bundle, null, 2);
+}
+
+// Accepts a sync bundle, or (back-compat) a bare single-style v1 state —
+// the caller decides which style a bare state belongs to.
+export function importBundle(json, storage) {
+  const b = JSON.parse(json);
+  if (b && b.version === 1 && Array.isArray(b.sessions)) return { kind: "single", state: b };
+  if (!b || b.kind !== "dance-mastery-sync" || b.version !== 1 || typeof b.states !== "object" || b.states === null) {
+    throw new Error("Not a Dance Mastery sync file");
+  }
+  const imported = [];
+  for (const [style, state] of Object.entries(b.states)) {
+    if (state && state.version === 1 && Array.isArray(state.sessions)) {
+      if (saveState(state, storage, style)) imported.push(style);
+    }
+  }
+  for (const [k, v] of Object.entries(b.prefs ?? {})) {
+    if (PREF_KEYS.includes(k) && typeof v === "string") {
+      try { storage?.setItem?.(k, v); } catch { /* no storage */ }
+    }
+  }
+  return { kind: "bundle", imported };
+}

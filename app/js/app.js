@@ -7,7 +7,9 @@ import { STAGES, STAGE, familyProgress, workingPhase } from "./engine/graph.js";
 import { QUALITY, stageUpSuggested } from "./engine/srs.js";
 import { rollingWeek, firewall, freezesLeft, applyFreeze, repairYesterday } from "./engine/streak.js";
 import { generateSession, completeSession, allowedSizes, SIZES } from "./engine/session.js";
-import { loadState, saveState, newState, exportState, importState } from "./engine/store.js";
+import { loadState, saveState, newState, importState, exportBundle, importBundle } from "./engine/store.js";
+import { keepAwake } from "./wakelock.js";
+import { installHint } from "./install.js";
 
 const $ = (sel) => document.querySelector(sel);
 const storage = window.localStorage;
@@ -194,18 +196,64 @@ $("#complete").addEventListener("click", () => {
   render();
 });
 
-$("#export").addEventListener("click", async () => {
-  const data = exportState(state);
-  try { await navigator.clipboard.writeText(data); $("#export").textContent = "Copied ✓"; }
-  catch { window.prompt("Copy your training state:", data); }
-  setTimeout(() => ($("#export").textContent = "Export"), 1500);
+// ---- Sync devices: whole-progress export/import, zero backend ----
+const syncModal = $("#sync-modal");
+function syncStatus(msg, ok) {
+  const el = $("#sync-status");
+  el.textContent = msg;
+  el.className = ok ? "ok" : "err";
+}
+
+$("#sync").addEventListener("click", () => { syncModal.classList.add("open"); syncStatus("", true); });
+$("#sync-close").addEventListener("click", () => syncModal.classList.remove("open"));
+syncModal.addEventListener("click", (e) => { if (e.target === syncModal) syncModal.classList.remove("open"); });
+
+$("#sync-download").addEventListener("click", () => {
+  const data = exportBundle(storage, Object.keys(STYLES), today);
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([data], { type: "application/json" }));
+  a.download = `dance-mastery-sync-${today}.json`;
+  a.click();
+  URL.revokeObjectURL(a.href);
+  syncStatus("Backup saved. Send the file to your other device (AirDrop, email, anything).", true);
 });
 
-$("#import").addEventListener("click", () => {
-  const raw = window.prompt("Paste a previously exported state:");
-  if (!raw) return;
-  try { state = importState(raw); saveState(state, storage, style); resetPending(); render(); }
-  catch (e) { alert(`Import failed: ${e.message}`); }
+$("#sync-copy").addEventListener("click", async () => {
+  const data = exportBundle(storage, Object.keys(STYLES), today);
+  try { await navigator.clipboard.writeText(data); syncStatus("Copied. Paste it into Sync on your other device.", true); }
+  catch { window.prompt("Copy your sync text:", data); }
+});
+
+function doImport(raw) {
+  try {
+    const result = importBundle(raw, storage);
+    if (result.kind === "single") {
+      // legacy single-style export — belongs to whichever style is active now
+      state = importState(raw);
+      saveState(state, storage, style);
+      syncStatus(`Imported ${styleName(style)} progress.`, true);
+    } else {
+      const saved = savedStyle();
+      if (saved && STYLES[saved]) { style = saved; tree = STYLES[style]; styleSel.value = style; }
+      state = loadState(today, storage, style);
+      syncStatus(`Imported: ${result.imported.map(styleName).join(", ") || "nothing recognized"}.`, result.imported.length > 0);
+    }
+    resetPending();
+    render();
+  } catch (e) {
+    syncStatus(`Import failed: ${e.message}`, false);
+  }
+}
+
+$("#sync-file").addEventListener("click", () => $("#sync-file-input").click());
+$("#sync-file-input").addEventListener("change", async (e) => {
+  const f = e.target.files?.[0];
+  if (f) doImport(await f.text());
+  e.target.value = "";
+});
+$("#sync-import-paste").addEventListener("click", () => {
+  const raw = $("#sync-paste").value.trim();
+  if (raw) doImport(raw);
 });
 
 $("#freeze").addEventListener("click", () => {
@@ -239,3 +287,5 @@ $("#reset").addEventListener("click", () => {
 });
 
 render();
+keepAwake();          // a phone that locks mid-drill kills the session
+installHint(storage); // once, dismissible: put the app on the home screen

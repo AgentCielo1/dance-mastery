@@ -13,6 +13,9 @@ import {
 import { CameraPoseSource, ReplayPoseSource } from "./pose-runtime.js";
 import { Viewer, decodeClip } from "./viewer3d.js";
 import { MOVES } from "./moves3d.js";
+import { keepAwake } from "./wakelock.js";
+
+keepAwake(); // a propped-up phone must not lock mid-practice
 
 const $ = (s) => document.querySelector(s);
 const params = new URLSearchParams(location.search);
