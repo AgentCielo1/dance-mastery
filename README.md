@@ -3,11 +3,36 @@
 **A universal dance program for everyone — giving respect where it's due, helping
 everyone come together in the art of dance.**
 
+## ▶ The app is live
+
+**https://agentcielo1.github.io/dance-mastery/** — open it on any phone, tap
+*Add to Home Screen*, and it installs like a native app. Works offline. Free.
+
+What's inside today:
+
+- **16 trainable style packs** on one engine — Breaking, Hip Hop, Popping, Locking,
+  House, Waacking, Dancehall, Vogue (foundation), Salsa, Bachata, Kizomba, Tango,
+  Lindy Hop, Ballet, Afrobeats, West African (foundation) — every move carrying its
+  origin credit, every honest limit stated in the curriculum itself
+- **Daily sessions** sized to real life (8-minute worst-day version always available),
+  with **Guided Mode**: press play, follow the clock, freestyle prompt cards included
+- **Practice Mirror**: live camera feedback (pose estimation runs on your device —
+  nothing is uploaded), plus record-and-review for what cameras can't honestly judge
+- **Rhythm Trainer**: 14 synthesized practice pulses — son clave, the funk ONE, the
+  swung ride, the 12/8 bell, the Ha — all licensing-free
+- **Your Journey**: session heatmap, streaks that bend instead of breaking, shareable
+  progress cards
+- **The Global Dance Catalog**: 239 verified dances across 27 families, each with its
+  origin, essence, and the real-world scene where it lives
+
+Progress lives on your device only — no account, no server, no tracking.
+
+## The design
+
 The complete design for a new-age dance learning system: a training program, motivation
 engine, and animated-instruction platform that takes a busy adult from "two weeks of
-motivation at a time" to daily practice and real mastery — starting with breaking
-(bboying) and expanding to hip hop, salsa, ballet, tango, and African dances on one
-engine.
+motivation at a time" to daily practice and real mastery — every style on one
+skill-graph engine, added as data, not code.
 
 Built from a deep research sweep across: breaking's major teachers and programs
 (VincaniTV, B-Boy Dojo, STEEZY, Ken Swift, Storm, Red Bull BC One, BreakDance Decoded,

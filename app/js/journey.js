@@ -4,6 +4,7 @@ import { STYLES, styleName } from "./data/styles.js";
 import { todayKey } from "./engine/dates.js";
 import { loadState } from "./engine/store.js";
 import { mergeSessions, mergeFreezes, heatmap, totals, longestRun } from "./engine/journey.js";
+import { shareJourneyCard } from "./sharecard.js";
 
 const $ = (s) => document.querySelector(s);
 const storage = window.localStorage;
@@ -39,6 +40,20 @@ $("#styles").innerHTML = rows.length ? rows.map(([style, s]) => {
     <div class="bar"><div class="fill clean" style="width:${pctClean}%"></div><div class="fill touched" style="width:${Math.max(0, pct - pctClean)}%"></div></div>
   </div>`;
 }).join("") : `<p class="empty">No sessions yet — your first square is one <a href="index.html" style="color:var(--accent2)">Today session</a> away. Even the 8-minute version fills it.</p>`;
+
+$("#share").addEventListener("click", async (e) => {
+  const data = {
+    votes: t.sessions,
+    days: t.activeDays,
+    run: longestRun(byDate, freezes),
+    since: t.firstDay,
+    styles: rows.map(([style, s]) => ({ name: styleName(style), sessions: s.sessions, clean: s.clean, total: STYLES[style].nodes.length })),
+    heat: heatmap(byDate, freezes, today),
+  };
+  const how = await shareJourneyCard(data);
+  e.target.textContent = how === "shared" ? "📸 Shared ✓" : "📸 Saved to your photos/downloads ✓";
+  setTimeout(() => (e.target.textContent = "📸 Share your journey card"), 2500);
+});
 
 $("#word").textContent = t.firstDay
   ? `Dancing since ${t.firstDay}. The graph doesn't care how any single day went — it only counts that you came back. Keep the squares coming.`

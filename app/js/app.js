@@ -11,6 +11,7 @@ import { loadState, saveState, newState, importState, exportBundle, importBundle
 import { keepAwake } from "./wakelock.js";
 import { installHint } from "./install.js";
 import { allocate, pickPrompt } from "./engine/guided.js";
+import { warmupFor, COOLDOWN } from "./engine/warmup.js";
 import { PATTERNS, STYLE_PATTERNS } from "./engine/rhythm.js";
 import { createRhythmPlayer } from "./audio.js";
 
@@ -114,7 +115,11 @@ function renderSession(doneToday) {
   el.innerHTML = session.blocks.map((b, i) => {
     if (b.kind === "ignition" || b.kind === "freestyle") {
       const checked = pending.blocks.has(b.kind) ? "checked" : "";
-      return `<div class="card"><h2>${b.title}</h2><p>${b.detail}</p>
+      const extra = b.kind === "ignition"
+        ? `<details style="margin-top:8px"><summary style="cursor:pointer;color:var(--accent2);font-size:.85rem">Warm-up checklist (${styleName(style)})</summary>
+            <ul style="color:var(--muted);font-size:.85rem;margin:8px 0 0 18px;line-height:1.7">${warmupFor(style).map((w) => `<li>${w}</li>`).join("")}</ul></details>`
+        : `<p class="note" style="margin-top:8px">After: ${COOLDOWN.join(" · ")}</p>`;
+      return `<div class="card"><h2>${b.title}</h2><p>${b.detail}</p>${extra}
         <label class="check"><input type="checkbox" data-block="${b.kind}" ${checked}> Done</label></div>`;
     }
     if (b.kind === "review") {
@@ -314,8 +319,14 @@ function gRender() {
   const m = Math.floor(G.remaining / 60), s = String(G.remaining % 60).padStart(2, "0");
   $("#g-time").textContent = `${m}:${s}`;
   $("#g-bar").style.width = `${(1 - G.remaining / b.seconds) * 100}%`;
-  const items = (sessionBlock.items ?? []).map((it) => it.node?.name ?? it.attr?.name).filter(Boolean);
-  $("#g-items").textContent = items.length ? items.join(" · ") : KIND_COACH[b.kind] ?? "";
+  if (b.kind === "ignition") {
+    // the warm-up is the ignition — real joint prep, style-loaded
+    $("#g-items").innerHTML = `<div style="text-align:left;max-width:340px;margin:0 auto;font-size:.85rem;line-height:1.7">` +
+      warmupFor(style).map((w) => `• ${w}`).join("<br>") + `</div>`;
+  } else {
+    const items = (sessionBlock.items ?? []).map((it) => it.node?.name ?? it.attr?.name).filter(Boolean);
+    $("#g-items").textContent = items.length ? items.join(" · ") : KIND_COACH[b.kind] ?? "";
+  }
   const prompt = $("#g-prompt");
   if (b.kind === "freestyle") {
     if (prompt.style.display === "none") { prompt.textContent = `🎴 ${pickPrompt()}`; prompt.style.display = "block"; }
