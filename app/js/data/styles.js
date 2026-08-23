@@ -6,9 +6,11 @@ import breaking from "./breaking.js";
 import bzouk from "./bzouk.js";
 import contemporary from "./contemporary.js";
 import dancehall from "./dancehall.js";
+import flamenco from "./flamenco.js";
 import forro from "./forro.js";
 import hiphop from "./hiphop.js";
 import house from "./house.js";
+import irish from "./irish.js";
 import jazz from "./jazz.js";
 import kizomba from "./kizomba.js";
 import kpop from "./kpop.js";
@@ -19,12 +21,13 @@ import popping from "./popping.js";
 import salsa from "./salsa.js";
 import samba from "./samba.js";
 import tango from "./tango.js";
+import tap from "./tap.js";
 import twostep from "./twostep.js";
 import vogue from "./vogue.js";
 import waacking from "./waacking.js";
 import wcs from "./wcs.js";
 import westafrican from "./westafrican.js";
-export const STYLES = { afrobeats, bachata, ballet, breaking, bzouk, contemporary, dancehall, forro, hiphop, house, jazz, kizomba, kpop, lindy, linedance, locking, popping, salsa, samba, tango, twostep, vogue, waacking, wcs, westafrican };
+export const STYLES = { afrobeats, bachata, ballet, breaking, bzouk, contemporary, dancehall, flamenco, forro, hiphop, house, irish, jazz, kizomba, kpop, lindy, linedance, locking, popping, salsa, samba, tango, tap, twostep, vogue, waacking, wcs, westafrican };
 export const DEFAULT_STYLE = "breaking";
 export function styleName(id) { return STYLES[id]?.name ?? id.charAt(0).toUpperCase() + id.slice(1); }
 // Find a node (and its style) by node id across every pack.

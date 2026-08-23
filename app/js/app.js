@@ -418,6 +418,9 @@ const TAGLINES = {
   kpop: "sharpness, isolations, performance",
   jazz: "the technique gym — roots credited",
   contemporary: "breath, spine, swings, improv",
+  tap: "you are the drummer",
+  irish: "the lift — 1-2-3s and céilí prep",
+  flamenco: "compás, palmas, braceo — cante first",
 };
 
 function needsOnboarding() {

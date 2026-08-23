@@ -1517,7 +1517,8 @@ export default {
    "region": "Andalusia, Spain",
    "origin": "Crystallized 1700s-1800s among Gitano communities absorbing Andalusian, Moorish and Sephardic strands; UNESCO 2010",
    "essence": "Cante, toque, baile: percussive zapateado, curling braceo, dozens of palos each with its own compás",
-   "scene": "Tablaos, peñas, Jerez festivals, global academies"
+   "scene": "Tablaos, peñas, Jerez festivals, global academies",
+   "pack": "flamenco"
   },
   {
    "name": "Sevillanas",
@@ -1541,7 +1542,8 @@ export default {
    "region": "Ireland/diaspora",
    "origin": "Shaped by 1700s traveling dance masters; Gaelic League codification; globalized by Riverdance (1994)",
    "essence": "Rigid torso over blur-fast percussive (hard shoe) or airy (soft shoe) legs",
-   "scene": "Feiseanna, world championships, touring shows"
+   "scene": "Feiseanna, world championships, touring shows",
+   "pack": "irish"
   },
   {
    "name": "Irish Céilí Dance",
@@ -1720,7 +1722,8 @@ export default {
    "region": "USA",
    "origin": "1800s African-American fusion of West African rhythm, juba and Irish clog; Robinson, Bubbles, Nicholas Brothers, Glover",
    "essence": "The dancer as drummer — metal-soled jazz music-making",
-   "scene": "Broadway, jazz clubs, tap festivals"
+   "scene": "Broadway, jazz clubs, tap festivals",
+   "pack": "tap"
   },
   {
    "name": "Jazz Dance",

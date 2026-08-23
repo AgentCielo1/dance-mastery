@@ -1,0 +1,300 @@
+{
+  "style": "tap",
+  "version": "0.1.0",
+  "name": "Tap Dance",
+  "notes": "Tap Dance style pack (Doc 04 template). A BLACK AMERICAN ART FORM, told straight: tap was forged in 19th-century America where West African rhythmic tradition met Irish and British step dance — in spaces like New York's Five Points — and was carried by a master lineage this pack credits by name: William Henry Lane ('Master Juba'), Bill 'Bojangles' Robinson, John 'Bubbles' Sublett (father of rhythm tap), the Nicholas Brothers, the Copasetics, Gregory Hines, Dianne Walker, and Savion Glover, whose 'hitting' brought tap into funk and hip hop time. Design truths: the dancer IS a drummer — sounds first, shapes second; relaxed ankles are the entire secret; GEAR HONESTY stated in-curriculum — real tap needs tap shoes and a surface you're allowed to hit (a plywood board works; apartment floors and neighbors are real constraints, and hard-soled shoes are an honest starter). Genuinely solo. Named steps carry their lineage where it's documented; the time step is credited to the tradition, not an individual.",
+  "seasons": [
+    {
+      "theme": "Lineage Season",
+      "finale": "Tell the story on camera — Juba to Bojangles to Bubbles to Hines to Glover — then film your first clean shuffles."
+    },
+    {
+      "theme": "Shuffle Season",
+      "finale": "Film shuffles and flaps at three tempos, both feet — every sound clean and countable."
+    },
+    {
+      "theme": "Rudiment Season",
+      "finale": "Film ball changes, heel drops and toe taps combined into your own 8-count rudiment phrases."
+    },
+    {
+      "theme": "Time Step Season",
+      "finale": "Film the traditional time step, 8 rounds without a break — then trade twos with a recording of yourself."
+    },
+    {
+      "theme": "Jam Season",
+      "finale": "Find a tap class or jam — or film a full chorus of improvised rhythm over a swing track. The drummer performs."
+    }
+  ],
+  "attributes": [
+    {
+      "id": "attr.ankles.l1",
+      "name": "Loose ankles L1",
+      "test": "60s of relaxed ankle shakes each foot — the foot flops freely from the shin; tension is tap's only enemy"
+    },
+    {
+      "id": "attr.ankles.l2",
+      "name": "Ankle endurance L2",
+      "test": "3 minutes of continuous light shuffles alternating feet without the calves seizing"
+    },
+    {
+      "id": "attr.timing.l1",
+      "name": "Subdivision ear L1",
+      "test": "clap straight eighths, then swung eighths, then triplets over one track — switching cleanly on command"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "tpmusic.drummer",
+      "type": "concept",
+      "family": "musicality",
+      "name": "You are the drummer",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "tap is music first: every step is a note, every combination a drum fill",
+        "practice listening back — film with AUDIO as the point; blurry video with clean sound beats the opposite",
+        "swing feel is home base (the Lindy pack's swung ride is your metronome), straight and funk time are dialects"
+      ]
+    },
+    {
+      "id": "tpmusic.trading",
+      "type": "concept",
+      "family": "musicality",
+      "name": "Trading — call and response",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "tpmusic.drummer",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "tap's social form is trading: you play four or eight counts, the other dancer answers",
+        "solo version: trade with a recording of yourself, or answer the drummer on any jazz record",
+        "a clean, simple answer beats a sloppy, fancy one — every drummer knows this"
+      ]
+    },
+    {
+      "id": "tpculture.roots",
+      "type": "concept",
+      "family": "culture",
+      "name": "A Black American art form — the forge",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "tap was forged where West African rhythm met Irish and British step dance in 19th-century America — in spaces like New York's Five Points — and became a Black American art form",
+        "William Henry Lane, 'Master Juba', out-danced every challenger in the 1840s and is the documented root of the lineage",
+        "minstrelsy's shadow is part of the honest history: Black artists innovated inside and despite a racist entertainment industry"
+      ]
+    },
+    {
+      "id": "tpculture.lineage",
+      "type": "concept",
+      "family": "culture",
+      "name": "The master lineage",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "tpculture.roots",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "Bill 'Bojangles' Robinson brought it upright and up on the toes; John 'Bubbles' Sublett dropped the heels and fathered rhythm tap",
+        "the Nicholas Brothers made Stormy Weather (1943) — watch that number today; it is still the ceiling",
+        "the Copasetics kept the flame; Gregory Hines carried it to the world; Dianne Walker taught everyone; Savion Glover's 'hitting' brought tap into funk time",
+        "watch one clip of each name in this node — that's a complete education in an evening"
+      ]
+    },
+    {
+      "id": "tpculture.gear",
+      "type": "concept",
+      "family": "culture",
+      "name": "Gear honesty — shoes, boards, and neighbors",
+      "phase": 1,
+      "prereqs": [],
+      "checkpoints": [
+        "real tap needs tap shoes and a surface you're allowed to hit — a 3x3 plywood board on a rug is the classic apartment answer",
+        "hard-soled shoes on a safe floor are an honest starter: the rhythms and rudiments transfer completely",
+        "never tap on surfaces you'll damage (or downstairs neighbors you'll enrage) — the drummer respects the room"
+      ]
+    },
+    {
+      "id": "tpstep.shuffle",
+      "type": "move",
+      "family": "basic",
+      "name": "The shuffle",
+      "phase": 1,
+      "anchor": "tap's first word — two sounds, a lifetime of vocabulary",
+      "prereqs": [
+        {
+          "id": "tpmusic.drummer",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.ankles.l1",
+          "kind": "hard"
+        },
+        {
+          "id": "tpculture.gear",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "brush out, brush in — TWO distinct sounds from a loose ankle, knee quiet",
+        "the movement is a flick from the ankle, never a leg swing",
+        "slow enough to hear both sounds separately; speed is a byproduct of relaxation",
+        "both feet, all directions: front, side, back"
+      ],
+      "mistakes": [
+        "one smeared sound instead of two",
+        "swinging from the hip with a stiff ankle"
+      ]
+    },
+    {
+      "id": "tpstep.flap",
+      "type": "move",
+      "family": "basic",
+      "name": "Flaps & ball changes",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "tpstep.shuffle",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "flap: brush out, STEP — two sounds that travel; the walking step of tap",
+        "ball change: quick weight exchange, two sounds in a half count",
+        "flap-ball-change across the room is tap's first sentence"
+      ],
+      "mistakes": [
+        "putting weight on the brush (that's a stamp, not a flap)"
+      ]
+    },
+    {
+      "id": "tpstep.heels",
+      "type": "move",
+      "family": "basic",
+      "name": "Heel drops & toe taps",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "tpstep.flap",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "heel drops from a lifted heel — the bass drum of your kit (Bubbles' revolution: dropping the heels made rhythm tap)",
+        "toe taps behind and beside — the high sounds",
+        "combine: shuffles are the snare, heels the kick, toes the cymbal — you own a drum kit now"
+      ],
+      "mistakes": [
+        "heel drops that lift the whole body (the drop is from the ankle, the body stays settled)"
+      ]
+    },
+    {
+      "id": "tpstep.paradiddle",
+      "type": "move",
+      "family": "basic",
+      "name": "Paddle & roll (tap paradiddles)",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "tpstep.heels",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.timing.l1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "heel-dig, toe, heel-drop combinations rolling between feet — tap's drum rudiments",
+        "even sounds at slow tempo before any speed — a drummer tunes the kit first",
+        "4-sound and 6-sound rolls, both leads"
+      ]
+    },
+    {
+      "id": "tpstep.timestep",
+      "type": "move",
+      "family": "named",
+      "name": "The time step",
+      "phase": 3,
+      "origin": "the tradition's shared signature — evolved on vaudeville stages as the 'tell the band the tempo' step; it belongs to the lineage, not one name",
+      "prereqs": [
+        {
+          "id": "tpstep.paradiddle",
+          "kind": "hard"
+        },
+        {
+          "id": "tpculture.lineage",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "stomp, hop, step, flap, step — the traditional single time step, on the swung count",
+        "it repeats like a riff: 6 bars of time step, 2 bars of break (your own fill)",
+        "double and triple versions add shuffles — earn them in order",
+        "vaudeville dancers used it to set the band's tempo: when you dance it, you're conducting"
+      ],
+      "mistakes": [
+        "rushing the break — the fill is only as good as the groove it interrupts"
+      ]
+    },
+    {
+      "id": "meta.tap_chorus",
+      "type": "combo",
+      "family": "meta",
+      "name": "One chorus, improvised — filmed for the AUDIO",
+      "phase": 4,
+      "prereqs": [
+        {
+          "id": "tpstep.timestep",
+          "kind": "hard"
+        },
+        {
+          "id": "tpmusic.trading",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.ankles.l2",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "one full chorus of a swing track: time steps as the groove, your own breaks as the fills",
+        "listen back with eyes closed — judge it as drumming",
+        "trade twos with your own recording for a second chorus"
+      ]
+    },
+    {
+      "id": "meta.tap_jam",
+      "type": "combo",
+      "family": "meta",
+      "name": "The class or the jam",
+      "phase": 4,
+      "prereqs": [
+        {
+          "id": "meta.tap_chorus",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "find a tap class or a tap jam — the trading circle is where this art has always lived",
+        "watch the Stormy Weather number once more before you go, as calibration and as gratitude",
+        "bring clean simple rhythms; leave with three things you heard someone older do"
+      ]
+    }
+  ],
+  "teachers": [
+    {
+      "name": "Tap dance — the art form's history",
+      "url": "https://en.wikipedia.org/wiki/Tap_dance"
+    },
+    {
+      "name": "Savion Glover — the living lineage",
+      "url": "https://en.wikipedia.org/wiki/Savion_Glover"
+    }
+  ]
+}

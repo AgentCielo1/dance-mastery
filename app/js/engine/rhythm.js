@@ -151,6 +151,27 @@ export const PATTERNS = {
     ],
     note: "Boom… chik-chik. The slow step stretches through the boom; the quicks answer the chiks.",
   },
+  reel: {
+    name: "Reel (irish 4/4)",
+    beats: 4, defaultBpm: 112,
+    hits: [
+      { t: 0, type: "accent" }, { t: 2, type: "clave" },
+      { t: 0.5, type: "hat" }, { t: 1, type: "hat" }, { t: 1.5, type: "hat" },
+      { t: 2.5, type: "hat" }, { t: 3, type: "hat" }, { t: 3.5, type: "hat" },
+    ],
+    note: "The workhorse tune — buoyant eighths, lift on the ONE. Land like rain.",
+  },
+  compas12: {
+    name: "Compás de 12 (soleá / bulerías)",
+    beats: 12, defaultBpm: 200,
+    hits: [
+      { t: 2, type: "accent" }, { t: 5, type: "accent" }, { t: 7, type: "accent" },
+      { t: 9, type: "accent" }, { t: 11, type: "accent" },
+      { t: 0, type: "hat" }, { t: 1, type: "hat" }, { t: 3, type: "hat" }, { t: 4, type: "hat" },
+      { t: 6, type: "hat" }, { t: 8, type: "hat" }, { t: 10, type: "hat" },
+    ],
+    note: "Flamenco's absolute law: twelve counts, accents on 3-6-8-10-12. Count aloud until it counts you.",
+  },
   flow68: {
     name: "Flowing 6/8 (contemporary)",
     beats: 6, defaultBpm: 160,
@@ -227,6 +248,9 @@ export const STYLE_PATTERNS = {
   kpop: "fourfloor",
   jazz: "swing",
   contemporary: "flow68",
+  tap: "swing",
+  irish: "reel",
+  flamenco: "compas12",
 };
 
 export const SOUND_TYPES = ["kick", "snare", "hat", "clave", "accent"];

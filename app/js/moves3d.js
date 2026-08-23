@@ -555,6 +555,44 @@ export const MOVES = {
     rootFn: (p, u) => { p.y -= 0.012 * Math.abs(sin(u * TAU * 2)); },
   },
 
+  /* ------------- step-dance wave: solo cores (procedural v1) ------------- */
+  "tpstep.shuffle": {
+    bpm: 120, beats: 2,
+    keys: [
+      // brush out, brush in — a flick from a loose ankle, knee quiet
+      { t: 0.0, p: { y: 0.87, rHipF: 0.25, rKnee: 0.5, lKnee: 0.1, lShF: 0.1, rShF: 0.1, lElb: 0.5, rElb: 0.5 } },
+      { t: 0.2, p: { y: 0.87, rHipF: 0.45, rKnee: 0.25 } },
+      { t: 0.4, p: { y: 0.87, rHipF: 0.2, rKnee: 0.55 } },
+      { t: 0.5, p: { y: 0.87, lHipF: 0.25, lKnee: 0.5, rKnee: 0.1, rHipF: 0.0 } },
+      { t: 0.7, p: { y: 0.87, lHipF: 0.45, lKnee: 0.25 } },
+      { t: 0.9, p: { y: 0.87, lHipF: 0.2, lKnee: 0.55 } },
+    ],
+  },
+  "irstep.123s": {
+    bpm: 112, beats: 2,
+    keys: [
+      // hop-1-2-3 — light, lifted, on the balls of the feet, arms easy and low
+      { t: 0.0, p: { y: 0.885, lHipF: 0.5, lKnee: 0.35, rKnee: 0.1, tPitch: -0.02 } },
+      { t: 0.17, p: { y: 0.87, lHipF: 0.25, lKnee: 0.1, rKnee: 0.12 } },
+      { t: 0.33, p: { y: 0.872, rHipF: 0.25, rKnee: 0.12, lKnee: 0.1, lHipF: 0.0 } },
+      { t: 0.5, p: { y: 0.885, rHipF: 0.5, rKnee: 0.35, lKnee: 0.1 } },
+      { t: 0.67, p: { y: 0.87, rHipF: 0.25, rKnee: 0.1, lKnee: 0.12 } },
+      { t: 0.83, p: { y: 0.872, lHipF: 0.25, lKnee: 0.12, rKnee: 0.1, rHipF: 0.0 } },
+    ],
+    rootFn: (p, u) => { p.y += 0.012 * Math.abs(sin(u * TAU * 2)); },
+  },
+  "flmove.braceo": {
+    bpm: 66, beats: 8,
+    keys: [
+      // arms carve por abajo to por arriba — slow, proud spine, elbows lifted
+      { t: 0.0, p: { y: 0.875, lShA: 0.5, rShA: 0.5, lShF: -0.3, rShF: -0.3, lElb: 0.6, rElb: 0.6, tPitch: -0.05 } },
+      { t: 0.25, p: { y: 0.875, lShA: 1.2, rShA: 0.6, lShF: 0.4, lElb: 0.8, tRoll: 0.06 } },
+      { t: 0.5, p: { y: 0.875, lShA: 1.6, rShA: 1.6, lShF: 0.9, rShF: 0.9, lElb: 0.9, rElb: 0.9, tRoll: 0.0, tPitch: -0.08 } },
+      { t: 0.75, p: { y: 0.875, rShA: 1.2, lShA: 0.6, rShF: 0.4, rElb: 0.8, tRoll: -0.06 } },
+    ],
+    rootFn: (p, u, t) => { p.lElb += 0.1 * sin(t * TAU * 4); p.rElb += 0.1 * cos(t * TAU * 4); },
+  },
+
   /* ------------- k-pop wave: solo cores (procedural v1) ------------- */
   "kpskill.sharpness": {
     bpm: 120, beats: 4,

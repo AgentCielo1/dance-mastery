@@ -113,6 +113,18 @@ const STYLE_EXTRAS = {
     "Three slow roll-downs, hanging heavy at the bottom — the spine opens gradually",
     "Quadruped wrist rocks 30s — floor visits start with happy wrists",
   ],
+  tap: [
+    "Ankle shakes 30s each foot until they flop free — tension is tap's only enemy",
+    "Slow brushes x10 each foot before any speed — tune the drum first",
+  ],
+  irish: [
+    "Calf raises x20 + light bounce 60s — the spring pays for everything",
+    "Ankle circles x10 each way; land-through-the-foot rehearsals x8",
+  ],
+  flamenco: [
+    "Slow arm circles x6 each arm, shoulders down — braceo begins warm",
+    "Gentle heel-ball strike alternations 30s, knees soft — never hammer cold",
+  ],
 };
 
 export function warmupFor(style) {

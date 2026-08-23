@@ -1,0 +1,284 @@
+{
+  "style": "irish",
+  "version": "0.1.0",
+  "name": "Irish Dance",
+  "notes": "Irish Dance style pack (Doc 04 template, foundation-forward). Three living branches told honestly: competitive solo step dance (the Riverdance style — codified by An Coimisiún and the schools, learned with certified teachers), céilí social dancing (group figures, walkable by any beginner at a céilí night), and sean-nós (the older, low-to-the-ground, improvisational style from the Gaeltacht — looser arms, battering steps, danced on a door taken off its hinges in the lore). Riverdance (1994, a Eurovision interval act that conquered the planet) is credited as the moment that made this dance global — Bill Whelan's score, Michael Flatley and Jean Butler leading. Design truths: the soft-shoe basics (point, hop, the 1-2-3s, skip-2-3s) are genuinely solo-trainable and build extraordinary ankle spring; posture is curriculum (tall carriage, arms low — a convention whose origin stories are lore, told as lore); competitive technique beyond basics is teacher-taught, stated honestly; the céilí is the social door anyone can walk through tonight.",
+  "seasons": [
+    {
+      "theme": "Reel Season",
+      "finale": "Film yourself lilting or clapping a reel's rhythm through one full tune — the ear before the feet."
+    },
+    {
+      "theme": "One-Two-Three Season",
+      "finale": "Film the 1-2-3s traveling and turning — light, lifted, landing like rain."
+    },
+    {
+      "theme": "Skip Season",
+      "finale": "Film skip-2-3s and side-7s across the room — posture tall, arms easy, spring alive."
+    },
+    {
+      "theme": "Sean-nós Season",
+      "finale": "Film 30 seconds of low, loose, improvised battering to a reel — the older style's freedom, honestly attempted."
+    },
+    {
+      "theme": "Céilí Season",
+      "finale": "Find a céilí night — the caller teaches every figure, and beginners have always been the point."
+    }
+  ],
+  "attributes": [
+    {
+      "id": "attr.spring.l1",
+      "name": "Ankle spring L1",
+      "test": "90s of light continuous bounce on the balls of the feet, heels never slamming, calves pain-free"
+    },
+    {
+      "id": "attr.spring.l2",
+      "name": "Ankle spring L2",
+      "test": "30 relaxed single-foot hops each side, landing quiet and lifted — Irish dance is rain, not thunder"
+    },
+    {
+      "id": "attr.posture.l1",
+      "name": "Carriage L1",
+      "test": "60s of bouncing with a tall spine and still, easy arms — no shoulder creep, no forward lean"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "irmusic.tunes",
+      "type": "concept",
+      "family": "musicality",
+      "name": "Reels, jigs, hornpipes — the tune families",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "reels run in 4/4 (the workhorse), jigs in 6/8, hornpipes swagger in swung 4/4 — each has its own steps",
+        "learn to LILT: singing the rhythm ('diddly-dee') is how this tradition has always taught it",
+        "the tune phrases in 8-bar parts, usually AABB — your steps phrase with them"
+      ]
+    },
+    {
+      "id": "irmusic.lift",
+      "type": "concept",
+      "family": "musicality",
+      "name": "The lift — dancing on top of the beat",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "irmusic.tunes",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "Irish dance rides slightly on top of the beat — buoyant, never dragging",
+        "the music's 'lift' and the dancer's spring are the same thing in two bodies",
+        "session musicians will tell you when you have it; until then, your landings will (quiet = yes)"
+      ]
+    },
+    {
+      "id": "irculture.branches",
+      "type": "concept",
+      "family": "culture",
+      "name": "Three branches: step, céilí, sean-nós",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "competitive step dance: the upright, precise solo form the world knows — codified by An Coimisiún and the schools, learned with certified teachers",
+        "céilí dancing: social group figures, called and taught in the room — the door anyone can walk through",
+        "sean-nós: the older Gaeltacht style — low, loose-armed, improvised, danced small (on a door taken off its hinges, in the lore)",
+        "one tradition, three temperaments; this pack preps you for all three doors"
+      ]
+    },
+    {
+      "id": "irculture.riverdance",
+      "type": "concept",
+      "family": "culture",
+      "name": "1994 — the Riverdance moment",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "irculture.branches",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "a seven-minute Eurovision interval act (1994) — Bill Whelan's score, Michael Flatley and Jean Butler leading — turned Irish dance into a global phenomenon overnight",
+        "the arms-low convention predates the show; its origin stories (clergy, crowded cottages, defiance) are LORE — enjoy them as lore, dance the posture as technique",
+        "every Irish dance school on earth felt 1994; if you're here, so did you"
+      ]
+    },
+    {
+      "id": "irstep.points",
+      "type": "move",
+      "family": "basic",
+      "name": "Points & hops",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "irmusic.tunes",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.spring.l1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "point the toe to the front — turned out, arched, weightless; hop on the standing foot, landing soft",
+        "posture is half the step: tall spine, arms easy at the sides, chin level",
+        "the hop lands THROUGH the foot — toe, ball, whisper of heel"
+      ],
+      "mistakes": [
+        "landing flat and loud (Irish dance is rain, not thunder)",
+        "shoulders creeping up to help the hop"
+      ]
+    },
+    {
+      "id": "irstep.123s",
+      "type": "move",
+      "family": "basic",
+      "name": "The 1-2-3s (promenade step)",
+      "phase": 1,
+      "anchor": "the step under half of Irish dancing",
+      "prereqs": [
+        {
+          "id": "irstep.points",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "hop, then three light steps — hop-1-2-3, alternating lead feet",
+        "travel forward, backward, and in a turn — same step, every direction",
+        "on the balls of the feet the whole time; the heels are for special occasions",
+        "lilt it as you dance it: 'hop-one-two-three' until the mouth and feet agree"
+      ],
+      "mistakes": [
+        "three even stomps with no hop lift",
+        "watching the floor (the floor has never once moved)"
+      ]
+    },
+    {
+      "id": "irstep.side7s",
+      "type": "move",
+      "family": "basic",
+      "name": "Side-7s & skip-2-3s",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "irstep.123s",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.posture.l1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "side-7: seven quick lateral counts, crossing light, traveling clean — céilí dancing's highway",
+        "skip-2-3s string 1-2-3s into flowing travel",
+        "these two plus the 1-2-3s are enough to survive any céilí figure a caller throws at you"
+      ]
+    },
+    {
+      "id": "irstep.jigrise",
+      "type": "move",
+      "family": "basic",
+      "name": "The rising step (light jig, 6/8)",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "irstep.123s",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "jig time is 6/8 — lilt it as 'rashers-and-sausages' like generations before you",
+        "hop, hop-back, hop-back — the rising step lifts twice and settles, riding the jig's two big pulses",
+        "same rain-quiet landings; the tune changed, the manners didn't"
+      ],
+      "mistakes": [
+        "dancing reel rhythm over a jig (the tune will fight you and win)"
+      ]
+    },
+    {
+      "id": "irstep.seannos",
+      "type": "move",
+      "family": "basic",
+      "name": "Sean-nós battering (intro)",
+      "phase": 3,
+      "origin": "the older Gaeltacht tradition — low, close to the floor, improvised; the ancestor the stage style stands on",
+      "prereqs": [
+        {
+          "id": "irstep.side7s",
+          "kind": "hard"
+        },
+        {
+          "id": "irculture.branches",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "drop the formality: knees soft, arms loose, steps small and close to the floor",
+        "batter the rhythm — heel and toe strikes improvised inside the reel, more tap-cousin than stage-Irish",
+        "dance it in a one-metre square; the old style was danced small on purpose",
+        "this is an introduction; the Gaeltacht's living tradition is the real teacher"
+      ],
+      "mistakes": [
+        "doing stage steps with loose arms and calling it sean-nós — the whole engine is different"
+      ]
+    },
+    {
+      "id": "meta.irish_step",
+      "type": "combo",
+      "family": "meta",
+      "name": "A full step to a reel — filmed",
+      "phase": 4,
+      "prereqs": [
+        {
+          "id": "irstep.side7s",
+          "kind": "hard"
+        },
+        {
+          "id": "irmusic.lift",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.spring.l2",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "compose one 8-bar step from your vocabulary (1-2-3s, points, side-7s) and dance it through both parts of a reel",
+        "landings quiet, posture tall, lift audible in the silence between sounds",
+        "competitive technique beyond this lives with certified teachers — stated honestly; the céilí needs no certificate at all"
+      ]
+    },
+    {
+      "id": "meta.irish_ceili",
+      "type": "combo",
+      "family": "meta",
+      "name": "The céilí night",
+      "phase": 4,
+      "prereqs": [
+        {
+          "id": "meta.irish_step",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "find a céilí — Irish cultural centers and pubs run them worldwide, and the caller teaches every figure in the room",
+        "the Walls of Limerick or the Siege of Ennis will be called; your side-7s and 1-2-3s are the whole entry fee",
+        "stay for the session music after; the tunes are the tradition's beating heart"
+      ]
+    }
+  ],
+  "teachers": [
+    {
+      "name": "Irish dance — the branches and history",
+      "url": "https://en.wikipedia.org/wiki/Irish_dance"
+    },
+    {
+      "name": "Sean-nós — the older style",
+      "url": "https://en.wikipedia.org/wiki/Sean-n%C3%B3s_dance"
+    }
+  ]
+}

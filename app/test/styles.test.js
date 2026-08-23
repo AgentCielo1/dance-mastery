@@ -404,6 +404,53 @@ test("contemporary pack: the rebellions credited; floorwork gated and honestly c
   assert.equal(info.theme, "Breath Season");
 });
 
+test("tap pack: a Black American art form, said plainly; the master lineage named; gear honesty", () => {
+  const tp = STYLES.tap;
+  const roots = tp.nodes.find((n) => n.id === "tpculture.roots");
+  assert.ok(roots.checkpoints.some((c) => /Black American art form/.test(c)), "the art form named as what it is");
+  assert.ok(roots.checkpoints.some((c) => /Master Juba/.test(c)), "the documented root credited");
+  assert.ok(roots.checkpoints.some((c) => /minstrelsy/i.test(c)), "the honest history includes the shadow");
+  const lineage = tp.nodes.find((n) => n.id === "tpculture.lineage");
+  for (const name of ["Bojangles", "Bubbles", "Nicholas Brothers", "Gregory Hines", "Dianne Walker", "Savion Glover"]) {
+    assert.ok(lineage.checkpoints.some((c) => c.includes(name)), `${name} credited`);
+  }
+  assert.ok(tp.nodes.some((n) => n.id === "tpculture.gear"), "apartment/gear honesty is curriculum");
+  assert.match(tp.nodes.find((n) => n.id === "tpstep.timestep").origin, /belongs to the lineage/, "the time step credited to the tradition");
+  const info = seasonInfo(newState(T), T, tp.seasons);
+  assert.equal(info.theme, "Lineage Season");
+});
+
+test("irish pack: three branches told; Riverdance as moment, arms-down as lore; sean-nós honest", () => {
+  const ir = STYLES.irish;
+  const branches = ir.nodes.find((n) => n.id === "irculture.branches");
+  assert.ok(branches.checkpoints.some((c) => /sean-nós/.test(c)), "the older style is in the story");
+  const rd = ir.nodes.find((n) => n.id === "irculture.riverdance");
+  assert.ok(rd.checkpoints.some((c) => /1994/.test(c)));
+  assert.ok(rd.checkpoints.some((c) => /LORE/.test(c)), "the arms-down origin stories marked as lore, not fact");
+  const sn = ir.nodes.find((n) => n.id === "irstep.seannos");
+  assert.ok(sn.checkpoints.some((c) => /living tradition is the real teacher/.test(c)), "sean-nós intro stays honest");
+  const info = seasonInfo(newState(T), T, ir.seasons);
+  assert.equal(info.theme, "Reel Season");
+});
+
+test("flamenco pack: Gitano heart credited; cante-first hierarchy; zapateado gated behind the limit", () => {
+  const fl = STYLES.flamenco;
+  const roots = fl.nodes.find((n) => n.id === "flculture.roots");
+  assert.ok(roots.checkpoints.some((c) => /Gitano/.test(c) && /Roma/.test(c)), "the Gitano heart credited by name");
+  const hierarchy = fl.nodes.find((n) => n.id === "flculture.hierarchy");
+  assert.ok(hierarchy.checkpoints.some((c) => /CANTE.*root|cante.*root/i.test(c)), "the song is the root");
+  const honesty = fl.nodes.find((n) => n.id === "meta.cante_honesty");
+  assert.ok(honesty.checkpoints.some((c) => /peña|tablao/.test(c)), "the living rooms named");
+  const zap = fl.nodes.find((n) => n.id === "flmove.zapateado");
+  assert.ok(zap.prereqs.some((p) => p.id === "meta.cante_honesty" && p.kind === "hard"),
+    "footwork gated behind the honest limit");
+  assert.ok(zap.checkpoints.some((c) => /belong with a teacher/.test(c)));
+  const compas = fl.nodes.find((n) => n.id === "flmusic.compas");
+  assert.equal(compas.phase, 0, "compás before everything — the absolute law");
+  const info = seasonInfo(newState(T), T, fl.seasons);
+  assert.equal(info.theme, "Compás Season");
+});
+
 test("new-pack animations exist in tree + move library with teaching checkpoints", () => {
   for (const id of ["pop.fresno", "wave.arm", "lock.lock", "point.point", "jack.basic", "hfoot.pdbr"]) {
     assert.ok(MOVES[id], `${id} animated`);
