@@ -73,6 +73,10 @@
     width: 100%; padding: 14px; border: none; border-radius: var(--radius);
     background: var(--accent); color: #14100a; font-size: 1.05rem; font-weight: 700; cursor: pointer; margin: 4px 0 24px;
   }
+  #guided {
+    width: 100%; padding: 13px; border: 1px solid var(--accent2); border-radius: var(--radius);
+    background: #10202c; color: var(--accent2); font-size: 1rem; font-weight: 600; cursor: pointer; margin: 4px 0 10px;
+  }
   #complete:active { transform: scale(.99); }
   #progress { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 16px; }
   #progress h2 { font-size: 1rem; color: var(--accent2); margin-bottom: 10px; }
@@ -136,7 +140,25 @@
 
   <div id="sizes"></div>
   <div id="session"></div>
+  <button id="guided">▶ Guided session — press play, follow the clock</button>
   <button id="complete">Complete session — it counts</button>
+
+  <div class="modal-wrap" id="guided-modal" style="align-items:stretch">
+    <div class="modal" style="border-radius:0;max-height:100vh;height:100vh;display:flex;flex-direction:column;justify-content:center;text-align:center">
+      <div id="g-kind" style="color:var(--accent2);font-size:.8rem;text-transform:uppercase;letter-spacing:1.4px"></div>
+      <h2 id="g-title" style="font-size:1.5rem;color:var(--text);margin:6px 0 2px"></h2>
+      <div id="g-time" style="font-size:4.6rem;font-weight:800;font-variant-numeric:tabular-nums;color:var(--accent)"></div>
+      <div style="height:8px;border-radius:99px;background:var(--panel2);overflow:hidden;margin:8px 0 14px"><div id="g-bar" style="height:100%;width:0%;background:var(--accent)"></div></div>
+      <div id="g-items" style="color:var(--muted);font-size:.95rem;min-height:3em"></div>
+      <div id="g-prompt" style="display:none;background:var(--panel2);border:1px solid var(--accent2);border-radius:14px;padding:14px;margin:10px 0;color:var(--accent2);font-size:1.05rem"></div>
+      <div style="display:flex;gap:8px;justify-content:center;margin-top:14px">
+        <button id="g-pause" class="size" style="flex:0 1 130px;text-align:center;min-height:48px">⏸ Pause</button>
+        <button id="g-rhythm" class="size" style="flex:0 1 130px;text-align:center;min-height:48px">🥁 Beat on</button>
+        <button id="g-next" class="size" style="flex:0 1 130px;text-align:center;min-height:48px">Next →</button>
+      </div>
+      <button id="g-exit" style="margin-top:16px;background:none;border:none;color:var(--muted);cursor:pointer;min-height:44px">✕ exit guided mode</button>
+    </div>
+  </div>
 
   <section id="progress"></section>
 

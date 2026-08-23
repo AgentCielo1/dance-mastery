@@ -10,6 +10,9 @@ import { generateSession, completeSession, allowedSizes, SIZES } from "./engine/
 import { loadState, saveState, newState, importState, exportBundle, importBundle, hasAnyProgress } from "./engine/store.js";
 import { keepAwake } from "./wakelock.js";
 import { installHint } from "./install.js";
+import { allocate, pickPrompt } from "./engine/guided.js";
+import { PATTERNS, STYLE_PATTERNS } from "./engine/rhythm.js";
+import { createRhythmPlayer } from "./audio.js";
 
 const $ = (sel) => document.querySelector(sel);
 const storage = window.localStorage;
@@ -102,9 +105,11 @@ function renderSession(doneToday) {
     el.innerHTML = `<div class="card done-card"><h2>Session counted. 🗳️</h2>
       <p>That was a vote for <strong>“I am a dancer who trains daily.”</strong> Leave the floor wanting more — see you tomorrow.</p></div>`;
     $("#complete").style.display = "none";
+    $("#guided").style.display = "none";
     return;
   }
   $("#complete").style.display = "block";
+  $("#guided").style.display = "block";
 
   el.innerHTML = session.blocks.map((b, i) => {
     if (b.kind === "ignition" || b.kind === "freestyle") {
@@ -285,6 +290,95 @@ $("#reset").addEventListener("click", () => {
   resetPending();
   render();
 });
+
+// ---- Guided Session Mode: press play, follow the clock (Doc 05) ----
+const G = {
+  modal: $("#guided-modal"),
+  plan: [], i: 0, remaining: 0, paused: false, timer: null,
+  player: createRhythmPlayer(), beatOn: false,
+};
+
+const KIND_COACH = {
+  ignition: "No decisions. Music on, body moving — the session has already started.",
+  review: "Work the due moves below. Rough reps count; grade them after.",
+  new: "New material. Slow, curious, zero pressure to be good yet.",
+  bodyprep: "Gate work. Test honestly — a gate passed too early fails you later.",
+  freestyle: "Never skipped. Your prompt is on the card — go.",
+};
+
+function gRender() {
+  const b = G.plan[G.i];
+  const sessionBlock = session.blocks[G.i];
+  $("#g-kind").textContent = `${G.i + 1} / ${G.plan.length} · ${b.kind}`;
+  $("#g-title").textContent = b.title;
+  const m = Math.floor(G.remaining / 60), s = String(G.remaining % 60).padStart(2, "0");
+  $("#g-time").textContent = `${m}:${s}`;
+  $("#g-bar").style.width = `${(1 - G.remaining / b.seconds) * 100}%`;
+  const items = (sessionBlock.items ?? []).map((it) => it.node?.name ?? it.attr?.name).filter(Boolean);
+  $("#g-items").textContent = items.length ? items.join(" · ") : KIND_COACH[b.kind] ?? "";
+  const prompt = $("#g-prompt");
+  if (b.kind === "freestyle") {
+    if (prompt.style.display === "none") { prompt.textContent = `🎴 ${pickPrompt()}`; prompt.style.display = "block"; }
+  } else prompt.style.display = "none";
+}
+
+function gTick() {
+  if (G.paused) return;
+  G.remaining -= 1;
+  if (G.remaining <= 0) {
+    G.player.chime();
+    if (G.i + 1 >= G.plan.length) { gExit(true); return; }
+    G.i += 1;
+    G.remaining = G.plan[G.i].seconds;
+  }
+  gRender();
+}
+
+function gExit(finished) {
+  clearInterval(G.timer);
+  G.player.stop();
+  G.beatOn = false;
+  $("#g-rhythm").textContent = "🥁 Beat on";
+  G.modal.classList.remove("open");
+  if (finished) {
+    const fw = $("#firewall");
+    fw.className = "banner ok";
+    fw.innerHTML = "<strong>Guided session done. 🔥</strong> Now grade what you did below and press complete — that's what makes it count.";
+  }
+}
+
+$("#guided").addEventListener("click", () => {
+  G.plan = allocate(session);
+  G.i = 0;
+  G.remaining = G.plan[0].seconds;
+  G.paused = false;
+  $("#g-prompt").style.display = "none";
+  G.modal.classList.add("open");
+  gRender();
+  clearInterval(G.timer);
+  G.timer = setInterval(gTick, 1000);
+});
+
+$("#g-pause").addEventListener("click", (e) => {
+  G.paused = !G.paused;
+  e.target.textContent = G.paused ? "▶ Resume" : "⏸ Pause";
+});
+$("#g-next").addEventListener("click", () => {
+  G.player.chime();
+  if (G.i + 1 >= G.plan.length) { gExit(true); return; }
+  G.i += 1;
+  G.remaining = G.plan[G.i].seconds;
+  $("#g-prompt").style.display = "none";
+  gRender();
+});
+$("#g-rhythm").addEventListener("click", async (e) => {
+  if (G.beatOn) { G.player.stop(); G.beatOn = false; e.target.textContent = "🥁 Beat on"; return; }
+  const key = STYLE_PATTERNS[style] ?? "straight";
+  await G.player.start(PATTERNS[key], PATTERNS[key].defaultBpm);
+  G.beatOn = true;
+  e.target.textContent = "🥁 Beat off";
+});
+$("#g-exit").addEventListener("click", () => gExit(false));
 
 // ---- First visit: 30 seconds from stranger to dancer ----
 const TAGLINES = {

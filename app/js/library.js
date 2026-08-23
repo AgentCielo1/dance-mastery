@@ -65,9 +65,45 @@ function select(id) {
   document.querySelectorAll(".mv").forEach((el) => el.classList.toggle("sel", el.dataset.id === id));
 }
 
+let query = "";
+
+// Search every pack: filter this style's list, and surface hits from the
+// other styles as jump links — one search box over all 13 trees.
+function applySearch(box) {
+  const q = query.toLowerCase();
+  box.querySelectorAll(".mv[data-id]").forEach((el) => {
+    el.style.display = !q || el.textContent.toLowerCase().includes(q) ? "" : "none";
+  });
+  box.querySelectorAll(".fam-group").forEach((g) => {
+    const anyVisible = [...g.querySelectorAll(".mv")].some((el) => el.style.display !== "none");
+    g.style.display = anyVisible || g.querySelector(".mv[data-style]") ? "" : "none";
+  });
+  const xbox = box.querySelector("#xstyle");
+  if (!q) { xbox.innerHTML = ""; return; }
+  const hits = [];
+  for (const [sid, tree] of Object.entries(STYLES)) {
+    if (sid === style) continue;
+    for (const n of tree.nodes) {
+      if (["move", "combo"].includes(n.type) && n.name.toLowerCase().includes(q)) {
+        hits.push({ sid, n });
+        if (hits.length >= 8) break;
+      }
+    }
+    if (hits.length >= 8) break;
+  }
+  xbox.innerHTML = hits.length
+    ? `<div class="fam-group"><h3>In other styles</h3>` + hits.map(({ sid, n }) =>
+        `<button class="mv" data-jump="${sid}"><span>${n.name}</span><em>${styleName(sid)} →</em></button>`).join("") + `</div>`
+    : "";
+  xbox.querySelectorAll("[data-jump]").forEach((el) =>
+    el.addEventListener("click", () => { location.search = `?style=${el.dataset.jump}`; }));
+}
+
 function buildList() {
   const box = document.getElementById("list");
   const fams = [...new Set(catalog.map((n) => n.family))];
+  const search = `<input id="msearch" type="search" placeholder="Search all styles…" value="${query.replace(/"/g, "&quot;")}"
+    style="width:100%;margin-bottom:8px;background:var(--panel2);color:inherit;border:1px solid var(--line);border-radius:8px;padding:9px 10px;font-size:.88rem"><div id="xstyle"></div>`;
   const styleSwitch = `<div class="fam-group"><h3>Style</h3>` +
     Object.keys(STYLES).map((s) =>
       `<button class="mv ${s === style ? "sel" : ""}" data-style="${s}"><span>${styleName(s)}</span><em>${s === style ? "●" : ""}</em></button>`).join("") + `</div>`;
@@ -75,7 +111,7 @@ function buildList() {
     Object.values(CAPTURES).map((c) =>
       `<button class="mv anim cap" data-id="${c.id}"><span>${c.name}</span><em>★ mocap</em></button>`).join("") +
     `</div>`;
-  box.innerHTML = styleSwitch + capGroup + fams.map((f) => {
+  box.innerHTML = search + styleSwitch + capGroup + fams.map((f) => {
     const rows = catalog.filter((n) => n.family === f).map((n) => {
       const anim = Boolean(MOVES[n.id]);
       return `<button class="mv ${anim ? "anim" : ""}" data-id="${n.id}">
@@ -84,6 +120,9 @@ function buildList() {
     return `<div class="fam-group"><h3>${FAMILY_LABELS[f] ?? f}</h3>${rows}</div>`;
   }).join("");
   box.querySelectorAll(".mv[data-id]").forEach((el) => el.addEventListener("click", () => { reel = false; select(el.dataset.id); }));
+  const ms = box.querySelector("#msearch");
+  ms.addEventListener("input", () => { query = ms.value.trim(); applySearch(box); });
+  if (query) applySearch(box);
   box.querySelectorAll(".mv[data-style]").forEach((el) => el.addEventListener("click", () => {
     try { localStorage.setItem("dance-mastery-style", el.dataset.style); } catch { /* no storage */ }
     location.search = `?style=${el.dataset.style}`;
