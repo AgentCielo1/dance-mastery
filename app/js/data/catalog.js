@@ -669,7 +669,8 @@ export default {
    "region": "USA (Harlem)",
    "origin": "Late-1920s Savoy Ballroom — African-American fusion of Charleston and breakaway; Frankie Manning, Norma Miller",
    "essence": "The mother swing dance: elastic 8-count swingout, improvisation, aerials",
-   "scene": "Global revival — exchanges, Herräng, ILHC"
+   "scene": "Global revival — exchanges, Herräng, ILHC",
+   "pack": "lindy"
   },
   {
    "name": "Charleston",
@@ -861,7 +862,8 @@ export default {
    "region": "Dominican Republic",
    "origin": "1960s+ DR barrios from bolero campesino; UNESCO-listed 2019",
    "essence": "Close footwork-rich 8-count with the tap-hip on 4 and 8",
-   "scene": "Colmados, clubs, worldwide socials"
+   "scene": "Colmados, clubs, worldwide socials",
+   "pack": "bachata"
   },
   {
    "name": "Bachata Sensual",
@@ -990,7 +992,8 @@ export default {
    "region": "Angola",
    "origin": "Late-1970s-80s Luanda — semba slowed onto zouk-influenced music (Kassav' catalyst)",
    "essence": "Grounded close-embrace walking — subtle weight shifts, saidas, ginga",
-   "scene": "Kizomba socials worldwide, Lisbon/Paris hubs"
+   "scene": "Kizomba socials worldwide, Lisbon/Paris hubs",
+   "pack": "kizomba"
   },
   {
    "name": "Urban Kiz",

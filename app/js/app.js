@@ -395,6 +395,9 @@ const TAGLINES = {
   waacking: "whacks, poses, disco drama",
   dancehall: "the bounce and Bogle's steps",
   vogue: "ballroom history + honest prep",
+  bachata: "Dominican basic, hips, footwork",
+  kizomba: "the Angolan ginga, solo-first",
+  lindy: "swing pulse, Charleston, solo jazz",
 };
 
 function needsOnboarding() {

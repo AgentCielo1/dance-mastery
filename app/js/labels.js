@@ -23,6 +23,8 @@ export const FAMILY_LABELS = {
   jack: "The jack", lofting: "Lofting",
   // waacking / dancehall
   arms: "Whacks", posing: "Posing & lines",
+  // lindy hop
+  jazz: "Solo jazz",
   // shared
   musicality: "Musicality", culture: "Culture",
 };

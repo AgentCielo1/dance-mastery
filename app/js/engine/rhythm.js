@@ -89,6 +89,37 @@ export const PATTERNS = {
     ],
     note: "The 3-3-2 cell over a steady four — the bounce lives in between.",
   },
+  bachata: {
+    name: "Bachata (1-2-3-tap)",
+    beats: 4, defaultBpm: 130,
+    hits: [
+      { t: 0, type: "kick" }, { t: 1, type: "kick" }, { t: 2, type: "kick" },
+      { t: 3, type: "accent" },
+      { t: 0.5, type: "hat" }, { t: 1.5, type: "hat" }, { t: 2.5, type: "hat" }, { t: 3.5, type: "hat" },
+    ],
+    note: "Steps on 1-2-3, the accent is your tap-and-hip on 4. Güira lives in the hats.",
+  },
+  kizomba: {
+    name: "Kizomba slow groove",
+    beats: 4, defaultBpm: 92,
+    hits: [
+      { t: 0, type: "kick" }, { t: 1.75, type: "kick" }, { t: 2, type: "kick" },
+      { t: 1, type: "snare" }, { t: 3, type: "snare" },
+      { t: 0.5, type: "hat" }, { t: 2.5, type: "hat" }, { t: 3.5, type: "hat" },
+    ],
+    note: "Slow and rolling — the ginga strolls beside this, never chases it.",
+  },
+  swing: {
+    name: "Swing ride (swung 4/4)",
+    beats: 4, defaultBpm: 140,
+    hits: [
+      { t: 0, type: "hat" }, { t: 1, type: "hat" }, { t: 1.67, type: "hat" },
+      { t: 2, type: "hat" }, { t: 3, type: "hat" }, { t: 3.67, type: "hat" },
+      { t: 0, type: "kick" }, { t: 2, type: "kick" },
+      { t: 1, type: "snare" }, { t: 3, type: "snare" },
+    ],
+    note: "The ride pattern, swung: ding, ding-ga-ding. Pulse on every beat — long-SHORT, never even.",
+  },
   ha: {
     name: "The Ha (ballroom)",
     beats: 4, defaultBpm: 126,
@@ -125,6 +156,9 @@ export const STYLE_PATTERNS = {
   waacking: "fourfloor",
   dancehall: "afro338",
   vogue: "ha",
+  bachata: "bachata",
+  kizomba: "kizomba",
+  lindy: "swing",
 };
 
 export const SOUND_TYPES = ["kick", "snare", "hat", "clave", "accent"];

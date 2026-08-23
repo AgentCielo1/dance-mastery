@@ -224,6 +224,55 @@ test("vogue pack: foundation-only — ballroom honesty hard-gates the movement p
   assert.equal(info.theme, "History Season");
 });
 
+test("bachata pack: Dominican-first — root credited, derivative branches named honestly, partner late", () => {
+  const ba = STYLES.bachata;
+  const dr = ba.nodes.find((n) => n.id === "bculture.dr");
+  assert.ok(dr.checkpoints.some((c) => /Dominican Republic/.test(c)), "DR named as the origin");
+  const branches = ba.nodes.find((n) => n.id === "bculture.branches");
+  assert.ok(branches.checkpoints.some((c) => /derivative, not the origin/.test(c)), "sensual named as derivative");
+  for (const n of ba.nodes.filter((x) => x.partner)) {
+    assert.ok(n.phase >= 3, `${n.id} partner-flagged but early-phase (${n.phase})`);
+  }
+  const frame = ba.nodes.find((n) => n.id === "bpartner.frame");
+  assert.ok(frame && !frame.partner, "frame prep is trainable solo");
+  const info = seasonInfo(newState(T), T, ba.seasons);
+  assert.equal(info.theme, "Guitar Season");
+});
+
+test("kizomba pack: Angola credited; connection honesty hard-gates the partnered embrace", () => {
+  const ki = STYLES.kizomba;
+  const angola = ki.nodes.find((n) => n.id === "kculture.angola");
+  assert.ok(angola.checkpoints.some((c) => /Luanda, Angola/.test(c)), "Luanda named");
+  assert.ok(ki.nodes.some((n) => n.id === "kculture.semba"), "semba parentage is curriculum");
+  const honesty = ki.nodes.find((n) => n.id === "meta.connection_honesty");
+  assert.ok(honesty.checkpoints.some((c) => /cannot be taught by video or app/.test(c)));
+  const embrace = ki.nodes.find((n) => n.id === "kpartner.embrace");
+  assert.ok(embrace.partner, "the connection is partner-flagged");
+  assert.ok(embrace.prereqs.some((p) => p.id === "meta.connection_honesty" && p.kind === "hard"),
+    "the honest limit gates the embrace");
+  const ginga = ki.nodes.find((n) => n.id === "kwalk.ginga");
+  assert.equal(ginga.phase, 0, "the ginga is the first movement of the pack");
+  const info = seasonInfo(newState(T), T, ki.seasons);
+  assert.equal(info.theme, "Semba Roots Season");
+});
+
+test("lindy pack: Savoy lineage credited; solo jazz carries its names; swingout waits for partners", () => {
+  const li = STYLES.lindy;
+  const savoy = li.nodes.find((n) => n.id === "sculture.savoy");
+  assert.ok(savoy.checkpoints.some((c) => /Black American dance/.test(c) && /Harlem/.test(c)));
+  const legends = li.nodes.find((n) => n.id === "sculture.legends");
+  assert.ok(legends.checkpoints.some((c) => /Frankie Manning/.test(c)));
+  assert.ok(legends.checkpoints.some((c) => /Norma Miller/.test(c)));
+  assert.match(li.nodes.find((n) => n.id === "sjazz.shorty_george").origin, /Snowden/);
+  for (const n of li.nodes.filter((x) => x.partner)) {
+    assert.ok(n.phase >= 3, `${n.id} partner-flagged but early-phase`);
+  }
+  const swingout = li.nodes.find((n) => n.id === "spartner.swingout");
+  assert.ok(swingout.partner && swingout.checkpoints.some((c) => /Frankie Manning/.test(c)));
+  const info = seasonInfo(newState(T), T, li.seasons);
+  assert.equal(info.theme, "Pulse Season");
+});
+
 test("new-pack animations exist in tree + move library with teaching checkpoints", () => {
   for (const id of ["pop.fresno", "wave.arm", "lock.lock", "point.point", "jack.basic", "hfoot.pdbr"]) {
     assert.ok(MOVES[id], `${id} animated`);

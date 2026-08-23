@@ -508,6 +508,53 @@ export const MOVES = {
     ],
     rootFn: (p, u) => { p.tPitch = 0.07 + 0.05 * sin(u * TAU * 2); },
   },
+  /* ------------- partner-dance wave: solo cores (procedural v1) ------------- */
+  "bbasic.side": {
+    bpm: 130, beats: 4,
+    keys: [
+      // three steps side, weightless tap on 4 with the hip riding through
+      { t: 0.0, p: { y: 0.86, lHipA: 0.3, lKnee: 0.25, rKnee: 0.15, roll: -0.04, lShF: 0.2, rShF: 0.2, lElb: 0.8, rElb: 0.8 } },
+      { t: 0.25, p: { y: 0.86, rHipA: 0.28, rKnee: 0.25, lHipA: 0.0, lKnee: 0.15, roll: 0.0 } },
+      { t: 0.5, p: { y: 0.86, lHipA: 0.3, lKnee: 0.25, rKnee: 0.15, roll: -0.04 } },
+      { t: 0.75, p: { y: 0.865, rHipA: 0.15, rHipF: 0.1, rKnee: 0.4, lKnee: 0.2, roll: -0.08, tRoll: 0.14, lHipA: 0.0 } },
+    ],
+    rootFn: (p, u) => { p.tPitch = 0.04 + 0.02 * sin(u * TAU * 4); },
+  },
+  "kwalk.ginga": {
+    bpm: 92, beats: 4,
+    keys: [
+      // grounded swaying walk — full transfers, hips answering, unhurried
+      { t: 0.0, p: { y: 0.845, lHipF: 0.45, lKnee: 0.35, rHipF: -0.1, rKnee: 0.3, tRoll: 0.1, roll: -0.05, lShF: -0.15, rShF: 0.15, lElb: 0.4, rElb: 0.4 } },
+      { t: 0.25, p: { y: 0.85, lHipF: 0.15, lKnee: 0.3, rHipF: 0.1, rKnee: 0.35, tRoll: 0.0, roll: 0.0 } },
+      { t: 0.5, p: { y: 0.845, rHipF: 0.45, rKnee: 0.35, lHipF: -0.1, lKnee: 0.3, tRoll: -0.1, roll: 0.05, rShF: -0.15, lShF: 0.15 } },
+      { t: 0.75, p: { y: 0.85, rHipF: 0.15, rKnee: 0.3, lHipF: 0.1, lKnee: 0.35, tRoll: 0.0, roll: 0.0 } },
+    ],
+  },
+  "sjazz.charleston": {
+    bpm: 140, beats: 4,
+    keys: [
+      // touch back, step, kick front, step — arms swinging opposite
+      { t: 0.0, p: { y: 0.855, lHipF: -0.45, lKnee: 0.35, rKnee: 0.2, rShF: 0.7, lShF: -0.7, lElb: 0.6, rElb: 0.6 } },
+      { t: 0.25, p: { y: 0.86, lHipF: 0.1, lKnee: 0.25, rKnee: 0.25, rShF: 0.2, lShF: 0.2 } },
+      { t: 0.5, p: { y: 0.855, lHipF: 0.8, lKnee: 0.15, rKnee: 0.25, lShF: 0.7, rShF: -0.7 } },
+      { t: 0.75, p: { y: 0.86, lHipF: 0.1, lKnee: 0.25, rKnee: 0.25, rShF: 0.2, lShF: 0.2 } },
+    ],
+    rootFn: (p, u) => { p.y -= 0.015 * Math.abs(sin(u * TAU * 4)); },
+  },
+  "sfoot.triples": {
+    bpm: 140, beats: 2,
+    keys: [
+      // swung triple: tri-ple-step left, then right — low, weight trading
+      { t: 0.0, p: { y: 0.855, lHipA: 0.22, lKnee: 0.35, rKnee: 0.2, roll: -0.04, lShF: 0.25, rShF: -0.25, lElb: 0.7, rElb: 0.7 } },
+      { t: 0.17, p: { y: 0.86, rKnee: 0.32, lKnee: 0.22 } },
+      { t: 0.33, p: { y: 0.855, lHipA: 0.26, lKnee: 0.34, rKnee: 0.2 } },
+      { t: 0.5, p: { y: 0.855, rHipA: 0.22, rKnee: 0.35, lKnee: 0.2, roll: 0.04, rShF: 0.25, lShF: -0.25, lHipA: 0.0 } },
+      { t: 0.67, p: { y: 0.86, lKnee: 0.32, rKnee: 0.22 } },
+      { t: 0.83, p: { y: 0.855, rHipA: 0.26, rKnee: 0.34, lKnee: 0.2 } },
+    ],
+    rootFn: (p, u) => { p.y -= 0.012 * Math.abs(sin(u * TAU * 2)); },
+  },
+
   /* ------------- waacking / dancehall / vogue prep (procedural v1) ------------- */
   "whack.basic": {
     bpm: 118, beats: 4,
