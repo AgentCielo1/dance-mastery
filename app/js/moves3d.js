@@ -508,6 +508,41 @@ export const MOVES = {
     ],
     rootFn: (p, u) => { p.tPitch = 0.07 + 0.05 * sin(u * TAU * 2); },
   },
+  /* ------------- waacking / dancehall / vogue prep (procedural v1) ------------- */
+  "whack.basic": {
+    bpm: 118, beats: 4,
+    keys: [
+      // overhead strikes: elbow leads, forearm whips past the ear, then recovers soft
+      { t: 0.0, p: { y: 0.87, rShA: 1.55, rShF: 0.9, rElb: 1.7, lShA: 0.4, lElb: 0.6, tRoll: 0.05 } },
+      { t: 0.12, p: { y: 0.875, rShA: 1.6, rShF: 1.1, rElb: 0.1 } },
+      { t: 0.35, p: { y: 0.87, rShA: 0.9, rShF: 0.4, rElb: 0.8, tRoll: 0.0 } },
+      { t: 0.5, p: { y: 0.87, lShA: 1.55, lShF: 0.9, lElb: 1.7, rShA: 0.4, rElb: 0.6, tRoll: -0.05 } },
+      { t: 0.62, p: { y: 0.875, lShA: 1.6, lShF: 1.1, lElb: 0.1 } },
+      { t: 0.85, p: { y: 0.87, lShA: 0.9, lShF: 0.4, lElb: 0.8, tRoll: 0.0 } },
+    ],
+    rootFn: (p, u) => { p.y += 0.01 * sin(u * TAU * 2); },
+  },
+  "dnamed.willie_bounce": {
+    bpm: 102, beats: 4,
+    keys: [
+      // step-touch with a shoulder lean, hand rolling out on the touch
+      { t: 0.0, p: { y: 0.85, roll: -0.09, lHipA: 0.35, lKnee: 0.25, rKnee: 0.4, rShF: 0.7, rShA: 0.5, rElb: 0.9, lElb: 0.5, tRoll: -0.1 } },
+      { t: 0.25, p: { y: 0.855, roll: 0.0, lHipA: 0.0, lKnee: 0.3, rKnee: 0.3, rElb: 0.4, tRoll: 0.0 } },
+      { t: 0.5, p: { y: 0.85, roll: 0.09, rHipA: 0.35, rKnee: 0.25, lKnee: 0.4, lShF: 0.7, lShA: 0.5, lElb: 0.9, rElb: 0.5, tRoll: 0.1 } },
+      { t: 0.75, p: { y: 0.855, roll: 0.0, rHipA: 0.0, lKnee: 0.3, rKnee: 0.3, lElb: 0.4, tRoll: 0.0 } },
+    ],
+    rootFn: (p, u) => { p.tPitch = 0.08 + 0.06 * sin(u * TAU * 4); },
+  },
+  "vfound.catwalk": {
+    bpm: 112, beats: 4,
+    keys: [
+      // hip-led walk on a line, chest proud, hands alive at the sides
+      { t: 0.0, p: { y: 0.865, lHipF: 0.55, lHipA: -0.22, lKnee: 0.15, rHipF: -0.1, tRoll: 0.1, roll: -0.05, lShA: 0.35, rShA: 0.35, lElb: 0.5, rElb: 0.5, tPitch: -0.06 } },
+      { t: 0.25, p: { y: 0.875, lHipF: 0.15, lHipA: 0.0, rHipF: 0.1, tRoll: 0.0, roll: 0.0 } },
+      { t: 0.5, p: { y: 0.865, rHipF: 0.55, rHipA: -0.22, rKnee: 0.15, lHipF: -0.1, tRoll: -0.1, roll: 0.05, lShA: 0.35, rShA: 0.35, tPitch: -0.06 } },
+      { t: 0.75, p: { y: 0.875, rHipF: 0.15, rHipA: 0.0, lHipF: 0.1, tRoll: 0.0, roll: 0.0 } },
+    ],
+  },
   "hfoot.skate": {
     bpm: 118, beats: 4,
     keys: [

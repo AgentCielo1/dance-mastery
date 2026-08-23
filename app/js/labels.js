@@ -21,6 +21,8 @@ export const FAMILY_LABELS = {
   lock: "The lock", points: "Points & twirls", flow: "Lock flow",
   // house
   jack: "The jack", lofting: "Lofting",
+  // waacking / dancehall
+  arms: "Whacks", posing: "Posing & lines",
   // shared
   musicality: "Musicality", culture: "Culture",
 };

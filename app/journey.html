@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dance Mastery — Your Journey</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%97%BA%3C/text%3E%3C/svg%3E">
+<style>
+  :root {
+    --bg: #0d0f14; --panel: #151924; --panel2: #1b2130; --line: #262e42;
+    --text: #e8ebf2; --muted: #8b94ab; --accent: #f5a623; --accent2: #4cc2ff; --ok: #38c172;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body { background: var(--bg); color: var(--text); font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; padding: 20px 16px 60px; max-width: 640px; margin: 0 auto; }
+  h1 { font-size: 1.4rem; }
+  h1 em { color: var(--accent); font-style: normal; }
+  nav { display: flex; gap: 14px; margin: 6px 0 16px; flex-wrap: wrap; }
+  nav a { color: var(--accent2); font-size: .85rem; text-decoration: none; }
+  .bignums { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 18px; }
+  .bignum { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 12px; text-align: center; }
+  .bignum b { display: block; font-size: 1.9rem; font-variant-numeric: tabular-nums; color: var(--accent); }
+  .bignum span { color: var(--muted); font-size: .72rem; text-transform: uppercase; letter-spacing: .8px; }
+  h2 { font-size: .82rem; text-transform: uppercase; letter-spacing: 1.2px; color: var(--accent2); margin: 20px 0 8px; }
+  #heat { display: grid; grid-template-rows: repeat(7, 1fr); grid-auto-flow: column; gap: 3px; }
+  .cell { width: 100%; aspect-ratio: 1; border-radius: 3px; background: var(--panel2); border: 1px solid #20273a; }
+  .cell.c1 { background: #2a5b41; border-color: #2a5b41; }
+  .cell.c2 { background: var(--ok); border-color: var(--ok); }
+  .cell.frozen { background: #1f4864; border-color: var(--accent2); }
+  .cell.today { outline: 2px solid var(--accent); }
+  .legend { color: var(--muted); font-size: .72rem; margin-top: 6px; }
+  .style-row { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 10px 14px; margin-bottom: 8px; }
+  .style-row .head { display: flex; justify-content: space-between; align-items: baseline; }
+  .style-row b { font-size: .95rem; }
+  .style-row small { color: var(--muted); }
+  .bar { height: 8px; border-radius: 99px; background: var(--panel2); overflow: hidden; display: flex; margin-top: 8px; }
+  .fill.clean { background: var(--ok); height: 100%; }
+  .fill.touched { background: #2a5b41; height: 100%; }
+  .empty { color: var(--muted); font-size: .9rem; background: var(--panel); border: 1px dashed var(--line); border-radius: 12px; padding: 16px; }
+  .word { color: var(--muted); font-size: .85rem; margin-top: 18px; max-width: 56ch; }
+</style>
+</head>
+<body>
+  <h1>YOUR <em>JOURNEY</em></h1>
+  <nav>
+    <a href="index.html">← Today</a>
+    <a href="library.html">Move Library</a>
+    <a href="rhythm.html">Rhythm</a>
+    <a href="catalog.html">🌍 All Dances</a>
+  </nav>
+
+  <div class="bignums">
+    <div class="bignum"><b id="n-sessions">0</b><span>votes cast</span></div>
+    <div class="bignum"><b id="n-days">0</b><span>days danced</span></div>
+    <div class="bignum"><b id="n-run">0</b><span>longest run</span></div>
+  </div>
+
+  <h2>Last 12 weeks</h2>
+  <div id="heat"></div>
+  <p class="legend">■ session · <span style="color:var(--accent2)">■ freeze</span> · every filled square is a vote for “I am a dancer who trains daily”</p>
+
+  <h2>Your styles</h2>
+  <div id="styles"></div>
+
+  <p class="word" id="word"></p>
+
+  <script type="module" src="js/journey.js"></script>
+</body>
+</html>

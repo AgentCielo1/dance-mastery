@@ -182,6 +182,48 @@ test("house pack: the jack comes first; club roots credited; borrowed steps say 
   assert.equal(info.theme, "Jack Season");
 });
 
+test("waacking pack: queer club origins are the root, in curriculum; Proctor credited", () => {
+  const wa = STYLES.waacking;
+  const origins = wa.nodes.find((n) => n.id === "wculture.origins");
+  assert.ok(origins.checkpoints.some((c) => /gay clubs/.test(c) && /punking/.test(c)), "punking origin told straight");
+  assert.ok(wa.nodes.some((n) => n.id === "wculture.proctor"), "Tyrone Proctor is curriculum");
+  const today9 = wa.nodes.find((n) => n.id === "wculture.today");
+  assert.ok(today9.checkpoints.some((c) => /weren't welcomed/.test(c)), "the welcome principle stated");
+  const info = seasonInfo(newState(T), T, wa.seasons);
+  assert.equal(info.theme, "Disco Season");
+});
+
+test("dancehall pack: every named step credits Bogle; etiquette is curriculum", () => {
+  const dh = STYLES.dancehall;
+  const named = dh.nodes.filter((n) => n.family === "named");
+  assert.ok(named.length >= 3, `named canon present (${named.length})`);
+  for (const n of named) assert.match(n.origin, /Bogle/, `${n.id} credits its creator`);
+  assert.ok(dh.nodes.some((n) => n.id === "dculture.bogle"), "Bogle's story is a node");
+  const etiquette = dh.nodes.find((n) => n.id === "dculture.etiquette");
+  assert.ok(etiquette.checkpoints.some((c) => /Jamaican teachers/.test(c)), "learn from the source");
+  const info = seasonInfo(newState(T), T, dh.seasons);
+  assert.equal(info.theme, "Riddim Season");
+});
+
+test("vogue pack: foundation-only — ballroom honesty hard-gates the movement prep", () => {
+  const vo = STYLES.vogue;
+  const honesty = vo.nodes.find((n) => n.id === "meta.ballroom_honesty");
+  assert.ok(honesty, "honesty node exists");
+  assert.ok(honesty.checkpoints.some((c) => /cannot make anyone part of ballroom/.test(c)));
+  for (const id of ["vfound.catwalk", "vfound.hands"]) {
+    const n = vo.nodes.find((x) => x.id === id);
+    assert.ok(n.prereqs.some((p) => p.id === "meta.ballroom_honesty" && p.kind === "hard"),
+      `${id} gated behind the honest limit`);
+  }
+  const ballroom = vo.nodes.find((n) => n.id === "vculture.ballroom");
+  assert.ok(ballroom.checkpoints.some((c) => /LGBTQ/.test(c) && /Harlem/.test(c)), "whose culture it is, stated");
+  const movement = vo.nodes.filter((n) => n.family === "movement");
+  assert.ok(movement.length <= 4, `movement stays preparatory (${movement.length}) — the categories are learned in community`);
+  assert.ok(vo.nodes.some((n) => n.id === "meta.vogue_class"), "the community class is the final destination");
+  const info = seasonInfo(newState(T), T, vo.seasons);
+  assert.equal(info.theme, "History Season");
+});
+
 test("new-pack animations exist in tree + move library with teaching checkpoints", () => {
   for (const id of ["pop.fresno", "wave.arm", "lock.lock", "point.point", "jack.basic", "hfoot.pdbr"]) {
     assert.ok(MOVES[id], `${id} animated`);

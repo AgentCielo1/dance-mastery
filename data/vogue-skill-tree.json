@@ -1,0 +1,293 @@
+{
+  "style": "vogue",
+  "version": "0.1.0",
+  "name": "Vogue (Foundation)",
+  "notes": "Vogue foundation pack — deliberately FOUNDATION ONLY, on the west-african-pack model. Voguing belongs to Harlem's ballroom culture: Black and Latino LGBTQ communities, houses as chosen family (House of LaBeija from the early 1970s onward), balls as both competition and sanctuary. That scene is entered through community — houses, balls, and community-run vogue classes — not through an app. So this pack teaches what preparation honestly can: the culture's history told straight, the Ha and ball musicality, posture/line/flexibility prep, and a hard honesty gate (meta.ballroom_honesty) that everything beyond basics sits behind. The performance categories themselves (Old Way precision, New Way, Vogue Fem's five elements) are DESCRIBED as curriculum knowledge but trained in community. Season arc ends at witnessing a real ball category and finding a community class.",
+  "seasons": [
+    {
+      "theme": "History Season",
+      "finale": "Tell someone the story: Harlem, the houses, why ballroom exists. If you can't teach the history, you're not ready for the movement."
+    },
+    {
+      "theme": "The Ha Season",
+      "finale": "Film 60 seconds of counts with the crash landed on every 4 — clap it, step it, own the punctuation."
+    },
+    {
+      "theme": "Line Season",
+      "finale": "Film posture and line work: long spine, finished arms, angles held — from kneel to stand without collapsing."
+    },
+    {
+      "theme": "Prep Season",
+      "finale": "Film the catwalk basics and hands intro — hip-led, framed, honest about what they are: preparation."
+    },
+    {
+      "theme": "Witness Season",
+      "finale": "Watch one full ball category (streams count), then find the community-run vogue class or kiki night nearest you."
+    }
+  ],
+  "attributes": [
+    {
+      "id": "attr.spine.l1",
+      "name": "Line & posture L1",
+      "test": "60s sequence tall-kneel to stand, spine long the whole way, shoulders easy, arms finishing every position"
+    },
+    {
+      "id": "attr.squat.l1",
+      "name": "Deep squat mobility L1",
+      "test": "60s deep squat hold, heels down, chest tall — the strength a duckwalk assessment would look for"
+    },
+    {
+      "id": "attr.wrist.l1",
+      "name": "Wrist articulation L1",
+      "test": "20 controlled wrist circles each hand at face height, fingers alive, elbow quiet"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "vculture.ballroom",
+      "type": "concept",
+      "family": "culture",
+      "name": "Harlem ballroom — houses, balls, chosen family",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "ballroom culture was built by Black and Latino LGBTQ communities in Harlem — balls as competition AND sanctuary",
+        "houses (House of LaBeija from the early 1970s, and the many after) are chosen families with mothers and fathers",
+        "voguing is ballroom's dance — it cannot be separated from the community that made and still runs it"
+      ]
+    },
+    {
+      "id": "vculture.categories",
+      "type": "concept",
+      "family": "culture",
+      "name": "The categories: Old Way, New Way, Vogue Fem",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "vculture.ballroom",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "Old Way (pre-1990): lines, symmetry, precision — the martial chess of the early balls",
+        "New Way: flexibility and geometric control taken further after 1990",
+        "Vogue Fem: dramatics and softness — commonly described through five elements: hands, catwalk, duckwalk, floor performance, spins & dips",
+        "knowing the categories is homework; walking one is earned in the scene"
+      ]
+    },
+    {
+      "id": "vculture.language",
+      "type": "concept",
+      "family": "culture",
+      "name": "The language came from here too",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "vculture.ballroom",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "much of what pop culture talks in — werk, shade, reading, slay, realness — is ballroom language that traveled without its credit",
+        "the commentator's chant is an art form of its own: the voice that drives a ball",
+        "when you use the words, know the room they came from"
+      ]
+    },
+    {
+      "id": "vmusic.ha",
+      "type": "concept",
+      "family": "musicality",
+      "name": "The Ha — ballroom's crash",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "vculture.ballroom",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "ballroom beats descend from 'The Ha Dance' — the crash lands on the 4 and the room hits WITH it",
+        "count in 4s and land something on every crash: a clap, a step, a look",
+        "the crash is punctuation — performance phrases end there"
+      ]
+    },
+    {
+      "id": "meta.ballroom_honesty",
+      "type": "concept",
+      "family": "meta",
+      "name": "The honest limit: ballroom is entered through community",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "vculture.categories",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "this app can teach history, musicality, and body preparation — it cannot make anyone part of ballroom",
+        "the scene is entered through houses, balls, kiki nights, and the community's own classes, where the culture teaches on its own terms",
+        "everything in this pack past the basics is PREPARATION for that room, not a substitute for it"
+      ]
+    },
+    {
+      "id": "vfound.posture",
+      "type": "move",
+      "family": "movement",
+      "name": "Posture & line",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "attr.spine.l1",
+          "kind": "hard"
+        },
+        {
+          "id": "vmusic.ha",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "long spine, neck tall, shoulders poured down the back",
+        "every arm position FINISHES — fingertips are the end of the sentence",
+        "angles read from across a room; soft edges read as unfinished"
+      ],
+      "mistakes": [
+        "lines that die at the wrist",
+        "posing from the arms while the spine slumps"
+      ]
+    },
+    {
+      "id": "vfound.catwalk",
+      "type": "move",
+      "family": "movement",
+      "name": "Catwalk basics (prep)",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "vfound.posture",
+          "kind": "hard"
+        },
+        {
+          "id": "meta.ballroom_honesty",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "hip-led walk on a single line, legs crossing, chest proud",
+        "hands alive at the sides — the walk is framed, not abandoned",
+        "land phrases on the Ha",
+        "this is the prep version — the real polish comes from community teachers"
+      ],
+      "mistakes": [
+        "walking flat-hipped and calling it catwalk"
+      ]
+    },
+    {
+      "id": "vfound.hands",
+      "type": "move",
+      "family": "movement",
+      "name": "Hands intro (prep)",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "vfound.posture",
+          "kind": "hard"
+        },
+        {
+          "id": "meta.ballroom_honesty",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.wrist.l1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "wrists articulate, fingers tell — hands frame the face and narrate around it",
+        "clean shapes at slow speed before any speed at all",
+        "hands answer the music, not the mirror"
+      ],
+      "mistakes": [
+        "flailing fast and calling it hands — story first"
+      ]
+    },
+    {
+      "id": "vfound.duckwalk_prep",
+      "type": "move",
+      "family": "movement",
+      "name": "Duckwalk strength prep",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "vfound.catwalk",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.squat.l1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "deep-squat heel-walks for strength and ankle mobility — the CAPACITY the move needs",
+        "chest stays tall in the squat; knees track over toes",
+        "this node builds the body for a duckwalk; the duckwalk itself is learned in community class"
+      ],
+      "mistakes": [
+        "grinding through knee pain — capacity work stops where pain starts"
+      ]
+    },
+    {
+      "id": "meta.vogue_witness",
+      "type": "combo",
+      "family": "meta",
+      "name": "Witness a ball",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "vculture.categories",
+          "kind": "hard"
+        },
+        {
+          "id": "meta.ballroom_honesty",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "watch one full ball category — many balls stream; watch the whole category, not a highlight clip",
+        "learn the houses walking it; notice how the commentator and the crowd shape the round",
+        "notice what the room gives that no tutorial can"
+      ]
+    },
+    {
+      "id": "meta.vogue_class",
+      "type": "combo",
+      "family": "meta",
+      "name": "Find the community's class",
+      "phase": 4,
+      "prereqs": [
+        {
+          "id": "meta.vogue_witness",
+          "kind": "hard"
+        },
+        {
+          "id": "vfound.hands",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "find the community-run vogue class, open session, or kiki night nearest you — and go when you can",
+        "arrive as a guest: listen more than you perform",
+        "from here, ballroom teaches — this pack's job is done"
+      ]
+    }
+  ],
+  "teachers": [
+    {
+      "name": "Ballroom culture — the history",
+      "url": "https://en.wikipedia.org/wiki/Ball_culture"
+    },
+    {
+      "name": "Voguing — origins and categories",
+      "url": "https://en.wikipedia.org/wiki/Vogue_(dance)"
+    }
+  ]
+}

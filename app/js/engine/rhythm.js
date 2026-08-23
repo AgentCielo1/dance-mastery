@@ -89,6 +89,16 @@ export const PATTERNS = {
     ],
     note: "The 3-3-2 cell over a steady four — the bounce lives in between.",
   },
+  ha: {
+    name: "The Ha (ballroom)",
+    beats: 4, defaultBpm: 126,
+    hits: [
+      { t: 0, type: "kick" }, { t: 1, type: "kick" }, { t: 2, type: "kick" }, { t: 3, type: "kick" },
+      { t: 0.5, type: "hat" }, { t: 1.5, type: "hat" }, { t: 2.5, type: "hat" },
+      { t: 3, type: "accent" }, { t: 3, type: "snare" },
+    ],
+    note: "The crash lands on the 4 — land something WITH it, every time.",
+  },
   bell12: {
     name: "12/8 bell (west african)",
     beats: 12, defaultBpm: 300,
@@ -112,6 +122,9 @@ export const STYLE_PATTERNS = {
   tango: "tangowalk",
   afrobeats: "afro338",
   westafrican: "bell12",
+  waacking: "fourfloor",
+  dancehall: "afro338",
+  vogue: "ha",
 };
 
 export const SOUND_TYPES = ["kick", "snare", "hat", "clave", "accent"];

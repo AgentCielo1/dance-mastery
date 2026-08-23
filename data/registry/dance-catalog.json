@@ -190,7 +190,8 @@
    "region": "Los Angeles",
    "origin": "Early-1970s LA Black and Latino gay clubs; spread via Tyrone Proctor and Soul Train",
    "essence": "Whipping rotational arm strikes, poses and Old-Hollywood glamour — defiance as style",
-   "scene": "Waacking battles, queer nightlife worldwide"
+   "scene": "Waacking battles, queer nightlife worldwide",
+   "pack": "waacking"
   },
   {
    "name": "Chicago Footwork / Juke",
@@ -230,7 +231,8 @@
    "region": "Harlem, NYC",
    "origin": "1960s-80s Black and Latino LGBTQ ballroom culture; houses from the early 1970s (LaBeija); icon Willi Ninja",
    "essence": "Precision lines, symmetry and fashion-pose framing — pre-1990 formations and grace",
-   "scene": "Balls, kiki functions, Paris Is Burning archive"
+   "scene": "Balls, kiki functions, Paris Is Burning archive",
+   "pack": "vogue"
   },
   {
    "name": "Voguing — New Way",
@@ -262,7 +264,8 @@
    "region": "Kingston, Jamaica",
    "origin": "Late-1970s-80s Kingston sessions; movement defined by named dancers — above all Bogle (Black Roses Crew)",
    "essence": "A living catalog of named steps tied to riddims — Willie Bounce, Nuh Linga, Dutty Wine",
-   "scene": "Street dances, sound systems, global camps and battles"
+   "scene": "Street dances, sound systems, global camps and battles",
+   "pack": "dancehall"
   },
   {
    "name": "Bruk Up",

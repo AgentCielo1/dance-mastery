@@ -1,0 +1,298 @@
+{
+  "style": "dancehall",
+  "version": "0.1.0",
+  "name": "Dancehall",
+  "notes": "Dancehall style pack (Doc 04 template). Kingston, Jamaica — late-1970s/80s sound-system sessions where the street IS the venue and the dance is current, living culture. Movement is defined by NAMED dancers, above all Bogle (Gerald Levy, Black Roses Crew), the greatest namer of moves; his steps are his legacy and this pack says his name on every one it teaches. Attribution discipline: v1 teaches only steps with rock-solid, widely documented creator credits (the Bogle-linked canon); steps with contested or thinly documented credits wait rather than guess. Etiquette is curriculum: dancehall is somebody's TODAY, not a costume — learn from Jamaican teachers, credit every step.",
+  "seasons": [
+    {
+      "theme": "Riddim Season",
+      "finale": "Film one full riddim of nonstop bounce — knees and chest riding it, never off beat."
+    },
+    {
+      "theme": "Waistline Season",
+      "finale": "Film 8 counts of controlled waistline rolls over the bounce, both directions."
+    },
+    {
+      "theme": "Bogle Season",
+      "finale": "Film the Bogle and the Willie Bounce back to back — and say his name on camera."
+    },
+    {
+      "theme": "Steps Season",
+      "finale": "Film a three-step medley, each step announced with its name and creator."
+    },
+    {
+      "theme": "Session Season",
+      "finale": "Take a dancehall class from a Jamaican teacher (online counts) — or better, find a session and feel the sound system."
+    }
+  ],
+  "attributes": [
+    {
+      "id": "attr.stamina.l1",
+      "name": "Bounce stamina L1",
+      "test": "one full riddim track of continuous knee-and-chest bounce without stiffening"
+    },
+    {
+      "id": "attr.waist.l1",
+      "name": "Waistline control L1",
+      "test": "20 slow controlled hip circles each direction, upper body easy, knees soft"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "dmusic.riddim",
+      "type": "concept",
+      "family": "musicality",
+      "name": "Riddim culture — one riddim, many songs",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "dancehall is built on riddims: one instrumental, versioned by many artists",
+        "find the bounce the riddim asks for — knees and chest answer the drums",
+        "when a step was made FOR a riddim, dancing it to that riddim is the full experience"
+      ]
+    },
+    {
+      "id": "dmusic.eras",
+      "type": "concept",
+      "family": "musicality",
+      "name": "Eras of the sound — early dancehall to the steps era to now",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "dmusic.riddim",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the 2000s steps era (Elephant Man calling moves on records) made steps into anthems",
+        "today's dancehall keeps producing new steps monthly — the culture is alive, not archived",
+        "match the era of the step to the era of the sound and both make more sense"
+      ]
+    },
+    {
+      "id": "dculture.kingston",
+      "type": "concept",
+      "family": "culture",
+      "name": "Kingston sessions — the street is the venue",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "born in late-1970s/80s Kingston at sound-system sessions — speakers in the street, the community as the floor",
+        "the session (the dance) is where steps debut, get named, live or die",
+        "dancehall is current Jamaican culture — somebody's tonight, not a museum piece"
+      ]
+    },
+    {
+      "id": "dculture.bogle",
+      "type": "concept",
+      "family": "culture",
+      "name": "Bogle — the greatest namer of moves",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "dculture.kingston",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "Bogle (Gerald Levy, Black Roses Crew) created and named more canonical steps than anyone — Bogle, Willie Bounce, Log On and many more",
+        "killed in 2005; his steps are his living legacy — dancers worldwide say his name when they dance them",
+        "crediting the creator isn't etiquette garnish in dancehall; it IS the culture's memory system"
+      ]
+    },
+    {
+      "id": "dculture.etiquette",
+      "type": "concept",
+      "family": "culture",
+      "name": "Visiting culture — how outsiders dance dancehall right",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "dculture.bogle",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "learn from Jamaican teachers first — plenty teach online to the world",
+        "name the step, name the creator, name the riddim when you share it",
+        "steps whose credits you don't know: dance them at home, research before you teach them onward"
+      ]
+    },
+    {
+      "id": "dgroove.bounce",
+      "type": "move",
+      "family": "groove",
+      "name": "The dancehall bounce",
+      "phase": 0,
+      "prereqs": [
+        {
+          "id": "dmusic.riddim",
+          "kind": "hard"
+        }
+      ],
+      "anchor": "the ground every step stands on",
+      "checkpoints": [
+        "knees pump the beat, chest rocks the answer — the whole body agrees with the riddim",
+        "grounded and easy: dancehall bounce sits INTO the floor",
+        "keep it going while your mind is elsewhere — that's when it's yours"
+      ],
+      "mistakes": [
+        "bouncing from the ankles only — the knees drive it",
+        "stiff chest riding on busy legs"
+      ]
+    },
+    {
+      "id": "dgroove.waistline",
+      "type": "move",
+      "family": "groove",
+      "name": "Waistline",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "dgroove.bounce",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.waist.l1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "hip circles and figure-8s over the bounce — isolated, controlled, unbothered",
+        "knees stay soft; the waistline is a hip skill, not a knee wobble",
+        "slow control first; speed is a remix"
+      ],
+      "mistakes": [
+        "circling the whole torso instead of the hips"
+      ]
+    },
+    {
+      "id": "dnamed.bogle",
+      "type": "move",
+      "family": "named",
+      "name": "The Bogle",
+      "phase": 1,
+      "origin": "created and named by Bogle (Gerald Levy, Black Roses Crew) — the signature that started the canon",
+      "prereqs": [
+        {
+          "id": "dgroove.bounce",
+          "kind": "hard"
+        },
+        {
+          "id": "dculture.bogle",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "arms roll in big alternating waves while the body leans back easy",
+        "the lean has swagger — relaxed, never rigid",
+        "ride the riddim; the arms phrase it, the bounce keeps it"
+      ],
+      "mistakes": [
+        "rolling the arms without the lean — half the move is posture"
+      ]
+    },
+    {
+      "id": "dnamed.willie_bounce",
+      "type": "move",
+      "family": "named",
+      "name": "Willie Bounce",
+      "phase": 2,
+      "origin": "created by Bogle (2004-05) in honor of Willie Haggart — one of his last gifts to the culture",
+      "prereqs": [
+        {
+          "id": "dnamed.bogle",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "step-touch with a shoulder lean, hand rolling out on the touch",
+        "the bounce never stops underneath — the step decorates it",
+        "say the name; know the story it carries"
+      ],
+      "mistakes": [
+        "marching it — the lean and roll make it a dance, not a drill"
+      ]
+    },
+    {
+      "id": "dnamed.log_on",
+      "type": "move",
+      "family": "named",
+      "name": "Log On",
+      "phase": 2,
+      "origin": "Bogle-era step, early 2000s — carried worldwide on Elephant Man's 'Log On'",
+      "prereqs": [
+        {
+          "id": "dnamed.bogle",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "step out with a lean and stamp the lead foot as the arms press down",
+        "big and committed — Log On fills space",
+        "land it on the ONE of the riddim"
+      ],
+      "mistakes": [
+        "small polite stamps — this step is a statement"
+      ]
+    },
+    {
+      "id": "meta.dh_medley",
+      "type": "combo",
+      "family": "meta",
+      "name": "The named-steps medley — filmed, credited",
+      "phase": 4,
+      "prereqs": [
+        {
+          "id": "dnamed.willie_bounce",
+          "kind": "hard"
+        },
+        {
+          "id": "dnamed.log_on",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.stamina.l1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "three named steps back to back, each announced: the step, the creator",
+        "bounce continuous underneath the whole medley",
+        "post or share it WITH the credits — model the culture's memory system"
+      ]
+    },
+    {
+      "id": "meta.dh_source",
+      "type": "combo",
+      "family": "meta",
+      "name": "Go to the source",
+      "phase": 4,
+      "prereqs": [
+        {
+          "id": "meta.dh_medley",
+          "kind": "hard"
+        },
+        {
+          "id": "dculture.etiquette",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "take a class from a Jamaican teacher — online counts fully",
+        "learn one step this pack doesn't have, with its credit, from that teacher",
+        "if you ever get the chance: a real session, a real sound system — go"
+      ]
+    }
+  ],
+  "teachers": [
+    {
+      "name": "Dancehall — the culture's history",
+      "url": "https://en.wikipedia.org/wiki/Dancehall"
+    },
+    {
+      "name": "STEEZY — Dancehall program (Jamaican instructors)",
+      "url": "https://www.steezy.co/"
+    }
+  ]
+}

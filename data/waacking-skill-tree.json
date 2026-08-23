@@ -1,0 +1,304 @@
+{
+  "style": "waacking",
+  "version": "0.1.0",
+  "name": "Waacking",
+  "notes": "Waacking style pack (Doc 04 template). Born as 'punking' in early-1970s Los Angeles Black and Latino gay clubs — a dance of defiant glamour that reclaimed an insult and turned club nights into cinema. Spread to the world by Tyrone 'The Bone' Proctor and Soul Train. Design truths: the whack is the namesake but the POSE is the soul — old-Hollywood glamour, the face fully in it; musicality is disco storytelling (strings, horns, drama); and the queer club origin is the root of the style, honored in curriculum, not mentioned as trivia.",
+  "seasons": [
+    {
+      "theme": "Disco Season",
+      "finale": "Film 60 seconds of the disco groove — strut alive, on beat, chin up like the club is watching."
+    },
+    {
+      "theme": "Whack Season",
+      "finale": "Film 8 counts of clean overhead whacks both arms — elbow leads, strikes land ON the beat."
+    },
+    {
+      "theme": "Pose Season",
+      "finale": "Film a pose run: four poses in 8 counts, every line finished, face committed."
+    },
+    {
+      "theme": "Drama Season",
+      "finale": "Film 30 seconds hitting the orchestration — whack the horns, melt with the strings, pose the break."
+    },
+    {
+      "theme": "Spotlight Season",
+      "finale": "Perform one disco track for humans — a class, a circle, a living room runway. Glamour requires witnesses."
+    }
+  ],
+  "attributes": [
+    {
+      "id": "attr.shoulders.l1",
+      "name": "Shoulder freedom L1",
+      "test": "20 full backstroke arm circles each side, smooth, shoulders never hiking"
+    },
+    {
+      "id": "attr.wrist.l1",
+      "name": "Wrist articulation L1",
+      "test": "20 clean wrist circles each hand with the arm extended overhead, elbow still"
+    },
+    {
+      "id": "attr.stamina.l1",
+      "name": "Club stamina L1",
+      "test": "one full disco track of continuous groove and arm work, breathing conversational"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "wmusic.disco",
+      "type": "concept",
+      "family": "musicality",
+      "name": "Disco time — strings, horns, four on the floor",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "waacking lives on disco: 110-130 BPM, orchestral, dramatic",
+        "the whack lands ON the beat; the pose lives BETWEEN beats",
+        "listen for the arrangement — strings and horns are your cues, not just the drums"
+      ]
+    },
+    {
+      "id": "wmusic.drama",
+      "type": "concept",
+      "family": "musicality",
+      "name": "Musical storytelling — dancing the arrangement",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "wmusic.disco",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "whack the horn stabs, melt with the strings, freeze the break",
+        "every song is a scene; you are the leading lady or the villain — choose",
+        "dynamics beat speed: one perfectly placed strike outdramas twenty"
+      ]
+    },
+    {
+      "id": "wculture.origins",
+      "type": "concept",
+      "family": "culture",
+      "name": "Punking: the clubs that made it (LA, early 1970s)",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "born in Los Angeles' Black and Latino gay clubs in the early 1970s — first called punking, an insult reclaimed and worn as armor",
+        "the glamour vocabulary channeled old-Hollywood divas — the club was the movie screen",
+        "the queer club origin is the ROOT of this dance; carrying the style means carrying that history with respect"
+      ]
+    },
+    {
+      "id": "wculture.proctor",
+      "type": "concept",
+      "family": "culture",
+      "name": "Tyrone Proctor and the world stage",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "wculture.origins",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "Tyrone 'The Bone' Proctor carried waacking onto Soul Train and around the world",
+        "the Outrageous Waack Dancers put the style on stages; today's teachers keep the lineage alive",
+        "watch original-era footage before stylizing your own — the source sets the standard"
+      ]
+    },
+    {
+      "id": "wculture.today",
+      "type": "concept",
+      "family": "culture",
+      "name": "The revival — battles, classes, and keeping the root",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "wculture.proctor",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "waacking battles run worldwide today (Juste Debout and the club scenes that never stopped)",
+        "learn from teachers who credit the clubs and name the pioneers",
+        "the style is welcome to everyone BECAUSE it came from people who weren't welcomed — never flip that upside down"
+      ]
+    },
+    {
+      "id": "wgroove.strut",
+      "type": "move",
+      "family": "groove",
+      "name": "The disco strut",
+      "phase": 0,
+      "prereqs": [
+        {
+          "id": "wmusic.disco",
+          "kind": "hard"
+        }
+      ],
+      "anchor": "the walk that says you belong here",
+      "checkpoints": [
+        "chest lifted, chin level, steps land on the beat with intention",
+        "hips travel, shoulders answer — the groove is the runway",
+        "eyes up: waacking never looks at the floor"
+      ],
+      "mistakes": [
+        "shy steps — the strut is a declaration",
+        "grooving down like hip hop; disco carries you UP"
+      ]
+    },
+    {
+      "id": "whack.basic",
+      "type": "move",
+      "family": "arms",
+      "name": "The whack (overhead strikes)",
+      "phase": 1,
+      "origin": "the style's namesake strike, forged in the LA punking clubs",
+      "prereqs": [
+        {
+          "id": "wgroove.strut",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.shoulders.l1",
+          "kind": "hard"
+        }
+      ],
+      "anchor": "a week to learn, a year to make it sing",
+      "checkpoints": [
+        "the elbow leads; the forearm whips over the head and past the ear",
+        "the strike lands ON the beat, then the arm recovers soft — hard-soft is the texture",
+        "wrists stay alive; dead hands kill the line",
+        "alternate arms without the groove stalling"
+      ],
+      "mistakes": [
+        "swinging from the shoulder like a windmill — the whack is a whip, not a swing",
+        "hitting yourself in the head (everyone does once; elbows wider)"
+      ]
+    },
+    {
+      "id": "whack.rolls",
+      "type": "move",
+      "family": "arms",
+      "name": "Rolls & figure-8s",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "whack.basic",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.wrist.l1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "consecutive whacks chain into rolls — the arms draw ribbons around the head",
+        "double-time the arms while the strut stays on the beat",
+        "the pattern breathes: roll, roll, STRIKE"
+      ],
+      "mistakes": [
+        "speed without shape — every rotation still has a line"
+      ]
+    },
+    {
+      "id": "pose.lines",
+      "type": "move",
+      "family": "posing",
+      "name": "Poses & lines",
+      "phase": 1,
+      "origin": "old-Hollywood glamour, channeled through the club",
+      "prereqs": [
+        {
+          "id": "wgroove.strut",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "a pose is a finished photograph: line complete from fingertips to face",
+        "frame the face — hands present it, chin sells it",
+        "hold a full beat minimum; a rushed pose is a missed pose",
+        "the face is IN the pose: bored eyes ruin perfect lines"
+      ],
+      "mistakes": [
+        "posing with unfinished hands",
+        "checking the mirror mid-pose — the camera is out THERE"
+      ]
+    },
+    {
+      "id": "pose.walk",
+      "type": "move",
+      "family": "posing",
+      "name": "The runway walk",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "pose.lines",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "strut + pose = runway: travel, plant, photograph, travel",
+        "corners are moments — turn like the room turned with you",
+        "own the space you cross; the walk claims the floor"
+      ]
+    },
+    {
+      "id": "meta.waack_song",
+      "type": "combo",
+      "family": "meta",
+      "name": "One disco track — filmed",
+      "phase": 4,
+      "prereqs": [
+        {
+          "id": "whack.rolls",
+          "kind": "hard"
+        },
+        {
+          "id": "pose.walk",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.stamina.l1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "one full track: whacks on beat, at least four finished poses, drama honored",
+        "commit to a character for the whole song",
+        "watch it back for FACE first, arms second"
+      ]
+    },
+    {
+      "id": "meta.waack_spotlight",
+      "type": "combo",
+      "family": "meta",
+      "name": "Spotlight — perform for humans",
+      "phase": 4,
+      "prereqs": [
+        {
+          "id": "meta.waack_song",
+          "kind": "hard"
+        },
+        {
+          "id": "wculture.today",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "a class, a circle, or a living-room runway with an audience of one — witnessed",
+        "say where the style came from if anyone asks — that's part of performing it",
+        "glamour is generosity: give the room a show"
+      ]
+    }
+  ],
+  "teachers": [
+    {
+      "name": "Waacking — punking's history and pioneers",
+      "url": "https://en.wikipedia.org/wiki/Waacking"
+    },
+    {
+      "name": "STEEZY — Waacking program",
+      "url": "https://www.steezy.co/"
+    }
+  ]
+}

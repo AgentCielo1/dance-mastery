@@ -298,6 +298,9 @@ const TAGLINES = {
   tango: "the walk, pivots, musicality",
   afrobeats: "bounce and creator-credited moves",
   westafrican: "rhythm literacy foundation",
+  waacking: "whacks, poses, disco drama",
+  dancehall: "the bounce and Bogle's steps",
+  vogue: "ballroom history + honest prep",
 };
 
 function needsOnboarding() {
