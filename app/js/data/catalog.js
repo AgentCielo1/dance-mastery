@@ -533,7 +533,8 @@ export default {
    "region": "Seoul, South Korea",
    "origin": "Sparked by Seo Taiji (1992), industrialized by idol agencies",
    "essence": "Point choreography, knife-sharp sync and formations engineered for replication",
-   "scene": "Idol stages, cover crews, random play dance"
+   "scene": "Idol stages, cover crews, random play dance",
+   "pack": "kpop"
   },
   {
    "name": "Heels Dance",
@@ -1727,7 +1728,8 @@ export default {
    "region": "USA",
    "origin": "Rooted in African-American vernacular, theatricalized by Cole, Dunham, Mattox, Fosse, Luigi",
    "essence": "Syncopation, isolations, low center, performative attack",
-   "scene": "Broadway, videos, competition circuit"
+   "scene": "Broadway, videos, competition circuit",
+   "pack": "jazz"
   },
   {
    "name": "Modern Dance",
@@ -1743,7 +1745,8 @@ export default {
    "region": "Global",
    "origin": "Post-1960s open field after Cunningham and Judson — release, floorwork, improvisation",
    "essence": "Eclectic and idea-driven; choreographer-defined",
-   "scene": "Festivals, project companies, tanztheater"
+   "scene": "Festivals, project companies, tanztheater",
+   "pack": "contemporary"
   },
   {
    "name": "Musical Theatre Dance",

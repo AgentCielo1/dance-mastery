@@ -356,6 +356,54 @@ test("wcs pack: Lindy descent credited back to Harlem; the anchor is gated core 
   assert.equal(info.theme, "Lineage Season");
 });
 
+test("k-pop pack: teaches skills, never routines — choreo copyright honesty enforced", () => {
+  const kp = STYLES.kpop;
+  const honesty = kp.nodes.find((n) => n.id === "meta.choreo_honesty");
+  assert.ok(honesty.checkpoints.some((c) => /copyrighted|choreographic WORK/i.test(c)), "the legal rule stated");
+  assert.ok(honesty.checkpoints.some((c) => /OFFICIAL dance-practice videos/.test(c)), "covers routed to the sanctioned door");
+  assert.ok(!kp.nodes.some((n) => n.type === "move" && /routine|cover of/i.test(n.name)),
+    "no node teaches a specific group's routine");
+  const origins = kp.nodes.find((n) => n.id === "kpculture.origins");
+  assert.ok(origins.checkpoints.some((c) => /Seo Taiji/.test(c)), "the 1992 spark credited");
+  assert.ok(kp.nodes.some((n) => n.id === "kpculture.training"), "the trainee system acknowledged honestly");
+  const cover = kp.nodes.find((n) => n.id === "meta.kpop_cover");
+  assert.ok(cover.prereqs.some((p) => p.id === "meta.choreo_honesty" && p.kind === "hard"),
+    "the cover milestone is gated on the honesty rule");
+  const info = seasonInfo(newState(T), T, kp.seasons);
+  assert.equal(info.theme, "Sharpness Season");
+});
+
+test("jazz pack: Black American roots named as the trunk; Dunham and Cole credited", () => {
+  const jz = STYLES.jazz;
+  const roots = jz.nodes.find((n) => n.id === "jzculture.roots");
+  assert.ok(roots.checkpoints.some((c) => /Black American vernacular/.test(c)), "the trunk named");
+  assert.ok(roots.checkpoints.some((c) => /Broadway.*middle, not the beginning/.test(c)), "the whitewash called out");
+  const codifiers = jz.nodes.find((n) => n.id === "jzculture.codifiers");
+  assert.ok(codifiers.checkpoints.some((c) => /Katherine Dunham/.test(c)));
+  assert.ok(codifiers.checkpoints.some((c) => /Jack Cole/.test(c)));
+  assert.ok(codifiers.checkpoints.some((c) => /copyrighted work/.test(c)), "Fosse's choreo stays his — rule applied");
+  const iso = jz.nodes.find((n) => n.id === "jziso.tower");
+  assert.equal(iso.phase, 0, "isolations open the pack — class starts here every day");
+  const info = seasonInfo(newState(T), T, jz.seasons);
+  assert.equal(info.theme, "Roots Season");
+});
+
+test("contemporary pack: the rebellions credited; floorwork gated and honestly capped", () => {
+  const ct = STYLES.contemporary;
+  const rebellions = ct.nodes.find((n) => n.id === "ctculture.rebellions");
+  for (const name of ["Duncan", "Graham", "Humphrey", "Limón", "Cunningham", "Judson"]) {
+    assert.ok(rebellions.checkpoints.some((c) => c.includes(name)), `${name} credited`);
+  }
+  const floor = ct.nodes.find((n) => n.id === "ctmove.floor");
+  assert.ok(floor.prereqs.some((p) => p.id === "attr.wrists.l1"), "floor visits gated on wrist readiness");
+  assert.ok(floor.checkpoints.some((c) => /sprung floor and a teacher/.test(c)), "the deep-floorwork limit stated");
+  assert.ok(ct.nodes.some((n) => n.id === "ctmove.improv"), "improvisation is curriculum, not garnish");
+  const today9 = ct.nodes.find((n) => n.id === "ctculture.today");
+  assert.ok(today9.checkpoints.some((c) => /integrated companies/.test(c)), "every body is repertory here");
+  const info = seasonInfo(newState(T), T, ct.seasons);
+  assert.equal(info.theme, "Breath Season");
+});
+
 test("new-pack animations exist in tree + move library with teaching checkpoints", () => {
   for (const id of ["pop.fresno", "wave.arm", "lock.lock", "point.point", "jack.basic", "hfoot.pdbr"]) {
     assert.ok(MOVES[id], `${id} animated`);

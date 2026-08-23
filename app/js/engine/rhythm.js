@@ -151,6 +151,15 @@ export const PATTERNS = {
     ],
     note: "Boom… chik-chik. The slow step stretches through the boom; the quicks answer the chiks.",
   },
+  flow68: {
+    name: "Flowing 6/8 (contemporary)",
+    beats: 6, defaultBpm: 160,
+    hits: [
+      { t: 0, type: "accent" }, { t: 3, type: "clave" },
+      { t: 1, type: "hat" }, { t: 2, type: "hat" }, { t: 4, type: "hat" }, { t: 5, type: "hat" },
+    ],
+    note: "Two gentle pulses per bar, six underneath — breathe with the ONE and the FOUR.",
+  },
   train: {
     name: "Train beat (country shuffle)",
     beats: 2, defaultBpm: 180,
@@ -215,6 +224,9 @@ export const STYLE_PATTERNS = {
   twostep: "train",
   linedance: "fourfloor",
   wcs: "westcoast",
+  kpop: "fourfloor",
+  jazz: "swing",
+  contemporary: "flow68",
 };
 
 export const SOUND_TYPES = ["kick", "snare", "hat", "clave", "accent"];

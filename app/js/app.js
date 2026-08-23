@@ -415,6 +415,9 @@ const TAGLINES = {
   twostep: "honky-tonk glide, QQSS",
   linedance: "alone together — truly solo",
   wcs: "the slot, the anchor, slow groove",
+  kpop: "sharpness, isolations, performance",
+  jazz: "the technique gym — roots credited",
+  contemporary: "breath, spine, swings, improv",
 };
 
 function needsOnboarding() {

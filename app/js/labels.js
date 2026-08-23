@@ -27,6 +27,8 @@ export const FAMILY_LABELS = {
   jazz: "Solo jazz",
   // brazilian wave
   samba: "The samba",
+  // k-pop wave
+  skills: "Choreo skills",
   // shared
   musicality: "Musicality", culture: "Culture",
 };

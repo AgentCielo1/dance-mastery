@@ -555,6 +555,53 @@ export const MOVES = {
     rootFn: (p, u) => { p.y -= 0.012 * Math.abs(sin(u * TAU * 2)); },
   },
 
+  /* ------------- k-pop wave: solo cores (procedural v1) ------------- */
+  "kpskill.sharpness": {
+    bpm: 120, beats: 4,
+    keys: [
+      // original sharp 8-count: hit, HOLD dead, snap to the next line
+      { t: 0.0, p: { y: 0.87, rShA: 1.4, rShF: 0.3, rElb: 0.1, lElb: 1.3, lShF: 0.3, tYaw: -0.12 } },
+      { t: 0.2, p: { y: 0.87, rShA: 1.4, rShF: 0.3, rElb: 0.1, lElb: 1.3, tYaw: -0.12 } },
+      { t: 0.27, p: { y: 0.87, lShA: 1.4, lShF: 0.3, lElb: 0.1, rElb: 1.3, rShF: 0.3, rShA: 0.0, tYaw: 0.12 } },
+      { t: 0.47, p: { y: 0.87, lShA: 1.4, lShF: 0.3, lElb: 0.1, rElb: 1.3, tYaw: 0.12 } },
+      { t: 0.54, p: { y: 0.85, lShF: 0.9, rShF: 0.9, lElb: 1.6, rElb: 1.6, lKnee: 0.25, rKnee: 0.25, tYaw: 0.0, tPitch: 0.08, lShA: 0.0 } },
+      { t: 0.78, p: { y: 0.85, lShF: 0.9, rShF: 0.9, lElb: 1.6, rElb: 1.6, lKnee: 0.25, rKnee: 0.25, tPitch: 0.08 } },
+      { t: 0.86, p: { y: 0.875, lShF: 0.15, rShF: 0.15, lElb: 0.4, rElb: 0.4, lKnee: 0.1, rKnee: 0.1, tPitch: 0.0 } },
+    ],
+  },
+  "jziso.tower": {
+    bpm: 100, beats: 4,
+    keys: [
+      // head slides, shoulder lifts, rib shift, hip bump — one floor at a time
+      { t: 0.0, p: { y: 0.87, tYaw: 0.18, lShA: 0.3, rShA: 0.3, lElb: 0.9, rElb: 0.9 } },
+      { t: 0.25, p: { y: 0.87, tYaw: -0.18 } },
+      { t: 0.5, p: { y: 0.87, tYaw: 0.0, tRoll: 0.14 } },
+      { t: 0.75, p: { y: 0.865, tRoll: -0.14, roll: 0.05, lHipA: 0.12 } },
+    ],
+  },
+  "jzfoot.jazzwalk": {
+    bpm: 96, beats: 4,
+    keys: [
+      // low in plié, toe leading, stretched through the crown, opposition alive
+      { t: 0.0, p: { y: 0.84, lHipF: 0.55, lKnee: 0.2, rHipF: -0.1, rKnee: 0.35, rShF: 0.4, lShF: -0.4, lElb: 0.3, rElb: 0.3, tPitch: -0.04 } },
+      { t: 0.25, p: { y: 0.845, lHipF: 0.15, rHipF: 0.15, lKnee: 0.3, rKnee: 0.3 } },
+      { t: 0.5, p: { y: 0.84, rHipF: 0.55, rKnee: 0.2, lHipF: -0.1, lKnee: 0.35, lShF: 0.4, rShF: -0.4, tPitch: -0.04 } },
+      { t: 0.75, p: { y: 0.845, lHipF: 0.15, rHipF: 0.15, lKnee: 0.3, rKnee: 0.3 } },
+    ],
+  },
+  "ctmove.swings": {
+    bpm: 160, beats: 6,
+    keys: [
+      // release into gravity, ride the arc, catch the suspension at the top
+      { t: 0.0, p: { y: 0.83, tPitch: 0.55, lShF: 1.1, rShF: 1.1, lElb: 0.2, rElb: 0.2, lKnee: 0.4, rKnee: 0.4 } },
+      { t: 0.25, p: { y: 0.87, tPitch: 0.05, lShF: -0.6, rShF: -0.6, lKnee: 0.15, rKnee: 0.15 } },
+      { t: 0.42, p: { y: 0.875, tPitch: -0.08, lShF: -0.9, rShF: -0.9, lKnee: 0.1, rKnee: 0.1 } },
+      { t: 0.5, p: { y: 0.83, tPitch: 0.55, lShF: 1.1, rShF: 1.1, lKnee: 0.4, rKnee: 0.4 } },
+      { t: 0.75, p: { y: 0.87, tPitch: 0.05, lShF: -0.6, rShF: -0.6, tRoll: 0.12, lKnee: 0.15, rKnee: 0.15 } },
+      { t: 0.92, p: { y: 0.875, tPitch: -0.08, lShF: -0.9, rShF: -0.9, tRoll: 0.0, lKnee: 0.1, rKnee: 0.1 } },
+    ],
+  },
+
   /* ------------- country & western wave: solo cores (procedural v1) ------------- */
   "tsfoot.basic": {
     bpm: 180, beats: 6,

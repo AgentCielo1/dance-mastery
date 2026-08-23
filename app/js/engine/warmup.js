@@ -101,6 +101,18 @@ const STYLE_EXTRAS = {
     "Slow rolling walks 60s, level head — smoothness starts here",
     "Sit-back holds x6 (3s each) — load the anchor before you dance it",
   ],
+  kpop: [
+    "Dynamic full-body: arm swings, torso twists, leg swings x10 each — sharp choreo loads everything",
+    "Controlled arm stops x8 easy-range — rehearse the brakes before you drive fast",
+  ],
+  jazz: [
+    "Gentle isolation ladder: head, shoulders, ribs, hips x4 each — wake the tower slowly",
+    "Ankle relevés x15 — turns and walks bill the ankles first",
+  ],
+  contemporary: [
+    "Three slow roll-downs, hanging heavy at the bottom — the spine opens gradually",
+    "Quadruped wrist rocks 30s — floor visits start with happy wrists",
+  ],
 };
 
 export function warmupFor(style) {
