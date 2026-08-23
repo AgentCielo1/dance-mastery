@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dance Mastery — Rhythm Trainer</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A5%81%3C/text%3E%3C/svg%3E">
+<style>
+  :root {
+    --bg: #0d0f14; --panel: #151924; --panel2: #1b2130; --line: #262e42;
+    --text: #e8ebf2; --muted: #8b94ab; --accent: #f5a623; --accent2: #4cc2ff; --ok: #38c172;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body { background: var(--bg); color: var(--text); font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; padding: 20px 16px 60px; max-width: 640px; margin: 0 auto; }
+  h1 { font-size: 1.4rem; }
+  h1 em { color: var(--accent); font-style: normal; }
+  nav { display: flex; gap: 14px; margin: 6px 0 16px; }
+  nav a { color: var(--accent2); font-size: .85rem; text-decoration: none; }
+  .why { color: var(--muted); font-size: .88rem; margin-bottom: 16px; max-width: 56ch; }
+  select, input[type=range] { width: 100%; }
+  select { background: var(--panel); color: var(--text); border: 1px solid var(--line); border-radius: 10px; padding: 12px; font-size: 1rem; margin-bottom: 12px; }
+  .note { color: var(--accent2); font-size: .88rem; min-height: 2.6em; margin-bottom: 8px; }
+  .bpmrow { display: flex; align-items: center; gap: 14px; margin: 10px 0 18px; }
+  #bpmval { font-size: 2.2rem; font-weight: 800; font-variant-numeric: tabular-nums; min-width: 96px; }
+  #bpmval small { font-size: .8rem; color: var(--muted); font-weight: 400; }
+  input[type=range] { accent-color: var(--accent); height: 32px; }
+  #beats { display: flex; gap: 6px; margin: 6px 0 18px; flex-wrap: wrap; }
+  .b { flex: 1; min-width: 20px; height: 46px; border-radius: 8px; background: var(--panel2); border: 1px solid var(--line); transition: background .05s; }
+  .b.on { background: var(--accent); border-color: var(--accent); }
+  .b.on.soft { background: #7a5a1e; }
+  #go { width: 100%; padding: 16px; border: none; border-radius: 14px; background: var(--accent); color: #14100a; font-size: 1.1rem; font-weight: 700; cursor: pointer; min-height: 52px; }
+  #go.running { background: var(--panel); color: var(--warn, #ff6b6b); border: 1px solid var(--line); color: #ff6b6b; }
+  .legal { color: var(--muted); font-size: .75rem; margin-top: 18px; }
+</style>
+</head>
+<body>
+  <h1>RHYTHM <em>TRAINER</em></h1>
+  <nav>
+    <a href="index.html">← Today</a>
+    <a href="practice.html">Practice Mirror</a>
+    <a href="library.html">Move Library</a>
+  </nav>
+  <p class="why">Musicality is a pillar in every pack — but you can't drill what you can't hear. Every rhythm here is synthesized on your device: the funk ONE, the clave, the bell. Pick your style's pulse and train your ear while you train your feet.</p>
+
+  <select id="pattern"></select>
+  <p class="note" id="pnote"></p>
+
+  <div class="bpmrow">
+    <div id="bpmval">100<small> BPM</small></div>
+    <input id="bpm" type="range" min="60" max="200" step="1" value="100">
+  </div>
+
+  <div id="beats"></div>
+
+  <button id="go">▶ Start</button>
+
+  <p class="legal">100% licensing-free: these are synthesized practice pulses, not songs. When you're ready for real music, the packs tell you which artists and orchestras to put on.</p>
+
+  <script type="module" src="js/rhythm.js"></script>
+</body>
+</html>

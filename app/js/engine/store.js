@@ -53,6 +53,15 @@ export function importState(json) {
   return s;
 }
 
+// True when any style has saved progress — a returning dancer, not a first visit.
+export function hasAnyProgress(storage, styles) {
+  try {
+    return styles.some((s) => storage?.getItem?.(keyFor(s)) != null);
+  } catch {
+    return false;
+  }
+}
+
 // ---- All-device sync (Doc 06: progress is the dancer's, not a server's) ----
 // One bundle carries every style's state plus preferences, so a phone and a
 // computer can trade complete snapshots with zero backend.

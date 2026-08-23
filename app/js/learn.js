@@ -109,6 +109,8 @@ $("#loopB").addEventListener("input", (e) => { loopB = Number(e.target.value); i
 const checkpoints = cap ? (CAPTURE_NOTES[moveId] ?? []) : (node?.checkpoints ?? []);
 const mistakes = cap ? [] : (node?.mistakes ?? []);
 $("#checkpoints").innerHTML =
+  // respect architecture: the credit travels with the lesson, always first
+  (node?.origin ? `<p class="prereqs" style="color:var(--accent)">✊ Origin: ${node.origin}</p>` : "") +
   (checkpoints.length ? `<h3>Form checkpoints</h3><ol>` + checkpoints.map((c, i) =>
     `<li data-cp="${i}">${c}</li>`).join("") + `</ol>` : "") +
   (mistakes.length ? `<h3 class="warn-h">Watch out for</h3><ul>` + mistakes.map((m) =>

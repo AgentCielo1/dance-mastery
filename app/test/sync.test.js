@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { newState, saveState, loadState, exportBundle, importBundle } from "../js/engine/store.js";
+import { newState, saveState, loadState, exportBundle, importBundle, hasAnyProgress } from "../js/engine/store.js";
 
 const T = "2026-08-23";
 
@@ -44,6 +44,14 @@ test("sync: legacy single-style export is recognized, not rejected", () => {
   const result = importBundle(legacy, memStorage());
   assert.equal(result.kind, "single");
   assert.equal(result.state.sessions.length, 1);
+});
+
+test("onboarding: hasAnyProgress separates first visits from returning dancers", () => {
+  const s = memStorage();
+  assert.equal(hasAnyProgress(s, ["breaking", "hiphop"]), false, "fresh device");
+  saveState(newState(T), s, "hiphop");
+  assert.equal(hasAnyProgress(s, ["breaking", "hiphop"]), true, "any style counts");
+  assert.equal(hasAnyProgress(null, ["breaking"]), false, "no storage is never a crash");
 });
 
 test("sync: garbage and wrong shapes fail loudly, corrupt entries are skipped", () => {

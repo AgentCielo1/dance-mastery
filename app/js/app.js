@@ -7,7 +7,7 @@ import { STAGES, STAGE, familyProgress, workingPhase } from "./engine/graph.js";
 import { QUALITY, stageUpSuggested } from "./engine/srs.js";
 import { rollingWeek, firewall, freezesLeft, applyFreeze, repairYesterday } from "./engine/streak.js";
 import { generateSession, completeSession, allowedSizes, SIZES } from "./engine/session.js";
-import { loadState, saveState, newState, importState, exportBundle, importBundle } from "./engine/store.js";
+import { loadState, saveState, newState, importState, exportBundle, importBundle, hasAnyProgress } from "./engine/store.js";
 import { keepAwake } from "./wakelock.js";
 import { installHint } from "./install.js";
 
@@ -286,6 +286,60 @@ $("#reset").addEventListener("click", () => {
   render();
 });
 
+// ---- First visit: 30 seconds from stranger to dancer ----
+const TAGLINES = {
+  breaking: "footwork, freezes, power — the original",
+  hiphop: "grooves and the party classics",
+  popping: "hits, waves, robot — funk styles",
+  locking: "locks, points, big character",
+  house: "the jack and flying footwork",
+  salsa: "shines, timing, partnerwork prep",
+  ballet: "alignment, barre, control",
+  tango: "the walk, pivots, musicality",
+  afrobeats: "bounce and creator-credited moves",
+  westafrican: "rhythm literacy foundation",
+};
+
+function needsOnboarding() {
+  try {
+    return !storage.getItem("dance-mastery-onboarded") && !hasAnyProgress(storage, Object.keys(STYLES));
+  } catch { return false; }
+}
+
+function showOnboarding() {
+  const wrap = $("#onboard");
+  let pick = null;
+  $("#onboard-styles").innerHTML = Object.keys(STYLES).map((s) =>
+    `<button class="size" data-pick="${s}" style="text-align:left"><span>${styleName(s)}</span><small>${TAGLINES[s] ?? ""}</small></button>`).join("");
+  wrap.querySelectorAll("[data-pick]").forEach((b) => b.addEventListener("click", () => {
+    pick = b.dataset.pick;
+    wrap.querySelectorAll("[data-pick]").forEach((x) => x.classList.toggle("active", x === b));
+    $("#onboard-start").disabled = false;
+  }));
+  $("#onboard-start").addEventListener("click", () => {
+    try {
+      storage.setItem("dance-mastery-onboarded", "1");
+      if (pick) storage.setItem("dance-mastery-style", pick);
+    } catch { /* no storage */ }
+    if (pick && STYLES[pick]) {
+      style = pick;
+      tree = STYLES[style];
+      styleSel.value = style;
+      state = loadState(today, storage, style);
+      resetPending();
+    }
+    wrap.classList.remove("open");
+    render();
+    installHint(storage);
+  });
+  wrap.classList.add("open");
+}
+
 render();
-keepAwake();          // a phone that locks mid-drill kills the session
-installHint(storage); // once, dismissible: put the app on the home screen
+keepAwake(); // a phone that locks mid-drill kills the session
+if (needsOnboarding()) {
+  showOnboarding();
+} else {
+  try { storage.setItem("dance-mastery-onboarded", "1"); } catch { /* no storage */ }
+  installHint(storage); // once, dismissible: put the app on the home screen
+}
