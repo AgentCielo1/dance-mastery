@@ -421,6 +421,9 @@ const TAGLINES = {
   tap: "you are the drummer",
   irish: "the lift — 1-2-3s and céilí prep",
   flamenco: "compás, palmas, braceo — cante first",
+  raqs: "hipwork on the dums — Egypt first",
+  dabke: "the Levant's line — six counts in",
+  persian: "wrists, naz, the 6/8 — a keeping",
 };
 
 function needsOnboarding() {

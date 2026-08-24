@@ -29,6 +29,8 @@ export const FAMILY_LABELS = {
   samba: "The samba",
   // k-pop wave
   skills: "Choreo skills",
+  // middle-eastern wave
+  hips: "Hipwork", undulation: "Undulations", line: "The line",
   // shared
   musicality: "Musicality", culture: "Culture",
 };

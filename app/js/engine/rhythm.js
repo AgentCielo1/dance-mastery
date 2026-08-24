@@ -151,6 +151,36 @@ export const PATTERNS = {
     ],
     note: "Boom… chik-chik. The slow step stretches through the boom; the quicks answer the chiks.",
   },
+  maqsoum: {
+    name: "Maqsoum (dum-tak)",
+    beats: 4, defaultBpm: 108,
+    hits: [
+      { t: 0, type: "kick" }, { t: 2, type: "kick" },
+      { t: 0.5, type: "clave" }, { t: 1.5, type: "clave" }, { t: 3, type: "clave" },
+      { t: 1, type: "hat" }, { t: 2.5, type: "hat" }, { t: 3.5, type: "hat" },
+    ],
+    note: "DUM-TAK — TAK-DUM — TAK. The tabla's language; the hips answer the dums.",
+  },
+  dabkeh: {
+    name: "Dabke drive",
+    beats: 4, defaultBpm: 120,
+    hits: [
+      { t: 0, type: "kick" }, { t: 1, type: "kick" }, { t: 2, type: "kick" }, { t: 3, type: "kick" },
+      { t: 0, type: "accent" }, { t: 2.5, type: "snare" }, { t: 3.5, type: "snare" },
+      { t: 0.5, type: "hat" }, { t: 1.5, type: "hat" },
+    ],
+    note: "The derbake drives, the line answers — six-count step over a four-beat engine; stomp the ONE.",
+  },
+  shesh: {
+    name: "Shesh-o-hasht (persian 6/8)",
+    beats: 6, defaultBpm: 170,
+    hits: [
+      { t: 0, type: "kick" }, { t: 3, type: "kick" },
+      { t: 2, type: "clave" }, { t: 5, type: "clave" },
+      { t: 1, type: "hat" }, { t: 4, type: "hat" },
+    ],
+    note: "The Persian lilt — six-eight that refuses to be square. Sway until your weight changes without permission.",
+  },
   reel: {
     name: "Reel (irish 4/4)",
     beats: 4, defaultBpm: 112,
@@ -251,6 +281,9 @@ export const STYLE_PATTERNS = {
   tap: "swing",
   irish: "reel",
   flamenco: "compas12",
+  raqs: "maqsoum",
+  dabke: "dabkeh",
+  persian: "shesh",
 };
 
 export const SOUND_TYPES = ["kick", "snare", "hat", "clave", "accent"];

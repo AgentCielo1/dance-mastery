@@ -125,6 +125,18 @@ const STYLE_EXTRAS = {
     "Slow arm circles x6 each arm, shoulders down — braceo begins warm",
     "Gentle heel-ball strike alternations 30s, knees soft — never hammer cold",
   ],
+  raqs: [
+    "Slow hip circles x8 each way over SOFT knees — the hips wake gently",
+    "Knee-release bounces 30s, totally relaxed — the shimmy's engine is looseness",
+  ],
+  dabke: [
+    "Ankle circles x10 each way + light stomp rehearsals x8, soft knees",
+    "Springy pulse-step 60s — the line runs on warm calves",
+  ],
+  persian: [
+    "Wrist circles x10 each hand, forearm still — the signature starts warm",
+    "Easy shoulder rolls x10 and single-shoulder lifts x8 each side",
+  ],
 };
 
 export function warmupFor(style) {

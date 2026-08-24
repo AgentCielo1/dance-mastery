@@ -555,6 +555,40 @@ export const MOVES = {
     rootFn: (p, u) => { p.y -= 0.012 * Math.abs(sin(u * TAU * 2)); },
   },
 
+  /* ------------- middle-eastern wave: solo cores (procedural v1) ------------- */
+  "rqflow.maya": {
+    bpm: 108, beats: 4,
+    keys: [
+      // vertical figure-8s: up-and-over each side, ribs quiet, arms framing soft
+      { t: 0.0, p: { y: 0.865, lKnee: 0.2, rKnee: 0.25, lShA: 1.1, rShA: 1.1, lShF: 0.3, rShF: 0.3, lElb: 0.8, rElb: 0.8 } },
+      { t: 0.5, p: { y: 0.865, lKnee: 0.25, rKnee: 0.2 } },
+    ],
+    // hips draw the eight; the ribs stay pinned
+    rootFn: (p, u, t) => { p.roll = 0.09 * sin(t * TAU); p.y += 0.012 * sin(t * TAU * 2); p.tRoll = -0.05 * sin(t * TAU); },
+  },
+  "dbstep.basic": {
+    bpm: 120, beats: 6,
+    keys: [
+      // cross, cross, step, kick, stomp — traveling the line's direction, chest proud
+      { t: 0.0, p: { y: 0.86, lHipA: -0.25, lHipF: 0.25, lKnee: 0.3, rKnee: 0.2, tPitch: -0.03, lShF: 0.45, lShA: 0.35, lElb: 0.9, rShF: 0.1 } },
+      { t: 0.17, p: { y: 0.865, rHipA: 0.2, rKnee: 0.25, lHipA: 0.0, lHipF: 0.0, lKnee: 0.2 } },
+      { t: 0.33, p: { y: 0.86, lHipA: -0.25, lHipF: 0.25, lKnee: 0.3, rKnee: 0.2 } },
+      { t: 0.5, p: { y: 0.865, rHipA: 0.2, rKnee: 0.25, lHipA: 0.0, lHipF: 0.0 } },
+      { t: 0.67, p: { y: 0.87, rHipF: 0.7, rKnee: 0.25, lKnee: 0.15 } },
+      { t: 0.83, p: { y: 0.85, rHipF: 0.1, rKnee: 0.35, lKnee: 0.3, tPitch: 0.02 } },
+    ],
+  },
+  "prmove.wrists": {
+    bpm: 170, beats: 6,
+    keys: [
+      // the 6/8 sway underneath; wrists circle, fingers trailing like silk
+      { t: 0.0, p: { y: 0.865, roll: -0.04, lKnee: 0.2, rKnee: 0.15, lShA: 0.9, rShA: 0.9, lShF: 0.4, rShF: 0.4, lElb: 0.7, rElb: 0.7, tRoll: 0.05 } },
+      { t: 0.5, p: { y: 0.865, roll: 0.04, lKnee: 0.15, rKnee: 0.2, tRoll: -0.05 } },
+    ],
+    // wrist circles simulated at the forearm's end — small, continuous, unhurried
+    rootFn: (p, u, t) => { p.lElb += 0.15 * sin(t * TAU * 3); p.rElb += 0.15 * cos(t * TAU * 3); p.lShF += 0.06 * sin(t * TAU * 1.5); p.rShF += 0.06 * cos(t * TAU * 1.5); },
+  },
+
   /* ------------- step-dance wave: solo cores (procedural v1) ------------- */
   "tpstep.shuffle": {
     bpm: 120, beats: 2,

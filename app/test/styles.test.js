@@ -451,6 +451,51 @@ test("flamenco pack: Gitano heart credited; cante-first hierarchy; zapateado gat
   assert.equal(info.theme, "Compás Season");
 });
 
+test("raqs pack: Egyptian art named as its own; baladi root and golden age credited; orientalism named", () => {
+  const rq = STYLES.raqs;
+  const exonym = rq.nodes.find((n) => n.id === "rqculture.exonym");
+  assert.ok(exonym.checkpoints.some((c) => /Western exonym/.test(c) && /raqs sharqi/.test(c)), "the name honesty stated");
+  assert.ok(exonym.checkpoints.some((c) => /orientalist|exoticized/.test(c)), "orientalism's shadow named");
+  const baladi = rq.nodes.find((n) => n.id === "rqculture.baladi");
+  assert.ok(baladi.checkpoints.some((c) => /Badia Masabni/.test(c)), "the Cairo stage credited");
+  assert.ok(baladi.checkpoints.some((c) => /Tahia Carioca/.test(c) && /Samia Gamal/.test(c)), "golden-age dancers credited");
+  const shimmy = rq.nodes.find((n) => n.id === "rqhip.shimmy");
+  assert.ok(shimmy.prereqs.some((p) => p.id === "attr.knees.l1"), "the shimmy is gated on knee release");
+  assert.equal(rq.nodes.filter((n) => n.partner).length, 0, "raqs sharqi is genuinely solo");
+  const info = seasonInfo(newState(T), T, rq.seasons);
+  assert.equal(info.theme, "Maqsoum Season");
+});
+
+test("dabke pack: the Levant named; continuity meaning stated plainly; the line waits for people", () => {
+  const db = STYLES.dabke;
+  const levant = db.nodes.find((n) => n.id === "dbculture.levant");
+  assert.ok(levant.checkpoints.some((c) => /Lebanon, Palestine, Syria, Jordan/.test(c)), "whose dance this is");
+  const meaning = db.nodes.find((n) => n.id === "dbculture.meaning");
+  assert.ok(meaning.checkpoints.some((c) => /Palestinians/.test(c) && /cultural preservation/.test(c)),
+    "the continuity meaning stated as communities state it");
+  assert.ok(db.nodes.some((n) => n.id === "dbculture.lawweeh"), "the lawweeh is curriculum");
+  const line = db.nodes.find((n) => n.id === "dbline.join");
+  assert.ok(line.partner && line.phase >= 3, "the line is group-flagged and late — the hafleh is the classroom");
+  assert.ok(line.checkpoints.some((c) => /END of the line/.test(c)), "join-at-the-end etiquette taught");
+  const info = seasonInfo(newState(T), T, db.seasons);
+  assert.equal(info.theme, "Mijwiz Season");
+});
+
+test("persian pack: Qajar lineage; suppression and diaspora keeping told factually; wrists first", () => {
+  const pr = STYLES.persian;
+  const survival = pr.nodes.find((n) => n.id === "prculture.survival");
+  assert.ok(survival.checkpoints.some((c) => /1979/.test(c) && /suppressed/.test(c)), "the suppression stated factually");
+  assert.ok(survival.checkpoints.some((c) => /sustained by its diaspora/.test(c)), "the keeping credited");
+  const honesty = pr.nodes.find((n) => n.id === "meta.diaspora_honesty");
+  assert.ok(honesty.checkpoints.some((c) => /cannot be the aroosi/.test(c)), "the honest limit stated");
+  const wrists = pr.nodes.find((n) => n.id === "prmove.wrists");
+  assert.ok(wrists.prereqs.some((p) => p.id === "attr.wrists.l1"), "the signature is gated on articulation readiness");
+  assert.ok(pr.nodes.some((n) => n.id === "prmove.shoulders" && n.checkpoints.some((c) => /naz/.test(c))),
+    "naz is described, then practiced");
+  const info = seasonInfo(newState(T), T, pr.seasons);
+  assert.equal(info.theme, "Shesh-o-Hasht Season");
+});
+
 test("new-pack animations exist in tree + move library with teaching checkpoints", () => {
   for (const id of ["pop.fresno", "wave.arm", "lock.lock", "point.point", "jack.basic", "hfoot.pdbr"]) {
     assert.ok(MOVES[id], `${id} animated`);

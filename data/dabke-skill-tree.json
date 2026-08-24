@@ -1,0 +1,295 @@
+{
+  "style": "dabke",
+  "version": "0.1.0",
+  "name": "Dabke",
+  "notes": "Dabke style pack (Doc 04 template). The line dance of the Levant — Lebanon, Palestine, Syria, Jordan — stomped at weddings, village celebrations and family halls, arms linked shoulder to shoulder. Meaning told factually: dabke is communal identity made physical; the stomping-together lore traces to villagers packing mud roofs in unison, and for Palestinians especially, dancing dabke is also an act of cultural preservation and continuity — stated plainly, as communities themselves state it. Design truths: the basic six-count line step and the stomp are genuinely solo-trainable (this pack's job); the LINE is the dance — joining one is the graduation, flagged 🤝 because it takes other humans and a wedding has always been the classroom; the lawweeh (line leader) improvises at the head while the line holds the step — leadership earned by feel, not appointed. The mijwiz's driving buzz and the derbake set the pulse — the dabke drive lives in this app's Rhythm Trainer.",
+  "seasons": [
+    {
+      "theme": "Mijwiz Season",
+      "finale": "Film yourself stepping the pulse through one full mijwiz track — the buzz drives, the feet answer."
+    },
+    {
+      "theme": "Six-Count Season",
+      "finale": "Film the basic six-count — cross, cross, step, kick, stomp — smooth for a full song, both directions."
+    },
+    {
+      "theme": "Stomp Season",
+      "finale": "Film stomps with weight and pride — the accent lands like the whole village agreed on it."
+    },
+    {
+      "theme": "Line-Prep Season",
+      "finale": "Film the basic danced in 'line position' — shoulders proud, left hand as if holding a neighbor, traveling sideways."
+    },
+    {
+      "theme": "Hafleh Season",
+      "finale": "Join a real line — a wedding, a hafleh, a cultural festival, a dabke class. Join at the END of the line; the line teaches."
+    }
+  ],
+  "attributes": [
+    {
+      "id": "attr.stamina.l1",
+      "name": "Line stamina L1",
+      "test": "one full mijwiz track of continuous stepping without the knees stiffening — dabke sets run LONG"
+    },
+    {
+      "id": "attr.ankles.l1",
+      "name": "Stomp-ready ankles L1",
+      "test": "20 controlled stomps each foot, weight landing through the whole foot, joints happy after"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "dbmusic.mijwiz",
+      "type": "concept",
+      "family": "musicality",
+      "name": "The mijwiz and the derbake",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "the mijwiz (double-pipe reed) buzzes the melody that MAKES a dabke track — you'll know it in one listen forever",
+        "the derbake (tabla) drives the pulse; the dabke drive is in this app's Rhythm Trainer",
+        "modern dabke pop (Lebanese and Syrian wedding sets) keeps the same engine under synths"
+      ]
+    },
+    {
+      "id": "dbmusic.sets",
+      "type": "concept",
+      "family": "musicality",
+      "name": "Reading the set — builds, breaks, and the lawweeh's cues",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "dbmusic.mijwiz",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "wedding sets build for many minutes: the line simmers on the basic, boils on the breaks",
+        "when the music breaks, the line stomps harder and the lawweeh flies — feel the shift coming",
+        "stamina is musicality here: the dance rewards those still fresh at minute six"
+      ]
+    },
+    {
+      "id": "dbculture.levant",
+      "type": "concept",
+      "family": "culture",
+      "name": "The Levant's line — whose dance this is",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "dabke belongs to the Levant — Lebanon, Palestine, Syria, Jordan — with regional styles and rivalries all its own",
+        "the lore: villagers stomping mud roofs in unison — 'dabke' relates to stamping; the dance remembers shared work",
+        "it is communal identity made physical: danced at weddings and celebrations, arms linked, nobody performing alone"
+      ]
+    },
+    {
+      "id": "dbculture.meaning",
+      "type": "concept",
+      "family": "culture",
+      "name": "Continuity — why the line matters",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "dbculture.levant",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "for Palestinians especially, dancing dabke is also cultural preservation and continuity — communities say so themselves, and this pack says it plainly",
+        "diaspora troupes across the world teach the next generation through the line — the dance IS the heritage lesson",
+        "dance it knowing that: joyfully, and with respect for what the line carries"
+      ]
+    },
+    {
+      "id": "dbculture.lawweeh",
+      "type": "concept",
+      "family": "culture",
+      "name": "The lawweeh — the head of the line",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "dbculture.levant",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the lawweeh leads from the front — twirling masbaha or kerchief, improvising stomps and kicks while the line holds the step",
+        "leadership is earned by feel and stamina, never appointed — the line follows who lifts it",
+        "everyone else's job is the groove: a solid line makes the lawweeh possible"
+      ]
+    },
+    {
+      "id": "dbstep.pulse",
+      "type": "move",
+      "family": "basic",
+      "name": "The pulse step",
+      "phase": 0,
+      "prereqs": [
+        {
+          "id": "dbmusic.mijwiz",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "bounce-step in place on the beat, knees springy, chest proud — the idle engine of every dabke",
+        "shoulders level and lifted; dabke posture is dignity in a line",
+        "keep it going through a conversation — line-ready means automatic"
+      ],
+      "mistakes": [
+        "slouching into the bounce — the line stands TALL"
+      ]
+    },
+    {
+      "id": "dbstep.basic",
+      "type": "move",
+      "family": "basic",
+      "name": "The six-count basic",
+      "phase": 1,
+      "anchor": "the step that gets you into any wedding line on earth",
+      "prereqs": [
+        {
+          "id": "dbstep.pulse",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.stamina.l1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "cross, cross, step, kick, stomp — six counts traveling left (the line's direction), repeated forever",
+        "the kick floats, the stomp LANDS — light and heavy in one phrase",
+        "travel sideways smoothly: the line moves as one creature",
+        "both directions in practice, even though the line goes left — symmetry protects the knees"
+      ],
+      "mistakes": [
+        "marching it flat — the phrase has a lilt (float the kick)",
+        "big steps that would drag a neighbor off balance"
+      ]
+    },
+    {
+      "id": "dbstep.stomp",
+      "type": "move",
+      "family": "basic",
+      "name": "The stomp",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "dbstep.pulse",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.ankles.l1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "full-foot landing with real weight — the accent the whole dance is named for",
+        "the knee stays soft; the SOUND comes from commitment, not from hurting yourself",
+        "stomp on the break's downbeats: the line agreeing loudly"
+      ],
+      "mistakes": [
+        "heel-jamming on hard floors (whole foot, soft knee, always)"
+      ]
+    },
+    {
+      "id": "dbstep.lineprep",
+      "type": "move",
+      "family": "basic",
+      "name": "Line position (solo prep)",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "dbstep.basic",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "dance the basic with your left hand held as if clasping a neighbor's — shoulder-height, firm, steady",
+        "shoulders stay level while the feet work; your hand must be a good neighbor",
+        "practice along a wall or line on the floor: the line's geometry, solo"
+      ]
+    },
+    {
+      "id": "dbline.join",
+      "type": "move",
+      "family": "line",
+      "name": "The line (with people)",
+      "phase": 3,
+      "partner": true,
+      "prereqs": [
+        {
+          "id": "dbstep.lineprep",
+          "kind": "hard"
+        },
+        {
+          "id": "dbculture.lawweeh",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "join at the END of the line — that's the etiquette and the beginner's seat",
+        "match the line's step exactly; your six-count is the entry fee, the line's energy is the lesson",
+        "a wedding, a hafleh, a diaspora troupe's open class — the line has always been the classroom"
+      ]
+    },
+    {
+      "id": "meta.dabke_set",
+      "type": "combo",
+      "family": "meta",
+      "name": "One full set — filmed",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "dbstep.basic",
+          "kind": "hard"
+        },
+        {
+          "id": "dbstep.stomp",
+          "kind": "hard"
+        },
+        {
+          "id": "dbmusic.sets",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "one full mijwiz track: pulse through the verses, six-count through the body, stomps on the breaks",
+        "posture check at minute three — is the chest still proud?",
+        "the test is endurance with joy; dabke tired is dabke wrong"
+      ]
+    },
+    {
+      "id": "meta.dabke_hafleh",
+      "type": "combo",
+      "family": "meta",
+      "name": "The hafleh",
+      "phase": 4,
+      "prereqs": [
+        {
+          "id": "meta.dabke_set",
+          "kind": "hard"
+        },
+        {
+          "id": "dbline.join",
+          "kind": "helps"
+        }
+      ],
+      "checkpoints": [
+        "find the line: a Levantine wedding, a hafleh, a cultural festival, a dabke class — diaspora communities run them worldwide",
+        "watch the lawweeh; hold the line; let someone's grandmother correct your kick",
+        "notice what a dance means when a whole community does it holding on to each other"
+      ]
+    }
+  ],
+  "teachers": [
+    {
+      "name": "Dabke — the Levant's line dance",
+      "url": "https://en.wikipedia.org/wiki/Dabke"
+    },
+    {
+      "name": "Mijwiz — the sound that drives it",
+      "url": "https://en.wikipedia.org/wiki/Mijwiz"
+    }
+  ]
+}

@@ -1,0 +1,301 @@
+{
+  "style": "raqs",
+  "version": "0.1.0",
+  "name": "Raqs Sharqi",
+  "notes": "Raqs Sharqi style pack (Doc 04 template). Genuinely solo. The name and lineage told straight: 'belly dance' is the Western exonym — the art is RAQS SHARQI ('dance of the East'), an Egyptian stage art shaped in 1920s-40s Cairo (Badia Masabni's Casino Opera, then cinema's golden age — Tahia Carioca, Samia Gamal, Naima Akef credited), standing on RAQS BALADI, the home-grown Egyptian social dance underneath it. The orientalism honesty node is curriculum: a century of Western costume-first imitation exoticized this art; respect means music literacy first, Egyptian and SWANA teachers first, and the dance treated as technique and musicality, not costume. Design truths: everything begins in the hips OVER relaxed knees (the shimmy is gated on knee release for a reason); the rhythms are the curriculum's spine — maqsoum lives in this app's Rhythm Trainer now; and taqsim (improvised melody dancing) is the art's soul, taught as listening.",
+  "seasons": [
+    {
+      "theme": "Maqsoum Season",
+      "finale": "Film yourself clapping and naming maqsoum's dums and taks through one full song — the drum's language, learned."
+    },
+    {
+      "theme": "Hipwork Season",
+      "finale": "Film hip slides, drops and lifts over soft knees — isolated, grounded, on the dum."
+    },
+    {
+      "theme": "Shimmy Season",
+      "finale": "Film a 30-second shimmy that survives — from the knees, relaxed, layered over a slow walk at the end."
+    },
+    {
+      "theme": "Undulation Season",
+      "finale": "Film camels and mayas riding a slow track — circles not corners, breath visible."
+    },
+    {
+      "theme": "Taqsim Season",
+      "finale": "Film a 60-second taqsim improvisation to a nay or oud solo — then find an Egyptian-taught class or workshop, online counts."
+    }
+  ],
+  "attributes": [
+    {
+      "id": "attr.knees.l1",
+      "name": "Knee release L1",
+      "test": "60s standing with knees soft and bouncing loose — the shimmy's engine is RELAXATION, prove you can un-grip"
+    },
+    {
+      "id": "attr.hips.l1",
+      "name": "Hip isolation L1",
+      "test": "20 slow hip slides each way with ribs pinned still — a hand on the ribcage feels nothing"
+    },
+    {
+      "id": "attr.timing.l1",
+      "name": "Dum-tak ear L1",
+      "test": "identify the dums (low) and taks (high) through one full maqsoum track, clapping only the dums"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "rqmusic.maqsoum",
+      "type": "concept",
+      "family": "musicality",
+      "name": "Maqsoum — the drum's language",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "Arabic rhythms are spoken in dums (low, center of the drum) and taks (high, the rim) — maqsoum runs DUM-TAK — TAK-DUM — TAK",
+        "it's in this app's Rhythm Trainer — count it daily until the tabla speaks in words",
+        "the hips answer the dums; the accents live there"
+      ]
+    },
+    {
+      "id": "rqmusic.family",
+      "type": "concept",
+      "family": "musicality",
+      "name": "The rhythm family: baladi, saidi, malfuf",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "rqmusic.maqsoum",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "baladi (masmoudi saghir): DUM-DUM — TAK-DUM — TAK, heavier and earthier",
+        "saidi: DUM-TAK — DUM-DUM — TAK, the Upper Egypt rhythm of tahtib and cane dance",
+        "malfuf rolls fast for entrances; hear all three and name them blind"
+      ]
+    },
+    {
+      "id": "rqculture.baladi",
+      "type": "concept",
+      "family": "culture",
+      "name": "Baladi — the root beneath the stage",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "raqs baladi ('dance of the country') is the Egyptian social dance danced at home, at weddings, among women, for joy — the root",
+        "raqs sharqi is its stage-art child, shaped in 1920s-40s Cairo — Badia Masabni's Casino Opera, then cinema's golden age",
+        "Tahia Carioca, Samia Gamal, Naima Akef — watch the golden-age dancers; the art's standard was set on film"
+      ]
+    },
+    {
+      "id": "rqculture.exonym",
+      "type": "concept",
+      "family": "culture",
+      "name": "The honesty of names — and orientalism's long shadow",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "rqculture.baladi",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "'belly dance' is a Western exonym (via 19th-century world's fairs and their orientalist framing) — the art's name is raqs sharqi, and using it is basic respect",
+        "a century of costume-first Western imitation exoticized a serious art; the antidote is music literacy, technique, and Egyptian/SWANA teachers first",
+        "dance it as what it is: an Egyptian art form with a living homeland, not a fantasy of one"
+      ]
+    },
+    {
+      "id": "rqculture.teachers",
+      "type": "concept",
+      "family": "culture",
+      "name": "Learn toward the source",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "rqculture.exonym",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "Egyptian and SWANA teachers teach worldwide and online — seek them first",
+        "watch full performances from Cairo's lineage, not just tutorial clips",
+        "when the scene debates authenticity, the compass always points toward Egypt"
+      ]
+    },
+    {
+      "id": "rqhip.slides",
+      "type": "move",
+      "family": "hips",
+      "name": "Hip slides, drops & lifts",
+      "phase": 1,
+      "anchor": "the alphabet — everything else is sentences",
+      "prereqs": [
+        {
+          "id": "rqmusic.maqsoum",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.hips.l1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "slides: hips travel side to side on a level rail, ribs pinned",
+        "drops and lifts: one hip releases down or draws up — from the obliques and glutes, knees soft",
+        "place the accents ON the dums — the drum tells you which hip and when",
+        "small and exact beats big and blurry, forever"
+      ],
+      "mistakes": [
+        "bending the knees side to side and calling it a slide",
+        "ribs sailing along with the hips"
+      ]
+    },
+    {
+      "id": "rqhip.shimmy",
+      "type": "move",
+      "family": "hips",
+      "name": "The shimmy (knee-driven)",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "rqhip.slides",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.knees.l1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "alternating knee releases — small, fast, RELAXED; the hips shimmer as a result",
+        "if it hurts or grips, slow down: tension is the only enemy the shimmy has",
+        "build in time, not force: 10 relaxed seconds, then 20, then 30",
+        "the graduation move: shimmy layered over a slow walk"
+      ],
+      "mistakes": [
+        "shimmying from the glutes with locked knees (exhausting and wrong)",
+        "speed before release"
+      ]
+    },
+    {
+      "id": "rqflow.camel",
+      "type": "move",
+      "family": "undulation",
+      "name": "Undulations (the camel)",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "rqhip.slides",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "a wave rolls chest → ribs → hips, station by station — then reverse it",
+        "breath rides the wave: the contemporary pack's spine work is a direct cross-trainer here",
+        "slow is the discipline; one camel can fill four counts of a slow taqsim"
+      ],
+      "mistakes": [
+        "bowing instead of undulating — the wave is segments, not a fold"
+      ]
+    },
+    {
+      "id": "rqflow.maya",
+      "type": "move",
+      "family": "undulation",
+      "name": "Figure-8s (maya & horizontal eights)",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "rqhip.slides",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "maya: hips draw vertical figure-8s — up-and-over each side, ribs quiet",
+        "horizontal eights sweep the same shape flat — circles not corners, always",
+        "arms frame softly overhead or at the sides; they present the hips' sentence"
+      ]
+    },
+    {
+      "id": "rqflow.travel",
+      "type": "move",
+      "family": "undulation",
+      "name": "Traveling steps & arms",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "rqflow.maya",
+          "kind": "hard"
+        },
+        {
+          "id": "rqmusic.family",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the basic walk with hipwork layered — arabesque paths across the floor, chest lifted",
+        "arms carve slow frames (the flamenco pack's braceo discipline transfers): lifted elbows, soft wrists",
+        "malfuf carries entrances; saidi steps get earthy and flat-footed — match the step to the rhythm"
+      ]
+    },
+    {
+      "id": "meta.raqs_taqsim",
+      "type": "combo",
+      "family": "meta",
+      "name": "Taqsim — dancing the melody",
+      "phase": 4,
+      "prereqs": [
+        {
+          "id": "rqflow.camel",
+          "kind": "hard"
+        },
+        {
+          "id": "rqflow.travel",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.timing.l1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "a taqsim is an instrument improvising — nay, oud, accordion; the dancer becomes its visible voice",
+        "60 seconds, improvised: undulations for the long notes, hipwork when the drum re-enters",
+        "the skill is LISTENING made visible — the flamenco pack's marcaje is this art's cousin"
+      ]
+    },
+    {
+      "id": "meta.raqs_class",
+      "type": "combo",
+      "family": "meta",
+      "name": "Toward the source — a class",
+      "phase": 4,
+      "prereqs": [
+        {
+          "id": "meta.raqs_taqsim",
+          "kind": "hard"
+        },
+        {
+          "id": "rqculture.teachers",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "take a class or workshop from an Egyptian or SWANA-lineage teacher — online counts fully",
+        "bring the rhythms: a student who claps maqsoum on arrival is every teacher's favorite",
+        "watch one golden-age film performance afterward and see the ceiling clearly"
+      ]
+    }
+  ],
+  "teachers": [
+    {
+      "name": "Raqs sharqi — the Egyptian art and its history",
+      "url": "https://en.wikipedia.org/wiki/Raqs_sharqi"
+    },
+    {
+      "name": "Badia Masabni — the stage that shaped it",
+      "url": "https://en.wikipedia.org/wiki/Badia_Masabni"
+    }
+  ]
+}

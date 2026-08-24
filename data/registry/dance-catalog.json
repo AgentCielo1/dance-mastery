@@ -1346,7 +1346,8 @@
    "region": "Egypt/pan-Arab",
    "origin": "Solo social dance theatricalized in 1920s-40s Cairo nightclubs and cinema (Badia Masabni era)",
    "essence": "Torso articulation — hip drops, shimmies, undulations in conversation with taqsim",
-   "scene": "Cairo cabarets, weddings, global studios"
+   "scene": "Cairo cabarets, weddings, global studios",
+   "pack": "raqs"
   },
   {
    "name": "Baladi",
@@ -1370,7 +1371,8 @@
    "region": "Levant",
    "origin": "Village line dance of communal roots; staged versions from mid-1900s",
    "essence": "Shoulder-to-shoulder line led by a handkerchief-twirling lawweeh — synced stomps",
-   "scene": "Weddings, national celebrations, diaspora parties"
+   "scene": "Weddings, national celebrations, diaspora parties",
+   "pack": "dabke"
   },
   {
    "name": "Persian Classical Dance",
@@ -1378,7 +1380,8 @@
    "region": "Iran/diaspora",
    "origin": "Qajar-era courtly solo improvisation; publicly suppressed post-1979, sustained in diaspora",
    "essence": "Filigree hands and wrists, expressive face, delicate turns — improvised within an idiom",
-   "scene": "Norouz gatherings, diaspora stages"
+   "scene": "Norouz gatherings, diaspora stages",
+   "pack": "persian"
   },
   {
    "name": "Chaabi/Shikhat",
