@@ -427,6 +427,9 @@ const TAGLINES = {
   soca: "the wine and the road — truly solo",
   son: "salsa's ancestor — the offbeat ear",
   bomba: "the dancer leads the drum",
+  polka: "the 1840s craze, still going",
+  kalamatianos: "the circle in seven — join the end",
+  pizzica: "the drum that drove the cure",
 };
 
 function needsOnboarding() {

@@ -1179,7 +1179,8 @@ export default {
    "region": "Bohemia (Czech lands)",
    "origin": "c.1830s Bohemian round dance; 1840s worldwide craze; emigrated to the Americas",
    "essence": "Bouncy hop-step-close-step rotating in fast 2/4",
-   "scene": "Oktoberfests, Polish-American halls, norteño bailes"
+   "scene": "Oktoberfests, Polish-American halls, norteño bailes",
+   "pack": "polka"
   },
   {
    "name": "Schottische",
@@ -1621,7 +1622,8 @@ export default {
    "region": "Greece",
    "origin": "Ancient-rooted 7/8 circle dance named for Kalamata — the default panhellenic dance",
    "essence": "Open circle, handkerchief-led leader improvising over a 12-step line",
-   "scene": "Weddings, baptisms, national holidays"
+   "scene": "Weddings, baptisms, national holidays",
+   "pack": "kalamatianos"
   },
   {
    "name": "Horah",
@@ -1637,7 +1639,8 @@ export default {
    "region": "Southern Italy",
    "origin": "Linked to tarantism's ritual music-cure (documented 1600s); pizzica revived since the 1990s",
    "essence": "Rapid 6/8 spinning, tambourine-driven courtship or trance-release",
-   "scene": "Village feasts, Notte della Taranta"
+   "scene": "Village feasts, Notte della Taranta",
+   "pack": "pizzica"
   },
   {
    "name": "Schuhplattler",

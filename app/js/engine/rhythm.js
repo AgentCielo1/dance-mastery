@@ -151,6 +151,35 @@ export const PATTERNS = {
     ],
     note: "Boom… chik-chik. The slow step stretches through the boom; the quicks answer the chiks.",
   },
+  oompah: {
+    name: "Oom-pah (polka 2/4)",
+    beats: 2, defaultBpm: 116,
+    hits: [
+      { t: 0, type: "kick" }, { t: 1, type: "kick" },
+      { t: 0.5, type: "snare" }, { t: 1.5, type: "snare" },
+      { t: 0, type: "accent" },
+    ],
+    note: "OOM on the beat, PAH answering — hop-step-close-step fits one pair exactly. Spring small.",
+  },
+  epta: {
+    name: "Epta — 7/8 (kalamatianos)",
+    beats: 7, defaultBpm: 250,
+    hits: [
+      { t: 0, type: "accent" }, { t: 3, type: "clave" }, { t: 5, type: "clave" },
+      { t: 1, type: "hat" }, { t: 2, type: "hat" }, { t: 4, type: "hat" }, { t: 6, type: "hat" },
+    ],
+    note: "Seven that stays seven: ONE-two-three, ONE-two, ONE-two. Slow-quick-quick — kal-a-ma — tia — nos.",
+  },
+  pizzica: {
+    name: "Tamburello drive (pizzica 6/8)",
+    beats: 6, defaultBpm: 300,
+    hits: [
+      { t: 0, type: "kick" }, { t: 3, type: "kick" },
+      { t: 0, type: "clave" }, { t: 2, type: "clave" }, { t: 3, type: "clave" }, { t: 5, type: "clave" },
+      { t: 1, type: "hat" }, { t: 4, type: "hat" },
+    ],
+    note: "The frame drum's relentless 6/8 — it had a cure to drive. Spring light; it does not stop.",
+  },
   soca: {
     name: "Soca engine room",
     beats: 4, defaultBpm: 158,
@@ -307,6 +336,9 @@ export const STYLE_PATTERNS = {
   soca: "soca",
   son: "clave32",
   bomba: "sica",
+  polka: "oompah",
+  kalamatianos: "epta",
+  pizzica: "pizzica",
 };
 
 export const SOUND_TYPES = ["kick", "snare", "hat", "clave", "accent"];

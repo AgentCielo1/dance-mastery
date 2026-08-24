@@ -555,6 +555,40 @@ export const MOVES = {
     rootFn: (p, u) => { p.y -= 0.012 * Math.abs(sin(u * TAU * 2)); },
   },
 
+  /* ------------- european folk wave: solo cores (procedural v1) ------------- */
+  "pkstep.basic": {
+    bpm: 116, beats: 2,
+    keys: [
+      // hop-step-close-step — small lift, skimming steps, chest bright
+      { t: 0.0, p: { y: 0.885, lHipF: 0.35, lKnee: 0.3, rKnee: 0.15, lShF: -0.2, rShF: 0.2, lElb: 0.6, rElb: 0.6 } },
+      { t: 0.17, p: { y: 0.868, lHipF: 0.2, lKnee: 0.12, rKnee: 0.15 } },
+      { t: 0.33, p: { y: 0.87, rHipF: 0.15, rKnee: 0.15, lKnee: 0.12 } },
+      { t: 0.5, p: { y: 0.885, rHipF: 0.35, rKnee: 0.3, lKnee: 0.15, rShF: -0.2, lShF: 0.2 } },
+      { t: 0.67, p: { y: 0.868, rHipF: 0.2, rKnee: 0.12, lKnee: 0.15 } },
+      { t: 0.83, p: { y: 0.87, lHipF: 0.15, lKnee: 0.15, rKnee: 0.12 } },
+    ],
+    rootFn: (p, u) => { p.y += 0.008 * Math.abs(sin(u * TAU * 2)); },
+  },
+  "klstep.basic": {
+    bpm: 250, beats: 7,
+    keys: [
+      // slow-quick-quick traveling right — lifted, light, arms in the W hold
+      { t: 0.0, p: { y: 0.872, lHipA: 0.3, lKnee: 0.2, rKnee: 0.15, lShA: 1.0, rShA: 1.0, lShF: 0.35, rShF: 0.35, lElb: 1.1, rElb: 1.1, tYaw: 0.06 } },
+      { t: 0.43, p: { y: 0.878, rHipA: 0.2, rHipF: -0.12, rKnee: 0.3, lKnee: 0.15, lHipA: 0.0, tYaw: 0.0 } },
+      { t: 0.71, p: { y: 0.874, lHipA: 0.22, lKnee: 0.18, rKnee: 0.15, rHipA: 0.0, rHipF: 0.0, tYaw: 0.04 } },
+    ],
+    rootFn: (p, u) => { p.y += 0.006 * sin(u * TAU); },
+  },
+  "pzstep.basic": {
+    bpm: 300, beats: 6,
+    keys: [
+      // the light springing run — quick steps riding the 6/8, arms open and alive
+      { t: 0.0, p: { y: 0.875, lHipF: 0.3, lKnee: 0.35, rKnee: 0.12, lShA: 0.9, rShA: 0.7, lShF: 0.4, rShF: 0.2, lElb: 0.8, rElb: 0.9, tRoll: 0.05 } },
+      { t: 0.5, p: { y: 0.875, rHipF: 0.3, rKnee: 0.35, lKnee: 0.12, rShA: 0.9, lShA: 0.7, rShF: 0.4, lShF: 0.2, tRoll: -0.05 } },
+    ],
+    rootFn: (p, u) => { p.y += 0.012 * Math.abs(sin(u * TAU * 2)); p.tYaw = 0.06 * sin(u * TAU); },
+  },
+
   /* ------------- caribbean wave: solo cores (procedural v1) ------------- */
   "scwine.basic": {
     bpm: 116, beats: 4,

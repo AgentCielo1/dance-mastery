@@ -541,6 +541,49 @@ test("bomba pack: Black creators and keeper families credited; the dancer leads 
   assert.equal(info.theme, "Sicá Season");
 });
 
+test("polka pack: Bohemian origin with the lore marked as lore; the migration cross-links two packs", () => {
+  const pk = STYLES.polka;
+  const bohemia = pk.nodes.find((n) => n.id === "pkculture.bohemia");
+  assert.ok(bohemia.checkpoints.some((c) => /LORE, told as lore/.test(c)), "the village-girl tale marked honestly");
+  assert.ok(bohemia.checkpoints.some((c) => /polkamania/.test(c)), "the 1840s craze named");
+  const migration = pk.nodes.find((n) => n.id === "pkculture.migration");
+  assert.ok(migration.checkpoints.some((c) => /Two-Step pack/.test(c)), "cross-linked to the Texas dance halls");
+  assert.ok(migration.checkpoints.some((c) => /conjunto and norteño/.test(c)), "the border's polka child credited");
+  for (const n of pk.nodes.filter((x) => x.partner)) assert.ok(n.phase >= 3, `${n.id} partner-flagged but early`);
+  const info = seasonInfo(newState(T), T, pk.seasons);
+  assert.equal(info.theme, "Oom-Pah Season");
+});
+
+test("kalamatianos pack: continuity told with humility; the seven is the payload; circle etiquette taught", () => {
+  const kl = STYLES.kalamatianos;
+  const syrtos = kl.nodes.find((n) => n.id === "klculture.syrtos");
+  assert.ok(syrtos.checkpoints.some((c) => /lineage-with-humility/.test(c)), "ancient claims hedged honestly");
+  const epta = kl.nodes.find((n) => n.id === "klmusic.epta");
+  assert.ok(epta.checkpoints.some((c) => /slow-quick-quick/.test(c)), "the 7/8 taught as 3+2+2");
+  const circle = kl.nodes.find((n) => n.id === "klculture.circle");
+  assert.ok(circle.checkpoints.some((c) => /open END/.test(c)), "join-at-the-end etiquette");
+  assert.ok(circle.checkpoints.some((c) => /mantili/.test(c)), "the leader's kerchief in curriculum");
+  const join = kl.nodes.find((n) => n.id === "klline.join");
+  assert.ok(join.partner && join.phase >= 3, "the circle is group-flagged and late");
+  const info = seasonInfo(newState(T), T, kl.seasons);
+  assert.equal(info.theme, "Epta Season");
+});
+
+test("pizzica pack: tarantism told with care and its scholar cited; the revival credited; ronda waits", () => {
+  const pz = STYLES.pizzica;
+  const tarantism = pz.nodes.find((n) => n.id === "pzculture.tarantism");
+  assert.ok(tarantism.checkpoints.some((c) => /De Martino/.test(c)), "the landmark study cited");
+  assert.ok(tarantism.checkpoints.some((c) => /not a costume/.test(c)), "the ritual history carried with respect");
+  const taranta = pz.nodes.find((n) => n.id === "pzculture.taranta");
+  assert.ok(taranta.checkpoints.some((c) => /Notte della Taranta/.test(c)), "the revival festival credited");
+  const fazzoletto = pz.nodes.find((n) => n.id === "pzstep.fazzoletto");
+  assert.ok(fazzoletto.checkpoints.some((c) => /consent built into the tradition/.test(c)), "the handkerchief as consent grammar");
+  const ronda = pz.nodes.find((n) => n.id === "pzronda.enter");
+  assert.ok(ronda.partner && ronda.phase >= 3, "the ronda is entered with people, late");
+  const info = seasonInfo(newState(T), T, pz.seasons);
+  assert.equal(info.theme, "Tamburello Season");
+});
+
 test("new-pack animations exist in tree + move library with teaching checkpoints", () => {
   for (const id of ["pop.fresno", "wave.arm", "lock.lock", "point.point", "jack.basic", "hfoot.pdbr"]) {
     assert.ok(MOVES[id], `${id} animated`);

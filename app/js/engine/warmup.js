@@ -149,6 +149,18 @@ const STYLE_EXTRAS = {
     "Grounded stance 30s, then easy full-body accents x6 at half power — wake the piquete muscles kindly",
     "Wrist and arm circles x8 each — the falda hand warms with the feet",
   ],
+  polka: [
+    "Calf raises x15 then 60s of SMALL hops — the spring pays for the whole night",
+    "Easy knee circles x8; the hop lands on soft knees or not for long",
+  ],
+  kalamatianos: [
+    "Light lifted stepping 60s on the balls of the feet, landings quiet",
+    "Shoulder rolls x10 — the W hold needs easy shoulders",
+  ],
+  pizzica: [
+    "Spring-step in place 60s building gently — the drum outlasts cold calves",
+    "Ankle circles x10 each way + soft-focus quarter turns x6 each direction",
+  ],
 };
 
 export function warmupFor(style) {
