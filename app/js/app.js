@@ -433,6 +433,9 @@ const TAGLINES = {
   bon: "the circle built for joining",
   tinikling: "be the bird — tap, tap, close",
   buchaechum: "fans, breath, curves — a named maker",
+  cumbia: "the continent's shared floor",
+  marinera: "the pañuelo speaks — Peru's duet",
+  capoeira: "the ginga — the bow leads the game",
 };
 
 function needsOnboarding() {

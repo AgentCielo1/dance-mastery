@@ -151,6 +151,36 @@ export const PATTERNS = {
     ],
     note: "Boom… chik-chik. The slow step stretches through the boom; the quicks answer the chiks.",
   },
+  cumbia: {
+    name: "Cumbia pulse (guacharaca)",
+    beats: 2, defaultBpm: 96,
+    hits: [
+      { t: 0, type: "kick" }, { t: 1, type: "kick" },
+      { t: 0.5, type: "clave" }, { t: 0.75, type: "clave" }, { t: 1.5, type: "clave" }, { t: 1.75, type: "clave" },
+      { t: 1, type: "snare" },
+    ],
+    note: "Tambores below, the scraper's cha-ka-cha above — the pulse that crossed every border in Latin America.",
+  },
+  sesquialtera: {
+    name: "Sesquiáltera (6/8 vs 3/4)",
+    beats: 6, defaultBpm: 190,
+    hits: [
+      { t: 0, type: "kick" }, { t: 3, type: "kick" },
+      { t: 0, type: "clave" }, { t: 2, type: "clave" }, { t: 4, type: "clave" },
+      { t: 1, type: "hat" }, { t: 5, type: "hat" },
+    ],
+    note: "Two threes (the kicks) against three twos (the claves) — marinera, chacarera and joropo all live on this seam.",
+  },
+  berimbau: {
+    name: "Berimbau toque (capoeira)",
+    beats: 4, defaultBpm: 120,
+    hits: [
+      { t: 0, type: "kick" }, { t: 2, type: "kick" },
+      { t: 1, type: "clave" }, { t: 1.5, type: "clave" }, { t: 3, type: "clave" },
+      { t: 0.5, type: "hat" }, { t: 2.5, type: "hat" }, { t: 3.5, type: "hat" },
+    ],
+    note: "The bow commands the roda — the toque tells the players what game to play. Ginga to it; listen first.",
+  },
   ondo: {
     name: "Ondo (bon odori taiko)",
     beats: 4, defaultBpm: 116,
@@ -371,6 +401,9 @@ export const STYLE_PATTERNS = {
   bon: "ondo",
   tinikling: "tinikling",
   buchaechum: "gutgeori",
+  cumbia: "cumbia",
+  marinera: "sesquialtera",
+  capoeira: "berimbau",
 };
 
 export const SOUND_TYPES = ["kick", "snare", "hat", "clave", "accent"];

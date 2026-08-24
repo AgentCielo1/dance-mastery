@@ -1785,7 +1785,8 @@ export default {
    "region": "Peru",
    "origin": "Descended from colonial zamacueca, renamed 1879; Trujillo contest since 1960",
    "essence": "Elegant handkerchief courtship — barefoot regal her, sombrero him",
-   "scene": "Trujillo festival, weddings, academies"
+   "scene": "Trujillo festival, weddings, academies",
+   "pack": "marinera"
   },
   {
    "name": "Cueca",
@@ -1801,7 +1802,8 @@ export default {
    "region": "Caribbean coast, Colombia",
    "origin": "Colonial-era tri-ethnic courtship danced around candles at night",
    "essence": "She glides with candles, he circles — shuffling steps carrying deep memory",
-   "scene": "Barranquilla Carnival, folkloric troupes"
+   "scene": "Barranquilla Carnival, folkloric troupes",
+   "pack": "cumbia"
   },
   {
    "name": "Chacarera",
@@ -1833,7 +1835,8 @@ export default {
    "region": "Brazil (Bahia)",
    "origin": "Afro-Brazilian art forged by enslaved Africans, criminalized until the 1930s; Bimba and Pastinha lineages; UNESCO 2014",
    "essence": "Dance-disguised martial play in the roda — ginga, kicks, cartwheels, berimbau song",
-   "scene": "Academies worldwide, street rodas, batizados"
+   "scene": "Academies worldwide, street rodas, batizados",
+   "pack": "capoeira"
   },
   {
    "name": "Frevo",

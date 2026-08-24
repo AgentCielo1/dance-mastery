@@ -628,6 +628,56 @@ test("buchaechum pack: Kim Baek-bong credited as the named creator; ensemble hon
   assert.equal(info.theme, "Jangdan Season");
 });
 
+test("cumbia pack: three roots credited with the African engine named; consent in the choreography", () => {
+  const cm = STYLES.cumbia;
+  const triroot = cm.nodes.find((n) => n.id === "cmculture.triroot");
+  assert.ok(triroot.checkpoints.some((c) => /African drums/.test(c) && /Indigenous gaita/.test(c) && /Spanish/.test(c)),
+    "all three roots named");
+  assert.ok(triroot.checkpoints.some((c) => /enslaved Africans whose rhythm is its engine/.test(c)), "the engine credited");
+  const courtship = cm.nodes.find((n) => n.id === "cmculture.courtship");
+  assert.ok(courtship.checkpoints.some((c) => /her choice governs|candle answers/.test(c)), "consent in the choreography itself");
+  assert.ok(cm.nodes.some((n) => n.id === "cmmusic.travels"), "the continental travels are curriculum");
+  for (const n of cm.nodes.filter((x) => x.partner)) assert.ok(n.phase >= 3, `${n.id} partner-flagged but early`);
+  const info = seasonInfo(newState(T), T, cm.seasons);
+  assert.equal(info.theme, "Guacharaca Season");
+});
+
+test("marinera pack: the 1879 renaming documented; both styles told; the duet completes with people", () => {
+  const mr = STYLES.marinera;
+  const zam = mr.nodes.find((n) => n.id === "mrculture.zamacueca");
+  assert.ok(zam.checkpoints.some((c) => /Abelardo Gamarra/.test(c) && /1879/.test(c)), "the renaming credited");
+  assert.ok(zam.checkpoints.some((c) => /cueca.*zamba|zamba.*cueca/.test(c)), "the zamacueca cousins named");
+  const concurso = mr.nodes.find((n) => n.id === "mrculture.concurso");
+  assert.ok(concurso.checkpoints.some((c) => /norteña/.test(c) && /limeña/.test(c)), "both styles told");
+  const hemiola = mr.nodes.find((n) => n.id === "mrmusic.hemiola");
+  assert.ok(hemiola.checkpoints.some((c) => /sesquiáltera/.test(c)), "the hemiola is the payload");
+  const duet = mr.nodes.find((n) => n.id === "mrduet.pareja");
+  assert.ok(duet.partner && duet.phase >= 3, "the duet is 🤝 and late");
+  const info = seasonInfo(newState(T), T, mr.seasons);
+  assert.equal(info.theme, "Sesquiáltera Season");
+});
+
+test("capoeira pack: the forge and criminalization told; Bimba and Pastinha credited; hard safety gates", () => {
+  const cp = STYLES.capoeira;
+  const forge = cp.nodes.find((n) => n.id === "cpculture.forge");
+  assert.ok(forge.checkpoints.some((c) => /enslaved Africans/.test(c) && /Angola\/Congo/.test(c)), "the forge credited");
+  assert.ok(forge.checkpoints.some((c) => /CRIMINALIZED/.test(c) && /1930s/.test(c)), "the criminalization stated");
+  const mestres = cp.nodes.find((n) => n.id === "cpculture.mestres");
+  assert.ok(mestres.checkpoints.some((c) => /Mestre Bimba/.test(c) && /1932/.test(c)), "Bimba's academy credited");
+  assert.ok(mestres.checkpoints.some((c) => /Mestre Pastinha/.test(c)), "Pastinha's angola credited");
+  const honesty = cp.nodes.find((n) => n.id === "meta.roda_honesty");
+  assert.ok(honesty.checkpoints.some((c) => /NO kicks at people, NO acrobatics, NO sparring/.test(c)), "the safety line stated");
+  const esquivas = cp.nodes.find((n) => n.id === "cpmove.esquivas");
+  assert.ok(esquivas.prereqs.some((p) => p.id === "meta.roda_honesty" && p.kind === "hard"),
+    "even mobility esquivas sit behind the honesty gate");
+  assert.ok(!cp.nodes.some((n) => n.type === "move" && /kick|chapa|martelo|armada|meia/i.test(n.name)),
+    "no kick move exists anywhere in the tree");
+  const berimbau = cp.nodes.find((n) => n.id === "cpmusic.berimbau");
+  assert.ok(berimbau.checkpoints.some((c) => /COMMANDS the roda/.test(c)), "the bow leads the game");
+  const info = seasonInfo(newState(T), T, cp.seasons);
+  assert.equal(info.theme, "Berimbau Season");
+});
+
 test("new-pack animations exist in tree + move library with teaching checkpoints", () => {
   for (const id of ["pop.fresno", "wave.arm", "lock.lock", "point.point", "jack.basic", "hfoot.pdbr"]) {
     assert.ok(MOVES[id], `${id} animated`);

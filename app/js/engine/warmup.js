@@ -173,6 +173,18 @@ const STYLE_EXTRAS = {
     "Rise-and-settle breathing with soft knees 60s — the vertical breath IS the warm-up",
     "Wrist circles and fan-snap rehearsals x10 each hand",
   ],
+  cumbia: [
+    "Easy back-step shuffles 60s, weight settling — the party pace, found early",
+    "Relaxed hip sways x10 each side over soft knees",
+  ],
+  marinera: [
+    "Wrist circles x10 each hand at shoulder height — the pañuelo hand wakes first",
+    "Gentle floor brushes x8 each foot, standing leg steady",
+  ],
+  capoeira: [
+    "Slow ginga 60s at half depth — the sway warms before it schemes",
+    "Deep squat holds x4 (10s) + quadruped wrist rocks 30s — base and hands ready",
+  ],
 };
 
 export function warmupFor(style) {

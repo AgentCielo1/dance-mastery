@@ -1,0 +1,280 @@
+{
+  "style": "marinera",
+  "version": "0.1.0",
+  "name": "Marinera",
+  "notes": "Marinera style pack (Doc 04 template, solo-first). Peru's national dance — an elegant handkerchief courtship duet descended from the colonial zamacueca, and carrying one of dance history's best-documented renamings: in 1879, during the War of the Pacific, writer Abelardo Gamarra 'El Tunante' renamed the dance 'marinera' in honor of Peru's navy (the Marina) — patriotism written into a dance's name. The styles are told honestly: marinera norteña (Trujillo's proud, fast form — the Concurso Nacional de Marinera has run there since 1960 and crowns champions like a sport) and marinera limeña (Lima's slower, salon elegance). Design truths: this is a DUET art — the pack is honest that the conversation completes with a partner and a live band — but the solo curriculum is real and traditional: footwork (zapateo brushes), the pañuelo (handkerchief — the dance's voice, one in each dancer's hand), posture and the barefoot norteña tradition for women (stated as tradition, trained safely), and the sesquiáltera — the 6/8-against-3/4 hemiola that is the pack's musical payload, now in this app's Rhythm Trainer.",
+  "seasons": [
+    {
+      "theme": "Sesquiáltera Season",
+      "finale": "Film yourself clapping the 6/8 and the 3/4 over the same marinera track — the hemiola heard and owned."
+    },
+    {
+      "theme": "Pañuelo Season",
+      "finale": "Film the handkerchief work — circles, calls, the throw-and-catch flourish — both hands, alive."
+    },
+    {
+      "theme": "Zapateo Season",
+      "finale": "Film the brush-step footwork riding the hemiola — grounded, proud, unhurried."
+    },
+    {
+      "theme": "Figura Season",
+      "finale": "Film a solo pass of the courtship figures — the approach, the orbit, the escape — pañuelo narrating throughout."
+    },
+    {
+      "theme": "Concurso Season",
+      "finale": "Watch a Trujillo Concurso final (they're filmed and beloved) — then find a marinera peña, class, or Peruvian festival near you."
+    }
+  ],
+  "attributes": [
+    {
+      "id": "attr.timing.l2",
+      "name": "Hemiola ear L2",
+      "test": "clap 3 groups of 2, then 2 groups of 3, over the same marinera phrase — switching cleanly on command"
+    },
+    {
+      "id": "attr.posture.l1",
+      "name": "Proud carriage L1",
+      "test": "60s tall carriage with the chest presented and chin level while both arms work — marinera is danced like an announcement"
+    },
+    {
+      "id": "attr.ankles.l1",
+      "name": "Brush-step ankles L1",
+      "test": "20 controlled floor brushes each foot, weight steady on the standing leg, pain-free"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "mrmusic.hemiola",
+      "type": "concept",
+      "family": "musicality",
+      "name": "The sesquiáltera — 6/8 against 3/4",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "marinera's motor is the sesquiáltera: the same six pulses heard as TWO groups of three (6/8) and THREE groups of two (3/4) at once — it's in this app's Rhythm Trainer",
+        "guitars and cajón trade the two readings; the dancers ride the seam between them",
+        "the hemiola owned here unlocks half of Latin folk music — chacarera, joropo, and son jarocho all live on this seam"
+      ]
+    },
+    {
+      "id": "mrmusic.banda",
+      "type": "concept",
+      "family": "musicality",
+      "name": "The banda and the song's arc",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "mrmusic.hemiola",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "norteña marineras ride brass bands; limeña keeps guitar, cajón and voice — same skeleton, two temperatures",
+        "the song phrases in verses with a 'fuga' finale that doubles the energy — the dance saves its fire for it",
+        "live music is the tradition's heart: at the Concurso the band and dancers breathe together"
+      ]
+    },
+    {
+      "id": "mrculture.zamacueca",
+      "type": "concept",
+      "family": "culture",
+      "name": "Zamacueca to marinera — the 1879 renaming",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "marinera descends from the colonial zamacueca — the same family tree as Chile's cueca and Argentina's zamba; three nations, one grandmother dance",
+        "in 1879, during the War of the Pacific, Abelardo Gamarra 'El Tunante' renamed it 'marinera' honoring Peru's navy — one of dance history's best-documented renamings",
+        "its mixed lineage — Indigenous, African and Spanish threads — is credited as the zamacueca family's inheritance"
+      ]
+    },
+    {
+      "id": "mrculture.concurso",
+      "type": "concept",
+      "family": "culture",
+      "name": "Trujillo — the Concurso and the two styles",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "mrculture.zamacueca",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the Concurso Nacional de Marinera has run in Trujillo since 1960 — champions are crowned by age category like a sport, and Peru watches",
+        "marinera norteña: fast, proud, the woman traditionally BAREFOOT (a badge of the northern tradition — stated as tradition, trained safely on kind floors); marinera limeña: Lima's slower salon elegance",
+        "peñas, academies and Peruvian festivals worldwide keep both styles taught — the diaspora dances it from New Jersey to Tokyo"
+      ]
+    },
+    {
+      "id": "mrculture.caballo",
+      "type": "concept",
+      "family": "culture",
+      "name": "Marinera a caballo — the dance with a horse",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "mrculture.concurso",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "Trujillo's most astonishing tradition: the marinera danced WITH a Peruvian Paso horse — the chalán rides while the horse's famous smooth gait keeps the compás, and the dancer performs alongside",
+        "the Peruvian Paso's ambling gait is a national treasure of its own; horse, rider and dancer make a trio",
+        "watch one performance and understand how deep a nation's dance can run — into its horses"
+      ]
+    },
+    {
+      "id": "mrstep.panuelo",
+      "type": "move",
+      "family": "basic",
+      "name": "The pañuelo — the dance's voice",
+      "phase": 1,
+      "anchor": "one handkerchief, a whole vocabulary",
+      "prereqs": [
+        {
+          "id": "mrmusic.hemiola",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.posture.l1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "each dancer carries one pañuelo — held high, it circles, calls, teases and answers; it is the duet's entire spoken language",
+        "wrist-led circles overhead and at the side (the pizzica's fazzoletto and this pañuelo are courtship cousins across an ocean)",
+        "the flourish: a lifted spiral on the phrase end — crisp, never frantic",
+        "any handkerchief or bandana trains it; the carriage under it is the real skill"
+      ],
+      "mistakes": [
+        "flag-waving (the pañuelo speaks in sentences, not semaphore)",
+        "letting the carriage collapse while the wrist works"
+      ]
+    },
+    {
+      "id": "mrstep.zapateo",
+      "type": "move",
+      "family": "basic",
+      "name": "Zapateo — the brush-step footwork",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "mrstep.panuelo",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.ankles.l1",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.timing.l2",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "brushes and soft stamps riding the hemiola — the feet mark 6/8 while the pañuelo phrases in 3/4 (or the reverse; that trade IS the art)",
+        "grounded and proud: the upper body announces while the feet converse",
+        "norteña men's zapateo gets sharp and percussive; the woman's footwork glides — learn both grammars",
+        "small floor, big presence — the marinera travels little and says much"
+      ],
+      "mistakes": [
+        "stomping the brushes flat (the flamenco pack's strike discipline transfers: distinct sounds, soft knees)"
+      ]
+    },
+    {
+      "id": "mrstep.figuras",
+      "type": "move",
+      "family": "basic",
+      "name": "The figuras — approach, orbit, escape (solo pass)",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "mrstep.zapateo",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the duet's shapes drilled solo: the diagonal approach, the shared orbit (careo), the coy escape — pañuelo narrating each intention",
+        "the courtship is chased-and-chosen: advance boldly, retreat playfully, and let the pañuelo do the flirting",
+        "walk the geometry with an imagined partner mirroring — the Concurso floor is a figure-eight worn into every champion's feet"
+      ]
+    },
+    {
+      "id": "mrduet.pareja",
+      "type": "move",
+      "family": "partnerwork",
+      "name": "The duet (with a partner)",
+      "phase": 4,
+      "partner": true,
+      "prereqs": [
+        {
+          "id": "mrstep.figuras",
+          "kind": "hard"
+        },
+        {
+          "id": "mrculture.concurso",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the conversation completes: two pañuelos answering, orbits shared, the fuga danced flat-out together",
+        "learned at peñas, academies and Peruvian cultural festivals — the marinera community teaches with pride and welcomes students",
+        "your solo figuras and hemiola ear are the dowry you bring; the partner brings the other half of the sentence"
+      ]
+    },
+    {
+      "id": "meta.marinera_fuga",
+      "type": "combo",
+      "family": "meta",
+      "name": "One marinera, fuga and all — filmed",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "mrstep.figuras",
+          "kind": "hard"
+        },
+        {
+          "id": "mrmusic.banda",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "one full marinera norteña track solo: pañuelo alive, zapateo on the hemiola, figuras walked, and the fuga's doubled fire honored",
+        "carriage check at the fuga — proud to the last bar is the pass condition",
+        "watch a Trujillo champion pair afterward and study what the pañuelos say to each other"
+      ]
+    },
+    {
+      "id": "meta.marinera_pena",
+      "type": "combo",
+      "family": "meta",
+      "name": "The peña",
+      "phase": 4,
+      "prereqs": [
+        {
+          "id": "meta.marinera_fuga",
+          "kind": "hard"
+        },
+        {
+          "id": "mrduet.pareja",
+          "kind": "helps"
+        }
+      ],
+      "checkpoints": [
+        "find the marinera: a Peruvian peña, a marinera academy, a festival for Fiestas Patrias (July 28) — the diaspora keeps the duet danced worldwide",
+        "watch a Concurso final online regardless; Peru's champions are a masterclass in carriage",
+        "when two pañuelos finally answer each other with you holding one — that's the nation's dance welcoming you in"
+      ]
+    }
+  ],
+  "teachers": [
+    {
+      "name": "Marinera — Peru's national duet",
+      "url": "https://en.wikipedia.org/wiki/Marinera"
+    },
+    {
+      "name": "Concurso Nacional de Marinera — Trujillo's crown",
+      "url": "https://en.wikipedia.org/wiki/Marinera_Festival"
+    }
+  ]
+}

@@ -7,7 +7,9 @@ import bon from "./bon.js";
 import breaking from "./breaking.js";
 import buchaechum from "./buchaechum.js";
 import bzouk from "./bzouk.js";
+import capoeira from "./capoeira.js";
 import contemporary from "./contemporary.js";
+import cumbia from "./cumbia.js";
 import dabke from "./dabke.js";
 import dancehall from "./dancehall.js";
 import flamenco from "./flamenco.js";
@@ -22,6 +24,7 @@ import kpop from "./kpop.js";
 import lindy from "./lindy.js";
 import linedance from "./linedance.js";
 import locking from "./locking.js";
+import marinera from "./marinera.js";
 import persian from "./persian.js";
 import pizzica from "./pizzica.js";
 import polka from "./polka.js";
@@ -39,7 +42,7 @@ import vogue from "./vogue.js";
 import waacking from "./waacking.js";
 import wcs from "./wcs.js";
 import westafrican from "./westafrican.js";
-export const STYLES = { afrobeats, bachata, ballet, bomba, bon, breaking, buchaechum, bzouk, contemporary, dabke, dancehall, flamenco, forro, hiphop, house, irish, jazz, kalamatianos, kizomba, kpop, lindy, linedance, locking, persian, pizzica, polka, popping, raqs, salsa, samba, soca, son, tango, tap, tinikling, twostep, vogue, waacking, wcs, westafrican };
+export const STYLES = { afrobeats, bachata, ballet, bomba, bon, breaking, buchaechum, bzouk, capoeira, contemporary, cumbia, dabke, dancehall, flamenco, forro, hiphop, house, irish, jazz, kalamatianos, kizomba, kpop, lindy, linedance, locking, marinera, persian, pizzica, polka, popping, raqs, salsa, samba, soca, son, tango, tap, tinikling, twostep, vogue, waacking, wcs, westafrican };
 export const DEFAULT_STYLE = "breaking";
 export function styleName(id) { return STYLES[id]?.name ?? id.charAt(0).toUpperCase() + id.slice(1); }
 // Find a node (and its style) by node id across every pack.

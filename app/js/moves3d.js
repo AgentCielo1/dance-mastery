@@ -555,6 +555,39 @@ export const MOVES = {
     rootFn: (p, u) => { p.y -= 0.012 * Math.abs(sin(u * TAU * 2)); },
   },
 
+  /* ------------- latin american folk wave: solo cores (procedural v1) ------------- */
+  "cmstep.basic": {
+    bpm: 96, beats: 2,
+    keys: [
+      // the back-step shuffle: step back small, replace, rock — unhurried
+      { t: 0.0, p: { y: 0.858, lHipF: -0.2, lKnee: 0.28, rKnee: 0.18, roll: -0.04, tRoll: 0.06, lShF: 0.3, lShA: 0.4, lElb: 1.1, rShF: 0.15, rElb: 0.6 } },
+      { t: 0.25, p: { y: 0.862, lHipF: 0.0, lKnee: 0.18, rKnee: 0.22, roll: 0.0 } },
+      { t: 0.5, p: { y: 0.858, rHipF: -0.2, rKnee: 0.28, lKnee: 0.18, roll: 0.04, tRoll: -0.06, rShF: 0.3, rShA: 0.4, rElb: 1.1, lShF: 0.15, lElb: 0.6 } },
+      { t: 0.75, p: { y: 0.862, rHipF: 0.0, rKnee: 0.18, lKnee: 0.22, roll: 0.0 } },
+    ],
+  },
+  "mrstep.panuelo": {
+    bpm: 190, beats: 6,
+    keys: [
+      // proud carriage; the pañuelo hand circles high while the feet mark the hemiola
+      { t: 0.0, p: { y: 0.868, rShA: 1.5, rShF: 0.7, rElb: 0.5, lShA: 0.4, lShF: -0.2, lElb: 0.6, lKnee: 0.15, rKnee: 0.18, tPitch: -0.05 } },
+      { t: 0.5, p: { y: 0.868, rShF: 0.9, rElb: 0.9, lHipA: 0.15, lKnee: 0.22, tRoll: 0.06 } },
+    ],
+    // the wrist-led circle overhead — crisp on the phrase end
+    rootFn: (p, u, t) => { p.rElb += 0.18 * sin(t * TAU * 2); p.rShF += 0.06 * cos(t * TAU * 2); p.y += 0.006 * sin(u * TAU * 3); },
+  },
+  "cpmove.ginga": {
+    bpm: 120, beats: 4,
+    keys: [
+      // the triangular sway: back-step, base, back-step — arms guarding alive
+      { t: 0.0, p: { y: 0.83, lHipF: -0.45, lKnee: 0.5, rKnee: 0.45, rHipF: 0.15, tPitch: 0.12, rShF: 1.0, rElb: 1.5, lShF: 0.4, lElb: 1.2, tYaw: 0.12 } },
+      { t: 0.25, p: { y: 0.845, lHipF: 0.1, rHipF: 0.1, lKnee: 0.4, rKnee: 0.4, tYaw: 0.0, lShF: 0.8, rShF: 0.8, lElb: 1.4, rElb: 1.4 } },
+      { t: 0.5, p: { y: 0.83, rHipF: -0.45, rKnee: 0.5, lKnee: 0.45, lHipF: 0.15, tPitch: 0.12, lShF: 1.0, lElb: 1.5, rShF: 0.4, rElb: 1.2, tYaw: -0.12 } },
+      { t: 0.75, p: { y: 0.845, lHipF: 0.1, rHipF: 0.1, lKnee: 0.4, rKnee: 0.4, tYaw: 0.0, lShF: 0.8, rShF: 0.8, lElb: 1.4, rElb: 1.4 } },
+    ],
+    rootFn: (p, u) => { p.y += 0.008 * sin(u * TAU * 2); },
+  },
+
   /* ------------- east asian wave: solo cores (procedural v1) ------------- */
   "bostep.tanko": {
     bpm: 116, beats: 8,

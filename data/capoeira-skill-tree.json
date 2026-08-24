@@ -1,0 +1,284 @@
+{
+  "style": "capoeira",
+  "version": "0.1.0",
+  "name": "Capoeira (Foundation)",
+  "notes": "Capoeira foundation pack (Doc 04 template; foundation-forward with hard safety and community gates). The Afro-Brazilian art — dance, game, fight and music at once — forged by enslaved Africans in Brazil from Central African (Angola/Congo) roots, CRIMINALIZED by Brazilian law until the 1930s, and carried into legitimacy by two credited mestres: Mestre Bimba (Manoel dos Reis Machado), whose 1932 academy in Salvador won capoeira legal standing and built capoeira regional, and Mestre Pastinha (Vicente Ferreira Pastinha), guardian of capoeira angola. The berimbau LEADS THE GAME — the bow's toque tells the roda what game to play (the bomba pack's inverse: there the dancer commands the drum; here the instrument commands the players). Design truths: this pack is a DOORWAY — capoeira is learned in academies under mestres and teachers in a living lineage (meta.roda_honesty gates everything past basics); what solo practice honestly owns: the ginga (the perpetual base sway), basic esquivas (evasions trained as mobility, never as sparring), música literacy (berimbau toques, the ladainha call-and-response), and roda etiquette. NO kicks at people, NO acrobatics, NO sparring from an app — stated plainly and tested.",
+  "seasons": [
+    {
+      "theme": "Berimbau Season",
+      "finale": "Film yourself clapping the toque and singing one coro response — the bow's command, heard and answered."
+    },
+    {
+      "theme": "Ginga Season",
+      "finale": "Film 90 seconds of continuous ginga — the base sway alive, arms guarding, never frozen."
+    },
+    {
+      "theme": "Esquiva Season",
+      "finale": "Film the basic esquivas flowing out of the ginga — mobility drills, smooth entries and returns."
+    },
+    {
+      "theme": "Roda-Literacy Season",
+      "finale": "Watch a full roda (angola AND regional, recorded or live) — narrate the etiquette you now recognize: the foot of the berimbau, the buy-in, the game's temperature."
+    },
+    {
+      "theme": "Academy Season",
+      "finale": "Find a capoeira academy or community class — they exist in nearly every city on earth. The roda is entered through a mestre's lineage, and now you arrive prepared."
+    }
+  ],
+  "attributes": [
+    {
+      "id": "attr.stamina.l2",
+      "name": "Ginga endurance L2",
+      "test": "3 minutes of continuous relaxed ginga without the sway stiffening — the game never stands still"
+    },
+    {
+      "id": "attr.squat.l1",
+      "name": "Low-base mobility L1",
+      "test": "10 slow controlled squats to a deep base and back, heels down, knees tracking — esquivas live low"
+    },
+    {
+      "id": "attr.wrists.l1",
+      "name": "Floor-hand readiness L1",
+      "test": "60s cumulative quadruped weight-bearing, fingers spread, pain-free — hands meet the floor in this art"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "cpmusic.berimbau",
+      "type": "concept",
+      "family": "musicality",
+      "name": "The berimbau leads the game",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "the berimbau — the musical bow — COMMANDS the roda: its toque (rhythm pattern) tells the players what game to play, how fast, how close; a toque is in this app's Rhythm Trainer",
+        "Angola's toque calls the slow, cunning ground game; São Bento Grande calls the faster, more open game",
+        "the bomba pack's inverse: there the dancer commands the drum — here the instrument commands the players; both are conversations, and both demand listening first"
+      ]
+    },
+    {
+      "id": "cpmusic.canto",
+      "type": "concept",
+      "family": "musicality",
+      "name": "Ladainha and coro — the roda sings",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "cpmusic.berimbau",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "a roda opens with the ladainha — a sung solo of history, praise or sly commentary — then call-and-response corridos carry the games",
+        "everyone in the roda sings and claps; the chorus IS participation, and a silent roda is a dead roda",
+        "learn one coro response ('Paranauê' is the classic gateway) — singing is your first legitimate contribution to any roda on earth"
+      ]
+    },
+    {
+      "id": "cpculture.forge",
+      "type": "concept",
+      "family": "culture",
+      "name": "Forged in bondage, criminalized, unbroken",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "capoeira was forged by enslaved Africans in Brazil from Central African (Angola/Congo) movement and music traditions — fight disguised as dance, resistance disguised as game",
+        "after abolition it was CRIMINALIZED — capoeira appeared in Brazil's penal code until the 1930s; people went to prison for this art",
+        "it survived in the streets and terreiros of Salvador and Rio anyway — an unbroken Black Brazilian lineage that outlasted the law that banned it"
+      ]
+    },
+    {
+      "id": "cpculture.mestres",
+      "type": "concept",
+      "family": "culture",
+      "name": "Bimba and Pastinha — the two rivers",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "cpculture.forge",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "Mestre Bimba (Manoel dos Reis Machado) opened the first academy in Salvador in 1932, won capoeira legal standing, and systematized capoeira REGIONAL — the art's path from criminal code to national treasure runs through his door",
+        "Mestre Pastinha (Vicente Ferreira Pastinha) guarded capoeira ANGOLA — the older, slower, ground-cunning river — 'capoeira is whatever the mouth eats'",
+        "every academy on earth descends from these lineages; asking a teacher 'whose lineage?' is respect, not challenge"
+      ]
+    },
+    {
+      "id": "meta.roda_honesty",
+      "type": "concept",
+      "family": "meta",
+      "name": "The honest limit: capoeira is learned under mestres",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "cpculture.mestres",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "capoeira is a living lineage art learned in academies under mestres and teachers — the game, the kicks, the acrobatics and the roda itself are taught THERE, person to person, as they have been for a century",
+        "this pack teaches NO kicks at people, NO acrobatics, NO sparring — the ginga, basic esquivas as mobility, música and etiquette are the honest solo maximum",
+        "academies exist in nearly every city on earth and famously welcome raw beginners; arriving with the ginga, a coro, and the mestres' names is arriving respectfully"
+      ]
+    },
+    {
+      "id": "cpmove.ginga",
+      "type": "move",
+      "family": "movement",
+      "name": "The ginga — the perpetual base",
+      "phase": 1,
+      "anchor": "capoeira's heartbeat; everything enters and exits through it",
+      "prereqs": [
+        {
+          "id": "cpmusic.berimbau",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.stamina.l2",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the triangular sway: back-step to one side, base in the middle, back-step to the other — weight always moving, never parked",
+        "arms guard alive in front of the face and ribs, trading with the legs — relaxed, reading, ready",
+        "low and springy: the ginga is a question the whole body keeps asking",
+        "ride it to the berimbau's toque — Angola's ginga crawls and schemes; São Bento's swings open"
+      ],
+      "mistakes": [
+        "marching a fixed pattern (the ginga breathes and varies — a metronomic ginga is a target)",
+        "dead arms (the guard is half the movement)"
+      ]
+    },
+    {
+      "id": "cpmove.esquivas",
+      "type": "move",
+      "family": "movement",
+      "name": "Esquivas — evasion as mobility",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "cpmove.ginga",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.squat.l1",
+          "kind": "hard"
+        },
+        {
+          "id": "meta.roda_honesty",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "esquiva lateral and esquiva baixa: fold low and sideways OUT of the ginga, eyes up, base solid — trained here purely as mobility, no partner, no incoming anything",
+        "the eyes never drop: in the roda you evade watching, and the habit starts now",
+        "smooth in, smooth out — the esquiva returns to ginga like a wave returning to the sea",
+        "cocorinha (the deep squat drop) rounds out the trio; the contemporary pack's floor-safe wrists apply when hands touch down"
+      ],
+      "mistakes": [
+        "ducking with the eyes down (the whole point is to see while evading)",
+        "treating esquivas as poses — they are transitions with a pulse"
+      ]
+    },
+    {
+      "id": "cpmove.au_prep",
+      "type": "move",
+      "family": "movement",
+      "name": "Aú preparation — strength, not the cartwheel",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "cpmove.esquivas",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.wrists.l1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the aú (capoeira's cartwheel) belongs to the academy — this node builds the CAPACITY: quadruped shoulder taps, side-plank rocks, and low lateral weight-shifts over the hands",
+        "hands spread, shoulders stacked, neck neutral — the strength an instructor will build the aú on",
+        "honest line, stated: inversions are learned with a teacher and a mat, not an app and a living room"
+      ]
+    },
+    {
+      "id": "cpculture.roda",
+      "type": "concept",
+      "family": "culture",
+      "name": "Roda etiquette — the circle's law",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "cpmusic.canto",
+          "kind": "hard"
+        },
+        {
+          "id": "meta.roda_honesty",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "games begin at the foot of the berimbau — two players crouch there, shake hands, and enter; nobody enters anywhere else",
+        "'buying' a game (cutting in) has its own protocol, and the berimbau can end any game instantly — the bow outranks everyone",
+        "the roda's energy is the players' responsibility: sing, clap, keep the circle round — spectating happens outside it"
+      ]
+    },
+    {
+      "id": "meta.capoeira_base",
+      "type": "combo",
+      "family": "meta",
+      "name": "The foundation film",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "cpmove.esquivas",
+          "kind": "hard"
+        },
+        {
+          "id": "cpmusic.canto",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "one toque-long film: continuous ginga, all three esquivas visited, eyes up throughout — while the coro plays",
+        "sing the response lines out loud on camera; a silent capoeirista is half-trained",
+        "watch it back at the ginga's level: does it breathe, or does it march?"
+      ]
+    },
+    {
+      "id": "meta.capoeira_academy",
+      "type": "combo",
+      "family": "meta",
+      "name": "The academy",
+      "phase": 4,
+      "prereqs": [
+        {
+          "id": "meta.capoeira_base",
+          "kind": "hard"
+        },
+        {
+          "id": "cpculture.roda",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "find a capoeira academy or community class — angola or regional lineage, nearly every city has one, and raw beginners are the norm",
+        "arrive with the ginga, one coro, and the mestres' names — the three gifts every teacher recognizes",
+        "the roda will teach you the rest for as long as you let it; that was always the design"
+      ]
+    }
+  ],
+  "teachers": [
+    {
+      "name": "Capoeira — the art the law couldn't kill",
+      "url": "https://en.wikipedia.org/wiki/Capoeira"
+    },
+    {
+      "name": "Mestre Bimba — the academy that won legitimacy",
+      "url": "https://en.wikipedia.org/wiki/Mestre_Bimba"
+    }
+  ]
+}
