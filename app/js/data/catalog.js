@@ -1443,7 +1443,8 @@ export default {
    "region": "Japan",
    "origin": "Buddhist Obon festival dance welcoming ancestral spirits (medieval nenbutsu-odori roots)",
    "essence": "Simple repeating circle choreography around the yagura tower; Awa Odori its famous cousin",
-   "scene": "Summer Obon festivals everywhere, open to all"
+   "scene": "Summer Obon festivals everywhere, open to all",
+   "pack": "bon"
   },
   {
    "name": "Buchaechum (Fan Dance)",
@@ -1451,7 +1452,8 @@ export default {
    "region": "Korea",
    "origin": "Created 1954 by Kim Baek-bong from shamanic and court aesthetics",
    "essence": "Peony fans forming flowers, waves and butterflies in flowing hanbok",
-   "scene": "National companies, festivals"
+   "scene": "National companies, festivals",
+   "pack": "buchaechum"
   },
   {
    "name": "Talchum (Mask Dance)",
@@ -1500,7 +1502,8 @@ export default {
    "region": "Philippines (Visayas)",
    "origin": "Colonial-era folk dance imitating the tikling bird stepping between bamboo traps",
    "essence": "Rapid steps woven between clapping bamboo poles at accelerating tempo",
-   "scene": "School programs, fiestas, folkloric troupes"
+   "scene": "School programs, fiestas, folkloric troupes",
+   "pack": "tinikling"
   },
   {
    "name": "Cariñosa",

@@ -430,6 +430,9 @@ const TAGLINES = {
   polka: "the 1840s craze, still going",
   kalamatianos: "the circle in seven — join the end",
   pizzica: "the drum that drove the cure",
+  bon: "the circle built for joining",
+  tinikling: "be the bird — tap, tap, close",
+  buchaechum: "fans, breath, curves — a named maker",
 };
 
 function needsOnboarding() {

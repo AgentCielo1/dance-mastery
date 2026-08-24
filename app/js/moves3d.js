@@ -555,6 +555,41 @@ export const MOVES = {
     rootFn: (p, u) => { p.y -= 0.012 * Math.abs(sin(u * TAU * 2)); },
   },
 
+  /* ------------- east asian wave: solo cores (procedural v1) ------------- */
+  "bostep.tanko": {
+    bpm: 116, beats: 8,
+    keys: [
+      // dig, dig, throw over the shoulder, push the cart, wipe the brow, clap, open
+      { t: 0.0, p: { y: 0.85, tPitch: 0.18, lShF: 0.7, rShF: 0.7, lElb: 0.9, rElb: 0.9, lKnee: 0.25, rKnee: 0.25 } },
+      { t: 0.125, p: { y: 0.86, tPitch: 0.12, lShF: 0.5, rShF: 0.5, lElb: 0.7, rElb: 0.7 } },
+      { t: 0.25, p: { y: 0.87, tYaw: 0.35, rShF: 1.2, rShA: 0.6, rElb: 0.4, lShF: 0.3, lElb: 0.8, tPitch: 0.0 } },
+      { t: 0.44, p: { y: 0.855, tYaw: 0.0, lShF: 0.9, rShF: 0.9, lElb: 1.1, rElb: 1.1, tPitch: 0.1, lKnee: 0.3, rKnee: 0.3 } },
+      { t: 0.63, p: { y: 0.87, rShF: 1.0, rElb: 1.6, tPitch: -0.03, lShF: 0.2, lElb: 0.5, lKnee: 0.15, rKnee: 0.15 } },
+      { t: 0.81, p: { y: 0.87, lShF: 0.8, rShF: 0.8, lElb: 1.5, rElb: 1.5, lShA: 0.2, rShA: 0.2 } },
+      { t: 0.92, p: { y: 0.875, lShA: 1.2, rShA: 1.2, lShF: 0.5, rShF: 0.5, lElb: 0.3, rElb: 0.3 } },
+    ],
+  },
+  "tkstep.lines": {
+    bpm: 160, beats: 3,
+    keys: [
+      // in-in-out over the lines — light, exact, the out-step before the close
+      { t: 0.0, p: { y: 0.872, lHipF: 0.3, lKnee: 0.3, rKnee: 0.15, lShF: 0.25, rShF: -0.25, lElb: 0.5, rElb: 0.5 } },
+      { t: 0.33, p: { y: 0.872, rHipF: 0.3, rKnee: 0.3, lKnee: 0.15, rShF: 0.25, lShF: -0.25, lHipF: 0.0 } },
+      { t: 0.67, p: { y: 0.88, lHipA: 0.35, lKnee: 0.35, rKnee: 0.2, rHipF: 0.0, tRoll: 0.06 } },
+    ],
+    rootFn: (p, u) => { p.y += 0.01 * Math.abs(sin(u * TAU * 3)); },
+  },
+  "bcmove.line": {
+    bpm: 320, beats: 12,
+    keys: [
+      // the gliding walk with curved fan arms — rise and settle, water finding level
+      { t: 0.0, p: { y: 0.868, lHipF: 0.2, lKnee: 0.15, rKnee: 0.18, lShA: 1.2, rShA: 0.7, lShF: 0.5, rShF: 0.3, lElb: 0.9, rElb: 1.0, tPitch: -0.04 } },
+      { t: 0.5, p: { y: 0.874, rHipF: 0.2, rKnee: 0.15, lKnee: 0.18, rShA: 1.2, lShA: 0.7, rShF: 0.5, lShF: 0.3, rElb: 0.9, lElb: 1.0, lHipF: 0.0 } },
+    ],
+    // the vertical breath: rise on the kung, settle on the deok
+    rootFn: (p, u) => { p.y += 0.008 * sin(u * TAU); p.tRoll = 0.04 * sin(u * TAU); },
+  },
+
   /* ------------- european folk wave: solo cores (procedural v1) ------------- */
   "pkstep.basic": {
     bpm: 116, beats: 2,

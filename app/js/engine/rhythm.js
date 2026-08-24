@@ -151,6 +151,35 @@ export const PATTERNS = {
     ],
     note: "Boom… chik-chik. The slow step stretches through the boom; the quicks answer the chiks.",
   },
+  ondo: {
+    name: "Ondo (bon odori taiko)",
+    beats: 4, defaultBpm: 116,
+    hits: [
+      { t: 0, type: "kick" }, { t: 0.75, type: "kick" }, { t: 2, type: "kick" }, { t: 2.75, type: "kick" },
+      { t: 1.5, type: "snare" }, { t: 3.5, type: "snare" },
+      { t: 0, type: "accent" }, { t: 3, type: "clave" }, { t: 3.25, type: "clave" },
+    ],
+    note: "Don-doko under the song, the crowd's claps on the break — a sore sore! The circle never rushes.",
+  },
+  tinikling: {
+    name: "Tinikling poles (3/4)",
+    beats: 3, defaultBpm: 160,
+    hits: [
+      { t: 0, type: "clave" }, { t: 1, type: "clave" }, { t: 2, type: "accent" },
+      { t: 0, type: "hat" }, { t: 1, type: "hat" },
+    ],
+    note: "Tap, tap, CLOSE. Feet IN on the taps, OUT before the close — the beat your ankles depend on.",
+  },
+  gutgeori: {
+    name: "Gutgeori jangdan (korean 12/8)",
+    beats: 12, defaultBpm: 320,
+    hits: [
+      { t: 0, type: "kick" }, { t: 6, type: "kick" },
+      { t: 3, type: "clave" }, { t: 8, type: "clave" }, { t: 10, type: "clave" },
+      { t: 2, type: "hat" }, { t: 5, type: "hat" }, { t: 9, type: "hat" },
+    ],
+    note: "The janggu's lilting cycle — breathe it, don't count it: rise on the kung, settle on the deok.",
+  },
   oompah: {
     name: "Oom-pah (polka 2/4)",
     beats: 2, defaultBpm: 116,
@@ -339,6 +368,9 @@ export const STYLE_PATTERNS = {
   polka: "oompah",
   kalamatianos: "epta",
   pizzica: "pizzica",
+  bon: "ondo",
+  tinikling: "tinikling",
+  buchaechum: "gutgeori",
 };
 
 export const SOUND_TYPES = ["kick", "snare", "hat", "clave", "accent"];

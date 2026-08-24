@@ -1,0 +1,270 @@
+{
+  "style": "bon",
+  "version": "0.1.0",
+  "name": "Bon Odori",
+  "notes": "Bon Odori style pack (Doc 04 template, solo-first, alone-together). Japan's Obon festival dance, told with its meaning intact: Obon is the Buddhist summer festival welcoming ancestral spirits home — the dance descends from medieval nenbutsu odori (chanted dancing), and it is celebration AND remembrance at once; dance it knowing both. Bon odori's design is this app's mission in miniature: the steps are intentionally simple and repetitive so that EVERYONE — children, grandparents, strangers — can join the circle around the yagura (the drum tower) by watching one cycle and stepping in. Tankō Bushi, the coal-miner's song from Kyushu's Miike mine, is the canonical teaching dance: dig, throw the coal, push the cart, wipe the brow — work made into dance, danced by millions. Solo-trainable cycles; the circle itself 🤝 — and the diaspora keeps it near: Japanese-American temple Obon festivals famously welcome the public every summer.",
+  "seasons": [
+    {
+      "theme": "Ondo Season",
+      "finale": "Film yourself clapping and stepping the ondo beat through one full track — the taiko's don-doko owned."
+    },
+    {
+      "theme": "Tankō Bushi Season",
+      "finale": "Film the full Tankō Bushi cycle — dig, throw, push, wipe — repeating cleanly with the phrase."
+    },
+    {
+      "theme": "Cycle Season",
+      "finale": "Film two more bon odori cycles learned from festival videos — joined mid-song, the circle's real skill."
+    },
+    {
+      "theme": "Circle-Prep Season",
+      "finale": "Film a cycle danced traveling a slow circle — as around a yagura — hands leading, steps patient."
+    },
+    {
+      "theme": "Obon Season",
+      "finale": "Find a Bon festival — a Buddhist temple's summer Obon, a Japan festival near you — and step into the circle. It was built for you to join."
+    }
+  ],
+  "attributes": [
+    {
+      "id": "attr.timing.l1",
+      "name": "Ondo ear L1",
+      "test": "clap the ondo's swung pulse through one full track, catching the hand-clap breaks where the crowd claps"
+    },
+    {
+      "id": "attr.posture.l1",
+      "name": "Settled posture L1",
+      "test": "60s of soft-kneed, settled stepping — unhurried, grounded; bon odori never rushes"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "bomusic.ondo",
+      "type": "concept",
+      "family": "musicality",
+      "name": "The ondo — taiko and the swung pulse",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "ondo songs swing a relaxed duple pulse — the taiko's don-doko under a sung call-and-response; it's in this app's Rhythm Trainer",
+        "the crowd claps set breaks in the phrase — 'a sore sore' — learn where they land; clapping is part of the dance",
+        "each song has ONE short movement cycle that loops with the verse — hear the phrase length first"
+      ]
+    },
+    {
+      "id": "bomusic.songbook",
+      "type": "concept",
+      "family": "musicality",
+      "name": "The festival songbook",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "bomusic.ondo",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "every region carries its own bon odori — Tokyo Ondo, Sōran Bushi's fisherman hauls (a festival favorite), Kawachi ondo's marathon verses",
+        "diaspora festivals mix classics with new songs — even pop tunes get bon odori cycles now; the FORM welcomes them",
+        "learn from festival videos: watch one cycle, join the next — exactly as the circle teaches"
+      ]
+    },
+    {
+      "id": "boculture.obon",
+      "type": "concept",
+      "family": "culture",
+      "name": "Obon — welcoming the ancestors home",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "Obon is the Buddhist summer festival when ancestral spirits are welcomed home — lanterns lit, graves visited, and the dance danced in their company",
+        "bon odori descends from medieval nenbutsu odori, dancing joined to chanted prayer",
+        "it is remembrance AND celebration at once — dance it with joy, and know whose company the circle keeps"
+      ]
+    },
+    {
+      "id": "boculture.circle",
+      "type": "concept",
+      "family": "culture",
+      "name": "The yagura and the open circle",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "boculture.obon",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the circle turns around the yagura — the raised drum tower — with taiko players and singers above",
+        "the steps are simple ON PURPOSE: bon odori is designed so anyone can watch one cycle and step in — radical welcome as choreography",
+        "Japanese-American temples and Japan festivals worldwide hold public Obon dances every summer; yukata are lovely, sneakers are fine, everyone is invited"
+      ]
+    },
+    {
+      "id": "boculture.diaspora",
+      "type": "concept",
+      "family": "culture",
+      "name": "The diaspora's summers — Hawai'i and beyond",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "boculture.circle",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "Japanese immigrant communities carried Obon across the Pacific — Hawai'i's bon dance season (temple to temple, all summer) grew into a beloved tradition of its own, open to the whole island",
+        "Japanese-American Buddhist temples across the mainland hold public Obon festivals every June-August — food stalls, taiko, and a circle that wants you in it",
+        "a tradition that traveled with families and stayed open-armed: the mission of this whole app, danced annually"
+      ]
+    },
+    {
+      "id": "bostep.base",
+      "type": "move",
+      "family": "basic",
+      "name": "The bon odori step — settled and patient",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "bomusic.ondo",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.posture.l1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "small steps with soft knees, weight settling fully — forward-touch, side-touch patterns that repeat without hurry",
+        "hands lead everything: bon odori's expression lives in the arms and hands while the feet keep the patient base",
+        "unhurried is the aesthetic — the circle moves like water, not like a parade"
+      ],
+      "mistakes": [
+        "rushing ahead of the taiko (the circle will gently absorb you back into its tempo)"
+      ]
+    },
+    {
+      "id": "bostep.tanko",
+      "type": "move",
+      "family": "basic",
+      "name": "Tankō Bushi — the coal miner's cycle",
+      "phase": 2,
+      "anchor": "the dance millions learned first",
+      "origin": "the coal-miner's song of Kyushu's Miike mine — working gestures made into dance: dig, throw, push, wipe",
+      "prereqs": [
+        {
+          "id": "bostep.base",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.timing.l1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the cycle mimes the mine: DIG (shovel twice), THROW the coal over the shoulder, PUSH the cart, WIPE the brow, then clap the break and open the arms",
+        "each gesture rides one phrase segment; the cycle loops with the verse, endlessly",
+        "gestures clear and mimed with intention — the story IS the choreography",
+        "learn it once and you can join a Bon circle on four continents tonight"
+      ],
+      "mistakes": [
+        "blurring the gestures into arm-waving (dig like you mean the coal)"
+      ]
+    },
+    {
+      "id": "bostep.cycles",
+      "type": "move",
+      "family": "basic",
+      "name": "Learning cycles from the circle",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "bostep.tanko",
+          "kind": "hard"
+        },
+        {
+          "id": "bomusic.songbook",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the meta-skill: watch one full cycle of an unfamiliar bon odori, then join on the next — practice it with festival videos",
+        "catch the cycle's landmarks first (the clap, the turn, the biggest gesture), fill in the details on later loops",
+        "two new cycles learned this way and you're festival-fluent — the circle teaches the rest forever"
+      ]
+    },
+    {
+      "id": "bocircle.join",
+      "type": "move",
+      "family": "line",
+      "name": "The circle (with people)",
+      "phase": 4,
+      "partner": true,
+      "prereqs": [
+        {
+          "id": "bostep.cycles",
+          "kind": "hard"
+        },
+        {
+          "id": "boculture.circle",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "step into the moving circle between cycles, face the yagura's direction of travel, and follow the dancer ahead of you",
+        "mistakes are part of the aesthetic — the circle absorbs them kindly; grandmothers will correct you by dancing bigger",
+        "stay for the last song and the lantern light; that's what the circle is for"
+      ]
+    },
+    {
+      "id": "meta.bon_medley",
+      "type": "combo",
+      "family": "meta",
+      "name": "Three cycles, one film",
+      "phase": 4,
+      "prereqs": [
+        {
+          "id": "bostep.cycles",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "film Tankō Bushi plus two more cycles back to back — gestures clear, base patient, claps landed",
+        "dance one cycle traveling a slow circle around a chair-yagura",
+        "the test is joinability: could a stranger follow you after one loop? That's bon odori mastery"
+      ]
+    },
+    {
+      "id": "meta.bon_festival",
+      "type": "combo",
+      "family": "meta",
+      "name": "The Obon festival",
+      "phase": 4,
+      "prereqs": [
+        {
+          "id": "meta.bon_medley",
+          "kind": "hard"
+        },
+        {
+          "id": "bocircle.join",
+          "kind": "helps"
+        }
+      ],
+      "checkpoints": [
+        "find a summer Obon — Buddhist temples across the Americas, Hawai'i's famous season, Japan festivals worldwide hold public dances",
+        "join the circle; it was engineered across centuries precisely so you could",
+        "remember whose festival it is: dance joyfully, in good company — the living and the remembered"
+      ]
+    }
+  ],
+  "teachers": [
+    {
+      "name": "Bon Odori — the Obon dance",
+      "url": "https://en.wikipedia.org/wiki/Bon_Odori"
+    },
+    {
+      "name": "Tankō Bushi — the coal miner's song",
+      "url": "https://en.wikipedia.org/wiki/Tank%C5%8D_Bushi"
+    }
+  ]
+}

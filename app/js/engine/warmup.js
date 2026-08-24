@@ -161,6 +161,18 @@ const STYLE_EXTRAS = {
     "Spring-step in place 60s building gently — the drum outlasts cold calves",
     "Ankle circles x10 each way + soft-focus quarter turns x6 each direction",
   ],
+  bon: [
+    "Settled soft-knee stepping 60s, unhurried — the circle's pace, found early",
+    "Easy arm circles and mimed gestures x8 — the hands lead this dance",
+  ],
+  tinikling: [
+    "Light alternating hops 60s, quiet landings — the poles reward warm calves",
+    "Small target-hops x10 each foot — precision wakes before speed",
+  ],
+  buchaechum: [
+    "Rise-and-settle breathing with soft knees 60s — the vertical breath IS the warm-up",
+    "Wrist circles and fan-snap rehearsals x10 each hand",
+  ],
 };
 
 export function warmupFor(style) {

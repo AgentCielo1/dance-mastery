@@ -584,6 +584,50 @@ test("pizzica pack: tarantism told with care and its scholar cited; the revival 
   assert.equal(info.theme, "Tamburello Season");
 });
 
+test("bon odori pack: Obon's meaning intact; radical welcome as choreography; the circle open", () => {
+  const bo = STYLES.bon;
+  const obon = bo.nodes.find((n) => n.id === "boculture.obon");
+  assert.ok(obon.checkpoints.some((c) => /remembrance AND celebration/.test(c)), "both halves of Obon honored");
+  const circle = bo.nodes.find((n) => n.id === "boculture.circle");
+  assert.ok(circle.checkpoints.some((c) => /simple ON PURPOSE/.test(c)), "the welcome-by-design stated");
+  assert.match(bo.nodes.find((n) => n.id === "bostep.tanko").origin, /Miike mine/, "Tankō Bushi's working roots credited");
+  const join = bo.nodes.find((n) => n.id === "bocircle.join");
+  assert.ok(join.partner && join.phase >= 3, "the circle is joined with people, late");
+  const info = seasonInfo(newState(T), T, bo.seasons);
+  assert.equal(info.theme, "Ondo Season");
+});
+
+test("tinikling pack: the punishment tale marked as LORE; the clacker dignified; live poles are 🤝", () => {
+  const tk = STYLES.tinikling;
+  const bird = tk.nodes.find((n) => n.id === "tkculture.bird");
+  assert.ok(bird.checkpoints.some((c) => /LORE, unproven/.test(c)), "the colonial-punishment tale hedged honestly");
+  assert.ok(bird.checkpoints.some((c) => /Leyte/.test(c)), "the dance's home named");
+  const stage = tk.nodes.find((n) => n.id === "tkculture.stage");
+  assert.ok(stage.checkpoints.some((c) => /Bayanihan/.test(c)), "the national company credited");
+  assert.ok(tk.nodes.some((n) => n.id === "tkstep.clacker"), "the clacker's craft is curriculum, not an afterthought");
+  const live = tk.nodes.find((n) => n.id === "tkpoles.live");
+  assert.ok(live.partner, "live poles are 🤝 by physics");
+  assert.ok(tk.nodes.find((n) => n.id === "tkstep.lines").checkpoints.some((c) => /never touch the lines/.test(c)),
+    "the schoolyard floor-lines method taught first");
+  const info = seasonInfo(newState(T), T, tk.seasons);
+  assert.equal(info.theme, "Triple-Time Season");
+});
+
+test("buchaechum pack: Kim Baek-bong credited as the named creator; ensemble honesty; breath first", () => {
+  const bc = STYLES.buchaechum;
+  const kim = bc.nodes.find((n) => n.id === "bcculture.kim");
+  assert.ok(kim.checkpoints.some((c) => /KIM BAEK-BONG/.test(c) && /1954/.test(c)), "the creator credited by name and year");
+  assert.ok(kim.checkpoints.some((c) => /counter-example/.test(c)), "'folk dances have no author' countered");
+  const ensemble = bc.nodes.find((n) => n.id === "bcculture.ensemble");
+  assert.ok(ensemble.checkpoints.some((c) => /honest doorway/.test(c)), "the ensemble limit stated");
+  const flower = bc.nodes.find((n) => n.id === "bcensemble.flower");
+  assert.ok(flower.partner && flower.phase >= 3, "the ensemble forms wait for a team");
+  const breath = bc.nodes.find((n) => n.id === "bcmusic.breath");
+  assert.ok(breath.checkpoints.some((c) => /with humility/.test(c)), "heung described with humility");
+  const info = seasonInfo(newState(T), T, bc.seasons);
+  assert.equal(info.theme, "Jangdan Season");
+});
+
 test("new-pack animations exist in tree + move library with teaching checkpoints", () => {
   for (const id of ["pop.fresno", "wave.arm", "lock.lock", "point.point", "jack.basic", "hfoot.pdbr"]) {
     assert.ok(MOVES[id], `${id} animated`);

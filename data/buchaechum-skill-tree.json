@@ -1,0 +1,280 @@
+{
+  "style": "buchaechum",
+  "version": "0.1.0",
+  "name": "Buchaechum (Foundation)",
+  "notes": "Buchaechum foundation pack (Doc 04 template; foundation-forward). The Korean fan dance — and the catalog's cleanest credit: buchaechum was CREATED IN 1954 BY KIM BAEK-BONG, a named woman choreographer who drew on shamanic ritual aesthetics and court dance to build a new work that became a national icon; her name and her academy's lineage travel with every performance, and this pack says so in curriculum (a living counter-example to 'folk dances have no author'). Design truths: the iconic imagery — flowers, waves, butterflies blooming from massed fans — is ENSEMBLE art, so the group forms are 🤝 and the pack is honest that the full dance lives with teams and teachers (Korean cultural centers and dance academies worldwide); what solo practice honestly owns is real and lovely: the breath-led vertical rhythm (the Korean aesthetic of 'heung' — the lift of joy — described with humility), the curved line, walking in stillness (the gliding court walk), fan handling (props honesty: paired pleated fans — practice fans or any folding fans work; feathered mulberry buchae when you're ready), and single-fan phrases. Gutgeori jangdan, the lilting 12/8 that carries it, is in the Rhythm Trainer.",
+  "seasons": [
+    {
+      "theme": "Jangdan Season",
+      "finale": "Film yourself breathing and swaying with the gutgeori jangdan — the 12/8 lilt carried in the knees."
+    },
+    {
+      "theme": "Fan Season",
+      "finale": "Film fan handling both hands — open, close, flutter, the wrist rolls — crisp openings, soft carriage."
+    },
+    {
+      "theme": "Line Season",
+      "finale": "Film the curved arm lines and the gliding walk — moving like water, fans breathing with you."
+    },
+    {
+      "theme": "Phrase Season",
+      "finale": "Film a single-fan solo phrase — walk, turn, bloom, settle — unhurried and curved throughout."
+    },
+    {
+      "theme": "Ensemble Season",
+      "finale": "See buchaechum whole: a live performance or full recording of the ensemble flowers — then find a Korean dance class if the road allows."
+    }
+  ],
+  "attributes": [
+    {
+      "id": "attr.wrists.l1",
+      "name": "Fan-wrist control L1",
+      "test": "20 clean fan openings and closings each hand (any folding fan) — crisp snap open, silent close, forearm quiet"
+    },
+    {
+      "id": "attr.posture.l1",
+      "name": "Court carriage L1",
+      "test": "60s of the gliding walk — tall, serene, steps invisible under a long skirt (real or imagined)"
+    },
+    {
+      "id": "attr.timing.l1",
+      "name": "Jangdan ear L1",
+      "test": "sway and breathe with gutgeori through one full track, knees carrying the lilt, never squaring it"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "bcmusic.jangdan",
+      "type": "concept",
+      "family": "musicality",
+      "name": "Gutgeori jangdan — the lilting 12/8",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "Korean traditional music moves in jangdan — rhythmic cycles kept by the janggu drum; gutgeori is the graceful, lilting 12/8 that carries buchaechum, and it's in this app's Rhythm Trainer",
+        "the pulse is breathed, not counted: the body rises and settles with it — knees soft, chest buoyant",
+        "listen for the janggu's low kung and high deok trading — the cycle's shape lives between them"
+      ]
+    },
+    {
+      "id": "bcmusic.breath",
+      "type": "concept",
+      "family": "musicality",
+      "name": "Heung and the vertical breath",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "bcmusic.jangdan",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "Korean dance rides a vertical breath — a gentle rise (inhale) and settle (exhale) that never stops, the engine under every movement",
+        "'heung' — often glossed as the lift of shared joy — is the feeling the breath carries; described here with humility, learned truly from Korean teachers and audiences",
+        "practice: one minute of nothing but breathing with the jangdan; that IS the technique"
+      ]
+    },
+    {
+      "id": "bcculture.kim",
+      "type": "concept",
+      "family": "culture",
+      "name": "Kim Baek-bong — the woman who made it",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "buchaechum was created in 1954 by KIM BAEK-BONG — a named choreographer who drew on shamanic ritual aesthetics and court dance to build a new work that became a Korean national icon",
+        "her academy and designated lineage carry the dance today; performances that credit her honor the norm this whole app enforces",
+        "a living counter-example to 'folk dances have no author' — some do, and she is one, and she is a woman whose name deserves saying"
+      ]
+    },
+    {
+      "id": "bcculture.ensemble",
+      "type": "concept",
+      "family": "culture",
+      "name": "The ensemble art — flowers, waves, butterflies",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "bcculture.kim",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "buchaechum's iconic images — the blooming flower, the rolling wave, the butterfly — are built from many dancers' fans moving as one",
+        "the full dance is ensemble art learned with teams and teachers: Korean cultural centers and dance academies teach it worldwide",
+        "this pack is the honest doorway: breath, line, fans and solo phrases here; the flower blooms in a room of dancers"
+      ]
+    },
+    {
+      "id": "bcmove.fans",
+      "type": "move",
+      "family": "movement",
+      "name": "Fan handling",
+      "phase": 1,
+      "anchor": "the fans are the voice — learn to let them speak",
+      "prereqs": [
+        {
+          "id": "bcmusic.jangdan",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.wrists.l1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "open with a crisp snap, close in silence — both hands, until either hand can do either job mid-phrase",
+        "the flutter: small fast wrist tremors that make the fan shimmer like wings",
+        "props honesty: paired pleated fans — practice fans or any folding fans to learn; feathered mulberry-paper buchae when the hands are ready",
+        "carry the fans as extensions of the arm's curve, never gripped like tools"
+      ],
+      "mistakes": [
+        "openings that wilt instead of snap",
+        "white-knuckle grip (the fan should look weightless)"
+      ]
+    },
+    {
+      "id": "bcmove.line",
+      "type": "move",
+      "family": "movement",
+      "name": "The curved line & the gliding walk",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "bcmove.fans",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.posture.l1",
+          "kind": "hard"
+        },
+        {
+          "id": "bcmusic.breath",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "every arm path curves — no corners anywhere; the fan draws arcs the eye can rest on",
+        "the gliding walk: small hidden steps under a serene carriage, moving like water finding level",
+        "rise-and-settle breath under everything; the walk breathes even when the fans are still",
+        "the persian pack's arm framing and the flamenco braceo are distant cousins — the curve discipline transfers"
+      ],
+      "mistakes": [
+        "bouncing the walk (the glide is the whole illusion)",
+        "straight-armed fan carries (the curve is the aesthetic)"
+      ]
+    },
+    {
+      "id": "bcmove.shoulders",
+      "type": "move",
+      "family": "movement",
+      "name": "Eokkaechum — the shoulder's lilt",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "bcmusic.breath",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "Korean dance carries a signature shoulder impulse — eokkaechum, the 'shoulder dance' — a gentle rise-and-release riding the jangdan, joy expressed from the shoulders",
+        "it comes from the breath, never from a shrug: the inhale lifts the shoulders a whisper, the exhale melts them",
+        "layer it under the fans and the glide; it's the difference between carrying the dance and wearing it"
+      ],
+      "mistakes": [
+        "mechanical shoulder pops (this is a lilt, not an isolation drill — the popping pack lives elsewhere)"
+      ]
+    },
+    {
+      "id": "bcmove.phrase",
+      "type": "move",
+      "family": "movement",
+      "name": "Single-fan solo phrases",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "bcmove.line",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "compose short phrases: glide in, a turn with the fan sweeping a full arc, a flutter bloom, a settled close",
+        "phrase with the gutgeori cycle — begin and resolve on the jangdan's breath",
+        "solo phrases are real buchaechum vocabulary; the ensemble magnifies them, it doesn't replace them"
+      ]
+    },
+    {
+      "id": "bcensemble.flower",
+      "type": "move",
+      "family": "line",
+      "name": "The ensemble forms (with a team)",
+      "phase": 4,
+      "partner": true,
+      "prereqs": [
+        {
+          "id": "bcmove.phrase",
+          "kind": "hard"
+        },
+        {
+          "id": "bcculture.ensemble",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the flower, the wave, the butterfly — learned with a team and a teacher, where spacing and breath synchronize many dancers into one image",
+        "Korean cultural centers, university teams and academies teach ensemble buchaechum worldwide",
+        "arrive with your breath, your fans and Kim Baek-bong's name — the three things every teacher hopes for"
+      ]
+    },
+    {
+      "id": "meta.bucha_solo",
+      "type": "combo",
+      "family": "meta",
+      "name": "The solo phrase — filmed",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "bcmove.phrase",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "one gutgeori track: gliding entrance, two composed phrases, a flutter bloom, a settled ending — single fan, all curves",
+        "watch it back at half speed: any corners? any bounce? the water test",
+        "credit the creator on camera — 'buchaechum, created by Kim Baek-bong, 1954' — practicing the norm"
+      ]
+    },
+    {
+      "id": "meta.bucha_ensemble",
+      "type": "combo",
+      "family": "meta",
+      "name": "See the flower bloom",
+      "phase": 4,
+      "prereqs": [
+        {
+          "id": "meta.bucha_solo",
+          "kind": "hard"
+        },
+        {
+          "id": "bcensemble.flower",
+          "kind": "helps"
+        }
+      ],
+      "checkpoints": [
+        "watch a full ensemble buchaechum — live if a Korean cultural festival is near, complete recording otherwise; watch the BREATHING synchronize, not just the fans",
+        "if the road allows, take a Korean dance class — the jangdan feels different when a janggu is in the room",
+        "the flower you watched is dozens of solo phrases breathing together; you now hold one of them"
+      ]
+    }
+  ],
+  "teachers": [
+    {
+      "name": "Buchaechum — Kim Baek-bong's creation",
+      "url": "https://en.wikipedia.org/wiki/Buchaechum"
+    },
+    {
+      "name": "Jangdan — Korea's rhythmic cycles",
+      "url": "https://en.wikipedia.org/wiki/Jangdan"
+    }
+  ]
+}

@@ -1,0 +1,286 @@
+{
+  "style": "tinikling",
+  "version": "0.1.0",
+  "name": "Tinikling",
+  "notes": "Tinikling style pack (Doc 04 template, solo-first with a literal group gate). The Philippines' most famous folk dance — often called its national dance — from Leyte in the Visayas: dancers step in and out between bamboo poles clapped together in triple time, imitating the tikling bird's quick-legged escape from farmers' bamboo traps. The darker origin tale (poles as Spanish-colonial punishment) circulates widely and is told here as LORE — repeated, unproven, and marked as such. Design truths: the step pattern is genuinely solo-trainable the way every Filipino school ever taught it — over two lines on the floor, or poles laid still — gated on ankle spring and the triple-time ear; LIVE poles need two clackers, so the real dance is 🤝 by physics, and the clackers are dancers too (their triple-time is half the performance); ankle safety is stated plainly (a mistimed pole finds your ankle — that's the game). Filipino cultural nights (PCNs), barrio fiestas, and folk troupes like Bayanihan carry it worldwide.",
+  "seasons": [
+    {
+      "theme": "Triple-Time Season",
+      "finale": "Film yourself clapping the pole pattern — tap, tap, CLOSE — through one full rondalla track."
+    },
+    {
+      "theme": "Floor-Lines Season",
+      "finale": "Film the basic in-in-out over two floor lines — light, exact, never landing on the lines."
+    },
+    {
+      "theme": "Still-Poles Season",
+      "finale": "Film the pattern over poles (or dowels/broomsticks) laid still — height without fear, feet precise."
+    },
+    {
+      "theme": "Clacker Season",
+      "finale": "Film yourself as the CLACKER — kneeling, keeping tap-tap-close steady with sticks on the floor for a full song."
+    },
+    {
+      "theme": "Fiesta Season",
+      "finale": "Find live tinikling — a Filipino cultural night (PCN), a barrio fiesta, a folk troupe class — and dance or clack with real poles and real people."
+    }
+  ],
+  "attributes": [
+    {
+      "id": "attr.spring.l2",
+      "name": "Hop endurance L2",
+      "test": "2 minutes of light alternating single-foot hops — quiet landings, calves happy; the poles don't pause"
+    },
+    {
+      "id": "attr.timing.l2",
+      "name": "Triple-time ear L2",
+      "test": "clap tap-tap-CLOSE through one full track, then clap only the CLOSE — the beat your ankles depend on"
+    },
+    {
+      "id": "attr.ankles.l1",
+      "name": "Precise-landing ankles L1",
+      "test": "20 small hops landing on a 10cm floor target each time, both feet — precision before poles"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "tkmusic.triple",
+      "type": "concept",
+      "family": "musicality",
+      "name": "Tap, tap, close — the poles' triple time",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "tinikling runs in 3/4: the poles tap the ground twice (open), then CLOSE together on three — it's in this app's Rhythm Trainer",
+        "the dancer's rule is the inverse: feet IN on the taps, OUT before the close",
+        "rondalla strings (bandurria, guitars) carry the melody; the poles are the percussion section and the hazard at once"
+      ]
+    },
+    {
+      "id": "tkmusic.speed",
+      "type": "concept",
+      "family": "musicality",
+      "name": "The accelerando — tinikling's game",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "tkmusic.triple",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "performances traditionally accelerate — each verse faster, until dancer and poles are a blur",
+        "the game is nerve and rhythm together: the pattern never changes, only the clock",
+        "train the pattern slow until it is boring; boring at slow speed is thrilling at full speed"
+      ]
+    },
+    {
+      "id": "tkculture.bird",
+      "type": "concept",
+      "family": "culture",
+      "name": "The tikling bird — Leyte's dance",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "tinikling comes from Leyte in the Visayas and imitates the tikling (a rail bird) stepping quick-legged through grass and out of farmers' bamboo traps",
+        "it is the Philippines' most famous folk dance — schoolyards, fiestas and stages have taught it for generations",
+        "the grim tale that the poles began as Spanish-colonial punishment circulates widely — it is LORE, unproven, and told here as lore"
+      ]
+    },
+    {
+      "id": "tkculture.stage",
+      "type": "concept",
+      "family": "culture",
+      "name": "Barrio to world stage — and the clacker's dignity",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "tkculture.bird",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "folk companies — the Bayanihan Philippine National Folk Dance Company foremost — carried tinikling to world stages from the 1950s on",
+        "Filipino cultural nights (PCNs) at universities and diaspora fiestas keep it a living rite of passage",
+        "the clackers ARE dancers: kneeling at the poles, their triple-time is half the performance — this pack trains both roles on purpose"
+      ]
+    },
+    {
+      "id": "tkstep.lines",
+      "type": "move",
+      "family": "basic",
+      "name": "The basic over floor lines",
+      "phase": 1,
+      "anchor": "how every Filipino schoolyard starts it",
+      "prereqs": [
+        {
+          "id": "tkmusic.triple",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.timing.l2",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.ankles.l1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "two lines on the floor a pole-width apart: step IN-IN on the taps, OUT before the close — singles first, one foot leading",
+        "land on the balls of the feet, light and exact; never touch the lines (the lines are teaching you about your ankles)",
+        "both sides, both lead feet, entering from outside-left and outside-right",
+        "the out-step is the survival skill — drill the exit more than the entrance"
+      ],
+      "mistakes": [
+        "landing flat and heavy (the bird is light; be the bird)",
+        "watching your feet instead of feeling the count (the poles won't wait for your eyes)"
+      ]
+    },
+    {
+      "id": "tkstep.poles",
+      "type": "move",
+      "family": "basic",
+      "name": "Still poles — height without fear",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "tkstep.lines",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.spring.l2",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "graduate to real obstacles laid STILL — bamboo, dowels, broomsticks — the height changes the hop, the stillness keeps it safe",
+        "same in-in-out, now clearing the poles cleanly every cycle",
+        "add the crossover and turn variations once the basic clears without thought",
+        "ankle honesty: moving poles WILL kiss your ankles while you learn — everyone's do; still poles first is how you keep it funny instead of painful"
+      ],
+      "mistakes": [
+        "jumping high and slow (clearance comes from precision, not altitude)"
+      ]
+    },
+    {
+      "id": "tkstep.doubles",
+      "type": "move",
+      "family": "basic",
+      "name": "Doubles & the hop variations",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "tkstep.poles",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "doubles: both feet in together on the taps, out together before the close — the pattern that reads loudest from the audience",
+        "hop-swing and straddle variations layer on the same clock; the count never changes, only the shape",
+        "chain singles → doubles → crossover in one verse; that chain is most of a performance"
+      ],
+      "mistakes": [
+        "doubles drifting off the count (two feet are twice as honest about your timing)"
+      ]
+    },
+    {
+      "id": "tkstep.clacker",
+      "type": "move",
+      "family": "basic",
+      "name": "The clacker's craft",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "tkmusic.triple",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "kneel with two sticks on a base board (or the floor): tap, tap, CLOSE — steady as a clock, for whole songs",
+        "the clacker watches the DANCER, not the sticks — poles that trap a learner's ankle on purpose are bad manners; poles that keep honest time are the craft",
+        "solo drill with any two sticks; at the fiesta, great clackers are as celebrated as great dancers"
+      ],
+      "mistakes": [
+        "speeding up unevenly (the accelerando is a decision both clackers make together)"
+      ]
+    },
+    {
+      "id": "tkpoles.live",
+      "type": "move",
+      "family": "line",
+      "name": "Live poles (with people)",
+      "phase": 3,
+      "partner": true,
+      "prereqs": [
+        {
+          "id": "tkstep.poles",
+          "kind": "hard"
+        },
+        {
+          "id": "tkstep.clacker",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the real dance takes three: two clackers, one dancer (then pairs, then teams) — tinikling is 🤝 by physics",
+        "start at half tempo with clackers you trust; agree on the accelerando before it begins",
+        "trade roles — dancers who have clacked are kinder dancers, and vice versa"
+      ]
+    },
+    {
+      "id": "meta.tini_full",
+      "type": "combo",
+      "family": "meta",
+      "name": "The full pattern, accelerating — filmed",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "tkstep.poles",
+          "kind": "hard"
+        },
+        {
+          "id": "tkmusic.speed",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "one full track over still poles: singles, doubles, a crossover, a turn — with the music's accelerando honored",
+        "landings quiet at every tempo; the last verse should look like the bird escaped",
+        "film the feet close-up for one verse: the lines/poles untouched is the pass condition"
+      ]
+    },
+    {
+      "id": "meta.tini_fiesta",
+      "type": "combo",
+      "family": "meta",
+      "name": "The fiesta",
+      "phase": 4,
+      "prereqs": [
+        {
+          "id": "meta.tini_full",
+          "kind": "hard"
+        },
+        {
+          "id": "tkpoles.live",
+          "kind": "helps"
+        }
+      ],
+      "checkpoints": [
+        "find live tinikling: a Filipino cultural night (PCN), a barrio fiesta, a folk dance troupe's class — the diaspora keeps poles clapping worldwide",
+        "offer to clack first; it's the humble seat and the fastest way into the circle of trust",
+        "when the poles finally accelerate under your own feet, you'll know why a whole nation loves a bird"
+      ]
+    }
+  ],
+  "teachers": [
+    {
+      "name": "Tinikling — the Philippines' bird dance",
+      "url": "https://en.wikipedia.org/wiki/Tinikling"
+    },
+    {
+      "name": "Bayanihan — the national folk company",
+      "url": "https://en.wikipedia.org/wiki/Bayanihan_Philippine_National_Folk_Dance_Company"
+    }
+  ]
+}
