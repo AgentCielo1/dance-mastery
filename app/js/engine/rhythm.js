@@ -151,6 +151,26 @@ export const PATTERNS = {
     ],
     note: "Boom… chik-chik. The slow step stretches through the boom; the quicks answer the chiks.",
   },
+  soca: {
+    name: "Soca engine room",
+    beats: 4, defaultBpm: 158,
+    hits: [
+      { t: 0, type: "kick" }, { t: 1, type: "kick" }, { t: 2, type: "kick" }, { t: 3, type: "kick" },
+      { t: 1.5, type: "snare" }, { t: 3.5, type: "snare" },
+      { t: 0.5, type: "hat" }, { t: 2.5, type: "hat" }, { t: 3.75, type: "clave" },
+    ],
+    note: "Power soca's road engine — four on the floor with the iron pushing between. Chip to conserve, jump on command.",
+  },
+  sica: {
+    name: "Sicá (bomba)",
+    beats: 4, defaultBpm: 96,
+    hits: [
+      { t: 0, type: "kick" }, { t: 2, type: "kick" }, { t: 2.5, type: "kick" },
+      { t: 0, type: "clave" }, { t: 0.5, type: "clave" }, { t: 1, type: "clave" },
+      { t: 1.75, type: "clave" }, { t: 2.5, type: "clave" }, { t: 3, type: "clave" }, { t: 3.5, type: "clave" },
+    ],
+    note: "The buleador holds the base, the cuá patterns the time — and the primo above answers the DANCER. Hold the ground.",
+  },
   maqsoum: {
     name: "Maqsoum (dum-tak)",
     beats: 4, defaultBpm: 108,
@@ -284,6 +304,9 @@ export const STYLE_PATTERNS = {
   raqs: "maqsoum",
   dabke: "dabkeh",
   persian: "shesh",
+  soca: "soca",
+  son: "clave32",
+  bomba: "sica",
 };
 
 export const SOUND_TYPES = ["kick", "snare", "hat", "clave", "accent"];

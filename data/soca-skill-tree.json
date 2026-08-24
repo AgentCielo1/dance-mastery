@@ -1,0 +1,276 @@
+{
+  "style": "soca",
+  "version": "0.1.0",
+  "name": "Soca & Wining",
+  "notes": "Soca & Wining style pack (Doc 04 template). Genuinely solo — carnival needs no partner, only a road. Lineage told straight: Trinidad & Tobago's carnival descends from emancipation celebrations (Canboulay) — a freed people's festival that colonial power tried to ban and the people kept; soca the music was created in the 1970s by Garfield Blackman — Lord Shorty, later Ras Shorty I — fusing calypso with East Indian rhythms (his own account: the 'soul of calypso'). Wining — the rolling hip rotation at the center of carnival dance — is Afro-Caribbean movement language, danced from Trinidad to the whole diaspora. CONSENT IS CURRICULUM: wining with someone at carnival or a fete is invited and answered — the culture's own etiquette, taught here as a first-class node. Design truths: the wine is hip isolation over released knees (gated like the shimmy); carnival is an endurance event (stamina gates are real); and the diaspora carnivals — Notting Hill, Brooklyn's Labor Day, Caribana — mean the road reaches almost everyone.",
+  "seasons": [
+    {
+      "theme": "Engine Room Season",
+      "finale": "Film yourself chipping to one full soca track — the carnival march, relaxed, endless."
+    },
+    {
+      "theme": "Wine Season",
+      "finale": "Film the wine: slow circles both directions over soft knees — isolated, unhurried, yours."
+    },
+    {
+      "theme": "Figure-8 Season",
+      "finale": "Film figure-8 and standing wine variations riding a groovy soca track — control before speed."
+    },
+    {
+      "theme": "Power Season",
+      "finale": "Film 60 seconds of power soca energy — jump, wave, wine, chip — without the form collapsing."
+    },
+    {
+      "theme": "Road Season",
+      "finale": "Find the fete or the carnival — Trinidad if you can, the diaspora carnivals wherever you are. Play a mas or chip beside one."
+    }
+  ],
+  "attributes": [
+    {
+      "id": "attr.hips.l1",
+      "name": "Hip isolation L1",
+      "test": "20 slow hip circles each direction with the ribcage pinned still — the wine is hips alone"
+    },
+    {
+      "id": "attr.knees.l1",
+      "name": "Knee release L1",
+      "test": "60s of soft bouncing knees, fully relaxed — the wine rides released knees, never locked ones"
+    },
+    {
+      "id": "attr.stamina.l2",
+      "name": "Road stamina L2",
+      "test": "three soca tracks of continuous chip-and-wine — carnival is measured in hours, train in songs"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "scmusic.soca",
+      "type": "concept",
+      "family": "musicality",
+      "name": "Groovy and power — soca's two speeds",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "groovy soca rolls near 110-120 BPM — the wine's home; power soca charges at 155-165 — the jump-and-wave engine",
+        "the drums-and-iron 'engine room' drives everything; find the iron (the struck brake-drum ring) in any track",
+        "soca instructs from the mic — when the artist says jump, the road jumps; listening IS the dance"
+      ]
+    },
+    {
+      "id": "scmusic.road",
+      "type": "concept",
+      "family": "musicality",
+      "name": "The road mix — pacing a carnival",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "scmusic.soca",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "a road day runs for hours: chip to conserve, wine on the grooves, explode for the power songs",
+        "the annual Road March race crowns the song the road loved most — learn each year's contenders",
+        "pace like the veterans: the best masqueraders finish the day still dancing"
+      ]
+    },
+    {
+      "id": "scculture.canboulay",
+      "type": "concept",
+      "family": "culture",
+      "name": "Emancipation's festival — Canboulay to carnival",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "Trinidad carnival descends from emancipation celebrations — Canboulay, the freed people's festival that colonial authorities tried to suppress (the 1881 Canboulay riots resisted the ban) and the people kept",
+        "J'ouvert's dawn mud-and-paint and the mas bands' costumes both carry that history of freedom claimed in the street",
+        "to play mas is to join a festival built by freed people — dance it knowing that"
+      ]
+    },
+    {
+      "id": "scculture.shorty",
+      "type": "concept",
+      "family": "culture",
+      "name": "Lord Shorty — the man who made soca",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "scculture.canboulay",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "soca was created in the 1970s by Garfield Blackman — Lord Shorty, later Ras Shorty I — fusing calypso with East Indian rhythms; he called it the 'soul of calypso'",
+        "calypso's lineage (and its own griot-like calypsonians) is the parent tradition — soca is its carnival-engine child",
+        "from Shorty to Machel Montano and today's Road March winners: one unbroken road"
+      ]
+    },
+    {
+      "id": "scculture.consent",
+      "type": "concept",
+      "family": "culture",
+      "name": "Consent on the road — wining etiquette",
+      "phase": 1,
+      "prereqs": [],
+      "checkpoints": [
+        "wining WITH someone is invited and answered — a look, an ask, a yes; carnival's own etiquette, not an import",
+        "'it's just carnival' never overrides somebody's no — the culture itself says so, loudly",
+        "your own wine needs nobody's permission; sharing it always does"
+      ]
+    },
+    {
+      "id": "scwine.basic",
+      "type": "move",
+      "family": "hips",
+      "name": "The wine",
+      "phase": 1,
+      "anchor": "carnival's center of gravity",
+      "prereqs": [
+        {
+          "id": "scmusic.soca",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.hips.l1",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.knees.l1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "hips roll in smooth circles over released knees — the ribcage floats still above",
+        "both directions, equally — the road doesn't care which way you started",
+        "slow control first: a slow wine with full isolation beats any fast blur",
+        "the raqs pack's hipwork and this move are cousins across an ocean — the isolation discipline transfers"
+      ],
+      "mistakes": [
+        "circling the whole torso instead of the hips",
+        "locked knees (nothing rolls on a stiff base)"
+      ]
+    },
+    {
+      "id": "scwine.figure8",
+      "type": "move",
+      "family": "hips",
+      "name": "Figure-8s & the standing wine",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "scwine.basic",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the circle becomes an eight — hips sweeping side to side through the middle",
+        "level changes: wine standing tall, wine sitting low (the low wine is earned by the knees)",
+        "add the arms: one hand up, phone in the air, flag out — carnival styling is joy made visible"
+      ]
+    },
+    {
+      "id": "scwine.chip",
+      "type": "move",
+      "family": "basic",
+      "name": "The chip",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "scmusic.soca",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the carnival march: a relaxed shuffling step-drag that travels miles without spending you",
+        "knees soft, feet barely leaving the road, shoulders easy",
+        "chip and wine together — the road's default state — should feel like resting"
+      ],
+      "mistakes": [
+        "marching it stiff (the chip is the laziest step you'll ever perfect)"
+      ]
+    },
+    {
+      "id": "scwine.power",
+      "type": "move",
+      "family": "basic",
+      "name": "Jump and wave (power soca)",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "scwine.chip",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.stamina.l2",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "when the power song drops: jump on the beat, wave the rag or flag, wine in the air if you can",
+        "land soft every jump — carnival knees are a marathon budget",
+        "burst and recover: power sections are sprints inside the road's marathon"
+      ],
+      "mistakes": [
+        "spending everything on the first power song (there are twelve more coming)"
+      ]
+    },
+    {
+      "id": "meta.soca_road",
+      "type": "combo",
+      "family": "meta",
+      "name": "The road simulation — filmed",
+      "phase": 4,
+      "prereqs": [
+        {
+          "id": "scwine.figure8",
+          "kind": "hard"
+        },
+        {
+          "id": "scwine.power",
+          "kind": "hard"
+        },
+        {
+          "id": "scmusic.road",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "a three-track set: chip through a groovy opener, wine through the middle, jump-and-wave the power closer",
+        "the test is joy that survives fatigue — carnival's whole secret",
+        "film the last 30 seconds: if you're still smiling, you passed"
+      ]
+    },
+    {
+      "id": "meta.soca_fete",
+      "type": "combo",
+      "family": "meta",
+      "name": "The fete or the road",
+      "phase": 4,
+      "prereqs": [
+        {
+          "id": "meta.soca_road",
+          "kind": "hard"
+        },
+        {
+          "id": "scculture.consent",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "find soca live: a fete, a diaspora carnival (Notting Hill, Brooklyn Labor Day, Caribana, Miami), or Trinidad itself if the road ever calls you",
+        "consent etiquette in your pocket, stamina in your legs, Shorty's name in your mouth",
+        "notice what a street full of people wining in freedom actually is — that's Canboulay still going"
+      ]
+    }
+  ],
+  "teachers": [
+    {
+      "name": "Soca — Lord Shorty's creation",
+      "url": "https://en.wikipedia.org/wiki/Soca_music"
+    },
+    {
+      "name": "Trinidad carnival — emancipation's festival",
+      "url": "https://en.wikipedia.org/wiki/Trinidad_and_Tobago_Carnival"
+    }
+  ]
+}

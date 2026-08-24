@@ -1,0 +1,283 @@
+{
+  "style": "bomba",
+  "version": "0.1.0",
+  "name": "Bomba (Foundation)",
+  "notes": "Bomba foundation pack (Doc 04 template; foundation-forward, community-first). Puerto Rico's oldest living music-and-dance tradition, created from the 16th-17th centuries onward by enslaved and free Black communities — in Loíza, Cangrejos (Santurce), Ponce, Mayagüez — and kept alive by lineage families the pack credits by name: the Cepeda family (Rafael Cepeda, 'the patriarch of bomba') and the Ayala family of Loíza, among the keepers. Bomba's extraordinary center, and this app's favorite sentence: THE DANCER LEADS THE DRUM. In the batey (the circle), the dancer's improvised accents — piquetes — command the primo/subidor drummer, who must answer every one. That dialogue needs a live drummer and a community, so this pack is a doorway kept honest (meta.batey_honesty): what solo practice owns is the sicá ear, the paso básico, posture and skirt-language basics, and piquete accents drilled as vocabulary — the conversation itself lives at the bombazo, which is exactly where the season arc ends. Bombazos are famously open community events; the resurgence of the last decades means they happen across Puerto Rico and the diaspora.",
+  "seasons": [
+    {
+      "theme": "Sicá Season",
+      "finale": "Film yourself clapping the sicá and stepping its pulse through one full track — the base rhythm, owned."
+    },
+    {
+      "theme": "Paso Básico Season",
+      "finale": "Film the basic step with batey posture — grounded, proud, ready to speak."
+    },
+    {
+      "theme": "Piquete Season",
+      "finale": "Film eight piquete accents from your vocabulary, each one clear enough that a drummer COULD answer it."
+    },
+    {
+      "theme": "Falda Season",
+      "finale": "Film the skirt (or a practice cloth) speaking with the piquetes — lifts, sweeps, punctuation."
+    },
+    {
+      "theme": "Bombazo Season",
+      "finale": "Find a bombazo — Puerto Rico or the diaspora. Enter the batey when you're ready, or witness the dialogue and clap the sicá. Both count."
+    }
+  ],
+  "attributes": [
+    {
+      "id": "attr.timing.l1",
+      "name": "Sicá ear L1",
+      "test": "clap the sicá base through one full track while stepping the pulse — never losing either"
+    },
+    {
+      "id": "attr.posture.l1",
+      "name": "Batey posture L1",
+      "test": "60s grounded stance — knees soft, spine proud, chest open — held easy while arms improvise"
+    },
+    {
+      "id": "attr.core.l1",
+      "name": "Accent control L1",
+      "test": "10 sharp, distinct full-body accents (a stamp, a hip, a shoulder) from stillness, each one readable across a room"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "bmmusic.sica",
+      "type": "concept",
+      "family": "musicality",
+      "name": "Sicá — the base rhythm",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "sicá is bomba's most common seis (rhythm) — the buleador drums hold it steady while the cuá sticks pattern the time; it lives in this app's Rhythm Trainer",
+        "the primo (subidor) drum floats ABOVE the base — it follows the dancer, not the other way around",
+        "learn the base so well you can hear the primo leave it — that departure is the dialogue starting"
+      ]
+    },
+    {
+      "id": "bmmusic.seises",
+      "type": "concept",
+      "family": "musicality",
+      "name": "The seises — sicá, yubá, holandés",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "bmmusic.sica",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "bomba holds a family of rhythms: sicá (duple, the gateway), yubá (6/8, older and deeper), holandés (fast), cuembé and more",
+        "each seis carries its own step and temperament — name what you hear before you move to it",
+        "regional styles differ (Loíza, Santurce, Ponce, Mayagüez) — the tradition is plural and proud of it"
+      ]
+    },
+    {
+      "id": "bmmusic.canto",
+      "type": "concept",
+      "family": "musicality",
+      "name": "The canto — the circle's third voice",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "bmmusic.sica",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "bomba is SUNG: the cantadora (lead singer) calls, the coro answers — call-and-response is the circle's third voice alongside drums and dancer",
+        "learn one traditional coro response and sing it when you clap the sicá — witnesses who answer the coro are part of the bombazo, not spectators",
+        "the songs carry history, humor and grief; listening to the words is listening to the tradition"
+      ]
+    },
+    {
+      "id": "bmculture.roots",
+      "type": "concept",
+      "family": "culture",
+      "name": "Created in bondage, kept in freedom",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "bomba was created from the 16th-17th centuries onward by enslaved and free Black communities in Puerto Rico — at sugar plantations and in free Black towns like Loíza and Cangrejos",
+        "it was resistance, communication, mourning and celebration in one circle — and it never stopped",
+        "Puerto Rico's oldest living music-and-dance tradition; crediting its Black creators is the ground floor of dancing it"
+      ]
+    },
+    {
+      "id": "bmculture.keepers",
+      "type": "concept",
+      "family": "culture",
+      "name": "The keeper families — Cepeda, Ayala, and the resurgence",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "bmculture.roots",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "lineage families kept bomba alive through the 20th century — the Cepeda family (Rafael Cepeda, 'the patriarch of bomba', and generations since) and the Ayala family of Loíza among the most honored keepers",
+        "the last decades' resurgence — schools, collectives, and bombazos across the island and diaspora — is those families' seeds flowering",
+        "learn from Puerto Rican teachers and lineage-connected schools; their names belong in your mouth when you teach anyone else"
+      ]
+    },
+    {
+      "id": "meta.batey_honesty",
+      "type": "concept",
+      "family": "meta",
+      "name": "The honest limit: the dialogue needs a drummer",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "bmculture.keepers",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "bomba's center — the dancer commanding the primo drum, the drummer answering every piquete — is a LIVE conversation; no app or recording can be the other half of it",
+        "what solo practice honestly owns: the sicá ear, the paso básico, posture, piquete vocabulary, and skirt basics — arriving at the batey prepared",
+        "the bombazo is famously open: witness first, clap the sicá, and enter the circle when the community's welcome and your readiness agree"
+      ]
+    },
+    {
+      "id": "bmmove.paso",
+      "type": "move",
+      "family": "movement",
+      "name": "Paso básico — the base step",
+      "phase": 1,
+      "anchor": "the steady ground the dialogue stands on",
+      "prereqs": [
+        {
+          "id": "bmmusic.sica",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.timing.l1",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.posture.l1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "a grounded side-to-side step riding the sicá — knees soft, whole foot, unhurried",
+        "posture proud: the batey is entered with dignity; the dance descends from people who claimed it",
+        "the paso is your idle engine — piquetes interrupt it, and it always resumes",
+        "keep it going while your mind rehearses accents; automatic is batey-ready"
+      ],
+      "mistakes": [
+        "dancing it small and apologetic — the paso holds space",
+        "rushing ahead of the buleadores"
+      ]
+    },
+    {
+      "id": "bmmove.piquetes",
+      "type": "move",
+      "family": "movement",
+      "name": "Piquetes — the accents that command the drum",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "bmmove.paso",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.core.l1",
+          "kind": "hard"
+        },
+        {
+          "id": "meta.batey_honesty",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "a piquete is a sharp, READABLE accent — a stamp, a hip throw, a shoulder cut, a skirt snap — that the primo must answer",
+        "clarity is the skill: an accent a drummer could transcribe beats a flurry nobody can follow",
+        "build a vocabulary of eight; drill them from the paso and back into it, clean entries and exits",
+        "solo drill: mark an accent, then VOICE the drum's answer — training the dialogue's shape until a real drummer completes it"
+      ],
+      "mistakes": [
+        "mushy accents (if the drummer must guess, the piquete failed)",
+        "stringing accents without returning to the paso — the ground makes the lightning readable"
+      ]
+    },
+    {
+      "id": "bmmove.falda",
+      "type": "move",
+      "family": "movement",
+      "name": "The falda — skirt language (basics)",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "bmmove.piquetes",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the skirt (falda) extends the dancer's voice — lifts, sweeps and snaps that punctuate piquetes; a practice skirt or any wide cloth works to learn",
+        "the hand holds the hem soft; the wrist and arm speak (the braceo discipline from the flamenco pack is kin)",
+        "skirt work is one tradition within bomba, strong in some regional styles — dancers of every gender shape the dialogue with or without it"
+      ],
+      "mistakes": [
+        "flapping the skirt constantly (it punctuates; it doesn't narrate)"
+      ]
+    },
+    {
+      "id": "meta.bomba_dialogue",
+      "type": "combo",
+      "family": "meta",
+      "name": "The mock dialogue — filmed",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "bmmove.piquetes",
+          "kind": "hard"
+        },
+        {
+          "id": "bmmusic.seises",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "one sicá track: paso holding, eight piquetes placed with intention, falda or arms punctuating",
+        "watch it back as a drummer: could you have answered every accent? The unreadable ones go back to the shop",
+        "this is the batey rehearsed — the real circle completes it"
+      ]
+    },
+    {
+      "id": "meta.bomba_bombazo",
+      "type": "combo",
+      "family": "meta",
+      "name": "The bombazo",
+      "phase": 4,
+      "prereqs": [
+        {
+          "id": "meta.bomba_dialogue",
+          "kind": "hard"
+        },
+        {
+          "id": "meta.batey_honesty",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "find a bombazo — Puerto Rico, or the diaspora communities (New York, Chicago, Orlando and beyond) that hold them regularly",
+        "witness the dialogue first; clap the sicá with the community; enter the batey when welcome and readiness agree",
+        "when the primo answers your first piquete, you'll understand why this pack kept saying: the dancer leads the drum"
+      ]
+    }
+  ],
+  "teachers": [
+    {
+      "name": "Bomba — Puerto Rico's oldest living tradition",
+      "url": "https://en.wikipedia.org/wiki/Bomba_(Puerto_Rico)"
+    },
+    {
+      "name": "Rafael Cepeda — the patriarch of bomba",
+      "url": "https://en.wikipedia.org/wiki/Rafael_Cepeda"
+    }
+  ]
+}

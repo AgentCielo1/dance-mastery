@@ -424,6 +424,9 @@ const TAGLINES = {
   raqs: "hipwork on the dums — Egypt first",
   dabke: "the Levant's line — six counts in",
   persian: "wrists, naz, the 6/8 — a keeping",
+  soca: "the wine and the road — truly solo",
+  son: "salsa's ancestor — the offbeat ear",
+  bomba: "the dancer leads the drum",
 };
 
 function needsOnboarding() {

@@ -555,6 +555,42 @@ export const MOVES = {
     rootFn: (p, u) => { p.y -= 0.012 * Math.abs(sin(u * TAU * 2)); },
   },
 
+  /* ------------- caribbean wave: solo cores (procedural v1) ------------- */
+  "scwine.basic": {
+    bpm: 116, beats: 4,
+    keys: [
+      // hips roll in smooth circles over released knees; ribcage floats still
+      { t: 0.0, p: { y: 0.855, lKnee: 0.3, rKnee: 0.3, lShF: 0.25, rShF: 0.25, lShA: 0.5, rShA: 0.5, lElb: 0.9, rElb: 0.9 } },
+      { t: 0.5, p: { y: 0.85, lKnee: 0.35, rKnee: 0.35 } },
+    ],
+    // the wine: a hip circle drawn continuously, both directions welcome
+    rootFn: (p, u, t) => { p.roll = 0.08 * sin(t * TAU * 2); p.tPitch = 0.06 + 0.05 * cos(t * TAU * 2); p.tRoll = -0.04 * sin(t * TAU * 2); },
+  },
+  "snstep.basic": {
+    bpm: 92, beats: 4,
+    keys: [
+      // quick-quick-slow a contratiempo — compact, elegant, the pause settled
+      { t: 0.06, p: { y: 0.865, lHipF: -0.18, lKnee: 0.25, rKnee: 0.15, tYaw: 0.06, lShF: 0.2, rShF: 0.2, lElb: 0.7, rElb: 0.7 } },
+      { t: 0.19, p: { y: 0.868, lHipF: 0.0, lKnee: 0.15, rKnee: 0.18 } },
+      { t: 0.31, p: { y: 0.865, lKnee: 0.18, rKnee: 0.15, tYaw: 0.0, roll: -0.02 } },
+      { t: 0.56, p: { y: 0.865, rHipF: -0.18, rKnee: 0.25, lKnee: 0.15, tYaw: -0.06 } },
+      { t: 0.69, p: { y: 0.868, rHipF: 0.0, rKnee: 0.15, lKnee: 0.18 } },
+      { t: 0.81, p: { y: 0.865, rKnee: 0.18, lKnee: 0.15, tYaw: 0.0, roll: 0.02 } },
+    ],
+  },
+  "bmmove.paso": {
+    bpm: 96, beats: 4,
+    keys: [
+      // grounded side-to-side riding the sicá — proud chest, whole foot, holding space
+      { t: 0.0, p: { y: 0.855, lHipA: 0.3, lKnee: 0.3, rKnee: 0.2, tPitch: -0.04, roll: -0.04, lShA: 0.55, rShA: 0.55, lShF: 0.2, rShF: 0.2, lElb: 0.8, rElb: 0.8 } },
+      { t: 0.25, p: { y: 0.86, lHipA: 0.1, lKnee: 0.22, rKnee: 0.22, roll: 0.0 } },
+      { t: 0.5, p: { y: 0.855, rHipA: 0.3, rKnee: 0.3, lKnee: 0.2, roll: 0.04, lHipA: 0.0 } },
+      { t: 0.75, p: { y: 0.86, rHipA: 0.1, rKnee: 0.22, lKnee: 0.22, roll: 0.0 } },
+    ],
+    // arms alive and improvising above the steady ground
+    rootFn: (p, u, t) => { p.lElb += 0.12 * sin(t * TAU * 1.5); p.rElb += 0.12 * cos(t * TAU * 1.5); },
+  },
+
   /* ------------- middle-eastern wave: solo cores (procedural v1) ------------- */
   "rqflow.maya": {
     bpm: 108, beats: 4,

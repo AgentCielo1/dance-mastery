@@ -282,7 +282,8 @@ export default {
    "region": "Trinidad & Tobago",
    "origin": "Afro-Caribbean carnival roots; modern wining culture with soca from the 1970s",
    "essence": "Isolated circular hip rotation in every tempo — fete groove to jouvert abandon",
-   "scene": "Trinidad Carnival, fetes, Notting Hill, Labor Day"
+   "scene": "Trinidad Carnival, fetes, Notting Hill, Labor Day",
+   "pack": "soca"
   },
   {
    "name": "Reggaeton / Perreo",
@@ -1045,7 +1046,8 @@ export default {
    "region": "Cuba (Oriente)",
    "origin": "Late-1800s eastern Cuba — Bantu percussion and Spanish tres; salsa's ancestor",
    "essence": "Elegant contratiempo partner dance with courtly poise",
-   "scene": "Casas de la trova, traditionalist scenes"
+   "scene": "Casas de la trova, traditionalist scenes",
+   "pack": "son"
   },
   {
    "name": "Danzón",
@@ -1070,7 +1072,8 @@ export default {
    "origin": "16th-17th c. onward, created by enslaved and free Black communities (Cepeda lineages)",
    "essence": "Dancer-drummer dialogue — the primo answers the dancer's piquetes in the soberao",
    "scene": "Bombazos in PR and diaspora",
-   "sacred": true
+   "sacred": true,
+   "pack": "bomba"
   },
   {
    "name": "Plena",

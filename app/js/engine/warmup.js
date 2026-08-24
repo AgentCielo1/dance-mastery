@@ -137,6 +137,18 @@ const STYLE_EXTRAS = {
     "Wrist circles x10 each hand, forearm still — the signature starts warm",
     "Easy shoulder rolls x10 and single-shoulder lifts x8 each side",
   ],
+  soca: [
+    "Slow hip circles x10 each way over SOFT knees — the wine wakes gently",
+    "Easy chip in place 60s — the road engine idles first",
+  ],
+  son: [
+    "Small unhurried weight transfers 60s, upper body calm",
+    "Ankle circles x10 each way — elegant feet start supple",
+  ],
+  bomba: [
+    "Grounded stance 30s, then easy full-body accents x6 at half power — wake the piquete muscles kindly",
+    "Wrist and arm circles x8 each — the falda hand warms with the feet",
+  ],
 };
 
 export function warmupFor(style) {

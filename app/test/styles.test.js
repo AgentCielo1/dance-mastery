@@ -496,6 +496,51 @@ test("persian pack: Qajar lineage; suppression and diaspora keeping told factual
   assert.equal(info.theme, "Shesh-o-Hasht Season");
 });
 
+test("soca pack: emancipation roots and Lord Shorty credited; consent is curriculum; truly solo", () => {
+  const sc = STYLES.soca;
+  const canboulay = sc.nodes.find((n) => n.id === "scculture.canboulay");
+  assert.ok(canboulay.checkpoints.some((c) => /emancipation/.test(c) && /Canboulay/.test(c)), "the festival's roots told");
+  const shorty = sc.nodes.find((n) => n.id === "scculture.shorty");
+  assert.ok(shorty.checkpoints.some((c) => /Lord Shorty/.test(c) && /Garfield Blackman/.test(c)), "soca's creator credited");
+  const consent = sc.nodes.find((n) => n.id === "scculture.consent");
+  assert.ok(consent.checkpoints.some((c) => /never overrides somebody's no/.test(c)), "consent etiquette stated plainly");
+  const wine = sc.nodes.find((n) => n.id === "scwine.basic");
+  assert.ok(wine.prereqs.some((p) => p.id === "attr.knees.l1"), "the wine gated on knee release");
+  assert.equal(sc.nodes.filter((n) => n.partner).length, 0, "carnival needs no partner — truly solo");
+  const info = seasonInfo(newState(T), T, sc.seasons);
+  assert.equal(info.theme, "Engine Room Season");
+});
+
+test("son pack: Afro-Cuban creation credited; salsa's ancestor cross-linked; contratiempo is the core", () => {
+  const sn = STYLES.son;
+  const oriente = sn.nodes.find((n) => n.id === "snculture.oriente");
+  assert.ok(oriente.checkpoints.some((c) => /Afro-Cuban creation/.test(c)), "whose creation, stated");
+  assert.ok(oriente.checkpoints.some((c) => /Ignacio Piñeiro|Trío Matamoros/.test(c)), "the septet era credited");
+  const ancestor = sn.nodes.find((n) => n.id === "snculture.ancestor");
+  assert.ok(ancestor.checkpoints.some((c) => /salsa pack/.test(c)), "cross-linked to this app's salsa tree");
+  const basic = sn.nodes.find((n) => n.id === "snstep.basic");
+  assert.ok(basic.prereqs.some((p) => p.id === "attr.timing.l2"), "the basic gated on the offbeat ear");
+  for (const n of sn.nodes.filter((x) => x.partner)) assert.ok(n.phase >= 3, `${n.id} partner-flagged but early`);
+  const info = seasonInfo(newState(T), T, sn.seasons);
+  assert.equal(info.theme, "Clave Season");
+});
+
+test("bomba pack: Black creators and keeper families credited; the dancer leads the drum; batey-gated", () => {
+  const bm = STYLES.bomba;
+  const roots = bm.nodes.find((n) => n.id === "bmculture.roots");
+  assert.ok(roots.checkpoints.some((c) => /enslaved and free Black communities/.test(c)), "the creators credited");
+  const keepers = bm.nodes.find((n) => n.id === "bmculture.keepers");
+  assert.ok(keepers.checkpoints.some((c) => /Cepeda/.test(c) && /Ayala/.test(c)), "the keeper families named");
+  const honesty = bm.nodes.find((n) => n.id === "meta.batey_honesty");
+  assert.ok(honesty.checkpoints.some((c) => /LIVE conversation/.test(c)), "the honest limit: the dialogue needs a drummer");
+  const piquetes = bm.nodes.find((n) => n.id === "bmmove.piquetes");
+  assert.ok(piquetes.prereqs.some((p) => p.id === "meta.batey_honesty" && p.kind === "hard"),
+    "piquete vocabulary sits behind the honesty node");
+  assert.ok(piquetes.checkpoints.some((c) => /the primo must answer/.test(c)), "the dancer leads the drum — in the curriculum");
+  const info = seasonInfo(newState(T), T, bm.seasons);
+  assert.equal(info.theme, "Sicá Season");
+});
+
 test("new-pack animations exist in tree + move library with teaching checkpoints", () => {
   for (const id of ["pop.fresno", "wave.arm", "lock.lock", "point.point", "jack.basic", "hfoot.pdbr"]) {
     assert.ok(MOVES[id], `${id} animated`);
