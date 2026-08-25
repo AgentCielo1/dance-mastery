@@ -1,0 +1,304 @@
+{
+  "style": "ori",
+  "version": "0.1.0",
+  "name": "'Ori Tahiti (Foundation)",
+  "notes": "'Ori Tahiti foundation pack (Doc 04 template; foundation-forward, the Oceania wave's only pack — ON PURPOSE). The oceanian family holds four forms and three are community-held: hula (kahiko and the hālau tradition), haka (ancestral iwi practice), and poi — this app builds NO packs for them; docs/OCEANIA-PARTNERSHIPS.md holds the plan for their people to author them if they choose. 'Ori Tahiti qualifies for a foundation because its own history says so: suppressed under missionary-era codes from the 1820s, rebuilt in public through the 20th century — Madeleine Moua's troupe Heiva (1956) is the credited revival landmark — and today carried by the Heiva i Tahiti festival and a worldwide school scene LED BY TAHITIAN TEACHERS, including online schools taught from Tahiti itself. Design truths: the tō'ere (slit log drum) commands the 'ōte'a — its pehe patterns are in this app's Rhythm Trainer; the posture (bent knees, level still upper body) is the non-negotiable base; hip vocabulary is heavily gated (tāmau sway → 'ami circles → fa'arapu's fast circles, the signature that earns its own endurance gate); meta.fenua_honesty gates all movement — the fenua's teachers hold this dance, and the pack's job is to deliver you to them prepared and respectful.",
+  "seasons": [
+    {
+      "theme": "Tō'ere Season",
+      "finale": "Film yourself clapping the tō'ere pattern through one full 'ōte'a track — the drum's command, heard."
+    },
+    {
+      "theme": "Posture Season",
+      "finale": "Film the base: knees bent, back tall, upper body level and still while the knees pulse — the foundation everything rides on."
+    },
+    {
+      "theme": "'Ami Season",
+      "finale": "Film slow 'ami circles both directions over the posture — hips alone, shoulders like a shelf."
+    },
+    {
+      "theme": "Fa'arapu Season",
+      "finale": "Film 20 honest seconds of fa'arapu — small, fast, from the knees, upper body untouched. Build seconds, not blur."
+    },
+    {
+      "theme": "Fenua Season",
+      "finale": "Watch a full Heiva i Tahiti performance — then enroll with a Tahitian-led school, online or local. The fenua's teachers take it from here."
+    }
+  ],
+  "attributes": [
+    {
+      "id": "attr.knees.l1",
+      "name": "Bent-knee endurance L1",
+      "test": "2 minutes standing in the bent-knee base, back tall, without the knees straightening or the back bowing"
+    },
+    {
+      "id": "attr.hips.l1",
+      "name": "Hip isolation L1",
+      "test": "20 slow hip circles each direction with the ribcage pinned — a book balanced on your head shouldn't wobble"
+    },
+    {
+      "id": "attr.stamina.l2",
+      "name": "Drum-dance stamina L2",
+      "test": "one full 'ōte'a track of continuous knee-pulse and hipwork without the posture collapsing"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "ormusic.toere",
+      "type": "concept",
+      "family": "musicality",
+      "name": "The tō'ere commands the 'ōte'a",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "the tō'ere — the slit log drum struck with a stick — drives the 'ōte'a with fast wooden pehe patterns; one is in this app's Rhythm Trainer",
+        "the pahu's deep skin-drum pulse anchors underneath; hips answer the tō'ere, feet answer the pahu",
+        "the drummers change pehe and the dancers change step — like capoeira's berimbau and bomba's primo, the conversation rules the floor"
+      ]
+    },
+    {
+      "id": "ormusic.forms",
+      "type": "concept",
+      "family": "musicality",
+      "name": "'Ōte'a and 'aparima — drum dance and song dance",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "ormusic.toere",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "'ōte'a: the percussion dance — drums only, fast hips, the form the world knows",
+        "'aparima: the song dance — ukulele and voice, the HANDS narrate the lyrics' story, gentle and seated or standing",
+        "hear the difference in ten seconds; the two forms are one culture's two temperatures"
+      ]
+    },
+    {
+      "id": "orculture.suppression",
+      "type": "concept",
+      "family": "culture",
+      "name": "Banned and rebuilt — the revival credited",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "'ori Tahiti was SUPPRESSED under missionary-era codes from the 1820s — public dance banned for over a century as colonial and church authorities outlawed it",
+        "the 20th-century rebuild is credited: Madeleine Moua founded the troupe Heiva in 1956 and put Tahitian dance back on public stages with pride; the modern Heiva i Tahiti festival carries the flame every July",
+        "another dance the bans could not kill — this app's shelves keep filling with them, and each one is a lesson"
+      ]
+    },
+    {
+      "id": "orculture.fenua",
+      "type": "concept",
+      "family": "culture",
+      "name": "The fenua's schools — Tahitian teachers worldwide",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "orculture.suppression",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "'ori Tahiti is carried by schools in Tahiti and a worldwide scene of studios and online academies LED BY TAHITIAN TEACHERS — unusually accessible for a Pacific tradition, on the fenua's own terms",
+        "solo competitions and the Heiva's group categories set the art's standards; watch full Heiva performances to see the ceiling",
+        "its Pacific siblings — hula, haka, poi — are community-held in this app: no packs, by design; their peoples' doors are the only doors (see the partnership brief)"
+      ]
+    },
+    {
+      "id": "meta.fenua_honesty",
+      "type": "concept",
+      "family": "meta",
+      "name": "The honest limit: the fenua's teachers hold this dance",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "orculture.fenua",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "this pack is preparation, not membership: 'ori Tahiti's technique, costume, chant and meaning are taught by Tahitian teachers and schools — several teach online from Tahiti itself, so the real thing is genuinely reachable",
+        "what solo prep honestly owns: the tō'ere ear, the bent-knee posture, gated hip vocabulary, and respect for what each movement means before performing any of it",
+        "arrive at a school knowing the drum, the base, and Madeleine Moua's name — prepared and humble is the whole assignment"
+      ]
+    },
+    {
+      "id": "ormove.base",
+      "type": "move",
+      "family": "movement",
+      "name": "The base — bent knees, level stillness",
+      "phase": 1,
+      "anchor": "the non-negotiable foundation of everything",
+      "prereqs": [
+        {
+          "id": "ormusic.toere",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.knees.l1",
+          "kind": "hard"
+        },
+        {
+          "id": "meta.fenua_honesty",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "knees bent and springy, feet flat and grounded, back tall, shoulders level — the upper body rides like a shelf that never tips",
+        "the knee pulse keeps the drum's time; everything the hips will ever do is powered from here",
+        "endurance IS the technique: Heiva dancers hold this base through entire drum suites"
+      ],
+      "mistakes": [
+        "knees straightening the moment attention moves to the hips (the base is a discipline, not a starting pose)",
+        "the back bowing forward to fake depth"
+      ]
+    },
+    {
+      "id": "ormove.tamau",
+      "type": "move",
+      "family": "movement",
+      "name": "Tāmau — the side-to-side sway",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "ormove.base",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.hips.l1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "hips sway side to side driven by alternating knee extension — the knees are the engine, the hips are the result",
+        "upper body still as water; the sway lives below the ribs entirely",
+        "slow with the pahu, doubled with the tō'ere — the timing trades are the drill"
+      ],
+      "mistakes": [
+        "swaying from the waist with lazy knees (the engine is BELOW)"
+      ]
+    },
+    {
+      "id": "ormove.ami",
+      "type": "move",
+      "family": "movement",
+      "name": "'Ami — the hip circle",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "ormove.tamau",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the hips draw a full smooth circle — knees trading depth to steer it, upper body untouched",
+        "both directions, equally, slow before anything: a perfect slow 'ami is the prerequisite the fa'arapu will audit",
+        "the raqs pack's circles and the wine are distant cousins; the Tahitian engine (knee-driven, flat-footed) is its own machine — learn THIS one on its own terms"
+      ],
+      "mistakes": [
+        "an oval sold as a circle (film from behind; the shape doesn't lie)"
+      ]
+    },
+    {
+      "id": "ormove.faarapu",
+      "type": "move",
+      "family": "movement",
+      "name": "Fa'arapu — the fast circles",
+      "phase": 3,
+      "anchor": "the signature — earned in seconds, kept in years",
+      "prereqs": [
+        {
+          "id": "ormove.ami",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.stamina.l2",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the 'ami small and FAST — a rapid continuous hip circle from quick alternating knee drive, the upper body a statue above it",
+        "build in honest seconds: 5 clean, then 10, then 20 — speed with a wobbling shelf is zero progress",
+        "relaxation is the accelerator (the shimmy's law, the samba's law, the same law): tension is what can't spin",
+        "varu (the figure-8) branches from here — circles first, always"
+      ],
+      "mistakes": [
+        "shaking instead of circling (film from behind: a fa'arapu ROTATES)",
+        "holding the breath (the statue above still breathes)"
+      ]
+    },
+    {
+      "id": "ormove.hands",
+      "type": "move",
+      "family": "movement",
+      "name": "'Aparima hands (intro)",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "ormove.base",
+          "kind": "hard"
+        },
+        {
+          "id": "ormusic.forms",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the 'aparima's hands narrate — waves, rain, love, the island itself, gestured over the gentle sway",
+        "soft wrists, meaning first: know what a gesture says before you perform it (the fenua's teachers hold the vocabulary; this node is the introduction, not the dictionary)",
+        "the buchaechum's breath and the persian pack's framing are kin disciplines — story carried in calm hands"
+      ]
+    },
+    {
+      "id": "meta.ori_suite",
+      "type": "combo",
+      "family": "meta",
+      "name": "The foundation suite — filmed",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "ormove.faarapu",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "one 'ōte'a track: the base held throughout, tāmau riding the pahu, slow 'ami both ways, and your honest seconds of fa'arapu",
+        "film from behind for the circles and from the side for the posture — both angles must pass",
+        "the shelf test: could a glass of water ride your shoulders? That's the whole foundation in one image"
+      ]
+    },
+    {
+      "id": "meta.ori_school",
+      "type": "combo",
+      "family": "meta",
+      "name": "The fenua's school",
+      "phase": 4,
+      "prereqs": [
+        {
+          "id": "meta.ori_suite",
+          "kind": "hard"
+        },
+        {
+          "id": "meta.fenua_honesty",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "watch one full Heiva i Tahiti performance — the festival films are the tradition's own showcase",
+        "enroll with a Tahitian-led school: online academies teach from Tahiti itself, and Tahitian-taught studios exist across the diaspora",
+        "arrive with the drum in your ear, the base in your legs, and the revival's story in your mouth — the fenua's teachers take it from here"
+      ]
+    }
+  ],
+  "teachers": [
+    {
+      "name": "'Ōte'a — the Tahitian drum dance",
+      "url": "https://en.wikipedia.org/wiki/%27%C5%8Cte%27a"
+    },
+    {
+      "name": "Heiva i Tahiti — the festival that carries it",
+      "url": "https://en.wikipedia.org/wiki/Heiva"
+    }
+  ]
+}

@@ -6,6 +6,7 @@ import { generateSession } from "../js/engine/session.js";
 import { newState, loadState, saveState } from "../js/engine/store.js";
 import { seasonInfo } from "../js/engine/season.js";
 import { MOVES } from "../js/moves3d.js";
+import catalog from "../js/data/catalog.js";
 
 const T = "2026-08-22";
 
@@ -676,6 +677,37 @@ test("capoeira pack: the forge and criminalization told; Bimba and Pastinha cred
   assert.ok(berimbau.checkpoints.some((c) => /COMMANDS the roda/.test(c)), "the bow leads the game");
   const info = seasonInfo(newState(T), T, cp.seasons);
   assert.equal(info.theme, "Berimbau Season");
+});
+
+test("'ori tahiti pack: suppression and revival credited; the fenua's teachers hold the dance; fa'arapu earned", () => {
+  const or = STYLES.ori;
+  const sup = or.nodes.find((n) => n.id === "orculture.suppression");
+  assert.ok(sup.checkpoints.some((c) => /SUPPRESSED/.test(c) && /1820s/.test(c)), "the missionary-era ban stated");
+  assert.ok(sup.checkpoints.some((c) => /Madeleine Moua/.test(c) && /1956/.test(c)), "the revival's founder credited");
+  const fenua = or.nodes.find((n) => n.id === "orculture.fenua");
+  assert.ok(fenua.checkpoints.some((c) => /LED BY TAHITIAN TEACHERS/.test(c)), "whose schools these are");
+  assert.ok(fenua.checkpoints.some((c) => /no packs, by design/.test(c)), "the sacred siblings honored in-curriculum");
+  const base = or.nodes.find((n) => n.id === "ormove.base");
+  assert.ok(base.prereqs.some((p) => p.id === "meta.fenua_honesty" && p.kind === "hard"),
+    "even the base sits behind the honesty gate");
+  const faarapu = or.nodes.find((n) => n.id === "ormove.faarapu");
+  assert.ok(faarapu.prereqs.some((p) => p.id === "ormove.ami"), "the signature is earned through the slow circle");
+  const info = seasonInfo(newState(T), T, or.seasons);
+  assert.equal(info.theme, "Tō'ere Season");
+});
+
+test("the sacred boundary holds: community-held catalog entries carry NO pack links", () => {
+  // Hula, Haka, Poi, and every other sacred-flagged form stay community-held —
+  // a pack linked to any of them is a build failure, by design.
+  const sacred = catalog.styles.filter((s) => s.sacred);
+  assert.ok(sacred.length >= 10, "the sacred flags are still present");
+  for (const s of sacred) {
+    assert.equal(s.pack, undefined, `${s.name} is community-held — no pack may link to it`);
+  }
+  for (const name of ["Hula (Kahiko & 'Auana)", "Haka", "Poi"]) {
+    const entry = catalog.styles.find((s) => s.name === name);
+    assert.ok(entry?.sacred, `${name} remains sacred-flagged`);
+  }
 });
 
 test("new-pack animations exist in tree + move library with teaching checkpoints", () => {

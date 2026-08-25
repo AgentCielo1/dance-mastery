@@ -555,6 +555,20 @@ export const MOVES = {
     rootFn: (p, u) => { p.y -= 0.012 * Math.abs(sin(u * TAU * 2)); },
   },
 
+  /* ------------- oceania wave: solo core (procedural v1) ------------- */
+  "ormove.tamau": {
+    bpm: 168, beats: 4,
+    keys: [
+      // the tāmau: knees drive the sway, the upper body rides like a level shelf
+      { t: 0.0, p: { y: 0.82, lKnee: 0.7, rKnee: 0.45, roll: -0.05, lShA: 0.5, rShA: 0.5, lShF: 0.25, rShF: 0.25, lElb: 0.6, rElb: 0.6 } },
+      { t: 0.25, p: { y: 0.815, lKnee: 0.58, rKnee: 0.58, roll: 0.0 } },
+      { t: 0.5, p: { y: 0.82, rKnee: 0.7, lKnee: 0.45, roll: 0.05 } },
+      { t: 0.75, p: { y: 0.815, lKnee: 0.58, rKnee: 0.58, roll: 0.0 } },
+    ],
+    // the shelf never tips: hips sway below while shoulders stay level
+    rootFn: (p, u) => { p.tRoll = -0.5 * p.roll; },
+  },
+
   /* ------------- latin american folk wave: solo cores (procedural v1) ------------- */
   "cmstep.basic": {
     bpm: 96, beats: 2,

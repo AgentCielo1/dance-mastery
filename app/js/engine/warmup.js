@@ -185,6 +185,10 @@ const STYLE_EXTRAS = {
     "Slow ginga 60s at half depth — the sway warms before it schemes",
     "Deep squat holds x4 (10s) + quadruped wrist rocks 30s — base and hands ready",
   ],
+  ori: [
+    "Bent-knee base holds 3x30s, back tall — the shelf warms before it stills",
+    "Slow hip circles x8 each way over deep knees — the 'ami wakes gently",
+  ],
 };
 
 export function warmupFor(style) {

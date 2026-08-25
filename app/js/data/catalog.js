@@ -1071,8 +1071,7 @@ export default {
    "region": "Puerto Rico",
    "origin": "16th-17th c. onward, created by enslaved and free Black communities (Cepeda lineages)",
    "essence": "Dancer-drummer dialogue — the primo answers the dancer's piquetes in the soberao",
-   "scene": "Bombazos in PR and diaspora",
-   "sacred": true,
+   "scene": "Bombazos in PR and diaspora; bombazos are open community events, and keeper-family schools teach the public",
    "pack": "bomba"
   },
   {
@@ -1870,7 +1869,8 @@ export default {
    "region": "Tahiti",
    "origin": "Traditional drum dance suppressed in the missionary era, rebuilt via Heiva festival and 1956 revival",
    "essence": "Machine-gun hip oscillation to tō'ere log drums; aparima its gestural sibling",
-   "scene": "Heiva i Tahiti, 'ori tahiti schools worldwide"
+   "scene": "Heiva i Tahiti, 'ori tahiti schools worldwide",
+   "pack": "ori"
   },
   {
    "name": "Haka",

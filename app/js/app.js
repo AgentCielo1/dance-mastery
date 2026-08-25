@@ -436,6 +436,7 @@ const TAGLINES = {
   cumbia: "the continent's shared floor",
   marinera: "the pañuelo speaks — Peru's duet",
   capoeira: "the ginga — the bow leads the game",
+  ori: "the tō'ere commands — fenua first",
 };
 
 function needsOnboarding() {

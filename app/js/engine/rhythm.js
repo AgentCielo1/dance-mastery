@@ -151,6 +151,17 @@ export const PATTERNS = {
     ],
     note: "Boom… chik-chik. The slow step stretches through the boom; the quicks answer the chiks.",
   },
+  toere: {
+    name: "Tō'ere pehe ('ōte'a)",
+    beats: 4, defaultBpm: 168,
+    hits: [
+      { t: 0, type: "clave" }, { t: 0.5, type: "clave" }, { t: 1, type: "clave" },
+      { t: 1.75, type: "clave" }, { t: 2, type: "clave" }, { t: 2.5, type: "clave" }, { t: 3.5, type: "clave" },
+      { t: 0, type: "kick" }, { t: 2, type: "kick" },
+      { t: 0, type: "accent" },
+    ],
+    note: "The slit drum's wooden fire over the pahu's pulse — hips answer the tō'ere, feet answer the pahu.",
+  },
   cumbia: {
     name: "Cumbia pulse (guacharaca)",
     beats: 2, defaultBpm: 96,
@@ -404,6 +415,7 @@ export const STYLE_PATTERNS = {
   cumbia: "cumbia",
   marinera: "sesquialtera",
   capoeira: "berimbau",
+  ori: "toere",
 };
 
 export const SOUND_TYPES = ["kick", "snare", "hat", "clave", "accent"];
