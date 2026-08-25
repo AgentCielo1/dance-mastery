@@ -189,6 +189,18 @@ const STYLE_EXTRAS = {
     "Bent-knee base holds 3x30s, back tall — the shelf warms before it stills",
     "Slow hip circles x8 each way over deep knees — the 'ami wakes gently",
   ],
+  waltz: [
+    "Slow relevé rises and soft descents x12 — rise and fall lives in warm ankles",
+    "Tall sways in 3/4, 60s — the ONE settling, the frame arms floating up gradually",
+  ],
+  chacha: [
+    "Small quick side-chasses 45s on the balls of the feet — wake the chatter",
+    "Slow Cuban-motion transfers x10 — hips from the floor, as always",
+  ],
+  foxtrot: [
+    "60s of smooth heel-to-toe walking, level head — the whole dance, gently started",
+    "Easy shoulder rolls x10 and frame-arm lifts x6 — the topline warms last",
+  ],
 };
 
 export function warmupFor(style) {

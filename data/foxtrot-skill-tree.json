@@ -1,0 +1,279 @@
+{
+  "style": "foxtrot",
+  "version": "0.1.0",
+  "name": "Foxtrot",
+  "notes": "Foxtrot style pack (Doc 04 template, solo-first). Ballroom's smoothest walk, with the credit history usually skips told in full: the foxtrot emerged around 1914 shaped by BLACK AMERICAN ragtime dance — the trotting one-steps and slow-drags of Black social floors are its rhythmic root — and its popular name traces to vaudevillian Harry Fox's trotting act (the naming is well documented; the deeper root is the part that gets left out). Vernon and Irene Castle, the era's superstar dance couple who smoothed and popularized it, built their art WITH James Reese Europe — the great Black bandleader and composer whose Society Orchestra powered their performances and whose credit belongs beside theirs. The foxtrot then fathered half the smooth-dance world: this app's own Texas Two-Step descends from it (one river, two packs). Design truths: slow-slow-quick-quick is a WALKING art (the two-step's glide discipline applies wholesale); the slows and quicks must genuinely differ; frame prep is solo; the partnered feather-and-three-step world is 🤝 late at the studio. A foxtrot rhythm — light swing at strolling tempo — is in this app's Rhythm Trainer.",
+  "seasons": [
+    {
+      "theme": "Ragtime Season",
+      "finale": "Film yourself walking the slow-slow-quick-quick to a classic foxtrot — the strut relaxed, the story of the rhythm told on camera."
+    },
+    {
+      "theme": "Glide Season",
+      "finale": "Film the basic traveling with a level head and rolling feet — smooth as the two-step, dressed for evening."
+    },
+    {
+      "theme": "Contrast Season",
+      "finale": "Film slows that truly stroll and quicks that truly skip — the contrast IS the foxtrot; make it visible."
+    },
+    {
+      "theme": "Frame Season",
+      "finale": "Film the basic in frame with the topline long — the shape a partner completes."
+    },
+    {
+      "theme": "Supper-Club Season",
+      "finale": "Take it to a studio class or ballroom social — the foxtrot is every studio's second lesson and every big band's first request."
+    }
+  ],
+  "attributes": [
+    {
+      "id": "attr.walk.l1",
+      "name": "Rolling walk L1",
+      "test": "20 heel-to-toe walking steps with a level head and full transfers — the foxtrot is this walk, refined"
+    },
+    {
+      "id": "attr.timing.l1",
+      "name": "Slow-quick ear L1",
+      "test": "clap S-S-Q-Q through a full foxtrot track — the slows twice the quicks' length, never blurring"
+    },
+    {
+      "id": "attr.posture.l1",
+      "name": "Topline L1",
+      "test": "60s tall carriage in frame position while walking — shoulders down, head floating level"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "fxmusic.swing",
+      "type": "concept",
+      "family": "musicality",
+      "name": "Strolling swing — the foxtrot's tempo",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "the foxtrot strolls a lightly swung 4/4 around 112-120 BPM — big band standards are its home (Sinatra's book is a foxtrot library); a foxtrot pulse is in this app's Rhythm Trainer",
+        "slow-slow-quick-quick spreads over six beats: the slows take two beats each, the quicks one",
+        "the lindy pack's swung ear transfers directly — same swing, dinner jacket on"
+      ]
+    },
+    {
+      "id": "fxmusic.phrasing",
+      "type": "concept",
+      "family": "musicality",
+      "name": "Phrasing the standards",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "fxmusic.swing",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the American songbook phrases in 32-bar AABA choruses — figures land on phrase starts, and the bridge invites a change of figure",
+        "listen to one standard three ways: for the melody, for the swung ride, for the bass's walk — the foxtrot rides all three",
+        "a crooner's rubato breathes; keep your slows patient under it"
+      ]
+    },
+    {
+      "id": "fxculture.roots",
+      "type": "concept",
+      "family": "culture",
+      "name": "The Black American root — and the name on the marquee",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "the foxtrot emerged around 1914 shaped by BLACK AMERICAN ragtime dance — the trotting one-steps and slow-drags of Black social floors are its rhythmic root; that part of the story is usually skipped, and this pack doesn't skip it",
+        "the popular name traces to vaudevillian Harry Fox's trotting act — well documented as the marquee story; the deeper root came first",
+        "the jazz pack's law applies here too: 'the marquee is the middle, not the beginning'"
+      ]
+    },
+    {
+      "id": "fxculture.castles",
+      "type": "concept",
+      "family": "culture",
+      "name": "The Castles — with James Reese Europe beside them",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "fxculture.roots",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "Vernon and Irene Castle, the 1910s' superstar dance couple, smoothed and popularized the foxtrot for the ballroom world",
+        "they built their art WITH JAMES REESE EUROPE — the great Black bandleader and composer whose Society Orchestra powered their performances; his credit belongs beside theirs, and here it is",
+        "the foxtrot then fathered half of smooth dancing: quickstep split off fast, and this app's own Texas Two-Step is its honky-tonk descendant — one river, two packs already on your shelf"
+      ]
+    },
+    {
+      "id": "fxstep.walk",
+      "type": "move",
+      "family": "basic",
+      "name": "The foxtrot walk",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "fxmusic.swing",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.walk.l1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "heel leads rolling to the toe, full transfers, level head — the two-step pack's glide, in evening wear",
+        "the swing lives in the knees' ease, not in any bounce — the foxtrot floats",
+        "walk full songs; the foxtrot is 90% beautiful walking and proud of it"
+      ],
+      "mistakes": [
+        "bobbing (the glass-of-water head test applies for the whole song)"
+      ]
+    },
+    {
+      "id": "fxstep.basic",
+      "type": "move",
+      "family": "basic",
+      "name": "The basic — slow, slow, quick, quick",
+      "phase": 1,
+      "anchor": "six beats of the smoothest arithmetic in ballroom",
+      "prereqs": [
+        {
+          "id": "fxstep.walk",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.timing.l1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "forward slow, forward slow, side quick, close quick — the box-adjacent basic that travels the line of dance",
+        "the slows STROLL (two beats of unhurried arrival); the quicks SKIP lightly (one beat each) — the contrast is the entire flavor",
+        "backward half too: a partner dances the mirror, so own both",
+        "corners round softly — the foxtrot never turns a sharp corner in its life"
+      ],
+      "mistakes": [
+        "four even steps (that's a march wearing a tuxedo)",
+        "quicks that lunge (they're the small talk, not the argument)"
+      ]
+    },
+    {
+      "id": "fxstep.contrast",
+      "type": "move",
+      "family": "basic",
+      "name": "Contrast & continuity",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "fxstep.basic",
+          "kind": "hard"
+        },
+        {
+          "id": "fxmusic.phrasing",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "stretch the slows a hair past comfortable and tuck the quicks a hair tighter — then smooth the seam until nobody can find it",
+        "continuity styling: the feet pass through (no close) for the gliding look the competition floor loves — a taste of the silver-level world the studio will open",
+        "one figure per phrase, changed at the bridge: the song architecture drill"
+      ]
+    },
+    {
+      "id": "fxpartner.frame",
+      "type": "move",
+      "family": "partnerwork",
+      "name": "Frame & topline (solo prep)",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "fxstep.contrast",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.posture.l1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the Standard closed frame carried through the traveling basic — topline long, elbows buoyant, the head floating level above the glide",
+        "the frame travels FORWARD through space for whole songs; steering a steady frame down a line is the actual partnered skill, rehearsed solo",
+        "the waltz pack's frame and this one are siblings — build one, own both"
+      ]
+    },
+    {
+      "id": "fxpartner.closed",
+      "type": "move",
+      "family": "partnerwork",
+      "name": "The closed hold (with a partner)",
+      "phase": 4,
+      "partner": true,
+      "prereqs": [
+        {
+          "id": "fxpartner.frame",
+          "kind": "hard"
+        },
+        {
+          "id": "fxculture.castles",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the partnered basic, then the feather step and three step — the studio's bronze syllabus, taught everywhere, rotation standard",
+        "the couple shares the stroll: two people, one unhurried walk — the foxtrot's whole magic trick",
+        "line of dance counterclockwise, as ever; the smooth river welcomes careful drivers"
+      ]
+    },
+    {
+      "id": "meta.foxtrot_standard",
+      "type": "combo",
+      "family": "meta",
+      "name": "One standard, strolled — filmed",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "fxpartner.frame",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "one full big-band standard: the basic traveling in frame, slows strolling, quicks skipping, corners rounded, head level throughout",
+        "tell the credit on camera before the music starts: the Black American root, the Castles, and James Reese Europe beside them",
+        "the pass condition is ease — a foxtrot should look like the singer sounds"
+      ]
+    },
+    {
+      "id": "meta.foxtrot_social",
+      "type": "combo",
+      "family": "meta",
+      "name": "The ballroom social",
+      "phase": 4,
+      "prereqs": [
+        {
+          "id": "meta.foxtrot_standard",
+          "kind": "hard"
+        },
+        {
+          "id": "fxpartner.closed",
+          "kind": "helps"
+        }
+      ],
+      "checkpoints": [
+        "find a studio class or ballroom social — the foxtrot is every studio's second lesson and every wedding band's default groove",
+        "your walk, your S-S-Q-Q, and your frame are the complete kit; the studio adds the couple and the feather",
+        "dance one standard with a stranger and glide — a century of smooth, and now you're in the river"
+      ]
+    }
+  ],
+  "teachers": [
+    {
+      "name": "Foxtrot — the smooth walk's history",
+      "url": "https://en.wikipedia.org/wiki/Foxtrot"
+    },
+    {
+      "name": "James Reese Europe — the bandleader beside the Castles",
+      "url": "https://en.wikipedia.org/wiki/James_Reese_Europe"
+    }
+  ]
+}

@@ -555,6 +555,43 @@ export const MOVES = {
     rootFn: (p, u) => { p.y -= 0.012 * Math.abs(sin(u * TAU * 2)); },
   },
 
+  /* ------------- ballroom wave: solo cores (procedural v1) ------------- */
+  "wzstep.box": {
+    bpm: 90, beats: 6,
+    keys: [
+      // forward-side-close, back-side-close — with rise and fall breathing through
+      { t: 0.0, p: { y: 0.855, lHipF: 0.4, lKnee: 0.2, rKnee: 0.15, lShA: 0.9, rShA: 0.9, lShF: 0.5, rShF: 0.5, lElb: 1.0, rElb: 1.0, tPitch: -0.04 } },
+      { t: 0.17, p: { y: 0.875, rHipA: 0.25, rKnee: 0.12, lKnee: 0.1, lHipF: 0.0 } },
+      { t: 0.33, p: { y: 0.88, rHipA: 0.0, lKnee: 0.08, rKnee: 0.08 } },
+      { t: 0.5, p: { y: 0.855, rHipF: -0.35, rKnee: 0.2, lKnee: 0.15 } },
+      { t: 0.67, p: { y: 0.875, lHipA: 0.25, lKnee: 0.12, rKnee: 0.1, rHipF: 0.0 } },
+      { t: 0.83, p: { y: 0.88, lHipA: 0.0, lKnee: 0.08, rKnee: 0.08 } },
+    ],
+    // the swell: down on 1, rising through 2, up on 3 — one breath per bar
+    rootFn: (p, u) => { p.y += 0.006 * sin(u * TAU * 2 - 1.2); },
+  },
+  "ccstep.chasse": {
+    bpm: 124, beats: 4,
+    keys: [
+      // rock on two, recover, chatter home on 4-and-1 — small, sharp, cheeky
+      { t: 0.25, p: { y: 0.862, lHipF: 0.3, lKnee: 0.15, rKnee: 0.2, tYaw: 0.08, lShF: 0.2, rShF: -0.3, lElb: 0.7, rElb: 0.9, roll: -0.03 } },
+      { t: 0.5, p: { y: 0.865, lHipF: 0.0, lKnee: 0.18, rKnee: 0.15, tYaw: 0.0 } },
+      { t: 0.75, p: { y: 0.862, lHipA: 0.22, lKnee: 0.22, rKnee: 0.12, roll: 0.03, tRoll: 0.05 } },
+      { t: 0.87, p: { y: 0.864, rHipA: 0.1, rKnee: 0.18, lKnee: 0.12, lHipA: 0.0 } },
+      { t: 1.0 - 0.001, p: { y: 0.862, lHipA: 0.2, lKnee: 0.2, rKnee: 0.12, tRoll: -0.05 } },
+    ],
+  },
+  "fxstep.basic": {
+    bpm: 116, beats: 6,
+    keys: [
+      // slow, slow, quick-quick — strolling forward, level as evening
+      { t: 0.0, p: { y: 0.87, lHipF: 0.45, lKnee: 0.12, rHipF: -0.1, lShA: 0.9, rShA: 0.9, lShF: 0.5, rShF: 0.5, lElb: 1.0, rElb: 1.0, tPitch: -0.04 } },
+      { t: 0.33, p: { y: 0.87, rHipF: 0.45, rKnee: 0.12, lHipF: -0.1 } },
+      { t: 0.67, p: { y: 0.872, lHipA: 0.25, lKnee: 0.15, rKnee: 0.12, rHipF: 0.0 } },
+      { t: 0.83, p: { y: 0.87, lHipA: 0.0, lKnee: 0.1, rKnee: 0.1 } },
+    ],
+  },
+
   /* ------------- oceania wave: solo core (procedural v1) ------------- */
   "ormove.tamau": {
     bpm: 168, beats: 4,

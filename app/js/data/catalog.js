@@ -559,7 +559,8 @@ export default {
    "region": "Austria/Germany → England",
    "origin": "1810s Ländler-derived rotating couple dance; standardized by 1920s English ballrooms",
    "essence": "Closed-hold traveling 3/4 with rise-and-fall, swing and sway",
-   "scene": "DanceSport, studios, wedding floors"
+   "scene": "DanceSport, studios, wedding floors",
+   "pack": "waltz"
   },
   {
    "name": "Viennese Waltz",
@@ -575,7 +576,8 @@ export default {
    "region": "USA (New York)",
    "origin": "c.1914, credited to Harry Fox; shaped by African-American ragtime dance, refined by the Castles",
    "essence": "Linear slow-quick-quick gliding 4/4 — the hardest Standard dance to do well",
-   "scene": "DanceSport, ballroom socials"
+   "scene": "DanceSport, ballroom socials",
+   "pack": "foxtrot"
   },
   {
    "name": "Quickstep",
@@ -615,7 +617,8 @@ export default {
    "region": "Cuba → England",
    "origin": "Early-1950s Havana, from Enrique Jorrín's danzón-mambo innovations",
    "essence": "Cheeky syncopated 4/4 breaking on 2 with 'cha-cha-cha' triple",
-   "scene": "DanceSport and every Latin floor"
+   "scene": "DanceSport and every Latin floor",
+   "pack": "chacha"
   },
   {
    "name": "Samba (International)",

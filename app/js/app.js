@@ -437,6 +437,9 @@ const TAGLINES = {
   marinera: "the pañuelo speaks — Peru's duet",
   capoeira: "the ginga — the bow leads the game",
   ori: "the tō'ere commands — fenua first",
+  waltz: "the box, the rise, the old scandal",
+  chacha: "break on two — Jorrín's gift",
+  foxtrot: "the smoothest walk — roots credited",
 };
 
 function needsOnboarding() {

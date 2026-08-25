@@ -710,6 +710,46 @@ test("the sacred boundary holds: community-held catalog entries carry NO pack li
   }
 });
 
+test("waltz pack: the scandal remembered; the English codification credited; rise and fall is the soul", () => {
+  const wz = STYLES.waltz;
+  const scandal = wz.nodes.find((n) => n.id === "wzculture.scandal");
+  assert.ok(scandal.checkpoints.some((c) => /scandal|indecent/i.test(c)), "the 1810s scandal told");
+  const english = wz.nodes.find((n) => n.id === "wzculture.english");
+  assert.ok(english.checkpoints.some((c) => /Victor Silvester/.test(c)), "the codifier credited");
+  const rf = wz.nodes.find((n) => n.id === "wzstep.risefall");
+  assert.ok(rf.prereqs.some((p) => p.id === "attr.ankles.l1"), "rise and fall gated on the ankles that carry it");
+  for (const n of wz.nodes.filter((x) => x.partner)) assert.ok(n.phase >= 3, `${n.id} partner-flagged but early`);
+  const info = seasonInfo(newState(T), T, wz.seasons);
+  assert.equal(info.theme, "Three-Four Season");
+});
+
+test("cha-cha pack: Enrique Jorrín credited by name and year; the Cuban tree cross-linked; the two earned", () => {
+  const cc = STYLES.chacha;
+  const jorrin = cc.nodes.find((n) => n.id === "ccculture.jorrin");
+  assert.ok(jorrin.checkpoints.some((c) => /ENRIQUE JORRÍN/.test(c) && /1953|early-1950s/.test(c)), "the maker credited");
+  assert.ok(jorrin.checkpoints.some((c) => /named after its own footsteps/.test(c)), "the naming story told");
+  const lineage = cc.nodes.find((n) => n.id === "ccculture.lineage");
+  assert.ok(lineage.checkpoints.some((c) => /son and salsa packs/.test(c)), "cross-linked to the app's Cuban tree");
+  const basic = cc.nodes.find((n) => n.id === "ccstep.basic");
+  assert.ok(basic.prereqs.some((p) => p.id === "attr.timing.l2"), "the basic gated on the break-on-two ear");
+  for (const n of cc.nodes.filter((x) => x.partner)) assert.ok(n.phase >= 3, `${n.id} partner-flagged but early`);
+  const info = seasonInfo(newState(T), T, cc.seasons);
+  assert.equal(info.theme, "Güiro Season");
+});
+
+test("foxtrot pack: the Black American root un-skipped; James Reese Europe beside the Castles", () => {
+  const fx = STYLES.foxtrot;
+  const roots = fx.nodes.find((n) => n.id === "fxculture.roots");
+  assert.ok(roots.checkpoints.some((c) => /BLACK AMERICAN ragtime/.test(c)), "the root named");
+  assert.ok(roots.checkpoints.some((c) => /this pack doesn't skip it/.test(c)), "the usual omission called out");
+  const castles = fx.nodes.find((n) => n.id === "fxculture.castles");
+  assert.ok(castles.checkpoints.some((c) => /JAMES REESE EUROPE/.test(c)), "the bandleader credited beside them");
+  assert.ok(castles.checkpoints.some((c) => /Texas Two-Step/.test(c)), "the two-step descent cross-linked");
+  for (const n of fx.nodes.filter((x) => x.partner)) assert.ok(n.phase >= 3, `${n.id} partner-flagged but early`);
+  const info = seasonInfo(newState(T), T, fx.seasons);
+  assert.equal(info.theme, "Ragtime Season");
+});
+
 test("new-pack animations exist in tree + move library with teaching checkpoints", () => {
   for (const id of ["pop.fresno", "wave.arm", "lock.lock", "point.point", "jack.basic", "hfoot.pdbr"]) {
     assert.ok(MOVES[id], `${id} animated`);

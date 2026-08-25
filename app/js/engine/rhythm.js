@@ -151,6 +151,27 @@ export const PATTERNS = {
     ],
     note: "Boom… chik-chik. The slow step stretches through the boom; the quicks answer the chiks.",
   },
+  chacha: {
+    name: "Cha-cha (güiro & cowbell)",
+    beats: 4, defaultBpm: 124,
+    hits: [
+      { t: 0, type: "kick" }, { t: 2, type: "kick" },
+      { t: 1, type: "clave" }, { t: 3, type: "clave" }, { t: 3.5, type: "clave" },
+      { t: 0.5, type: "hat" }, { t: 1.5, type: "hat" }, { t: 2.5, type: "hat" },
+      { t: 1, type: "accent" },
+    ],
+    note: "Two-three-cha-cha-cha: break on the TWO, chatter home on 4-and-1. The dance named after its own footsteps.",
+  },
+  foxtrot: {
+    name: "Foxtrot stroll (light swing)",
+    beats: 4, defaultBpm: 116,
+    hits: [
+      { t: 0, type: "kick" }, { t: 2, type: "kick" },
+      { t: 1, type: "snare" }, { t: 3, type: "snare" },
+      { t: 0, type: "hat" }, { t: 1.67, type: "hat" }, { t: 2, type: "hat" }, { t: 3.67, type: "hat" },
+    ],
+    note: "Big-band swing at strolling tempo — slows take two beats, quicks take one. Walk it like the singer sounds.",
+  },
   toere: {
     name: "Tō'ere pehe ('ōte'a)",
     beats: 4, defaultBpm: 168,
@@ -416,6 +437,9 @@ export const STYLE_PATTERNS = {
   marinera: "sesquialtera",
   capoeira: "berimbau",
   ori: "toere",
+  waltz: "waltz",
+  chacha: "chacha",
+  foxtrot: "foxtrot",
 };
 
 export const SOUND_TYPES = ["kick", "snare", "hat", "clave", "accent"];
