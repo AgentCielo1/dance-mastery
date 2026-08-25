@@ -859,6 +859,59 @@ test("coupé-décalé pack: Douk Saga & the Jet Set credited; joy-in-wartime tol
   assert.equal(info.theme, "Boucan Season");
 });
 
+test("ndombolo pack: the UNESCO rumba lineage told; the atalaku's Kinshasa origin credited; the ban story remembered", () => {
+  const nd = STYLES.ndombolo;
+  const rumba = nd.nodes.find((n) => n.id === "ndmusic.rumba");
+  assert.ok(rumba.checkpoints.some((c) => /CONGOLESE RUMBA/.test(c) && /UNESCO/.test(c)), "the mother lineage named with its inscription");
+  assert.ok(rumba.checkpoints.some((c) => /Grand Kallé/.test(c) && /Franco/.test(c)), "the elders credited by name");
+  const atalaku = nd.nodes.find((n) => n.id === "ndculture.atalaku");
+  assert.ok(atalaku.checkpoints.some((c) => /invented in Kinshasa/.test(c) && /Zaiko Langa Langa/.test(c)), "the atalaku's origin credited");
+  assert.ok(atalaku.checkpoints.some((c) => /coupé-décalé/.test(c)), "the debt this app's coupé-décalé pack owes, closed from this side");
+  const gen = nd.nodes.find((n) => n.id === "ndculture.generation");
+  assert.ok(gen.checkpoints.some((c) => /WENGE MUSICA/.test(c) && /KOFFI OLOMIDÉ/.test(c) && /AWILO LONGOMBA/.test(c)), "the generation named");
+  const scandal = nd.nodes.find((n) => n.id === "ndculture.scandal");
+  assert.ok(scandal.checkpoints.some((c) => /ban/.test(c) && /indecency/.test(c)), "the failed ban remembered");
+  const hips = nd.nodes.find((n) => n.id === "ndmove.hips");
+  assert.ok(hips.prereqs.some((p) => p.id === "attr.hips.l1"), "the signature gated on real hip readiness");
+  const info = seasonInfo(newState(T), T, nd.seasons);
+  assert.equal(info.theme, "Rumba Season");
+});
+
+test("kuduro pack: Tony Amado credited with the Van Damme story; the war held honestly; drops knee-gated", () => {
+  const kd = STYLES.kuduro;
+  const amado = kd.nodes.find((n) => n.id === "kdculture.amado");
+  assert.ok(amado.checkpoints.some((c) => /TONY AMADO/.test(c) && /Kickboxer/.test(c)), "the creator and his origin story credited");
+  assert.ok(amado.checkpoints.some((c) => /'hard ass'/.test(c)), "the name translated straight");
+  assert.ok(amado.checkpoints.some((c) => /SEBEM/.test(c)), "the animador pioneer credited");
+  const war = kd.nodes.find((n) => n.id === "kdculture.war");
+  assert.ok(war.checkpoints.some((c) => /civil war/.test(c) && /musseques/.test(c)), "the wartime ground stated");
+  assert.ok(war.checkpoints.some((c) => /disabled and war-injured dancers/.test(c)), "the bodies kuduro made room for honored");
+  const global = kd.nodes.find((n) => n.id === "kdmusic.global");
+  assert.ok(global.checkpoints.some((c) => /Lisbon amplified what Luanda invented/.test(c)), "the credit direction fixed");
+  const drops = kd.nodes.find((n) => n.id === "kdmove.drops");
+  assert.ok(drops.prereqs.some((p) => p.id === "attr.knees.l2" && p.kind === "hard"), "drops sit behind the knee gate");
+  assert.ok(drops.mistakes.some((m) => /gate, not a suggestion/.test(m)), "the safety rule written down");
+  const info = seasonInfo(newState(T), T, kd.seasons);
+  assert.equal(info.theme, "Batida Season");
+});
+
+test("semba pack: the umbigada root named; Bonga credited; the kizomba/samba triangle closed from the root's side; partner late", () => {
+  const smb = STYLES.semba;
+  const roots = smb.nodes.find((n) => n.id === "smbculture.roots");
+  assert.ok(roots.checkpoints.some((c) => /MASSEMBA/.test(c) && /umbigada/.test(c)), "the oldest layer named");
+  const family = smb.nodes.find((n) => n.id === "smbculture.family");
+  assert.ok(family.checkpoints.some((c) => /PARENT OF KIZOMBA/.test(c)), "the kizomba debt closed from the root's side");
+  assert.ok(family.checkpoints.some((c) => /Brazilian SAMBA/.test(c) && /enslaved Angolan and Congolese people/.test(c)), "the samba kinship told with its history");
+  const bonga = smb.nodes.find((n) => n.id === "smbmusic.bonga");
+  assert.ok(bonga.checkpoints.some((c) => /BONGA/.test(c)), "the ambassador credited");
+  const umb = smb.nodes.find((n) => n.id === "smbpartner.umbigada");
+  assert.ok(umb.partner && umb.phase >= 4, "the umbigada is partner-flagged and late");
+  assert.ok(umb.prereqs.some((p) => p.id === "smbmove.paragens" && p.kind === "hard"), "the partner gate sits on the finished solo engine");
+  for (const n of smb.nodes.filter((x) => x.partner)) assert.ok(n.phase >= 3, `${n.id} partner-flagged but early`);
+  const info = seasonInfo(newState(T), T, smb.seasons);
+  assert.equal(info.theme, "Dikanza Season");
+});
+
 test("new-pack animations exist in tree + move library with teaching checkpoints", () => {
   for (const id of ["pop.fresno", "wave.arm", "lock.lock", "point.point", "jack.basic", "hfoot.pdbr"]) {
     assert.ok(MOVES[id], `${id} animated`);

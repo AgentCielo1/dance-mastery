@@ -446,6 +446,9 @@ const TAGLINES = {
   sabar: "the drum answers YOU",
   kpanlogo: "Otoo Lincoln's gift to Ghana's youth",
   coupedecale: "joy as defiance — Douk Saga's boucan",
+  ndombolo: "the hips they tried to ban",
+  kuduro: "hard on purpose — Tony Amado's invention",
+  semba: "the root of kizomba, kin of samba",
 };
 
 function needsOnboarding() {

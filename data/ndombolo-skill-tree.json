@@ -1,0 +1,270 @@
+{
+  "style": "ndombolo",
+  "version": "0.1.0",
+  "name": "Ndombolo",
+  "notes": "Ndombolo style pack (Doc 04 template, solo-first). Kinshasa's hip-led club dance of the 1990s, and the loudest branch of the greatest lineage in African popular music: CONGOLESE RUMBA — Grand Kallé's 'Indépendance Cha Cha', Franco & OK Jazz, Tabu Ley Rochereau — inscribed by UNESCO in 2021, sped into soukous with its guitar-driven SEBEN climax, then danced into ndombolo by the Wenge Musica generation with Koffi Olomidé and Awilo Longomba carrying it across the continent. Two credits this pack keeps loud: the ATALAKU — the hype-caller who shouts dance commands and dedications over the seben — is a KINSHASA INVENTION (emerging in the early-1980s Zaiko Langa Langa scene) that later steered coupé-décalé and echoes in every hype-man since, and this pack says so; and ndombolo carries the classic youth-dance scandal story — governments tried to ban its hip swing for indecency in the early 2000s, and the dance won the way youth dances win: everyone was already dancing it. The dance itself: a low bent-knee bounce with big, loose, circular HIP swings, busy shoulders, and the seben's ecstatic acceleration. The seben groove rides in this app's Rhythm Trainer.",
+  "seasons": [
+    {
+      "theme": "Rumba Season",
+      "finale": "Listen through the lineage — one Grand Kallé or Franco track, one soukous track, one ndombolo hit — and journal the baton passes you heard."
+    },
+    {
+      "theme": "Hip Season",
+      "finale": "Film the ndombolo hip swing over the low bounce — one full song, circles big and loose, knees soft."
+    },
+    {
+      "theme": "Seben Season",
+      "finale": "Film yourself riding one full seben — the dance building as the guitars climb, finishing bigger than you started."
+    },
+    {
+      "theme": "Atalaku Season",
+      "finale": "Film a track responding to the atalaku's calls in real time — when the shout comes, the body answers."
+    },
+    {
+      "theme": "Kinshasa Season",
+      "finale": "Find the floor: a Congolese concert, an African club night, a Francophone diaspora party. The seben will tell you when."
+    }
+  ],
+  "attributes": [
+    {
+      "id": "attr.hips.l1",
+      "name": "Loose-hip circles L1",
+      "test": "60s of continuous full hip circles both directions over bent knees — big, smooth, unforced"
+    },
+    {
+      "id": "attr.stamina.l2",
+      "name": "Seben stamina L2",
+      "test": "ride two full sebens back to back with the energy still climbing at the end — the seben rewards dancers who accelerate"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "ndmusic.rumba",
+      "type": "concept",
+      "family": "musicality",
+      "name": "Congolese rumba — the mother river",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "ndombolo descends from CONGOLESE RUMBA — Grand Kallé (whose 'Indépendance Cha Cha' soundtracked African independence), Franco & OK Jazz, Tabu Ley Rochereau — a lineage UNESCO inscribed in 2021",
+        "rumba sped into SOUKOUS, and soukous grew the seben — the guitar-driven climax section — which is where ndombolo lives",
+        "the Kinshasa–Havana loop closes a circle: Cuban records fed Congolese rumba, whose own roots trace back through enslaved Central Africans to the Congo — the music came home"
+      ]
+    },
+    {
+      "id": "ndmusic.seben",
+      "type": "concept",
+      "family": "musicality",
+      "name": "The seben — the climb",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "ndmusic.rumba",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the SEBEN is the song's second life: the vocals step back, the lead guitar takes over, the tempo heat rises, and the dance floor peaks — sometimes for longer than the song itself; the groove is in this app's Rhythm Trainer",
+        "learn its arrival: the texture change is unmistakable — when the guitar starts talking in short repeated phrases, the seben has begun",
+        "the seben is a staircase, not a plateau: your dancing should be visibly bigger at its end than its start"
+      ]
+    },
+    {
+      "id": "ndculture.atalaku",
+      "type": "concept",
+      "family": "culture",
+      "name": "The atalaku — Kinshasa's invention",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "ndmusic.rumba",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the ATALAKU — the hype-caller who fires shouts, dedications, and dance commands over the seben — was invented in Kinshasa's early-1980s scene around Zaiko Langa Langa, and Congolese music has run on it since",
+        "the role traveled: coupé-décalé's atalaku (this app's pack credits the debt), and every hype-man tradition since owes Kinshasa a royalty",
+        "dance TO the atalaku: when the call names a move or shouts the heat up, the floor answers together — train by answering out loud"
+      ]
+    },
+    {
+      "id": "ndculture.scandal",
+      "type": "concept",
+      "family": "culture",
+      "name": "The ban that failed",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "ndculture.atalaku",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "in the early 2000s several governments tried to ban ndombolo's hip swing from airwaves for indecency — the eternal youth-dance scandal, one generation after kpanlogo's and two centuries after the waltz's",
+        "the bans failed the way they always fail: everyone was already dancing it — the hips stayed, the censors moved on",
+        "know the pattern by now: when a dance built on hips arrives, someone official objects, and the dance outlives the objection"
+      ]
+    },
+    {
+      "id": "ndculture.generation",
+      "type": "concept",
+      "family": "culture",
+      "name": "The generation that danced it — the names",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "ndmusic.rumba",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "ndombolo rose with the 1990s Kinshasa generation: WENGE MUSICA's clan of stars, KOFFI OLOMIDÉ's tcha-tcho showmanship, AWILO LONGOMBA carrying it continent-wide — recent, named, and still touring",
+        "Congolese bands are dance factories: choreographed front lines (the danseuses and rôleurs) mint the moves the floor copies — the credit chain runs stage to street",
+        "build your playlist from the names: one Wenge track, one Koffi, one Awilo — three flavors of the same hip"
+      ]
+    },
+    {
+      "id": "ndmove.bounce",
+      "type": "move",
+      "family": "basic",
+      "name": "The low bounce",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "ndmusic.seben",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "knees bent and springy, feet grounded and stepping small, torso easy — the chassis the hips will mount on",
+        "the bounce rides the drive's pulse, unhurried even when the seben heats — the calm under the storm",
+        "keep the shoulders loose and slightly busy; frozen shoulders are the tell of a dancer thinking too hard"
+      ],
+      "mistakes": [
+        "bouncing tall (ndombolo sits IN the knees — height is where the hips' looseness goes to die)"
+      ]
+    },
+    {
+      "id": "ndmove.hips",
+      "type": "move",
+      "family": "basic",
+      "name": "The ndombolo hip swing",
+      "phase": 2,
+      "anchor": "the move they tried to ban",
+      "prereqs": [
+        {
+          "id": "ndmove.bounce",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.hips.l1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "big, loose, circular hip swings over the low bounce — the waist rolling wide while the chest stays amused and easy",
+        "the circles are ROUND: practice slow full circles both directions before letting the music shrink and speed them",
+        "layer: hips circling on the pulse, shoulders chattering on the subdivisions — two conversations, no interruptions",
+        "this is the move governments tried to ban; dance it with exactly that much freedom"
+      ],
+      "mistakes": [
+        "square hips (corners mean tension — grease the circle)",
+        "the face apologizing (ndombolo hips with an embarrassed face is a contradiction; commit or rest)"
+      ]
+    },
+    {
+      "id": "ndmove.arms",
+      "type": "move",
+      "family": "basic",
+      "name": "Answering the guitar",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "ndmove.hips",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the arms answer the seben's guitar phrases — short punchy gestures, rolls, and points that land on the licks",
+        "call-and-response training: pick one repeated guitar phrase per seben and give it one repeated gesture — the floor's whole language works this way",
+        "keep gestures at chest height and forward — ndombolo talks to the crowd, not the ceiling"
+      ]
+    },
+    {
+      "id": "ndmove.seben_ride",
+      "type": "move",
+      "family": "basic",
+      "name": "Riding the seben",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "ndmove.arms",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.stamina.l2",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the full build: enter the seben grooving, grow the hips and gestures as the guitars climb, and peak WITH the music — a managed acceleration, not a sprint",
+        "budget the body: the seben can run five minutes; dancers who spend everything in the first thirty seconds spectate the rest",
+        "practice with real sebens (Wenge-era and Awilo tracks run long) — the stamina attribute exists because the music demands it"
+      ]
+    },
+    {
+      "id": "meta.nd_set",
+      "type": "combo",
+      "family": "meta",
+      "name": "The Kinshasa set — filmed",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "ndmove.seben_ride",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "film one full song through its seben: bounce carrying, hips circling, gestures answering the guitar, the build visible",
+        "review the staircase: mark three moments where your dancing audibly grew — if you can't find them, the seben out-climbed you",
+        "say the lineage on camera: rumba, soukous, seben, ndombolo — four words, sixty years, one river"
+      ]
+    },
+    {
+      "id": "meta.nd_floor",
+      "type": "combo",
+      "family": "meta",
+      "name": "The live floor",
+      "phase": 4,
+      "prereqs": [
+        {
+          "id": "meta.nd_set",
+          "kind": "hard"
+        },
+        {
+          "id": "ndculture.scandal",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "find it live: Congolese concerts and African club nights run worldwide, and Francophone diaspora parties keep the seben burning",
+        "when the atalaku calls, answer — joining the floor's response is the whole etiquette",
+        "somewhere mid-seben, remember you're dancing UNESCO-inscribed lineage with a banned hip swing: heritage and mischief in the same body"
+      ]
+    }
+  ],
+  "teachers": [
+    {
+      "name": "Ndombolo — the dance and its scene",
+      "url": "https://en.wikipedia.org/wiki/Ndombolo"
+    },
+    {
+      "name": "Congolese rumba — the UNESCO-inscribed mother lineage",
+      "url": "https://en.wikipedia.org/wiki/Congolese_rumba"
+    },
+    {
+      "name": "Soukous & the seben",
+      "url": "https://en.wikipedia.org/wiki/Soukous"
+    }
+  ]
+}

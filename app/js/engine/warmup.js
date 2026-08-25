@@ -231,6 +231,21 @@ const STYLE_EXTRAS = {
     "Light side-to-side shuffles 60s — the décalé feet wake up before they cut",
     "30s of grooving while actually smiling — the face is a muscle in this style; warm it",
   ],
+  ndombolo: [
+    "Slow full hip circles x8 each way over bent knees — grease the circle before the music shrinks it",
+    "60s of easy low bouncing, shoulders loose and chattering — the chassis warms before the engine",
+    "Gentle waist rolls with hands on ribs 30s — feel the waist move separately from the chest",
+  ],
+  kuduro: [
+    "60s of tension-release pulses: squeeze everything one count, melt the next — the contrast, rehearsed gently",
+    "Shallow squat pulses x12 with soft knees — the drops are earned from halfway up",
+    "Fast small-step marching 45s, building speed — wake the feet before the batida demands them",
+  ],
+  semba: [
+    "90s of springy walking with alive knees — never locking straight; the walk IS the dance, warm it first",
+    "Easy hip sway from stepping in place 45s — sway as exhaust, never pushed",
+    "Quick freeze drill x6: walk, stop dead clean, resume — cold paragens are wobbly paragens",
+  ],
 };
 
 export function warmupFor(style) {

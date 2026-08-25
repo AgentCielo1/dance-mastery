@@ -333,7 +333,8 @@ export default {
    "region": "Luanda, Angola",
    "origin": "Late-80s-90s Luanda musseques; pioneered by Tony Amado",
    "essence": "Hard stiff percussive isolations and acrobatic drops at frenetic batida tempo",
-   "scene": "Luanda street parties, Lisbon diaspora clubs"
+   "scene": "Luanda street parties, Lisbon diaspora clubs",
+   "pack": "kuduro"
   },
   {
    "name": "Ndombolo",
@@ -341,7 +342,8 @@ export default {
    "region": "Kinshasa, DR Congo",
    "origin": "1990s Kinshasa out of the soukous/rumba lineage (Wenge Musica era)",
    "essence": "Rolling hip-and-waist isolations with bent-knee bounce, led by atalaku calls",
-   "scene": "Congolese concerts and clubs, Francophone diaspora"
+   "scene": "Congolese concerts and clubs, Francophone diaspora",
+   "pack": "ndombolo"
   },
   {
    "name": "Mapouka",
@@ -993,7 +995,8 @@ export default {
    "region": "Angola",
    "origin": "Mid-century Luanda, from the older massemba tradition — kizomba's parent",
    "essence": "Upbeat playful close-hold with quick footwork, tricks and the umbigada touch",
-   "scene": "Angolan festas; taught alongside kizomba"
+   "scene": "Angolan festas; taught alongside kizomba",
+   "pack": "semba"
   },
   {
    "name": "Kizomba",

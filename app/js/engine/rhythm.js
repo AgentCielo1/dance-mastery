@@ -151,6 +151,40 @@ export const PATTERNS = {
     ],
     note: "Boom… chik-chik. The slow step stretches through the boom; the quicks answer the chiks.",
   },
+  seben: {
+    name: "Seben groove (ndombolo)",
+    beats: 4, defaultBpm: 136,
+    hits: [
+      { t: 0, type: "kick" }, { t: 1, type: "kick" }, { t: 2, type: "kick" }, { t: 3, type: "kick" },
+      { t: 1, type: "snare" }, { t: 3, type: "snare" },
+      { t: 0.5, type: "hat" }, { t: 1.5, type: "hat" }, { t: 2.5, type: "hat" }, { t: 3.5, type: "hat" },
+      { t: 0.5, type: "clave" }, { t: 1.75, type: "clave" }, { t: 2.5, type: "clave" }, { t: 3.75, type: "clave" },
+      { t: 0, type: "accent" },
+    ],
+    note: "The guitar's short phrases chatter over the drive — the seben is a staircase, so dance bigger every eight bars. Hips on the pulse, shoulders on the eighths.",
+  },
+  batida: {
+    name: "Batida (kuduro, hard 140)",
+    beats: 4, defaultBpm: 140,
+    hits: [
+      { t: 0, type: "kick" }, { t: 1, type: "kick" }, { t: 2, type: "kick" }, { t: 3, type: "kick" },
+      { t: 1.5, type: "snare" }, { t: 2.75, type: "snare" }, { t: 3.5, type: "snare" },
+      { t: 0.5, type: "hat" }, { t: 1.25, type: "hat" }, { t: 2.5, type: "hat" }, { t: 3.25, type: "hat" },
+      { t: 0, type: "accent" }, { t: 2, type: "accent" },
+    ],
+    note: "Hard four with jabbing off-grid snares — hit ON the accents with machine precision, go loose between them. The contrast is the style.",
+  },
+  semba: {
+    name: "Semba pulse (dikanza)",
+    beats: 2, defaultBpm: 96,
+    hits: [
+      { t: 0, type: "kick" }, { t: 1, type: "kick" },
+      { t: 0.5, type: "snare" }, { t: 1.75, type: "snare" },
+      { t: 0.25, type: "clave" }, { t: 0.75, type: "clave" }, { t: 1.25, type: "clave" }, { t: 1.5, type: "clave" }, { t: 1.75, type: "clave" },
+      { t: 0, type: "accent" },
+    ],
+    note: "Ngoma below, the dikanza scraper chattering above — quicker and cheekier than its child kizomba. The breaks are invitations: stop clean, grin, resume.",
+  },
   sabar: {
     name: "Sabar cycle (drum-talk)",
     beats: 4, defaultBpm: 130,
@@ -512,6 +546,9 @@ export const STYLE_PATTERNS = {
   sabar: "sabar",
   kpanlogo: "kpanlogo",
   coupedecale: "coupedecale",
+  ndombolo: "seben",
+  kuduro: "batida",
+  semba: "semba",
 };
 
 export const SOUND_TYPES = ["kick", "snare", "hat", "clave", "accent"];

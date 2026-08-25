@@ -592,6 +592,43 @@ export const MOVES = {
     ],
   },
 
+  /* ------------- central african wave: solo cores (procedural v1) ------------- */
+  "ndmove.hips": {
+    bpm: 136, beats: 4,
+    keys: [
+      // big loose hip circles over a low bounce, shoulders chattering, chest amused
+      { t: 0.0, p: { y: 0.84, lKnee: 0.45, rKnee: 0.4, roll: -0.09, tRoll: 0.06, lShF: 0.25, rShF: -0.15, lShA: 0.45, rShA: 0.45, lElb: 0.8, rElb: 0.8 } },
+      { t: 0.25, p: { y: 0.835, lKnee: 0.42, rKnee: 0.42, roll: 0.0, tPitch: 0.06, tRoll: 0.0, lShF: 0.0, rShF: 0.1 } },
+      { t: 0.5, p: { y: 0.84, rKnee: 0.45, lKnee: 0.4, roll: 0.09, tRoll: -0.06, rShF: 0.25, lShF: -0.15 } },
+      { t: 0.75, p: { y: 0.835, lKnee: 0.42, rKnee: 0.42, roll: 0.0, tPitch: -0.04, tRoll: 0.0, lShF: 0.1, rShF: 0.0 } },
+    ],
+    // the circle is ROUND: pelvis orbits while the chest stays easy
+    rootFn: (p, u) => { p.yaw = 0.12 * sin(u * TAU); },
+  },
+  "kdmove.stiff": {
+    bpm: 140, beats: 4,
+    keys: [
+      // hard angular hits ON the beat, instant looseness between — stiff on purpose
+      { t: 0.0, p: { y: 0.85, lKnee: 0.5, rKnee: 0.2, lShA: 1.6, lShF: 0.4, lElb: 1.8, rShA: 0.3, rElb: 0.3, tYaw: 0.18, roll: -0.05 } },
+      { t: 0.2, p: { y: 0.855, lKnee: 0.3, rKnee: 0.3, lShA: 0.5, lElb: 0.6, tYaw: 0.0, roll: 0.0 } },
+      { t: 0.5, p: { y: 0.85, rKnee: 0.5, lKnee: 0.2, rShA: 1.6, rShF: 0.4, rElb: 1.8, lShA: 0.3, lElb: 0.3, tYaw: -0.18, roll: 0.05, lShF: 0.0 } },
+      { t: 0.7, p: { y: 0.855, lKnee: 0.3, rKnee: 0.3, rShA: 0.5, rElb: 0.6, tYaw: 0.0, roll: 0.0, rShF: 0.0 } },
+    ],
+    // percussive: a viewer should hear the batida with the sound off
+  },
+  "smbmove.walk": {
+    bpm: 96, beats: 2,
+    keys: [
+      // sprung traveling walk — knees alive, hips swaying easy FROM the step
+      { t: 0.0, p: { y: 0.86, lHipF: 0.5, lKnee: 0.3, rKnee: 0.18, roll: -0.05, tRoll: 0.03, lShF: -0.3, rShF: 0.3, lElb: 0.5, rElb: 0.5 } },
+      { t: 0.25, p: { y: 0.855, lHipF: 0.1, lKnee: 0.35, rKnee: 0.25, roll: 0.0, tRoll: 0.0 } },
+      { t: 0.5, p: { y: 0.86, rHipF: 0.5, rKnee: 0.3, lKnee: 0.18, roll: 0.05, tRoll: -0.03, rShF: -0.3, lShF: 0.3, lHipF: 0.0 } },
+      { t: 0.75, p: { y: 0.855, rHipF: 0.1, rKnee: 0.35, lKnee: 0.25, roll: 0.0, tRoll: 0.0 } },
+    ],
+    // suspension, not stilts: the spring never lets the knees lock
+    rootFn: (p, u) => { p.y += 0.006 * sin(u * TAU * 2); },
+  },
+
   /* ------------- west african wave: solo cores (procedural v1) ------------- */
   "sabmove.bounce": {
     bpm: 130, beats: 4,
