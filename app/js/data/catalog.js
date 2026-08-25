@@ -1238,7 +1238,8 @@ export default {
    "region": "Tamil Nadu, India",
    "origin": "Rooted in the Natya Shastra and Tamil temple sadir; stage-reconstructed 1930s (Rukmini Devi)",
    "essence": "Geometric araimandi precision, adavu footwork, mudras and abhinaya storytelling",
-   "scene": "Arangetram debuts, global academies"
+   "scene": "Arangetram debuts, global academies",
+   "pack": "bharatanatyam"
   },
   {
    "name": "Kathak",
@@ -1304,7 +1305,8 @@ export default {
    "region": "Punjab (India/Pakistan)",
    "origin": "Vaisakhi harvest dance of Punjabi farmers; competitive form post-1947, UK diaspora remix from the 1980s",
    "essence": "Explosive shoulder bounces, hops and kicks to the dhol's chaal",
-   "scene": "Vaisakhi, weddings, university competition circuits"
+   "scene": "Vaisakhi, weddings, university competition circuits",
+   "pack": "bhangra"
   },
   {
    "name": "Garba & Dandiya Raas",
@@ -1312,7 +1314,8 @@ export default {
    "region": "Gujarat, India",
    "origin": "Centuries-old devotional circle dance for the goddess; raas adds Krishna-linked stick play",
    "essence": "Concentric turning circles around a central lamp; paired dandiya stick patterns",
-   "scene": "Navratri nights, diaspora arenas"
+   "scene": "Navratri nights, diaspora arenas",
+   "pack": "garba"
   },
   {
    "name": "Lavani",

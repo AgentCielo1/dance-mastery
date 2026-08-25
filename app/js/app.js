@@ -440,6 +440,9 @@ const TAGLINES = {
   waltz: "the box, the rise, the old scandal",
   chacha: "break on two — Jorrín's gift",
   foxtrot: "the smoothest walk — roots credited",
+  bhangra: "harvest joy, dhol thunder",
+  garba: "the circle around the light",
+  bharatanatyam: "the doorway — the guru holds the door",
 };
 
 function needsOnboarding() {

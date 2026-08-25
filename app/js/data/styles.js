@@ -2,6 +2,8 @@
 import afrobeats from "./afrobeats.js";
 import bachata from "./bachata.js";
 import ballet from "./ballet.js";
+import bhangra from "./bhangra.js";
+import bharatanatyam from "./bharatanatyam.js";
 import bomba from "./bomba.js";
 import bon from "./bon.js";
 import breaking from "./breaking.js";
@@ -16,6 +18,7 @@ import dancehall from "./dancehall.js";
 import flamenco from "./flamenco.js";
 import forro from "./forro.js";
 import foxtrot from "./foxtrot.js";
+import garba from "./garba.js";
 import hiphop from "./hiphop.js";
 import house from "./house.js";
 import irish from "./irish.js";
@@ -46,7 +49,7 @@ import waacking from "./waacking.js";
 import waltz from "./waltz.js";
 import wcs from "./wcs.js";
 import westafrican from "./westafrican.js";
-export const STYLES = { afrobeats, bachata, ballet, bomba, bon, breaking, buchaechum, bzouk, capoeira, chacha, contemporary, cumbia, dabke, dancehall, flamenco, forro, foxtrot, hiphop, house, irish, jazz, kalamatianos, kizomba, kpop, lindy, linedance, locking, marinera, ori, persian, pizzica, polka, popping, raqs, salsa, samba, soca, son, tango, tap, tinikling, twostep, vogue, waacking, waltz, wcs, westafrican };
+export const STYLES = { afrobeats, bachata, ballet, bhangra, bharatanatyam, bomba, bon, breaking, buchaechum, bzouk, capoeira, chacha, contemporary, cumbia, dabke, dancehall, flamenco, forro, foxtrot, garba, hiphop, house, irish, jazz, kalamatianos, kizomba, kpop, lindy, linedance, locking, marinera, ori, persian, pizzica, polka, popping, raqs, salsa, samba, soca, son, tango, tap, tinikling, twostep, vogue, waacking, waltz, wcs, westafrican };
 export const DEFAULT_STYLE = "breaking";
 export function styleName(id) { return STYLES[id]?.name ?? id.charAt(0).toUpperCase() + id.slice(1); }
 // Find a node (and its style) by node id across every pack.

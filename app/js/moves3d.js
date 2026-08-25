@@ -592,6 +592,44 @@ export const MOVES = {
     ],
   },
 
+  /* ------------- south asian wave: solo cores (procedural v1) ------------- */
+  "bhmove.bounce": {
+    bpm: 100, beats: 4,
+    keys: [
+      // high knees, soft landings, shoulders bouncing loose, arms UP — harvest joy
+      { t: 0.0, p: { y: 0.86, lHipF: 0.9, lKnee: 1.1, rKnee: 0.15, lShA: 2.6, rShA: 2.6, lElb: 0.3, rElb: 0.3, roll: -0.04, tRoll: 0.05 } },
+      { t: 0.25, p: { y: 0.845, lHipF: 0.1, lKnee: 0.3, rKnee: 0.25, roll: 0.0, tRoll: -0.05 } },
+      { t: 0.5, p: { y: 0.86, rHipF: 0.9, rKnee: 1.1, lKnee: 0.15, roll: 0.04, tRoll: 0.05, lHipF: 0.0 } },
+      { t: 0.75, p: { y: 0.845, rHipF: 0.1, rKnee: 0.3, lKnee: 0.25, roll: 0.0, tRoll: -0.05 } },
+    ],
+    // the shoulder bounce rides the swung eight under the raised arms
+    rootFn: (p, u) => { p.y += 0.01 * Math.abs(sin(u * TAU * 2)); },
+  },
+  "gbstep.threeclap": {
+    bpm: 138, beats: 4,
+    keys: [
+      // travel steps with sway, hands meeting in front on the claps
+      { t: 0.0, p: { y: 0.86, lHipF: 0.35, lKnee: 0.2, rKnee: 0.15, tYaw: 0.1, lShF: 0.6, rShF: 0.6, lShA: 0.5, rShA: 0.5, lElb: 1.3, rElb: 1.3, roll: -0.04 } },
+      { t: 0.25, p: { y: 0.858, rHipF: 0.35, rKnee: 0.2, lKnee: 0.15, lHipF: 0.0, tYaw: -0.1, lShF: 0.9, rShF: 0.9, lElb: 1.6, rElb: 1.6, roll: 0.04 } },
+      { t: 0.5, p: { y: 0.86, lHipF: 0.35, lKnee: 0.2, rKnee: 0.15, rHipF: 0.0, tYaw: 0.1, lShF: 0.6, rShF: 0.6, lElb: 1.2, rElb: 1.2, roll: -0.04 } },
+      { t: 0.75, p: { y: 0.858, rHipA: 0.2, rKnee: 0.18, lKnee: 0.12, lHipF: 0.0, tYaw: 0.0, lShF: 0.9, rShF: 0.9, lElb: 1.6, rElb: 1.6, roll: 0.03 } },
+    ],
+    // the gentle orbit: the whole cycle drifts the circle's direction
+    rootFn: (p, u) => { p.yaw = 0.15 * sin(u * TAU); },
+  },
+  "btmove.araimandi": {
+    bpm: 76, beats: 8,
+    keys: [
+      // the half-sit held tall — then tatta strikes: flat feet sounding the floor
+      { t: 0.0, p: { y: 0.78, lKnee: 0.9, rKnee: 0.9, lHipA: 0.35, rHipA: 0.35, lShA: 0.8, rShA: 0.8, lElb: 1.5, rElb: 1.5, tPitch: -0.03 } },
+      { t: 0.25, p: { y: 0.785, lKnee: 0.8, rKnee: 0.9, lHipF: 0.12 } },
+      { t: 0.375, p: { y: 0.78, lKnee: 0.9, lHipF: 0.0 } },
+      { t: 0.625, p: { y: 0.785, rKnee: 0.8, lKnee: 0.9, rHipF: 0.12 } },
+      { t: 0.75, p: { y: 0.78, rKnee: 0.9, rHipF: 0.0 } },
+    ],
+    // the spine does not bounce: the strikes live below a still crown
+  },
+
   /* ------------- oceania wave: solo core (procedural v1) ------------- */
   "ormove.tamau": {
     bpm: 168, beats: 4,

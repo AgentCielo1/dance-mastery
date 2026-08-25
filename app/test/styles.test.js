@@ -750,6 +750,65 @@ test("foxtrot pack: the Black American root un-skipped; James Reese Europe besid
   assert.equal(info.theme, "Ragtime Season");
 });
 
+test("bhangra pack: the Vaisakhi harvest root under the spectacle; the diaspora engine credited; joy gated on real stamina", () => {
+  const bh = STYLES.bhangra;
+  const root = bh.nodes.find((n) => n.id === "bhculture.vaisakhi");
+  assert.ok(root.checkpoints.some((c) => /Vaisakhi harvest dance/.test(c) && /Punjabi farmers/.test(c)), "the fields named first");
+  assert.ok(root.checkpoints.some((c) => /both sides/.test(c)), "the partitioned Punjab held whole");
+  const diaspora = bh.nodes.find((n) => n.id === "bhculture.diaspora");
+  assert.ok(diaspora.checkpoints.some((c) => /British-Punjabi/.test(c)), "the UK sound credited");
+  assert.ok(diaspora.checkpoints.some((c) => /collegiate competition circuit/.test(c)), "the campus circuit credited");
+  const family = bh.nodes.find((n) => n.id === "bhculture.family");
+  assert.ok(family.checkpoints.some((c) => /giddha/.test(c) && /luddi/.test(c)), "the sibling traditions named, not absorbed");
+  const hops = bh.nodes.find((n) => n.id === "bhmove.hops");
+  assert.ok(hops.prereqs.some((p) => p.id === "attr.stamina.l2"), "the showpieces gated on the stamina they cost");
+  assert.ok(hops.mistakes.some((m) => /knee pain/.test(m)), "the knees protected in writing");
+  const info = seasonInfo(newState(T), T, bh.seasons);
+  assert.equal(info.theme, "Dhol Season");
+});
+
+test("garba pack: Navratri's devotional heart kept; the aarti honored; dandiya raas is 🤝 and solo-drilled first", () => {
+  const gb = STYLES.garba;
+  const navratri = gb.nodes.find((n) => n.id === "gbculture.navratri");
+  assert.ok(navratri.checkpoints.some((c) => /NAVRATRI/.test(c) && /goddess/.test(c)), "the worship named, not sanded off");
+  assert.ok(navratri.checkpoints.some((c) => /UNESCO/.test(c)), "the 2023 inscription noted");
+  const arc = gb.nodes.find((n) => n.id === "gbmusic.arc");
+  assert.ok(arc.checkpoints.some((c) => /aarti.*dance yields to worship|dance yields to worship/.test(c)), "the aarti pause taught as respect");
+  const raas = gb.nodes.find((n) => n.id === "gbraas.partners");
+  assert.ok(raas.partner, "dandiya raas is partner-flagged");
+  assert.ok(raas.phase >= 3, "the partner node comes late");
+  assert.ok(raas.prereqs.some((p) => p.id === "gbstep.dandiya_solo" && p.kind === "hard"), "sticks earned solo before they meet a partner");
+  const info = seasonInfo(newState(T), T, gb.seasons);
+  assert.equal(info.theme, "Dhol-Beat Season");
+});
+
+test("bharatanatyam pack: the devadasi history told honestly; the renaissance credited AND complicated; every move behind the guru gate", () => {
+  const bt = STYLES.bharatanatyam;
+  const devadasi = bt.nodes.find((n) => n.id === "btculture.devadasi");
+  assert.ok(devadasi.checkpoints.some((c) => /DEVADASI/.test(c) && /sadir/.test(c)), "the root community named");
+  assert.ok(devadasi.checkpoints.some((c) => /dispossessed/.test(c)), "the dispossession stated, not softened");
+  const revival = bt.nodes.find((n) => n.id === "btculture.revival");
+  assert.ok(revival.checkpoints.some((c) => /E\. Krishna Iyer/.test(c) && /Rukmini Devi Arundale/.test(c)), "the revivalists credited by name");
+  assert.ok(revival.checkpoints.some((c) => /T\. Balasaraswati/.test(c)), "the hereditary lineage's own master beside them");
+  assert.ok(revival.checkpoints.some((c) => /credit and cost/.test(c)), "the renaissance held as complicated");
+  const gate = bt.nodes.find((n) => n.id === "meta.guru_honesty");
+  assert.ok(gate.checkpoints.some((c) => /guru-shishya tradition holds this dance/.test(c) && /no app replaces that/.test(c)), "the gate says the honest thing");
+  for (const n of bt.nodes.filter((x) => x.type === "move")) {
+    const chain = new Set();
+    const walk = (id) => {
+      const node = bt.nodes.find((x) => x.id === id);
+      for (const p of node?.prereqs ?? []) if (p.kind === "hard" && !chain.has(p.id)) { chain.add(p.id); walk(p.id); }
+    };
+    walk(n.id);
+    assert.ok(chain.has("meta.guru_honesty"), `${n.id} must sit behind the guru gate (directly or through its chain)`);
+  }
+  const arai = bt.nodes.find((n) => n.id === "btmove.araimandi");
+  assert.ok(arai.prereqs.some((p) => p.id === "attr.legs.l1"), "araimandi conditioned, never forced");
+  assert.ok(arai.mistakes.some((m) => /knee pain/.test(m)), "the knees protected in writing");
+  const info = seasonInfo(newState(T), T, bt.seasons);
+  assert.equal(info.theme, "Tala Season");
+});
+
 test("new-pack animations exist in tree + move library with teaching checkpoints", () => {
   for (const id of ["pop.fresno", "wave.arm", "lock.lock", "point.point", "jack.basic", "hfoot.pdbr"]) {
     assert.ok(MOVES[id], `${id} animated`);

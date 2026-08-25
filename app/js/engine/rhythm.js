@@ -151,6 +151,38 @@ export const PATTERNS = {
     ],
     note: "Boom… chik-chik. The slow step stretches through the boom; the quicks answer the chiks.",
   },
+  chaal: {
+    name: "Dhol chaal (bhangra)",
+    beats: 4, defaultBpm: 100,
+    hits: [
+      { t: 0, type: "kick" }, { t: 0.67, type: "kick" }, { t: 2, type: "kick" }, { t: 2.67, type: "kick" },
+      { t: 1, type: "snare" }, { t: 3, type: "snare" }, { t: 3.67, type: "snare" },
+      { t: 0, type: "hat" }, { t: 1.67, type: "hat" }, { t: 2, type: "hat" }, { t: 3.67, type: "hat" },
+      { t: 0, type: "accent" },
+    ],
+    note: "The dhol's swung eight: deep dhin rolling under, sharp ta answering. The bounce rides the swing, not the grid.",
+  },
+  garba: {
+    name: "Garba cycle (claps in)",
+    beats: 4, defaultBpm: 138,
+    hits: [
+      { t: 0, type: "kick" }, { t: 1, type: "kick" }, { t: 2, type: "kick" }, { t: 3, type: "kick" },
+      { t: 1.5, type: "snare" }, { t: 3.5, type: "snare" },
+      { t: 0.5, type: "hat" }, { t: 1.5, type: "hat" }, { t: 2.5, type: "hat" }, { t: 3.5, type: "hat" },
+      { t: 2, type: "clave" }, { t: 0, type: "accent" },
+    ],
+    note: "The circle's driving four with the crowd's claps built in — the clave hit is where ten thousand hands agree. Tempo climbs as the night deepens.",
+  },
+  aditala: {
+    name: "Adi tala (8-beat cycle)",
+    beats: 8, defaultBpm: 76,
+    hits: [
+      { t: 0, type: "kick" }, { t: 4, type: "snare" }, { t: 6, type: "snare" },
+      { t: 1, type: "hat" }, { t: 2, type: "hat" }, { t: 3, type: "hat" }, { t: 5, type: "hat" }, { t: 7, type: "hat" },
+      { t: 0, type: "accent" },
+    ],
+    note: "Carnatic music's home cycle: clap-2-3-4, clap-and, clap-and — 4+2+2. Speak a sollukattu over it: tai ya tai hi. The dance's clock.",
+  },
   chacha: {
     name: "Cha-cha (güiro & cowbell)",
     beats: 4, defaultBpm: 124,
@@ -440,6 +472,9 @@ export const STYLE_PATTERNS = {
   waltz: "waltz",
   chacha: "chacha",
   foxtrot: "foxtrot",
+  bhangra: "chaal",
+  garba: "garba",
+  bharatanatyam: "aditala",
 };
 
 export const SOUND_TYPES = ["kick", "snare", "hat", "clave", "accent"];

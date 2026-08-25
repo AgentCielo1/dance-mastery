@@ -1,0 +1,277 @@
+{
+  "style": "garba",
+  "version": "0.1.0",
+  "name": "Garba & Dandiya Raas",
+  "notes": "Garba & Dandiya Raas style pack (Doc 04 template, solo-first, alone-together). Gujarat's circle for the goddess, told with its devotional heart intact: garba is danced during NAVRATRI — nine nights honoring the goddess (Amba/Durga) — in circles around a central lamp or image (the word traces to 'garbha deep', the womb-lamp); it is worship AND community celebration at once, and UNESCO inscribed it in 2023. The honesty this pack carries: garba's public events are famously open — Gujarat's Navratri is called the world's longest dance festival and diaspora garba nights welcome thousands of newcomers every autumn — AND it remains devotional practice; dance it with the joy it invites and the respect its nights deserve. Design truths: the core steps (the two-clap and three-clap garba, the grapevine-like travel) are genuinely solo-trainable; the CIRCLE is the dance and is 🤝; dandiya raas — the stick dance that follows garba in the night's arc — needs partners by physics (sticks meet sticks) and its clashing pattern is drilled solo with any two sticks first. The garba beat rides in this app's Rhythm Trainer.",
+  "seasons": [
+    {
+      "theme": "Dhol-Beat Season",
+      "finale": "Film yourself clapping and stepping the garba beat through one full track — the cycle's claps landing true."
+    },
+    {
+      "theme": "Three-Clap Season",
+      "finale": "Film the three-clap garba traveling a circle — steps flowing, claps on the cycle, unhurried."
+    },
+    {
+      "theme": "Travel Season",
+      "finale": "Film the traveling steps orbiting a center (a lamp stand-in) — the circle's geometry, danced solo."
+    },
+    {
+      "theme": "Dandiya Season",
+      "finale": "Film the dandiya pattern with two sticks against a chair-back or hanging target — the clash timing, owned."
+    },
+    {
+      "theme": "Navratri Season",
+      "finale": "Go to a Navratri garba night — diaspora halls and Gujarat's streets alike run them every autumn, and newcomers are the tradition."
+    }
+  ],
+  "attributes": [
+    {
+      "id": "attr.stamina.l2",
+      "name": "Nine-nights stamina L2",
+      "test": "three garba tracks of continuous circling steps — Navratri nights run for hours, train in songs"
+    },
+    {
+      "id": "attr.timing.l1",
+      "name": "Clap-cycle ear L1",
+      "test": "clap the garba cycle's accents through one full track without drifting — the claps ARE the choreography's anchor"
+    },
+    {
+      "id": "attr.wrists.l1",
+      "name": "Dandiya wrists L1",
+      "test": "20 controlled stick-taps each hand against a target on a steady beat — accurate before fast"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "gbmusic.beat",
+      "type": "concept",
+      "family": "musicality",
+      "name": "The garba beat — dhol, claps, and the cycle",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "garba rides a driving cycle with the crowd's CLAPS built into the choreography — the claps are everyone's percussion; the beat is in this app's Rhythm Trainer",
+        "traditional garba songs honor the goddess; modern nights run from folk classics to Bollywood garba — one circle, many decades",
+        "the tempo climbs as the night deepens — early garba strolls, midnight garba flies"
+      ]
+    },
+    {
+      "id": "gbmusic.arc",
+      "type": "concept",
+      "family": "musicality",
+      "name": "The night's arc — garba, aarti, raas",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "gbmusic.beat",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "a Navratri night has a shape: garba circles build, the aarti (the worship's flame ceremony) centers the night, and dandiya raas often follows — know the arc so you honor its moments",
+        "during aarti, dance yields to worship — stand respectfully; that pause is the tradition's heart beating",
+        "the raas that follows is the release: sticks, partners, and the fastest music of the night"
+      ]
+    },
+    {
+      "id": "gbculture.navratri",
+      "type": "concept",
+      "family": "culture",
+      "name": "Navratri — the circle for the goddess",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "garba is danced during NAVRATRI — nine nights honoring the goddess — in circles around a central lamp or image; the name traces to 'garbha deep', the womb-lamp: the circle turns around light",
+        "it is worship AND celebration at once — devotional practice that throws the world's most welcoming party; UNESCO inscribed garba in 2023",
+        "the circle has no front and no audience: everyone dances, every age, all night — Gujarat calls Navratri the world's longest dance festival"
+      ]
+    },
+    {
+      "id": "gbculture.welcome",
+      "type": "concept",
+      "family": "culture",
+      "name": "The open circle — joy with respect",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "gbculture.navratri",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "public garba nights — Gujarat's streets, diaspora halls, university events — welcome newcomers by long tradition; being pulled into the circle by an auntie is the standard onboarding",
+        "welcome comes with respect: it is a devotional festival — dress with care, honor the aarti, and let the night's meaning stand alongside its joy",
+        "chaniya choli and kediyu are the beloved festival dress; newcomers in respectful ordinary clothes are welcome too — the circle cares most that you circle"
+      ]
+    },
+    {
+      "id": "gbstep.twoclap",
+      "type": "move",
+      "family": "basic",
+      "name": "The two-clap garba",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "gbmusic.beat",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.timing.l1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the gateway step: sway-step to one side with a clap, sway back with another — the simplest cycle the circle runs",
+        "steps flow, never stomp; the upper body sways gently with the travel",
+        "the claps land WITH the circle's — at a real garba, ten thousand hands agree on the beat"
+      ],
+      "mistakes": [
+        "clapping off the cycle (the whole hall is your metronome; listen)"
+      ]
+    },
+    {
+      "id": "gbstep.threeclap",
+      "type": "move",
+      "family": "basic",
+      "name": "The three-clap garba (dodhiyu)",
+      "phase": 2,
+      "anchor": "the step every garba night runs on",
+      "prereqs": [
+        {
+          "id": "gbstep.twoclap",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the classic cycle: travel steps forward with turns, three claps distributed through the pattern — dodhiyu and its cousins",
+        "the cycle loops seamlessly with the music and travels the circle's direction",
+        "add the turn: a smooth spin inside the cycle without losing the claps — garba's signature flourish",
+        "learn to JOIN mid-cycle: watch one loop, enter on the next (the bon odori pack's meta-skill, in Gujarati)"
+      ],
+      "mistakes": [
+        "freezing when the tempo climbs (the step shrinks and speeds; it never changes shape)"
+      ]
+    },
+    {
+      "id": "gbstep.travel",
+      "type": "move",
+      "family": "basic",
+      "name": "Orbiting the center",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "gbstep.twoclap",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.stamina.l2",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the steps travel a circle around a center — solo, orbit a lamp stand-in and keep the geometry honest",
+        "concentric circles turn in alternating directions at big garbas; practice both orbits",
+        "hours-long nights are the tradition — pace like the aunties who outlast everyone"
+      ]
+    },
+    {
+      "id": "gbstep.dandiya_solo",
+      "type": "move",
+      "family": "basic",
+      "name": "Dandiya pattern (solo drill)",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "gbstep.threeclap",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.wrists.l1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "two sticks, one target (a chair-back, a hanging cushion): the raas cycle of own-sticks clash, partner-side tap, cross tap — drilled against the target on the beat",
+        "wrist-led taps, accurate before fast — a wild stick at a real raas finds someone's knuckles",
+        "the pattern loops with the music like tinikling's poles: the clash IS the count made audible"
+      ],
+      "mistakes": [
+        "swinging from the elbow (the wrist taps; the arm carries)"
+      ]
+    },
+    {
+      "id": "gbraas.partners",
+      "type": "move",
+      "family": "line",
+      "name": "Dandiya raas (with partners)",
+      "phase": 4,
+      "partner": true,
+      "prereqs": [
+        {
+          "id": "gbstep.dandiya_solo",
+          "kind": "hard"
+        },
+        {
+          "id": "gbmusic.arc",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "sticks meet sticks: pairs clash the cycle then rotate to new partners down the line — the whole hall becomes a machine of meetings",
+        "🤝 by physics and by design: raas is how a community shakes every hand in one night",
+        "your solo pattern is the entry fee; the rotation teaches the rest in three partners flat"
+      ]
+    },
+    {
+      "id": "meta.garba_night",
+      "type": "combo",
+      "family": "meta",
+      "name": "The home garba — filmed",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "gbstep.travel",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "three tracks orbiting your center: two-clap opening, three-clap with turns, tempo climbing like a real night",
+        "claps on the cycle throughout — film the audio, not just the video",
+        "the pass condition is the auntie test: would the circle absorb you without breaking stride?"
+      ]
+    },
+    {
+      "id": "meta.garba_navratri",
+      "type": "combo",
+      "family": "meta",
+      "name": "The Navratri night",
+      "phase": 4,
+      "prereqs": [
+        {
+          "id": "meta.garba_night",
+          "kind": "hard"
+        },
+        {
+          "id": "gbculture.welcome",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "find a garba night next Navratri (September-October) — diaspora halls, university associations and temples run public nights worldwide",
+        "circle, clap, stand for the aarti, stay for the raas — the whole arc, honored",
+        "nine nights around the light: the circle has been waiting for you for centuries, and it means that literally"
+      ]
+    }
+  ],
+  "teachers": [
+    {
+      "name": "Garba — the circle for the goddess (UNESCO 2023)",
+      "url": "https://en.wikipedia.org/wiki/Garba_(dance)"
+    },
+    {
+      "name": "Dandiya raas — the stick dance",
+      "url": "https://en.wikipedia.org/wiki/Dandiya_Raas"
+    }
+  ]
+}

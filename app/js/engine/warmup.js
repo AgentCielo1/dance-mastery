@@ -201,6 +201,21 @@ const STYLE_EXTRAS = {
     "60s of smooth heel-to-toe walking, level head — the whole dance, gently started",
     "Easy shoulder rolls x10 and frame-arm lifts x6 — the topline warms last",
   ],
+  bhangra: [
+    "60s of easy high-knee marching with soft landings — the engine idles before it revs",
+    "Loose alternating shoulder bounces 45s — relaxed, never shrugged",
+    "Big slow arm circles x8 each way — the dhamaal shapes need warm shoulders",
+  ],
+  garba: [
+    "Gentle side-to-side sway steps 60s with light claps — find the cycle before you chase it",
+    "Slow wrist circles x10 each way — dandiya wrists earn their warm-up",
+    "Easy quarter-turns on the spot x8 — the spin comes later; the balance starts now",
+  ],
+  bharatanatyam: [
+    "Shallow half-sit pulses x10, knees over toes, spine tall — greet araimandi, don't demand it",
+    "Ankle rolls x10 each and flat-foot floor taps 30s — the strikes live in warm ankles",
+    "Finger stretches and slow hasta forming 45s — strong fingers, soft wrists",
+  ],
 };
 
 export function warmupFor(style) {
