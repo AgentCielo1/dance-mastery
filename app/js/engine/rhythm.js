@@ -151,6 +151,39 @@ export const PATTERNS = {
     ],
     note: "Boom… chik-chik. The slow step stretches through the boom; the quicks answer the chiks.",
   },
+  sgubhu: {
+    name: "Sgubhu (kwaito walk)",
+    beats: 4, defaultBpm: 108,
+    hits: [
+      { t: 0, type: "kick" }, { t: 1, type: "kick" }, { t: 2, type: "kick" }, { t: 3, type: "kick" },
+      { t: 1, type: "snare" }, { t: 3, type: "snare" },
+      { t: 0.5, type: "hat" }, { t: 1.5, type: "hat" }, { t: 2.5, type: "hat" }, { t: 2.75, type: "hat" }, { t: 3.5, type: "hat" },
+      { t: 0, type: "accent" },
+    ],
+    note: "House slowed to a township walk — heavy four below, feet subdividing above. The kick states it; the footwork argues with it.",
+  },
+  gumboot: {
+    name: "Gumboot cycle (slaps & stamps)",
+    beats: 4, defaultBpm: 100,
+    hits: [
+      { t: 0, type: "kick" }, { t: 2, type: "kick" }, { t: 3, type: "kick" },
+      { t: 0.5, type: "clave" }, { t: 1, type: "clave" }, { t: 1.5, type: "clave" }, { t: 2.5, type: "clave" }, { t: 3.5, type: "clave" },
+      { t: 1, type: "accent" }, { t: 3, type: "accent" },
+    ],
+    note: "Stamps low (kick), boot slaps sharp (clave) — the pattern was syntax before it was rhythm. Drill both hands until the recording can't tell them apart.",
+  },
+  logdrum: {
+    name: "Log drum (amapiano)",
+    beats: 4, defaultBpm: 112,
+    hits: [
+      { t: 0, type: "kick" }, { t: 0.75, type: "kick" }, { t: 1.5, type: "kick" }, { t: 2.5, type: "kick" }, { t: 3.25, type: "kick" },
+      { t: 0.25, type: "hat" }, { t: 0.75, type: "hat" }, { t: 1.25, type: "hat" }, { t: 1.75, type: "hat" },
+      { t: 2.25, type: "hat" }, { t: 2.75, type: "hat" }, { t: 3.25, type: "hat" }, { t: 3.75, type: "hat" },
+      { t: 2, type: "snare" },
+      { t: 0, type: "accent" },
+    ],
+    note: "The rolling hollow bass that drops late and takes the floor with it — shakers whispering above, space everywhere else. Groove small until it arrives.",
+  },
   seben: {
     name: "Seben groove (ndombolo)",
     beats: 4, defaultBpm: 136,
@@ -549,6 +582,9 @@ export const STYLE_PATTERNS = {
   ndombolo: "seben",
   kuduro: "batida",
   semba: "semba",
+  pantsula: "sgubhu",
+  gumboot: "gumboot",
+  amapiano: "logdrum",
 };
 
 export const SOUND_TYPES = ["kick", "snare", "hat", "clave", "accent"];

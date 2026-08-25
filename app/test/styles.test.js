@@ -912,6 +912,60 @@ test("semba pack: the umbigada root named; Bonga credited; the kizomba/samba tri
   assert.equal(info.theme, "Dikanza Season");
 });
 
+test("pantsula pack: Sophiatown and resistance-by-style load-bearing; kwaito and the ambassadors credited; the crew form late", () => {
+  const pt = STYLES.pantsula;
+  const soph = pt.nodes.find((n) => n.id === "ptculture.sophiatown");
+  assert.ok(soph.checkpoints.some((c) => /Sophiatown/.test(c) && /APARTHEID/.test(c)), "the ground and the system named");
+  assert.ok(soph.checkpoints.some((c) => /bulldozed/.test(c)), "the removals stated");
+  assert.ok(soph.checkpoints.some((c) => /the resistance is the style/.test(c)), "the history marked load-bearing");
+  const kwaito = pt.nodes.find((n) => n.id === "ptmusic.kwaito");
+  assert.ok(kwaito.checkpoints.some((c) => /TROMPIES/.test(c)), "the kwaito carriers credited");
+  const today = pt.nodes.find((n) => n.id === "ptculture.today");
+  assert.ok(today.checkpoints.some((c) => /VIA KATLEHONG/.test(c)), "the touring ambassadors named");
+  const basic = pt.nodes.find((n) => n.id === "ptmove.basic");
+  assert.ok(basic.prereqs.some((p) => p.id === "ptculture.sophiatown" && p.kind === "hard"), "the engine sits behind the history");
+  for (const n of pt.nodes.filter((x) => x.partner)) assert.ok(n.phase >= 3, `${n.id} partner-flagged but early`);
+  const info = seasonInfo(newState(T), T, pt.seasons);
+  assert.equal(info.theme, "Sgubhu Season");
+});
+
+test("gumboot pack: the mines told straight — talking bans, boots cheaper than drainage; the code; slap safety gated", () => {
+  const gm = STYLES.gumboot;
+  const mines = gm.nodes.find((n) => n.id === "gmculture.mines");
+  assert.ok(mines.checkpoints.some((c) => /GOLD MINES/.test(c) && /migrant labor system/.test(c)), "the system named");
+  assert.ok(mines.checkpoints.some((c) => /forbidden from talking/.test(c)), "the talking bans stated");
+  assert.ok(mines.checkpoints.some((c) => /CHEAPER THAN DRAINING THE MINES/.test(c)), "the boots' receipt told");
+  const code = gm.nodes.find((n) => n.id === "gmculture.code");
+  assert.ok(code.checkpoints.some((c) => /SIGNALS/.test(c)), "the coded language taught");
+  const stage = gm.nodes.find((n) => n.id === "gmculture.stage");
+  assert.ok(stage.checkpoints.some((c) => /selling the boots without the receipt/.test(c)), "history-skipping named as the failure mode");
+  const slaps = gm.nodes.find((n) => n.id === "gmmove.slaps");
+  assert.ok(slaps.prereqs.some((p) => p.id === "attr.hands.l1" && p.kind === "hard"), "slaps gated on safe hands");
+  const stance = gm.nodes.find((n) => n.id === "gmmove.stance");
+  assert.ok(stance.mistakes.some((m) => /spine stays long/.test(m)), "the back protected in writing");
+  for (const n of gm.nodes.filter((x) => x.partner)) assert.ok(n.phase >= 3, `${n.id} partner-flagged but early`);
+  const info = seasonInfo(newState(T), T, gm.seasons);
+  assert.equal(info.theme, "Boot Season");
+});
+
+test("amapiano pack: the contested Gauteng birth stated honestly; DJ Bongz credited for Gwara Gwara; the credit direction fixed", () => {
+  const ap = STYLES.amapiano;
+  const origins = ap.nodes.find((n) => n.id === "apculture.origins");
+  assert.ok(origins.checkpoints.some((c) => /CONTESTED/.test(c) && /Soweto/.test(c)), "the contest stated instead of adjudicated");
+  assert.ok(origins.checkpoints.some((c) => /KABZA DE SMALL/.test(c)), "the crowned king credited");
+  const named = ap.nodes.find((n) => n.id === "apculture.named");
+  assert.ok(named.checkpoints.some((c) => /GWARA GWARA/.test(c) && /DJ BONGZ/.test(c)), "the canonical credit written");
+  assert.ok(named.checkpoints.some((c) => /'credit unclear' is honest/.test(c)), "the unknown-maker rule stated");
+  const gwara = ap.nodes.find((n) => n.id === "apmove.gwara");
+  assert.ok(/DJ Bongz/.test(gwara.origin ?? ""), "the move carries its maker in the origin field");
+  const global = ap.nodes.find((n) => n.id === "apculture.global");
+  assert.ok(global.checkpoints.some((c) => /the world amplifies what Gauteng invented/.test(c)), "the credit direction fixed");
+  const groove = ap.nodes.find((n) => n.id === "apmove.groove");
+  assert.ok(groove.prereqs.some((p) => p.id === "attr.patience.l1"), "the groove gated on build patience");
+  const info = seasonInfo(newState(T), T, ap.seasons);
+  assert.equal(info.theme, "Log-Drum Season");
+});
+
 test("new-pack animations exist in tree + move library with teaching checkpoints", () => {
   for (const id of ["pop.fresno", "wave.arm", "lock.lock", "point.point", "jack.basic", "hfoot.pdbr"]) {
     assert.ok(MOVES[id], `${id} animated`);

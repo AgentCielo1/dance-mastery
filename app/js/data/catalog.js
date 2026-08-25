@@ -307,7 +307,8 @@ export default {
    "region": "Johannesburg townships",
    "origin": "1950s-60s apartheid-era youth culture, matured through the 1980s; crews like Via Katlehong",
    "essence": "Quick flat-footed syncopated footwork danced low to kwaito — swagger and resistance",
-   "scene": "Township streets, competitions, theatre tours"
+   "scene": "Township streets, competitions, theatre tours",
+   "pack": "pantsula"
   },
   {
    "name": "Azonto",
@@ -401,7 +402,8 @@ export default {
    "region": "Gauteng, South Africa",
    "origin": "Late-2010s with amapiano's rise — street/TikTok-born named moves",
    "essence": "Cool low-effort groove — sliding footwork that log-drums the body",
-   "scene": "Groove culture, TikTok challenges, global nights"
+   "scene": "Groove culture, TikTok challenges, global nights",
+   "pack": "amapiano"
   },
   {
    "name": "Xibelani / Shangaan Electro",
@@ -1737,7 +1739,8 @@ export default {
    "region": "South Africa",
    "origin": "Born in Witwatersrand gold mines — prohibited talk turned into slapped-boot code",
    "essence": "Percussive boot-slapping and chants in unison lines; protest inside entertainment",
-   "scene": "Mining-heritage events, schools, theatre"
+   "scene": "Mining-heritage events, schools, theatre",
+   "pack": "gumboot"
   },
   {
    "name": "Tap Dance",

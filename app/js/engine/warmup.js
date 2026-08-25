@@ -246,6 +246,21 @@ const STYLE_EXTRAS = {
     "Easy hip sway from stepping in place 45s — sway as exhaust, never pushed",
     "Quick freeze drill x6: walk, stop dead clean, resume — cold paragens are wobbly paragens",
   ],
+  pantsula: [
+    "60s of small flat-footed marching, building speed — heels low, the floor is a friend",
+    "Ankle circles x10 each and quick toe-taps 30s — flat-fast feet live on warm ankles",
+    "Practice the cool 30s: feet busy, face bored — the contrast is a skill, warm it too",
+  ],
+  gumboot: [
+    "Wrist circles and loose-hand shakes 45s — slaps come from the snap, not the arm",
+    "Shallow knee-bend pulses x12 with a long quiet back — the stance is built from the legs",
+    "Gentle palm-to-thigh pats 30s building crispness — wake the hands before the boots",
+  ],
+  amapiano: [
+    "90s of slow grounded swaying, knees soft — the groove warms at groove tempo, not gym tempo",
+    "Easy shoulder rolls x10 and small hip circles x8 — the narrators warm before the story",
+    "Three 10s footwork bursts with calm returns — rehearse the sentence shape: calm, flurry, calm",
+  ],
 };
 
 export function warmupFor(style) {

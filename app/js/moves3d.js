@@ -592,6 +592,50 @@ export const MOVES = {
     ],
   },
 
+  /* ------------- southern african wave: solo cores (procedural v1) ------------- */
+  "ptmove.basic": {
+    bpm: 108, beats: 4,
+    keys: [
+      // small fast flat steps below, upper body cool to the point of boredom
+      { t: 0.0, p: { y: 0.865, lHipF: 0.25, lKnee: 0.3, rKnee: 0.15, lShF: 0.05, rShF: -0.05, lElb: 0.4, rElb: 0.4 } },
+      { t: 0.125, p: { y: 0.862, lHipF: 0.0, lKnee: 0.2, rKnee: 0.2 } },
+      { t: 0.25, p: { y: 0.865, rHipF: 0.25, rKnee: 0.3, lKnee: 0.15, lHipF: 0.0 } },
+      { t: 0.375, p: { y: 0.862, rHipF: 0.0, lKnee: 0.2, rKnee: 0.2 } },
+      { t: 0.5, p: { y: 0.865, lHipA: 0.2, lKnee: 0.28, rKnee: 0.15 } },
+      { t: 0.625, p: { y: 0.862, lHipA: 0.0, lKnee: 0.2, rKnee: 0.2 } },
+      { t: 0.75, p: { y: 0.865, rHipA: 0.2, rKnee: 0.28, lKnee: 0.15, lHipA: 0.0 } },
+      { t: 0.875, p: { y: 0.862, rHipA: 0.0, lKnee: 0.2, rKnee: 0.2 } },
+    ],
+    // flat and fast: the feet argue with the sgubhu while the face stays unbothered
+  },
+  "gmmove.slaps": {
+    bpm: 100, beats: 4,
+    keys: [
+      // bent-knee stance, hands slapping the boot line — cupped palm, wrist snap
+      { t: 0.0, p: { y: 0.8, lKnee: 0.8, rKnee: 0.8, tPitch: 0.22, lShF: 1.0, lElb: 1.7, rShF: 0.4, rElb: 0.8 } },
+      { t: 0.125, p: { y: 0.8, lShF: 0.4, lElb: 0.8 } },
+      { t: 0.25, p: { y: 0.8, rShF: 1.0, rElb: 1.7, lShF: 0.4 } },
+      { t: 0.375, p: { y: 0.8, rShF: 0.4, rElb: 0.8 } },
+      { t: 0.5, p: { y: 0.79, lKnee: 0.9, rKnee: 0.75, lShF: 1.0, lElb: 1.7 } },
+      { t: 0.625, p: { y: 0.8, lKnee: 0.8, lShF: 0.4, lElb: 0.8 } },
+      { t: 0.75, p: { y: 0.79, rKnee: 0.9, lKnee: 0.75, rShF: 1.0, rElb: 1.7 } },
+      { t: 0.875, p: { y: 0.8, rKnee: 0.8, lKnee: 0.8, rShF: 0.4, rElb: 0.8 } },
+    ],
+    // the back stays long and quiet — depth from the knees, crack from the wrist
+  },
+  "apmove.groove": {
+    bpm: 112, beats: 4,
+    keys: [
+      // grounded unhurried bounce-sway, shoulders narrating small, sitting behind the beat
+      { t: 0.0, p: { y: 0.85, lKnee: 0.35, rKnee: 0.25, roll: -0.05, tRoll: 0.04, lShF: 0.15, rShF: -0.1, lElb: 0.6, rElb: 0.6 } },
+      { t: 0.25, p: { y: 0.845, lKnee: 0.3, rKnee: 0.3, roll: 0.0, tRoll: 0.0, lShF: 0.0, rShF: 0.05 } },
+      { t: 0.5, p: { y: 0.85, rKnee: 0.35, lKnee: 0.25, roll: 0.05, tRoll: -0.04, rShF: 0.15, lShF: -0.1 } },
+      { t: 0.75, p: { y: 0.845, lKnee: 0.3, rKnee: 0.3, roll: 0.0, tRoll: 0.0, lShF: 0.05, rShF: 0.0 } },
+    ],
+    // horizontal cool: the sway rolls a hair behind the beat and never hurries
+    rootFn: (p, u) => { p.y += 0.005 * sin(u * TAU * 2 + 0.6); },
+  },
+
   /* ------------- central african wave: solo cores (procedural v1) ------------- */
   "ndmove.hips": {
     bpm: 136, beats: 4,

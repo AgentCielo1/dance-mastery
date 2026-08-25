@@ -449,6 +449,9 @@ const TAGLINES = {
   ndombolo: "the hips they tried to ban",
   kuduro: "hard on purpose — Tony Amado's invention",
   semba: "the root of kizomba, kin of samba",
+  pantsula: "resistance by style — flat, fast, cool",
+  gumboot: "the boots remember the mines",
+  amapiano: "wait for the log drum",
 };
 
 function needsOnboarding() {

@@ -1,0 +1,283 @@
+{
+  "style": "gumboot",
+  "version": "0.1.0",
+  "name": "Gumboot (Isicathulo)",
+  "notes": "Gumboot / Isicathulo style pack (Doc 04 template, fully solo-trainable — the whole instrument is your own boots). The dance with the hardest history in this app, told honestly: gumboot was born in the GOLD MINES of the Witwatersrand under the migrant labor system, where Black miners — recruited across Southern Africa, housed in compounds, forbidden by many mine rules from talking underground — worked flooded tunnels in wellington boots issued because BOOTS WERE CHEAPER THAN DRAINING THE MINES. The men turned the punishment into an instrument: boot slaps, stamps, and rattles became a coded language under the guards' noses and then a competitive art in the compounds, syncretized with isicathulo step traditions. That double truth is the pack's spine — this is world-class percussive dance AND a document of an extraction economy, and dancing it means carrying both. From the compounds it went to stages: mine troupes, township schools, and touring shows carried gumboot worldwide, and South African teachers teach it openly today. Design truths: it is one of the most naturally solo-trainable forms in this app (a chair, wellington boots or firm boots, and patience), the call-and-response leader structure is the social layer 🤝 late, and slap-hand safety is written into the attributes. The boot-slap cycle rides in this app's Rhythm Trainer.",
+  "seasons": [
+    {
+      "theme": "Boot Season",
+      "finale": "Film your first slap cycle — seated or standing, boots on, the basic pattern clean and even."
+    },
+    {
+      "theme": "Slap Season",
+      "finale": "Film the standing slap vocabulary — sides, fronts, crossing — at steady tempo with relaxed hands."
+    },
+    {
+      "theme": "Stamp Season",
+      "finale": "Film stamps and slaps interleaved through one pattern — the feet and hands sharing one sentence."
+    },
+    {
+      "theme": "Sequence Season",
+      "finale": "Film a full sequence: three patterns chained with breaks, called aloud to yourself like a leader would."
+    },
+    {
+      "theme": "Compound Season",
+      "finale": "Find gumboot live or teach it: a workshop, a school group, a touring show — and tell the mines' story straight."
+    }
+  ],
+  "attributes": [
+    {
+      "id": "attr.hands.l1",
+      "name": "Slap-safe hands L1",
+      "test": "60s of relaxed-palm boot slaps with loose wrists and no sting that lasts — cupped palm, wrist snap, never a rigid arm"
+    },
+    {
+      "id": "attr.knees.l1",
+      "name": "Stamp-ready legs L1",
+      "test": "60s of alternating flat stamps with bent knees and a quiet spine — power from the leg's drop, not the back"
+    },
+    {
+      "id": "attr.timing.l1",
+      "name": "Even-cycle ear L1",
+      "test": "clap a steady eight and keep it metronome-even for two minutes — gumboot patterns expose uneven hands instantly"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "gmculture.mines",
+      "type": "concept",
+      "family": "culture",
+      "name": "The mines — the history that must be told",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "gumboot was born in the Witwatersrand GOLD MINES under the migrant labor system: Black miners recruited across Southern Africa, housed in compounds, many forbidden from talking underground",
+        "the boots are the receipt: wellingtons were issued for flooded tunnels because boots were CHEAPER THAN DRAINING THE MINES — the dance's instrument is a cost-saving decision made about human beings",
+        "the men turned the punishment into an instrument — that reversal is the dance's dignity, and telling it straight is the price of admission to this pack"
+      ]
+    },
+    {
+      "id": "gmculture.code",
+      "type": "concept",
+      "family": "culture",
+      "name": "The code — talking with boots",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "gmculture.mines",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "under talking bans and over machine noise, slaps and rattles became SIGNALS — warnings, messages, jokes passed under the guards' attention",
+        "in the compounds the code became competition: teams drilled patterns, isicathulo step traditions folded in, and an art form assembled itself out of forbidden conversation",
+        "hear the double meaning in every pattern you learn: it is rhythm now; it was syntax first"
+      ]
+    },
+    {
+      "id": "gmculture.stage",
+      "type": "concept",
+      "family": "culture",
+      "name": "Compound to stage — who carried it out",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "gmculture.code",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "mine troupes performed for visitors, township schools adopted isicathulo, and touring shows carried gumboot to world stages — South African teachers teach it openly today, often with the history as the opening number",
+        "the form's global life (theater shows, school programs, university ensembles) is legitimate AND downstream: the compounds are the source, and programs that skip the mines are selling the boots without the receipt",
+        "when you perform or teach it, the story comes first — this pack's own finale says so"
+      ]
+    },
+    {
+      "id": "gmmusic.calls",
+      "type": "concept",
+      "family": "musicality",
+      "name": "Calls & the leader structure",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "gmculture.mines",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "gumboot runs on CALL-AND-RESPONSE: a leader shouts or slaps the cue, the line answers in unison — commands like attention ('attenshun!') structure whole sequences",
+        "the cycle is in this app's Rhythm Trainer: slaps as the sharp cracks, stamps as the low hits — learn to hear which is which with your eyes shut",
+        "solo training still uses the structure: call your own patterns aloud before you dance them — the voice is part of the instrument"
+      ]
+    },
+    {
+      "id": "gmmove.stance",
+      "type": "move",
+      "family": "basic",
+      "name": "The stance — bent, ready, quiet-backed",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "gmculture.mines",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.knees.l1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "knees bent, weight low, back long and quiet, hands hovering ready at the boot line — the working posture every pattern fires from",
+        "the bend is functional: slaps reach the boots without the spine folding — depth comes from the knees forever, never the lower back",
+        "practice returning to the stance between every burst; it is the pattern's home key"
+      ],
+      "mistakes": [
+        "folding the back to reach the boots (bend the KNEES — the spine stays long or the career stays short)"
+      ]
+    },
+    {
+      "id": "gmmove.slaps",
+      "type": "move",
+      "family": "basic",
+      "name": "The boot slaps",
+      "phase": 1,
+      "anchor": "the instrument itself",
+      "prereqs": [
+        {
+          "id": "gmmove.stance",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.hands.l1",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.timing.l1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the core strikes: slapping the boot shaft outside, inside, and front — cupped relaxed palm, loose wrist snap, the CRACK coming from speed not force",
+        "start seated if it helps (the classic teaching progression), then take the same slaps into the stance",
+        "evenness before speed: left and right hands must sound identical — record audio and listen without watching",
+        "the boots themselves matter: wellingtons speak loudest, but any firm boot teaches the pattern"
+      ],
+      "mistakes": [
+        "rigid-arm slapping (stinging hands mean wrong technique, not toughness — loosen the wrist)",
+        "one loud hand (the weak side gets double drills until the recording can't tell them apart)"
+      ]
+    },
+    {
+      "id": "gmmove.stamps",
+      "type": "move",
+      "family": "basic",
+      "name": "Stamps & rattles",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "gmmove.slaps",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the low voice: flat full-foot stamps dropping from the knee, plus the boot-shake rattles that blur between hits",
+        "stamps and slaps interleave into one sentence — feet on the strong counts, hands answering between, the pattern breathing high-low",
+        "dynamics are vocabulary: a whispered stamp and a floor-shaking one are different words — drill both on purpose"
+      ]
+    },
+    {
+      "id": "gmmove.sequences",
+      "type": "move",
+      "family": "basic",
+      "name": "Pattern sequences & breaks",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "gmmove.stamps",
+          "kind": "hard"
+        },
+        {
+          "id": "gmmusic.calls",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "patterns chain into sequences with BREAKS — dead-stop rests where the silence is as drilled as the sound",
+        "structure like the teams do: call the pattern aloud, run it a fixed count, break clean, call the next",
+        "build three patterns of your own from the slap-stamp vocabulary and name them — composition was always part of this form"
+      ],
+      "mistakes": [
+        "coasting through the breaks (the silence is drilled — a ragged stop unravels the whole sequence)"
+      ]
+    },
+    {
+      "id": "gmgroup.unison",
+      "type": "move",
+      "family": "line",
+      "name": "The line — unison & answer",
+      "phase": 4,
+      "partner": true,
+      "prereqs": [
+        {
+          "id": "gmmove.sequences",
+          "kind": "hard"
+        },
+        {
+          "id": "gmculture.stage",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "🤝 the team form: a line answering the leader's calls as one instrument — the compounds' competitive format, alive in every workshop",
+        "unison in a percussive form is audible truth: one late slap is public information — the line teaches humility fast",
+        "your solo patterns are the entry: a leader can place a clean soloist into a line in one session"
+      ]
+    },
+    {
+      "id": "meta.gm_set",
+      "type": "combo",
+      "family": "meta",
+      "name": "The compound set — filmed",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "gmmove.sequences",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "film one full sequence: three patterns chained, called aloud, breaks dead clean, dynamics deliberate",
+        "audio-only review: listen without the picture — evenness, crack quality, and silence discipline are all audible",
+        "open the video by saying where the dance comes from; the mines' story is the set's first pattern"
+      ]
+    },
+    {
+      "id": "meta.gm_live",
+      "type": "combo",
+      "family": "meta",
+      "name": "The living line",
+      "phase": 4,
+      "prereqs": [
+        {
+          "id": "meta.gm_set",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "find gumboot live: South African cultural workshops, school and university ensembles, and touring shows teach it worldwide — or start the line yourself by teaching one person one pattern",
+        "either way, the history travels attached: boots, mines, code, art — in that order",
+        "the form began as forbidden conversation; every new dancer you teach is the conversation continuing"
+      ]
+    }
+  ],
+  "teachers": [
+    {
+      "name": "Gumboot dance — history and form",
+      "url": "https://en.wikipedia.org/wiki/Gumboot_dance"
+    },
+    {
+      "name": "The Witwatersrand mines & migrant labor system",
+      "url": "https://en.wikipedia.org/wiki/Witwatersrand_Gold_Rush"
+    }
+  ]
+}
