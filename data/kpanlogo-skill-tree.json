@@ -1,0 +1,269 @@
+{
+  "style": "kpanlogo",
+  "version": "0.1.0",
+  "name": "Kpanlogo",
+  "notes": "Kpanlogo style pack (Doc 04 template, solo-first). A rare and beautiful thing: a traditional African drum-dance with a NAMED CREATOR — kpanlogo was created in the early 1960s by OTOO LINCOLN, a young Ga man in Bukom, Accra, who built it with friends from Ga rhythms, highlife energy, and rock-and-roll swagger for a newly independent Ghana's youth. The elders called it indecent; in 1965 the dancers famously performed it for review and Ghana's Arts Council (under Nkrumah's government) approved it — the youth dance won its place, and today kpanlogo is danced at Ga festivals, schools, and university African ensembles worldwide. This pack keeps the creator credited (traditional does not mean anonymous — the same lesson as Afrobeats' named moves, one generation earlier), teaches the openly-taught recreational form: the low-swinging basic, the bell pattern that everything locks to, the invitation gestures, and the drum-break stops. The kpanlogo bell rides in this app's Rhythm Trainer.",
+  "seasons": [
+    {
+      "theme": "Bell Season",
+      "finale": "Film yourself clapping the kpanlogo bell pattern through one track, then stepping the basic against it."
+    },
+    {
+      "theme": "Low-Swing Season",
+      "finale": "Film the kpanlogo basic — bent knees, swinging arms, one full song without rising out of it."
+    },
+    {
+      "theme": "Gesture Season",
+      "finale": "Film the invitation gestures and travels over the basic — playful, storytelling, unhurried."
+    },
+    {
+      "theme": "Break Season",
+      "finale": "Film a drum-break run: dance, hit the stop, hold the picture, resume — five times in one track."
+    },
+    {
+      "theme": "Bukom Season",
+      "finale": "Find kpanlogo live: a Ghanaian cultural group, a university African drum-and-dance ensemble, a Ga festival. Tell someone who made it."
+    }
+  ],
+  "attributes": [
+    {
+      "id": "attr.knees.l1",
+      "name": "Low-swing knees L1",
+      "test": "90s of dancing with knees bent and level — kpanlogo lives low; rising out of it is the tell of a tired dancer"
+    },
+    {
+      "id": "attr.timing.l1",
+      "name": "Bell-lock ear L1",
+      "test": "clap the kpanlogo bell pattern along to a track for two minutes without drifting — the bell is the truth everything locks to"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "kplmusic.bell",
+      "type": "concept",
+      "family": "musicality",
+      "name": "The bell pattern — the truth-keeper",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "kpanlogo locks to a bell timeline — the pattern every drum and every dancer measures against; it's in this app's Rhythm Trainer",
+        "West African ensemble logic: the bell never solos and never stops, and that's why it's in charge",
+        "clap the bell until it's boring, then step against it — boredom in the hands is readiness in the feet"
+      ]
+    },
+    {
+      "id": "kplmusic.drums",
+      "type": "concept",
+      "family": "musicality",
+      "name": "The kpanlogo drums & the break",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "kplmusic.bell",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the kpanlogo drums (peg-tuned, congas' Ga cousins) layer parts over the bell; the lead drum calls the BREAKS — sharp phrases that stop and restart the dance",
+        "learn the break by ear: the call is unmistakable once you've heard three — everyone hits the stop together and grins",
+        "highlife and Ga street energy share this groove: your practice playlist spans 60 years of Accra"
+      ]
+    },
+    {
+      "id": "kplculture.ga",
+      "type": "concept",
+      "family": "culture",
+      "name": "Ga Accra — the ground it grew from",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "kplculture.lincoln",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "kpanlogo is a GA dance — the Ga people of coastal Accra, whose fishing neighborhoods like Bukom raised it and whose older drum-dance traditions (kolomashie and gome among them) fed it",
+        "it lives in the Ga recreational repertoire: festivals, community celebrations, and the Homowo season's joy — a social dance, openly shared, distinct from the Ga rites that are not",
+        "when ensembles abroad teach kpanlogo, the good ones say 'Ga, from Accra' in the first sentence — so does this app"
+      ]
+    },
+    {
+      "id": "kplculture.lincoln",
+      "type": "concept",
+      "family": "culture",
+      "name": "Otoo Lincoln — the man who made it",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "kpanlogo was CREATED in the early 1960s by OTOO LINCOLN, a young Ga man in Bukom, Accra — built with friends from Ga rhythms, highlife, and rock-and-roll swagger for independent Ghana's youth",
+        "traditional does not mean anonymous: one generation before Afrobeats' named moves, a named young person made a 'traditional' dance — credit him the way this app credits every creator",
+        "the name itself traces to a story-song Lincoln told — the dance came with its own folklore built in"
+      ]
+    },
+    {
+      "id": "kplculture.approval",
+      "type": "concept",
+      "family": "culture",
+      "name": "1965 — the youth dance wins its place",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "kplculture.lincoln",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "elders called the new dance indecent — the hip swings scandalized, as every youth dance from waltz to twist has scandalized",
+        "in 1965 the dancers performed kpanlogo for review and Ghana's Arts Council under Nkrumah's government approved it — the young people argued with their bodies and won",
+        "today it's danced at Ga festivals and taught in schools and university ensembles worldwide: yesterday's scandal is today's heritage, which is most of how heritage gets made"
+      ]
+    },
+    {
+      "id": "kplmove.basic",
+      "type": "move",
+      "family": "basic",
+      "name": "The kpanlogo basic — the low swing",
+      "phase": 1,
+      "anchor": "the step the whole dance lives in",
+      "prereqs": [
+        {
+          "id": "kplmusic.bell",
+          "kind": "hard"
+        },
+        {
+          "id": "kplculture.lincoln",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.knees.l1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "knees bent, body pitched easy forward, feet stepping the pulse while the arms swing low and loose in opposition — the whole dance breathes from this",
+        "stay LOW and level: the head doesn't bob; the knees absorb everything",
+        "the hips swing free — that's the part that scandalized 1964, and it's not optional",
+        "lock the step to the bell, not the drums — the drums decorate; the bell decides"
+      ],
+      "mistakes": [
+        "standing tall (kpanlogo danced upright is kpanlogo not yet danced)",
+        "stiff arms (the swing is the style — let them be heavy and easy)"
+      ]
+    },
+    {
+      "id": "kplmove.gestures",
+      "type": "move",
+      "family": "basic",
+      "name": "Invitation gestures & play",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "kplmove.basic",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "over the basic, kpanlogo speaks in playful gestures — beckoning hands, pointing, mimed story moments traded across the circle",
+        "gestures are invitations: you throw one at someone and the circle watches them answer — solo practice means throwing them at the mirror and answering yourself",
+        "keep the feet honest while the hands talk — the basic never pauses for the story"
+      ]
+    },
+    {
+      "id": "kplmove.travel",
+      "type": "move",
+      "family": "basic",
+      "name": "Travels & level changes",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "kplmove.gestures",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the basic travels: circling steps, forward surges, and dips lower still — the low swing goes places without rising",
+        "level discipline: travel happens through the knees, the head staying on one smooth rail",
+        "orbit a spot like the circle is real; enter and exit the imagined center like it's someone's solo turn"
+      ]
+    },
+    {
+      "id": "kplmove.breaks",
+      "type": "move",
+      "family": "basic",
+      "name": "Hitting the breaks",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "kplmove.travel",
+          "kind": "hard"
+        },
+        {
+          "id": "kplmusic.drums",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.timing.l1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "when the lead drum calls the break, the dance STOPS — a held picture, a beat of grinning stillness, then everyone resumes together",
+        "train it: dance the basic, have a friend (or a random timer) call stops, and freeze clean without wobble",
+        "the resume matters as much as the stop: back into the bell's pocket on the first beat, not the third"
+      ],
+      "mistakes": [
+        "coasting through the break (the stop is the dance's punctuation — miss it and the sentence runs on)"
+      ]
+    },
+    {
+      "id": "meta.kpl_set",
+      "type": "combo",
+      "family": "meta",
+      "name": "The Bukom set — filmed",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "kplmove.breaks",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "film one full track: low-swing basic locked to the bell, gestures telling something, one travel circuit, and every break hit clean",
+        "level check on review: does your head ride one rail, or does it bob when you tire?",
+        "say 'kpanlogo, made by Otoo Lincoln, Bukom, Accra' on camera — the credit is part of the set"
+      ]
+    },
+    {
+      "id": "meta.kpl_live",
+      "type": "combo",
+      "family": "meta",
+      "name": "The live circle",
+      "phase": 4,
+      "prereqs": [
+        {
+          "id": "meta.kpl_set",
+          "kind": "hard"
+        },
+        {
+          "id": "kplculture.approval",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "find kpanlogo live: Ghanaian cultural associations, university African drum-and-dance ensembles, and Ga festival celebrations teach and dance it openly",
+        "a live drum circle is the real classroom — the bell in the air beats the bell in your headphones",
+        "teach one person the basic and tell them who made it — heritage moves by exactly this mechanism"
+      ]
+    }
+  ],
+  "teachers": [
+    {
+      "name": "Kpanlogo — the Ga youth dance and its story",
+      "url": "https://en.wikipedia.org/wiki/Kpanlogo"
+    },
+    {
+      "name": "The kpanlogo drum",
+      "url": "https://en.wikipedia.org/wiki/Kpanlogo_drum"
+    }
+  ]
+}

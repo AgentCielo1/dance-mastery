@@ -809,6 +809,56 @@ test("bharatanatyam pack: the devadasi history told honestly; the renaissance cr
   assert.equal(info.theme, "Tala Season");
 });
 
+test("sabar pack: the géwël lineages credited with Doudou N'Diaye Rose named; movement gated behind the credit; the circle's etiquette taught", () => {
+  const sab = STYLES.sabar;
+  const gewel = sab.nodes.find((n) => n.id === "sabculture.gewel");
+  assert.ok(gewel.checkpoints.some((c) => /GÉWËL/.test(c) && /hereditary families/.test(c)), "the drum lineage named as a family trust");
+  assert.ok(gewel.checkpoints.some((c) => /DOUDOU N'DIAYE ROSE/.test(c)), "the master credited by name");
+  const bakk = sab.nodes.find((n) => n.id === "sabmusic.bakk");
+  assert.ok(bakk.checkpoints.some((c) => /authored, owned/.test(c)), "the bàkk taught as authored music");
+  const bounce = sab.nodes.find((n) => n.id === "sabmove.bounce");
+  assert.ok(bounce.prereqs.some((p) => p.id === "sabculture.gewel" && p.kind === "hard"), "movement sits behind the géwël credit");
+  const tanne = sab.nodes.find((n) => n.id === "sabculture.tannebeer");
+  assert.ok(tanne.checkpoints.some((c) => /women-led/.test(c)), "the women-led floor honored");
+  assert.ok(tanne.checkpoints.some((c) => /watch first, enter when invited/.test(c)), "guest etiquette taught");
+  const info = seasonInfo(newState(T), T, sab.seasons);
+  assert.equal(info.theme, "Drum-Talk Season");
+});
+
+test("kpanlogo pack: Otoo Lincoln credited as creator; the 1965 approval story told; the Ga ground named", () => {
+  const kpl = STYLES.kpanlogo;
+  const lincoln = kpl.nodes.find((n) => n.id === "kplculture.lincoln");
+  assert.ok(lincoln.checkpoints.some((c) => /OTOO LINCOLN/.test(c) && /Bukom, Accra/.test(c)), "the creator credited by name and place");
+  assert.ok(lincoln.checkpoints.some((c) => /traditional does not mean anonymous/i.test(c)), "the pack's whole thesis stated");
+  const approval = kpl.nodes.find((n) => n.id === "kplculture.approval");
+  assert.ok(approval.checkpoints.some((c) => /1965/.test(c) && /Arts Council/.test(c)), "the youth dance's victory told");
+  const ga = kpl.nodes.find((n) => n.id === "kplculture.ga");
+  assert.ok(ga.checkpoints.some((c) => /GA/.test(c)), "the Ga people named first");
+  assert.ok(ga.checkpoints.some((c) => /distinct from the Ga rites that are not/.test(c)), "the open/held boundary drawn");
+  const basic = kpl.nodes.find((n) => n.id === "kplmove.basic");
+  assert.ok(basic.prereqs.some((p) => p.id === "kplculture.lincoln" && p.kind === "hard"), "the basic sits behind the creator credit");
+  const info = seasonInfo(newState(T), T, kpl.seasons);
+  assert.equal(info.theme, "Bell Season");
+});
+
+test("coupé-décalé pack: Douk Saga & the Jet Set credited; joy-in-wartime told honestly; concepts learned with source credit", () => {
+  const cd = STYLES.coupedecale;
+  const saga = cd.nodes.find((n) => n.id === "cdculture.douksaga");
+  assert.ok(saga.checkpoints.some((c) => /DOUK SAGA/.test(c) && /JET SET/.test(c)), "the creators credited by name");
+  assert.ok(saga.checkpoints.some((c) => /couper/.test(c) && /décaler/.test(c)), "the Nouchi naming told straight");
+  const joy = cd.nodes.find((n) => n.id === "cdculture.joy");
+  assert.ok(joy.checkpoints.some((c) => /civil-war years/.test(c)), "the wartime context stated, not sanded off");
+  assert.ok(joy.checkpoints.some((c) => /it's a decision/.test(c)), "joy held as defiance, not denial");
+  const concepts = cd.nodes.find((n) => n.id === "cdmove.concepts");
+  assert.ok(concepts.checkpoints.some((c) => /note the song, the artist, and the dancer/.test(c)), "sources credited like the Afrobeats pack");
+  const lineage = cd.nodes.find((n) => n.id === "cdmusic.lineage");
+  assert.ok(lineage.checkpoints.some((c) => /soukous/.test(c)), "the Congolese debt acknowledged");
+  const groove = cd.nodes.find((n) => n.id === "cdmove.groove");
+  assert.ok(groove.prereqs.some((p) => p.id === "cdculture.douksaga" && p.kind === "hard"), "the groove sits behind the creator credit");
+  const info = seasonInfo(newState(T), T, cd.seasons);
+  assert.equal(info.theme, "Boucan Season");
+});
+
 test("new-pack animations exist in tree + move library with teaching checkpoints", () => {
   for (const id of ["pop.fresno", "wave.arm", "lock.lock", "point.point", "jack.basic", "hfoot.pdbr"]) {
     assert.ok(MOVES[id], `${id} animated`);

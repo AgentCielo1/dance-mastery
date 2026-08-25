@@ -592,6 +592,44 @@ export const MOVES = {
     ],
   },
 
+  /* ------------- west african wave: solo cores (procedural v1) ------------- */
+  "sabmove.bounce": {
+    bpm: 130, beats: 4,
+    keys: [
+      // springy up-beat bounce, knees flicking out and up, arms throwing loose arcs
+      { t: 0.0, p: { y: 0.87, lHipF: 0.7, lHipA: 0.3, lKnee: 1.0, rKnee: 0.12, lShF: 1.2, rShF: -0.4, lShA: 0.9, rShA: 0.5, lElb: 0.5, rElb: 0.8, roll: -0.03 } },
+      { t: 0.25, p: { y: 0.855, lHipF: 0.05, lHipA: 0.0, lKnee: 0.25, rKnee: 0.2, lShF: 0.2, rShF: 0.2 } },
+      { t: 0.5, p: { y: 0.87, rHipF: 0.7, rHipA: 0.3, rKnee: 1.0, lKnee: 0.12, rShF: 1.2, lShF: -0.4, rShA: 0.9, lShA: 0.5, roll: 0.03, lHipF: 0.0 } },
+      { t: 0.75, p: { y: 0.855, rHipF: 0.05, rHipA: 0.0, rKnee: 0.25, lKnee: 0.2, lShF: 0.2, rShF: 0.2 } },
+    ],
+    // the lift: sabar rides up on the beat — the bounce peaks WITH the drum
+    rootFn: (p, u) => { p.y += 0.012 * Math.abs(sin(u * TAU * 2)); },
+  },
+  "kplmove.basic": {
+    bpm: 112, beats: 4,
+    keys: [
+      // knees bent, easy forward pitch, arms swinging low in opposition — level head
+      { t: 0.0, p: { y: 0.81, lKnee: 0.75, rKnee: 0.75, tPitch: 0.18, lHipF: 0.3, lShF: 0.5, rShF: -0.5, lElb: 0.4, rElb: 0.4, roll: -0.05 } },
+      { t: 0.25, p: { y: 0.808, lKnee: 0.78, rKnee: 0.72, lHipF: 0.0, rHipF: 0.15, lShF: 0.0, rShF: 0.0, roll: 0.0 } },
+      { t: 0.5, p: { y: 0.81, lKnee: 0.75, rKnee: 0.75, rHipF: 0.3, lShF: -0.5, rShF: 0.5, roll: 0.05 } },
+      { t: 0.75, p: { y: 0.808, lKnee: 0.72, rKnee: 0.78, rHipF: 0.0, lHipF: 0.15, lShF: 0.0, rShF: 0.0, roll: 0.0 } },
+    ],
+    // the hips swing free below a level head — the knees absorb everything
+    rootFn: (p, u) => { p.yaw = 0.1 * sin(u * TAU); },
+  },
+  "cdmove.groove": {
+    bpm: 132, beats: 4,
+    keys: [
+      // hips rolling continuous under loose rolling shoulders, knees springy
+      { t: 0.0, p: { y: 0.85, lKnee: 0.35, rKnee: 0.25, roll: -0.06, tRoll: 0.07, lShF: 0.3, rShF: -0.2, lShA: 0.4, rShA: 0.4, lElb: 0.7, rElb: 0.7 } },
+      { t: 0.25, p: { y: 0.845, lKnee: 0.3, rKnee: 0.3, roll: 0.0, tRoll: 0.0, lShF: 0.0, rShF: 0.1 } },
+      { t: 0.5, p: { y: 0.85, rKnee: 0.35, lKnee: 0.25, roll: 0.06, tRoll: -0.07, rShF: 0.3, lShF: -0.2 } },
+      { t: 0.75, p: { y: 0.845, lKnee: 0.3, rKnee: 0.3, roll: 0.0, tRoll: 0.0, lShF: 0.1, rShF: 0.0 } },
+    ],
+    // two engines, one chassis: hips take the pulse, shoulders the subdivisions
+    rootFn: (p, u) => { p.yaw = 0.08 * sin(u * TAU * 2); },
+  },
+
   /* ------------- south asian wave: solo cores (procedural v1) ------------- */
   "bhmove.bounce": {
     bpm: 100, beats: 4,

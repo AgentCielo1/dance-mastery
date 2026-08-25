@@ -324,7 +324,8 @@ export default {
    "region": "Abidjan (born in Paris)",
    "origin": "2002-03, created by Ivorian 'Jet Set' expats in Paris — Douk Saga's Sagacité",
    "essence": "Flamboyant cut-and-shift arm work wrapped in boucantier designer-flash",
-   "scene": "Abidjan maquis, Paris African nightlife"
+   "scene": "Abidjan maquis, Paris African nightlife",
+   "pack": "coupedecale"
   },
   {
    "name": "Kuduro",
@@ -1689,7 +1690,8 @@ export default {
    "region": "Ga (Accra, Ghana)",
    "origin": "Created early 1960s by urban Ga youth (Otoo Lincoln lineage credited)",
    "essence": "Low flirtatious playful moves to conga-like kpanlogo drums",
-   "scene": "Beach parties, festivals, drum-dance classes"
+   "scene": "Beach parties, festivals, drum-dance classes",
+   "pack": "kpanlogo"
   },
   {
    "name": "Zaouli",
@@ -1723,7 +1725,8 @@ export default {
    "region": "Wolof (Senegal)",
    "origin": "Centuries-old drum-dance complex carried by géwël griot families",
    "essence": "Explosive knee-lifts and flying arms answering the sabar drum's spoken bàkks",
-   "scene": "Street soirées, Dakar schools; feeds mbalax"
+   "scene": "Street soirées, Dakar schools; feeds mbalax",
+   "pack": "sabar"
   },
   {
    "name": "Gumboot (Isicathulo)",

@@ -443,6 +443,9 @@ const TAGLINES = {
   bhangra: "harvest joy, dhol thunder",
   garba: "the circle around the light",
   bharatanatyam: "the doorway — the guru holds the door",
+  sabar: "the drum answers YOU",
+  kpanlogo: "Otoo Lincoln's gift to Ghana's youth",
+  coupedecale: "joy as defiance — Douk Saga's boucan",
 };
 
 function needsOnboarding() {

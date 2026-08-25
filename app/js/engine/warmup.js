@@ -216,6 +216,21 @@ const STYLE_EXTRAS = {
     "Ankle rolls x10 each and flat-foot floor taps 30s — the strikes live in warm ankles",
     "Finger stretches and slow hasta forming 45s — strong fingers, soft wrists",
   ],
+  sabar: [
+    "60s of light springy bouncing on the balls of the feet — sabar rides UP; find the lift",
+    "Quick low knee-flicks x10 each side, building height gradually — fast legs warm slowly",
+    "Loose arm swings and throws 45s — the flings need shoulders like rope",
+  ],
+  kpanlogo: [
+    "60s of easy bent-knee grooving, staying level — the low swing starts shallow and sinks",
+    "Heavy relaxed arm swings in opposition 45s — let them be pendulums",
+    "Slow hip circles x8 each way — the swing that scandalized 1964 deserves a warm-up",
+  ],
+  coupedecale: [
+    "Smooth hip rolls 45s, then add rolling shoulders on top — two engines, warmed in order",
+    "Light side-to-side shuffles 60s — the décalé feet wake up before they cut",
+    "30s of grooving while actually smiling — the face is a muscle in this style; warm it",
+  ],
 };
 
 export function warmupFor(style) {

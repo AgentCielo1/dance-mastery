@@ -151,6 +151,40 @@ export const PATTERNS = {
     ],
     note: "Boom… chik-chik. The slow step stretches through the boom; the quicks answer the chiks.",
   },
+  sabar: {
+    name: "Sabar cycle (drum-talk)",
+    beats: 4, defaultBpm: 130,
+    hits: [
+      { t: 0, type: "kick" }, { t: 1.5, type: "kick" }, { t: 2, type: "kick" },
+      { t: 0.5, type: "clave" }, { t: 0.75, type: "clave" }, { t: 1, type: "clave" },
+      { t: 2.5, type: "clave" }, { t: 3, type: "clave" }, { t: 3.25, type: "clave" }, { t: 3.75, type: "clave" },
+      { t: 1, type: "snare" }, { t: 3, type: "snare" },
+      { t: 0, type: "accent" },
+    ],
+    note: "Stick-and-hand chatter over the low pulse — busy, buoyant, up on the beat. When the pattern breaks, that's the drum asking; answer with a picture stop.",
+  },
+  kpanlogo: {
+    name: "Kpanlogo bell (Ga timeline)",
+    beats: 4, defaultBpm: 112,
+    hits: [
+      { t: 0, type: "clave" }, { t: 1, type: "clave" }, { t: 1.5, type: "clave" }, { t: 2.5, type: "clave" }, { t: 3, type: "clave" },
+      { t: 0, type: "kick" }, { t: 2, type: "kick" },
+      { t: 1, type: "snare" }, { t: 3, type: "snare" },
+      { t: 0, type: "accent" },
+    ],
+    note: "The bell keeps the truth — five strokes every dancer measures against. Clap the bell till it's boring; then your feet are ready.",
+  },
+  coupedecale: {
+    name: "Coupé-décalé drive",
+    beats: 4, defaultBpm: 132,
+    hits: [
+      { t: 0, type: "kick" }, { t: 1, type: "kick" }, { t: 2, type: "kick" }, { t: 3, type: "kick" },
+      { t: 0.5, type: "hat" }, { t: 1.5, type: "hat" }, { t: 2.5, type: "hat" }, { t: 3.5, type: "hat" },
+      { t: 1.75, type: "snare" }, { t: 2, type: "snare" }, { t: 3.5, type: "snare" }, { t: 3.75, type: "snare" },
+      { t: 0, type: "accent" },
+    ],
+    note: "Four-on-the-floor with soukous DNA — the snare rolls are where the décalé cuts. Imagine the atalaku calling your name; dance accordingly.",
+  },
   chaal: {
     name: "Dhol chaal (bhangra)",
     beats: 4, defaultBpm: 100,
@@ -475,6 +509,9 @@ export const STYLE_PATTERNS = {
   bhangra: "chaal",
   garba: "garba",
   bharatanatyam: "aditala",
+  sabar: "sabar",
+  kpanlogo: "kpanlogo",
+  coupedecale: "coupedecale",
 };
 
 export const SOUND_TYPES = ["kick", "snare", "hat", "clave", "accent"];

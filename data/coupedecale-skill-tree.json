@@ -1,0 +1,273 @@
+{
+  "style": "coupedecale",
+  "version": "0.1.0",
+  "name": "Coupé-Décalé",
+  "notes": "Coupé-Décalé style pack (Doc 04 template, solo-first). Abidjan's club movement, born in Paris: created around 2002–2003 by DOUK SAGA (Stéphane Doukouré) and the Jet Set crew of Ivorian expats in Paris nightclubs — champagne showmanship, designer flash, and a dance built on the boucan (making a joyful scene). The name is Nouchi slang — 'couper' (to cut/hustle) and 'décaler' (to run/shift) — the diaspora hustler's story danced out loud, and the honesty this pack keeps: coupé-décalé exploded back home in Abidjan DURING CÔTE D'IVOIRE'S CIVIL-WAR YEARS, when the country chose to dance anyway; it became the sound of joy as defiance, 'la joie de vivre' as a survival strategy. Douk Saga died in 2006; his successors (DJ Arafat and a generation of atalaku-driven stars among them) carried the sound. The pack teaches the openly-shared club vocabulary: the décalé travel step, the rolling hips-and-shoulders groove, the sagacité showman arms, and the concept-drop culture where every hit names a new move — same mechanism as Afrobeats' named moves, cross-linked. The coupé-décalé drive rides in this app's Rhythm Trainer.",
+  "seasons": [
+    {
+      "theme": "Boucan Season",
+      "finale": "Film yourself grooving the coupé-décalé drive through one track — shoulders rolling, face bright, presence loud."
+    },
+    {
+      "theme": "Décalé Season",
+      "finale": "Film the décalé travel step both directions — the run-shift that named the dance, smooth at speed."
+    },
+    {
+      "theme": "Sagacité Season",
+      "finale": "Film the showman arms over the travel — champagne-pour flourishes, watch-flash, crowd-work to an imaginary balcony."
+    },
+    {
+      "theme": "Concept Season",
+      "finale": "Learn two named concept moves from real Ivorian dancers' videos, credit the source clips, and film both."
+    },
+    {
+      "theme": "Jet Set Season",
+      "finale": "Take coupé-décalé to a floor — an African club night, a diaspora party — and make thirty seconds of joyful scene."
+    }
+  ],
+  "attributes": [
+    {
+      "id": "attr.stamina.l1",
+      "name": "Club-set stamina L1",
+      "test": "two tracks of continuous grooving with the energy still visible in the face — coupé-décalé is a marathon of looking effortless"
+    },
+    {
+      "id": "attr.hips.l1",
+      "name": "Rolling hips L1",
+      "test": "60s of smooth hip rolls layered under moving shoulders — two engines, one chassis, no conflict"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "cdmusic.drive",
+      "type": "concept",
+      "family": "musicality",
+      "name": "The coupé-décalé drive & the atalaku",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "coupé-décalé rides a fast, rolling club drive — congolese-soukous DNA sped into Ivorian club heat; the pattern is in this app's Rhythm Trainer",
+        "the ATALAKU — the hype-caller shouting names, dedications, and dance commands over the track — is the music's steering wheel; when the atalaku names a move, the floor does it",
+        "listen for the travaillement (the working of the track): builds, drops, and shout-outs structure the song more than verse-chorus does"
+      ]
+    },
+    {
+      "id": "cdmusic.lineage",
+      "type": "concept",
+      "family": "musicality",
+      "name": "The sound's family tree",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "cdmusic.drive",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "coupé-décalé's groove descends from Congolese soukous and ndombolo club culture, remixed through Abidjan's zouglou wit and Paris club polish — West and Central Africa shaking hands on the dancefloor",
+        "its concept-drop culture (every hit names a move) feeds directly into today's Afrobeats mechanism — this app's Afrobeats pack is the next branch of the same tree",
+        "trace one chain yourself: find a soukous track, a Douk Saga track, and a current Afrobeats hit and hear the baton pass"
+      ]
+    },
+    {
+      "id": "cdculture.douksaga",
+      "type": "concept",
+      "family": "culture",
+      "name": "Douk Saga & the Jet Set — the creators",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "coupé-décalé was created around 2002–2003 by DOUK SAGA (Stéphane Doukouré) and the JET SET crew — Ivorian expats in Paris nightclubs who built a movement from champagne showmanship, designer flash, and the boucan (making a glorious scene)",
+        "the name is Nouchi slang: couper (to cut, to hustle) and décaler (to run, to shift) — the diaspora hustler's own story, danced with a wink instead of an apology",
+        "Douk Saga died in 2006; DJ Arafat and a generation of stars carried the sound — the creators are recent, named, and mourned: credit them like the contemporaries they are"
+      ]
+    },
+    {
+      "id": "cdculture.joy",
+      "type": "concept",
+      "family": "culture",
+      "name": "Joy as defiance — Abidjan's answer",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "cdculture.douksaga",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "coupé-décalé exploded in Abidjan during Côte d'Ivoire's civil-war years — the country's clubs chose joy while the news chose fear, and the dance became 'la joie de vivre' as a survival strategy",
+        "hold that honestly: this is party music with a spine — celebration in hard times isn't denial, it's a decision, and Abidjan made it nightly",
+        "when you dance it, bring actual joy or wait until you can — coupé-décalé performed grim betrays its whole biography"
+      ]
+    },
+    {
+      "id": "cdmove.groove",
+      "type": "move",
+      "family": "basic",
+      "name": "The rolling groove",
+      "phase": 1,
+      "anchor": "the chassis everything mounts on",
+      "prereqs": [
+        {
+          "id": "cdmusic.drive",
+          "kind": "hard"
+        },
+        {
+          "id": "cdculture.douksaga",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.hips.l1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "hips roll smooth and continuous under loose rolling shoulders — two layers riding the drive at once, knees soft and springy",
+        "the face is half the move: bright, amused, in on the joke — coupé-décalé's default expression is 'I know something good'",
+        "keep it rolling through a whole track without resetting; the groove is a wheel, not a rep"
+      ],
+      "mistakes": [
+        "grooving with a serious face (the boucan starts above the neck)",
+        "hips and shoulders fighting for the same beat (give the hips the pulse and the shoulders the subdivisions)"
+      ]
+    },
+    {
+      "id": "cdmove.decale",
+      "type": "move",
+      "family": "basic",
+      "name": "The décalé travel step",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "cdmove.groove",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the run-shift that named the dance: quick shuffling travel steps that skim sideways and back, upper body cool above busy feet",
+        "shift direction on the drive's accents — the décalé reads as gliding until the cut, then it CUTS",
+        "both directions, equally smooth: the step should look like you're being moved by the music, not walking to it"
+      ]
+    },
+    {
+      "id": "cdmove.sagacite",
+      "type": "move",
+      "family": "basic",
+      "name": "Sagacité — the showman arms",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "cdmove.groove",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the flash layer: champagne-pour flourishes, watch-taps, lapel-brushes, crowd-work waves — arms that narrate wealth and welcome over the groove",
+        "sagacité (the concept Douk Saga named) is charm as choreography: every gesture aimed at someone, even solo — pick a spot on the wall and win it over",
+        "flourishes land ON accents and dissolve between them — flash without timing is just waving"
+      ]
+    },
+    {
+      "id": "cdmove.concepts",
+      "type": "move",
+      "family": "named",
+      "name": "The concept drops — learning named moves",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "cdmove.decale",
+          "kind": "hard"
+        },
+        {
+          "id": "cdmove.sagacite",
+          "kind": "hard"
+        },
+        {
+          "id": "cdmusic.lineage",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "coupé-décalé runs on CONCEPT DROPS: hits arrive naming a new move (the era of guantanamo, grippé, and their hundred siblings) and the atalaku teaches the floor in real time",
+        "learn two named concepts from real Ivorian dancers' videos — note the song, the artist, and the dancer you learned from, same discipline as the Afrobeats pack",
+        "the meta-skill is fast absorption: watch, mark, try, full-out within one song — the floor won't wait for perfectionism"
+      ]
+    },
+    {
+      "id": "cdmove.enjaillement",
+      "type": "move",
+      "family": "basic",
+      "name": "Enjaillement — the joy full-out",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "cdmove.decale",
+          "kind": "hard"
+        },
+        {
+          "id": "cdculture.joy",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "enjaillement is Nouchi for letting the joy all the way out — the freestyle state where groove, travel, and flash stop being separate moves and become one loud good mood",
+        "train it as a mode: one chorus per track where you commit past self-consciousness — bigger than feels reasonable, exactly as big as the music",
+        "the audit is honest: rewatch and find the moment you held back; next track, spend it"
+      ]
+    },
+    {
+      "id": "meta.cd_set",
+      "type": "combo",
+      "family": "meta",
+      "name": "The boucan set — filmed",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "cdmove.concepts",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.stamina.l1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "film one full track: groove rolling, décalé traveling, sagacité flashing, and both learned concepts dropped where the atalaku would call them",
+        "energy audit on review: is the joy visible at the end of the track, or did the face clock out early?",
+        "credit the concept sources in your journal entry — names travel with moves in this app, every style, every time"
+      ]
+    },
+    {
+      "id": "meta.cd_floor",
+      "type": "combo",
+      "family": "meta",
+      "name": "The floor",
+      "phase": 4,
+      "prereqs": [
+        {
+          "id": "meta.cd_set",
+          "kind": "hard"
+        },
+        {
+          "id": "cdculture.joy",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "find the floor: African club nights and Ivorian diaspora parties run coupé-décalé worldwide — the atalaku will tell you what to do; do it",
+        "make thirty seconds of glorious scene — the boucan is participatory, and joining it loudly IS the etiquette",
+        "somewhere in the night, remember Abidjan's decision: the dance is proof that choosing joy is a thing a whole country can do"
+      ]
+    }
+  ],
+  "teachers": [
+    {
+      "name": "Coupé-Décalé — the movement and its story",
+      "url": "https://en.wikipedia.org/wiki/Coup%C3%A9-d%C3%A9cal%C3%A9"
+    },
+    {
+      "name": "Douk Saga — the creator",
+      "url": "https://en.wikipedia.org/wiki/Douk_Saga"
+    }
+  ]
+}
