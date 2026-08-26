@@ -1,0 +1,268 @@
+{
+  "style": "baladi",
+  "version": "0.1.0",
+  "name": "Baladi",
+  "notes": "Baladi style pack (Doc 04 template, genuinely solo — baladi is a home dance before it is anything else). BALADI means 'of the country, of the homeland, local' — and the dance carries the word's whole weight: when rural Egyptians moved into Cairo's neighborhoods in the early 20th century, the countryside's dance moved into apartments, weddings, and rooftops and became the city's most honest dance — earthy, heavy-hipped, humorous, danced for family and for yourself. This pack holds the relationship this app's raqs sharqi pack points back to: RAQS SHARQI IS BALADI IN AN EVENING GOWN — the stage form is the daughter, the home form is the mother, and training baladi first is training the truth under the polish. Credits kept loud: the BINT AL-BALAD ('daughter of the homeland') character — proud, warm, quick-witted — is the dance's soul, and the baladi queens who put it on stage without losing the apartment in it are credited by name: FIFI ABDOU, whose baladi ruled Cairo for decades, and SOUHAIR ZAKI, beloved as the most baladi of the golden-era stars. The BALADI PROGRESSION (awwady) — solo accordion improvisation answered by the dancer, the tak-tak conversation, then the full drums arriving — is the form's masterwork structure and rides in this app's Rhythm Trainer. Learn from Egyptian teachers wherever possible; baladi's home is a living culture, not a costume.",
+  "seasons": [
+    {
+      "theme": "Homeland Season",
+      "finale": "Film yourself dancing baladi in your own home, comfortable clothes, one song — the apartment IS the venue."
+    },
+    {
+      "theme": "Hip Season",
+      "finale": "Film the heavy hipwork — drops, lifts, and the low shimmy — grounded and unhurried for one full song."
+    },
+    {
+      "theme": "Walk Season",
+      "finale": "Film the baladi walk — small steps carrying big hips — traveling your room like it's a Cairo rooftop."
+    },
+    {
+      "theme": "Progression Season",
+      "finale": "Film a full baladi progression: answer the accordion alone, ride the tak-tak, arrive with the drums."
+    },
+    {
+      "theme": "Cairo Season",
+      "finale": "Take a class with an Egyptian teacher (in person or online) and bring one correction back into your practice journal."
+    }
+  ],
+  "attributes": [
+    {
+      "id": "attr.hips.l2",
+      "name": "Heavy-hip control L2",
+      "test": "60s alternating slow hip drops and lifts with bent knees, weight sunk — controlled at half speed, which is harder"
+    },
+    {
+      "id": "attr.timing.l1",
+      "name": "Taqsim listening L1",
+      "test": "listen to one accordion taqsim eyes closed and mark every phrase-end with a breath — the dance answers phrases, not beats"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "blmusic.progression",
+      "type": "concept",
+      "family": "musicality",
+      "name": "The baladi progression — the form's masterwork",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "the classic arc (often called awwady): a solo accordion improvises freely — the dancer answers alone; the tabla enters with the tak-tak conversation; the full rhythm arrives and the dance blooms — one structure, three chapters; the groove is in this app's Rhythm Trainer",
+        "the progression is a dialogue, not a playlist: the dancer's job in chapter one is LISTENING made visible",
+        "find three recorded baladi progressions and learn their shapes before dancing them — the map before the road"
+      ]
+    },
+    {
+      "id": "blmusic.instruments",
+      "type": "concept",
+      "family": "musicality",
+      "name": "Accordion, tabla & the Cairo sound",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "blmusic.progression",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "baladi's sound is early-20th-century Cairo mixing itself: the European accordion retuned to Egypt's quarter-tones, the tabla underneath, mizmar and saxophone visiting",
+        "the quarter-tones are the homesickness in the sound — an accordion bent to speak Arabic; learn to hear the notes between the piano's notes",
+        "the tabla's dum (deep, center) and tak (sharp, rim) are the dance's own vocabulary — your hips already know which is which"
+      ]
+    },
+    {
+      "id": "blculture.homeland",
+      "type": "concept",
+      "family": "culture",
+      "name": "Baladi — the word and the migration",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "BALADI means 'of the country, of the homeland, local' — pride and earth in one word; when rural Egyptians moved to Cairo in the early 20th century, the countryside's dance became the city's home dance",
+        "it lives in apartments, weddings, and rooftops — danced for family, for joy, for yourself; the stage came later and never replaced the living room",
+        "the BINT AL-BALAD — the 'daughter of the homeland' — is the dance's character: proud, warm, quick-witted, entirely unimpressed by pretension"
+      ]
+    },
+    {
+      "id": "blculture.icons",
+      "type": "concept",
+      "family": "culture",
+      "name": "The baladi queens — and the evening gown",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "blculture.homeland",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "RAQS SHARQI IS BALADI IN AN EVENING GOWN: the stage form this app's raqs pack teaches is the daughter; baladi is the mother — train the truth under the polish",
+        "the queens who staged it without losing the apartment in it: FIFI ABDOU, whose baladi ruled Cairo for decades, and SOUHAIR ZAKI, beloved as the most baladi of the golden-era stars — watch them and see the living room survive the spotlight",
+        "learn from Egyptian teachers wherever possible — baladi is a living home culture, and the accent matters"
+      ]
+    },
+    {
+      "id": "blmove.posture",
+      "type": "move",
+      "family": "basic",
+      "name": "The baladi posture — sunk and easy",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "blculture.homeland",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "weight SUNK: knees soft, pelvis heavy, feet flat and friendly with the floor — baladi sits into the ground where raqs sharqi lifts out of it",
+        "arms relaxed and low by default — framing the hips loosely, never presenting like a stage",
+        "the face is home: amused, warm, unperformed — dance like nobody paid a ticket, because at baladi's heart nobody did"
+      ],
+      "mistakes": [
+        "lifting into stage posture (that's the daughter's habit — the mother stays grounded)"
+      ]
+    },
+    {
+      "id": "blmove.hipwork",
+      "type": "move",
+      "family": "hips",
+      "name": "Heavy hipwork — drops, lifts & the low shimmy",
+      "phase": 2,
+      "anchor": "the earth of the dance",
+      "prereqs": [
+        {
+          "id": "blmove.posture",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.hips.l2",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "hip drops and lifts with WEIGHT — each one lands like a word said plainly; baladi hips are heavy, deliberate, and completely unhurried",
+        "the low shimmy: loose-kneed, earthy, layered over the sunk posture — a rumble, not a glitter",
+        "accent the dum with the drop: the tabla's deep note and your hip agree on gravity",
+        "slower is harder and slower is the style — drill everything at half speed until it's honest"
+      ],
+      "mistakes": [
+        "polishing the hips into stage smoothness (baladi keeps the grain in the wood)"
+      ]
+    },
+    {
+      "id": "blmove.walk",
+      "type": "move",
+      "family": "basic",
+      "name": "The baladi walk",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "blmove.hipwork",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "small flat steps carrying big hip movement — the walk travels a living room, not a stage diagonal",
+        "each step lets the hip settle fully before the next — arrival over trajectory, always",
+        "walk a slow circle marking dums with hip drops — the classic practice loop, and a complete dance by itself"
+      ]
+    },
+    {
+      "id": "blmove.taqsim",
+      "type": "move",
+      "family": "basic",
+      "name": "Answering the taqsim",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "blmove.walk",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.timing.l1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "chapter one of the progression: the accordion improvises and you answer — slow undulations, held shapes, hips tracing the melody's rise and fall with no drum to hide behind",
+        "move ON the phrases: begin when the accordion begins a thought, settle when it breathes — the skill is visible listening",
+        "less is the mastery: one honest hip circle that follows the melody beats eight that ignore it"
+      ]
+    },
+    {
+      "id": "blmove.build",
+      "type": "move",
+      "family": "basic",
+      "name": "Riding the build to the drums",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "blmove.taqsim",
+          "kind": "hard"
+        },
+        {
+          "id": "blmusic.instruments",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "chapters two and three: the tak-tak conversation sharpens your accents, then the full rhythm arrives and the dance blooms — grow WITH the arrangement, never ahead of it",
+        "the bloom is earned: if chapter one was honest listening, chapter three's joy reads as arrival instead of aerobics",
+        "practice the full arc with a recorded progression weekly — it is the form's complete sentence"
+      ]
+    },
+    {
+      "id": "meta.bl_set",
+      "type": "combo",
+      "family": "meta",
+      "name": "The rooftop set — filmed",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "blmove.build",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "film one full baladi progression: taqsim answered alone, tak-tak ridden, drums arrived-at — home clothes, home room, full presence",
+        "the grain check on review: did the polish creep in? re-film sunk lower and 20% slower if it did",
+        "say it on camera: baladi, 'of the homeland', Egypt — and name one queen whose clips you studied"
+      ]
+    },
+    {
+      "id": "meta.bl_live",
+      "type": "combo",
+      "family": "meta",
+      "name": "The living culture",
+      "phase": 4,
+      "prereqs": [
+        {
+          "id": "meta.bl_set",
+          "kind": "hard"
+        },
+        {
+          "id": "blculture.icons",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "take class with an Egyptian teacher — in person or online, the accent transmits things video can't; the raqs sharqi world's baladi workshops are the standard doorway",
+        "if a wedding or hafla invites you to the floor, dance the home dance at home volume — baladi's etiquette is joining, not performing",
+        "carry the relationship forward: when someone praises your raqs sharqi someday, tell them about the mother"
+      ]
+    }
+  ],
+  "teachers": [
+    {
+      "name": "Baladi — the Egyptian home dance",
+      "url": "https://en.wikipedia.org/wiki/Baladi"
+    },
+    {
+      "name": "Fifi Abdou — baladi's reigning queen",
+      "url": "https://en.wikipedia.org/wiki/Fifi_Abdou"
+    },
+    {
+      "name": "Souhair Zaki — the most baladi of the golden era",
+      "url": "https://en.wikipedia.org/wiki/Soheir_Zaki"
+    }
+  ]
+}

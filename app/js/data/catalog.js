@@ -1371,7 +1371,8 @@ export default {
    "region": "Egypt",
    "origin": "Home-grown urban Egyptian social style beneath staged raqs sharqi",
    "essence": "Earthy grounded heavy-hipped inward focus to accordion awadi",
-   "scene": "Homes, weddings, street celebrations"
+   "scene": "Homes, weddings, street celebrations",
+   "pack": "baladi"
   },
   {
    "name": "Saidi",
@@ -1379,7 +1380,8 @@ export default {
    "region": "Upper Egypt",
    "origin": "Folkloric style tied to tahtib stick-fighting of the Sa'id",
    "essence": "Strong bouncy cane (assaya) work over the saidi rhythm",
-   "scene": "Village celebrations, folkloric troupes"
+   "scene": "Village celebrations, folkloric troupes",
+   "pack": "saidi"
   },
   {
    "name": "Dabke",
@@ -1405,7 +1407,8 @@ export default {
    "region": "Morocco",
    "origin": "Celebration dance carried by shikhat, professional women of the aita tradition",
    "essence": "Loose-hipped belt-accented hip work with sung improvisation",
-   "scene": "Weddings and family celebrations"
+   "scene": "Weddings and family celebrations",
+   "pack": "chaabi"
   },
   {
    "name": "Sufi Whirling (Sema) & Tanoura",

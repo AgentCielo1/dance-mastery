@@ -261,6 +261,21 @@ const STYLE_EXTRAS = {
     "Easy shoulder rolls x10 and small hip circles x8 — the narrators warm before the story",
     "Three 10s footwork bursts with calm returns — rehearse the sentence shape: calm, flurry, calm",
   ],
+  baladi: [
+    "Slow hip circles x8 each way with knees bent and weight sunk — greet the ground first",
+    "Gentle hip drops x10 each side at half speed — heavy and deliberate, never flicked",
+    "60s of relaxed swaying to a taqsim recording — warm the listening, not just the joints",
+  ],
+  saidi: [
+    "Wrist circles and loose figure-8s with an empty hand x10 each — the cane rides a warm wrist",
+    "Light hop-steps 45s with soft landings — find the sprung knee before the strut demands it",
+    "Tall-posture breaths x6, chest proud, chin level — the Sa'id stands up before it dances",
+  ],
+  chaabi: [
+    "Soft-knee sway 60s settling side to side — the floor everyone at the wedding shares",
+    "Gentle hip shimmy 3x20s with full rest between — looseness IS the speed; never force it",
+    "Shoulder shimmy 30s over still hips — wake the layers separately before the weave",
+  ],
 };
 
 export function warmupFor(style) {

@@ -966,6 +966,52 @@ test("amapiano pack: the contested Gauteng birth stated honestly; DJ Bongz credi
   assert.equal(info.theme, "Log-Drum Season");
 });
 
+test("baladi pack: the homeland etymology and migration told; the queens credited; the mother-daughter link to raqs sharqi explicit", () => {
+  const bl = STYLES.baladi;
+  const home = bl.nodes.find((n) => n.id === "blculture.homeland");
+  assert.ok(home.checkpoints.some((c) => /of the country, of the homeland/.test(c)), "the word translated");
+  assert.ok(home.checkpoints.some((c) => /BINT AL-BALAD/.test(c)), "the dance's character named");
+  const icons = bl.nodes.find((n) => n.id === "blculture.icons");
+  assert.ok(icons.checkpoints.some((c) => /RAQS SHARQI IS BALADI IN AN EVENING GOWN/.test(c)), "the mother-daughter relationship stated");
+  assert.ok(icons.checkpoints.some((c) => /FIFI ABDOU/.test(c) && /SOUHAIR ZAKI/.test(c)), "the queens credited by name");
+  assert.ok(icons.checkpoints.some((c) => /Egyptian teachers/.test(c)), "the living-culture etiquette taught");
+  const hips = bl.nodes.find((n) => n.id === "blmove.hipwork");
+  assert.ok(hips.prereqs.some((p) => p.id === "attr.hips.l2" && p.kind === "hard"), "the heavy hips gated");
+  const info = seasonInfo(newState(T), T, bl.seasons);
+  assert.equal(info.theme, "Homeland Season");
+});
+
+test("saidi pack: tahtib's UNESCO root held with its boundary; Reda and Fahmy credited; cane work gated and space-checked", () => {
+  const sd = STYLES.saidi;
+  const tahtib = sd.nodes.find((n) => n.id === "sdculture.tahtib");
+  assert.ok(tahtib.checkpoints.some((c) => /TAHTIB/.test(c) && /UNESCO/.test(c)), "the martial root and inscription named");
+  assert.ok(tahtib.checkpoints.some((c) => /not this pack's material/.test(c)), "the boundary drawn — the dance, not the martial art");
+  const reda = sd.nodes.find((n) => n.id === "sdculture.reda");
+  assert.ok(reda.checkpoints.some((c) => /MAHMOUD REDA/.test(c) && /FARIDA FAHMY/.test(c)), "the staging generation credited");
+  assert.ok(reda.checkpoints.some((c) => /INTERPRETATION of a living source/.test(c)), "staged-vs-source discipline stated");
+  const cane = sd.nodes.find((n) => n.id === "sdmove.cane");
+  assert.ok(cane.prereqs.some((p) => p.id === "attr.wrists.l2" && p.kind === "hard"), "cane work gated on wrists");
+  assert.ok(cane.checkpoints.some((c) => /SPACE CHECK/.test(c)), "the space check written into the lesson");
+  const info = seasonInfo(newState(T), T, sd.seasons);
+  assert.equal(info.theme, "Rhythm Season");
+});
+
+test("chaabi pack: the shikhat's double truth told with respect and the reclamation noted; the 6/8 weave trained as a skill", () => {
+  const chb = STYLES.chaabi;
+  const shikhat = chb.nodes.find((n) => n.id === "chbculture.shikhat");
+  assert.ok(shikhat.checkpoints.some((c) => /SHIKHAT/.test(c) && /HIRED AND JUDGED/.test(c)), "the double truth stated plainly");
+  assert.ok(shikhat.checkpoints.some((c) => /written back into the story with pride/.test(c)), "the reclamation honored");
+  const aita = chb.nodes.find((n) => n.id === "chbmusic.aita");
+  assert.ok(aita.checkpoints.some((c) => /AITA/.test(c)), "the shikhat's own art named");
+  const six = chb.nodes.find((n) => n.id === "chbmusic.sixeight");
+  assert.ok(six.checkpoints.some((c) => /CROSS-RHYTHM/.test(c)), "the weave taught as literacy");
+  const layers = chb.nodes.find((n) => n.id === "chbmove.layers");
+  assert.ok(layers.prereqs.some((p) => p.id === "attr.timing.l2" && p.kind === "hard"), "the two-layer weave gated on the cross-rhythm ear");
+  assert.ok(layers.mistakes.some((m) => /collapsed into a march/.test(m)), "the weave's failure mode written down");
+  const info = seasonInfo(newState(T), T, chb.seasons);
+  assert.equal(info.theme, "Six-Eight Season");
+});
+
 test("new-pack animations exist in tree + move library with teaching checkpoints", () => {
   for (const id of ["pop.fresno", "wave.arm", "lock.lock", "point.point", "jack.basic", "hfoot.pdbr"]) {
     assert.ok(MOVES[id], `${id} animated`);

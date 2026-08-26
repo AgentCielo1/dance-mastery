@@ -592,6 +592,45 @@ export const MOVES = {
     ],
   },
 
+  /* ------------- north african wave: solo cores (procedural v1) ------------- */
+  "blmove.hipwork": {
+    bpm: 96, beats: 4,
+    keys: [
+      // sunk weight, heavy deliberate hip drops on the dums, arms low and easy
+      { t: 0.0, p: { y: 0.83, lKnee: 0.45, rKnee: 0.4, roll: -0.1, tRoll: 0.05, lShA: 0.5, rShA: 0.5, lElb: 0.7, rElb: 0.7 } },
+      { t: 0.125, p: { y: 0.828, roll: -0.12 } },
+      { t: 0.25, p: { y: 0.832, lKnee: 0.42, rKnee: 0.42, roll: 0.0, tRoll: 0.0 } },
+      { t: 0.5, p: { y: 0.83, rKnee: 0.45, lKnee: 0.4, roll: 0.1, tRoll: -0.05 } },
+      { t: 0.75, p: { y: 0.832, lKnee: 0.42, rKnee: 0.42, roll: 0.0, tRoll: 0.0 } },
+    ],
+    // gravity agrees with the tabla: each drop lands like a word said plainly
+  },
+  "sdmove.cane": {
+    bpm: 104, beats: 4,
+    keys: [
+      // proud chest, sprung hop-step, right arm carrying the cane overhead like a horizon
+      { t: 0.0, p: { y: 0.865, lHipF: 0.5, lKnee: 0.6, rKnee: 0.15, rShA: 2.6, rElb: 0.4, lShA: 0.9, lElb: 0.9, tPitch: -0.05 } },
+      { t: 0.25, p: { y: 0.86, lHipF: 0.1, lKnee: 0.25, rKnee: 0.2 } },
+      { t: 0.5, p: { y: 0.865, rHipF: 0.5, rKnee: 0.6, lKnee: 0.15, rShA: 2.2, rShF: 0.5, lHipF: 0.0 } },
+      { t: 0.62, p: { y: 0.865, rShA: 2.6, rShF: 0.0 } },
+      { t: 0.75, p: { y: 0.86, rHipF: 0.1, rKnee: 0.25, lKnee: 0.2 } },
+    ],
+    // the doubled dum lifts the knee; the cane spends most of the dance posing
+    rootFn: (p, u) => { p.y += 0.008 * Math.abs(sin(u * TAU * 2)); },
+  },
+  "chbmove.shimmy": {
+    bpm: 180, beats: 6,
+    keys: [
+      // continuous loose hip shimmy over soft knees, weight swaying the long counts
+      { t: 0.0, p: { y: 0.85, lKnee: 0.35, rKnee: 0.3, roll: -0.06, lShA: 0.8, rShA: 0.8, lElb: 0.9, rElb: 0.9 } },
+      { t: 0.33, p: { y: 0.848, lKnee: 0.32, rKnee: 0.33, roll: 0.0 } },
+      { t: 0.67, p: { y: 0.85, rKnee: 0.35, lKnee: 0.3, roll: 0.06 } },
+      { t: 0.83, p: { y: 0.848, lKnee: 0.32, rKnee: 0.33, roll: 0.0 } },
+    ],
+    // the small earthquake: fast pelvic tremor under the slow shared sway
+    rootFn: (p, u) => { p.roll += 0.035 * sin(u * TAU * 12); p.tRoll = -0.5 * p.roll; },
+  },
+
   /* ------------- southern african wave: solo cores (procedural v1) ------------- */
   "ptmove.basic": {
     bpm: 108, beats: 4,

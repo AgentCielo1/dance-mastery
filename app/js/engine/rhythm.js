@@ -151,6 +151,43 @@ export const PATTERNS = {
     ],
     note: "Boom… chik-chik. The slow step stretches through the boom; the quicks answer the chiks.",
   },
+  baladi: {
+    name: "Baladi (dum-dum tak)",
+    beats: 4, defaultBpm: 96,
+    hits: [
+      { t: 0, type: "kick" }, { t: 0.5, type: "kick" },
+      { t: 1, type: "clave" }, { t: 1.5, type: "clave" },
+      { t: 2, type: "kick" },
+      { t: 3, type: "clave" },
+      { t: 0.5, type: "hat" }, { t: 1.5, type: "hat" }, { t: 2.5, type: "hat" }, { t: 3.5, type: "hat" },
+      { t: 0, type: "accent" },
+    ],
+    note: "DUM-DUM tak-tak DUM tak — the doubled dum up front is the homeland's heartbeat. Drop the hip on the dums; the tabla and your weight agree on gravity.",
+  },
+  saidi: {
+    name: "Saidi (the strut)",
+    beats: 4, defaultBpm: 104,
+    hits: [
+      { t: 0, type: "kick" },
+      { t: 1, type: "clave" },
+      { t: 2, type: "kick" }, { t: 2.5, type: "kick" },
+      { t: 3, type: "clave" },
+      { t: 0.5, type: "hat" }, { t: 1.5, type: "hat" }, { t: 3.5, type: "hat" },
+      { t: 0, type: "accent" }, { t: 2, type: "accent" },
+    ],
+    note: "DUM tak DUM-DUM tak — the doubled dum in the middle is the strut; let it lift your knee. When this starts at a hafla, Upper Egypt takes the floor by proxy.",
+  },
+  chaabi68: {
+    name: "Moroccan 6/8 (the weave)",
+    beats: 6, defaultBpm: 180,
+    hits: [
+      { t: 0, type: "kick" }, { t: 2, type: "kick" }, { t: 4, type: "kick" },
+      { t: 0, type: "clave" }, { t: 1.5, type: "clave" }, { t: 3, type: "clave" }, { t: 4.5, type: "clave" },
+      { t: 1, type: "hat" }, { t: 3, type: "hat" }, { t: 5, type: "hat" },
+      { t: 0, type: "accent" },
+    ],
+    note: "Two threes and three twos in the same bar — the bendir says both at once. Hips ride the kicks (threes), shoulders chatter the claves (twos). Never let them agree.",
+  },
   sgubhu: {
     name: "Sgubhu (kwaito walk)",
     beats: 4, defaultBpm: 108,
@@ -585,6 +622,9 @@ export const STYLE_PATTERNS = {
   pantsula: "sgubhu",
   gumboot: "gumboot",
   amapiano: "logdrum",
+  baladi: "baladi",
+  saidi: "saidi",
+  chaabi: "chaabi68",
 };
 
 export const SOUND_TYPES = ["kick", "snare", "hat", "clave", "accent"];

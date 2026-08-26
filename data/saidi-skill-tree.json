@@ -1,0 +1,276 @@
+{
+  "style": "saidi",
+  "version": "0.1.0",
+  "name": "Saidi",
+  "notes": "Saidi style pack (Doc 04 template, solo-first — the cane and the rhythm are one dancer's work). The dance of the SA'ID — Upper Egypt, the river south — built on one of the world's clearest martial-to-play lineages: TAHTIB, the ancient Upper Egyptian stick art (its imagery is carved into pharaonic reliefs, and UNESCO inscribed it in 2016), is the men's game of honor, skill, and controlled combat with the long asaya staff; the women's RAQS AL-ASSAYA (cane dance) answers it with mischief — twirling a lighter, often crooked cane in playful imitation of the men's weapon, the joke and the homage in the same wrist. The pack credits the staging generation by name: MAHMOUD REDA and FARIDA FAHMY, whose Reda Troupe carried saidi and Egypt's folk dances to theaters worldwide from the 1950s on — the reason a saidi rhythm starts feet tapping on five continents. The SAIDI RHYTHM — the strutting DUM-tak-DUM-DUM-tak four — is among the most beloved in Arabic music and rides in this app's Rhythm Trainer. Safety is structural: cane work is gated on wrist readiness and space checks — a twirled cane maps a real circle. The posture is proud, the step has a horse in it (the Sa'id's mizmar-and-horse festival tradition is in the pack), and the character is upright joy.",
+  "seasons": [
+    {
+      "theme": "Rhythm Season",
+      "finale": "Film yourself clapping and stepping the saidi rhythm — the strut found, the dum-dum owned."
+    },
+    {
+      "theme": "Posture Season",
+      "finale": "Film the saidi posture and hop-step for one song — chest proud, steps sprung, the horse visible."
+    },
+    {
+      "theme": "Cane Season",
+      "finale": "Film the cane basics — carriage, figure-8s, and the overhead horizon — smooth and unhurried."
+    },
+    {
+      "theme": "Twirl Season",
+      "finale": "Film a twirl run: continuous cane twirls through one verse with clean catches and zero drops (drops mean re-film, cheerfully)."
+    },
+    {
+      "theme": "Sa'id Season",
+      "finale": "Learn eight counts from a Reda Troupe clip or an Upper Egyptian source video, credit it, and film your version beside it."
+    }
+  ],
+  "attributes": [
+    {
+      "id": "attr.wrists.l2",
+      "name": "Twirl-ready wrists L2",
+      "test": "60s of continuous smooth figure-8s with a light stick, each hand — loose wrist, quiet forearm, no white knuckles"
+    },
+    {
+      "id": "attr.knees.l1",
+      "name": "Sprung hop-step knees L1",
+      "test": "60s of the light saidi hop-step with soft landings — the strut is sprung, never stomped"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "sdmusic.rhythm",
+      "type": "concept",
+      "family": "musicality",
+      "name": "The saidi rhythm — the strut in four",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "the SAIDI: DUM-tak-DUM-DUM-tak — the doubled dum in the middle is the strut, and once you hear it you cannot unhear it; it's in this app's Rhythm Trainer",
+        "among the most beloved rhythms in Arabic music: when the saidi starts at any hafla, Upper Egypt takes the floor by proxy",
+        "clap it, walk it, then let the doubled dum lift your knee — the rhythm choreographs the hop-step by itself"
+      ]
+    },
+    {
+      "id": "sdmusic.mizmar",
+      "type": "concept",
+      "family": "musicality",
+      "name": "Mizmar, horses & the festival sound",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "sdmusic.rhythm",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the Sa'id's festival sound is the MIZMAR — the piercing double-reed horn — over massed drums; outdoor music built to carry across a village",
+        "the horse is saidi's other dancer: Upper Egypt's dancing-horse tradition (horses trained to step to the mizmar) is why the human dance carries a canter in it",
+        "listen to mizmar ensembles for one season finale — the reediness is the terroir; studio strings are the export version"
+      ]
+    },
+    {
+      "id": "sdculture.tahtib",
+      "type": "concept",
+      "family": "culture",
+      "name": "Tahtib — the martial root, carved in stone",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "TAHTIB is the ancient Upper Egyptian stick art — honor, skill, and controlled combat with the long asaya staff; its imagery is carved into pharaonic reliefs, and UNESCO inscribed it in 2016",
+        "the women's RAQS AL-ASSAYA answers the martial game with mischief: a lighter, often crooked cane twirled in playful imitation — the joke and the homage living in the same wrist",
+        "hold the pair honestly: the men's tahtib is a living art with its own masters and rules, not this pack's material — we train the cane DANCE, and we say where it looks for its punchline"
+      ]
+    },
+    {
+      "id": "sdculture.reda",
+      "type": "concept",
+      "family": "culture",
+      "name": "Mahmoud Reda & Farida Fahmy — the staging generation",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "sdculture.tahtib",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "MAHMOUD REDA and FARIDA FAHMY's Reda Troupe carried saidi and Egypt's folk dances to theaters worldwide from the 1950s — choreographing village truth into stage form without losing the strut",
+        "most saidi taught in studios today descends from their stagings — credit the troupe when you teach what you learned here",
+        "the discipline transfers: staged folklore is an INTERPRETATION of a living source — study Reda clips AND Upper Egyptian festival footage, and know which is which"
+      ]
+    },
+    {
+      "id": "sdculture.said",
+      "type": "concept",
+      "family": "culture",
+      "name": "The Sa'id — the place the dance stands for",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "sdculture.tahtib",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the SA'ID is Upper Egypt — the river south, farming country, older than most empires — and Egyptian culture holds it in a familiar double image: the butt of city jokes AND the keeper of the old dignity",
+        "the dance answers the joke: saidi posture is the Sa'id talking back — proud chest, level chin, a strut that has read the pharaonic reliefs it descends from",
+        "when you dance saidi, you borrow that pride; carry it the way the pack teaches everything — with the place's name attached"
+      ]
+    },
+    {
+      "id": "sdmove.posture",
+      "type": "move",
+      "family": "basic",
+      "name": "The saidi posture & hop-step",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "sdmusic.rhythm",
+          "kind": "hard"
+        },
+        {
+          "id": "sdculture.tahtib",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.knees.l1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "chest PROUD, chin level, spine tall — saidi stands the way the Sa'id talks about itself",
+        "the hop-step: a light sprung step where the doubled dum lifts the knee — the horse's canter borrowed politely",
+        "strong flat steps between hops — the ground is claimed, not apologized to"
+      ],
+      "mistakes": [
+        "slouching into baladi's sunk weight (wrong dialect — saidi is the upright cousin)",
+        "stomping the hops (sprung, not heavy — the horse is elegant)"
+      ]
+    },
+    {
+      "id": "sdmove.cane",
+      "type": "move",
+      "family": "basic",
+      "name": "The cane — carriage & figure-8s",
+      "phase": 2,
+      "anchor": "the asaya, flipped from weapon to wit",
+      "prereqs": [
+        {
+          "id": "sdmove.posture",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.wrists.l2",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "carriage first: resting the cane on the shoulder, holding it overhead like a horizon, framing the body — the cane spends most of the dance POSING, not spinning",
+        "the figure-8: loose-wrist infinity loops beside the body, each hand — smooth beats fast forever",
+        "SPACE CHECK before every session: a twirled cane maps a real circle — arm's length plus cane's length from every lamp, screen, and bystander",
+        "any light stick works to learn; the crooked saidi cane is the tradition's shape when you're ready to own one"
+      ],
+      "mistakes": [
+        "white-knuckling the grip (the cane rides the hand — a tight fist kills every move downstream)"
+      ]
+    },
+    {
+      "id": "sdmove.twirls",
+      "type": "move",
+      "family": "basic",
+      "name": "Twirls & catches",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "sdmove.cane",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the full twirl: the cane spinning continuous over the hand, beside the body, then overhead — built from the figure-8's wrist, one plane at a time",
+        "catches are choreography: stop the spin INTO a pose on the music's accent — the saidi rhythm hands you the moments",
+        "drops are tuition, not failure: soft floor, patient repeats, and the cheerful rule that every drop buys the next catch"
+      ],
+      "mistakes": [
+        "speeding past smooth (a slow unbroken twirl outranks a fast stuttering one — smooth first, always)"
+      ]
+    },
+    {
+      "id": "sdmove.combo",
+      "type": "move",
+      "family": "basic",
+      "name": "Cane + step — the full saidi sentence",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "sdmove.twirls",
+          "kind": "hard"
+        },
+        {
+          "id": "sdmusic.mizmar",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the layered whole: hop-step riding the rhythm below, cane posing and twirling above, both landing accents together on the doubled dum",
+        "alternate volumes: eight counts of cane spectacle, eight of pure posture with the cane resting — the dance breathes between showing and strutting",
+        "borrow one played phrase: learn eight counts from a Reda clip or festival footage, credit the source in your journal, and fold it in"
+      ]
+    },
+    {
+      "id": "meta.sd_set",
+      "type": "combo",
+      "family": "meta",
+      "name": "The festival set — filmed",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "sdmove.combo",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "film one full saidi song: posture proud, hop-step sprung, cane carried, one clean twirl run with a caught ending",
+        "the strut audit: does the doubled dum visibly lift you? if the rhythm and the body disagree, the rhythm is right",
+        "say the lineage on camera: tahtib, UNESCO 2016, the cane dance's answer — and name the Reda Troupe"
+      ]
+    },
+    {
+      "id": "meta.sd_live",
+      "type": "combo",
+      "family": "meta",
+      "name": "The hafla floor",
+      "phase": 4,
+      "prereqs": [
+        {
+          "id": "meta.sd_set",
+          "kind": "hard"
+        },
+        {
+          "id": "sdculture.reda",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "find saidi live: raqs sharqi communities worldwide run saidi workshops and haflas — and when the saidi rhythm drops, the floor expects joy",
+        "learn from Egyptian teachers where you can, and from Upper Egyptian source footage always",
+        "teach one person the rhythm with claps alone — dum-tak-dum-dum-tak is a gift that fits in ten seconds"
+      ]
+    }
+  ],
+  "teachers": [
+    {
+      "name": "Tahtib — the UNESCO-inscribed stick art",
+      "url": "https://en.wikipedia.org/wiki/Tahtib"
+    },
+    {
+      "name": "Mahmoud Reda — the staging pioneer",
+      "url": "https://en.wikipedia.org/wiki/Mahmoud_Reda"
+    },
+    {
+      "name": "Farida Fahmy — the Reda Troupe's star",
+      "url": "https://en.wikipedia.org/wiki/Farida_Fahmy"
+    }
+  ]
+}

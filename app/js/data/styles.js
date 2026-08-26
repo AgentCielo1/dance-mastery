@@ -2,6 +2,7 @@
 import afrobeats from "./afrobeats.js";
 import amapiano from "./amapiano.js";
 import bachata from "./bachata.js";
+import baladi from "./baladi.js";
 import ballet from "./ballet.js";
 import bhangra from "./bhangra.js";
 import bharatanatyam from "./bharatanatyam.js";
@@ -11,6 +12,7 @@ import breaking from "./breaking.js";
 import buchaechum from "./buchaechum.js";
 import bzouk from "./bzouk.js";
 import capoeira from "./capoeira.js";
+import chaabi from "./chaabi.js";
 import chacha from "./chacha.js";
 import contemporary from "./contemporary.js";
 import coupedecale from "./coupedecale.js";
@@ -44,6 +46,7 @@ import polka from "./polka.js";
 import popping from "./popping.js";
 import raqs from "./raqs.js";
 import sabar from "./sabar.js";
+import saidi from "./saidi.js";
 import salsa from "./salsa.js";
 import samba from "./samba.js";
 import semba from "./semba.js";
@@ -58,7 +61,7 @@ import waacking from "./waacking.js";
 import waltz from "./waltz.js";
 import wcs from "./wcs.js";
 import westafrican from "./westafrican.js";
-export const STYLES = { afrobeats, amapiano, bachata, ballet, bhangra, bharatanatyam, bomba, bon, breaking, buchaechum, bzouk, capoeira, chacha, contemporary, coupedecale, cumbia, dabke, dancehall, flamenco, forro, foxtrot, garba, gumboot, hiphop, house, irish, jazz, kalamatianos, kizomba, kpanlogo, kpop, kuduro, lindy, linedance, locking, marinera, ndombolo, ori, pantsula, persian, pizzica, polka, popping, raqs, sabar, salsa, samba, semba, soca, son, tango, tap, tinikling, twostep, vogue, waacking, waltz, wcs, westafrican };
+export const STYLES = { afrobeats, amapiano, bachata, baladi, ballet, bhangra, bharatanatyam, bomba, bon, breaking, buchaechum, bzouk, capoeira, chaabi, chacha, contemporary, coupedecale, cumbia, dabke, dancehall, flamenco, forro, foxtrot, garba, gumboot, hiphop, house, irish, jazz, kalamatianos, kizomba, kpanlogo, kpop, kuduro, lindy, linedance, locking, marinera, ndombolo, ori, pantsula, persian, pizzica, polka, popping, raqs, sabar, saidi, salsa, samba, semba, soca, son, tango, tap, tinikling, twostep, vogue, waacking, waltz, wcs, westafrican };
 export const DEFAULT_STYLE = "breaking";
 export function styleName(id) { return STYLES[id]?.name ?? id.charAt(0).toUpperCase() + id.slice(1); }
 // Find a node (and its style) by node id across every pack.

@@ -452,6 +452,9 @@ const TAGLINES = {
   pantsula: "resistance by style — flat, fast, cool",
   gumboot: "the boots remember the mines",
   amapiano: "wait for the log drum",
+  baladi: "the mother of the evening gown",
+  saidi: "the strut with a horse in it",
+  chaabi: "the shikhat kept the songs",
 };
 
 function needsOnboarding() {
