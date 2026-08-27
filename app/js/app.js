@@ -455,6 +455,9 @@ const TAGLINES = {
   baladi: "the mother of the evening gown",
   saidi: "the strut with a horse in it",
   chaabi: "the shikhat kept the songs",
+  lazgi: "life enters at the fingertips",
+  karazhorga: "the black pacer — ride lightly",
+  bielgee: "a whole dance on one rug",
 };
 
 function needsOnboarding() {

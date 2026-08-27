@@ -592,6 +592,43 @@ export const MOVES = {
     ],
   },
 
+  /* ------------- central asian wave: solo cores (procedural v1) ------------- */
+  "lzmove.fingers": {
+    bpm: 132, beats: 6,
+    keys: [
+      // stillness breaking: hands rise trembling while the body stays asleep
+      { t: 0.0, p: { y: 0.87, lKnee: 0.12, rKnee: 0.12, lShA: 0.6, rShA: 0.6, lShF: 0.5, rShF: 0.5, lElb: 1.2, rElb: 1.2 } },
+      { t: 0.33, p: { y: 0.87, lShF: 0.8, rShF: 0.8, lElb: 1.4, rElb: 1.4 } },
+      { t: 0.67, p: { y: 0.87, lShA: 1.0, rShA: 1.0, lShF: 0.6, rShF: 0.6, lElb: 1.1, rElb: 1.1 } },
+    ],
+    // the tremble: a fine quiver in the raised hands — shivering silk, never a clench
+    rootFn: (p, u) => { const tr = 0.05 * sin(u * TAU * 16); p.lElb += tr; p.rElb -= tr; },
+  },
+  "kzmove.gait": {
+    bpm: 116, beats: 2,
+    keys: [
+      // springy two-beat pacer: level head, rein hand and whip hand riding along
+      { t: 0.0, p: { y: 0.862, lHipF: 0.35, lKnee: 0.4, rKnee: 0.18, lShF: 0.7, lElb: 1.1, rShA: 0.7, rShF: -0.2, rElb: 0.6, roll: -0.03 } },
+      { t: 0.25, p: { y: 0.856, lHipF: 0.05, lKnee: 0.25, rKnee: 0.25 } },
+      { t: 0.5, p: { y: 0.862, rHipF: 0.35, rKnee: 0.4, lKnee: 0.18, roll: 0.03, lHipF: 0.0 } },
+      { t: 0.75, p: { y: 0.856, rHipF: 0.05, lKnee: 0.25, rKnee: 0.25 } },
+    ],
+    // the amble: the spring lives below the waist — a tea cup on the head survives
+    rootFn: (p, u) => { p.tRoll = 0.06 * sin(u * TAU * 2); },
+  },
+  "bgmove.shoulders": {
+    bpm: 92, beats: 4,
+    keys: [
+      // planted stance, sovereign gaze — the shoulders speak in distinct words
+      { t: 0.0, p: { y: 0.86, lKnee: 0.15, rKnee: 0.15, lShA: 1.3, rShA: 1.3, lElb: 0.4, rElb: 0.4, lShF: 0.4 } },
+      { t: 0.25, p: { y: 0.86, lShF: -0.2, rShF: 0.4 } },
+      { t: 0.5, p: { y: 0.86, lShF: 0.4, rShF: -0.2, tRoll: 0.04 } },
+      { t: 0.75, p: { y: 0.86, lShF: 0.0, rShF: 0.0, tRoll: -0.04 } },
+    ],
+    // the feet keep to a handkerchief of ground; everything above the waist is eloquent
+    rootFn: (p, u) => { p.tPitch = -0.02 + 0.02 * sin(u * TAU * 8); },
+  },
+
   /* ------------- north african wave: solo cores (procedural v1) ------------- */
   "blmove.hipwork": {
     bpm: 96, beats: 4,

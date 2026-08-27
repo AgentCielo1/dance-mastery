@@ -151,6 +151,40 @@ export const PATTERNS = {
     ],
     note: "Boom… chik-chik. The slow step stretches through the boom; the quicks answer the chiks.",
   },
+  lazgi: {
+    name: "Lazgi six (doira)",
+    beats: 6, defaultBpm: 132,
+    hits: [
+      { t: 0, type: "kick" }, { t: 3, type: "kick" },
+      { t: 1, type: "clave" }, { t: 2, type: "clave" }, { t: 4, type: "clave" }, { t: 5, type: "clave" }, { t: 5.5, type: "clave" },
+      { t: 2, type: "hat" }, { t: 5, type: "hat" },
+      { t: 0, type: "accent" },
+    ],
+    note: "The doira's six — fingers chattering around the deep bak. Lazgi accelerates live: run it slow, then nudge the bpm up in stages and keep your figures honest at every speed.",
+  },
+  dombra: {
+    name: "Dombra trot (kara zhorga)",
+    beats: 2, defaultBpm: 116,
+    hits: [
+      { t: 0, type: "kick" }, { t: 1, type: "kick" },
+      { t: 0.5, type: "clave" }, { t: 0.75, type: "clave" }, { t: 1.5, type: "clave" }, { t: 1.75, type: "clave" },
+      { t: 0.5, type: "hat" }, { t: 1.5, type: "hat" },
+      { t: 0, type: "accent" },
+    ],
+    note: "The strummed two-beat amble — the dombra's wrist is doing the dance already. Let it drop into your knees; the pacer's smoothness is the whole brand.",
+  },
+  tatlaga: {
+    name: "Tatlaga two-beat (bielgee)",
+    beats: 4, defaultBpm: 92,
+    hits: [
+      { t: 0, type: "kick" }, { t: 2, type: "kick" },
+      { t: 1, type: "snare" }, { t: 3, type: "snare" },
+      { t: 0.5, type: "hat" }, { t: 1.5, type: "hat" }, { t: 2.5, type: "hat" }, { t: 3.5, type: "hat" },
+      { t: 3.5, type: "clave" },
+      { t: 0, type: "accent" },
+    ],
+    note: "The feast's clapped two-beat under the morin khuur's gaits — steady ground for shoulders that do all the talking. Phrase in fours and let the pauses speak.",
+  },
   baladi: {
     name: "Baladi (dum-dum tak)",
     beats: 4, defaultBpm: 96,
@@ -625,6 +659,9 @@ export const STYLE_PATTERNS = {
   baladi: "baladi",
   saidi: "saidi",
   chaabi: "chaabi68",
+  lazgi: "lazgi",
+  karazhorga: "dombra",
+  bielgee: "tatlaga",
 };
 
 export const SOUND_TYPES = ["kick", "snare", "hat", "clave", "accent"];

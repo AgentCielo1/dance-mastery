@@ -1012,6 +1012,66 @@ test("chaabi pack: the shikhat's double truth told with respect and the reclamat
   assert.equal(info.theme, "Six-Eight Season");
 });
 
+test("the catalog's central asian family exists: eight entries, Kushtdepdi community-held, the region no longer a blank", () => {
+  const ca = catalog.styles.filter((s) => s.family === "central_asian");
+  assert.ok(ca.length >= 8, `central asian entries present (${ca.length})`);
+  for (const name of ["Khorezm Lazgi", "Kara Zhorga", "Kara Jorgo", "Uyghur Sanam & Dolan", "Mongol Bielgee"]) {
+    assert.ok(ca.some((s) => s.name === name), `${name} in the catalog`);
+  }
+  const kusht = ca.find((s) => s.name === "Kushtdepdi");
+  assert.ok(kusht?.sacred && kusht.pack === undefined, "Kushtdepdi stays community-held");
+  const jorgo = ca.find((s) => s.name === "Kara Jorgo");
+  assert.ok(/claimed by both|ownership debate/i.test(jorgo.origin + jorgo.scene), "the shared-heritage debate visible from the Kyrgyz side too");
+});
+
+test("lazgi pack: the awakening enforced as pedagogy; lore marked as lore; Khorezm and the custodian credited", () => {
+  const lz = STYLES.lazgi;
+  const chain = [["lzmove.wrists", "lzmove.fingers"], ["lzmove.shoulders", "lzmove.wrists"], ["lzmove.ignition", "lzmove.shoulders"]];
+  for (const [node, prereq] of chain) {
+    const n = lz.nodes.find((x) => x.id === node);
+    assert.ok(n.prereqs.some((p) => p.id === prereq && p.kind === "hard"), `${node} waits for ${prereq} — the tradition's own order, machine-enforced`);
+  }
+  const oasis = lz.nodes.find((n) => n.id === "lzculture.oasis");
+  assert.ok(oasis.checkpoints.some((c) => /KHOREZM/.test(c)), "the oasis named");
+  assert.ok(oasis.checkpoints.some((c) => /UNESCO/.test(c) && /2019/.test(c)), "the inscription dated");
+  assert.ok(oasis.checkpoints.some((c) => /LORE/.test(c) && /not documented history/.test(c)), "the fire-worship story marked as lore");
+  const cust = lz.nodes.find((n) => n.id === "lzculture.custodian");
+  assert.ok(cust.checkpoints.some((c) => /GAVHAR MATYOQUBOVA/.test(c)), "the custodian credited by name");
+  const info = seasonInfo(newState(T), T, lz.seasons);
+  assert.equal(info.theme, "Fingertip Season");
+});
+
+test("kara zhorga pack: the two-chapter heritage told straight — Bayan-Ölgii credited, the Kyrgyz kin-claim stated", () => {
+  const kz = STYLES.karazhorga;
+  const heritage = kz.nodes.find((n) => n.id === "kzculture.heritage");
+  assert.ok(heritage.checkpoints.some((c) => /BAYAN-ÖLGII/.test(c) && /kept it alive/.test(c)), "the diaspora preservation credited");
+  assert.ok(heritage.checkpoints.some((c) => /SHARED AND DISPUTED/.test(c) && /KARA JORGO/.test(c)), "the dispute stated, not adjudicated");
+  assert.ok(heritage.checkpoints.some((c) => /honesty beats tidiness/.test(c)), "the app's contested-heritage principle restated");
+  const pacer = kz.nodes.find((n) => n.id === "kzculture.pacer");
+  assert.ok(pacer.checkpoints.some((c) => /black pacer/.test(c)), "the name translated");
+  const gait = kz.nodes.find((n) => n.id === "kzmove.gait");
+  assert.ok(gait.prereqs.some((p) => p.id === "kzculture.pacer" && p.kind === "hard"), "the gait sits behind the horse-culture context");
+  assert.ok(gait.mistakes.some((m) => /smoothness/.test(m)), "the amble's standard written down");
+  for (const n of kz.nodes.filter((x) => x.partner)) assert.ok(n.phase >= 3, `${n.id} partner-flagged but early`);
+  const info = seasonInfo(newState(T), T, kz.seasons);
+  assert.equal(info.theme, "Dombra Season");
+});
+
+test("bielgee pack: the urgent-safeguarding status said plainly; the elders held as canon; the ger constraint taught as the form", () => {
+  const bg = STYLES.bielgee;
+  const safeguard = bg.nodes.find((n) => n.id === "bgculture.safeguard");
+  assert.ok(safeguard.checkpoints.some((c) => /URGENT SAFEGUARDING/.test(c) && /2009/.test(c)), "the status and date stated");
+  assert.ok(safeguard.checkpoints.some((c) => /ELDERS ARE THE CANON/.test(c)), "the elders' authority written");
+  assert.ok(safeguard.checkpoints.some((c) => /visibility is part of the rescue/.test(c)), "the learner's role in safeguarding stated");
+  const ger = bg.nodes.find((n) => n.id === "bgculture.ger");
+  assert.ok(ger.checkpoints.some((c) => /INSIDE THE GER/.test(c)), "the birthplace explains the body");
+  assert.ok(ger.checkpoints.some((c) => /smallness IS the mastery/.test(c)), "the constraint taught as the aesthetic");
+  const shoulders = bg.nodes.find((n) => n.id === "bgmove.shoulders");
+  assert.ok(shoulders.prereqs.some((p) => p.id === "attr.shoulders.l2" && p.kind === "hard"), "the engine gated on real isolation");
+  const info = seasonInfo(newState(T), T, bg.seasons);
+  assert.equal(info.theme, "Ger Season");
+});
+
 test("new-pack animations exist in tree + move library with teaching checkpoints", () => {
   for (const id of ["pop.fresno", "wave.arm", "lock.lock", "point.point", "jack.basic", "hfoot.pdbr"]) {
     assert.ok(MOVES[id], `${id} animated`);

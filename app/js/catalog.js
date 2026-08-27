@@ -26,6 +26,7 @@ const FAMILY_META = [
   ["disco_hustle", "Disco & Hustle"],
   ["folk_partner", "European & Folk Partner Dances"],
   ["south_asian", "South Asian Classical & Folk"],
+  ["central_asian", "Central Asian & Silk Road"],
   ["mena", "Middle East & North Africa"],
   ["east_asian", "East & Southeast Asian"],
   ["european_folk", "European Folk & Step Dance"],

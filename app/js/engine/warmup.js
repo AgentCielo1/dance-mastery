@@ -276,6 +276,21 @@ const STYLE_EXTRAS = {
     "Gentle hip shimmy 3x20s with full rest between — looseness IS the speed; never force it",
     "Shoulder shimmy 30s over still hips — wake the layers separately before the weave",
   ],
+  lazgi: [
+    "Finger flutters and gentle wrist circles 60s — the awakening starts where the dance starts",
+    "Slow shoulder shimmies 30s over still arms — each layer greeted separately",
+    "Light knee bounces 45s — Khorezm's spring, warmed before the acceleration asks for it",
+  ],
+  karazhorga: [
+    "90s of light two-beat springing with a level head — the amble warms at amble tempo",
+    "Alternating shoulder rolls x10 and quick shimmies 30s — the top half's engine, gently started",
+    "Easy wrist flicks and rein-hand shapes 30s — the rider wakes with the horse",
+  ],
+  bielgee: [
+    "Seated tall-spine breaths x6, then chest lifts x8 — the ger's opening position, greeted first",
+    "Shoulder rolls, shakes, and single lifts 60s slow — separate the words before speaking",
+    "Wide slow arm lines with rippling wrists x6 — the eagle stretches before it flies",
+  ],
 };
 
 export function warmupFor(style) {

@@ -1994,6 +1994,74 @@ export default {
    "origin": "Studio and community adaptation lineage — seated technique classes across genres",
    "essence": "Full musical and expressive practice of grooves, ports de bras and rhythm from seated positions",
    "scene": "Inclusive studios, senior and rehab programs, online classes"
+  },
+  {
+   "name": "Khorezm Lazgi",
+   "family": "central_asian",
+   "region": "Khorezm, Uzbekistan",
+   "origin": "The oasis dance of Khorezm (Khiva) — lore traces it to Avesta-era fire worship [LORE]; the living form is Khorezm's own, inscribed by UNESCO in 2019",
+   "essence": "The dance of awakening: life enters at the fingertips — trembling wrists, then shoulders, then the whole body ignites, accelerating with the music",
+   "scene": "Uzbek ensembles, weddings and festivals; taught by Uzbek teachers at home and in the diaspora",
+   "pack": "lazgi"
+  },
+  {
+   "name": "Uzbek Classical (Fergana, Bukhara, Khorezm)",
+   "family": "central_asian",
+   "region": "Uzbekistan",
+   "origin": "Three court-and-city schools: Fergana's lyric softness, Bukhara's jeweled precision (the shashmaqom world), Khorezm's fire",
+   "essence": "Expressive wrists and eyes, articulate shoulders, storytelling arms — a classical grammar with three regional accents",
+   "scene": "State ensembles, conservatories, diaspora studios; each school has its own custodians"
+  },
+  {
+   "name": "Kara Zhorga",
+   "family": "central_asian",
+   "region": "Kazakhstan (and Bayan-Ölgii, Mongolia)",
+   "origin": "The 'black pacer' — a horse-gait dance of the Kazakh steppe; kept alive notably among Mongolia's ethnic-Kazakh herders and revived at home in the 2010s",
+   "essence": "Springy horse-trot steps, rolling shoulders and shimmies, reins-and-whip arms — the steppe's humor on two legs",
+   "scene": "Weddings, toi celebrations, school ensembles, flash-mob revivals; Kyrgyzstan dances its close kin Kara Jorgo",
+   "pack": "karazhorga"
+  },
+  {
+   "name": "Kara Jorgo",
+   "family": "central_asian",
+   "region": "Kyrgyzstan",
+   "origin": "Kyrgyzstan's branch of the shared steppe horse-dance heritage — closely kin to Kazakhstan's Kara Zhorga, and cheerfully claimed by both",
+   "essence": "The same beloved horse-gait play with Kyrgyz accents — shoulder rolls, springy knees, festival joy",
+   "scene": "Kyrgyz celebrations and ensembles; the friendly ownership debate is part of its story"
+  },
+  {
+   "name": "Tajik Dance (Pamiri & Bukharan)",
+   "family": "central_asian",
+   "region": "Tajikistan",
+   "origin": "Mountain (Pamiri) and city (Bukharan-court) traditions — falak's high laments and festive circle dances",
+   "essence": "Soft turning wrists, storytelling hands, gliding steps; the Pamirs dance close to the sky",
+   "scene": "Tajik ensembles, Navruz festivals, diaspora communities"
+  },
+  {
+   "name": "Uyghur Sanam & Dolan",
+   "family": "central_asian",
+   "region": "Uyghur homeland (Xinjiang)",
+   "origin": "The muqam world's dances: sanam suites at gatherings (meshrep), the dolan's whirling intensity — Uyghur heritage carried under real pressure",
+   "essence": "Upright carriage, spinning turns, eloquent wrists and eyebrows — celebration as cultural continuity",
+   "scene": "Uyghur communities at home and in exile keep meshrep alive; support diaspora artists"
+  },
+  {
+   "name": "Kushtdepdi",
+   "family": "central_asian",
+   "region": "Turkmenistan",
+   "sacred": true,
+   "origin": "Turkmen ritual chant-and-movement descended from zikr practice, inscribed by UNESCO in 2017",
+   "essence": "Circling steps and calls building shared spiritual uplift — held by its communities",
+   "scene": "Community-held: performed at Turkmen gatherings by its own bearers; watch with respect"
+  },
+  {
+   "name": "Mongol Bielgee",
+   "family": "central_asian",
+   "region": "Mongolia (western aimags)",
+   "origin": "The nomads' 'dance of the body', born inside the ger where floor space is a rug — UNESCO listed it for urgent safeguarding in 2009",
+   "essence": "Chest, shoulders, arms and wrists dance while the feet barely travel — miming milking, hunting, horses, the whole herding day",
+   "scene": "Naadam feasts, elder tradition-bearers, state ensembles; revived hard because it nearly went quiet",
+   "pack": "bielgee"
   }
  ]
 };
