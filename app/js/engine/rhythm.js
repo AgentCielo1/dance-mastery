@@ -151,6 +151,39 @@ export const PATTERNS = {
     ],
     note: "Boom… chik-chik. The slow step stretches through the boom; the quicks answer the chiks.",
   },
+  ramthon: {
+    name: "Ram thon stroll (ching & drum)",
+    beats: 4, defaultBpm: 84,
+    hits: [
+      { t: 0, type: "kick" }, { t: 2, type: "kick" }, { t: 2.5, type: "kick" },
+      { t: 1, type: "clave" }, { t: 3, type: "clave" },
+      { t: 0.5, type: "hat" }, { t: 1.5, type: "hat" }, { t: 2.5, type: "hat" }, { t: 3.5, type: "hat" },
+      { t: 3, type: "accent" },
+    ],
+    note: "The goblet drum strolls; the ching's closed 'chap' anchors. Built so everyone's grandmother wins — never let practice speed past the culture.",
+  },
+  kendang: {
+    name: "Kendang jaipong (the cracks)",
+    beats: 4, defaultBpm: 110,
+    hits: [
+      { t: 0, type: "kick" }, { t: 1.5, type: "kick" }, { t: 2, type: "kick" },
+      { t: 0.75, type: "snare" }, { t: 2.75, type: "snare" }, { t: 3.25, type: "snare" },
+      { t: 0.5, type: "hat" }, { t: 1, type: "hat" }, { t: 2.5, type: "hat" }, { t: 3, type: "hat" },
+      { t: 3.75, type: "accent" }, { t: 0, type: "accent" },
+    ],
+    note: "The drum conducts the dancer: deep duts get the grind, the sharp 'pak!' cracks get the hit, the roll gets the sway. The accent before the ONE is the gong's doorstep.",
+  },
+  rondalla: {
+    name: "Rondalla three (cariñosa)",
+    beats: 3, defaultBpm: 140,
+    hits: [
+      { t: 0, type: "kick" },
+      { t: 1, type: "clave" }, { t: 2, type: "clave" },
+      { t: 0.5, type: "hat" }, { t: 1.5, type: "hat" }, { t: 2.5, type: "hat" },
+      { t: 0, type: "accent" },
+    ],
+    note: "Waltz-time on plucked strings — the ONE lands soft because the bandurria plucks it. Glide the step, and time the fan's peeks to the phrase-ends.",
+  },
   lazgi: {
     name: "Lazgi six (doira)",
     beats: 6, defaultBpm: 132,
@@ -662,6 +695,9 @@ export const STYLE_PATTERNS = {
   lazgi: "lazgi",
   karazhorga: "dombra",
   bielgee: "tatlaga",
+  ramwong: "ramthon",
+  jaipongan: "kendang",
+  carinosa: "rondalla",
 };
 
 export const SOUND_TYPES = ["kick", "snare", "hat", "clave", "accent"];

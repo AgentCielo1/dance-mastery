@@ -1072,6 +1072,63 @@ test("bielgee pack: the urgent-safeguarding status said plainly; the elders held
   assert.equal(info.theme, "Ger Season");
 });
 
+test("ram wong pack: both chapters told — the ram thon folk root and the 1940s state songbook; circle etiquette is curriculum", () => {
+  const rw = STYLES.ramwong;
+  const standard = rw.nodes.find((n) => n.id === "rwculture.standard");
+  assert.ok(standard.checkpoints.some((c) => /RAM THON/.test(c) && /folk/.test(c)), "the folk root named first");
+  assert.ok(standard.checkpoints.some((c) => /Fine Arts Department/.test(c) && /1940s/.test(c) && /state-era artifact/.test(c)), "the standardization told as what it is");
+  const circle = rw.nodes.find((n) => n.id === "rwculture.circle");
+  assert.ok(circle.checkpoints.some((c) => /join BEHIND the flow/.test(c)), "circle etiquette taught as curriculum");
+  assert.ok(circle.checkpoints.some((c) => /everyone-dances/.test(c)), "the welcome named structural");
+  const jeeb = rw.nodes.find((n) => n.id === "rwmove.jeeb");
+  assert.ok(jeeb.prereqs.some((p) => p.id === "attr.hands.l1" && p.kind === "hard"), "the jeeb gated on real hand grace");
+  for (const n of rw.nodes.filter((x) => x.partner)) assert.ok(n.phase >= 3, `${n.id} partner-flagged but early`);
+  const info = seasonInfo(newState(T), T, rw.seasons);
+  assert.equal(info.theme, "Drum Season");
+});
+
+test("jaipongan pack: Gugum Gumbira credited as creator with his sources named; the 3G ban story told; the drum conducts", () => {
+  const jp = STYLES.jaipongan;
+  const gugum = jp.nodes.find((n) => n.id === "jpculture.gugum");
+  assert.ok(gugum.checkpoints.some((c) => /GUGUM GUMBIRA/.test(c) && /Bandung/.test(c)), "the creator credited by name and city");
+  assert.ok(gugum.checkpoints.some((c) => /KETUK TILU/.test(c) && /PENCAK SILAT/.test(c)), "his source materials named");
+  const scandal = jp.nodes.find((n) => n.id === "jpculture.scandal");
+  assert.ok(scandal.checkpoints.some((c) => /GEOL, GITEK, GOYANG/.test(c)), "the hip trio named");
+  assert.ok(scandal.checkpoints.some((c) => /everyone was already dancing it/.test(c)), "the failed-ban pattern documented again");
+  const geol = jp.nodes.find((n) => n.id === "jpmove.geol");
+  assert.ok(geol.prereqs.some((p) => p.id === "attr.hips.l2" && p.kind === "hard"), "the trio gated on real hip control");
+  const cracks = jp.nodes.find((n) => n.id === "jpmove.cracks");
+  assert.ok(cracks.prereqs.some((p) => p.id === "attr.timing.l2" && p.kind === "hard"), "crack-hits gated on the ear");
+  const info = seasonInfo(newState(T), T, jp.seasons);
+  assert.equal(info.theme, "Kendang Season");
+});
+
+test("cariñosa pack: colonial hybridity told straight; the tinikling schoolhouse pair cross-linked; Bayanihan credited; flirtation late", () => {
+  const cr = STYLES.carinosa;
+  const hybrid = cr.nodes.find((n) => n.id === "crculture.hybrid");
+  assert.ok(hybrid.checkpoints.some((c) => /THREE CENTURIES OF SPANISH COLONIZATION/.test(c)), "the colonial layer named");
+  assert.ok(hybrid.checkpoints.some((c) => /WHOLLY FILIPINO in what it became/.test(c)), "the ownership stated with the layers");
+  const national = cr.nodes.find((n) => n.id === "crculture.national");
+  assert.ok(national.checkpoints.some((c) => /TINIKLING/.test(c) && /this app teaches both/.test(c)), "the schoolhouse pair cross-linked");
+  assert.ok(national.checkpoints.some((c) => /BAYANIHAN/.test(c)), "the staging company credited");
+  assert.ok(national.checkpoints.some((c) => /staged-vs-source/.test(c)), "the staging discipline restated");
+  const play = cr.nodes.find((n) => n.id === "crpartner.play");
+  assert.ok(play.partner && play.phase >= 4, "the flirtation duet is partner-flagged and late");
+  assert.ok(play.prereqs.some((p) => p.id === "crmove.pantomime" && p.kind === "hard"), "the duet sits on the finished solo pantomime");
+  const info = seasonInfo(newState(T), T, cr.seasons);
+  assert.equal(info.theme, "Rondalla Season");
+});
+
+test("the catalog's southeast asian additions: Saman community-held, the Khmer survival story visible", () => {
+  for (const name of ["Ram Wong", "Jaipongan", "Zapin", "Saman", "Robam Preah Reach Trop (Khmer Classical)"]) {
+    assert.ok(catalog.styles.some((s) => s.name === name), `${name} in the catalog`);
+  }
+  const saman = catalog.styles.find((s) => s.name === "Saman");
+  assert.ok(saman.sacred && saman.pack === undefined, "Saman stays community-held");
+  const robam = catalog.styles.find((s) => s.name === "Robam Preah Reach Trop (Khmer Classical)");
+  assert.ok(/Khmer Rouge/.test(robam.origin) && /survivors/.test(robam.origin + robam.scene), "the survival story told in the entry");
+});
+
 test("new-pack animations exist in tree + move library with teaching checkpoints", () => {
   for (const id of ["pop.fresno", "wave.arm", "lock.lock", "point.point", "jack.basic", "hfoot.pdbr"]) {
     assert.ok(MOVES[id], `${id} animated`);

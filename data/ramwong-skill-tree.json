@@ -1,0 +1,266 @@
+{
+  "style": "ramwong",
+  "version": "0.1.0",
+  "name": "Ram Wong",
+  "notes": "Ram Wong style pack (Doc 04 template, solo-first — the steps and the jeeb hands are one dancer's work; the circle is the social form and arrives late 🤝). Thailand's beloved CIRCLE DANCE — 'ram' (dance) 'wong' (circle) — where couples orbit counterclockwise with slow walking steps while the hands speak the JEEB: the rolled-finger, curled-wrist hand language that turns walking into poetry. The history is told with both chapters: the dance GREW FROM THE FOLK RAM THON — the older drum-circle dance of village festivals — and was then STANDARDIZED AS NATIONAL CULTURE in the 1940s, when Thailand's Fine Arts Department (under the Phibunsongkhram government's cultural mandates) composed the standard songs and codified hand patterns of 'ram wong mattrathan'; this pack says plainly that the tidy standard version is a state-era artifact sitting on an older, looser folk root, and teaches both registers. Design truths: the walking step and jeeb are perfectly solo-trainable and famously welcoming (ram wong's whole point is that EVERYONE dances — grandmothers rule these floors); the standard songs give clear practice structure; the ram thon drum cycle rides in this app's Rhythm Trainer; and the circle etiquette (join behind, match the orbit, never overtake) is taught as curriculum.",
+  "seasons": [
+    {
+      "theme": "Drum Season",
+      "finale": "Film yourself stepping the ram thon cycle — unhurried walking steps that agree with the drum."
+    },
+    {
+      "theme": "Jeeb Season",
+      "finale": "Film the jeeb hand-rolls — both hands, both directions, slow and complete — over standing stillness."
+    },
+    {
+      "theme": "Walk Season",
+      "finale": "Film the ram wong walk with jeeb hands flowing — orbiting your room counterclockwise like the circle is real."
+    },
+    {
+      "theme": "Song Season",
+      "finale": "Learn the hand pattern of one standard ram wong song from a Thai source video, credit it, and film it full through."
+    },
+    {
+      "theme": "Festival Season",
+      "finale": "Find a ram wong circle — Songkran and Loy Krathong events run worldwide — join behind, match the orbit, and dance."
+    }
+  ],
+  "attributes": [
+    {
+      "id": "attr.hands.l1",
+      "name": "Jeeb hands L1",
+      "test": "60s of continuous slow finger-rolls and wrist curls, both hands, forearms quiet — grace without hurry"
+    },
+    {
+      "id": "attr.posture.l1",
+      "name": "Gliding posture L1",
+      "test": "90s of slow walking with a tall easy spine and level head — the orbit's smoothness starts in the carriage"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "rwmusic.ramthon",
+      "type": "concept",
+      "family": "musicality",
+      "name": "The ram thon cycle",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "the root rhythm is the RAM THON — the goblet drum's unhurried cycle that village circles danced long before the standard songs; it's in this app's Rhythm Trainer",
+        "the ching (small cymbals) marks the frame the way a heartbeat does — learn to hear its closed 'chap' as the anchor",
+        "the tempo is a stroll on purpose: ram wong is built so everyone's grandmother wins — never let practice speed past the culture"
+      ]
+    },
+    {
+      "id": "rwmusic.songs",
+      "type": "concept",
+      "family": "musicality",
+      "name": "The standard songs — a state-era songbook",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "rwmusic.ramthon",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the RAM WONG MATTRATHAN standard songs — composed in the 1940s, each with its own codified hand pattern — are the shared national songbook: any Thai festival floor knows them",
+        "each song pairs lyric and gesture: learn a song's pattern and you can join any circle playing it — the songbook is a passport",
+        "know what you're holding: a mid-century official songbook sitting on an older folk practice — both registers are real ram wong"
+      ]
+    },
+    {
+      "id": "rwculture.circle",
+      "type": "concept",
+      "family": "culture",
+      "name": "The circle — everyone dances",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "'ram' is dance, 'wong' is circle: couples orbit counterclockwise, unhurried, at festivals (Songkran, Loy Krathong), weddings, and temple fairs — ram wong is Thailand's everyone-dances floor",
+        "the welcome is structural: steps a toddler can walk, grace a master can spend a lifetime refining — the skill lives in the hands and the calm",
+        "the circle's etiquette is curriculum here: join BEHIND the flow, match the orbit's pace, never overtake — the circle is a shared organism and joining it well is the first skill"
+      ]
+    },
+    {
+      "id": "rwculture.standard",
+      "type": "concept",
+      "family": "culture",
+      "name": "Folk root, state polish — both chapters told",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "rwculture.circle",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "chapter one: ram wong grew from the RAM THON folk drum-circle — village floors, loose patterns, the drum in charge",
+        "chapter two: in the 1940s Thailand's Fine Arts Department, under the Phibunsongkhram government's cultural mandates, STANDARDIZED it — composed songs, codified jeeb patterns, national promotion; the tidy version is a state-era artifact and this pack says so",
+        "the pattern is familiar in this app: kpanlogo's council approval, ram wong's ministry songbook — heritage often has an official stamp on a folk body; know which layer you're dancing"
+      ]
+    },
+    {
+      "id": "rwmove.jeeb",
+      "type": "move",
+      "family": "basic",
+      "name": "The jeeb — the hand language",
+      "phase": 1,
+      "anchor": "walking made poetry",
+      "prereqs": [
+        {
+          "id": "rwmusic.ramthon",
+          "kind": "hard"
+        },
+        {
+          "id": "rwculture.circle",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.hands.l1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the JEEB: thumb and forefinger meet, remaining fingers fan back, the wrist curls and rolls — the hand blooming and closing in slow continuous motion",
+        "both hands work in counter-motion: one rising and opening while the other lowers and folds — a conversation between your own hands",
+        "the roll never stops and never hurries: jeeb hands are water, not semaphore — film your hands alone and watch for jerks"
+      ],
+      "mistakes": [
+        "stiff splayed fingers (the fan is relaxed — tension turns poetry into traffic signals)",
+        "racing the roll (the drum is strolling; the hands stroll with it)"
+      ]
+    },
+    {
+      "id": "rwmove.walk",
+      "type": "move",
+      "family": "basic",
+      "name": "The ram wong walk",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "rwmove.jeeb",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.posture.l1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the step: slow, small, gliding walks on the drum's cycle — ball of the foot kissing down first, knees easy, spine tall and serene",
+        "layer the jeeb over the walk: hands rolling continuously while the feet stroll — the two speeds coexist (slow feet, slower hands)",
+        "orbit practice: walk a counterclockwise circle around your room's center — the circle's geometry is the dance's home shape"
+      ]
+    },
+    {
+      "id": "rwmove.patterns",
+      "type": "move",
+      "family": "basic",
+      "name": "Song patterns — the codified gestures",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "rwmove.walk",
+          "kind": "hard"
+        },
+        {
+          "id": "rwmusic.songs",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "each standard song carries its own gesture sequence — hands to heart, blooming outward, gathering the moon — learned as short loops that repeat with the verses",
+        "learn ONE song's full pattern from a Thai source video (festival footage or instructional), credit it in your journal, and drill it until the loop is automatic",
+        "then learn a second and feel the system: same walk, same jeeb grammar, new sentence — the songbook opens fast after the first"
+      ]
+    },
+    {
+      "id": "rwmove.turns",
+      "type": "move",
+      "family": "basic",
+      "name": "Turns & facing play",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "rwmove.patterns",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the gentle rotations: turning in place with the jeeb flowing, facing changes that in the circle become the couple's courteous conversation",
+        "the turn keeps the stroll's tempo — rotation is walking that happens to curve, never a spin",
+        "solo, alternate facings every eight counts: outward, inward, quarter turns — the circle's social geometry rehearsed alone"
+      ]
+    },
+    {
+      "id": "rwcircle.join",
+      "type": "move",
+      "family": "line",
+      "name": "Joining the circle",
+      "phase": 4,
+      "partner": true,
+      "prereqs": [
+        {
+          "id": "rwmove.turns",
+          "kind": "hard"
+        },
+        {
+          "id": "rwculture.standard",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "🤝 the real thing: couples orbiting together, patterns synchronized loosely, the whole floor one slow wheel — ram wong's social form",
+        "the entry protocol you drilled: join behind the flow, match the orbit, mirror your partner's register — festival circles absorb respectful newcomers by design",
+        "your solo walk and one known song pattern are the full entry fee; the circle teaches the rest in one song"
+      ]
+    },
+    {
+      "id": "meta.rw_set",
+      "type": "combo",
+      "family": "meta",
+      "name": "The festival set — filmed",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "rwmove.turns",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "film one full standard song: walk gliding, jeeb continuous, the song's pattern complete, one turn sequence — serene throughout",
+        "the water audit: watch the hands at double speed on review — jerks invisible at 1x show up at 2x",
+        "say it on camera: ram wong, Thailand, the folk ram thon root and the 1940s songbook — both chapters in two sentences"
+      ]
+    },
+    {
+      "id": "meta.rw_live",
+      "type": "combo",
+      "family": "meta",
+      "name": "The living circle",
+      "phase": 4,
+      "prereqs": [
+        {
+          "id": "meta.rw_set",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "find the circle: Songkran and Loy Krathong festivals run worldwide wherever Thai communities live — temple fairs and cultural nights dance ram wong as the closer",
+        "join the way the pack taught: behind, matched, unhurried — and let a grandmother adjust your jeeb; that correction is the tradition's highest teaching format",
+        "teach one person the jeeb roll — it fits in a minute and carries the whole aesthetic"
+      ]
+    }
+  ],
+  "teachers": [
+    {
+      "name": "Ram wong — the Thai circle dance",
+      "url": "https://en.wikipedia.org/wiki/Ramwong"
+    },
+    {
+      "name": "The ram thon root & Thai classical hand language",
+      "url": "https://en.wikipedia.org/wiki/Dances_of_Thailand"
+    }
+  ]
+}

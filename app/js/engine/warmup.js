@@ -291,6 +291,21 @@ const STYLE_EXTRAS = {
     "Shoulder rolls, shakes, and single lifts 60s slow — separate the words before speaking",
     "Wide slow arm lines with rippling wrists x6 — the eagle stretches before it flies",
   ],
+  ramwong: [
+    "Slow finger-rolls and wrist curls 60s — jeeb hands are water; warm the stream",
+    "Tall gliding walks 60s, ball of the foot kissing down first — the stroll is the dance",
+    "Gentle counter-motion arm floats x8 — one hand rising as the other folds",
+  ],
+  jaipongan: [
+    "Low coiled-stance holds 3x20s with live weight shifts — silat's readiness, gently wound",
+    "Slow hip circles then sharp side bumps x8 each — greet geol and gitek separately",
+    "Clap-response drill 30s to any drum track — the ear leads the hips by a week",
+  ],
+  carinosa: [
+    "Small waltz steps 60s, soft landings — the rondalla plucks; land like it sounds",
+    "Fan open-close-flutter x15 without looking — the prop becomes a body part warm",
+    "Gracious-posture breaths x6, shoulders soft, face amused — the character warms too",
+  ],
 };
 
 export function warmupFor(style) {

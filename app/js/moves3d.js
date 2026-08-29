@@ -592,6 +592,45 @@ export const MOVES = {
     ],
   },
 
+  /* ------------- southeast asian wave: solo cores (procedural v1) ------------- */
+  "rwmove.jeeb": {
+    bpm: 84, beats: 4,
+    keys: [
+      // gliding stroll with counter-rolling hands — one blooming as the other folds
+      { t: 0.0, p: { y: 0.868, lHipF: 0.3, lKnee: 0.2, rKnee: 0.12, lShA: 1.1, lShF: 0.7, lElb: 1.0, rShA: 0.7, rShF: 0.3, rElb: 1.5, tPitch: -0.03 } },
+      { t: 0.25, p: { y: 0.866, lHipF: 0.05, lKnee: 0.15, rKnee: 0.15, lElb: 1.3, rElb: 1.2 } },
+      { t: 0.5, p: { y: 0.868, rHipF: 0.3, rKnee: 0.2, lKnee: 0.12, rShA: 1.1, rShF: 0.7, rElb: 1.0, lShA: 0.7, lShF: 0.3, lElb: 1.5, lHipF: 0.0 } },
+      { t: 0.75, p: { y: 0.866, rHipF: 0.05, lKnee: 0.15, rKnee: 0.15, lElb: 1.2, rElb: 1.3 } },
+    ],
+    // water, not semaphore: the rolls never stop and never hurry
+    rootFn: (p, u) => { p.yaw = 0.1 * sin(u * TAU); },
+  },
+  "jpmove.geol": {
+    bpm: 110, beats: 4,
+    keys: [
+      // coiled low stance, hips speaking: slow grind, sharp bump, easy sway
+      { t: 0.0, p: { y: 0.83, lKnee: 0.55, rKnee: 0.4, roll: -0.08, tYaw: 0.12, lShA: 1.2, lElb: 1.4, rShA: 0.5, rShF: -0.3, rElb: 0.7 } },
+      { t: 0.19, p: { y: 0.83, roll: 0.1, tYaw: 0.12 } },
+      { t: 0.25, p: { y: 0.832, roll: 0.0, tYaw: -0.05 } },
+      { t: 0.5, p: { y: 0.83, rKnee: 0.55, lKnee: 0.4, roll: 0.08, tYaw: -0.12, rShA: 1.2, rElb: 1.4, lShA: 0.5, lShF: -0.3, lElb: 0.7, rShF: 0.0 } },
+      { t: 0.69, p: { y: 0.83, roll: -0.1, tYaw: -0.12 } },
+      { t: 0.75, p: { y: 0.832, roll: 0.0, tYaw: 0.05, lShF: 0.0 } },
+    ],
+    // the kendang conjugates the hips: rolls flow, cracks hit, duts grind
+  },
+  "crmove.fan": {
+    bpm: 140, beats: 3,
+    keys: [
+      // gliding waltz sway, one hand holding the fan line, the peek over its edge
+      { t: 0.0, p: { y: 0.865, lHipA: 0.25, lKnee: 0.18, rKnee: 0.12, roll: -0.04, rShA: 1.4, rShF: 0.6, rElb: 1.6, lShA: 0.6, lShF: 0.2, lElb: 0.8, tYaw: 0.1 } },
+      { t: 0.33, p: { y: 0.862, lHipA: 0.0, lKnee: 0.14, rKnee: 0.14, roll: 0.0 } },
+      { t: 0.67, p: { y: 0.865, rHipA: 0.25, rKnee: 0.18, lKnee: 0.12, roll: 0.04, rElb: 1.3, tYaw: -0.1 } },
+      { t: 0.85, p: { y: 0.862, rHipA: 0.0, lKnee: 0.14, rKnee: 0.14, roll: 0.0, rElb: 1.6 } },
+    ],
+    // the ONE lands soft (the strings pluck); the fan frames the amused eyes
+    rootFn: (p, u) => { p.tPitch = -0.02 + 0.015 * sin(u * TAU); },
+  },
+
   /* ------------- central asian wave: solo cores (procedural v1) ------------- */
   "lzmove.fingers": {
     bpm: 132, beats: 6,

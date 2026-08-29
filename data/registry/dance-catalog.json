@@ -1524,7 +1524,8 @@
    "region": "Philippines",
    "origin": "Spanish-colonial courtship dance in Maria Clara dress",
    "essence": "Coy fan-and-handkerchief flirtation in gentle waltz meter",
-   "scene": "Fiestas, schools, folkloric repertory"
+   "scene": "Fiestas, schools, folkloric repertory",
+   "pack": "carinosa"
   },
   {
    "name": "Vietnamese Traditional Dance",
@@ -2061,6 +2062,49 @@
    "essence": "Chest, shoulders, arms and wrists dance while the feet barely travel — miming milking, hunting, horses, the whole herding day",
    "scene": "Naadam feasts, elder tradition-bearers, state ensembles; revived hard because it nearly went quiet",
    "pack": "bielgee"
+  },
+  {
+   "name": "Ram Wong",
+   "family": "east_asian",
+   "region": "Thailand",
+   "origin": "The circle dance — grown from the folk ram thon drum-circle, standardized as national culture by Thailand's Fine Arts Department in the 1940s",
+   "essence": "Couples orbit a circle with slow walking steps and the jeeb — the rolled-finger hand language that makes walking into poetry",
+   "scene": "Songkran and Loy Krathong festivals, weddings, temple fairs — everyone dances, every age",
+   "pack": "ramwong"
+  },
+  {
+   "name": "Jaipongan",
+   "family": "east_asian",
+   "region": "West Java (Sunda), Indonesia",
+   "origin": "Created by Gugum Gumbira in 1970s Bandung from ketuk tilu, pencak silat and kendang drumming — new tradition built proudly from local roots",
+   "essence": "Whipcrack kendang accents, coiled silat poses, and the famous hip trio (geol, gitek, goyang) — controversy survived into pride",
+   "scene": "Sanggar studios across Sunda, weddings, stage troupes; taught openly",
+   "pack": "jaipongan"
+  },
+  {
+   "name": "Zapin",
+   "family": "east_asian",
+   "region": "Malay world (Malaysia/Indonesia/Brunei)",
+   "origin": "Malay social dance with Yemeni-Arab trade roots — gambus lute, marwas drums, and centuries of port-town mixing",
+   "essence": "Light traveling steps in paired lines, dignified and lilting — Islamic-court elegance at village volume",
+   "scene": "Malay weddings and festivals, school ensembles across the peninsula and archipelago"
+  },
+  {
+   "name": "Saman",
+   "family": "east_asian",
+   "region": "Gayo highlands, Aceh, Indonesia",
+   "sacred": true,
+   "origin": "The Gayo people's seated devotional dance of clapping, chest-slapping unison — UNESCO urgent safeguarding 2011",
+   "essence": "Rows of dancers become one instrument — poetry, faith and lightning-fast synchrony",
+   "scene": "Community-held: Gayo teachers and communities transmit it; watch with respect"
+  },
+  {
+   "name": "Robam Preah Reach Trop (Khmer Classical)",
+   "family": "east_asian",
+   "region": "Cambodia",
+   "origin": "The royal court dance of Cambodia — nearly annihilated with its masters under the Khmer Rouge, rebuilt from the survivors' memory; UNESCO-inscribed",
+   "essence": "Curved fingers, slow celestial poses, the apsara's grace — every performance is also a survival",
+   "scene": "Royal ballet, conservatories, diaspora schools keeping the survivors' lineage alive"
   }
  ]
 }

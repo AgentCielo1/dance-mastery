@@ -458,6 +458,9 @@ const TAGLINES = {
   lazgi: "life enters at the fingertips",
   karazhorga: "the black pacer — ride lightly",
   bielgee: "a whole dance on one rug",
+  ramwong: "the circle where grandmothers win",
+  jaipongan: "Gugum Gumbira's answer — roots, louder",
+  carinosa: "the fan does the talking",
 };
 
 function needsOnboarding() {
