@@ -1,0 +1,281 @@
+{
+  "style": "lezginka",
+  "version": "0.1.0",
+  "name": "Lezginka",
+  "notes": "Lezginka style pack (Doc 04 template, solo-first). The Caucasus's blazing wedding dance — and this pack's first credit is the one the world keeps skipping: LEZGINKA IS NAMED FOR THE LEZGIN PEOPLE of Dagestan and northern Azerbaijan, whose dance it originally is; the whole Caucasus dances its own beloved variants (the Chechen lovzar, Azeri, Ossetian, Georgian and Armenian kin), and this pack teaches the shared wedding-circle form while keeping the Lezgins' name on the label where it belongs. The imagery is the region's own: the man dances the EAGLE — arms spread wide like wings, chest proud, explosive on the balls of the feet — while the woman dances the SWAN — serene gliding, soft arm waves, the calm the storm orbits; this pack teaches BOTH registers to every learner as vocabulary, the way the Georgian pack does. The music is a driving 6/8 at wedding heat (it rides in this app's Rhythm Trainer), the social form is the CIRCLE — dancers bursting in for short blazing solos while the crowd claps the cycle (sabar's economy, Caucasus accent) — and the safety honesty is structural: the famous knee drops and toe hits are gated hard on conditioning, drilled progressively, and the showiest stage tricks are pointed at real teachers. Design truths: the eagle's arm lines, the fast triplet step, and the circle etiquette are all genuinely solo-trainable; street-lezginka culture (young dancers battling at weddings and city squares from Makhachkala to Moscow) keeps the form gloriously alive and gloriously teachable from source footage.",
+  "seasons": [
+    {
+      "theme": "Six-Eight Season",
+      "finale": "Film yourself clapping and stepping the lezginka 6/8 — the gallop found, the claps on the crowd's beat."
+    },
+    {
+      "theme": "Eagle Season",
+      "finale": "Film the eagle register — wings spread, chest proud, triplet steps blazing — one short solo's worth."
+    },
+    {
+      "theme": "Swan Season",
+      "finale": "Film the swan register — the glide, the soft waves, the serene orbit — calm enough to cool the room."
+    },
+    {
+      "theme": "Drop Season",
+      "finale": "Film the conditioned drop progression at your honest current depth — knees warmed, landings soft, no heroics."
+    },
+    {
+      "theme": "Circle Season",
+      "finale": "Learn eight counts from a Caucasus source video (wedding or ensemble footage), credit it and its nation, and film your version beside it."
+    }
+  ],
+  "attributes": [
+    {
+      "id": "attr.feet.l2",
+      "name": "Triplet feet L2",
+      "test": "60s of fast ball-of-foot triplet steps at 6/8 wedding tempo, light and even — the blaze runs on quick feet"
+    },
+    {
+      "id": "attr.knees.l2",
+      "name": "Drop-conditioned knees L2",
+      "test": "10 controlled half-depth squat-drops with soft catches and instant returns, pain-free, on a forgiving floor — depth is earned in weeks, not songs"
+    },
+    {
+      "id": "attr.posture.l1",
+      "name": "Proud-chest posture L1",
+      "test": "90s of tall open-chested carriage with arms spread wide and level — the eagle's frame, held with ease"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "lgmusic.sixeight",
+      "type": "concept",
+      "family": "musicality",
+      "name": "The lezginka 6/8 — the gallop",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "lezginka rides a driving 6/8 at wedding heat — accordion and drum galloping while the crowd CLAPS the cycle; it's in this app's Rhythm Trainer",
+        "the claps are the circle's engine: at a real wedding the whole room is your percussion section — train clapping it before dancing it",
+        "the tempo is honest cardio: short solos exist because nobody survives long ones — the music designs the etiquette"
+      ]
+    },
+    {
+      "id": "lgmusic.circle",
+      "type": "concept",
+      "family": "musicality",
+      "name": "The circle — short, blazing, generous",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "lgmusic.sixeight",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the social form is the CIRCLE: dancers burst in for short blazing solos while the crowd claps — enter committed, peak fast, hand the floor back bigger than you found it (sabar's economy, Caucasus accent)",
+        "duets happen inside it: the eagle orbits the swan, never touching, never blocking her path — the courtesy is choreography",
+        "street-lezginka culture (weddings, squares, battle circles from Makhachkala to the diaspora) keeps the form young — source footage is everywhere and gloriously honest"
+      ]
+    },
+    {
+      "id": "lgculture.lezgins",
+      "type": "concept",
+      "family": "culture",
+      "name": "The Lezgins — the name's owners",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "LEZGINKA IS NAMED FOR THE LEZGIN PEOPLE of Dagestan and northern Azerbaijan — the dance the world calls by their name is originally theirs, and this pack keeps that credit on the label",
+        "the whole Caucasus dances beloved variants — the Chechen lovzar, Azeri, Ossetian, Georgian and Armenian kin — a shared mountain family with one people's name at the root",
+        "when you dance or teach it, say both truths: the Lezgins' name, the region's shared love — the app's honest-map principle, mountain edition"
+      ]
+    },
+    {
+      "id": "lgculture.registers",
+      "type": "concept",
+      "family": "culture",
+      "name": "The eagle & the swan",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "lgculture.lezgins",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the imagery is the region's own: the EAGLE — wings spread, chest proud, explosive — and the SWAN — serene glide, soft waves, the calm the storm orbits",
+        "this pack teaches BOTH registers to every learner as vocabulary; tradition assigns roles on real floors, and your teachers there will too",
+        "the pairing is the dance's physics: the eagle's fire reads BECAUSE the swan's calm frames it — train the contrast, not just the flash"
+      ]
+    },
+    {
+      "id": "lgmove.triplets",
+      "type": "move",
+      "family": "basic",
+      "name": "The triplet step",
+      "phase": 1,
+      "anchor": "the blaze's engine",
+      "prereqs": [
+        {
+          "id": "lgmusic.sixeight",
+          "kind": "hard"
+        },
+        {
+          "id": "lgculture.lezgins",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.feet.l2",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the engine: fast light triplet steps on the balls of the feet, riding the 6/8's gallop — knees springy, landings silent, the feet a blur under a still chest",
+        "build it in three speeds: half-tempo until even, tempo until comfortable, wedding-heat for one phrase at a time",
+        "travel it: forward bursts, tight circles, the sideways skim — the circle solo is thirty seconds of steering this engine"
+      ],
+      "mistakes": [
+        "heavy landings (the blaze is LIGHT — thunder is the drums' job, not the feet's)",
+        "chest collapsing at speed (the eagle's frame holds while the feet burn)"
+      ]
+    },
+    {
+      "id": "lgmove.eagle",
+      "type": "move",
+      "family": "basic",
+      "name": "The eagle register",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "lgmove.triplets",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.posture.l1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "wings out: arms spread wide and level, chest proud, head high — the eagle's frame held over the triplet engine",
+        "the arm vocabulary: the wide hold, the sharp fold-and-strike (one arm snapping across the chest), the high V on the music's peaks",
+        "explosive accents: sudden direction cuts and one-count freezes on the drum's hits — flight with brakes"
+      ]
+    },
+    {
+      "id": "lgmove.swan",
+      "type": "move",
+      "family": "basic",
+      "name": "The swan register",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "lgmove.triplets",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the calm: small gliding steps (the Georgian pack's glide is a cousin — cross-train it), soft continuous arm waves, a serene level gaze",
+        "the swan is not passive: she steers the duet's geometry, and her calm at wedding tempo is harder athleticism than the eagle's fire",
+        "train the switch: eight counts eagle, eight counts swan, clean — owning both registers is owning the dance"
+      ]
+    },
+    {
+      "id": "lgmove.drops",
+      "type": "move",
+      "family": "basic",
+      "name": "Knee drops — conditioned, progressive, honest",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "lgmove.eagle",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.knees.l2",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the famous drops — the sudden sink to a deep squat or kneel and the spring back out — are trained PROGRESSIVELY: half-depth for weeks, forgiving floors always, warm knees non-negotiable",
+        "the return is the move: the drop is gravity, the rebound on the next count is you — never sacrifice the return for depth",
+        "the showiest tricks (jump-drops, toe hits, the spinning knee walk) are STAGE vocabulary for real teachers and conditioned years — this pack's ceiling is the honest conditioned drop, and the kuduro pack's rule applies: the gate is a gate"
+      ],
+      "mistakes": [
+        "cold or deep too soon (knees are a career — the circle respects a clean half-drop more than a torn full one)"
+      ]
+    },
+    {
+      "id": "lgmove.solo",
+      "type": "move",
+      "family": "basic",
+      "name": "The circle solo",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "lgmove.drops",
+          "kind": "hard"
+        },
+        {
+          "id": "lgmove.swan",
+          "kind": "hard"
+        },
+        {
+          "id": "lgmusic.circle",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the unit of the culture: a 20-40 second solo — burst in on the triplets, blaze the eagle, cut one drop, hand the floor back — total commitment, honest brevity",
+        "structure it like the masters: entrance (claim), development (steer), peak (the drop or freeze), exit (grace) — four beats of story",
+        "mark a circle on your floor and drill entries and exits — the doorway skills are half the art"
+      ]
+    },
+    {
+      "id": "meta.lg_set",
+      "type": "combo",
+      "family": "meta",
+      "name": "The wedding set — filmed",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "lgmove.solo",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "film two circle solos back to back: one eagle-led, one swan-led — engine light, registers distinct, one honest drop, clean exits",
+        "the lightness audit: listen with eyes closed — if you can hear the feet land, the blaze needs another week",
+        "say it on camera: lezginka, named for the Lezgin people of Dagestan, danced by the whole Caucasus — the label's credit, out loud"
+      ]
+    },
+    {
+      "id": "meta.lg_circle",
+      "type": "combo",
+      "family": "meta",
+      "name": "The living circle",
+      "phase": 4,
+      "prereqs": [
+        {
+          "id": "meta.lg_set",
+          "kind": "hard"
+        },
+        {
+          "id": "lgculture.registers",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "find the circle: Caucasus community weddings and festivals, ensemble schools (Dagestani, Chechen, Georgian and Armenian groups teach worldwide), and the street-lezginka scene's open sessions",
+        "enter the way the pack drilled: short, committed, generous — and clap hard for everyone else's solos; the clapping is half the citizenship",
+        "teach one person the triplet step and the name's story — the Lezgins' credit travels with every dancer who knows it"
+      ]
+    }
+  ],
+  "teachers": [
+    {
+      "name": "Lezginka — the dance and its family",
+      "url": "https://en.wikipedia.org/wiki/Lezginka"
+    },
+    {
+      "name": "The Lezgin people — the name's owners",
+      "url": "https://en.wikipedia.org/wiki/Lezgins"
+    }
+  ]
+}

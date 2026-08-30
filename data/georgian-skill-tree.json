@@ -1,0 +1,270 @@
+{
+  "style": "georgian",
+  "version": "0.1.0",
+  "name": "Georgian Dance (Foundation)",
+  "notes": "Georgian Dance FOUNDATION pack (Doc 04 template) — a doorway pack in the bharatanatyam tradition: it teaches what can be honestly self-trained and hard-gates what cannot. Georgia's dance repertoire is one of the world's most spectacular — Kartuli's formal courtship duet where the man's eyes never leave his partner and his feet seem not to touch the ground, Acharuli's seaside mischief, Mtiuluri's mountain one-upmanship, Khorumi's war formation — carried to the world's stages by the SUKHISHVILI Georgian National Ballet (founded 1945 by ILIKO SUKHISHVILI and NINO RAMISHVILI, the husband-and-wife founders credited here by name) and by ERISIONI. The pack's central honesty gate is about the famous men's technique: Georgian male dancers perform on the KNUCKLES OF THEIR TOES — no blocks, no pointe shoes — plus aerial leaps and spinning knee drops, and ALL of it is stage technique built over years under masters with conditioning this app cannot supervise; meta.stage_honesty says so and hard-gates the vocabulary, and a scan test enforces that NO toe-work move exists in this tree (ballet's no-pointe rule, Georgian chapter). What IS honestly self-trainable is the foundation both registers share: the regal carriage, the women's floating glide (the 'gliding as if on wheels' svla), the arm lines (women's soft waves, men's proud angles), and doli-drum musicality — and that foundation is a real dance in itself. The doli's drive rides in this app's Rhythm Trainer.",
+  "seasons": [
+    {
+      "theme": "Doli Season",
+      "finale": "Film yourself marking the doli's drive — carriage tall, accents caught, the drum respected."
+    },
+    {
+      "theme": "Carriage Season",
+      "finale": "Film the Georgian carriage — regal spine, still head, proud calm — held through one full song of simple steps."
+    },
+    {
+      "theme": "Glide Season",
+      "finale": "Film the floating glide — smooth small steps under a motionless upper body — crossing your room like water."
+    },
+    {
+      "theme": "Arms Season",
+      "finale": "Film both arm registers — the soft flowing waves and the proud angular lines — distinct and unhurried."
+    },
+    {
+      "theme": "Sukhishvili Season",
+      "finale": "Watch a full Sukhishvili or Erisioni performance, journal what the foundation makes possible, and find a Georgian teacher or ensemble class."
+    }
+  ],
+  "attributes": [
+    {
+      "id": "attr.posture.l2",
+      "name": "Regal carriage L2",
+      "test": "3 minutes of tall, still-headed, proud-calm posture through slow walking — the crown must not bob, tilt, or apologize"
+    },
+    {
+      "id": "attr.feet.l1",
+      "name": "Glide feet L1",
+      "test": "60s of small smooth heel-to-ball steps with zero vertical bounce — a full glass on the head survives the crossing"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "gemusic.doli",
+      "type": "concept",
+      "family": "musicality",
+      "name": "The doli — the drive",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "Georgian dance runs on the DOLI — the double-headed drum whose driving patterns and sudden accents conduct every leap and glide; the drive is in this app's Rhythm Trainer",
+        "over it: the panduri's strum, the garmoni's reeds, and Georgia's famous polyphonic voices — a soundscape UNESCO honored before it honored almost anything else",
+        "learn the doli's two messages: the steady drive (carry) and the doubled crack (strike) — the whole repertoire answers those two words"
+      ]
+    },
+    {
+      "id": "gemusic.regions",
+      "type": "concept",
+      "family": "musicality",
+      "name": "The regional map",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "gemusic.doli",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "Georgia's repertoire is a map: KARTULI's formal courtship (the crown jewel), ACHARULI's seaside play, MTIULURI's mountain contest, KHORUMI's war formation — each region a different temperature",
+        "watch one example of each from Georgian ensemble footage and journal the temperature differences — the foundation you're training serves all of them",
+        "the music tells you which region you're in before the costumes do: Acharuli grins, Kartuli holds its breath"
+      ]
+    },
+    {
+      "id": "geculture.sukhishvili",
+      "type": "concept",
+      "family": "culture",
+      "name": "Sukhishvili & Ramishvili — the stagers",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "the SUKHISHVILI Georgian National Ballet — founded 1945 by ILIKO SUKHISHVILI and NINO RAMISHVILI, husband and wife — carried Georgia's dances to the world's great stages, with ERISIONI beside them; the staging generation is credited by name, as this app always credits it",
+        "the staged-vs-source discipline applies here too: the ballets are a spectacular INTERPRETATION of village and court traditions — study both registers and know which you're watching",
+        "Georgian studios and diaspora ensembles teach openly worldwide — the foundation this pack trains is exactly what their beginner classes expect"
+      ]
+    },
+    {
+      "id": "meta.stage_honesty",
+      "type": "concept",
+      "family": "meta",
+      "name": "The stage gate — what this app will not teach",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "geculture.sukhishvili",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the famous men's technique — dancing on the KNUCKLES OF THE TOES with no blocks, the aerial leaps, the spinning knee drops — is STAGE TECHNIQUE built over years under masters, on conditioning this app cannot supervise: THIS PACK DOES NOT TEACH IT, and no node past this gate will",
+        "the reason is the ballet pack's reason: some vocabularies are gated by supervised training because the failure mode is injury, not embarrassment — honesty about that boundary IS the curriculum",
+        "what remains is not a consolation prize: the carriage, the glide, and the arm registers are the foundation every Georgian dancer builds on, and they are a complete dance"
+      ]
+    },
+    {
+      "id": "gemove.carriage",
+      "type": "move",
+      "family": "basic",
+      "name": "The regal carriage",
+      "phase": 1,
+      "anchor": "the crown the whole repertoire wears",
+      "prereqs": [
+        {
+          "id": "gemusic.doli",
+          "kind": "hard"
+        },
+        {
+          "id": "meta.stage_honesty",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.posture.l2",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the Georgian silhouette: spine tall as a tower, chest open, chin level, head STILL — a calm so complete it reads as sovereignty",
+        "the stillness is active: the head rides one rail while everything travels beneath it — Kartuli's magic is 90% this",
+        "drill it walking, turning, and standing — the carriage must survive motion before any step vocabulary is worth adding"
+      ],
+      "mistakes": [
+        "performing intensity (Georgian dignity is calm, not glare — the power is in the stillness)"
+      ]
+    },
+    {
+      "id": "gemove.glide",
+      "type": "move",
+      "family": "basic",
+      "name": "The floating glide",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "gemove.carriage",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.feet.l1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the women's signature (and every dancer's foundation): tiny smooth heel-to-ball steps under a motionless upper body — 'gliding as if on wheels', the floor apparently frictionless",
+        "the test is a full glass on the head, and it is not a metaphor: train with a book until the crossing is water",
+        "glide the geometries: straight lines, curves, the slow turn — Kartuli's partners orbit each other entirely on this engine"
+      ],
+      "mistakes": [
+        "visible steps (if the audience can count your feet, the glide isn't one yet — smaller, smoother, more)"
+      ]
+    },
+    {
+      "id": "gemove.armswoman",
+      "type": "move",
+      "family": "basic",
+      "name": "The flowing register — waves & wings",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "gemove.carriage",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the soft register: arms floating in slow waves — wrist leading, elbow following — hands blooming like the jeeb's Georgian cousin, framing but never touching the face",
+        "the waves ride OVER the glide without disturbing it: water above wheels",
+        "phrase to the melody, not the drum — this register answers the voices while the feet answer the doli"
+      ]
+    },
+    {
+      "id": "gemove.armsman",
+      "type": "move",
+      "family": "basic",
+      "name": "The proud register — angles & strikes",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "gemove.carriage",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the sharp register: arms snapping to proud angular lines — one fist to the chest, one arm extended like a blade, elbows carving hard geometry on the doli's cracks",
+        "the strike is placed, then HELD: Georgian male lines are photographs, and the stillness between strikes is the frame",
+        "both registers belong to every learner here: train them as vocabulary, and let Georgian teachers assign tradition's roles when you reach a real class"
+      ]
+    },
+    {
+      "id": "gemove.steps",
+      "type": "move",
+      "family": "basic",
+      "name": "Grounded step vocabulary",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "gemove.glide",
+          "kind": "hard"
+        },
+        {
+          "id": "gemove.armsman",
+          "kind": "hard"
+        },
+        {
+          "id": "gemusic.regions",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the floor-safe step layer: quick side-chasses, low sharp kicks, heel accents, and the traveling three-step — the grounded vocabulary the stage tricks decorate",
+        "steps answer the doli's cracks the way the arms do: drive carries, crack strikes — the whole body speaking one grammar",
+        "learn one eight-count from Georgian ensemble footage (Acharuli is the friendliest source), credit it, and keep it grounded — the gate stands"
+      ],
+      "mistakes": [
+        "reaching for toe-work or drops from video (the gate is a gate — the grounded layer is this pack's whole floor)"
+      ]
+    },
+    {
+      "id": "meta.ge_set",
+      "type": "combo",
+      "family": "meta",
+      "name": "The foundation set — filmed",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "gemove.steps",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "film one full song: carriage sovereign, glide crossing the frame, both arm registers shown distinct, one grounded eight-count from a credited source",
+        "the crown audit: watch the head's line across the whole video — one rail, zero bobs; the glass would have survived",
+        "say it on camera: Georgian dance, the Sukhishvili-Ramishvili staging lineage, and what the stage gate protects — the honesty is part of the set"
+      ]
+    },
+    {
+      "id": "meta.ge_class",
+      "type": "combo",
+      "family": "meta",
+      "name": "The Georgian door",
+      "phase": 4,
+      "prereqs": [
+        {
+          "id": "meta.ge_set",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "find a Georgian teacher: diaspora ensembles and studios teach worldwide, and the foundation you built here is exactly their beginner-class prerequisite",
+        "if the stage vocabulary calls you, it goes through them — supervised conditioning, real masters, years: the honest path this pack has pointed at from its gate onward",
+        "watch Sukhishvili live if they tour near you — knowing the foundation, you'll see the building differently"
+      ]
+    }
+  ],
+  "teachers": [
+    {
+      "name": "Georgian dance — the repertoire",
+      "url": "https://en.wikipedia.org/wiki/Georgian_dance"
+    },
+    {
+      "name": "Sukhishvili — the Georgian National Ballet",
+      "url": "https://en.wikipedia.org/wiki/Georgian_National_Ballet"
+    }
+  ]
+}

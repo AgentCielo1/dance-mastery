@@ -151,6 +151,39 @@ export const PATTERNS = {
     ],
     note: "Boom… chik-chik. The slow step stretches through the boom; the quicks answer the chiks.",
   },
+  kocharibeat: {
+    name: "Kochari two-beat (dhol & zurna)",
+    beats: 2, defaultBpm: 104,
+    hits: [
+      { t: 0, type: "kick" }, { t: 1, type: "kick" }, { t: 1.5, type: "kick" },
+      { t: 0.5, type: "snare" }, { t: 1.75, type: "snare" },
+      { t: 0.5, type: "hat" }, { t: 1.5, type: "hat" },
+      { t: 0, type: "accent" },
+    ],
+    note: "The dhol's grounded drive with the doubled hit — that double is your stamp's cue. The knee-bounce never stops; it is the line's shared heartbeat.",
+  },
+  doli: {
+    name: "Doli drive (Georgian)",
+    beats: 6, defaultBpm: 156,
+    hits: [
+      { t: 0, type: "kick" }, { t: 3, type: "kick" },
+      { t: 1.5, type: "snare" }, { t: 4.5, type: "snare" }, { t: 5, type: "snare" },
+      { t: 1, type: "hat" }, { t: 2, type: "hat" }, { t: 4, type: "hat" }, { t: 5, type: "hat" },
+      { t: 0, type: "accent" },
+    ],
+    note: "The double-headed drum's two messages: steady drive (carry) and the doubled crack (strike). Glide on the carry; place the proud angles on the crack.",
+  },
+  lezginka68: {
+    name: "Lezginka gallop (wedding heat)",
+    beats: 6, defaultBpm: 184,
+    hits: [
+      { t: 0, type: "kick" }, { t: 2, type: "kick" }, { t: 3, type: "kick" }, { t: 5, type: "kick" },
+      { t: 1, type: "clave" }, { t: 4, type: "clave" },
+      { t: 0.5, type: "hat" }, { t: 2.5, type: "hat" }, { t: 3.5, type: "hat" }, { t: 5.5, type: "hat" },
+      { t: 0, type: "accent" }, { t: 3, type: "accent" },
+    ],
+    note: "The 6/8 gallop with the crowd's claps (the claves are the room's hands). Short solos exist because nobody survives long ones — the music designs the etiquette.",
+  },
   ramthon: {
     name: "Ram thon stroll (ching & drum)",
     beats: 4, defaultBpm: 84,
@@ -698,6 +731,9 @@ export const STYLE_PATTERNS = {
   ramwong: "ramthon",
   jaipongan: "kendang",
   carinosa: "rondalla",
+  kochari: "kocharibeat",
+  georgian: "doli",
+  lezginka: "lezginka68",
 };
 
 export const SOUND_TYPES = ["kick", "snare", "hat", "clave", "accent"];

@@ -1,0 +1,269 @@
+{
+  "style": "kochari",
+  "version": "0.1.0",
+  "name": "Kochari",
+  "notes": "Kochari style pack (Doc 04 template, solo-first — the steps, stamps, and bounces are one dancer's work; the shoulder line is the whole point and arrives late 🤝). Armenia's great communal LINE DANCE, inscribed by UNESCO in 2017 ('Kochari, traditional group dance') — danced shoulder to shoulder at every Armenian celebration on earth: weddings end in it by law of custom, and the diaspora's halls from Los Angeles to Beirut close their nights with the same surging chain. The honesty this pack holds: kochari is Armenia's inscribed branch of a SHARED HIGHLANDS FAMILY — kochari-type shoulder-line dances are danced by many communities of the region (Kurdish, Assyrian, Azeri and Turkish kin among them), and this pack names that shared root plainly while teaching the Armenian tradition the inscription honors; a dance that survived the Armenian people's darkest century deserves both its specific flag and its honest map. Design truths: the step vocabulary (the two-step base, the knee-bounce, the stamps, the surge-and-drop) is completely solo-trainable; the LINE mechanics (shoulder hold, leader's handkerchief, following the chain's breath) are taught as curriculum before the 🤝 node; and the dhol-and-zurna two-beat rides in this app's Rhythm Trainer.",
+  "seasons": [
+    {
+      "theme": "Dhol Season",
+      "finale": "Film yourself stepping the kochari two-beat — grounded, springy, the stamps agreeing with the dhol."
+    },
+    {
+      "theme": "Bounce Season",
+      "finale": "Film the knee-bounce base with the torso proud and level — one full song without the bounce going soft."
+    },
+    {
+      "theme": "Stamp Season",
+      "finale": "Film the stamp vocabulary — singles, doubles, the heel-dig — placed like punctuation, never mud."
+    },
+    {
+      "theme": "Surge Season",
+      "finale": "Film the surge-and-drop phrases — forward press, the sink, the rebound — the line's breath rehearsed alone."
+    },
+    {
+      "theme": "Wedding Season",
+      "finale": "Find an Armenian celebration or dance night, take your place at the line's open end, and hold your neighbor's shoulder like you mean it."
+    }
+  ],
+  "attributes": [
+    {
+      "id": "attr.knees.l1",
+      "name": "Bounce-base knees L1",
+      "test": "90s of continuous springy knee-bounce with a proud level torso — the line runs on suspension"
+    },
+    {
+      "id": "attr.stamina.l2",
+      "name": "Wedding-set stamina L2",
+      "test": "three songs of continuous stepping and bouncing — kochari sets at real weddings do not believe in breaks"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "kcmusic.dhol",
+      "type": "concept",
+      "family": "musicality",
+      "name": "Dhol & zurna — the line's engine",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "kochari runs on the DHOL's driving two-beat with the ZURNA — the piercing double-reed — wailing the melody over it; the cycle is in this app's Rhythm Trainer",
+        "the dhol talks to the line: steady drive for the base, doubled hits for the stamps, rolls for the surge — learn the three signals by ear",
+        "the zurna's job is altitude: when it climbs, the line's energy climbs — let the horn set your size"
+      ]
+    },
+    {
+      "id": "kcmusic.regional",
+      "type": "concept",
+      "family": "musicality",
+      "name": "The regional kocharis",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "kcmusic.dhol",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "kochari is a family of regional forms — the heavy grounded styles of Sasun, the quicker village variants, each with its own tune-set and temperament",
+        "listen to three different kochari recordings and mark the tempo and weight differences — same bones, different mountains",
+        "the diaspora carries the map: an Armenian hall in any city may dance three regions' kocharis in one night"
+      ]
+    },
+    {
+      "id": "kcculture.unesco",
+      "type": "concept",
+      "family": "culture",
+      "name": "The inscription & the survival",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "UNESCO inscribed 'Kochari, traditional group dance' in 2017 — Armenia's communal line dance, danced at every celebration at home and across the worldwide diaspora",
+        "the line carried more than steps: through the Armenian people's darkest century, kochari remained the thing a scattered nation could still do TOGETHER — the dance is a survival document",
+        "weddings end in it by law of custom: when the dhol starts the kochari, the night has reached its true finale"
+      ]
+    },
+    {
+      "id": "kcculture.family",
+      "type": "concept",
+      "family": "culture",
+      "name": "The shared highlands family — the honest map",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "kcculture.unesco",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "kochari-type shoulder-line dances are danced by MANY communities of the highlands — Kurdish, Assyrian, Azeri and Turkish kin among them; Armenia's kochari is the inscribed branch of a shared regional family",
+        "this pack teaches the Armenian tradition AND names the shared root plainly — the specific flag and the honest map, both",
+        "the app's standing principle applies: kara zhorga's disputed steppe, amapiano's contested townships, the highlands' shared line — living culture overflows borders, and saying so honors everyone"
+      ]
+    },
+    {
+      "id": "kcmove.base",
+      "type": "move",
+      "family": "basic",
+      "name": "The two-step base & knee-bounce",
+      "phase": 1,
+      "anchor": "the line's heartbeat",
+      "prereqs": [
+        {
+          "id": "kcmusic.dhol",
+          "kind": "hard"
+        },
+        {
+          "id": "kcculture.unesco",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.knees.l1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the base: a grounded side-traveling two-step with a continuous springy KNEE-BOUNCE under it — torso proud and level, arms (for now) held as if resting on neighbors' shoulders",
+        "the bounce never stops: it is the line's shared heartbeat, and a dancer whose bounce dies drags eight neighbors with them",
+        "practice with 'ghost shoulders': elbows lifted to shoulder height as if the line were there — the posture IS the dance's frame"
+      ],
+      "mistakes": [
+        "bouncing from the ankles (the spring is in the KNEES — ankle-bounce reads as nervousness, knee-bounce reads as kochari)",
+        "letting the torso pump (proud and level above, engine below)"
+      ]
+    },
+    {
+      "id": "kcmove.stamps",
+      "type": "move",
+      "family": "basic",
+      "name": "The stamps",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "kcmove.base",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the punctuation: single stamps, doubles, and the heel-dig — full-foot, grounded, landing WITH the dhol's doubled hits",
+        "stamps are statements, not steps: the base carries between them, the stamp arrives like a verdict",
+        "drill the dhol-response: play the trainer's cycle and answer every doubled hit with a stamp until the reflex is clean"
+      ],
+      "mistakes": [
+        "mushy stamps (a stamp that could be mistaken for a step is neither)"
+      ]
+    },
+    {
+      "id": "kcmove.surge",
+      "type": "move",
+      "family": "basic",
+      "name": "The surge & drop — the line's breath",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "kcmove.stamps",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.stamina.l2",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "kochari's signature phrase: the line presses FORWARD together, SINKS low on bent knees, and REBOUNDS back and up — the chain inhaling and exhaling as one body",
+        "solo, rehearse the geometry: three travel steps forward, the deep sink (knees, not back), the springing recover to base — on the dhol's roll",
+        "the sink is the moment: at a real kochari the whole line drops together and the room shouts — earn the drop by keeping the bounce alive inside it"
+      ]
+    },
+    {
+      "id": "kcmove.kicks",
+      "type": "move",
+      "family": "basic",
+      "name": "Kicks & crossovers",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "kcmove.surge",
+          "kind": "hard"
+        },
+        {
+          "id": "kcmusic.regional",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the decoration layer: low forward kicks, crossing steps, and quick heel flicks woven into the base — regional variants choose their own mix",
+        "kicks stay LOW and sharp — knee-height, grounded landings; kochari is a line dance, and high kicks belong to a different tradition",
+        "learn one regional variant's step-set from Armenian source footage, credit it in your journal, and note which region it came from"
+      ]
+    },
+    {
+      "id": "kcline.chain",
+      "type": "move",
+      "family": "line",
+      "name": "The shoulder line",
+      "phase": 4,
+      "partner": true,
+      "prereqs": [
+        {
+          "id": "kcmove.kicks",
+          "kind": "hard"
+        },
+        {
+          "id": "kcculture.family",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "🤝 the real thing: shoulder to shoulder, the chain stepping, bouncing, stamping and surging as ONE — the leader's handkerchief hand steering the line's shape and calls",
+        "line etiquette is simple and absolute: join at the OPEN end, match the bounce before adding anything, and hold your neighbors like the chain depends on it (it does)",
+        "your solo engine is the entry fee: a dancer with a live bounce and clean stamps strengthens any line they join mid-song"
+      ]
+    },
+    {
+      "id": "meta.kc_set",
+      "type": "combo",
+      "family": "meta",
+      "name": "The hall set — filmed",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "kcmove.kicks",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "film one full song with ghost shoulders: base bouncing, stamps landing on the dhol, one surge-and-drop phrase, one regional step-set",
+        "the heartbeat audit: watch the knees across the whole video — the bounce must never die, including inside the sink",
+        "say it on camera: kochari, Armenia, UNESCO 2017 — and the shared highlands family, in one honest sentence"
+      ]
+    },
+    {
+      "id": "meta.kc_line",
+      "type": "combo",
+      "family": "meta",
+      "name": "The living line",
+      "phase": 4,
+      "prereqs": [
+        {
+          "id": "meta.kc_set",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "find the line: Armenian community celebrations, cultural festivals, and dance nights run worldwide — and Armenian weddings end in kochari wherever on earth they happen",
+        "take the open end, match the bounce, and let the line teach you the rest — the chain is the oldest pedagogy in this app",
+        "afterward, teach one person the knee-bounce and tell them what the line survived — the dance is a survival document, and now you're a page of it"
+      ]
+    }
+  ],
+  "teachers": [
+    {
+      "name": "Kochari — UNESCO 2017",
+      "url": "https://en.wikipedia.org/wiki/Kochari"
+    },
+    {
+      "name": "The dhol & zurna — the line's engine",
+      "url": "https://en.wikipedia.org/wiki/Dhol_(Armenian)"
+    }
+  ]
+}

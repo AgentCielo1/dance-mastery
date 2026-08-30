@@ -306,6 +306,21 @@ const STYLE_EXTRAS = {
     "Fan open-close-flutter x15 without looking — the prop becomes a body part warm",
     "Gracious-posture breaths x6, shoulders soft, face amused — the character warms too",
   ],
+  kochari: [
+    "90s of springy knee-bounce with a proud level torso — the line's heartbeat, started gently",
+    "Ghost-shoulder holds 30s: elbows at shoulder height as if the line were there — the frame warms too",
+    "Light single stamps x10 each foot, full-footed and placed — verdicts, not mud",
+  ],
+  georgian: [
+    "Tall-crown walking 90s with a book's worth of stillness in the head — the carriage warms first",
+    "Small smooth heel-to-ball steps 60s, zero bounce — grease the wheels before the glide",
+    "Both arm registers slow x6 each: soft waves, then proud angles held — two languages, both greeted",
+  ],
+  lezginka: [
+    "Light ball-of-foot triplet marching 60s at half tempo — the blaze starts as a candle",
+    "Wide-wing arm holds 3x20s, chest open, shoulders down — the eagle's frame, gently built",
+    "Shallow squat pulses x12 with soft catches — the drops are weeks away; the knees warm now",
+  ],
 };
 
 export function warmupFor(style) {

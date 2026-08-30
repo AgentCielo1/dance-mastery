@@ -1129,6 +1129,69 @@ test("the catalog's southeast asian additions: Saman community-held, the Khmer s
   assert.ok(/Khmer Rouge/.test(robam.origin) && /survivors/.test(robam.origin + robam.scene), "the survival story told in the entry");
 });
 
+test("kochari pack: the inscription and the survival told; the shared highlands family mapped honestly; the line late", () => {
+  const kc = STYLES.kochari;
+  const unesco = kc.nodes.find((n) => n.id === "kcculture.unesco");
+  assert.ok(unesco.checkpoints.some((c) => /UNESCO/.test(c) && /2017/.test(c)), "the inscription dated");
+  assert.ok(unesco.checkpoints.some((c) => /survival document/.test(c)), "the survival named plainly");
+  const family = kc.nodes.find((n) => n.id === "kcculture.family");
+  assert.ok(family.checkpoints.some((c) => /Kurdish, Assyrian, Azeri and Turkish kin/.test(c)), "the shared family mapped honestly");
+  assert.ok(family.checkpoints.some((c) => /the specific flag and the honest map, both/.test(c)), "both truths held");
+  const base = kc.nodes.find((n) => n.id === "kcmove.base");
+  assert.ok(base.prereqs.some((p) => p.id === "attr.knees.l1" && p.kind === "hard"), "the bounce gated on real knees");
+  const chain = kc.nodes.find((n) => n.id === "kcline.chain");
+  assert.ok(chain.partner && chain.phase >= 4, "the shoulder line is late and 🤝");
+  const info = seasonInfo(newState(T), T, kc.seasons);
+  assert.equal(info.theme, "Dhol Season");
+});
+
+test("georgian pack: the stage gate holds — no toe-work move exists; Sukhishvili and Ramishvili credited; every move behind the gate", () => {
+  const ge = STYLES.georgian;
+  const gate = ge.nodes.find((n) => n.id === "meta.stage_honesty");
+  assert.ok(gate.checkpoints.some((c) => /KNUCKLES OF THE TOES/.test(c) && /THIS PACK DOES NOT TEACH IT/.test(c)), "the gate says the honest thing");
+  assert.ok(!ge.nodes.some((n) => n.type === "move" && /toe|knuckle|leap|aerial/i.test(n.name)), "no toe-work or aerial move exists in the tree — ballet's rule, Georgian chapter");
+  const stagers = ge.nodes.find((n) => n.id === "geculture.sukhishvili");
+  assert.ok(stagers.checkpoints.some((c) => /ILIKO SUKHISHVILI/.test(c) && /NINO RAMISHVILI/.test(c)), "the founders credited by name");
+  for (const n of ge.nodes.filter((x) => x.type === "move")) {
+    const chain = new Set();
+    const walk = (id) => {
+      const node = ge.nodes.find((x) => x.id === id);
+      for (const p of node?.prereqs ?? []) if (p.kind === "hard" && !chain.has(p.id)) { chain.add(p.id); walk(p.id); }
+    };
+    walk(n.id);
+    assert.ok(chain.has("meta.stage_honesty"), `${n.id} must sit behind the stage gate (directly or through its chain)`);
+  }
+  const glide = ge.nodes.find((n) => n.id === "gemove.glide");
+  assert.ok(glide.prereqs.some((p) => p.id === "attr.feet.l1" && p.kind === "hard"), "the glide gated on smooth feet");
+  const info = seasonInfo(newState(T), T, ge.seasons);
+  assert.equal(info.theme, "Doli Season");
+});
+
+test("lezginka pack: the Lezgin people credited for the name; the pan-Caucasus family honored; drops conditioned and gated", () => {
+  const lg = STYLES.lezginka;
+  const lezgins = lg.nodes.find((n) => n.id === "lgculture.lezgins");
+  assert.ok(lezgins.checkpoints.some((c) => /NAMED FOR THE LEZGIN PEOPLE/.test(c)), "the name's owners credited first");
+  assert.ok(lezgins.checkpoints.some((c) => /lovzar/.test(c)), "the pan-Caucasus kin named");
+  const registers = lg.nodes.find((n) => n.id === "lgculture.registers");
+  assert.ok(registers.checkpoints.some((c) => /BOTH registers to every learner/.test(c)), "both registers open to all learners");
+  const drops = lg.nodes.find((n) => n.id === "lgmove.drops");
+  assert.ok(drops.prereqs.some((p) => p.id === "attr.knees.l2" && p.kind === "hard"), "drops gated on conditioned knees");
+  assert.ok(drops.checkpoints.some((c) => /STAGE vocabulary for real teachers/.test(c)), "the stage tricks pointed at real teachers");
+  assert.ok(drops.mistakes.some((m) => /knees are a career/.test(m)), "the career rule written down");
+  const info = seasonInfo(newState(T), T, lg.seasons);
+  assert.equal(info.theme, "Six-Eight Season");
+});
+
+test("the catalog's caucasus family exists: six entries, Yalli's safeguarding visible, the region no longer a blank", () => {
+  const cc = catalog.styles.filter((s) => s.family === "caucasus");
+  assert.ok(cc.length >= 6, `caucasus entries present (${cc.length})`);
+  for (const name of ["Kochari", "Lezginka", "Khorumi", "Yalli", "Shalakho"]) {
+    assert.ok(cc.some((s) => s.name === name), `${name} in the catalog`);
+  }
+  const yalli = cc.find((s) => s.name === "Yalli");
+  assert.ok(/urgent safeguarding/.test(yalli.origin), "Yalli's safeguarding status visible in the entry");
+});
+
 test("new-pack animations exist in tree + move library with teaching checkpoints", () => {
   for (const id of ["pop.fresno", "wave.arm", "lock.lock", "point.point", "jack.basic", "hfoot.pdbr"]) {
     assert.ok(MOVES[id], `${id} animated`);

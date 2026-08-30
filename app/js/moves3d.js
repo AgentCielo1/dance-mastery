@@ -592,6 +592,46 @@ export const MOVES = {
     ],
   },
 
+  /* ------------- caucasus wave: solo cores (procedural v1) ------------- */
+  "kcmove.base": {
+    bpm: 104, beats: 2,
+    keys: [
+      // side-traveling two-step with continuous knee-bounce, ghost shoulders held
+      { t: 0.0, p: { y: 0.855, lHipA: 0.3, lKnee: 0.4, rKnee: 0.25, lShA: 1.5, rShA: 1.5, lElb: 0.9, rElb: 0.9, tPitch: -0.03 } },
+      { t: 0.25, p: { y: 0.845, lHipA: 0.05, lKnee: 0.3, rKnee: 0.3 } },
+      { t: 0.5, p: { y: 0.855, rHipA: 0.3, rKnee: 0.4, lKnee: 0.25, lHipA: 0.0 } },
+      { t: 0.75, p: { y: 0.845, rHipA: 0.05, lKnee: 0.3, rKnee: 0.3 } },
+    ],
+    // the line's heartbeat: the bounce never dies — torso proud and level above it
+    rootFn: (p, u) => { p.y += 0.01 * Math.abs(sin(u * TAU * 2)); },
+  },
+  "gemove.glide": {
+    bpm: 156, beats: 6,
+    keys: [
+      // the floating glide: tiny smooth steps under a motionless crowned carriage
+      { t: 0.0, p: { y: 0.868, lHipF: 0.12, lKnee: 0.1, rKnee: 0.08, lShA: 0.9, rShA: 0.9, lShF: 0.5, rShF: 0.5, lElb: 1.4, rElb: 1.4, tPitch: -0.04 } },
+      { t: 0.25, p: { y: 0.868, lHipF: 0.0, rHipF: 0.06 } },
+      { t: 0.5, p: { y: 0.868, rHipF: 0.12, rKnee: 0.1, lKnee: 0.08 } },
+      { t: 0.75, p: { y: 0.868, rHipF: 0.0, lHipF: 0.06 } },
+    ],
+    // gliding as if on wheels: zero vertical bounce — the glass on the crown survives
+    rootFn: (p, u) => { p.yaw = 0.06 * sin(u * TAU); },
+  },
+  "lgmove.triplets": {
+    bpm: 184, beats: 6,
+    keys: [
+      // fast light triplets on the balls of the feet, eagle wings spread and level
+      { t: 0.0, p: { y: 0.87, lHipF: 0.35, lKnee: 0.5, rKnee: 0.2, lShA: 2.0, rShA: 2.0, lElb: 0.25, rElb: 0.25, tPitch: -0.04 } },
+      { t: 0.17, p: { y: 0.865, lHipF: 0.05, lKnee: 0.28, rKnee: 0.28 } },
+      { t: 0.33, p: { y: 0.87, rHipF: 0.35, rKnee: 0.5, lKnee: 0.2, lHipF: 0.0 } },
+      { t: 0.5, p: { y: 0.865, rHipF: 0.05, lKnee: 0.28, rKnee: 0.28 } },
+      { t: 0.67, p: { y: 0.87, lHipF: 0.35, lKnee: 0.5, rKnee: 0.2 } },
+      { t: 0.83, p: { y: 0.865, lHipF: 0.05, lKnee: 0.28, rKnee: 0.28 } },
+    ],
+    // the blaze is light: silent landings, still chest — thunder is the drums' job
+    rootFn: (p, u) => { p.y += 0.006 * Math.abs(sin(u * TAU * 3)); },
+  },
+
   /* ------------- southeast asian wave: solo cores (procedural v1) ------------- */
   "rwmove.jeeb": {
     bpm: 84, beats: 4,

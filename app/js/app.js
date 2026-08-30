@@ -461,6 +461,9 @@ const TAGLINES = {
   ramwong: "the circle where grandmothers win",
   jaipongan: "Gugum Gumbira's answer — roots, louder",
   carinosa: "the fan does the talking",
+  kochari: "the line that carried a nation",
+  georgian: "the crown rides one rail",
+  lezginka: "the eagle, the swan, the Lezgins' name",
 };
 
 function needsOnboarding() {

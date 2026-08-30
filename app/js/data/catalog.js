@@ -2106,6 +2106,57 @@ export default {
    "origin": "The royal court dance of Cambodia — nearly annihilated with its masters under the Khmer Rouge, rebuilt from the survivors' memory; UNESCO-inscribed",
    "essence": "Curved fingers, slow celestial poses, the apsara's grace — every performance is also a survival",
    "scene": "Royal ballet, conservatories, diaspora schools keeping the survivors' lineage alive"
+  },
+  {
+   "name": "Kochari",
+   "family": "caucasus",
+   "region": "Armenia (highlands-wide kin)",
+   "origin": "Armenia's communal shoulder-line dance, inscribed by UNESCO in 2017 — one branch of the highlands' great line-dance family danced across many communities",
+   "essence": "Shoulder to shoulder, the line stamps, bounces and surges as one body — a leader's handkerchief steers the chain",
+   "scene": "Every Armenian celebration at home and in the diaspora; weddings end in it by law of custom",
+   "pack": "kochari"
+  },
+  {
+   "name": "Georgian Dance (Kartuli & Acharuli)",
+   "family": "caucasus",
+   "region": "Georgia",
+   "origin": "Georgia's regional repertoire — Kartuli's formal courtship duet, Acharuli's seaside play — staged for the world by Sukhishvili and Erisioni",
+   "essence": "Women glide as if on wheels; men strike, leap, and (on stage, after years) dance on the knuckles of their toes",
+   "scene": "National ballets tour worldwide; Georgian studios and diaspora ensembles teach openly",
+   "pack": "georgian"
+  },
+  {
+   "name": "Khorumi",
+   "family": "caucasus",
+   "region": "Adjara, Georgia",
+   "origin": "The Adjaran war dance — scouts, battle, and mourning staged in tight male formation to the doli's drive",
+   "essence": "Low coiled unison lines, sudden strikes, the drum as commander",
+   "scene": "Georgian ensembles' repertory piece; taught in Georgian dance schools"
+  },
+  {
+   "name": "Lezginka",
+   "family": "caucasus",
+   "region": "Dagestan & the North Caucasus (pan-Caucasus)",
+   "origin": "Named for the Lezgin people of Dagestan — the whole Caucasus dances its own variants: Chechen lovzar, Azeri, Georgian and Armenian kin",
+   "essence": "The eagle and the swan: men blaze with spread arms, drops and toe hits; women glide serene — a fast 6/8 at wedding heat",
+   "scene": "Caucasus weddings everywhere, street circles, ensembles from Makhachkala to the diaspora",
+   "pack": "lezginka"
+  },
+  {
+   "name": "Yalli",
+   "family": "caucasus",
+   "region": "Nakhchivan, Azerbaijan",
+   "origin": "Azerbaijan's chain dance — UNESCO listed it for urgent safeguarding in 2018 as transmission thinned",
+   "essence": "Linked hands and shoulder holds, winding lines that quicken from stately to fiery",
+   "scene": "Azeri festivals and ensembles; the safeguarding work is ongoing — visibility helps"
+  },
+  {
+   "name": "Shalakho",
+   "family": "caucasus",
+   "region": "Armenia & the wider Caucasus",
+   "origin": "The beloved men's solo-and-rivals dance of the region's shared songbook — Armenian, Azeri and Georgian musicians all claim its tune",
+   "essence": "Improvised one-upmanship — squats, spins and swagger traded over a driving 6/8",
+   "scene": "Weddings and parties across the Caucasus and its diasporas"
   }
  ]
 };
