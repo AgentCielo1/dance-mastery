@@ -1,0 +1,305 @@
+{
+  "style": "halling",
+  "version": "0.1.0",
+  "name": "Halling",
+  "notes": "Halling style pack (Doc 04 template, and one of the most naturally SOLO forms in this entire app — halling IS a solo dance: Norway's lausdans, the acrobatic one-upmanship of the valleys, danced alone in the middle of the room while the Hardanger fiddle drives and everyone judges). Centuries of village showmanship built its vocabulary: low coiled walking, sudden squat-kicks, spins, handstands-into-recovery, and the crowning HALLINGKAST — the flying kick that knocks a hat off a pole held head-high or above. The honesty architecture is kuduro's and lezginka's, applied hard: everything athletic is CONDITIONED AND PROGRESSIVE (squat-kicks gated on knees and hips, floor moves gated on wrists and core), and the hallingkast itself is behind a hard honesty gate — meta.kast_honesty says plainly that the full flying kick is trained with coaches, mats, and spotters, and NO kast move exists in this tree (a scan test enforces it, ballet's rule in gymnast's clothing). The modern credit is loud and earned: HALLGRIM HANSEGÅRD and his company FRIKAR carried halling to the world's stages (including the dancers behind Alexander Rybak's Eurovision-winning 'Fairytale' in 2009), and Norway's kappleik competitions keep the source tradition judged and alive. The halling drive rides in this app's Rhythm Trainer; the Hardanger fiddle's shimmer is the sound to train to.",
+  "seasons": [
+    {
+      "theme": "Fiddle Season",
+      "finale": "Film yourself marking the halling drive — the coiled walk finding the Hardanger fiddle's push."
+    },
+    {
+      "theme": "Coil Season",
+      "finale": "Film the low coiled vocabulary — the walk, the crouch-turns, the ground-hugging weight — one full tune."
+    },
+    {
+      "theme": "Kick Season",
+      "finale": "Film the conditioned kick progression at your honest height — squat-kicks clean, landings soft, no heroics."
+    },
+    {
+      "theme": "Floor Season",
+      "finale": "Film the floor vocabulary — the kip-recovery drills and spins — controlled, warmed, and on a forgiving surface."
+    },
+    {
+      "theme": "Kappleik Season",
+      "finale": "Learn eight counts from a Norwegian source video (kappleik or Frikar footage), credit it, and film your version beside it."
+    }
+  ],
+  "attributes": [
+    {
+      "id": "attr.knees.l2",
+      "name": "Squat-kick knees L2",
+      "test": "10 controlled squat-to-low-kick reps each leg with soft returns, pain-free — depth and height earned in weeks, never in songs"
+    },
+    {
+      "id": "attr.core.l2",
+      "name": "Floor-recovery core L2",
+      "test": "5 controlled sit-through / kip-up preparation reps with wrists warm and core braced — the floor moves are gymnastics and train like it"
+    },
+    {
+      "id": "attr.stamina.l2",
+      "name": "Tune stamina L2",
+      "test": "two full halling tunes of continuous low work — the coil is a squat marathon wearing a folk costume"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "hlmusic.fiddle",
+      "type": "concept",
+      "family": "musicality",
+      "name": "The Hardanger fiddle & the halling drive",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "halling is danced to the HARDANGER FIDDLE (hardingfele) — Norway's shimmer-strung fiddle whose sympathetic strings make one player sound like a haunted trio; the driving duple pulse is in this app's Rhythm Trainer",
+        "halling tunes push forward relentlessly — the drive is a dare, and the dance answers it with escalating tricks",
+        "learn the tune's shape: halling music builds in strains, and the dancer saves the biggest answer for the last one — the seben's staircase lesson, fiddle edition"
+      ]
+    },
+    {
+      "id": "hlmusic.kappleik",
+      "type": "concept",
+      "family": "musicality",
+      "name": "The kappleik — judged tradition",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "hlmusic.fiddle",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "Norway's KAPPLEIK competitions judge halling (and its music) as living tradition — dancers scored on rhythm, tradition-fidelity, and command, not just tricks",
+        "watch kappleik footage and stage footage side by side: the competition register is grounded and dialect-true; the stage register is amplified — know which you're borrowing from",
+        "the judging criteria are a free syllabus: rhythm first, tricks last — exactly this pack's node order"
+      ]
+    },
+    {
+      "id": "hlculture.laus",
+      "type": "concept",
+      "family": "culture",
+      "name": "Lausdans — the room's dare",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "halling is LAUSDANS — 'loose dance', danced ALONE in the middle of the room: centuries of valley one-upmanship where young dancers answered the fiddle and each other with escalating nerve",
+        "the crowning dare is the HALLINGKAST: the flying kick that knocks a hat off a pole held head-high or higher — the whole village measuring your spring against gravity",
+        "the culture is competitive AND communal: the circle wants you to land it — halling's showing-off is a gift economy, shalakho's cousin on northern fiddle"
+      ]
+    },
+    {
+      "id": "hlculture.frikar",
+      "type": "concept",
+      "family": "culture",
+      "name": "Frikar & Hansegård — the modern carriers",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "hlculture.laus",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "HALLGRIM HANSEGÅRD and his company FRIKAR carried halling to the world's stages — including the dancers who flew behind Alexander Rybak's Eurovision-winning 'Fairytale' in 2009, the night halling ambushed a hundred million living rooms",
+        "the staging discipline applies as always: Frikar's stage register is an amplified interpretation; the kappleik floor is the source — credit the company AND know the difference",
+        "Norwegian folk-dance clubs and youth organizations teach halling openly — the tradition wants heirs, and it says so"
+      ]
+    },
+    {
+      "id": "meta.kast_honesty",
+      "type": "concept",
+      "family": "meta",
+      "name": "The kast gate — what this app will not teach",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "hlculture.laus",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the HALLINGKAST — the full flying kick at head height or above — is trained with COACHES, MATS, AND SPOTTERS over years of progression: THIS PACK DOES NOT TEACH IT, and no node past this gate will",
+        "the reason is the Georgian pack's reason and the ballet pack's reason: vocabularies whose failure mode is injury are gated by supervised training — the boundary IS the curriculum",
+        "what this pack DOES train — the coil, conditioned kicks at honest heights, floor-recovery fundamentals — is the real preparation a halling coach hopes a beginner brings"
+      ]
+    },
+    {
+      "id": "hlmove.coil",
+      "type": "move",
+      "family": "basic",
+      "name": "The coiled walk",
+      "phase": 1,
+      "anchor": "the low engine everything springs from",
+      "prereqs": [
+        {
+          "id": "hlmusic.fiddle",
+          "kind": "hard"
+        },
+        {
+          "id": "meta.kast_honesty",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.stamina.l2",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the base: a low, springy, ground-hugging walk on the halling drive — knees deeply bent, weight coiled, arms loose and ready — the panther register the tricks explode from",
+        "level discipline: the coil travels, circles, and turns WITHOUT rising — height is spent only on purpose, and the contrast is the drama",
+        "crouch-turns and low pivots decorate the walk — jaipongan's coiled-stance cousin, further north and further down"
+      ],
+      "mistakes": [
+        "standing up between phrases (the coil is the home key — rising without a reason spends the drama for free)"
+      ]
+    },
+    {
+      "id": "hlmove.kicks",
+      "type": "move",
+      "family": "basic",
+      "name": "Squat-kicks — conditioned, honest heights",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "hlmove.coil",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.knees.l2",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the kick family at HONEST heights: from the coil, sharp kicks to knee then waist height, landing soft back into the coil — height is a variable you raise over weeks, not bars",
+        "the progression is law: clean waist-height kicks for a month beat one wild chest-height kick today — the kappleik judges score control, and so does this pack",
+        "alternate legs relentlessly; halling's kicks are ambidextrous and the weak side gets double reps"
+      ],
+      "mistakes": [
+        "chasing the hat already (the pole comes years after the coil — the gate stands, and your knees will thank the gate)"
+      ]
+    },
+    {
+      "id": "hlmove.spins",
+      "type": "move",
+      "family": "basic",
+      "name": "Spins & level changes",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "hlmove.coil",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the rotation layer: quick low spins, drop-turns from standing into the coil, and rising spirals back out — level changes AS rotation, halling's signature blur",
+        "spot lightly and land coiled: every spin ends in the home key, ready for the next dare",
+        "chain: coil-walk, drop-turn, two kicks, rising spiral — a strain's worth of escalation, rehearsed as one sentence"
+      ]
+    },
+    {
+      "id": "hlmove.floor",
+      "type": "move",
+      "family": "basic",
+      "name": "Floor recoveries — the gymnastic layer, prepared",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "hlmove.spins",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.core.l2",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "halling touches the floor on purpose: sit-throughs, shoulder-roll recoveries, and kip-up PREPARATIONS (the rocking drill, not the full kip) — trained on forgiving surfaces with warm wrists, always",
+        "the breaking pack's floor discipline transfers whole: if you've trained footwork there, your halling floor layer is half built — cross-train it",
+        "full kip-ups, handstand tricks, and the aerial vocabulary belong to coached spaces — the gate's logic runs through the floor too"
+      ],
+      "mistakes": [
+        "cold wrists on hard floors (the floor layer is earned on mats and warmth — gymnastics rules apply because this IS gymnastics)"
+      ]
+    },
+    {
+      "id": "hlmove.strain",
+      "type": "move",
+      "family": "basic",
+      "name": "The strain — escalation as form",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "hlmove.kicks",
+          "kind": "hard"
+        },
+        {
+          "id": "hlmove.floor",
+          "kind": "hard"
+        },
+        {
+          "id": "hlmusic.kappleik",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "halling's sentence structure: each strain of the tune gets ONE escalation — coil, then kicks, then spins, then the floor — saving the biggest answer for the last strain",
+        "budget like the tradition: a dancer who empties the bag in strain one spectates strain four — the seben's staircase, the lezginka's economy, the same law everywhere",
+        "borrow one escalation order from kappleik footage, credit the dancer, and build your own strain-map from it"
+      ]
+    },
+    {
+      "id": "meta.hl_set",
+      "type": "combo",
+      "family": "meta",
+      "name": "The kappleik set — filmed",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "hlmove.strain",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "film one full tune: coil grounded, kicks at honest heights, one drop-turn chain, one floor recovery, the escalation mapped to the strains",
+        "the judges' audit: rhythm first — mute the video and clap the drive; if your accents drift from the fiddle's, the tricks don't count yet",
+        "say it on camera: halling, Norway's lausdans, Frikar and Hansegård's stage, the kappleik's floor — and what the kast gate protects"
+      ]
+    },
+    {
+      "id": "meta.hl_live",
+      "type": "combo",
+      "family": "meta",
+      "name": "The room's middle",
+      "phase": 4,
+      "prereqs": [
+        {
+          "id": "meta.hl_set",
+          "kind": "hard"
+        },
+        {
+          "id": "hlculture.frikar",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "find it live: Norwegian folk-dance clubs and youth organizations teach halling openly, kappleik festivals welcome spectators-turned-students, and Frikar's workshops surface worldwide",
+        "if the kast calls you, it goes through a coach, a mat, and a pole that starts LOW — the honest path this pack has pointed at from its gate",
+        "teach one person the coiled walk and tell them about the hat on the pole — the dare travels even before the kick does"
+      ]
+    }
+  ],
+  "teachers": [
+    {
+      "name": "Halling — Norway's lausdans",
+      "url": "https://en.wikipedia.org/wiki/Halling_(dance)"
+    },
+    {
+      "name": "Frikar — Hallgrim Hansegård's company",
+      "url": "https://en.wikipedia.org/wiki/Frikar"
+    },
+    {
+      "name": "The Hardanger fiddle",
+      "url": "https://en.wikipedia.org/wiki/Hardanger_fiddle"
+    }
+  ]
+}

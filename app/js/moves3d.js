@@ -592,6 +592,44 @@ export const MOVES = {
     ],
   },
 
+  /* ------------- nordic wave: solo cores (procedural v1) ------------- */
+  "psmove.svikt": {
+    bpm: 126, beats: 3,
+    keys: [
+      // the moss-walk: springy knee-dips on ONE and THREE, floating through two
+      { t: 0.0, p: { y: 0.85, lHipF: 0.35, lKnee: 0.38, rKnee: 0.22, lShF: -0.2, rShF: 0.2, lElb: 0.5, rElb: 0.5, tPitch: -0.02 } },
+      { t: 0.3, p: { y: 0.868, lHipF: 0.1, lKnee: 0.15, rKnee: 0.12 } },
+      { t: 0.67, p: { y: 0.85, rHipF: 0.35, rKnee: 0.38, lKnee: 0.22, rShF: -0.2, lShF: 0.2, lHipF: 0.0 } },
+      { t: 0.9, p: { y: 0.862, rHipF: 0.1, lKnee: 0.14, rKnee: 0.14 } },
+    ],
+    // down-float-down: the head draws one calm line while the knees breathe the lean
+    rootFn: (p, u) => { p.yaw = 0.35 * u * TAU / TAU + 0.08 * sin(u * TAU); },
+  },
+  "hlmove.coil": {
+    bpm: 108, beats: 2,
+    keys: [
+      // the low coiled walk — panther register, weight ground-hugging, arms loose
+      { t: 0.0, p: { y: 0.78, lHipF: 0.5, lKnee: 0.95, rKnee: 0.8, tPitch: 0.15, lShF: 0.4, rShF: -0.3, lElb: 0.8, rElb: 0.6, roll: -0.04 } },
+      { t: 0.25, p: { y: 0.775, lHipF: 0.15, lKnee: 0.85, rKnee: 0.85 } },
+      { t: 0.5, p: { y: 0.78, rHipF: 0.5, rKnee: 0.95, lKnee: 0.8, rShF: 0.4, lShF: -0.3, roll: 0.04, lHipF: 0.0 } },
+      { t: 0.75, p: { y: 0.775, rHipF: 0.15, lKnee: 0.85, rKnee: 0.85 } },
+    ],
+    // height is spent only on purpose: the coil is the home key the tricks explode from
+    rootFn: (p, u) => { p.y += 0.008 * Math.abs(sin(u * TAU * 2)); },
+  },
+  "ftmove.walk": {
+    bpm: 60, beats: 4,
+    keys: [
+      // flat grounded walking on the bass — frame held calm, nothing performed
+      { t: 0.0, p: { y: 0.865, lHipF: 0.4, lKnee: 0.15, rHipF: -0.08, lShA: 0.8, rShA: 0.8, lShF: 0.5, rShF: 0.5, lElb: 1.1, rElb: 1.1, tPitch: -0.02 } },
+      { t: 0.25, p: { y: 0.865, rHipF: 0.4, rKnee: 0.15, lHipF: -0.08, lKnee: 0.1 } },
+      { t: 0.5, p: { y: 0.865, lHipF: 0.4, lKnee: 0.15, rHipF: -0.08, rKnee: 0.1 } },
+      { t: 0.75, p: { y: 0.865, rHipF: 0.4, rKnee: 0.15, lHipF: -0.08, lKnee: 0.1 } },
+    ],
+    // weather you move through, not a pose: even, patient, weatherproof
+    rootFn: (p, u) => { p.tRoll = 0.02 * sin(u * TAU); },
+  },
+
   /* ------------- caucasus wave: solo cores (procedural v1) ------------- */
   "kcmove.base": {
     bpm: 104, beats: 2,

@@ -464,6 +464,9 @@ const TAGLINES = {
   kochari: "the line that carried a nation",
   georgian: "the crown rides one rail",
   lezginka: "the eagle, the swan, the Lezgins' name",
+  polska: "walking on moss, turning for hours",
+  halling: "the hat on the pole can wait",
+  finnishtango: "yearning, with both feet on the ground",
 };
 
 function needsOnboarding() {

@@ -1212,7 +1212,8 @@ export default {
    "region": "Sweden/Scandinavia",
    "origin": "Polska family from the 1600s; hambo standardized c.1900",
    "essence": "Continuously rotating couples in 3/4 with pivot technique and knee spring",
-   "scene": "Spelmansstämma gatherings, Nordic fiddle camps"
+   "scene": "Spelmansstämma gatherings, Nordic fiddle camps",
+   "pack": "polska"
   },
   {
    "name": "Zwiefacher",
@@ -2157,6 +2158,32 @@ export default {
    "origin": "The beloved men's solo-and-rivals dance of the region's shared songbook — Armenian, Azeri and Georgian musicians all claim its tune",
    "essence": "Improvised one-upmanship — squats, spins and swagger traded over a driving 6/8",
    "scene": "Weddings and parties across the Caucasus and its diasporas"
+  },
+  {
+   "name": "Halling",
+   "family": "european_folk",
+   "region": "Norway (valleys of Hallingdal & west)",
+   "origin": "Norway's solo acrobatic dance (lausdans) — centuries of one-upmanship to the Hardanger fiddle, carried to world stages by the Frikar company",
+   "essence": "Coiled low steps exploding into kicks, spins and the hallingkast — kicking a hat off a raised pole",
+   "scene": "Folk-music festivals (kappleik competitions), Frikar's stages, Norwegian folk-dance clubs",
+   "pack": "halling"
+  },
+  {
+   "name": "Finnish Tango",
+   "family": "folk_partner",
+   "region": "Finland",
+   "origin": "Argentine tango arrived by 1913 and Finland composed it into its own minor-key genre — Toivo Kärki's sound, Unto Mononen's 'Satumaa'",
+   "essence": "Grounded flat walking, close and unhurried, joy and melancholy in the same three minutes",
+   "scene": "Dance pavilions (lavatanssit), the Tangomarkkinat festival in Seinäjoki, tango restaurants",
+   "pack": "finnishtango"
+  },
+  {
+   "name": "Faroese Chain Dance",
+   "family": "european_folk",
+   "region": "Faroe Islands",
+   "origin": "The medieval European chain dance, alive nowhere else — ballads of hundreds of verses sung unaccompanied while the chain steps",
+   "essence": "Two steps left, one right, the whole room one chain — the ballad is the music and the memory",
+   "scene": "Community dance houses in winter; the Faroese keep it themselves — visitors welcomed to join, not to stage"
   }
  ]
 };

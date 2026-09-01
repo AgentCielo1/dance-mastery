@@ -151,6 +151,39 @@ export const PATTERNS = {
     ],
     note: "Boom… chik-chik. The slow step stretches through the boom; the quicks answer the chiks.",
   },
+  polska: {
+    name: "Polska three (the lean)",
+    beats: 3, defaultBpm: 126,
+    hits: [
+      { t: 0, type: "kick" }, { t: 2, type: "kick" },
+      { t: 0.9, type: "hat" },
+      { t: 0, type: "clave" }, { t: 2, type: "clave" }, { t: 2.5, type: "hat" },
+      { t: 0, type: "accent" },
+    ],
+    note: "Long-short-long: beats ONE and THREE are the ground (svikt dips there), beat two arrives early and floats. The bar leans forward like a walker on a hill.",
+  },
+  hallingbeat: {
+    name: "Halling drive (hardingfele)",
+    beats: 2, defaultBpm: 108,
+    hits: [
+      { t: 0, type: "kick" }, { t: 1, type: "kick" },
+      { t: 0.5, type: "snare" }, { t: 1.75, type: "snare" },
+      { t: 0.25, type: "hat" }, { t: 0.75, type: "hat" }, { t: 1.25, type: "hat" }, { t: 1.5, type: "hat" },
+      { t: 0, type: "accent" },
+    ],
+    note: "The fiddle's relentless duple push — a dare set to strings. The coil rides it low; spend height only on purpose, and save the biggest answer for the last strain.",
+  },
+  fintango: {
+    name: "Finnish tango (march-bass)",
+    beats: 4, defaultBpm: 60,
+    hits: [
+      { t: 0, type: "kick" }, { t: 1, type: "kick" }, { t: 2, type: "kick" }, { t: 3, type: "kick" },
+      { t: 1.5, type: "snare" }, { t: 3.5, type: "snare" },
+      { t: 0, type: "hat" }, { t: 2, type: "hat" },
+      { t: 0, type: "accent" }, { t: 2, type: "accent" },
+    ],
+    note: "The steady walking bass under the weeping melody — even, patient, weatherproof. The feet belong to the bass; the yearning stays upstairs. Smaller and heavier as it aches.",
+  },
   kocharibeat: {
     name: "Kochari two-beat (dhol & zurna)",
     beats: 2, defaultBpm: 104,
@@ -734,6 +767,9 @@ export const STYLE_PATTERNS = {
   kochari: "kocharibeat",
   georgian: "doli",
   lezginka: "lezginka68",
+  polska: "polska",
+  halling: "hallingbeat",
+  finnishtango: "fintango",
 };
 
 export const SOUND_TYPES = ["kick", "snare", "hat", "clave", "accent"];

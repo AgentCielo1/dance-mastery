@@ -1192,6 +1192,64 @@ test("the catalog's caucasus family exists: six entries, Yalli's safeguarding vi
   assert.ok(/urgent safeguarding/.test(yalli.origin), "Yalli's safeguarding status visible in the entry");
 });
 
+test("polska pack: old polska vs young hambo kept straight; the svikt taught as the family's spring; the couple turn late", () => {
+  const ps = STYLES.polska;
+  const layers = ps.nodes.find((n) => n.id === "psculture.layers");
+  assert.ok(layers.checkpoints.some((c) => /16th century/.test(c)), "the old layer dated");
+  assert.ok(layers.checkpoints.some((c) => /around 1900/.test(c) && /codified/.test(c)), "the young layer named as codification");
+  assert.ok(layers.checkpoints.some((c) => /which layer you're standing in/.test(c)), "the layer discipline stated");
+  const svikt = ps.nodes.find((n) => n.id === "psmove.svikt");
+  assert.ok(svikt.prereqs.some((p) => p.id === "attr.knees.l1" && p.kind === "hard"), "the svikt gated on real knees");
+  const three = ps.nodes.find((n) => n.id === "psmusic.three");
+  assert.ok(three.checkpoints.some((c) => /ASYMMETRIC/.test(c)), "the lean taught as literacy");
+  const turn = ps.nodes.find((n) => n.id === "pspartner.turn");
+  assert.ok(turn.partner && turn.phase >= 4, "the couple turn is late and 🤝");
+  const info = seasonInfo(newState(T), T, ps.seasons);
+  assert.equal(info.theme, "Fiddle Season");
+});
+
+test("halling pack: the kast gate holds — no kast or aerial move exists; Frikar and Hansegård credited; kicks conditioned", () => {
+  const hl = STYLES.halling;
+  const gate = hl.nodes.find((n) => n.id === "meta.kast_honesty");
+  assert.ok(gate.checkpoints.some((c) => /COACHES, MATS, AND SPOTTERS/.test(c) && /THIS PACK DOES NOT TEACH IT/.test(c)), "the gate says the honest thing");
+  assert.ok(!hl.nodes.some((n) => n.type === "move" && /kast|hat|aerial|handstand|kip-up/i.test(n.name)), "no kast/aerial move exists in the tree");
+  const frikar = hl.nodes.find((n) => n.id === "hlculture.frikar");
+  assert.ok(frikar.checkpoints.some((c) => /HALLGRIM HANSEGÅRD/.test(c) && /FRIKAR/.test(c)), "the modern carriers credited");
+  const kicks = hl.nodes.find((n) => n.id === "hlmove.kicks");
+  assert.ok(kicks.prereqs.some((p) => p.id === "attr.knees.l2" && p.kind === "hard"), "kicks gated on conditioned knees");
+  assert.ok(kicks.checkpoints.some((c) => /HONEST heights/.test(c)), "honest heights the written standard");
+  const floor = hl.nodes.find((n) => n.id === "hlmove.floor");
+  assert.ok(floor.prereqs.some((p) => p.id === "attr.core.l2" && p.kind === "hard"), "floor layer gated on core");
+  const info = seasonInfo(newState(T), T, hl.seasons);
+  assert.equal(info.theme, "Fiddle Season");
+});
+
+test("finnish tango pack: the Argentine root credited FIRST; Kärki, Mononen and Taipale named; the embrace inherits the tango gate", () => {
+  const ft = STYLES.finnishtango;
+  const adoption = ft.nodes.find((n) => n.id === "ftculture.adoption");
+  assert.ok(adoption.checkpoints.some((c) => /FIRST CREDIT: ARGENTINE TANGO/.test(c) && /tango pack/.test(c)), "the root credited before the branch, with the cross-link");
+  assert.ok(adoption.checkpoints.some((c) => /COMPOSED instead of imitating/.test(c)), "the adoption's nature told");
+  const karki = ft.nodes.find((n) => n.id === "ftmusic.karki");
+  assert.ok(karki.checkpoints.some((c) => /TOIVO KÄRKI/.test(c)), "the sound's architect credited");
+  const satumaa = ft.nodes.find((n) => n.id === "ftmusic.satumaa");
+  assert.ok(satumaa.checkpoints.some((c) => /UNTO MONONEN/.test(c) && /1955/.test(c)), "Satumaa credited and dated");
+  assert.ok(satumaa.checkpoints.some((c) => /REIJO TAIPALE/.test(c)), "the voice credited");
+  const frame = ft.nodes.find((n) => n.id === "ftmove.frame");
+  assert.ok(frame.checkpoints.some((c) => /embrace-honesty gate applies here whole/.test(c)), "the tango pack's gate inherited in writing");
+  const embrace = ft.nodes.find((n) => n.id === "ftpartner.embrace");
+  assert.ok(embrace.partner && embrace.phase >= 4, "the embrace is late and 🤝");
+  const info = seasonInfo(newState(T), T, ft.seasons);
+  assert.equal(info.theme, "Satumaa Season");
+});
+
+test("the catalog's nordic additions: the Faroese chain kept community-toned, Tangomarkkinat's scene visible", () => {
+  for (const name of ["Halling", "Finnish Tango", "Faroese Chain Dance"]) {
+    assert.ok(catalog.styles.some((s) => s.name === name), `${name} in the catalog`);
+  }
+  const faroe = catalog.styles.find((s) => s.name === "Faroese Chain Dance");
+  assert.ok(faroe.pack === undefined && /join, not to stage/.test(faroe.scene), "the Faroese chain unpacked, with its welcome-on-their-terms note");
+});
+
 test("new-pack animations exist in tree + move library with teaching checkpoints", () => {
   for (const id of ["pop.fresno", "wave.arm", "lock.lock", "point.point", "jack.basic", "hfoot.pdbr"]) {
     assert.ok(MOVES[id], `${id} animated`);

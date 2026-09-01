@@ -321,6 +321,21 @@ const STYLE_EXTRAS = {
     "Wide-wing arm holds 3x20s, chest open, shoulders down — the eagle's frame, gently built",
     "Shallow squat pulses x12 with soft catches — the drops are weeks away; the knees warm now",
   ],
+  polska: [
+    "90s of springy knee-dip walking, head level — greet the moss before the music",
+    "Slow turning in place x8 bars each direction — wake the rotation stomach gently",
+    "Ankle rolls x10 each and calf raises x12 — the svikt lives downstairs",
+  ],
+  halling: [
+    "Deep-squat holds 3x20s and low coiled walking 60s — the home key, warmed low",
+    "Leg swings x10 each and knee-height kick taps x8 — honest heights first, always",
+    "Wrist circles and cat-cow spine waves 45s — the floor layer's insurance policy",
+  ],
+  finnishtango: [
+    "Slow flat walking 90s on a steady count — full-foot, unhurried, weatherproof",
+    "Frame holds 2x45s with soft shoulders and calm gaze — dignity without stiffness",
+    "Shoulder drops and slow exhales x6 — the register starts with letting the weight down",
+  ],
 };
 
 export function warmupFor(style) {

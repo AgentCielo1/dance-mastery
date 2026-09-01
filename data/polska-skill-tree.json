@@ -1,0 +1,273 @@
+{
+  "style": "polska",
+  "version": "0.1.0",
+  "name": "Hambo & Polska",
+  "notes": "Hambo & Polska style pack (Doc 04 template, solo-first — the polska step, the svikt spring, and rotation training are one dancer's work; the couple turn is the destination and arrives late 🤝). Scandinavia's great turning-dance family, told with its two-layer history straight: the POLSKA is the OLD layer — triple-time turning dances danced across Sweden and Norway since at least the 16th century, surviving as dozens of village-specific dialects (Bingsjöpolska, Bodapolska, springar kin in Norway) each with its own weight and lilt; the HAMBO is the YOUNG layer — a single codified form assembled around 1900 from the polska family for the national-romantic ballroom, now the standardized dance every Swedish folk-dance club teaches first. This pack teaches toward the living polska tradition through the hambo's clearer doorway, and says which layer is which. The body's secret is the SVIKT — the springy knee-dip that makes Scandinavian dancing look like walking on soft moss; the music's secret is the polska's ASYMMETRIC THREE (long-short-long in many dialects — beat two arrives early or light, and the trainer's pattern teaches the lean). The scene is genuinely welcoming: Sweden's summer STÄMMA festivals (Bingsjö above all) run all-night open dancing, folk-dance clubs worldwide teach beginners, and the European balfolk circuit dances polskas from Berlin to Lisbon.",
+  "seasons": [
+    {
+      "theme": "Fiddle Season",
+      "finale": "Film yourself stepping the polska three — the asymmetric lilt found, the lean understood."
+    },
+    {
+      "theme": "Svikt Season",
+      "finale": "Film the svikt spring through one full tune — knees breathing, head riding level, moss underfoot."
+    },
+    {
+      "theme": "Step Season",
+      "finale": "Film the hambo step-cycle solo — dal step, the turn's footwork, the rejoin — clean around your room."
+    },
+    {
+      "theme": "Rotation Season",
+      "finale": "Film continuous solo rotation training — smooth turning on the polska three without dizziness or drift."
+    },
+    {
+      "theme": "Stämma Season",
+      "finale": "Find a Scandinavian folk-dance club, a balfolk night, or a stämma — and dance your first hambo with a partner who knows the way."
+    }
+  ],
+  "attributes": [
+    {
+      "id": "attr.knees.l1",
+      "name": "Svikt knees L1",
+      "test": "90s of continuous springy knee-dips while walking, head riding level — the moss-walk, sustained with ease"
+    },
+    {
+      "id": "attr.balance.l2",
+      "name": "Rotation stomach L2",
+      "test": "60s of smooth continuous turning (alternating directions each 8 bars) without dizziness, drift, or wobble — spotting optional, calm mandatory"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "psmusic.three",
+      "type": "concept",
+      "family": "musicality",
+      "name": "The asymmetric three — the polska's lean",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "the polska's 3/4 is ASYMMETRIC in many dialects — long-short-long, the second beat arriving early or light — so the bar leans forward like a walker on a hill; the pattern is in this app's Rhythm Trainer",
+        "beats ONE and THREE are the dancer's ground: the svikt dips on them while beat two floats — feel the bar as down-float-down",
+        "dialects differ (Bingsjö's drive, Boda's float): listen to two regional polskas and mark where each puts its weight — same family, different mountains, the app's oldest lesson"
+      ]
+    },
+    {
+      "id": "psmusic.fiddle",
+      "type": "concept",
+      "family": "musicality",
+      "name": "The spelmän — fiddlers who ARE the tradition",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "psmusic.three",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "polska music lives with the SPELMÄN — the fiddler tradition whose tunes carry village names and fiddler lineages (after-so-and-so titles are the credit system built into the music itself)",
+        "the dancer and fiddler share one svikt: good polska dancing looks like the bowing sounds — watch a spelmän's knee dip as they play and copy it",
+        "build a practice set of three: one Bingsjöpolska, one Bodapolska, one hambo tune — the doorway and two rooms beyond it"
+      ]
+    },
+    {
+      "id": "psculture.layers",
+      "type": "concept",
+      "family": "culture",
+      "name": "Old polska, young hambo — which layer is which",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "the POLSKA is the OLD layer: triple-time turning dances danced across Sweden and Norway since at least the 16th century, surviving as dozens of village dialects with their own weight and lilt",
+        "the HAMBO is the YOUNG layer: one codified form assembled around 1900 from the polska family for the national-romantic ballroom — the standardized doorway every Swedish folk-dance club teaches first",
+        "this pack walks through the hambo's clear doorway TOWARD the living polska tradition — and always says which layer you're standing in; ram wong's lesson, Nordic chapter"
+      ]
+    },
+    {
+      "id": "psculture.stamma",
+      "type": "concept",
+      "family": "culture",
+      "name": "The stämma — the all-night meadow",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "psculture.layers",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "Sweden's summer STÄMMA festivals — Bingsjö above all — are the tradition's beating heart: fiddlers in every farmyard, open dancing until the northern dawn, beginners absorbed by custom",
+        "the scene's etiquette is partner-rotation generosity: everyone dances with everyone, experienced dancers ask beginners as a duty of the culture — walk in willing and you will be taught",
+        "the balfolk circuit dances polskas across Europe year-round, and folk-dance clubs worldwide teach the hambo — the doorway is never far"
+      ]
+    },
+    {
+      "id": "psmove.svikt",
+      "type": "move",
+      "family": "basic",
+      "name": "The svikt — walking on moss",
+      "phase": 1,
+      "anchor": "the spring the whole family shares",
+      "prereqs": [
+        {
+          "id": "psmusic.three",
+          "kind": "hard"
+        },
+        {
+          "id": "psculture.layers",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.knees.l1",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the SVIKT: a continuous springy knee-dip breathing through every step — down on the heavy beats, floating between — the thing that makes Scandinavian dancing look like walking on soft moss",
+        "the head rides level: the spring lives in the knees and ankles while the crown draws one calm line — the tea-cup standard, Nordic edition",
+        "walk whole tunes with the svikt before any step pattern: the spring is the dialect's accent, and accents are learned by immersion"
+      ],
+      "mistakes": [
+        "bobbing the whole body (the svikt is a knee event — a bouncing head reads as a pogo, not a polska)",
+        "square-three stepping (the lean is the music — a metronome-even svikt misses the dialect entirely)"
+      ]
+    },
+    {
+      "id": "psmove.dalstep",
+      "type": "move",
+      "family": "basic",
+      "name": "The dal step & forward travel",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "psmove.svikt",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the hambo's traveling step (the dal step): step-lift-step flowing forward on the three, svikt breathing under it — the promenade that opens every hambo",
+        "practice as a couple's ghost: travel a circle counterclockwise (the dance floor's traffic law) with your frame held as if a partner were there",
+        "the lift is a float, not a hop — beat two's lightness made visible"
+      ]
+    },
+    {
+      "id": "psmove.turnstep",
+      "type": "move",
+      "family": "basic",
+      "name": "The turn footwork — solo rotation",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "psmove.dalstep",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.balance.l2",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the hambo turn's footwork, drilled solo: a full rotation every bar, the feet placing on ONE and THREE while the body turns smoothly through — the couple's orbit rehearsed as one planet",
+        "train rotation tolerance like the attribute demands: smooth continuous turning, alternating directions, calm stomach — dizziness is a trainable variable and this node trains it",
+        "the turn travels: rotation plus the counterclockwise drift around the room — orbit and revolution at once, exactly like the waltz pack's geometry"
+      ],
+      "mistakes": [
+        "muscling the spin (polska rotation is momentum managed by footwork, not torque — smooth beats fast)"
+      ]
+    },
+    {
+      "id": "psmove.dialects",
+      "type": "move",
+      "family": "basic",
+      "name": "Dialect steps — beyond the doorway",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "psmove.turnstep",
+          "kind": "hard"
+        },
+        {
+          "id": "psmusic.fiddle",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "past the hambo's doorway, the polska dialects open: learn ONE village polska's step feel from Scandinavian source footage (Bingsjö and Boda are the best-documented doorways) and credit the dialect by name",
+        "the differences are in the svikt's depth and the bar's lean — subtle, regional, and the whole point: dialect is respect made audible",
+        "keep a dialect journal like the app's other packs keep credit logs: tune, region, where the weight fell"
+      ]
+    },
+    {
+      "id": "pspartner.turn",
+      "type": "move",
+      "family": "partnerwork",
+      "name": "The couple turn",
+      "phase": 4,
+      "partner": true,
+      "prereqs": [
+        {
+          "id": "psmove.dialects",
+          "kind": "hard"
+        },
+        {
+          "id": "psculture.stamma",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "🤝 the destination: two dancers sharing one rotation — the hambo's close turn, sviktande together, one orbit per bar around a common axis",
+        "the shared svikt IS the connection: couples who dip together turn effortlessly; the frame just reports what the knees agree on",
+        "learn it at a club or stämma — the tradition teaches the turn hand-to-hand, and your solo rotation training is exactly the preparation they hope a beginner brings"
+      ]
+    },
+    {
+      "id": "meta.ps_set",
+      "type": "combo",
+      "family": "meta",
+      "name": "The meadow set — filmed",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "psmove.dialects",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "film one full tune: svikt breathing, dal step traveling the circle, solo rotation smooth through the middle section, one dialect's accent attempted and named",
+        "the moss audit: watch the head's line and the knees' spring separately — level crown, living knees, or re-film",
+        "say it on camera: polska the old family, hambo the 1900 doorway, and which dialect you borrowed — the layers, kept straight"
+      ]
+    },
+    {
+      "id": "meta.ps_stamma",
+      "type": "combo",
+      "family": "meta",
+      "name": "The all-night floor",
+      "phase": 4,
+      "prereqs": [
+        {
+          "id": "meta.ps_set",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "find the floor: Scandinavian folk-dance clubs and balfolk nights run worldwide, and Sweden's summer stämma season is a pilgrimage that genuinely welcomes beginners",
+        "ask for your first hambo the way the culture asks: anyone, warmly — being danced through your first turn by a stranger who svikts like moss is the tradition working as designed",
+        "afterward, teach one person the svikt walk — the spring travels in thirty seconds and carries the whole family with it"
+      ]
+    }
+  ],
+  "teachers": [
+    {
+      "name": "Polska — the old turning-dance family",
+      "url": "https://en.wikipedia.org/wiki/Polska_(dance)"
+    },
+    {
+      "name": "Hambo — the codified doorway",
+      "url": "https://en.wikipedia.org/wiki/Hambo"
+    },
+    {
+      "name": "Bingsjö stämma — the meadow at the heart of it",
+      "url": "https://en.wikipedia.org/wiki/Bingsj%C3%B6"
+    }
+  ]
+}
