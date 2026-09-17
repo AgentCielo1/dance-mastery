@@ -592,6 +592,46 @@ export const MOVES = {
     ],
   },
 
+  /* ------------- balkan wave: solo cores (procedural v1) ------------- */
+  "komove.usest": {
+    bpm: 126, beats: 6,
+    keys: [
+      // quick small steps in a shoebox — three counts right, three left — torso serene
+      { t: 0.0, p: { y: 0.862, lHipA: 0.18, lKnee: 0.25, rKnee: 0.15, lShA: 0.4, rShA: 0.4, lElb: 0.3, rElb: 0.3 } },
+      { t: 0.17, p: { y: 0.858, lHipA: 0.0, rHipA: 0.12, lKnee: 0.18, rKnee: 0.2 } },
+      { t: 0.33, p: { y: 0.862, lHipA: 0.14, rHipA: 0.0, lKnee: 0.22, rKnee: 0.15 } },
+      { t: 0.5, p: { y: 0.862, rHipA: 0.18, lHipA: 0.0, rKnee: 0.25, lKnee: 0.15 } },
+      { t: 0.67, p: { y: 0.858, rHipA: 0.0, lHipA: 0.12, rKnee: 0.18, lKnee: 0.2 } },
+      { t: 0.83, p: { y: 0.862, rHipA: 0.14, lHipA: 0.0, rKnee: 0.22, lKnee: 0.15 } },
+    ],
+    // busy downstairs, serene upstairs: the chain hides its difficulty on purpose
+  },
+  "hrmove.rachenitsa": {
+    bpm: 320, beats: 7,
+    keys: [
+      // quick-quick-SLOW: two small steps and the settle with a subtle knee lift
+      { t: 0.0, p: { y: 0.86, lHipA: 0.15, lKnee: 0.22, rKnee: 0.15, lShA: 0.5, rShA: 0.5, lElb: 0.6, rElb: 0.6 } },
+      { t: 0.29, p: { y: 0.858, rHipA: 0.15, lHipA: 0.0, rKnee: 0.22, lKnee: 0.15 } },
+      { t: 0.57, p: { y: 0.865, lHipF: 0.35, lKnee: 0.55, rKnee: 0.18, rHipA: 0.0 } },
+      { t: 0.85, p: { y: 0.858, lHipF: 0.05, lKnee: 0.2, rKnee: 0.18 } },
+    ],
+    // the long beat is the style's home: the settle holds the lift like a held breath
+    rootFn: (p, u) => { p.tRoll = 0.03 * sin(u * TAU); },
+  },
+  "ckmove.hips": {
+    bpm: 300, beats: 9,
+    keys: [
+      // grounded base, continuous hip figure-eights, soft floating wrists above
+      { t: 0.0, p: { y: 0.845, lKnee: 0.35, rKnee: 0.3, roll: -0.08, tRoll: 0.05, lShA: 1.6, rShA: 1.6, lShF: 0.4, rShF: 0.4, lElb: 0.9, rElb: 0.9 } },
+      { t: 0.22, p: { y: 0.842, roll: 0.0, tRoll: 0.0, lElb: 1.1, rElb: 0.7 } },
+      { t: 0.44, p: { y: 0.845, rKnee: 0.35, lKnee: 0.3, roll: 0.08, tRoll: -0.05, lElb: 0.9, rElb: 0.9 } },
+      { t: 0.67, p: { y: 0.84, roll: 0.0, tRoll: 0.0, lElb: 0.7, rElb: 1.1 } },
+      { t: 0.85, p: { y: 0.845, roll: -0.04, tRoll: 0.03 } },
+    ],
+    // honey, not percussion: the hip settles deep on the nine's long beat
+    rootFn: (p, u) => { p.roll += 0.03 * sin(u * TAU * 2 + 1.1); },
+  },
+
   /* ------------- nordic wave: solo cores (procedural v1) ------------- */
   "psmove.svikt": {
     bpm: 126, beats: 3,

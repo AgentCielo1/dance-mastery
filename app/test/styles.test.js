@@ -1250,6 +1250,59 @@ test("the catalog's nordic additions: the Faroese chain kept community-toned, Ta
   assert.ok(faroe.pack === undefined && /join, not to stage/.test(faroe.scene), "the Faroese chain unpacked, with its welcome-on-their-terms note");
 });
 
+test("kolo pack: the inscription told with the South Slavic family mapped honestly; the contrast aesthetic taught; the chain late", () => {
+  const ko = STYLES.kolo;
+  const unesco = ko.nodes.find((n) => n.id === "koculture.unesco");
+  assert.ok(unesco.checkpoints.some((c) => /UNESCO/.test(c) && /2017/.test(c)), "the inscription dated");
+  const family = ko.nodes.find((n) => n.id === "koculture.family");
+  assert.ok(family.checkpoints.some((c) => /Croatian kolo, Macedonian oro/.test(c)), "the South Slavic family named");
+  assert.ok(family.checkpoints.some((c) => /the specific flag and the honest map, both/.test(c)), "the kochari principle restated");
+  const step = ko.nodes.find((n) => n.id === "komove.step");
+  assert.ok(step.checkpoints.some((c) => /effortlessness IS the aesthetic/.test(c)), "the contrast taught as the style");
+  assert.ok(step.prereqs.some((p) => p.id === "attr.feet.l2" && p.kind === "hard"), "the chatter gated on real feet");
+  const chain = ko.nodes.find((n) => n.id === "koline.chain");
+  assert.ok(chain.partner && chain.phase >= 4, "the chain is late and 🤝");
+  const info = seasonInfo(newState(T), T, ko.seasons);
+  assert.equal(info.theme, "Accordion Season");
+});
+
+test("horo pack: the two sevens told apart and tested; Kutev credited with the staged-vs-source discipline; the belt hold late", () => {
+  const hr = STYLES.horo;
+  const sevens = hr.nodes.find((n) => n.id === "hrmusic.sevens");
+  assert.ok(sevens.checkpoints.some((c) => /2\+2\+3/.test(c)), "the rachenitsa's seven spelled");
+  assert.ok(sevens.checkpoints.some((c) => /kalamatianos pack/.test(c) && /3\+2\+2/.test(c)), "the other seven cross-linked — same seven, opposite lean");
+  const eleven = hr.nodes.find((n) => n.id === "hrmusic.eleven");
+  assert.ok(eleven.checkpoints.some((c) => /11\/16/.test(c) && /2\+2\+3\+2\+2/.test(c)), "the kopanitsa spelled");
+  const kutev = hr.nodes.find((n) => n.id === "hrculture.kutev");
+  assert.ok(kutev.checkpoints.some((c) => /FILIP KUTEV/.test(c) && /1951/.test(c)), "the staging generation credited");
+  assert.ok(kutev.checkpoints.some((c) => /INTERPRETATION/.test(c) && /the source/.test(c)), "staged-vs-source discipline stated");
+  const kop = hr.nodes.find((n) => n.id === "hrculture.koprivshtitsa");
+  assert.ok(kop.checkpoints.some((c) => /KOPRIVSHTITSA/.test(c)), "the five-year mountain named");
+  const rach = hr.nodes.find((n) => n.id === "hrmove.rachenitsa");
+  assert.ok(rach.prereqs.some((p) => p.id === "attr.timing.l3" && p.kind === "hard"), "the seven's feet gated on the odd-meter ear");
+  const lesa = hr.nodes.find((n) => n.id === "hrline.lesa");
+  assert.ok(lesa.partner && lesa.phase >= 4, "na lesa is late and 🤝");
+  const info = seasonInfo(newState(T), T, hr.seasons);
+  assert.equal(info.theme, "Pravo Season");
+});
+
+test("čoček pack: Roma-made credited plainly; Esma Redžepova named; the amplifier-source direction fixed and tested", () => {
+  const ck = STYLES.cocek;
+  const roma = ck.nodes.find((n) => n.id === "ckculture.roma");
+  assert.ok(roma.checkpoints.some((c) => /ROMANI COMMUNITIES/.test(c)), "the makers credited plainly");
+  assert.ok(roma.checkpoints.some((c) => /the erasure is real/.test(c) && /discrimination/.test(c)), "the stakes stated, not softened");
+  assert.ok(roma.checkpoints.some((c) => /ESMA REDŽEPOVA/.test(c)), "the Queen of Romani Song credited");
+  const amp = ck.nodes.find((n) => n.id === "ckculture.amplifiers");
+  assert.ok(amp.checkpoints.some((c) => /GORAN BREGOVIĆ/.test(c) && /amplifier/.test(c)), "the amplifier named as an amplifier");
+  assert.ok(amp.checkpoints.some((c) => /Lisbon amplified what Luanda invented/.test(c)), "the app's credit law applied verbatim");
+  const hips = ck.nodes.find((n) => n.id === "ckmove.hips");
+  assert.ok(hips.prereqs.some((p) => p.id === "attr.hips.l2" && p.kind === "hard"), "the engine gated on real hip control");
+  const improv = ck.nodes.find((n) => n.id === "ckmove.improv");
+  assert.ok(improv.checkpoints.some((c) => /absorb grammar, never routines/.test(c)), "the improvisation ethic written");
+  const info = seasonInfo(newState(T), T, ck.seasons);
+  assert.equal(info.theme, "Nine Season");
+});
+
 test("new-pack animations exist in tree + move library with teaching checkpoints", () => {
   for (const id of ["pop.fresno", "wave.arm", "lock.lock", "point.point", "jack.basic", "hfoot.pdbr"]) {
     assert.ok(MOVES[id], `${id} animated`);

@@ -151,6 +151,39 @@ export const PATTERNS = {
     ],
     note: "Boom… chik-chik. The slow step stretches through the boom; the quicks answer the chiks.",
   },
+  kolotwo: {
+    name: "Kolo two (accordion chatter)",
+    beats: 2, defaultBpm: 126,
+    hits: [
+      { t: 0, type: "kick" }, { t: 1, type: "kick" },
+      { t: 0.5, type: "snare" }, { t: 1.5, type: "snare" },
+      { t: 0.25, type: "hat" }, { t: 0.75, type: "hat" }, { t: 1.25, type: "hat" }, { t: 1.75, type: "hat" },
+      { t: 0, type: "accent" },
+    ],
+    note: "The accordion chatters the subdivisions the feet will steal. Small steps, serene torso — the chain hides its difficulty on purpose.",
+  },
+  rachenitsa: {
+    name: "Rachenitsa 7/8 (2+2+3)",
+    beats: 7, defaultBpm: 320,
+    hits: [
+      { t: 0, type: "kick" }, { t: 2, type: "kick" }, { t: 4, type: "kick" },
+      { t: 0, type: "hat" }, { t: 2, type: "hat" }, { t: 4, type: "hat" }, { t: 6, type: "hat" },
+      { t: 4, type: "accent" },
+      { t: 6, type: "clave" },
+    ],
+    note: "Quick-quick-SLOW — the long beat lands at the END of the bar like a held breath released. Compare the kalamatianos pattern (3+2+2): same seven, opposite lean.",
+  },
+  cocek9: {
+    name: "Čoček nine (2+2+2+3)",
+    beats: 9, defaultBpm: 300,
+    hits: [
+      { t: 0, type: "kick" }, { t: 2, type: "kick" }, { t: 4, type: "kick" }, { t: 6, type: "kick" },
+      { t: 0, type: "hat" }, { t: 2, type: "hat" }, { t: 4, type: "hat" }, { t: 6, type: "hat" }, { t: 8, type: "hat" },
+      { t: 6, type: "accent" },
+      { t: 8, type: "snare" },
+    ],
+    note: "Three quick pairs and a LONG beat the hip holds like a breath. The sevens' cousin with one more pair — clap it before you sway it, and let the hip own the six.",
+  },
   polska: {
     name: "Polska three (the lean)",
     beats: 3, defaultBpm: 126,
@@ -770,6 +803,9 @@ export const STYLE_PATTERNS = {
   polska: "polska",
   halling: "hallingbeat",
   finnishtango: "fintango",
+  kolo: "kolotwo",
+  horo: "rachenitsa",
+  cocek: "cocek9",
 };
 
 export const SOUND_TYPES = ["kick", "snare", "hat", "clave", "accent"];

@@ -1,0 +1,266 @@
+{
+  "style": "kolo",
+  "version": "0.1.0",
+  "name": "Kolo",
+  "notes": "Kolo style pack (Doc 04 template, solo-first — the quick small footwork is one dancer's work; the joined-hands chain is the destination and arrives late 🤝). Serbia's circle-chain dance, inscribed by UNESCO in 2017 ('Kolo, traditional folk dance') — the dance every Serbian celebration stands up for: when the accordion starts the moravac, the hall becomes a chain. The honesty this pack holds is the kochari pack's honesty, South Slavic edition: the KOLO is Serbia's inscribed branch of a FAMILY — kolo and oro chain dances are danced across the South Slavic world (Croatian kolo, Macedonian oro, Montenegrin and Bosnian kin), and this pack teaches the Serbian tradition while naming the shared root plainly. The body's signature is the CONTRAST: below the waist the feet chatter in quick, small, precise steps (the famous 'u šest' — 'in six' — pattern above all); above the waist the torso floats calm and upright, hands joined low with neighbors — the dance hides its difficulty on purpose, and looking effortless IS the aesthetic. The accordion-led kolo two rides in this app's Rhythm Trainer; the u šest step-cycle is the anchor skill; and the chain etiquette (join at the ends, match the step before adding bounce, never yank the line) is curriculum before the 🤝 node.",
+  "seasons": [
+    {
+      "theme": "Accordion Season",
+      "finale": "Film yourself stepping the kolo two — quick small steps agreeing with the accordion's chatter."
+    },
+    {
+      "theme": "U Šest Season",
+      "finale": "Film the u šest cycle — the six-count pattern clean both directions, torso floating calm."
+    },
+    {
+      "theme": "Chatter Season",
+      "finale": "Film the footwork variations at speed — crossing steps, bounces, syncopations — feet busy, face serene."
+    },
+    {
+      "theme": "Chain Season",
+      "finale": "Film the ghost-chain drill — hands held low as if joined, traveling the circle both directions with the step unbroken."
+    },
+    {
+      "theme": "Slava Season",
+      "finale": "Find a Serbian or Balkan folk-dance night, join the chain at its end, and let the line carry you through your first moravac."
+    }
+  ],
+  "attributes": [
+    {
+      "id": "attr.feet.l2",
+      "name": "Chatter feet L2",
+      "test": "60s of quick, small, precise steps at kolo tempo with a floating calm torso — busy downstairs, serene upstairs"
+    },
+    {
+      "id": "attr.stamina.l2",
+      "name": "Hall stamina L2",
+      "test": "three kolo tunes of continuous stepping — the chain does not sit down between songs and neither does this attribute"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "komusic.two",
+      "type": "concept",
+      "family": "musicality",
+      "name": "The kolo two — accordion chatter",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "kolo rides a driving 2/4 led by the accordion — melody lines that chatter like the feet they command; the pulse is in this app's Rhythm Trainer",
+        "the feet subdivide what the accordion states: quick-quick patterns living between the beats — learn to hear the subdivision before stepping it",
+        "the MORAVAC is the anthem: the kolo tune every Serbian hall knows — find three recordings and let its shape become furniture"
+      ]
+    },
+    {
+      "id": "komusic.tunes",
+      "type": "concept",
+      "family": "musicality",
+      "name": "The kolo songbook",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "komusic.two",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "beyond the moravac the songbook opens: Užičko kolo's drive, Čačak's syncopated play — each named tune carries its own step feel and its own region",
+        "tempo discipline: kolo tunes accelerate as the night warms — the step shrinks and quickens but never changes shape, the garba pack's law with an accordion",
+        "build a three-tune ladder (moravac, Užičko, one more) and journal where each puts its weight"
+      ]
+    },
+    {
+      "id": "koculture.unesco",
+      "type": "concept",
+      "family": "culture",
+      "name": "The inscription & the standing hall",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "UNESCO inscribed 'Kolo, traditional folk dance' in 2017 — Serbia's chain dance, danced at weddings, slavas (family patron-saint days), and every celebration the culture owns",
+        "the hall stands up: when the moravac starts, generations join one chain — kolo is participation before it is performance, and the chain has no audience",
+        "the diaspora keeps the chain unbroken: Serbian halls from Chicago to Vienna end their nights the same way Belgrade does"
+      ]
+    },
+    {
+      "id": "koculture.family",
+      "type": "concept",
+      "family": "culture",
+      "name": "The South Slavic family — the honest map",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "koculture.unesco",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "kolo and oro chain dances are danced ACROSS the South Slavic world — Croatian kolo, Macedonian oro, Montenegrin and Bosnian kin — Serbia's kolo is the inscribed branch of a shared family",
+        "this pack teaches the Serbian tradition AND names the family plainly — the kochari pack's principle, one mountain range west: the specific flag and the honest map, both",
+        "when you meet an oro at a Macedonian night, you'll recognize the grammar — the family reunion is one of Balkan dancing's best gifts"
+      ]
+    },
+    {
+      "id": "komove.step",
+      "type": "move",
+      "family": "basic",
+      "name": "The basic step & the floating torso",
+      "phase": 1,
+      "anchor": "busy downstairs, serene upstairs",
+      "prereqs": [
+        {
+          "id": "komusic.two",
+          "kind": "hard"
+        },
+        {
+          "id": "koculture.unesco",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.feet.l2",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the foundation: quick, SMALL, precise steps close under the body — side-travels and in-place patterns riding the two, knees springy but subtle",
+        "the signature contrast: the torso floats calm and upright while the feet chatter — kolo hides its difficulty on purpose, and effortlessness IS the aesthetic",
+        "hands held low at your sides as if joined with neighbors — the ghost-chain posture from day one, because the chain is where this is going"
+      ],
+      "mistakes": [
+        "big steps (the chain physically cannot absorb them — kolo feet live in a shoebox)",
+        "the torso working (if the effort shows upstairs, the audience — and the line — feels it)"
+      ]
+    },
+    {
+      "id": "komove.usest",
+      "type": "move",
+      "family": "basic",
+      "name": "U šest — the six the hall dances",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "komove.step",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the U ŠEST ('in six') pattern: the six-count step-cycle that carries most social kolos — travel right, rock back, travel left, rock back, seamless forever",
+        "learn it as breath: three counts one way, three the other — the cycle loops without seams and reverses without thought",
+        "drill both leading feet: the chain's direction is the leader's choice, not yours, and the pattern must not care"
+      ]
+    },
+    {
+      "id": "komove.variations",
+      "type": "move",
+      "family": "basic",
+      "name": "Chatter variations",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "komove.usest",
+          "kind": "hard"
+        },
+        {
+          "id": "komusic.tunes",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the decoration layer: crossing steps, quick bounces, heel taps, and syncopated doubles woven into the u šest — the feet improvising inside the cycle's frame",
+        "variations live BELOW the knee: the chain's shared geometry survives only if your flourishes stay small and grounded",
+        "steal one variation per week from Serbian ensemble or wedding footage, credit the source, and keep the torso lying about the difficulty"
+      ]
+    },
+    {
+      "id": "komove.travel",
+      "type": "move",
+      "family": "basic",
+      "name": "The ghost chain — circle travel",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "komove.variations",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.stamina.l2",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "orbit training: travel a circle around your room's center with the u šest, hands low in the ghost-chain hold, reversing direction on imagined leader's calls",
+        "the chain's traffic laws, drilled solo: match the step before adding anything, absorb tempo changes without breaking the hold's height, never let your circle drift",
+        "three tunes continuous is the pass condition — the hall does not sit down, and the attribute exists because the hall is right"
+      ]
+    },
+    {
+      "id": "koline.chain",
+      "type": "move",
+      "family": "line",
+      "name": "The chain",
+      "phase": 4,
+      "partner": true,
+      "prereqs": [
+        {
+          "id": "komove.travel",
+          "kind": "hard"
+        },
+        {
+          "id": "koculture.family",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "🤝 the real thing: hands joined low, the chain stepping as one — the leader steering, the line breathing together through tempo changes and tune changes",
+        "the etiquette you drilled is absolute: join at the ENDS, match the step before adding bounce, never yank the line — a chain absorbs respectful newcomers mid-tune by design",
+        "your u šest and ghost-chain training are the full entry fee: the line teaches everything else through your hands"
+      ]
+    },
+    {
+      "id": "meta.ko_set",
+      "type": "combo",
+      "family": "meta",
+      "name": "The hall set — filmed",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "komove.travel",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "film three tunes continuous: u šest clean both directions, three variations placed, the ghost chain orbiting with reversals — torso serene throughout",
+        "the contrast audit: crop the video mentally at the waist — the top half should look like someone listening to pleasant news",
+        "say it on camera: kolo, Serbia, UNESCO 2017 — and the South Slavic family, in one honest sentence"
+      ]
+    },
+    {
+      "id": "meta.ko_hall",
+      "type": "combo",
+      "family": "meta",
+      "name": "The standing hall",
+      "phase": 4,
+      "prereqs": [
+        {
+          "id": "meta.ko_set",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "find the chain: Serbian and Balkan folk-dance nights, cultural association halls, and international folk-dance clubs run worldwide — and Balkan weddings are the graduate school",
+        "join at the end, take the hand offered, and let the line carry you — being absorbed by a moravac chain is the tradition working exactly as designed",
+        "afterward, teach one person the u šest — six counts, one hallway, and the chain grows by one"
+      ]
+    }
+  ],
+  "teachers": [
+    {
+      "name": "Kolo — UNESCO 2017",
+      "url": "https://en.wikipedia.org/wiki/Kolo_(dance)"
+    },
+    {
+      "name": "Moravac — the anthem tune",
+      "url": "https://en.wikipedia.org/wiki/Moravac"
+    }
+  ]
+}

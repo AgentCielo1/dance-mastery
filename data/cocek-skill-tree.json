@@ -1,0 +1,267 @@
+{
+  "style": "cocek",
+  "version": "0.1.0",
+  "name": "Čoček",
+  "notes": "Čoček style pack (Doc 04 template, genuinely solo — čoček is improvised, hip-led, and danced in your own small circle of floor). The dance of the southern Balkans' ROMANI COMMUNITIES, and this pack's first job is the credit the world keeps mislaying: čoček is ROMA-MADE AND ROMA-CARRIED — born in the brass-band culture Romani musicians built across Macedonia, southern Serbia, Kosovo and Bulgaria, danced at Romani weddings and celebrations, and powering the whole region's festive sound. The credit architecture is explicit and tested: ESMA REDŽEPOVA — the Queen of Romani Song, Skopje's great voice, lifelong advocate for her people — is credited as the tradition's throne room; and the AMPLIFIER-VS-SOURCE honesty is written down: non-Roma artists (Goran Bregović the most famous) carried Romani brass to world stages and world fame, and the fame routinely stopped before it reached the source — this pack names the amplification, credits the amplifier as an amplifier, and points the royalty of attention back at Roma musicians and dancers, in the exact tradition of kuduro's 'Lisbon amplified what Luanda invented'. The dance itself: a swaying 9/8 (2+2+2+3 — the long beat a held hip), small grounded steps, continuous hip figure-eights and drops, soft turning wrists, a handkerchief or scarf often aloft — improvisation over choreography, always. The čoček nine rides in this app's Rhythm Trainer; hip work is gated on real control; and the finale points at Romani-led sources and the great brass gatherings where the tradition plays itself.",
+  "seasons": [
+    {
+      "theme": "Nine Season",
+      "finale": "Film yourself clapping and swaying the čoček nine — 2+2+2+3, the long beat held in the hip."
+    },
+    {
+      "theme": "Hip Season",
+      "finale": "Film the hip figure-eights and drops over small grounded steps — continuous, unhurried, close to the ground."
+    },
+    {
+      "theme": "Wrist Season",
+      "finale": "Film the arms — soft turning wrists, the raised scarf, the frame that floats over the hips — one full song."
+    },
+    {
+      "theme": "Improvisation Season",
+      "finale": "Film three one-minute improvisations to three different čočeks — no repeated sentence, no choreography, all listening."
+    },
+    {
+      "theme": "Esma Season",
+      "finale": "Build a playlist from Esma Redžepova and Romani brass bands, learn eight counts from Romani source footage, credit the dancer, and film your version."
+    }
+  ],
+  "attributes": [
+    {
+      "id": "attr.hips.l2",
+      "name": "Figure-eight hips L2",
+      "test": "90s of continuous smooth hip figure-eights over bent knees, both directions, breath easy — the engine, unhurried"
+    },
+    {
+      "id": "attr.timing.l2",
+      "name": "Nine-cycle ear L2",
+      "test": "clap 2+2+2+3 through one full brass recording without losing the long beat — the nine, installed"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "ckmusic.nine",
+      "type": "concept",
+      "family": "musicality",
+      "name": "The čoček nine — the sway in bent time",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "čoček often rides 9/8 counted 2+2+2+3 — three quick pairs and a LONG beat that the hip holds like a breath; it's in this app's Rhythm Trainer",
+        "the Bulgarian horo pack's odd-meter ear transfers whole: this nine is the sevens' cousin with one more quick pair — clap it before you sway it",
+        "čoček also lives in a lazy swung two at slower tempos — the meter serves the sway, never the reverse"
+      ]
+    },
+    {
+      "id": "ckmusic.brass",
+      "type": "concept",
+      "family": "musicality",
+      "name": "The brass — Romani horns, the region's engine",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "ckmusic.nine",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the čoček's orchestra is BRASS — trumpets, tubas and drums in the band culture Romani musicians built and still carry across the southern Balkans; when the region celebrates, Roma horns are usually the reason it sounds like that",
+        "the great gatherings (Guča's trumpet festival the most famous) run on this engine — and the best bands on those stages are overwhelmingly Romani: watch the credits, not just the crowds",
+        "build the practice playlist from the source: Romani brass bands and singers first, world-music compilations second"
+      ]
+    },
+    {
+      "id": "ckculture.roma",
+      "type": "concept",
+      "family": "culture",
+      "name": "Roma-made, Roma-carried — the credit, plainly",
+      "phase": 0,
+      "prereqs": [],
+      "checkpoints": [
+        "čoček is the dance of the southern Balkans' ROMANI COMMUNITIES — made and carried by Roma across Macedonia, southern Serbia, Kosovo and Bulgaria, danced at Romani weddings and celebrations first and everywhere else second",
+        "the credit matters because the erasure is real: Europe loves this music while Roma communities still face discrimination — naming the makers is the minimum rent on the joy",
+        "ESMA REDŽEPOVA — the Queen of Romani Song, Skopje's great voice and a lifelong advocate for her people — is this tradition's throne room: start every čoček journey with her records"
+      ]
+    },
+    {
+      "id": "ckculture.amplifiers",
+      "type": "concept",
+      "family": "culture",
+      "name": "Amplifiers & sources — the direction, fixed",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "ckculture.roma",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "non-Roma artists carried Romani brass to world fame — GORAN BREGOVIĆ the most famous amplifier — and the fame routinely stopped before it reached the source musicians; this pack names the amplification as amplification",
+        "the app's law applies verbatim: 'Lisbon amplified what Luanda invented' — here, the stages amplified what Romani musicians made; collaborations are the health, erasure is the disease",
+        "your job as a dancer is small and real: when a čoček fills a floor, be the person who says whose music it is"
+      ]
+    },
+    {
+      "id": "ckmove.ground",
+      "type": "move",
+      "family": "basic",
+      "name": "The grounded base",
+      "phase": 1,
+      "prereqs": [
+        {
+          "id": "ckmusic.nine",
+          "kind": "hard"
+        },
+        {
+          "id": "ckculture.roma",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the base: small grounded steps in a tight circle of floor — knees soft, weight low and easy, the feet almost incidental under the body's real conversation",
+        "čoček travels little and says much: your dance floor is a bath towel, and the tradition considers that generous",
+        "sway the nine before styling it: weight shifting through the quick pairs, settling on the long beat — the meter becoming posture"
+      ],
+      "mistakes": [
+        "covering ground (čoček is depth, not distance — the traveling instinct belongs to other packs)"
+      ]
+    },
+    {
+      "id": "ckmove.hips",
+      "type": "move",
+      "family": "hips",
+      "name": "The hip engine — eights & drops",
+      "phase": 2,
+      "anchor": "where the nine lives",
+      "prereqs": [
+        {
+          "id": "ckmove.ground",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.hips.l2",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the engine: continuous hip figure-eights over the grounded base, with placed drops and lifts answering the music's accents — unhurried, smooth, close to the ground",
+        "the LONG beat is the hip's home: on the nine's held count, the hip settles or drops — the meter made flesh, the raqs and baladi packs' cousins nodding from Egypt",
+        "layer patiently: base alone, then eights, then drops on the long beats — each layer must survive the next's arrival"
+      ],
+      "mistakes": [
+        "sharp aerobic hips (čoček hips are honey, not percussion — the brass provides the attack; you provide the pour)"
+      ]
+    },
+    {
+      "id": "ckmove.arms",
+      "type": "move",
+      "family": "basic",
+      "name": "Wrists, scarf & the floating frame",
+      "phase": 2,
+      "prereqs": [
+        {
+          "id": "ckmove.hips",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "the arms float at shoulder height and above: soft continuous wrist circles, palms turning to speak, elbows easy — a frame that drifts over the hip engine without disturbing it",
+        "the scarf or handkerchief aloft is the classic crown — any light scarf trains it, held high and alive on the long beats",
+        "snaps and small claps join on the quick pairs when the music invites — ornaments placed, never sprinkled"
+      ]
+    },
+    {
+      "id": "ckmove.improv",
+      "type": "move",
+      "family": "basic",
+      "name": "The improvisation — listening made visible",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "ckmove.arms",
+          "kind": "hard"
+        },
+        {
+          "id": "ckmusic.brass",
+          "kind": "hard"
+        },
+        {
+          "id": "attr.timing.l2",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "čoček is improvised, always: no routine survives contact with a live brass band, and the tradition wouldn't want one — the skill is listening made visible",
+        "the practice: one-minute improvisations to unfamiliar recordings, no repeated sentence, the trumpet's phrases answered in hips and wrists",
+        "learn vocabulary from Romani source footage — wedding videos and festival clips — credit the dancers in your journal, and absorb grammar, never routines"
+      ]
+    },
+    {
+      "id": "ckmove.circle",
+      "type": "move",
+      "family": "basic",
+      "name": "The wedding floor — solo among many",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "ckmove.improv",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "čoček's social form: everyone improvising at once, each in their small circle, scarves up, the floor a field of individual conversations with the same band",
+        "floor etiquette: claim little ground, celebrate your neighbors' phrases (the raised-hand salute to a good hip drop is the traditional applause), and match the room's volume",
+        "train it by dancing 'among' recorded crowd noise — solo practice for a form that is solo even in company"
+      ]
+    },
+    {
+      "id": "meta.ck_set",
+      "type": "combo",
+      "family": "meta",
+      "name": "The wedding set — filmed",
+      "phase": 3,
+      "prereqs": [
+        {
+          "id": "ckmove.circle",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "film three improvised minutes to three different čočeks: base grounded, eights continuous, drops on the long beats, scarf alive, no repeated sentences",
+        "the honey audit: watch the hips at half speed — any percussion that crept in gets poured smooth in the re-film",
+        "say it on camera: čoček, Roma-made and Roma-carried, Esma Redžepova's throne room — and the amplifier-source direction, in one sentence"
+      ]
+    },
+    {
+      "id": "meta.ck_floor",
+      "type": "combo",
+      "family": "meta",
+      "name": "The living floor",
+      "phase": 4,
+      "prereqs": [
+        {
+          "id": "meta.ck_set",
+          "kind": "hard"
+        },
+        {
+          "id": "ckculture.amplifiers",
+          "kind": "hard"
+        }
+      ],
+      "checkpoints": [
+        "find it live: Balkan brass nights and festivals run worldwide, Balkan dance camps teach čoček — seek Romani-led bands and teachers first, and pay for the source when you can",
+        "when the brass starts, take your towel of floor, raise the scarf, and listen out loud — joining the field of soloists is the whole etiquette",
+        "teach one person the nine and tell them whose music it is — the credit travels with every dancer who carries it"
+      ]
+    }
+  ],
+  "teachers": [
+    {
+      "name": "Čoček — the Romani dance of the southern Balkans",
+      "url": "https://en.wikipedia.org/wiki/%C4%8Co%C4%8Dek"
+    },
+    {
+      "name": "Esma Redžepova — the Queen of Romani Song",
+      "url": "https://en.wikipedia.org/wiki/Esma_Red%C5%BEepova"
+    }
+  ]
+}

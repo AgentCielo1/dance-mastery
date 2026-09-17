@@ -467,6 +467,9 @@ const TAGLINES = {
   polska: "walking on moss, turning for hours",
   halling: "the hat on the pole can wait",
   finnishtango: "yearning, with both feet on the ground",
+  kolo: "the hall stands up as one chain",
+  horo: "bent time, made a national language",
+  cocek: "Roma-made — say whose music it is",
 };
 
 function needsOnboarding() {

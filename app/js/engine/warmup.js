@@ -336,6 +336,21 @@ const STYLE_EXTRAS = {
     "Frame holds 2x45s with soft shoulders and calm gaze — dignity without stiffness",
     "Shoulder drops and slow exhales x6 — the register starts with letting the weight down",
   ],
+  kolo: [
+    "Quick small marching steps 60s in a shoebox of floor — the feet wake tiny",
+    "Ankle circles x10 each and calf raises x12 — the chatter runs on warm ankles",
+    "Serene-torso check 30s: feet busy, face reading pleasant news — the contrast warms too",
+  ],
+  horo: [
+    "Clap 2+2+3 for 60s, then 3+2+2 for 30s — the ear warms before the feet",
+    "Springy small steps with subtle knee lifts 60s — the styling lives in the last ten centimeters",
+    "Ghost belt-hold posture 30s, hands level at the belt line — the chain's frame, rehearsed",
+  ],
+  cocek: [
+    "Slow hip figure-eights 60s over bent knees — honey, not percussion; warm the pour",
+    "Soft wrist circles at shoulder height 45s — the floating frame wakes gently",
+    "Sway the nine 30s, settling on every long beat — the meter becomes posture before it becomes dance",
+  ],
 };
 
 export function warmupFor(style) {

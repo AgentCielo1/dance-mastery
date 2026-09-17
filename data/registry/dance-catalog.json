@@ -2183,6 +2183,33 @@
    "origin": "The medieval European chain dance, alive nowhere else — ballads of hundreds of verses sung unaccompanied while the chain steps",
    "essence": "Two steps left, one right, the whole room one chain — the ballad is the music and the memory",
    "scene": "Community dance houses in winter; the Faroese keep it themselves — visitors welcomed to join, not to stage"
+  },
+  {
+   "name": "Kolo",
+   "family": "european_folk",
+   "region": "Serbia (South Slavic family-wide)",
+   "origin": "Serbia's circle-chain dance, inscribed by UNESCO in 2017 — one branch of the South Slavic kolo/oro family danced from Croatia to Macedonia",
+   "essence": "Hands joined low, the chain steps quick and small — the feet chatter while the torso floats calm",
+   "scene": "Every Serbian celebration at home and abroad; the moravac starts and the hall stands up",
+   "pack": "kolo"
+  },
+  {
+   "name": "Bulgarian Horo & Rachenitsa",
+   "family": "european_folk",
+   "region": "Bulgaria",
+   "origin": "Bulgaria's chain-dance family and its famous odd meters — pravo's walking two, rachenitsa's 7/8, kopanitsa's 11/16 — staged for the world by Filip Kutev's ensemble",
+   "essence": "The belt-hold chain rides meters that bend time — quick-quick-slow made a national language",
+   "scene": "Weddings and megdan squares, the Koprivshtitsa festival's once-in-five-years gathering, folk-dance clubs worldwide",
+   "pack": "horo"
+  },
+  {
+   "name": "Čoček",
+   "family": "european_folk",
+   "region": "Southern Balkans (Romani)",
+   "origin": "The dance of the Balkans' Romani communities — brass-band born, carried by Roma musicians whose horns power the region's celebrations",
+   "essence": "Hip-led, improvised, close to the ground — a 9/8 that sways where straight time marches",
+   "scene": "Romani weddings and brass festivals; Esma Redžepova's songbook is its throne room",
+   "pack": "cocek"
   }
  ]
 }
